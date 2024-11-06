@@ -18,8 +18,8 @@ state = {
 
 		}
 		add_core_of = YUG
-		add_core_of = KOS
-		add_core_of = SER
+		add_core_of = WST
+		add_core_of = WST
 
 	}
 

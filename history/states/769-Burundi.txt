@@ -13,13 +13,13 @@ state = {
 			limit = {
 				has_dlc = "Gotterdammerung"
 			}
-			transfer_state_to = COG
+			transfer_state_to = WST
 			add_dynamic_modifier = {
 				modifier = COG_burundian_separatism_modifier
 			}	
 		}
 		
-		add_core_of = BRD
+		add_core_of = WST
 
 		victory_points = {
 			2220 1

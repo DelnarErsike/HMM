@@ -13,8 +13,8 @@ state = {
 		}
 
 		add_core_of = FIN
-		add_core_of = KAR
-		add_core_of = SMI
+		add_core_of = WST
+		add_core_of = WST
 		
 		victory_points = { #Salla
 			197 1
