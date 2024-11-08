@@ -9,11 +9,11 @@ state={
 	}
 
 	history={
-		owner = POR
+		owner =TUM
 		buildings = {
 			infrastructure = 1
 		}
-		add_core_of = WST
+		add_core_of = TUM
 
 	}
 

@@ -10,6 +10,11 @@ on_actions = {
 				}
 			}
 			every_country = {
+				every_army_leader = {
+					add_unit_leader_trait = no_grind
+				}
+			}
+			every_country = {
 				limit = {
 					OR = {
 						ai_annex = yes
@@ -94,11 +99,172 @@ on_actions = {
 				}
 				add_ideas = peace_training
 			}
+			if = {
+				limit = {
+					OR={
+						BEL = {
+							has_capitulated = no
+						}
+						HOL = {
+							has_capitulated = no
+						}
+						LUX = {
+							has_capitulated = no
+						}
+						DEN = {
+							has_capitulated = no
+						}
+						NOR = {
+							has_capitulated = no
+						}
+						POL = {
+							has_capitulated = no
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						axis = yes
+					}
+					every_army_leader = {
+						limit = {
+							NOT = { 
+								has_trait = no_grind
+							}
+						}
+						add_unit_leader_trait = no_grind
+					}
+				}
+			}
+			if = {
+				limit = {
+					GER = {has_war = no }
+				}
+				every_country = {
+					limit = {
+						allies = yes
+					}
+					every_army_leader = {
+						limit = {
+							NOT = { 
+								has_trait = no_grind
+							}
+						}
+						add_unit_leader_trait = no_grind
+					}
+				}
+			}
 		}
 	}
 	on_capitulation = {
 		effect = {
 			hmm_capitulations_on_actions = yes
+
+			if = {
+				limit = {
+						BEL = {
+							has_capitulated = no
+						}
+						HOL = {
+							has_capitulated = no
+						}
+						LUX = {
+							has_capitulated = no
+						}
+						DEN = {
+							has_capitulated = no
+						}
+						NOR = {
+							has_capitulated = no
+						}
+						POL = {
+							has_capitulated = no
+						}
+				}
+				every_country = {
+					limit = {
+						axis = yes
+					}
+					every_army_leader = {
+						remove_unit_leader_trait = no_grind
+					}
+				}
+			}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { tag = FRA }
+					FROM.FROM = { is_core_of = FRA }
+					OR ={  AND ={  FRA = { surrender_progress > 0.32 NOT = { controls_state = 16 } } }	FRA = { surrender_progress	> 0.5	}	 }
+					NOT = { FRA = { has_country_flag = france_tp} }
+				}
+
+
+			FRA = { 
+				set_country_flag = france_tp
+				transfer_units_fraction = {
+					target = IRE
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 0
+					navy_ratio = 0
+					air_ratio = 0
+					keep_unit_leaders_trigger = {
+						always = yes
+						}
+					}					
+				}
+			
+			}
+		}
+	}
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						tag = POL
+					}
+				}
+				every_country = {
+					limit = {
+						allies = yes
+					}
+					every_army_leader = {
+						remove_unit_leader_trait = no_grind
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						allies = yes
+					}
+				}
+				ENG = {
+					add_to_faction = FROM
+				}
+			}
+			if = {
+				limit = {
+					ROOT = JAP
+					FROM = {
+						allies = yes
+					}
+				}
+				every_country = {
+					limit = {
+						allies = yes
+					}
+					add_to_war = {
+						targeted_alliance = ENG
+						enemy = ROOT
+					}
+				}
+			}
 		}
 	}
 }

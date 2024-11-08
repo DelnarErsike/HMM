@@ -4,7 +4,7 @@ state={
 	name="STATE_350"
 
 	history={
-		owner = WST
+		owner =CHO
 		victory_points = {
 			4512 5 
 		}
@@ -23,14 +23,13 @@ state={
 			limit = {
 				has_dlc = "Battle for the Bosporus"
 			}
-			add_core_of = WST
+			add_core_of =CHO
 		}
 		if = {
 			limit = {
 				NOT = { has_dlc = "Battle for the Bosporus" }
 			}
-			add_core_of = WST
-			add_core_of = WST
+			add_core_of =CHO
 		}
 	}
 
