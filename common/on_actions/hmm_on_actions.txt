@@ -1,0 +1,104 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = {
+					is_playable_country = yes
+				}
+				add_ideas = {
+					peace_training
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						ai_annex = yes
+						ai_rk = yes
+						ai_manpower = yes
+						ai_black = yes
+					}
+				}
+				country_lock_all_division_template = yes
+				add_ideas = {
+					ai_tradelaw
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						ai_annex = yes
+						ai_black = yes
+					}
+				}
+				add_ideas = {
+					ai_annex
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						ai_manpower = yes
+					}
+				}
+				add_ideas = {
+					ai_war
+				}
+			}
+
+			every_country = {
+				limit = {
+					AND = {
+						is_playable_country = yes
+						NOT = {
+							tag = SPR
+						}
+					}
+
+				}
+				add_ideas = {
+					novols
+				}
+			}
+			SPR = {
+				add_ideas = {
+					no_faction
+				}
+			}
+			every_country = {
+				add_ideas = {
+					Spies_no_capture
+				}
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			every_country = {
+				limit = {
+					is_playable_country = yes
+					NOT = {
+						OR = {
+							has_war = yes
+							has_idea = peace_training
+							AND = {
+								tag = SPR
+								any_country = {
+									has_volunteers_amount_from = {
+										tag = SPR
+										count > 0
+									} 
+								}	
+							}
+						}
+					}
+				}
+				add_ideas = peace_training
+			}
+		}
+	}
+	on_capitulation = {
+		effect = {
+			hmm_capitulations_on_actions = yes
+		}
+	}
+}

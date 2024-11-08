@@ -13,15 +13,7 @@ state = {
 		owner = BEL
 		add_core_of = WST
 
-		IF = {
-			limit = {
-				has_dlc = "Gotterdammerung"
-			}
-			transfer_state_to = WST
-			add_dynamic_modifier = {
-				modifier = COG_state_loyal_to_free_congo_modifier
-			}
-		}
+		
 
 		victory_points = {
 			4941 1 # Albertville
