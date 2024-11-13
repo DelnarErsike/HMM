@@ -86,6 +86,8 @@ ideas = {
 			picture = generic_goods_red_bonus
 			modifier = {
 				trade_laws_cost_factor = 10000
+				conversion_cost_civ_to_mil_factor = 100
+				conversion_cost_mil_to_civ_factor = 100
 			}
 			
 		}
@@ -97,6 +99,9 @@ ideas = {
 				conscription = -1
 				industrial_capacity_factory = -1
 				production_factory_max_efficiency_factor = -1
+				industrial_capacity_dockyard = -1
+				conversion_cost_civ_to_mil_factor = 100
+				conversion_cost_mil_to_civ_factor = 100
 			}
 		}
 		ai_war = {
@@ -106,6 +111,9 @@ ideas = {
 				consumer_goods_factor = 100
 				industrial_capacity_factory = -1
 				production_factory_max_efficiency_factor = -1
+				industrial_capacity_dockyard = -1
+				conversion_cost_civ_to_mil_factor = 100
+				conversion_cost_mil_to_civ_factor = 100
 			}
 		}
 	}

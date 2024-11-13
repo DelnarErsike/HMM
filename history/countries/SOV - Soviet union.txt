@@ -162,6 +162,23 @@ if = {
 	recruit_character = SOV_andrey_shkuro
 	recruit_character = SOV_anton_denikin
 }
+SOV_konstantin_rokossovsky = {
+	set_character_flag = SOV_safe_from_purge_flag
+}
+SOV_markian_popov = {
+	set_character_flag = SOV_safe_from_purge_flag
+}
+SOV_vasily_kuznetsov = {
+	set_character_flag = SOV_safe_from_purge_flag
+}
+SOV_ivan_konev = {
+	set_character_flag = SOV_safe_from_purge_flag
+}
+SOV_georgy_zhukov = {
+	set_character_flag = SOV_safe_from_purge_flag
+}
+
+
 
 
 #Initialize character flags Part I (aka who's safe)

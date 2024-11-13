@@ -10,8 +10,8 @@ state = {
 
 	history = {
 
-		owner = BEL
-		add_core_of = WST
+		owner = COG
+		add_core_of = COG
 
 		
 

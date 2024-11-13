@@ -7,10 +7,10 @@ state = {
 
 	history = {
 
-		owner = BEL
+		owner = COG
 
 		
-		add_core_of = WST
+		add_core_of = COG
 
 		victory_points = {
 			2220 1

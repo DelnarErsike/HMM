@@ -10,7 +10,7 @@ state = {
 
 	history = {
 
-		owner = BEL
+		owner = COG
 
 
 		buildings = {
@@ -21,7 +21,7 @@ state = {
 			1950 3 # Stanleyville
 		}
 
-		add_core_of = WST
+		add_core_of = COG
 
 	}
 

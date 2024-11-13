@@ -10,15 +10,14 @@ state = {
 
 	history = {
 
-		owner = BEL
+		owner = COG
 
 
 		buildings = {
 			infrastructure = 1
 		}
 
-		add_core_of = WST
-		add_core_of = KAT
+		add_core_of = COG
 
 		victory_points = {
 			191 2 # Elizabehville

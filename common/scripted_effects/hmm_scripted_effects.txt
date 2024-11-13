@@ -17,6 +17,7 @@ hmm_capitulations_on_actions = {
 			transfer_state = 89
 			transfer_state = 97
 		}
+		
 	}
 
 	if = {
@@ -48,7 +49,10 @@ hmm_capitulations_on_actions = {
 		}
 		HOL = {
 			add_stability = 1.0
-			set_convoys = 300
+			add_equipment_to_stockpile = {
+                type = convoy_1
+                amount = 300
+            }
 			transfer_state = 672
 			transfer_state = 334
 			transfer_state = 335
@@ -169,12 +173,9 @@ hmm_capitulations_on_actions = {
 			original_tag = CHI
 			JAP = { has_war_with = CHI }
 		} 
-		CHI = {
-			transfer_navy = { target = JAP }
-		}
 		JAP = {
 			add_named_threat = { 
-				threat = 21,7
+				threat = 21.7
 				name = hmm_chi
 			}
 			annex_country = {
@@ -232,6 +233,7 @@ hmm_capitulations_on_actions = {
 			remove_ideas = {
 				ai_war
 			}
+			delete_unit = {}
 		}
 		
 	}
@@ -239,3 +241,6 @@ hmm_capitulations_on_actions = {
 
 
 }
+			
+
+		

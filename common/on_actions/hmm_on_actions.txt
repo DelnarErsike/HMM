@@ -1,6 +1,7 @@
 on_actions = {
 	on_startup = {
 		effect = {
+			hmm_intel = yes
 			every_country = {
 				limit = {
 					is_playable_country = yes
@@ -11,7 +12,12 @@ on_actions = {
 			}
 			every_country = {
 				every_army_leader = {
-					add_unit_leader_trait = no_grind
+					limit = {
+						NOT = { 
+							has_trait = no_grind
+						}
+					}
+				add_unit_leader_trait = no_grind
 				}
 			}
 			every_country = {
@@ -26,6 +32,12 @@ on_actions = {
 				country_lock_all_division_template = yes
 				add_ideas = {
 					ai_tradelaw
+				}
+			}
+			SOV = { 
+				country_event = {
+					id = mexico.21 # Mexico returns trotsky
+					days = 396 # Feb 37
 				}
 			}
 			every_country = {
@@ -78,6 +90,7 @@ on_actions = {
 	}
 	on_monthly = {
 		effect = {
+			hmm_intel = yes
 			every_country = {
 				limit = {
 					is_playable_country = yes
@@ -206,7 +219,7 @@ on_actions = {
 			FRA = { 
 				set_country_flag = france_tp
 				transfer_units_fraction = {
-					target = IRE
+					target = COG
 					size = 1
 					stockpile_ratio = 1
 					army_ratio = 0
@@ -237,6 +250,15 @@ on_actions = {
 						remove_unit_leader_trait = no_grind
 					}
 				}
+				ENG = {
+					puppet = IRE
+					set_autonomy = {
+						target = IRE
+						autonomy_state = autonomy_integrated_puppet
+					}
+				}
+				
+
 			}
 			if = {
 				limit = {
@@ -246,23 +268,6 @@ on_actions = {
 				}
 				ENG = {
 					add_to_faction = FROM
-				}
-			}
-			if = {
-				limit = {
-					ROOT = JAP
-					FROM = {
-						allies = yes
-					}
-				}
-				every_country = {
-					limit = {
-						allies = yes
-					}
-					add_to_war = {
-						targeted_alliance = ENG
-						enemy = ROOT
-					}
 				}
 			}
 		}

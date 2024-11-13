@@ -96,6 +96,7 @@ ai_manpower = {
 		tag = GRE
 		tag = DEN
 		tag = ALB
+		tag = IRE
 
 	}
 }
@@ -106,7 +107,7 @@ ai_annex = {
 		tag = EST
 		tag = AUS
 		tag = CZE
-		tag = IRE	
+		tag = COG	
 	}
 }
 ai_rk = {
