@@ -64,22 +64,6 @@ hmm_capitulations_on_actions = {
 			transfer_state = 695
 		}
 	}
-	if = {
-		limit = {
-			original_tag = BEL
-			GER = { has_war_with = BEL }
-		}
-		BEL = {
-			transfer_state = 889
-			transfer_state = 888
-			transfer_state = 295
-			transfer_state = 890
-			transfer_state = 538
-			transfer_state = 718
-			transfer_state = 768
-			transfer_state = 769
-		}
-	}
 
 	if = {
 		limit = { 

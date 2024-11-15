@@ -63,6 +63,22 @@ focus_tree = {
 			add = 1000000
 			tag = COG
 		}
+		modifier = {
+			add = 1000000
+			tag = POL
+		}
+		modifier = {
+			add = 1000000
+			tag = LAT
+		}
+		modifier = {
+			add = 1000000
+			tag = EST
+		}
+		modifier = {
+			add = 1000000
+			tag = LIT
+		}
 	}
 	
 	default = yes
