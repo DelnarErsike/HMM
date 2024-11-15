@@ -51,8 +51,13 @@ hmm_capitulations_on_actions = {
 			add_stability = 1.0
 			add_equipment_to_stockpile = {
                 type = convoy_1
-                amount = 300
+                amount = 1000
             }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 20000
+				producer = HOL
+			}
 			transfer_state = 672
 			transfer_state = 334
 			transfer_state = 335
