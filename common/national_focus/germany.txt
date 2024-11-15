@@ -9413,8 +9413,7 @@ focus_tree = {
 			if = {
 				limit = {
 					CZE = {
-						has_war = no
-						is_subject = no
+						exists = yes
 					}
 				}
 				set_global_flag = end_of_czechoslovakia
