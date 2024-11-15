@@ -9079,7 +9079,7 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			has_army_manpower = { size > 724999 } #80 div
+			
 		}
 		
 		cancel = {
@@ -9400,7 +9400,7 @@ focus_tree = {
 		
 		available = { 
 			is_subject = no
-			has_army_manpower = { size > 749999 }
+			
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_HISTORICAL }
@@ -10014,7 +10014,7 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			has_army_manpower = { size > 949999 } #100 div			
+			#100 div			
 			#Make custom trigger tooltip here
 			85 = {
 				owner = {
@@ -10728,15 +10728,7 @@ focus_tree = {
 		relative_position_id = GER_war_with_france
 		cost = 5
 		available = {
-			SWI = {
-				exists = yes
-				has_war = no
-				NOT = { has_government = communism }
-				custom_trigger_tooltip = {
-					tooltip = GER_alone_or_peace_faction_tt
-					is_alone_or_in_faction_at_peace_with_GER = yes
-				}
-			}
+			
 		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
@@ -10876,7 +10868,7 @@ focus_tree = {
 
 		available = {
 			has_war_with = ENG
-			has_army_manpower = { size > 999999 }
+			
 			custom_trigger_tooltip = {
 			 	tooltip = GER_sea_lion_eq_trigger_tt
 			 	check_variable = { num_equipment_in_armies_k@infantry_equipment > 90 }
@@ -10978,7 +10970,7 @@ focus_tree = {
 			is_subject = no
 			controls_state = 4
 			controls_state = 152
-			has_army_manpower = { size > 749999 } #ca 80 div
+			 #ca 80 div
 		}
 
 		ai_will_do = {
@@ -12121,7 +12113,7 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				OR = {
-					has_army_manpower = { size < 1199999 }
+					
 					any_home_area_neighbor_country = {
 						has_war_with = ROOT
 					}

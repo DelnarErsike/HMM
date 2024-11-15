@@ -3737,11 +3737,7 @@ focus_tree = {
 	focus = {
 		id = SPA_consolidate_the_north
 		available = {
-			controls_state = 166
-			controls_state = 172
-			controls_state = 176
-			controls_state = 792
-			controls_state = 790
+			
 		}
 		bypass = {
 			has_global_flag = scw_over

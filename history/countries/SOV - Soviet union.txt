@@ -177,6 +177,9 @@ SOV_ivan_konev = {
 SOV_georgy_zhukov = {
 	set_character_flag = SOV_safe_from_purge_flag
 }
+SOV_nikolay_vatutin = {
+	set_character_flag = SOV_safe_from_purge_flag
+}
 
 
 

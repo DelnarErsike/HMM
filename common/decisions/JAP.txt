@@ -2149,12 +2149,12 @@ prospect_for_resources = {
 #  #  ##  #  #  #  #  # ### #  # #  #     #  # ### ##   ##   ##  #  #  ##  ###     #  # #  # ### #  # 
 
 	#Below is visible when JAP_establish_the_northern_resource_area is completed
-	JAP_develop_north_sakhalin_oil_deposits = { #655
+	JAP_develop_south_sakhalin_oil_deposits = { #655
 		icon = oil
 
 		highlight_states = {
  highlight_state_targets = {
-			state = 655
+			state = 537
 		} 
 }
 
@@ -2163,7 +2163,7 @@ prospect_for_resources = {
 		}
 
 		available = {
-			has_full_control_of_state = 655
+			has_full_control_of_state = 537
 			has_tech = excavation2
 		}
 
@@ -2182,7 +2182,7 @@ prospect_for_resources = {
 		}
 
 		complete_effect = {
-			655 = {
+			537 = {
 				add_resource = {
 					type = oil
 					amount = 48
