@@ -10,6 +10,11 @@ NDefines.NProduction.MIN_LAND_EQUIPMENT_CONVERSION_RESOURCE_COST_FACTOR = 0		-- 
 NDefines.NDiplomacy.LICENSE_ACCEPTANCE_TECH_DIFFERENCE = 20 		-- Acceptance modifier for each year of technology difference.
 NDefines.NDiplomacy.LICENSE_ACCEPTANCE_TECH_DIFFERENCE_BASE = 100    -- Acceptance base for tech difference
 
+--AI no lend lease
+NDefines.NAI.LENDLEASE_FRACTION_OF_PRODUCTION = 0
+NDefines.NAI.LENDLEASE_FRACTION_OF_STOCKPILE = 0
+NDefines.NAI.MINIMUM_EQUIPMENT_TO_ASK_LEND_LEASE = -100000
+NDefines.NAI.MINIMUM_CONVOY_TO_ASK_LEND_LEASE = 0
 
 --Convoy Prio
 

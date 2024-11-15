@@ -1,4 +1,31 @@
 ideas = {
+	hidden_ideas = {
+		no_faction = {
+            allowed = {
+				always = no
+			}
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+            picture = generic_morale_bonus
+						
+			modifier = {
+
+			}  
+            on_add = {
+				set_rule = { 
+					desc = NO_Faction
+					can_create_factions = no
+					can_join_factions = no
+					can_send_volunteers = yes
+				}
+			}
+
+        }
+	}
 	country = {
 		peace_training = {
 			allowed = {
