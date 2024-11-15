@@ -1,12 +1,6 @@
 on_actions = {
 	on_startup = {
 		effect = {
-			SPR = {
-				add_ideas = no_faction
-			}
-			FIN = {
-				add_ideas = no_faction
-			}
 			hmm_intel = yes
 			every_country = {
 				limit = {
