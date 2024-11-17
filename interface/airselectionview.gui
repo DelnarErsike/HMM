@@ -1478,6 +1478,16 @@ guiTypes = {
 				frame = 1
 			}
 
+			containerWindowType = {
+				name = "day_night_block_window"
+				size = { width = 31 height = 31 } 
+				position = { x=445 y=8 }  	 	
+				background = {
+					name = "Background"
+					spriteType = "GFX_tiled_window_transparent"
+				}
+			}
+
 			buttonType = {
 				name = "select_all_wings_btn"
 				position = { x=475 y=8 }
