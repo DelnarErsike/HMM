@@ -113,6 +113,21 @@ on_actions = {
 			}
 			if = {
 				limit = {
+					HOL = {
+						has_equipment = {
+							convoy_1 < 1000
+						}
+					}
+				}
+				HOL = {
+					add_equipment_to_stockpile = {
+						type = convoy
+						amount = 45
+					}
+				}
+			}
+			if = {
+				limit = {
 					OR={
 						BEL = {
 							has_capitulated = no
@@ -369,7 +384,7 @@ on_actions = {
                     }
                 }
                 POL = {
-                    load_oob = "POL_CHROM_SPAWN"
+                   load_oob = "POL_CHROM_SPAWN"
                 }
             }
 			if = {

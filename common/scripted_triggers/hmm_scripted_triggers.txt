@@ -145,6 +145,7 @@ ai_black = {
 		tag = WST
 		tag = TUM
 		tag = CHR
+		tag = SWE
 	}
 }
 
