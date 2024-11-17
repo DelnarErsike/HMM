@@ -117,6 +117,7 @@ on_actions = {
 						has_equipment = {
 							convoy_1 < 1000
 						}
+						has_capitulated = yes
 					}
 				}
 				HOL = {
