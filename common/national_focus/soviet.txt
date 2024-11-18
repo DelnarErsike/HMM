@@ -8359,49 +8359,7 @@ focus = {
 				has_completed_focus = SOV_the_left_opposition
 				has_completed_focus = SOV_the_right_opposition
 			}
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				SPR_scw_in_progress = yes
-				if = {
-					limit = {
-						NOT = { has_global_flag = spanish_civil_war }
-					}
-					custom_trigger_tooltip = {
-					    tooltip = POR_spr_tooltip_country_exist_tt
-					    country_exists = SPR
-				    }
-				    custom_trigger_tooltip = {
-					    tooltip = POR_spr_tooltip_at_peace_tt
-						NOT = { has_war_with = SPR }
-				    }
-				}
-				else = {
-					if = {
-						limit = {
-							has_completed_focus = SOV_covert_support_for_spanish_poum
-						}
-						country_exists = SPC
-						NOT = { has_war_with = SPC }
-					}
-					else = {
-						country_exists = SPD
-						NOT = { has_war_with = SPD }
-					}
-				}
-			}
-			else = {
-				any_other_country = {
-					original_tag = SPR
-					has_civil_war = yes
-					NOT = { has_war_with = ROOT }
-					OR = {
-						has_government = democratic
-						has_government = communism
-					}
-				}
-			}
+			NOT = { has_global_flag = scw_over }
 			has_government = communism
 			is_subject = no
 		}

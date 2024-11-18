@@ -51,10 +51,10 @@ hmm_capitulations_on_actions = {
 			add_stability = 1.0
 			add_equipment_to_stockpile = {
                 type = convoy_1
-                amount = 8000
+                amount = 1000
             }
 			add_equipment_to_stockpile = {
-				type = infantry_equipment_1
+				type = infantry_equipment_0
 				amount = 20000
 				producer = HOL
 			}

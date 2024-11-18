@@ -136,10 +136,23 @@ foreign_civilian_oversight = {
 	ai_will_do = {
 		base = 120
 		modifier = {
-
-			tag = HOL
-
-			add = 100000000
+			if = {
+				limit = {
+					OR = {
+					state = 672
+					state = 334
+					state = 335
+					state = 667
+					state = 673
+					state = 668
+					state = 669
+					state = 309
+					state = 695
+					}
+				}
+			}
+			factor = 1000
+			
 		}
 	}
 }
