@@ -229,6 +229,7 @@ economy_decisions = {
 		visible = { 
 			OR = {
 				is_major = no
+				tag = JAP
 				AND = {
 					is_faction_leader = yes
 					num_of_factories < 51 #would be a minor if it wasn't for faction leader status
@@ -1913,6 +1914,7 @@ war_measures = {
 						tag = ARG #has a focus
 						tag = AST #has a focus
 						tag = FRA #has a focus
+						tag = GER #has a focus
 					}
 				} 
 				AND = {

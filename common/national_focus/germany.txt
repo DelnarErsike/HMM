@@ -131,7 +131,12 @@ focus_tree = {
 		#relative_position_id = GER_strengthen_the_kriegsmarine
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER }
-
+		available = {
+			has_game_rule = {
+				rule = Germany_Wirtschaftswunder
+				option = Germany_wirtschaftswunder
+			}
+		}
 		completion_reward = {
 
 			add_stability = -0.1

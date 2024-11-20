@@ -2513,7 +2513,10 @@ shared_focus = {
 	cost = 10
 
 	available = {
-		always = no
+		has_game_rule = {
+			rule = Brasil_AC_rule
+			option = Brasil_AC
+		}
 	}
 
 	bypass = {
@@ -2546,7 +2549,10 @@ shared_focus = {
 	cost = 10
 
 	available = {
-		always = no
+		has_game_rule = {
+			rule = Brasil_AC_rule
+			option = Brasil_AC
+		}
 	}
 
 	bypass = {
@@ -2583,7 +2589,10 @@ shared_focus = {
 		}
 
 	available = {
-		always = no
+		has_game_rule = {
+			rule = Brasil_AC_rule
+			option = Brasil_AC
+		}
 	}
 
 	bypass = {
