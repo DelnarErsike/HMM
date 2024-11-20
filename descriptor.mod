@@ -4,9 +4,6 @@ tags={
 	"Fixes"
 	"Historical"
 }
-replace_path="history/countries"
-replace_path="common/countries"
-replace_path="common/country_tags"
 name="HMM"
 supported_version="1.15.0"
 remote_file_id="3365264825"
