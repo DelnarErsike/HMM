@@ -5,5 +5,5 @@ tags={
 	"Historical"
 }
 name="HMM"
-supported_version="1.15.0"
+supported_version="1.15.1"
 remote_file_id="3365264825"

@@ -1078,6 +1078,899 @@ on_actions = {
 					amount = 20
 				}
 			}
+			ENG = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 1000
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 9600
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 259
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 100
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = armored_car_equipment
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_1
+					amount = 180
+					producer = ENG
+					variant_name = "Light Tank Mk. IV"
+				}
+			}
+			USA= {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 11100
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 344
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 106
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = armored_car_equipment
+					amount = 0
+				}
+			}
+			PHI = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 915
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 30
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = armored_car_equipment
+					amount = 0
+				}
+			}
+			MEX = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 5605
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 900
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 55
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = armored_car_equipment
+					amount = 0
+				}
+			}
+			BRA = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 2700
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 75
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 48
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = armored_car_equipment
+					amount = 0
+				}
+			}
+			FRA = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 4200
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 31300
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 766
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 2500
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 217
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = armored_car_equipment
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_0
+					amount = 480
+					producer = FRA
+					variant_name = "FT mod. 31"
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_0
+					amount = 480
+					producer = FRA
+					variant_name = "FT Char Cannon"
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_1
+					amount = 240
+					producer = FRA
+					variant_name = "H-35"
+				}
+				
+			}
+			SAF = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 815
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = armored_car_equipment
+					amount = 0
+				}
+			}
+			AST = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 2000
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = armored_car_equipment
+					amount = 0
+				}
+			}
+			NZL = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 600
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = armored_car_equipment
+					amount = 0
+				}
+			}
+			SOV = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 22000
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 65700
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 401
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 1600
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 814
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = armored_car_equipment
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_1
+					amount = 1300
+					producer = SOV
+					variant_name = "T-26TU mod. 1933"
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_1
+					amount = 1800
+					producer = SOV
+					variant_name = "BT-5"
+				}
+			}
+			RAJ = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 2900
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = armored_car_equipment
+					amount = 0
+				}
+			}
+			RAJ = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 2900
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = armored_car_equipment
+					amount = 0
+				}
+			}
+			CAN = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 2700
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = armored_car_equipment
+					amount = 0
+				}
+			}
+			SIA = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 1800
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = armored_car_equipment
+					amount = 0
+				}
+			}
+			MAN = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 3900
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = armored_car_equipment
+					amount = 0
+				}
+			}
+			JAP = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 5700
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 32100
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 762
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 880
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 25
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = armored_car_equipment
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_0
+					amount = 336
+					producer = JAP
+					variant_name = "Type 94 Tankette"
+				}
+			}
+			GER = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 24900
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 891
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_0
+					amount = 607
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 349
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = armored_car_equipment
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_1
+					amount = 720
+					producer = GER
+					variant_name = "Panzer I Ausf. A"
+				}
+			}
+			BUL = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 3141
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 1
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 42
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = armored_car_equipment
+					amount = 0
+				}
+			}
+			HUN = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 3400
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 57
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 56
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = armored_car_equipment
+					amount = 0
+				}
+			}
+			ROM = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 9600
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 303
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 70
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 87
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = armored_car_equipment
+					amount = 0
+				}
+			}
+			ITA = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 5160
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 17070
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 810
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 361
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 240
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = armored_car_equipment
+					amount = 150
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_1
+					amount = 180
+					producer = ITA
+					variant_name = "L3/35"
+				}
+			}
+			FIN = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 2500
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 157
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = armored_car_equipment
+					amount = 0
+				}
+				
+			}
+			
 			
 		}
 	}

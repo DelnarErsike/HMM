@@ -13,7 +13,7 @@ air_wings = {
 	}
 
 	### II. Luftkreiskommando -- Berlin ###
-	64 = { 
+	763 = { 
 		# Jagdgeschwader 132 'Richtofen'		
 		small_plane_airframe_0 =  {		# Ar 68
 			owner = "GER" 
@@ -48,7 +48,7 @@ air_wings = {
 	}
 
 	### III. Luftkreiskommando -- Breslau ###
-	66 = { 
+	763 = { 
 		# Kampfgeschwader 253 'General Wever'		
 		medium_plane_airframe_0 = {		# He 45 or Do 23 ?
 			owner = "GER" 
@@ -71,7 +71,7 @@ air_wings = {
 	}
 
 	### IV. Luftkreiskommando -- Kassel ###
-	57 = { 
+	763 = { 
 		# Jagdgeschwader 134 'Horst Wessel'		
 		small_plane_airframe_0 =  {		# He 51 # Ar 68
 			owner = "GER" 
@@ -101,7 +101,7 @@ air_wings = {
 	}
 
 	### V. Luftkreiskommando -- Munich ###
-	52 = { 
+	763 = { 
 		# Jagdgeschwader 136		
 		small_plane_airframe_0 =  {		# He 51
 			owner = "GER" 
@@ -119,7 +119,7 @@ air_wings = {
 	}
 
 	### VI. Luftkreiskommando -- Kiel ###
-	58 = { 
+	763 = { 
 		# Küstenfliegergruppe 106		
 		small_plane_naval_bomber_airframe_1 =  {		# He 59, Do 18
 			owner = "GER" 
