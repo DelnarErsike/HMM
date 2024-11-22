@@ -86,43 +86,6 @@ on_actions = {
 					Spies_no_capture
 				}
 			}
-			GER = {
-				country_event = {
-					id = DOD_yugoslavia.20
-					days = 912
-				}
-			}
-			FRA = {
-				country_event = {
-					id = DOD_yugoslavia.20
-					days = 912
-				}
-			}
-			##### Turning King Edward's abdication into an on_startup event instead of MTTH to help performance####
-			ENG = {
-				country_event = {
-					id = britain.16
-					days = 20
-				}
-				country_event = {
-					id = mtg_britain.1
-					days = 190
-				}
-				country_event = {
-					id = britain.22
-					days = 513
-				}
-				country_event = {
-					id = DOD_yugoslavia.20
-					days = 912
-				}
-			}
-			ITA = {
-				country_event = {
-					id = DOD_yugoslavia.20
-					days = 912
-				}
-			}
 		}
 	}
 	on_monthly = {
