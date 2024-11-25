@@ -1,7 +1,6 @@
 on_actions = {
 	on_startup = {
 		effect = {
-			hmm_intel = yes
 			every_country = {
 				limit = {
 					is_playable_country = yes
