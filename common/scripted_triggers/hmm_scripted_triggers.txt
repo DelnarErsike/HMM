@@ -144,7 +144,7 @@ ai_black = {
 	OR = {
 		tag = WST
 		tag = TUM
-		tag = CHR
+		tag = CHO
 		tag = SWE
 	}
 }
