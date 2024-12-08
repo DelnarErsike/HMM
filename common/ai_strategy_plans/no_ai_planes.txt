@@ -1,4 +1,28 @@
-#stolen from GDU
+
+GEN_do_eco = {
+    name = "Gen Tree do eco"
+    desc = "ai rush eco"
+
+    enable = {
+        has_focus_tree = generic_focus
+    }
+    abort = {
+        
+    }
+    ai_national_focuses = {
+        industrial_effort
+        construction_effort
+        construction_effort_2
+        infrastructure_effort
+        construction_effort_3
+        production_effort
+        production_effort_2
+        production_effort_3
+        infrastructure_effort_2
+        naval_effort
+    }
+}
+
 no_ai_planes = {
 	name = "No AI planes"
 	desc = "Disable AI plane production and research"
