@@ -4254,21 +4254,6 @@ on_actions = {
 	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
 	on_state_control_changed = {
 		effect = {
-
-			#no Reichcomms caping
-			if = {
-				limit = {
-					FROM = {
-						is_subject_of = GER
-						surrender_progress > 0.50
-					}
-				}
-				GER = {
-					annex_country = { target = FROM transfer_troops = yes }
-				}
-			}
-
-
 			if = {
 				limit = {
 					tag = FRA #to avoid third party taking over
