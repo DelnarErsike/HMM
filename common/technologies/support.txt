@@ -183,12 +183,12 @@ technologies = {
 				defence = 0.15
 			}
 		}
+
 		enable_equipment_modules = {
 			dozer_blade
 			#flamethrower #MM: Moved to Special Project sp_land_flamethrower_tank
 		}
 
-		
 		#enable_subunits = { #MM: Moved to Special Project sp_land_flamethrower_tank
 		#	light_flame_tank
 		#	medium_flame_tank
@@ -952,7 +952,7 @@ technologies = {
 
 		armored_maintenance = {
 			reliability_factor = 0.02
-			recovery = 0.3
+			recovery = 0.03
 			
 			battalion_mult = {
 				category = category_all_armor
@@ -1925,7 +1925,12 @@ technologies = {
 		}
 
 		on_research_complete = {
-			SP_create_variant_based_on_country_armored_engineer = yes
+			if = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+				}
+				SP_create_variant_based_on_country_armored_engineer = yes
+			}
 		}
 		
 		ai_will_do = {
@@ -1974,7 +1979,12 @@ technologies = {
 		}
 
 		on_research_complete = {
-			SP_create_variant_based_on_country_armored_maintenance = yes
+			if = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+				}
+				SP_create_variant_based_on_country_armored_maintenance = yes
+			}
 		}
 		
 		ai_will_do = {
@@ -2028,7 +2038,12 @@ technologies = {
 		}
 
 		on_research_complete = {
-			SP_create_variant_based_on_country_armored_signal = yes
+			if = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+				}
+				SP_create_variant_based_on_country_armored_signal = yes
+			}
 		}
 		
 		ai_will_do = {
