@@ -81,6 +81,6 @@ focus_tree = {
 		}
 	}
 	
-	default = yes
+	default = no
 	reset_on_civilwar = no
 }
