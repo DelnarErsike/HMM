@@ -306,6 +306,7 @@ free_license = {
 		}
 	}
 	license_purchase_cost = 0 #no base cost
+	ai_license_acceptance = -30000
 }
 
 ITA_military_agreements = {
