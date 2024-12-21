@@ -127,6 +127,29 @@ on_actions = {
 	on_monthly = {
 		effect = {
 			if = {
+				limit = {date > 1941.12.31
+				NOT = { GER = {has_war_with = SOV}}
+			}
+				GER = {
+					declare_war_on = {
+					target = SOV
+					type = annex_everything
+					}
+				}
+			}
+			if = {
+				limit = {
+					date > 1941.12.31
+					NOT = { JAP = {has_war_with = USA}}
+				}
+				JAP = {
+					declare_war_on = {
+					target = USA
+					type = annex_everything
+					}
+				}
+			}
+			if = {
 				limit = {
 						BEL = {
 							has_capitulated = yes
@@ -406,6 +429,24 @@ on_actions = {
 				}
 				initilize_victory_system = yes
 			}
+			if = {
+                limit = {
+                    tag = GER
+                    FROM = {
+                       tag = SOV
+                    }
+                }
+                every_country = {
+                    limit = {
+                        is_in_faction_with = GER
+                    }
+                    add_to_war = {
+                        targeted_alliance = ROOT
+                        enemy = SOV
+                        hostility_reason = asked_to_join
+                    }
+                }
+            }
         }
     }
 	on_declare_war = {
