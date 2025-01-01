@@ -341,7 +341,7 @@ characters = {
 		}
 		
 		corps_commander = {
-			traits = { armor_officer war_hero organizer organizer}
+			traits = { armor_officer war_hero  infantry_leader organizer}
 			skill = 4
 			attack_skill = 4
 			defense_skill = 3
