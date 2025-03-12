@@ -65,110 +65,42 @@ focus_tree = {
 		}
 
 		bypass = {
-			custom_trigger_tooltip =  {
-				tooltip = infrastructure_effort_tt
-				all_owned_state = {
-					free_building_slots = {
-						building = infrastructure
-						size < 2
-					}
-				}
-			}
+			
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
-		complete_tooltip = {
-			every_state = {
-				limit = { has_state_flag = SOV_infrastructure_effort_3Inf }
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
+		
 
 		completion_reward = { #TODO_Manu: This is just copy-pasted from the old focus -> Is this what we want?
-			if = {
-				limit = {
-					all_owned_state = {
-						infrastructure > 2
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						free_building_slots = {
-							building = infrastructure
-							size > 1
-						}
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes						
-					}
-					set_state_flag = SOV_infrastructure_effort_3Inf
-				}
-				random_owned_controlled_state = {
-					limit = {
-						free_building_slots = {
-							building = infrastructure
-							size > 1
-						}
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-					set_state_flag = SOV_infrastructure_effort_3Inf
-				}				
+		572 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
 			}
-			random_owned_controlled_state = {
-				limit = {
-					infrastructure < 3
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = SOV_infrastructure_effort_3Inf	
+		}
+		571 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
 			}
-			random_owned_controlled_state = {
-				limit = {
-					infrastructure < 3
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = SOV_infrastructure_effort_3Inf	
+		}
+		255 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
 			}
-			random_owned_controlled_state = {
-				limit = {
-					infrastructure < 3
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = SOV_infrastructure_effort_3Inf	
+		}
+		400 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
 			}
-			random_owned_controlled_state = {
-				limit = {
-					infrastructure < 3
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = SOV_infrastructure_effort_3Inf	
-			}
+		}
 		}
 	}
 
@@ -6484,7 +6416,6 @@ focus_tree = {
 		relative_position_id = SOV_strengthen_the_mobilization_plan
 		cost = 5
 
-		mutually_exclusive = { focus = SOV_beaten_but_not_defeated }
 
 		allow_branch = {
 			if = {
@@ -8696,7 +8627,7 @@ focus = {
 	focus = {
 		id = SOV_claims_on_poland
 		icon = GFX_SOV_claims_on_poland_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_respect_baltic_self_determination focus = SOV_claims_in_baltic }
+		prerequisite = {  focus = SOV_claims_in_baltic }
 		x = 1
 		y = 1
 		relative_position_id = SOV_claims_in_baltic

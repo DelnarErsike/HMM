@@ -244,7 +244,8 @@ focus_tree = {
 		}
 
 		available = {
-			congress_medium_support_trigger = yes
+			congress_low_support_trigger = yes
+			
 			has_government = democratic
 		}
 		
@@ -284,7 +285,7 @@ focus_tree = {
 		}
 
 		available = {
-			congress_medium_support_trigger = yes
+			congress_low_support_trigger = yes
 			has_government = democratic
 			not = { has_country_flag = USA_great_depression_cooldown }
 		}
@@ -324,7 +325,7 @@ focus_tree = {
 		}
 
 		available = {
-			congress_medium_support_trigger = yes
+			congress_low_support_trigger = yes
 			has_government = democratic
 			not = { has_country_flag = USA_great_depression_cooldown }
 		}
@@ -556,8 +557,7 @@ focus_tree = {
 		icon = GFX_goal_generic_neutrality_focus
 		x = 2
 		y = 1
-		prerequisite = { focus = USA_continue_the_new_deal focus = USA_reestablish_the_gold_standard }
-		mutually_exclusive = { focus = USA_limited_intervention }
+		prerequisite = { focus = USA_continue_the_new_deal  }
 		relative_position_id = USA_continue_the_new_deal
 
 		cost = 10
@@ -1914,7 +1914,7 @@ focus_tree = {
 					threat < 0.5
 					has_war = no
 				}
-				congress_high_support_trigger = yes
+				congress_medium_support_trigger = yes
 			}
 			else = {
 				congress_low_support_trigger = yes

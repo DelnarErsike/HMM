@@ -2295,7 +2295,6 @@
 		prerequisite = {
 			focus = FRA_review_foreign_policy
 		}
-		mutually_exclusive = { focus = FRA_confirm_eastern_commitments }
 		relative_position_id = FRA_review_foreign_policy
 		cost = 10
 
@@ -2435,7 +2434,6 @@
 			}
 		}
 	 	prerequisite = { focus = FRA_buy_time }
-	 	mutually_exclusive = { focus = FRA_france_leads }
 		x = 0
 		y = 1
 		relative_position_id = FRA_buy_time

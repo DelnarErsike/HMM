@@ -7999,7 +7999,6 @@ focus_tree = {
 		icon = GFX_focus_GER_remilitarize_the_rhineland
 		alternate_icon = GFX_focus_GER_remilitarize_the_rhineland_historical
 
-		mutually_exclusive = { focus = GER_oppose_hitler_ww focus = GER_oppose_hitler }
 
 		allow_branch = {
 			if = {
@@ -9021,7 +9020,6 @@ focus_tree = {
 
 		prerequisite = { focus = GER_anschluss }
 
-		mutually_exclusive = { focus = GER_befriend_czechoslovakia }
 
 		x = -2
 		y = 1
@@ -9540,6 +9538,8 @@ focus_tree = {
 		relative_position_id = GER_an_invincible_army
 		cost = 5
 		available = {
+			SOV = {has_capitulated = yes}
+			FRA = {has_capitulated = yes}
 			surrender_progress < 0.01
 			custom_trigger_tooltip = {
 				tooltip = GER_an_invincible_army_trigger
@@ -9548,10 +9548,7 @@ focus_tree = {
 					check_variable = { GER_occupied_states_europe > 49 }
 				}
 			}
-			custom_trigger_tooltip = { 
-				tooltip = GER_the_supreme_leader_trigger
-				check_variable = { GER_capitulated_major_countries > 2 }
-			}
+			
 		}
 
 		search_filters = {}
@@ -9888,7 +9885,6 @@ focus_tree = {
 		alternate_icon = GFX_focus_GER_befriend_italy
 
 		prerequisite = { focus = GER_fate_of_czechoslovakia  }
-		mutually_exclusive = { focus = GER_invade_italy }
 		x = 0
 		y = 1
 		relative_position_id = GER_fate_of_czechoslovakia
@@ -10192,8 +10188,7 @@ focus_tree = {
 		icon = GFX_focus_GER_around_maginot
 		alternate_icon = GFX_focus_GER_around_maginot_historical
 
-		prerequisite = { focus = GER_danzig_for_slovakia focus = GER_danzig_or_war }
-		mutually_exclusive = { focus = GER_influence_the_benelux }
+		prerequisite = {  focus = GER_danzig_or_war }
 		x = -1
 		y = 2
 		relative_position_id = GER_danzig_or_war
@@ -10346,7 +10341,6 @@ focus_tree = {
 		alternate_icon = GFX_focus_GER_operation_wesserubung_historical
 
 		prerequisite = { focus = GER_danzig_or_war }
-		mutually_exclusive = { focus = GER_utilize_the_nordliche_gesellschaft }
 		x = 1
 		y = 2
 		relative_position_id = GER_danzig_or_war
@@ -10841,7 +10835,7 @@ focus_tree = {
 	focus = {
 		id = GER_operation_sea_lion
 		icon = GFX_focus_generic_naval_invasion
-		prerequisite = { focus = GER_war_with_france focus = GER_invade_italy }
+		prerequisite = { focus = GER_war_with_france  }
 
 		x = -1
 		y = 1
@@ -12044,7 +12038,6 @@ focus_tree = {
 		alternate_icon = GFX_focus_GER_war_with_the_ussr
 
 		prerequisite = { focus = GER_anti_comintern_pact }
-		mutually_exclusive = { focus = GER_alliance_with_the_ussr }
 		x = 0
 		y = 1
 		relative_position_id = GER_anti_comintern_pact
@@ -12176,7 +12169,6 @@ focus_tree = {
 		alternate_icon = GFX_focus_GER_molotov_ribbentrop_pact
 
 		prerequisite = { focus = GER_reorganize_the_wehrmacht }
-		mutually_exclusive = { focus = GER_anti_soviet_pact }
 		x = 4
 		y = 1
 		relative_position_id = GER_reorganize_the_wehrmacht
@@ -14574,10 +14566,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INNER_CIRCLE FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			if = {
-				limit = {
-					59 = { is_fully_controlled_by = ROOT }
-				}
+
 				59 = { #Hannover
 					add_resource = {
 						type = steel
@@ -14588,95 +14577,17 @@ focus_tree = {
 						scope = GER
 					}
 				}
-				random_core_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-						NOT = {
-							state = 59
-						}
-						OR = {
-							has_resources_amount = {
-								resource = oil
-								amount > 19
-								delivered = no
-							}
-							has_resources_amount = {
-								resource = aluminium
-								amount > 19
-								delivered = no
-							}
-							has_resources_amount = {
-								resource = rubber
-								amount > 19
-								delivered = no
-							}
-							has_resources_amount = {
-								resource = tungsten
-								amount > 19
-								delivered = no
-							}
-							has_resources_amount = {
-								resource = steel
-								amount > 19
-								delivered = no
-							}
-							has_resources_amount = {
-								resource = chromium
-								amount > 19
-								delivered = no
-							}
-						}
+				66 = { #Hannover
+					add_resource = {
+						type = steel
+						amount = 6
 					}
 					add_dynamic_modifier = { 
 						modifier = GER_four_year_plan_initiative_modifier
 						scope = GER
 					}
 				}
-			}
-			else = {
-				every_core_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-						OR = {
-							has_resources_amount = {
-								resource = oil
-								amount > 19
-								delivered = no
-							}
-							has_resources_amount = {
-								resource = aluminium
-								amount > 19
-								delivered = no
-							}
-							has_resources_amount = {
-								resource = rubber
-								amount > 19
-								delivered = no
-							}
-							has_resources_amount = {
-								resource = tungsten
-								amount > 19
-								delivered = no
-							}
-							has_resources_amount = {
-								resource = steel
-								amount > 19
-								delivered = no
-							}
-							has_resources_amount = {
-								resource = chromium
-								amount > 19
-								delivered = no
-							}
-						}
-					}
-					random_select_amount = 2
-					add_dynamic_modifier = { 
-						modifier = GER_four_year_plan_initiative_modifier
-						scope = GER
-					}
-				}
-			}
+				
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 

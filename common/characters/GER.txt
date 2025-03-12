@@ -235,7 +235,59 @@ characters = {
 ##        ##  ##       ##       ##     ##    ##     ## ##     ## ##    ##  ##    ## ##     ## ##     ## ##       ##    ## 
 ##       #### ######## ######## ########     ##     ## ##     ## ##     ##  ######  ##     ## ##     ## ########  ######  
 
+AUS_eugen_beyer = {
+	instance = {
+		allowed = {
+			has_dlc = "Gotterdammerung"
+		}
 
+		advisor = {	
+			slot = high_command
+			idea_token = AUS_eugen_beyer
+			ledger = army
+			allowed = {
+				OR = {
+					original_tag = AUS
+					original_tag = GER
+				}
+			}
+			traits = {
+				army_commando_2
+			}
+			cost = 100
+			ai_will_do = {
+				base= 1
+			}
+		}
+		name = AUS_eugen_beyer
+		portraits = { 
+			army = {
+				large = "GFX_portrait_AUS_eugen_beyer"
+				small = "GFX_portrait_AUS_eugen_beyer_small"
+
+			}
+		}
+
+		field_marshal = {
+			traits = { offensive_doctrine commando career_officer}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id = -1
+			visible = {
+				OR = {
+					original_tag = AUS
+					AND = {
+						original_tag = GER
+						has_country_flag = AUS_annexed 
+					}
+				}
+			}
+		}
+	}
+}
 
 	GER_werner_von_blomberg = {
 		name = GER_werner_von_blomberg
@@ -589,7 +641,7 @@ characters = {
 		}
 		
 		corps_commander = {
-			traits = { brilliant_strategist panzer_leader trickster trait_engineer skilled_staffer cavalry_leader organizer ranger }
+			traits = { brilliant_strategist panzer_leader trickster trait_engineer skilled_staffer cavalry_leader organizer ranger urban_assault_specialist}
 			skill = 6
 			attack_skill = 4
 			defense_skill = 7
@@ -701,7 +753,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { cavalry_officer panzer_leader trickster trait_engineer skilled_staffer cavalry_leader organizer ranger commando}
+			traits = {cavalry_officer panzer_leader trickster trait_engineer skilled_staffer cavalry_leader organizer ranger commando urban_assault_specialist}
 			skill = 6
 			attack_skill = 5
 			defense_skill = 7
@@ -1993,6 +2045,7 @@ characters = {
 	# Lütjens up there
 
 	# Von Fritsch up there
+	
 
 	GER_ferdinand_schorner = {
 		name = GER_ferdinand_schorner

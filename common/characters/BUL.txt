@@ -286,8 +286,8 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { old_guard infantry_leader organizer}
-			skill = 4
+			traits = { old_guard infantry_leader organizer trickster}
+			skill = 6
 			attack_skill = 6
 			defense_skill = 4
 			planning_skill = 3
@@ -376,7 +376,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { trait_reckless harsh_leader trait_BUL_zveno_member organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer}
+			traits = { trait_reckless harsh_leader trait_BUL_zveno_member organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster}
 			skill = 6
 			attack_skill = 6
 			defense_skill = 4

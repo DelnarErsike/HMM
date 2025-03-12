@@ -370,6 +370,25 @@ characters = {
 			legacy_id = 0
 			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
 		}
+		advisor = {
+			slot = high_command
+			idea_token = nikolay_vatutin
+			ledger = army
+			allowed = {
+				original_tag = SOV
+				
+			}
+			available = {
+				NOT = {has_tech = peoples_army}
+			}
+			traits = {
+				army_infantry_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 2.000
+			}
+		}
 	}
 
 	SOV_ivan_konev = {
@@ -829,7 +848,7 @@ characters = {
 		}
 		
 		corps_commander = {
-			traits = {  panzer_leader trickster trait_engineer skilled_staffer cavalry_leader  organizer ranger commando}
+			traits = {  panzer_leader trickster trait_engineer skilled_staffer cavalry_leader  organizer ranger commando urban_assault_specialist}
 			skill = 6
 			attack_skill = 8
 			defense_skill = 10
@@ -1000,11 +1019,11 @@ characters = {
 		advisor = {
 			slot = high_command
 			idea_token = SOV_markian_popov
-			traits = { army_CombinedArms_3}
+			traits = { army_CombinedArms_2}
 		}
 		corps_commander = {
 			traits = { brilliant_strategist  winter_specialist panzer_leader trickster trait_engineer  cavalry_leader organizer ranger }
-			skill = 8
+			skill = 7
 			attack_skill = 7
 			defense_skill = 10
 			planning_skill = 6

@@ -121,7 +121,7 @@ focus_tree = {
 		id = BRA_estado_novo
 		icon = GFX_focus_BRA_estado_novo
 		prerequisite = { focus = BRA_cohen_plan }
-		mutually_exclusive = { focus = BRA_estado_moderno }
+		
 		x = 0
 		y = 2
 		relative_position_id = BRA_ensure_continued_military_support
@@ -231,11 +231,10 @@ focus_tree = {
 	focus = {
 		id = BRA_autarky
 		icon = GFX_focus_BRA_autarky
-		prerequisite = { focus = BRA_the_polaca focus = BRA_anaue }
+		prerequisite = { focus = BRA_the_polaca  }
 		x = 0
 		y = 1
 		relative_position_id = BRA_the_polaca
-		mutually_exclusive = { focus = BRA_corporatism }
 		cost = 5
 		available = {
 			num_of_factories > 25
@@ -2050,7 +2049,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRA_potenji_river_conference
-		mutually_exclusive = { focus = BRA_south_american_research_cooperation }
+		
 		cost = 5
 		ai_will_do = {
 			factor = 10

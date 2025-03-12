@@ -2621,7 +2621,10 @@ shared_focus = {
 	cost = 10
 
 	available = {
-
+		date > 1941.1.1
+		SOV = {
+			has_war = yes
+		}
 	}
 
 	bypass = {
@@ -2681,7 +2684,10 @@ shared_focus = {
 		}
 
 	available = {
-
+		date > 1941.1.1
+		SOV = {
+			has_war = yes
+		}
 	}
 
 	bypass = {
@@ -2737,7 +2743,10 @@ shared_focus = {
 	cost = 10
 
 	available = {
-
+		date > 1941.1.1
+		SOV = {
+			has_war = yes
+		}
 	}
 
 	bypass = {
@@ -2798,7 +2807,10 @@ shared_focus = {
 	cost = 10
 
 	available = {
-
+		date > 1941.1.1
+		SOV = {
+			has_war = yes
+		}
 	}
 
 	bypass = {

@@ -9041,6 +9041,7 @@ ENG_imperial_conference_decision = {
 			factor = 100
 		}
 	}
+	
 
 	ENG_discuss_imperial_economy = {
 
@@ -9150,16 +9151,7 @@ ENG_imperial_conference_decision = {
 
 		available = {
 			NOT = { has_country_flag = ENG_imperial_conference_discussion_in_progress }
-			OR = {
-				CAN = { exists = yes }
-				SAF = { exists = yes }
-				AST = { exists = yes }
-				NZL = { exists = yes }
-				AND = {
-					RAJ = { is_subject_of = ENG }
-					has_completed_focus = ENG_indian_autonomy
-				}
-			}
+			
 		}
 
 		cost = 100
@@ -9172,8 +9164,8 @@ ENG_imperial_conference_decision = {
 		}
 
 		complete_effect = {
-			country_event = { id = mtg_britain.99 hours = 6 }
-			set_country_flag = ENG_imperial_conference_discussion_in_progress
+			country_event = {id = hmm.3}
+			
 			if = {
 				limit = {
 					NOT = { has_completed_focus = ENG_indian_autonomy }
@@ -9186,6 +9178,9 @@ ENG_imperial_conference_decision = {
 			factor = 100
 		}
 	}
+
+
+	
 }
 
 political_actions = {

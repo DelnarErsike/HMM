@@ -144,7 +144,7 @@ characters={
 			skill=4
 			attack_skill=4
 			defense_skill=4
-			planning_skill=4
+			planning_skill=3
 			logistics_skill=4
 			legacy_id=0
 		}
@@ -163,7 +163,7 @@ characters={
 			skill=4
 			attack_skill= 5
 			defense_skill= 4
-			planning_skill=4
+			planning_skill=3
 			logistics_skill=4
 			legacy_id=0
 		}
