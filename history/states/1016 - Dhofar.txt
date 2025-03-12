@@ -1,9 +1,9 @@
 state = {
 	id = 1016
 	name = "STATE_1016"
-	manpower = 85000
+	manpower = 1
 	
-	state_category = pastoral
+	state_category = wasteland
 
 	history = {
 
@@ -11,16 +11,9 @@ state = {
 		add_core_of = WST
 		
 
-		buildings = {
-			infrastructure = 1
-			2103 = {
-				naval_base = 1
-			}
-		}
+		
 
-		victory_points = {
-			2103 1 # Salalah
-		}
+		
 		
 	}
 
@@ -28,5 +21,5 @@ state = {
 		2059 2103
 	}
 
-	local_supplies = 0.0 
+	local_supplies=0.0 
 }
