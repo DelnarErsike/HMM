@@ -1472,7 +1472,7 @@ country_event = { #FROM transfers Qingdao
 	id = wuw_GER_diplomacy.34
 	title = wuw_GER_diplomacy.34.t
 	desc = wuw_GER_diplomacy.34.desc
-	picture = GFX_report_event_hitler_handshake
+	picture = [GetHitlerHandshakeEventPicture]
 
 	is_triggered_only = yes
 
@@ -2833,6 +2833,32 @@ country_event = {
 			base = 100
 		}
 
+		effect_tooltip = {
+			FROM = {
+				add_to_tech_sharing_group = GER_anglo_german_naval_development_group
+				if = {
+					limit = {
+						has_idea = GER_redirecting_naval_production
+					}
+					swap_ideas = {
+						remove_idea = GER_redirecting_naval_production
+						add_idea = GER_redirecting_naval_production_2
+					}	
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_to_tech_sharing_group = GER_anglo_german_naval_development_group
+		}
+
+		add_breakthrough_progress = {
+			specialization = specialization_naval
+			value = 0.5
+		}
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+
 		FROM = {
 			# FROM Accepts the Deal
 			country_event = {
@@ -2840,17 +2866,6 @@ country_event = {
 				hours = 12
 				random_hours = 24
 			}	
-		}
-		effect_tooltip = {
-			add_to_tech_sharing_group = GER_anglo_german_naval_development_group
-			GER = {
-				add_to_tech_sharing_group = GER_anglo_german_naval_development_group
-			}
-		}
-
-		add_breakthrough_progress = {
-			specialization = specialization_naval
-			value = 0.5
 		}
 	}
 	option = { # No cooperation with the Krauts!
@@ -2867,7 +2882,6 @@ country_event = {
 				random_hours = 24
 			}	
 		}
-
 	}
 }
 
@@ -2886,12 +2900,23 @@ country_event = {
 		ai_chance = {
 			base = 100
 		}
-		
-		add_to_tech_sharing_group = GER_anglo_german_naval_development_group
-		ENG = {
+		FROM = {
 			add_to_tech_sharing_group = GER_anglo_german_naval_development_group
 		}
 
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		add_to_tech_sharing_group = GER_anglo_german_naval_development_group
+		if = {
+			limit = {
+				has_idea = GER_redirecting_naval_production
+			}
+			swap_ideas = {
+				remove_idea = GER_redirecting_naval_production
+				add_idea = GER_redirecting_naval_production_2
+			}	
+		}	
+		
 		add_breakthrough_progress = {
 			specialization = specialization_naval
 			value = 0.5
@@ -3394,7 +3419,6 @@ country_event = {
 				add_core_of = FROM
 			}
 		}
-
 	}
 }
 
@@ -5090,7 +5114,7 @@ country_event = { #FROM requests NAP
 	id = wuw_GER_diplomacy.90
 	title = wuw_GER_diplomacy.90.t
 	desc = wuw_GER_diplomacy.90.desc
-	picture = GFX_report_event_generic_handshake
+	picture = [GetHitlerHandshakeEventPicture]
 
 	is_triggered_only = yes
 
@@ -5460,7 +5484,7 @@ country_event = { #SOV accepts NAP
 	id = wuw_GER_diplomacy.102
 	title = wuw_GER_diplomacy.102.t
 	desc = wuw_GER_diplomacy.102.desc
-	picture = GFX_report_event_hitler_handshake
+	picture = [GetHitlerHandshakeEventPicture]
 
 	is_triggered_only = yes
 
@@ -5511,7 +5535,7 @@ country_event = { #SOV accepts sphere of influence
 	id = wuw_GER_diplomacy.104
 	title = wuw_GER_diplomacy.104.t
 	desc = wuw_GER_diplomacy.104.desc
-	picture = GFX_report_event_hitler_handshake
+	picture = GFX_report_event_generic_handshake
 
 	is_triggered_only = yes
 
@@ -5902,7 +5926,7 @@ country_event = { #SOV agrees to industrial relocation
 	id = wuw_GER_diplomacy.108
 	title = wuw_GER_diplomacy.108.t
 	desc = wuw_GER_diplomacy.108.desc
-	picture = GFX_report_event_hitler_handshake
+	picture = GFX_report_event_generic_handshake
 
 	is_triggered_only = yes
 
@@ -6238,13 +6262,11 @@ country_event = {
 			modifier = {
 				factor = 0
 				FROM = {
-					is_justifying_wargoal_against = ROOT
-				}
-			}
-			modifier = {
-				factor = 0
-				FROM = {
-					has_wargoal_against = ROOT
+					OR = {
+						is_justifying_wargoal_against = ROOT
+						has_wargoal_against = ROOT
+						surrender_progress > 0.1
+					}
 				}
 			}
 		}
@@ -6815,25 +6837,25 @@ country_event = {
 			}
 		}
 		effect_tooltip = {
-			every_state = {
-				limit = {
-					is_owned_and_controlled_by = ROOT
-					OR = {
-						state = 777
-						state = 773
-						state = 895
-						state = 894
-						state = 541
-						state = 893
-						state = 768
-						state = 769
-						state = 546
+			ROOT = {
+				every_controlled_state = {
+					limit = {
+						OR = {
+							state = 777
+							state = 773
+							state = 895
+							state = 894
+							state = 541
+							state = 893
+							state = 768
+							state = 769
+							state = 546
+						}
 					}
+					transfer_state_to = FROM
 				}
-				transfer_state_to = FROM
 			}
 		}
-		
 	}
 
 	option = { # No, they are ours now
@@ -6882,24 +6904,24 @@ country_event = {
 			base = 100
 		}		
 		
-		every_state = {
-			limit = {
-				is_owned_and_controlled_by = FROM
-				OR = {
-					state = 777
-					state = 773
-					state = 895
-					state = 894
-					state = 541
-					state = 893
-					state = 768
-					state = 769
-					state = 546
+		FROM = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						state = 777
+						state = 773
+						state = 895
+						state = 894
+						state = 541
+						state = 893
+						state = 768
+						state = 769
+						state = 546
+					}
 				}
+				transfer_state_to = ROOT
 			}
-			transfer_state_to = ROOT
 		}
-		
 	}
 }
 
@@ -7106,8 +7128,41 @@ country_event = {
 					random_days = 2 
 				}
 			}
+
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 888
+							state = 889
+						}
+						OR = {
+							is_fully_controlled_by = BEL
+							is_fully_controlled_by = COG
+						}
+					}
+					transfer_state_to = ENG
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 295
+							state = 538
+							state = 718
+							state = 890
+							state = 768
+							state = 769
+						}
+						OR = {
+							is_fully_controlled_by = BEL
+							is_fully_controlled_by = COG
+						}
+					}
+					transfer_state_to = GER
+				}
+			}
 		}
-		
 	}
 
 	option = { # We will not sponsor this aggression
@@ -7133,7 +7188,6 @@ country_event = {
 				random_days = 2 
 			}
 		}
-
 	}
 }
 
@@ -7179,35 +7233,35 @@ country_event = {
 				}
 			}
 			effect_tooltip = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 888
-							state = 889
+				ROOT = {
+					every_controlled_state = {
+						limit = {
+							OR = {
+								state = 888
+								state = 889
+							}
 						}
-						is_owned_by = ROOT
+						transfer_state_to = FROM
 					}
-					transfer_state_to = ENG
 				}
 
 				custom_effect_tooltip = generic_skip_one_line_tt
-
-				every_state = {
-					limit = {
-						OR = {
-							state = 295
-							state = 538
-							state = 718
-							state = 890
-							state = 768
-							state = 769
+				ROOT = {
+					every_controlled_state = {
+						limit = {
+							OR = {
+								state = 295
+								state = 538
+								state = 718
+								state = 890
+								state = 768
+								state = 769
+							}
 						}
-						is_owned_by = ROOT
+						transfer_state_to = GER
 					}
-					transfer_state_to = GER
 				}
 			}
-			
 		}
 
 		IF = {
@@ -7225,32 +7279,36 @@ country_event = {
 			}
 			custom_effect_tooltip = if_they_accept_tt
 			effect_tooltip = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 888
-							state = 889
+				COG = {
+					every_controlled_state = {
+						limit = {
+							OR = {
+								state = 888
+								state = 889
+							}
 						}
+						transfer_state_to = FROM
 					}
-					transfer_state_to = ENG
 				}
-				
-				every_state = {
-					limit = {
-						OR = {
-							state = 295
-							state = 538
-							state = 718
-							state = 890
-							state = 768
-							state = 769
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+				COG = {
+					every_controlled_state = {
+						limit = {
+							OR = {
+								state = 295
+								state = 538
+								state = 718
+								state = 890
+								state = 768
+								state = 769
+							}
 						}
+						transfer_state_to = GER
 					}
-					transfer_state_to = GER
 				}
 			}
 		}
-		
 	}
 
 	option = { # We can not accept this
@@ -7281,6 +7339,10 @@ country_event = {
 						state = 888
 						state = 889
 					}
+					OR = {
+						is_fully_controlled_by = BEL
+						is_fully_controlled_by = COG
+					}
 				}
 				add_claim_by = ENG
 			}
@@ -7295,6 +7357,10 @@ country_event = {
 						state = 890
 						state = 768
 						state = 769
+					}
+					OR = {
+						is_fully_controlled_by = BEL
+						is_fully_controlled_by = COG
 					}
 				}
 				add_claim_by = GER
@@ -7333,7 +7399,7 @@ country_event = {
 							state = 768
 							state = 769
 						}
-						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
 					}
 				}
 				every_country = {
@@ -8286,7 +8352,7 @@ country_event = { # CHI accepts sphere of influence - event for GER
 	id = wuw_GER_weltpolitik.17
 	title = wuw_GER_weltpolitik.17.t
 	desc = wuw_GER_weltpolitik.17.desc
-	picture = GFX_report_event_hitler_handshake
+	picture = GFX_report_event_generic_handshake
 
 	is_triggered_only = yes
 
@@ -16274,7 +16340,6 @@ country_event = {
 				add_state_core = 762
 			}
 		}
-		
 	}
 
 	# We must fight!
@@ -16353,7 +16418,6 @@ country_event = {
 				}
 			}
 		}
-
 	}
 }
 
@@ -16465,17 +16529,33 @@ country_event = {
 			}
 		}
 
-		create_wargoal = {
-			type = take_state
-			generator = { 85 807 86 762 }
-			target = FROM
+		FROM = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						state = 85 #Danzig
+						state = 807 #Gdnyia
+						state = 86 #Poznan
+						state = 762 #Katovice
+					}
+				}
+				display_individual_scopes = yes
+				add_to_array = {
+					array = PREV.GER_restore_eastern_imperial_possessions_array
+					value = THIS
+				}
+				ROOT = {
+					add_state_core = PREV
+				}
+			}
+			ROOT = {
+				create_wargoal = {
+					type = take_state_focus
+					target = PREV
+					generator = PREV.GER_restore_eastern_imperial_possessions_array
+				}
+			}
 		}
-
-		add_state_core = 85
-		add_state_core = 807
-		add_state_core = 86
-		add_state_core = 762
-		
 	}
 	option = {
 		name = wuw_GER_realpolitik.19.b
@@ -16483,13 +16563,30 @@ country_event = {
 			base = 5
 		}
 
-		set_country_flag = GER_kaiserreich_decided_not_to_attack_poland
+		hidden_effect = {
+			set_country_flag = GER_kaiserreich_decided_not_to_attack_poland
+		}
+		effect_tooltip = {
+			unlock_national_focus = GER_demand_further_polish_concessions
+		}
 
-		add_state_core = 85
-		add_state_core = 807
-		add_state_core = 86
-		add_state_core = 762
-		
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		every_state = {
+			limit = {
+				OR = {
+					state = 85 #Danzig
+					state = 807 #Gdnyia
+					state = 86 #Poznan
+					state = 762 #Katovice
+				}
+				is_fully_controlled_by = FROM
+			}
+			display_individual_scopes = yes
+			ROOT = {
+				add_state_core = PREV
+			}
+		}
 	}
 }
 
@@ -16506,7 +16603,7 @@ country_event = {
 	option = {
 		name = wuw_GER_realpolitik.20.a
 		ai_chance = {
-			base = 70
+			base = 0
 		}
 		FROM = { 
 			country_event = { 
@@ -16515,16 +16612,23 @@ country_event = {
 			} 
 		}
 		effect_tooltip = {
-			FROM = {
-				transfer_state = 87
-				add_state_core = 87
-				transfer_state = 98
-				add_state_core = 98
-				transfer_state = 97
-				add_state_core = 97
+			ROOT = {
+				every_controlled_state = {
+					limit = {
+						OR = {
+							state = 87 #Lodz
+							state = 98 #Plock
+							state = 97 #Byalistock
+						}
+					}
+					display_individual_scopes = yes
+					FROM = {
+						transfer_state = PREV
+						add_state_core = PREV
+					}
+				}
 			}
 		}
-		
 	}
 
 	# We must fight!
@@ -16593,17 +16697,24 @@ country_event = {
 				}
 			}
 		}
-
 		effect_tooltip = {
-			FROM = {
-				declare_war_on = {
-					target = ROOT
-					type = take_state
-					generator = { 87 }
+			every_state = {
+				limit = {
+					OR = {
+						state = 87 #Lodz
+						state = 98 #Plock
+						state = 97 #Byalistock
+					}
+					is_fully_controlled_by = ROOT
+				}
+				display_individual_scopes = yes
+				FROM = {
+					add_state_core = PREV
 				}
 			}
 		}
-
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = probably_lead_to_war_with_ger_tt
 	}
 }
 
@@ -16619,12 +16730,22 @@ country_event = {
 	option = {
 		name = wuw_GER_realpolitik.21.a
 		
-		transfer_state = 87
-		add_state_core = 87
-		transfer_state = 98
-		add_state_core = 98
-		transfer_state = 97
-		add_state_core = 97
+		FROM = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						state = 87 #Lodz
+						state = 98 #Plock
+						state = 97 #Byalistock
+					}
+				}
+				display_individual_scopes = yes
+				ROOT = {
+					transfer_state = PREV
+					add_state_core = PREV
+				}
+			}
+		}
 
 		IF = {
 			limit = {
@@ -16711,12 +16832,32 @@ country_event = {
 			}
 		}
 
-		create_wargoal = {
-			type = take_state
-			generator = { 87 98 97 }
-			target = FROM
+		FROM = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						state = 87 #Lodz
+						state = 98 #Plock
+						state = 97 #Byalistock
+					}
+				}
+				display_individual_scopes = yes
+				add_to_array = {
+					array = PREV.GER_demand_further_polish_concessions_array
+					value = THIS
+				}
+				ROOT = {
+					add_state_core = PREV
+				}
+			}
+			ROOT = {
+				create_wargoal = {
+					type = take_state_focus
+					target = PREV
+					generator = PREV.GER_demand_further_polish_concessions_array
+				}
+			}
 		}
-		
 	}
 }
 
@@ -16822,6 +16963,16 @@ country_event = {
 					state = 856
 					state = 293
 					state = 453
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+				controller = {
+					NOT = { #Don't hurt our buddiess!
+						is_ally_with = FROM
+						is_guaranteed_by = FROM
+						has_a_german_trade_idea = yes
+					}
 				}
 			}
 			add_claim_by = ROOT
@@ -16951,6 +17102,16 @@ country_event = { # FROM accepts our faction invitation - event for GER
 						state = 856
 						state = 293
 						state = 453
+					}
+					NOT = {
+						is_claimed_by = FROM
+					}
+					controller = {
+						NOT = { #Don't hurt our buddiess!
+							is_ally_with = ROOT
+							is_guaranteed_by = ROOT
+							has_a_german_trade_idea = yes
+						}
 					}
 				}
 				add_claim_by = FROM
@@ -17553,23 +17714,27 @@ country_event = {
 					transfer_troops = yes
 				}
 			}
-			every_state = {
-				limit = {
-					is_core_of = ROOT
+			ROOT = {
+				every_core_state = {		
+					add_core_of = FROM
 				}
-				add_core_of = FROM
 			}
 
-			AUS = {
-				AUS_wilhelm_gebauer = {
-					set_nationality = ROOT
+			ROOT = {
+				IF = {
+					limit = { ROOT = { has_completed_focus = AUS_bring_generals_out_of_retirement } }
+
+
+					AUS_wilhelm_gebauer = {
+						set_nationality = FROM
+					}
 				}
 				AUS_ludwig_von_eimannsberger = {
-					set_nationality = ROOT
+					set_nationality = FROM
 				}
 
 				AUS_anton_kienbauer = {
-					set_nationality = ROOT
+					set_nationality = FROM
 				}
 			}
 		}
@@ -17649,12 +17814,15 @@ country_event = {
 
 		custom_effect_tooltip =  generic_skip_one_line_tt
 		
-		every_state = {
-			limit = {
-				is_core_of = FROM
+		FROM = {
+			every_core_state = {		
+				add_core_of = ROOT
 			}
-			add_core_of = ROOT
 		}
+
+		GER_anschluss_modify_mefo_bills_or_economy_of_conquest = yes
+		GER_seize_gold_reserves_in_europe_peacefully = yes
+		add_to_variable = { var = GER_mefo_bill_counter value = -10 }
 
 		IF = {
 			limit = { AUS = { has_completed_focus = AUS_bring_generals_out_of_retirement } }
@@ -17823,22 +17991,23 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		every_state = {
-			limit = {
-				OR = {
-					state = 664
-					state = 73
-					state = 76
-					state = 84
-					state = 83
-					state = 82
-					state = 45
-					state = 975
+		FROM = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						state = 664
+						state = 73
+						state = 76
+						state = 84
+						state = 83
+						state = 82
+						state = 45
+						state = 975
+					}
 				}
-				is_owned_by = FROM
+				transfer_state_to = ROOT
+				add_core_of = ROOT
 			}
-			transfer_state_to = ROOT
-			add_core_of = ROOT
 		}
 
 		custom_effect_tooltip = generic_skip_one_line_tt
@@ -17947,16 +18116,16 @@ country_event = { # FROM accepts our faction invitation - event for GER
 						state = 975
 					}
 				}
-				add_claim_by = FROM
+				add_claim_by = HUN
 			}
 
-			FROM = {
+			HUN = {
 				set_cosmetic_tag = HUN_GREATER
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			every_state = {
+			every_controlled_state = {
 				limit = {
 					OR = {
 						state = 664
@@ -17968,10 +18137,9 @@ country_event = { # FROM accepts our faction invitation - event for GER
 						state = 45
 						state = 975
 					}
-					is_owned_by = ROOT
 				}
-				transfer_state_to = FROM
-				add_core_of = FROM
+				transfer_state_to = HUN
+				add_core_of = HUN
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -18069,6 +18237,10 @@ country_event = {
 			modifier = {
 				factor = 0.5
 				has_civil_war = yes
+			}
+			modifier = {
+				factor = 2
+				has_country_flag = AUS_is_more_likely_to_accept_being_brothers_in_arms_flag
 			}
 		}
 
@@ -18223,6 +18395,7 @@ country_event = {
 			IF = {
 				limit = {
 					NOT = {
+						is_in_faction_with = ROOT
 						has_cosmetic_tag = HUN_EMPIRE
 					}
 				}
@@ -18264,94 +18437,64 @@ country_event = {
 
 		GER_setup_faction_wide_aoe_effects_from = yes
 
-		every_state = {
-			limit = {
-				OR = {
-					state = 102
-					state = 853
-					state = 103
-					state = 104
-					state = 804
-					state = 109
-					state = 45
-					state = 83
-					state = 76
-					state = 84
-					state = 764
-					state = 82
-					state = 848
-					state = 153
-					state = 152
-					state = 4
-					state = 975
-					state = 976
-					state = 69
-					state = 9
-					state = 75
-					state = 74
-					state = 72
-					state = 70
-					state = 664
-					state = 71
-					state = 73
-					state = 155
-					state = 43
-					state = 973
-					state = 974
-					state = 154
+		effect_tooltip = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 102 #N Slovenia
+						state = 853 #Ljubljana
+						state = 103 #Dalmatia
+						state = 104 #Bosnia
+						state = 804 #Herzegovina
+						state = 109 #Croatia
+						state = 155 #N Transnubia
+						state = 43 #N Hungary
+						state = 973 #Bacs-Kiskun
+						state = 974 #S Transnubia
+						state = 154 #Tiszantul
+					}
+					NOT = { 
+						is_claimed_by = FROM
+						is_owned_by = FROM 
+					}
+				}
+				display_individual_scopes = yes
+				if = {
+					limit = {
+						is_fully_controlled_by = FROM
+					}
+					transfer_state_to = ROOT
+					if = {
+						limit = {
+							NOT = {
+								is_core_of = ROOT
+							}
+						}
+						add_core_of = ROOT
+					}
+				}
+				else_if = {
+					limit = {
+						controller = {
+							NOT = {
+								is_ally_with = FROM
+							}
+						}
+					}
+					add_claim_by = ROOT
 				}
 			}
-			add_claim_by = ROOT
 		}
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		every_state = {
+		if = {
 			limit = {
-				OR = {
-					state = 102
-					state = 853
-					state = 103
-					state = 104
-					state = 804
-					state = 109
-					state = 45
-					state = 83
-					state = 76
-					state = 84
-					state = 764
-					state = 82
-					state = 848
-					state = 153
-					state = 152
-					state = 4
-					state = 975
-					state = 976
-					state = 69
-					state = 9
-					state = 75
-					state = 74
-					state = 72
-					state = 70
-					state = 664
-					state = 71
-					state = 73
-					state = 155
-					state = 43
-					state = 973
-					state = 974
-					state = 154
-				}
-				is_owned_by = FROM
+				NOT = { is_in_faction_with = FROM }
 			}
-			transfer_state_to = ROOT
-			add_core_of = ROOT
-		}
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		FROM = {
-			add_to_faction = ROOT
+			FROM = {
+				add_to_faction = ROOT
+			}
 		}
 
 		custom_effect_tooltip = generic_skip_one_line_tt
@@ -18426,114 +18569,68 @@ country_event = { # FROM accepts our faction invitation - event for GER
 	option = { # Naisu
 		name = wuw_GER_realpolitik.43.a  
 
-		effect_tooltip = {
-
-			IF = {
-				limit = {
-					FROM = {
-						NOT = {
-							has_cosmetic_tag = HUN_EMPIRE
-						}
-					}
+		every_state = {
+			limit = {
+				OR = {
+					state = 102 #N Slovenia
+					state = 853 #Ljubljana
+					state = 103 #Dalmatia
+					state = 104 #Bosnia
+					state = 804 #Herzegovina
+					state = 109 #Croatia
+					state = 155 #N Transnubia
+					state = 43 #N Hungary
+					state = 973 #Bacs-Kiskun
+					state = 974 #S Transnubia
+					state = 154 #Tiszantul
 				}
-				FROM = {
-					set_cosmetic_tag = AUS_kingdom_of_austria
+				NOT = { 
+					is_claimed_by = ROOT
+					is_owned_by = ROOT 
 				}
 			}
-
-			every_state = {
+			display_individual_scopes = yes
+			if = {
 				limit = {
-					OR = {
-						state = 102
-						state = 853
-						state = 103
-						state = 104
-						state = 804
-						state = 109
-						state = 45
-						state = 83
-						state = 76
-						state = 84
-						state = 764
-						state = 82
-						state = 848
-						state = 153
-						state = 152
-						state = 4
-						state = 975
-						state = 976
-						state = 69
-						state = 9
-						state = 75
-						state = 74
-						state = 72
-						state = 70
-						state = 664
-						state = 71
-						state = 73
-						state = 155
-						state = 43
-						state = 973
-						state = 974
-						state = 154
+					is_fully_controlled_by = ROOT
+				}
+				transfer_state_to = FROM
+				if = {
+					limit = {
+						NOT = {
+							is_core_of = FROM
+						}
+					}
+					add_core_of = FROM
+				}
+			}
+			else_if = {
+				limit = {
+					controller = {
+						NOT = {
+							is_ally_with = ROOT
+						}
 					}
 				}
 				add_claim_by = FROM
 			}
+		}
+
+		effect_tooltip = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			every_state = {
+			if = {
 				limit = {
-					OR = {
-						state = 102
-						state = 853
-						state = 103
-						state = 104
-						state = 804
-						state = 109
-						state = 45
-						state = 83
-						state = 76
-						state = 84
-						state = 764
-						state = 82
-						state = 848
-						state = 153
-						state = 152
-						state = 4
-						state = 975
-						state = 976
-						state = 69
-						state = 9
-						state = 75
-						state = 74
-						state = 72
-						state = 70
-						state = 664
-						state = 71
-						state = 73
-						state = 155
-						state = 43
-						state = 973
-						state = 974
-						state = 154
-					}
-					is_owned_by = ROOT
+					NOT = { is_in_faction_with = FROM }
 				}
-				transfer_state_to = FROM
-				add_core_of = FROM
+				add_to_faction = FROM
 			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_to_faction = FROM
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			GER_setup_faction_wide_aoe_effects_root = yes
 		}
-
 	}
 }
 
@@ -18601,6 +18698,77 @@ country_event = {
 			}
 		}
 
+		custom_effect_tooltip = if_they_accept_tt
+
+		effect_tooltip = {
+			CZE = {
+				every_controlled_state = {
+					limit = {
+						OR = {
+							state = 69
+							state = 9
+							state = 75
+							state = 74
+							state = 972
+						}
+					}
+					transfer_state_to = FROM
+				}
+			}
+
+			if = {
+				limit = {
+					POL = {
+						OR = {
+							exists = no
+							AND = {
+								exists = yes
+								has_war_with = FROM
+							}
+						}
+					}
+				}
+				CZE = {
+					every_controlled_state = {
+						limit = {
+							OR = {
+								state = 70
+								state = 664
+								state = 72
+								state = 71
+								state = 73
+							}
+						}
+						transfer_state_to = ROOT
+						add_core_of = ROOT
+					}
+				}
+			}
+			else = {
+				CZE = {
+					every_controlled_state = {
+						limit = {
+							OR = {
+								state = 70
+								state = 664
+								#state = 72
+								state = 71
+								state = 73
+							}
+						}
+						transfer_state_to = ROOT
+						add_core_of = ROOT
+					}
+				}
+				POL = {
+					transfer_state = 72
+					add_state_core = 72
+					POL = {
+						country_event = { hours = 6 id = germany.52 }
+					}
+				}
+			}
+		}
 	}
 
 	option = { # We cannot agree to this
@@ -18616,7 +18784,6 @@ country_event = {
 				random_hours = 5 
 			}
 		}
-
 	}
 }
 
@@ -18656,7 +18823,72 @@ country_event = {
 				}
 			}
 		}
+		effect_tooltip = {
+			CZE = {
+				every_controlled_state = {
+					limit = {
+						OR = {
+							state = 69
+							state = 9
+							state = 75
+							state = 74
+							state = 972
+						}
+					}
+					transfer_state_to = GER
+				}
+			}
 
+			if = {
+				limit = {
+					POL = {
+						OR = {
+							exists = no
+							AND = {
+								exists = yes
+								has_war_with = GER
+							}
+						}
+					}
+				}
+				CZE = {
+					every_controlled_state = {
+						limit = {
+							OR = {
+								state = 70
+								state = 664
+								state = 72
+								state = 71
+								state = 73
+							}
+						}
+						transfer_state_to = FROM
+						add_core_of = FROM
+					}
+				}
+			}
+			else = {
+				CZE = {
+					every_controlled_state = {
+						limit = {
+							OR = {
+								state = 70
+								state = 664
+								#state = 72
+								state = 71
+								state = 73
+							}
+						}
+						transfer_state_to = FROM
+						add_core_of = FROM
+					}
+				}
+				POL = {
+					transfer_state = 72
+					add_state_core = 72
+				}
+			}
+		}
 	}
 
 	option = { # We will never surrender!
@@ -18688,19 +18920,25 @@ country_event = {
 	option = { # Great
 		name = wuw_GER_realpolitik.47.a
 		
-		every_state = {
-			limit = {
-				is_owned_by = CZE
-				OR = {
-					state = 69
-					state = 9
-					state = 75
-					state = 74
-					state = 972
+		CZE = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						state = 69
+						state = 9
+						state = 75
+						state = 74
+						state = 972
+					}
 				}
+				transfer_state_to = ROOT
 			}
-			transfer_state_to = ROOT
 		}
+
+		GER_czechoslovakia_modify_mefo_bills_or_economy_of_conquest = yes
+		GER_seize_gold_reserves_in_europe_peacefully = yes
+
+		add_to_variable = { var = GER_mefo_bill_counter value = -10 }
 
 		IF = {
 			limit = {
@@ -18718,43 +18956,44 @@ country_event = {
 				limit = {
 					is_in_faction_with = HUN
 				}
-				every_state = {
-					limit = {
-						is_owned_by = CZE
-						OR = {
-							state = 70
-							state = 664
-							state = 72
-							state = 71
-							state = 73
+				CZE = {
+					every_controlled_state = {
+						limit = {
+							OR = {
+								state = 70
+								state = 664
+								state = 72
+								state = 71
+								state = 73
+							}
 						}
+						transfer_state_to = HUN
+						add_core_of = HUN
 					}
-					transfer_state_to = HUN
-					add_core_of = HUN
 				}
 			}
 			ELSE_IF = {
 				limit = {
 					is_in_faction_with = AUS
 				}
-				every_state = {
-					limit = {
-						is_owned_by = CZE
-						OR = {
-							state = 70
-							state = 664
-							state = 72
-							state = 71
-							state = 73
+				CZE = {
+					every_controlled_state = {
+						limit = {
+							OR = {
+								state = 70
+								state = 664
+								state = 72
+								state = 71
+								state = 73
+							}
 						}
+						transfer_state_to = AUS
+						add_core_of = AUS
 					}
-					transfer_state_to = AUS
-					add_core_of = AUS
 				}
 			}
 		}
-
-		IF = {
+		else_if = {
 			limit = {
 				POL = {
 					exists = yes
@@ -18767,38 +19006,40 @@ country_event = {
 				limit = {
 					is_in_faction_with = HUN
 				}
-				every_state = {
-					limit = {
-						is_owned_by = CZE
-						OR = {
-							state = 70
-							state = 664
-							#state = 72
-							state = 71
-							state = 73
+				CZE = {
+					every_controlled_state = {
+						limit = {
+							OR = {
+								state = 70
+								state = 664
+								#state = 72
+								state = 71
+								state = 73
+							}
 						}
+						transfer_state_to = HUN
+						add_core_of = HUN
 					}
-					transfer_state_to = HUN
-					add_core_of = HUN
 				}
 			}
 			ELSE_IF = {
 				limit = {
 					is_in_faction_with = AUS
 				}
-				every_state = {
-					limit = {
-						is_owned_by = CZE
-						OR = {
-							state = 70
-							state = 664
-							#state = 72
-							state = 71
-							state = 73
+				CZE = {
+					every_controlled_state = {
+						limit = {
+							OR = {
+								state = 70
+								state = 664
+								#state = 72
+								state = 71
+								state = 73
+							}
 						}
+						transfer_state_to = HUN
+						add_core_of = HUN
 					}
-					transfer_state_to = AUS
-					add_core_of = AUS
 				}
 			}
 			POL = {
@@ -18809,8 +19050,6 @@ country_event = {
 				}
 			}
 		}
-		
-
 	}
 }
 
@@ -18944,16 +19183,18 @@ country_event = {
 						is_in_faction_with = AUS
 					}
 				}
-				every_state = {
-					limit = {
-						OR = {
-							state = 88
-							state = 89
-							state = 91
+				ROOT = {
+					every_controlled_state = {
+						limit = {
+							OR = {
+								state = 88
+								state = 89
+								state = 91
+								state = 72
+							}
 						}
-						is_owned_and_controlled_by = ROOT
+						transfer_state_to = AUS
 					}
-					transfer_state_to = AUS
 				}
 			}
 			ELSE_IF = {
@@ -18962,20 +19203,21 @@ country_event = {
 						is_in_faction_with = HUN
 					}
 				}
-				every_state = {
-					limit = {
-						OR = {
-							state = 88
-							state = 89
-							state = 91
+				ROOT = {
+					every_controlled_state = {
+						limit = {
+							OR = {
+								state = 88
+								state = 89
+								state = 91
+								state = 72
+							}
 						}
-						is_owned_and_controlled_by = ROOT
+						transfer_state_to = HUN
 					}
-					transfer_state_to = HUN
 				}
 			}
 		}
-
 	}
 
 	# Then come and get it!
@@ -19030,16 +19272,18 @@ country_event = {
 					is_in_faction_with = AUS
 				}
 			}
-			every_state = {
-				limit = {
-					OR = {
-						state = 88
-						state = 89
-						state = 91
+			FROM = {
+				every_controlled_state = {
+					limit = {
+						OR = {
+							state = 88
+							state = 89
+							state = 91
+							state = 72
+						}
 					}
-					is_owned_and_controlled_by = FROM
+					transfer_state_to = AUS
 				}
-				transfer_state_to = AUS
 			}
 		}
 		ELSE_IF = {
@@ -19048,32 +19292,35 @@ country_event = {
 					is_in_faction_with = HUN
 				}
 			}
-			every_state = {
-				limit = {
-					OR = {
-						state = 88
-						state = 89
-						state = 91
+			FROM = {
+				every_controlled_state = {
+					limit = {
+						OR = {
+							state = 88
+							state = 89
+							state = 91
+							state = 72
+						}
 					}
-					is_owned_and_controlled_by = FROM
+					transfer_state_to = HUN
 				}
-				transfer_state_to = HUN
 			}
 		}
 		ELSE = {
-			every_state = {
-				limit = {
-					OR = {
-						state = 88
-						state = 89
-						state = 91
+			FROM = {
+				every_controlled_state = {
+					limit = {
+						OR = {
+							state = 88
+							state = 89
+							state = 91
+							state = 72
+						}
 					}
-					is_owned_and_controlled_by = FROM
+					transfer_state_to = ROOT
 				}
-				transfer_state_to = ROOT
 			}
 		}
-
 	}
 }
 
@@ -19095,11 +19342,38 @@ country_event = {
 			factor = 95
 		}
 
-		create_wargoal = {
-			type = take_claimed_state
-			target = FROM
+		if = {
+			limit = {
+				ROOT = {
+					is_in_faction_with = HUN
+				}
+			}
+			HUN = {
+				create_wargoal = {
+					type = take_claimed_state
+					target = FROM
+				}
+			}
 		}
-
+		else_if = {
+			limit = {
+				ROOT = {
+					is_in_faction_with = AUS
+				}
+			}
+			AUS = {
+				create_wargoal = {
+					type = take_claimed_state
+					target = FROM
+				}
+			}
+		}
+		else = {
+			create_wargoal = {
+				type = take_claimed_state
+				target = FROM
+			}
+		}
 	}
 
 	# We must let this go
@@ -19153,19 +19427,20 @@ country_event = {
 						is_in_faction_with = AUS
 					}
 				}
-				every_state = {
-					limit = {
-						OR = {
-							state = 45
-							state = 764
-							state = 82
-							state = 83
-							state = 84
-							state = 76
+				ROOT = {
+					every_controlled_state = {
+						limit = {
+							OR = {
+								state = 45
+								state = 764
+								state = 82
+								state = 83
+								state = 84
+								state = 76
+							}
 						}
-						is_owned_and_controlled_by = ROOT
+						transfer_state_to = AUS
 					}
-					transfer_state_to = AUS
 				}
 			}
 			ELSE_IF = {
@@ -19174,23 +19449,23 @@ country_event = {
 						is_in_faction_with = HUN
 					}
 				}
-				every_state = {
-					limit = {
-						OR = {
-							state = 45
-							state = 764
-							state = 82
-							state = 83
-							state = 84
-							state = 76
+				ROOT = {
+					every_controlled_state = {
+						limit = {
+							OR = {
+								state = 45
+								state = 764
+								state = 82
+								state = 83
+								state = 84
+								state = 76
+							}
 						}
-						is_owned_and_controlled_by = ROOT
+						transfer_state_to = HUN
 					}
-					transfer_state_to = HUN
 				}
 			}
 		}
-
 	}
 
 	# Then come and get it!
@@ -19255,9 +19530,8 @@ country_event = {
 						state = 84
 						state = 76
 					}
-					is_owned_and_controlled_by = FROM
+					transfer_state_to = AUS
 				}
-				transfer_state_to = AUS
 			}
 		}
 		ELSE_IF = {
@@ -19266,38 +19540,39 @@ country_event = {
 					is_in_faction_with = HUN
 				}
 			}
-			every_state = {
-				limit = {
-					OR = {
-						state = 45
-						state = 764
-						state = 82
-						state = 83
-						state = 84
-						state = 76
+			FROM = {
+				every_controlled_state = {
+					limit = {
+						OR = {
+							state = 45
+							state = 764
+							state = 82
+							state = 83
+							state = 84
+							state = 76
+						}
 					}
-					is_owned_and_controlled_by = FROM
+					transfer_state_to = HUN
 				}
-				transfer_state_to = HUN
 			}
 		}
 		ELSE = {
-			every_state = {
-				limit = {
-					OR = {
-						state = 45
-						state = 764
-						state = 82
-						state = 83
-						state = 84
-						state = 76
+			FROM = {
+				every_controlled_state = {
+					limit = {
+						OR = {
+							state = 45
+							state = 764
+							state = 82
+							state = 83
+							state = 84
+							state = 76
+						}
 					}
-					is_owned_and_controlled_by = FROM
+					transfer_state_to = ROOT
 				}
-				transfer_state_to = ROOT
 			}
 		}
-
 	}
 }
 
@@ -19420,10 +19695,11 @@ country_event = { #FROM accepts tighter federation
 	option = { #great!
 		name = wuw_GER_realpolitik.58.a
 
-		puppet = FROM 
-
-	}
-	
+		puppet = {
+			target = FROM
+			end_wars = no
+		}
+	}	
 }
 
 country_event = { #FROM rejects tighter federation
@@ -20062,14 +20338,14 @@ country_event = { #Spartacus leader election
 	option = { #Brandler
 		name = wuw_GER_german_politics.02.a
 		ai_chance = {
-			base = 10
+			base = 5
 		}
 
 		add_country_leader_role = {
 			character = GER_heinrich_brandler
 			promote_leader = yes
 			country_leader = {
-				ideology = marxism
+				ideology = leninism
 				expire = 1965.1.1
 				traits = { GER_pragmatic_trade_unionist } 
 			}
@@ -20402,7 +20678,10 @@ country_event = {
 	option = { 
 		name = GER_operation_panzerfaust_events.03.a
 		
-		puppet = FROM
+		puppet = {
+		    target = FROM
+		    end_wars = no
+		}
 
 		IF = {
 			limit = {
@@ -20634,7 +20913,10 @@ country_event = {
 		}
 
 		FROM = {
-			puppet = ROOT
+			puppet = {
+			    target = ROOT
+			    end_wars = no
+			}
 		}
 
 		IF = {
@@ -23773,7 +24055,10 @@ country_event = { #[FROM.GetNameDefCap] Accepts our Demands
 	option = { #great!
 		name = GOT_GER_fading_eagle.02.a
 
-		puppet = FROM 
+		puppet = {
+		    target = FROM
+		    end_wars = no
+		}
 
 	}
 	

@@ -2402,10 +2402,6 @@ focus_tree = {
 				category = air_doctrine
 			} # REVISIT May use modifier?
 			add_ideas = air_war_plans_division_focus
-			#hidden_effect = {
-			#	add_ideas = air_war_plans_division_focus_hidden
-			#}
-			
 		}
 	}
 
@@ -2426,10 +2422,6 @@ focus_tree = {
 		completion_reward = {
 			air_experience = 25
 			add_ideas = air_support_focus
-			#hidden_effect = {
-			#	add_ideas = air_support_focus_hidden
-			#}
-			
 		}
 	}
 
@@ -2451,9 +2443,6 @@ focus_tree = {
 		completion_reward = {
 			air_experience = 25
 			add_ideas = strategic_bombing_focus
-			#hidden_effect = {
-			#	add_ideas = USA_strategic_bombing_hidden
-			#}
 		}
 	}
 

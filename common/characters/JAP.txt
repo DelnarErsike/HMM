@@ -218,10 +218,10 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 2.500
+				base = 5
 				modifier = {
 					factor = 1.500
-					not = {
+					NOT = {
 						JAP = {
 							has_war_with = USA
 						}
@@ -355,7 +355,7 @@ characters={
 			}
 			cost =  50
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
 		
@@ -621,7 +621,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 3.000
+				base = 3
 			}
 		}
 		
@@ -674,17 +674,19 @@ characters={
 		}
 	}
 
-	JAP_isoroku_yamamoto={
-		name=JAP_isoroku_yamamoto
-		portraits={
-			navy={
-				small="GFX_idea_isoroku_yamamoto"
+	JAP_isoroku_yamamoto = {
+		name = JAP_isoroku_yamamoto
+		portraits = {
+			navy = {
+				large = GFX_portrait_JAP_isoroku_yamamoto
+				small = GFX_idea_isoroku_yamamoto
 			}
-			army={
-				large=GFX_portrait_JAP_isoroku_yamamoto
+			civilian = {
+				large = GFX_portrait_JAP_isoroku_yamamoto_scientist
 			}
 		}
-		advisor={
+
+		advisor = {
 			cost = 150
 			slot = theorist
 			idea_token = isoroku_yamamoto
@@ -698,16 +700,16 @@ characters={
 			}
 		}
 		
-		navy_leader={
-			traits={ bold aviation_enthusiast superior_tactician spotter air_controller flight_deck_manager }
-			skill=5
-			attack_skill=5
-			defense_skill=2
-			maneuvering_skill=3
-			coordination_skill=6
-			legacy_id=0
+		navy_leader = {
+			traits = { bold aviation_enthusiast superior_tactician spotter air_controller flight_deck_manager }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 6
+			legacy_id = 0
 		}
-		
+
 		scientist = {
 			traits = { scientist_trait_submarine_specialist }
 			skills = {
@@ -1011,55 +1013,6 @@ characters={
 		}
 	}
 
-	JAP_yoshio_nishina={
-		name=JAP_yoshio_nishina
-		portraits={
-			army={
-				small="GFX_idea_yoshio_nishina"
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = yoshio_nishina
-			ledger = army
-			allowed = {
-				original_tag = JAP
-			}
-			research_bonus = {
-				nuclear = 0.150
-			}
-			traits = {
-				nuclear_scientist
-			}
-		}
-	}
-
-	JAP_hideo_itokawa={
-		name="Hideo Itokawa"
-		portraits={
-			army={
-				small="GFX_idea_hideo_itokawa"
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = hideo_itokawa
-			ledger = air
-			allowed = {
-				original_tag = JAP
-			}
-			research_bonus = {
-				rocketry = 0.150
-			}
-			traits = {
-				rocket_scientist
-			}
-		}
-	}
-
-
 	### ARMY CHIEFS ###
 
 	JAP_kanin_kotohito={
@@ -1080,7 +1033,7 @@ characters={
 			}
 			cost =  50
 			ai_will_do = {
-				factor = 1.000
+				base = 5
 			}
 		}
 	}
@@ -1106,7 +1059,7 @@ characters={
 			}
 			cost = 200
 			ai_will_do = {
-				factor = 1.000
+				factor = 2
 			}
 		}
 	}
@@ -1129,7 +1082,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				base = 5
 			}
 		}
 	}
@@ -1228,7 +1181,7 @@ characters={
 			}
 			cost =  50
 			ai_will_do = {
-				factor = 1.000
+				base = 10
 			}
 		}
 	}
@@ -1251,7 +1204,7 @@ characters={
 			}
 			cost =  50
 			ai_will_do = {
-				factor = 1.000
+				base = 2
 			}
 		}
 	}
@@ -1549,7 +1502,7 @@ characters={
 				prince_of_terror 
 			}
 			ai_will_do = {
-				factor = 0.300
+				base = 0.300
 			}
 		}
 	}
@@ -1569,6 +1522,9 @@ characters={
 			}
 			traits = {
 				compassionate_gentleman 
+			}
+			ai_will_do = {
+				base = 0.100
 			}
 		}		
 	}
@@ -1590,13 +1546,25 @@ characters={
 				war_industrialist 
 			}
 			ai_will_do = {
-				factor = 3.000
+				base = 4
 			}
 		}
 	}
 
 	# Illusive Gentleman auto-generated
-	
+
+
+  #####                                                              
+ #     #   ####   #  ######  #    #  #####  #   ####   #####   ####  
+ #        #    #  #  #       ##   #    #    #  #         #    #      
+  #####   #       #  #####   # #  #    #    #   ####     #     ####  
+       #  #       #  #       #  # #    #    #       #    #         # 
+ #     #  #    #  #  #       #   ##    #    #  #    #    #    #    # 
+  #####    ####   #  ######  #    #    #    #   ####     #     ####  
+
+
+	#JAP_isoroku_yamamoto up there
+
 	JAP_yoshio_nishina = {
 		name = JAP_yoshio_nishina
 		portraits = {

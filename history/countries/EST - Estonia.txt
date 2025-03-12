@@ -150,6 +150,9 @@ set_convoys = 5
 	if = {
 		limit = { has_dlc = "By Blood Alone" }
 			set_air_oob = "EST_1936_air_bba" #deliberately using 1936 OOB since no change in aircraft strength or models
+			set_technology = {
+				bba_early_transport_plane = 1
+			}
 		else = {
 			set_air_oob = "EST_1936_air_legacy"
 			set_technology = {
@@ -157,7 +160,7 @@ set_convoys = 5
 				early_bomber = 1
 				CAS1 = 1
 				naval_bomber1 = 1
-
+				early_transport_plane = 1
 			}
 		}
 	}

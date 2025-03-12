@@ -63,8 +63,15 @@ if = {
 	}
 	give_guarantee = BEL
 }
-
-load_oob = "ENG_Motorized"
+if = {
+	limit = {
+		has_dlc = "Graveyard of Empires"
+	}
+	give_guarantee = IRQ
+	IRQ = {
+		give_military_access = ENG
+	}
+}
 
 set_research_slots = 4
 
@@ -607,6 +614,13 @@ recruit_character = ENG_john_cockcroft
 recruit_character = ENG_charles_goodeve
 recruit_character = ENG_nevil_shute
 recruit_character = ENG_robert_watson_watt
+
+if = {
+	limit = {
+		has_dlc = "Graveyard of Empires"
+	}
+	recruit_character = ENG_jack_churchill 
+}
 
 
 

@@ -133,17 +133,17 @@ technologies = {
 
 			modifier = {
 				factor = 1.2
-				date > "1937.1.1"
+				date > 1937.1.1
 			}
 
 			modifier = {
 				factor = 1.2
-				date > "1938.1.1"
+				date > 1938.1.1
 			}
 
 			modifier = {
 				factor = 1.2
-				date > "1939.1.1"
+				date > 1939.1.1
 			}
 		}
 
@@ -224,17 +224,17 @@ technologies = {
 
 			modifier = {
 				factor = 1.1
-				date > "1937.1.1"
+				date > 1937.1.1
 			}
 
 			modifier = {
 				factor = 1.1
-				date > "1938.1.1"
+				date > 1938.1.1
 			}
 
 			modifier = {
 				factor = 1.1
-				date > "1939.1.1"
+				date > 1939.1.1
 			}
 		}
 
@@ -298,25 +298,31 @@ technologies = {
 				factor = 3
 			}
 			modifier = {
-				factor = 3
+				factor = 8
 				# Matilda II was designed and entered production in 1937
 				tag = ENG
-				date > "1936.9.1"
+				date > 1936.9.1
+			}
+			modifier = {
+				factor = 8
+				# M3 Stuart entered production in 1941
+				tag = USA
+				date > 1940.9.1
 			}
 
 			modifier = {
 				factor = 1.1
-				date > "1937.1.1"
+				date > 1937.1.1
 			}
 
 			modifier = {
 				factor = 1.1
-				date > "1938.1.1"
+				date > 1938.1.1
 			}
 
 			modifier = {
 				factor = 1.1
-				date > "1939.1.1"
+				date > 1939.1.1
 			}
 		}
 
@@ -515,20 +521,26 @@ technologies = {
 				is_major = no
 				factor = 2  # Minors prefer light tanks
 			}
-
 			modifier = {
-				factor = 1.1
-				date > "1942.1.1"
+				factor = 8
+				# M24 Chaffee was designed and entered production in 1943
+				tag = USA
+				date > 1943.3.1
 			}
 
 			modifier = {
 				factor = 1.1
-				date > "1943.1.1"
+				date > 1942.1.1
 			}
 
 			modifier = {
 				factor = 1.1
-				date > "1944.1.1"
+				date > 1943.1.1
+			}
+
+			modifier = {
+				factor = 1.1
+				date > 1944.1.1
 			}
 		}
 
@@ -594,10 +606,30 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 2
 
 			modifier = {
-				factor = 2
+				factor = 1.1
+				date > 1939.1.1
+			}
+
+			modifier = {
+				factor = 1.1
+				date > 1940.1.1
+			}
+
+			modifier = {
+				factor = 1.1
+				date > 1941.1.1
+			}
+
+			modifier = {
+				factor = 1.1
+				date > 1942.1.1
+			}
+
+			modifier = {
+				factor = 3
 				is_major = yes
 				NOT = {
 					AND = {
@@ -605,31 +637,19 @@ technologies = {
 						num_of_military_factories < 50
 					}
 				}
-				date > "1938.1.1"
+				date > 1938.1.1
 			}
+
 			modifier = {
-				tag = SOV
 				factor = 1.5
+				tag = SOV
 			}
 
 			modifier = {
-				factor = 1.1
-				date > "1939.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1940.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1941.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1942.1.1"
+				factor = 4
+				# M3 Lee was designed and entered production in 1940-1941
+				tag = USA
+				date > 1940.3.1
 			}
 
 			modifier = {
@@ -640,12 +660,20 @@ technologies = {
 				    category = cat_medium_armor
 				}
 			}
-			modifier = { #Use the research bonus from the focus! 
+
+			modifier = { #Use the research bonus from the focus!
 				factor = 0.5
 				tag = GER
 				NOT = {
 					has_completed_focus = GER_advanced_panzer_research
-				}	
+				}
+			}
+
+			modifier = {
+				factor = 6
+				# Crusader was designed and entered production in 1939
+				tag = ENG
+				date > 1938.11.1
 			}
 		}
 
@@ -759,10 +787,7 @@ technologies = {
 					}
 				}
 			}
-			modifier = {
-				date < "1941.1.1"
-				factor = 0.3
-			}
+
 			modifier = {
 				factor = 2
 				tag = GER
@@ -774,18 +799,37 @@ technologies = {
 			}
 
 			modifier = {
-				factor = 1.1
-				date > "1942.1.1"
+				factor = 6
+				# M4 Sherman was entered production in late 1941
+				tag = USA
+				date > 1941.6.1
+			}
+
+			modifier = {
+				factor = 6
+				# Cromwell was designed and entered production in 1942-1944
+				tag = ENG
+				date > 1942.9.1
 			}
 
 			modifier = {
 				factor = 1.1
-				date > "1943.1.1"
+				date > 1941.1.1
 			}
 
 			modifier = {
 				factor = 1.1
-				date > "1944.1.1"
+				date > 1942.1.1
+			}
+
+			modifier = {
+				factor = 1.1
+				date > 1943.1.1
+			}
+
+			modifier = {
+				factor = 1.1
+				date > 1944.1.1
 			}
 		}
 
@@ -906,6 +950,13 @@ technologies = {
 				    category = cat_medium_armor
 				}
 			}
+
+			modifier = {
+				factor = 6
+				# Comet was designed and entered production in 1943-1944
+				tag = ENG
+				date > 1943.9.1
+			}
 		}
 
 		categories = {
@@ -942,17 +993,24 @@ technologies = {
 
 			modifier = {
 				factor = 2
-				date > "1946.1.1"
+				date > 1946.1.1
 			}
 
 			modifier = {
 				factor = 2
-				date > "1947.1.1"
+				date > 1947.1.1
 			}
 
 			modifier = {
 				factor = 2
-				date > "1948.1.1"
+				date > 1948.1.1
+			}
+
+			modifier = {
+				factor = 6
+				# Centurion was designed and entered production in 1945-1946
+				tag = ENG
+				date > 1944.9.1
 			}
 		}
 
@@ -1185,6 +1243,13 @@ technologies = {
 				factor = 1.2
 				date > "1946.1.1"
 			}
+
+			modifier = {
+				factor = 8
+				# M26 Pershing entered production in 1944
+				tag = USA
+				date > 1944.1.1
+			}
 		}
 
 		categories = {
@@ -1275,13 +1340,31 @@ technologies = {
 				}
 				custom_effect_tooltip = {
 					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_land_land_cruiser	
+					PROJECT = sp_land_land_cruiser
 				}
 			}
 		}
 
 		ai_will_do = {
-			factor = 0 # Hitler cries on the inside
+			base = 0
+			modifier = {
+				add = 1
+				date > 1943.6.1
+				NOT = { has_government = democratic }
+				num_of_military_factories > 150
+			}
+			modifier = {
+				add = 2
+				original_tag = GER
+				date > 1943.9.1
+				has_government = fascism
+				has_war_with = SOV
+			}
+			modifier = {
+				factor = 10
+				tag = GER
+				is_historical_focus_on = yes 
+			}
 		}
 
 		categories = {
@@ -1418,7 +1501,7 @@ technologies = {
 		enable_equipment_modules = {
 			lc_armored_skirts #Module for Land Cruiser
 		}
-		
+
 		path = {
 			leads_to_tech = armor_tech_4
 			research_cost_coeff = 1
@@ -1759,7 +1842,7 @@ technologies = {
 		}
 
 		on_research_complete = {
-		
+
 		}
 
 		show_effect_as_desc = no
@@ -1790,14 +1873,14 @@ technologies = {
 
 		research_cost = 1
 		start_year = 1941
-		
+
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 12 y = @1941 }
 		}
 
 		enable_equipment_modules = {
-			advanced_flamethrower			
+			advanced_flamethrower
 		}
 
 		light_flame_tank = {
@@ -1923,7 +2006,7 @@ technologies = {
 
 		research_cost = 1
 		start_year = 1943
-		
+
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 7 y = @1943 }
@@ -2010,12 +2093,6 @@ technologies = {
 			forest = {
 				movement = 0.2
 			}
-			hills = {
-				movement = 0.2
-			}
-			mountain = 	{
-				movement = 0.2
-			}
 			jungle = {
 				movement = 0.2
 			}
@@ -2023,7 +2100,7 @@ technologies = {
 
 		research_cost = 1
 		start_year = 1943
-		
+
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 9 y = @1943 }
@@ -2093,7 +2170,7 @@ technologies = {
 
 		research_cost = 1
 		start_year = 1943
-		
+
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 11 y = @1943 }
@@ -2157,7 +2234,7 @@ technologies = {
 
 		research_cost = 1
 		start_year = 1945
-		
+
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 9 y = @1945 }
@@ -2216,14 +2293,14 @@ technologies = {
 
 		research_cost = 1
 		start_year = 1943
-		
+
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 13 y = @1943 }
 		}
 
 		enable_equipment_modules = {
-			lc_high_impact_obliterator_cannon			
+			lc_high_impact_obliterator_cannon
 		}
 
 		show_effect_as_desc = yes

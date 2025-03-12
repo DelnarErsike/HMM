@@ -190,6 +190,11 @@ if = {
 		
 	}
 
+	if = {
+		limit = { NOT = { has_dlc = "Graveyard of Empires" } }
+		add_ideas = RAJ_agrarian_society
+		
+	}
 
 	add_ideas = {
 		RAJ_princely_states
@@ -200,6 +205,17 @@ if = {
 	add_to_tech_sharing_group = commonwealth_research
 }
 
+if = {
+	limit = {
+		has_dlc = "Graveyard of Empires"
+	}
+	add_dynamic_modifier = { modifier = idea_RAJ_agrarian_society } 		
+	set_variable = { RAJ_agrarian_society_conscription_factor = -0.72 } #3
+	set_variable = { RAJ_agrarian_society_mobilization_laws_cost_factor = 2.16 } #9
+	set_variable = { RAJ_agrarian_society_mobilization_speed = -0.72 } #3
+	add_ideas = idea_RAJ_great_depression_1
+
+}
 
 if = {
 	limit = {

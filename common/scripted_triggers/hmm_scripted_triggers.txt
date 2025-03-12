@@ -22,6 +22,7 @@ is_playable_country = {
 		tag = SAF
 		tag = SOV
 		tag = PHI
+		tag = IRQ
 	}
 }
 
@@ -86,6 +87,7 @@ axis = {
 		tag = RAR
 		tag = ROA
 		tag = RAA
+		tag = IRQ
 	}
 }
 ai_manpower = {

@@ -8103,6 +8103,7 @@ ENG_move_to_secure_the_dominions = {
 		target_trigger = {
 			FROM = {
 				original_tag = RAJ
+
 			}
 		}
 
@@ -8122,6 +8123,7 @@ ENG_move_to_secure_the_dominions = {
 				is_subject_of = ROOT
 				NOT = { has_country_flag = ENG_imperialist_civil_war }
 				NOT = { has_government = ROOT }
+				NOT = { has_country_flag = banned_fascism_flag }
 			}
 		}
 
@@ -8199,6 +8201,7 @@ ENG_move_to_secure_the_dominions = {
 			FROM = { 
 				has_country_flag = ENG_cannot_leave_faction
 				fascism > 0.2
+				NOT = { has_country_flag = banned_fascism_flag }
 			}
 		}
 
@@ -9041,7 +9044,6 @@ ENG_imperial_conference_decision = {
 			factor = 100
 		}
 	}
-	
 
 	ENG_discuss_imperial_economy = {
 
@@ -9178,9 +9180,6 @@ ENG_imperial_conference_decision = {
 			factor = 100
 		}
 	}
-
-
-	
 }
 
 political_actions = {

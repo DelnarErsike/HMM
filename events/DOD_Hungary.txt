@@ -2312,7 +2312,10 @@ country_event = {
 			}
 			modifier = {
 				tag = GER
-				has_completed_focus = GER_oppose_hitler
+				OR = {
+					has_completed_focus = GER_oppose_hitler
+					has_completed_focus = GER_oppose_hitler_ww
+				}
 				HUN = { has_completed_focus = HUN_invite_the_habsburg_prince }
 				factor = 0
 			}
