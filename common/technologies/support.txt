@@ -1912,11 +1912,16 @@ technologies = {
 
 	sp_armored_engineer_tech = {
 		allow = {
+			has_game_rule = {
+				rule = urban_assault_vechile
+				option = on
+			}
+		}
+		allow = {
 	 		ROOT = {
 				is_special_project_completed = sp:sp_land_military_engineering_vehicles
 			}
 		}
-
 		is_special_project_tech = yes
 
 		research_cost = 2.0

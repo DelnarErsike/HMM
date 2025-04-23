@@ -156,3 +156,220 @@ Germany_Cancel_Mefo= {
 	}
 
 }
+urban_assault_vechile= {
+	name = "Select if Urban Assault Vechile is allowed or not "
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_tank"
+	default = {
+		name = off
+		text = "You CANNOT research armoured enginieer company."
+		desc = "You also don't get the urban assault vechile."
+	}
+	option = {
+		name = on
+		text = "You CAN research armoured enginieer company"
+		desc = "You also get the urban assault vechile."
+	}
+}
+
+super_heavy_railway_gun= {
+	name = "Select if Super Heavy Railway Battery is allowed or not "
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_ignite_civil_war"
+	default = {
+		name = off
+		text = "You CANNOT research Super Heavy Railway Battery."
+		desc = "###."
+	}
+	option = {
+		name = on
+		text = "You CAN research Super Heavy Railway Battery."
+		desc = "###"
+	}
+}
+multi_charge_large_caliber_gun= {
+	name = "Select if Multi Charge LCG is allowed or not "
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_ignite_civil_war"
+	default = {
+		name = off
+		text = "You CANNOT research Multi Charge LCG."
+		desc = "###."
+	}
+	option = {
+		name = on
+		text = "You CAN research Multi Charge LCG."
+		desc = "###"
+	}
+}
+sov_boost = {
+	name = "Soviets Civ Boost"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_merge_plant_materiel"
+	default = {
+		name = off
+		text = "GOff"
+		desc = "Soviets won't have civilian factories buff (Recommmended)"
+	}
+	option = {
+		name = sov4
+		text = "ROn-4"
+		desc = "Soviets get 4 Civilian factories (Not Recommmended)"
+	}
+	option = {
+		name = sov8
+		text = "ROn-8"
+		desc = "Soviets get 8 Civilian factories (Not Recommmended)"
+	}
+	option = {
+		name = sov12
+		text = "ROn-12"
+		desc = "Soviets get 12 Civilian factories (Not Recommmended)"
+	}
+}     
+  
+ger_boost = {
+	name = "German Civ Boost"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_merge_plant_materiel"
+	default = {
+		name = off
+		text = "GOff"
+		desc = "Germany won't have civilian factories buff (Recommmended)"
+	}
+	option = {
+		name = ger4
+		text = "ROn-4"
+		desc = "Germany get 4 Civilian factories (Not Recommmended)"
+	}
+	option = {
+		name = ger8
+		text = "ROn-8"
+		desc = "Germany get 8 Civilian factories (Not Recommmended)"
+	}
+	option = {
+		name = ger12
+		text = "ROn-12"
+		desc = "Germany get 12 Civilian factories (Not Recommmended)"
+	}
+} 
+jap_boost = {
+	name = "Japan Civ Boost"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_merge_plant_materiel"
+	default = {
+		name = off
+		text = "GOff"
+		desc = "Japan won't have civilian factories buff (Recommmended)"
+	}
+	option = {
+		name = jap4
+		text = "ROn-4"
+		desc = "Japan get 4 Civilian factories (Not Recommmended)"
+	}
+	option = {
+		name = jap8
+		text = "ROn-8"
+		desc = "Japan get 8 Civilian factories (Not Recommmended)"
+	}
+	option = {
+		name = jap12
+		text = "ROn-12"
+		desc = "Japan get 12 Civilian factories (Not Recommmended)"
+	}
+}          
+eng_boost = {
+	name = "Britain Civ Boost"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_merge_plant_materiel"
+	default = {
+		name = off
+		text = "GOff"
+		desc = "Britain won't have civilian factories buff (Recommmended)"
+	}
+	option = {
+		name = eng4
+		text = "ROn-4"
+		desc = "Britain get 4 Civilian factories (Not Recommmended)"
+	}
+	option = {
+		name = eng8
+		text = "ROn-8"
+		desc = "Britain get 8 Civilian factories (Not Recommmended)"
+	}
+	option = {
+		name = eng12
+		text = "ROn-12"
+		desc = "Britain get 12 Civilian factories (Not Recommmended)"
+	}
+}
+ita_boost = {
+	name = "Italiano Civ Boost"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_merge_plant_materiel"
+	default = {
+		name = off
+		text = "GOff"
+		desc = "Italiano won't have civilian factories buff (Recommmended)"
+	}
+	option = {
+		name = ita4
+		text = "ROn-4"
+		desc = "Italiano get 4 Civilian factories (Not Recommmended)"
+	}
+	option = {
+		name = ita8
+		text = "ROn-8"
+		desc = "Italiano get 8 Civilian factories (Not Recommmended)"
+	}
+	option = {
+		name = ita12
+		text = "ROn-12"
+		desc = "Italiano get 12 Civilian factories (Not Recommmended)"
+	}
+}
+fra_boost = {
+	name = "Français Civ Boost"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_merge_plant_materiel"
+	default = {
+		name = off
+		text = "GOff"
+		desc = "Français won't have civilian factories buff (Recommmended)"
+	}
+	option = {
+		name = fra4
+		text = "ROn-4"
+		desc = "Français get 4 Civilian factories (Not Recommmended)"
+	}
+	option = {
+		name = fra8
+		text = "ROn-8"
+		desc = "Français get 8 Civilian factories (Not Recommmended)"
+	}
+	option = {
+		name = fra12
+		text = "ROn-12"
+		desc = "Français get 12 Civilian factories (Not Recommmended)"
+	}
+}
+usa_boost = {
+	name = "USA Civ Boost?Are you ok , like mentaly??"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_merge_plant_materiel"
+	default = {
+		name = off
+		text = "GOff"
+		desc = "USA won't have civilian factories buff (Recommmended)"
+	}
+	option = {
+		name = usa4
+		text = "ROn-4"
+		desc = "USA get 4 Civilian factories (Not Recommmended)"
+	}
+	option = {
+		name = usa8
+		text = "ROn-8"
+		desc = "USA get 8 Civilian factories (Not Recommmended)"
+	}
+}
