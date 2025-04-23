@@ -153,14 +153,14 @@ IF = {
 	set_variable = { BEL_scars_of_ww1_army_org_factor = -0.15 }
 	set_variable = { BEL_scars_of_ww1_conscription_factor = -0.15 }
 
-	# Corruption
-	add_dynamic_modifier = {
-		modifier = BEL_corruption_dynamic_modifier
-	}
-	set_variable = { BEL_corruption_political_power_gain = -0.25 }
-	set_variable = { BEL_corruption_stability_factor = -0.20 }
-	set_variable = { BEL_corruption_production_speed_buildings_factor = -0.20 }
-	set_variable = { BEL_corruption_fascism_drift = 0.10 }
+	# Corruption - Removed for the simple reason for them not to explode in a civil war.
+	#add_dynamic_modifier = {
+	#	modifier = BEL_corruption_dynamic_modifier
+	#}
+	#set_variable = { BEL_corruption_political_power_gain = -0.25 }
+	#set_variable = { BEL_corruption_stability_factor = -0.20 }
+	#set_variable = { BEL_corruption_production_speed_buildings_factor = -0.20 }
+	#set_variable = { BEL_corruption_fascism_drift = 0.10 }
 
 	# Economic Downturn
 	add_dynamic_modifier = {

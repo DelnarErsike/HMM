@@ -8,6 +8,7 @@ state={
 
 
 	history={
+		add_extra_state_shared_building_slots = 4
 		owner = YUG
 		victory_points = { #Dubrovnik
 			6889 3 

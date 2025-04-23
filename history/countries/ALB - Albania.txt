@@ -7,6 +7,7 @@ set_technology = {
 	tech_trucks = 1
 	tech_support = 1
 	tech_recon = 1
+	basic_train = 1 #in the eco_on_actions , there is a line of code for trains , adding trains fixes an error.If you want to simply make it so greece doesnt get trains , remove this and the eco on actions line 715
 }
 
 recruit_character = ALB_king_zog
