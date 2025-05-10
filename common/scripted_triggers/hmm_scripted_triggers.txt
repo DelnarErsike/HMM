@@ -156,3 +156,14 @@ ai_black = {
 DIPLOMACY_PEACE_PROPOSAL_ENABLE_TRIGGER = {
 	always = no
 }
+DIPLOMACY_RETURN_TERRITORY_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			FROM = { tag = WST }
+		}
+		custom_trigger_tooltip = {
+			tooltip = RETURN_TERRITORY_TO_WST_BLOCKED_TOOLTIP
+			NOT = { FROM = { tag = WST } }
+		}
+	}
+}

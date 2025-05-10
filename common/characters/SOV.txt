@@ -378,9 +378,9 @@ characters = {
 				original_tag = SOV
 				
 			}
-			available = {
-				NOT = {has_tech = peoples_army}
-			}
+			#available = {
+			#	NOT = {has_tech = peoples_army}
+			#}
 			traits = {
 				army_infantry_1
 			}
