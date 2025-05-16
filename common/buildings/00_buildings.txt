@@ -244,6 +244,7 @@ buildings = {
 		icon_frame = 9
 		anti_air = yes
 		disabled_in_dmz = yes
+		air_defence = 1
 		damage_factor = 0.1
 		value = 1
 		infrastructure_construction_effect = yes

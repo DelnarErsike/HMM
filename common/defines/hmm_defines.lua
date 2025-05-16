@@ -132,7 +132,7 @@ NDefines.NTrade.RELATION_TRADE_FACTOR = 0				-- Trade factor is modified by Opin
 NDefines.NBuildings.OWNER_CHANGE_EXTRA_SHARED_SLOTS_FACTOR = 1.0 -- You get all the factories in a territory when you annex it
 
 NDefines.NSupply.RAILWAY_FLOW_PENALTY_PER_DAMAGED = 4.9
-NDefines.NAir.AIR_WING_BOMB_DAMAGE_FACTOR = 0.3
+NDefines.NAir.AIR_WING_BOMB_DAMAGE_FACTOR = 0.6
 NDefines.NIndustrialOrganisation.DESIGN_TEAM_CHANGE_XP_COST = 0
 
 --NDefines_Graphics.NAirGfx.MAX_MISSILE_BOMBING_SCENARIOS = 0
