@@ -5925,6 +5925,7 @@ focus_tree = {
 		available = {
 			has_tech = centimetric_radar
 			has_war_with_major = yes
+			always = no
 		}
 
 		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_HISTORICAL }
