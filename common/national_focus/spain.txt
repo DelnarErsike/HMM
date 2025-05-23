@@ -1943,14 +1943,17 @@ focus_tree = {
 
 	focus = {
 		id = SPA_dictator_for_life
+
 		available = {
 			has_country_leader = {
-				name = "Francisco Franco"
+				character = SPA_francisco_franco
 				ruling_only = yes
 			}
 		}
+
 		bypass = {
 		}
+
 		prerequisite = { focus = SPA_adopt_the_26_points }
 		mutually_exclusive = { focus = SPA_restore_the_monarchy }
 		
@@ -1964,111 +1967,41 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_STABILITY}
 		completion_reward = {
 			add_stability = 0.05
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = spanish_franco_cp
-						option = on
-					}
-				}
-				swap_ruler_traits = { remove = caudillo_1 add = caudillo_2 }
-			}
-			else_if = {
-				limit = {
-					has_game_rule = {
-						rule = spanish_franco_cp
-						option = off
-					}
-				}
-				swap_ruler_traits = { remove = caudillo_1 add = caudillo_3 }
-			}
+			swap_ruler_traits = { remove = caudillo_1 add = caudillo_2 }
 			hidden_effect = {
 				if = {
 					limit = {
 						has_government = neutrality
 					}
-					if = {
-						limit = {
-								has_game_rule = {
-									rule = spanish_franco_cp
-									option = on
-								}
-							}
-						remove_trait = {
-							character = SPA_francisco_franco
-							ideology = fascism_ideology
-							trait = caudillo_1
-						}
-						add_trait = {
-							character = SPA_francisco_franco
-							ideology = fascism_ideology
-							trait = caudillo_2
-						}
+					remove_trait = {
+						character = SPA_francisco_franco
+						ideology = fascism_ideology
+						trait = caudillo_1
 					}
-					else_if = {
-						limit = {
-								has_game_rule = {
-									rule = spanish_franco_cp
-									option = off
-								}
-							}
-						remove_trait = {
-							character = SPA_francisco_franco
-							ideology = fascism_ideology
-							trait = caudillo_1
-						}
-						add_trait = {
-							character = SPA_francisco_franco
-							ideology = fascism_ideology
-							trait = caudillo_3
-						}
+					add_trait = {
+						character = SPA_francisco_franco
+						ideology = fascism_ideology
+						trait = caudillo_2
 					}
 				}
 				if = {
 					limit = {
 						has_government = fascism
 					}
-					if = {
-						limit = {
-								has_game_rule = {
-									rule = spanish_franco_cp
-									option = on
-								}
-							}
-						remove_trait = {
-							character = SPA_francisco_franco
-							ideology = despotism
-							trait = caudillo_1
-						}
-						add_trait = {
-							character = SPA_francisco_franco
-							ideology = despotism
-							trait = caudillo_2
-						}
+					remove_trait = {
+						character = SPA_francisco_franco
+						ideology = despotism
+						trait = caudillo_1
 					}
-					else_if = {
-						limit = {
-								has_game_rule = {
-									rule = spanish_franco_cp
-									option = off
-								}
-							}
-						remove_trait = {
-							character = SPA_francisco_franco
-							ideology = despotism
-							trait = caudillo_1
-						}
-						add_trait = {
-							character = SPA_francisco_franco
-							ideology = despotism
-							trait = caudillo_3
-						}
+					add_trait = {
+						character = SPA_francisco_franco
+						ideology = despotism
+						trait = caudillo_2
 					}
 				}
 			}
 		}
 	}
-
 	focus = {
 		id = SPA_invest_in_naval_infrastructure
 		available = {
