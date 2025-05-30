@@ -15178,7 +15178,7 @@ focus_tree = {
                 name = RAJ_inclusive_nationalism
             }
 
-            add_ideas = idea_RAJ_inclusive_nationalism
+            #add_ideas = idea_RAJ_inclusive_nationalism
 
         }
     }
@@ -15412,7 +15412,7 @@ focus_tree = {
         relative_position_id = RAJ_hedgemony_of_the_subcontinent
         
 
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -15457,7 +15457,7 @@ focus_tree = {
                 popularity = 0.15
             }
 
-            add_ideas = idea_RAJ_tryst_with_destiny
+            #add_ideas = idea_RAJ_tryst_with_destiny
         }
     }
 
@@ -16365,7 +16365,7 @@ focus_tree = {
         }
 
         available = {
-
+            always = no
         }
         
         bypass = {
@@ -21278,7 +21278,7 @@ focus = {
         cost = 10
 
         available = {
-            NOT = { has_war_with = GER }
+            always = false
         }
 
         bypass = {
@@ -21354,7 +21354,7 @@ focus = {
         cost = 10
 
         available = {
-            NOT = { has_war_with = SOV }
+            always = false
         }
 
         bypass = {
@@ -22518,7 +22518,7 @@ focus = {
         }
 
         available = {
-
+            always = false
         }
         
         bypass = {
@@ -23081,7 +23081,7 @@ focus = {
         }
 
         available = {
-
+            always = false
         }
 
         bypass = {
@@ -23496,6 +23496,7 @@ focus = {
         }
 
         available = {
+            always = false
             if = {
                 limit = {   #prevent ai from stealing orde from ETH if player
                     is_ai = yes
@@ -24312,7 +24313,7 @@ focus = {
         }
 
         available = {
-
+            always = no
         }
         
         bypass = {
