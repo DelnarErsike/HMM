@@ -9126,16 +9126,26 @@ ENG_imperial_conference_decision = {
 
 		complete_effect = {
 			add_war_support = 0.15
-			SAF = {add_war_support = 10
-					add_political_power = -25}
-					NZL = {add_war_support = 0.10
-					add_political_power = -25}			
-					AST = {add_war_support = 0.10
-					add_political_power = -25}
-					RAJ = {add_war_support = 0.10
-					add_political_power = -25}
-					CAN = {add_war_support = 0.10
-					add_political_power = -25}	
+			SAF = {
+				add_war_support = 0.10 #POV: When developers add an extra 0 to thier code
+				add_political_power = -25
+			}
+			NZL = {
+				add_war_support = 0.10
+				add_political_power = -25
+			}			
+			AST = {
+				add_war_support = 0.10
+				add_political_power = -25
+			}
+			RAJ = {
+				add_war_support = 0.10
+				add_political_power = -25
+			}
+			CAN = {
+				add_war_support = 0.10
+				add_political_power = -25
+			}	
 		}
 
 		ai_will_do = {
