@@ -103,5 +103,6 @@ ASY = "countries/Assyria.txt"
 BHR = "countries/Bahrain.txt"
 IMO = "countries/Omani Imamate.txt"
 BLC = "countries/Balochistan.txt"
+BAN = "countries/Bangladesh.txt"
 
 #AOI = "countries/Italian East Africa.txt"

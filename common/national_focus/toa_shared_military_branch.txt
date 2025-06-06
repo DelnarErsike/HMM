@@ -1285,6 +1285,16 @@ shared_focus = {
 		IF = {
 			limit = {
 				has_dlc = "Arms Against Tyranny"
+				OR = {
+					NOT = { original_tag = BRA }
+					AND = {
+						original_tag = BRA
+						has_game_rule = {
+							rule = extra_sf_branch_bra
+							option = yes
+						}
+					}
+				}
 			}
 			add_potential_special_forces_tree = yes
 			add_doctrine_cost_reduction = {
@@ -1295,25 +1305,11 @@ shared_focus = {
 			}
 		}
 
-		IF = {
-			limit = {
-				original_tag = CHL
-			}
-			custom_effect_tooltip = CHL_modify_chilean_army_ns_intro
-			add_to_variable = { JUNO_army_modifier_special_forces_cap = 0.15 tooltip = special_forces_cap_tt }
-		}
 		ELSE_IF = {
 			limit = {
 				original_tag = BRA
 			}
 			custom_effect_tooltip = BRA_modify_brazilian_army_ns_intro
-			add_to_variable = { JUNO_army_modifier_special_forces_cap = 0.15 tooltip = special_forces_cap_tt }
-		}
-		ELSE_IF = {
-			limit = {
-				original_tag = ARG
-			}
-			custom_effect_tooltip = ARG_modify_argentine_army_ns_intro
 			add_to_variable = { JUNO_army_modifier_special_forces_cap = 0.15 tooltip = special_forces_cap_tt }
 		}
 		ELSE = {

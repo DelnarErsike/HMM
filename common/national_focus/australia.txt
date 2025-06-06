@@ -537,35 +537,41 @@
 		search_filters = { FOCUS_FILTER_RESEARCH  }
 
 		completion_reward = {
-			army_experience = 35
-			navy_experience = 35
-			if = {
-				limit = { has_dlc = "Arms Against Tyranny" }
-				custom_effect_tooltip = CHL_skip_one_line_tt
-				add_potential_special_forces_tree = yes
-				custom_effect_tooltip = CHL_skip_one_line_tt
-				add_doctrine_cost_reduction = {
-					name = AST_introduce_unconventional_warfare
-					cost_reduction = 0.5
-					uses = 1
-					category = special_forces_doctrine
-				}
-			}
-			else = {
-				add_doctrine_cost_reduction = {
-					name = AST_introduce_unconventional_warfare
-					cost_reduction = 0.5
-					uses = 1
-					category = land_doctrine
-				}
-				add_doctrine_cost_reduction = {
-					name = AST_introduce_unconventional_warfare
-					cost_reduction = 0.5
-					uses = 1
-					category = naval_doctrine
-				}
-			}
-		}
+        army_experience = 35
+        navy_experience = 35
+        if = {
+            limit = { 
+                has_dlc = "Arms Against Tyranny"
+                has_game_rule = {
+                    rule = extra_sf_branch_ast
+                    option = yes
+                }
+            }
+            custom_effect_tooltip = CHL_skip_one_line_tt
+            add_potential_special_forces_tree = yes
+            custom_effect_tooltip = CHL_skip_one_line_tt
+            add_doctrine_cost_reduction = {
+                name = AST_introduce_unconventional_warfare
+                cost_reduction = 0.5
+                uses = 1
+                category = special_forces_doctrine
+            }
+        }
+        else = {
+            add_doctrine_cost_reduction = {
+                name = AST_introduce_unconventional_warfare
+                cost_reduction = 0.5
+                uses = 1
+                category = land_doctrine
+            }
+            add_doctrine_cost_reduction = {
+                name = AST_introduce_unconventional_warfare
+                cost_reduction = 0.5
+                uses = 1
+                category = naval_doctrine
+            }
+        }
+	}
 	}
 
 	focus = {
