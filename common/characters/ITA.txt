@@ -640,12 +640,12 @@ characters = {
 		}
 		
 		corps_commander = {
-			traits = { cavalry_leader combined_arms_expert ranger } #Motorized
-			skill = 4 #missclick
-			attack_skill = 3
-			defense_skill = 4
+			traits = { cavalry_leader combined_arms_expert } #Motorized
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
 			planning_skill = 1
-			logistics_skill = 3
+			logistics_skill = 1
 			legacy_id = 0
 			visible = { has_government = fascism }
 		}
