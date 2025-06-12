@@ -113,14 +113,10 @@ Brasil_AC_rule = {
 	group = "HMM Rules"
 	icon = "GFX_volunteers"
 	option = {
-		name = x
-		text = x
-		desc = x
-	} = {
 		name = Brasil_AC
 		text = "Brasil can AC"
 		desc = ""
-	}
+	} 
 	default = {
 		name = Brasil_no_AC
 		text = "Brasil cant AC"
