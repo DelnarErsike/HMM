@@ -641,7 +641,7 @@ characters = {
 		
 		corps_commander = {
 			traits = { cavalry_leader combined_arms_expert ranger } #Motorized
-			skill = 3
+			skill = 4 #missclick
 			attack_skill = 3
 			defense_skill = 4
 			planning_skill = 1
