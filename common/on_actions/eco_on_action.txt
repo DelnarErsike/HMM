@@ -610,6 +610,12 @@ on_actions = {
 					type = train_equipment
 					amount = 11
 				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_2
+					amount = 700
+					producer = CZE
+					variant_name = "TNH"
+				}
 			}
 			YUG = {
 				add_equipment_to_stockpile = {
