@@ -418,3 +418,18 @@ extra_sf_branch_bra = {
 		desc = "BRA does get extra SF branch from focus"
 	}
 }
+auto_dec_scripts = {
+	name = "Autodeclare scripts"
+	group = "HMM Rules"
+	icon = "GFX_decision_category_ger_military_buildup"
+	default = {
+		name = auto_dec_scripts_on
+		text = "Auto declare ON"
+		desc = ""
+	}
+	option = {
+		name = auto_dec_scripts_off
+		text = "Auto declare OFF"
+		desc = ""
+	}
+}
