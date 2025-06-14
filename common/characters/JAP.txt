@@ -250,12 +250,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits = { organizer infantry_leader trait_engineer infantry_expert naval_invader commando trickster trait_mountaineer jungle_rat }
+			traits = { organizer infantry_leader trait_engineer infantry_expert brilliant_strategist naval_invader commando trickster trait_mountaineer jungle_rat }
 			skill=8
 			attack_skill=6
-			defense_skill=3
-			planning_skill=3
-			logistics_skill=2
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=4
 			legacy_id=0
 		}
 	}
@@ -629,9 +629,9 @@ characters={
 			traits = {  commando naval_invader infantry_leader infantry_expert trait_engineer hill_fighter ranger trait_mountaineer }
 			skill=8
 			attack_skill=6
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=3
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=4
 			legacy_id=0
 		}
 	}
