@@ -66,6 +66,3 @@ move_capital_to_Stalingrad:0 "Move Capital to Stalingrad"
 move_capital_to_Vladivostok:0 "Move Capital to Vladivostok"
 SOV_assist_republican_spain:0 "Assist Republican Spain"
 continuous_recruitment_drive:0 "Continuous Recruitment Drive"
-
-JAP_auto_declare_script_tt:0 "§RIf you do NOT complete this focus before 1941 May 31st , a script will trigger if the game rule is set ,to auto declare on USA§."
-GER_auto_declare_script_tt:0 "§RIf you do NOT complete this focus before 1941 August 31st , a script will trigger if the game rule is set ,to auto declare on the Soviet Union.§"

@@ -133,18 +133,13 @@ on_actions = {
 	on_monthly = {
 		effect = {
 			if = {
-				limit = {
-					date > 1941.8.31
-					NOT = { GER = {has_war_with = SOV}}
-					has_game_rule = {
-						rule = auto_dec_scripts
-						option = auto_dec_scripts_on
-					}
-				}
+				limit = {date > 1941.8.31
+				NOT = { GER = {has_war_with = SOV}}
+			}
 				GER = {
 					declare_war_on = {
-						target = SOV
-						type = annex_everything
+					target = SOV
+					type = annex_everything
 					}
 				}
 			}
@@ -152,15 +147,11 @@ on_actions = {
 				limit = {
 					date > 1941.5.31
 					NOT = { JAP = {has_war_with = USA}}
-					has_game_rule = {
-						rule = auto_dec_scripts
-						option = auto_dec_scripts_on
-					}
 				}
 				JAP = {
 					declare_war_on = {
-						target = USA
-						type = annex_everything
+					target = USA
+					type = annex_everything
 					}
 				}
 			}

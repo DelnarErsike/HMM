@@ -547,8 +547,8 @@
 		relative_position_id = JAP_bypass_the_philippines
 
 		will_lead_to_war_with = ENG
-		will_lead_to_war_with = HOL
-		will_lead_to_war_with = FRA
+		will_lead_to_war_with = MAL
+		will_lead_to_war_with = INS
 
 		cost = 10
 
@@ -571,12 +571,6 @@
 
 		available = {
 			is_subject = no
-			date > 1940.12.1
-			has_game_rule = {
-				rule = auto_dec_scripts
-				option = auto_dec_scripts_off
-			}
-			
 		}
 
 		bypass = {
@@ -614,7 +608,6 @@
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			custom_effect_tooltip = JAP_auto_declare_script_tt
 			if = {
 				limit = {
 					NOT = { has_wargoal_against = INS }
