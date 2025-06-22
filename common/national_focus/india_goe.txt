@@ -445,7 +445,7 @@ focus_tree = {
         icon = GFX_focus_generic_coastal_fort
         prerequisite = { focus = RAJ_trade_port }
         x = 0
-        y = 1
+        y = 3
         relative_position_id = RAJ_trade_port
 
         cost = 5
