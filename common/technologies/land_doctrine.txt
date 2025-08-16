@@ -3462,9 +3462,9 @@ technologies = {
 		}
 
 		out_of_supply_factor = -0.30
-		category_army = {
-			default_morale = 0.2
-		}
+	#	category_army = {
+	#		default_morale = 0.2
+	#	}
 		
 		resistance_growth_on_our_occupied_states = 0.25 
 
