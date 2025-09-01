@@ -1,4 +1,4 @@
-NDefines.NMilitary.UNIT_EXP_LEVELS = { 0.1, 0.3, 0.98, 0.99 }
+NDefines.NMilitary.UNIT_EXP_LEVELS = { 0.1, 0.3 }
 NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.125
 NDefines.NCountry.GIE_DIVISION_ATTACK_BONUS_AGAINST_OCCUPIER = 0 -- Attack bonus factor against whoever occupies your core territory.
 NDefines.NCountry.GIE_DIVISION_DEFENSE_BONUS_AGAINST_OCCUPIER = 0 -- Attack bonus factor against whoever occupies your core territory.
@@ -31,6 +31,7 @@ NDefines.NNavy.RESOURCE_LENDLEASE_PRIORITY = 5                          -- Defau
 
 -- QOL
 NDefines.NMilitary.PROMOTE_LEADER_CP_COST = 0.1
+NDefines.NMilitary.BATALION_CHANGED_EXPERIENCE_DROP = 0 -- TFB Style Converts
 NDefines.NMilitary.RELIABILTY_RECOVERY = 0.0 -- WAS 0.1 factor affecting how much equipment is returned "from the dead"
 NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2 -- WAS 1 aka TRAINED | Since the above was changed there is no point to not allowing divs to be trained to regular considering that its only 10% stats now.
 NDefines.NMilitary.UNIT_LEADER_ASSIGN_TRAIT_COST = 0.1
@@ -133,7 +134,7 @@ NDefines.NTrade.RELATION_TRADE_FACTOR = 0				-- Trade factor is modified by Opin
 NDefines.NBuildings.OWNER_CHANGE_EXTRA_SHARED_SLOTS_FACTOR = 1.0 -- You get all the factories in a territory when you annex it
 
 NDefines.NSupply.RAILWAY_FLOW_PENALTY_PER_DAMAGED = 4.9
-NDefines.NAir.AIR_WING_BOMB_DAMAGE_FACTOR = 0.45 --Vanilla 2
+NDefines.NAir.AIR_WING_BOMB_DAMAGE_FACTOR = 0.5 --Vanilla 2
 NDefines.NIndustrialOrganisation.DESIGN_TEAM_CHANGE_XP_COST = 0
 NDefines.NMilitary.ANTI_AIR_TARGETTING_TO_CHANCE = 0.09 -- Vanilla 0.07
 NDefines.NAir.AA_INDUSTRY_AIR_DAMAGE_FACTOR = 0 --Vanilla -0.12
