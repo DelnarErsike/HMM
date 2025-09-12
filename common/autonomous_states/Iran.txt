@@ -2,7 +2,7 @@ autonomy_state = {
 	id = iran_puppet
 	
 	min_freedom_level = 0.8
-	
+	use_overlord_color = yes
 	manpower_influence = 0.2
 	
 	rule = {
@@ -17,8 +17,8 @@ autonomy_state = {
 		autonomy_manpower_share = 0.0
 		peace_score_ratio_transferred_to_overlord = 0.05
 		lend_lease_tension_with_overlord = -1
-	
-ai_subject_wants_higher = {
+	}
+	ai_subject_wants_higher = {
 		factor = 0.0
 	}
 	
@@ -29,7 +29,9 @@ ai_subject_wants_higher = {
 	ai_overlord_wants_garrison = {
 		always = no
 	}
-
+	allowed = {
+		tag = PER
+	}
 	
 	can_take_level = {
 		always = no
