@@ -71,23 +71,11 @@ focus_tree = {
                     add_skill_level = 1
                     random_list = {
                         seed = random 
-                        25 = {
-                            add_logistics = 2
-                            add_attack = 1
-                        }
-                        25 = {
-                            add_planning = 1
-                            add_attack = 2
-                        }
-                        25 = {
-                            add_defense = 3
-                        }
-                        25 = {
+                        100 = {
                             add_logistics = 1
                             add_attack = 1
                             add_defense = 1
-                        }
-                        
+                        }    
                     }
                 }
             }
@@ -12612,7 +12600,6 @@ focus = {
 		country_event = GOE_RAJ_loyalist.06
 	}
 }
-
 focus = {
 	id = RAJ_desert_training
 	icon = GFX_focus_PER_desert_training
@@ -12634,26 +12621,13 @@ focus = {
 		hidden_effect = { set_technology = { desert_training_tech = 1 } }
 
 		custom_effect_tooltip = generic_skip_one_line_tt
-
-		random_army_leader = {
-			limit = { #General/FM doesn't have a terrain trait already
-				NOT = {
-					has_trait = desert_fox
-					has_trait = swamp_fox
-					has_trait = trait_mountaineer
-					has_trait = hill_fighter
-					has_trait = jungle_rat
-					has_trait = ranger
-					has_trait = urban_assault_specialist
-					has_trait = winter_specialist
-				}
-			}
-			add_unit_leader_trait = desert_fox
+		RAJ_noel_beresfordpeirse = {
+		    add_trait = { trait = desert_fox }
 			add_skill_level = 1
 			add_logistics = 1
 			add_defense = 1
 			add_planning = 1
-		}
+		    }
 	}
 }
 
@@ -12773,28 +12747,16 @@ focus = {
 		hidden_effect = { set_technology = { jungle_training_tech = 1 } }
 
 		custom_effect_tooltip = generic_skip_one_line_tt
-		random_army_leader = {
-			limit = { #General/FM doesn't have a terrain trait already
-				NOT = {
-					has_trait = desert_fox
-					has_trait = swamp_fox
-					has_trait = trait_mountaineer
-					has_trait = hill_fighter
-					has_trait = jungle_rat
-					has_trait = ranger
-					has_trait = urban_assault_specialist
-					has_trait = winter_specialist
-				}
-			}
-			add_unit_leader_trait = jungle_rat
+		RAJ_GOE_sam_manekshaw = {
+		    add_trait = { trait = jungle_rat }
 			add_skill_level = 1
 			add_logistics = 1
 			add_defense = 1
 			add_planning = 1
+		    }
 		}
 		
 	}
-}
 
 focus = {
 	id = RAJ_defense_of_malaya
@@ -12966,26 +12928,13 @@ focus = {
 		hidden_effect = { set_technology = { hills_training_tech = 1 } }
 
 		custom_effect_tooltip = generic_skip_one_line_tt
-
-		random_army_leader = {
-			limit = { #General/FM doesn't have a terrain trait already
-				NOT = {
-					has_trait = desert_fox
-					has_trait = swamp_fox
-					has_trait = trait_mountaineer
-					has_trait = hill_fighter
-					has_trait = jungle_rat
-					has_trait = ranger
-					has_trait = urban_assault_specialist
-					has_trait = winter_specialist
-				}
-			}
-			add_unit_leader_trait = hill_fighter
+		RAJ_kodandera_cariappa = {
+		    add_trait = { trait = hill_fighter }
 			add_skill_level = 1
 			add_logistics = 1
 			add_defense = 1
 			add_planning = 1
-		}
+		    }
 	}
 }
 
@@ -13733,26 +13682,14 @@ focus = {
 		hidden_effect = { set_technology = { urban_training_tech = 1 } }
 		
 		custom_effect_tooltip = generic_skip_one_line_tt
-
-		random_army_leader = {
-			limit = { #General/FM doesn't have a terrain trait already
-				NOT = {
-					has_trait = desert_fox
-					has_trait = swamp_fox
-					has_trait = trait_mountaineer
-					has_trait = hill_fighter
-					has_trait = jungle_rat
-					has_trait = ranger
-					has_trait = urban_assault_specialist
-					has_trait = winter_specialist
-				}
-			}
-			add_unit_leader_trait = urban_assault_specialist
+		RAJ_GOE_mohammad_usman = {
+		    add_trait = { trait = urban_assault_specialist }
 			add_skill_level = 1
 			add_logistics = 1
 			add_defense = 1
 			add_planning = 1
-		}
+		    }
+
 	}
 }
 

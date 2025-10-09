@@ -5173,7 +5173,7 @@ country_event = {
 	
 	immediate = {
 		hidden_effect = {
-			country_event = { id =  GOE_RAJ_famine.2 days = 20 random_days = 55 }
+			country_event = { id =  GOE_RAJ_famine.2 days = 45 }
 		}
 	}
 
@@ -5224,7 +5224,7 @@ country_event = {
 	is_triggered_only = yes
 	immediate = {
 		hidden_effect = {
-			country_event = { id =  GOE_RAJ_famine.3 days = 1 random_days = 55 }
+			country_event = { id =  GOE_RAJ_famine.3 days = 25 }
 		}
 	}
 
@@ -5255,7 +5255,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			country_event = { id = GOE_RAJ_famine.4 days = 1 random_days = 55 }
+			country_event = { id = GOE_RAJ_famine.4 days = 25 }
 		}
 	}
 
@@ -5276,7 +5276,7 @@ country_event = {
     fire_only_once = yes
 	immediate = {
 		hidden_effect = {
-			country_event = { id =  GOE_RAJ_famine.5 days = 1 random_days = 55 }
+			country_event = { id =  GOE_RAJ_famine.5 days = 25 }
 		}
 	}
 	
@@ -5301,7 +5301,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			country_event = { id =  GOE_RAJ_famine.6 days = 20 random_days = 55 }
+			country_event = { id =  GOE_RAJ_famine.6 days = 45 }
 		}
 	}
 	option = {
@@ -5323,7 +5323,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			country_event = { id =  GOE_RAJ_famine.7 days = 20 random_days = 55 }
+			country_event = { id =  GOE_RAJ_famine.7 days = 45 }
 		}
 	}
 
