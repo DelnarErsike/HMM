@@ -3283,10 +3283,11 @@ GER_hilfskreuzer_cat = {
 		days_remove = 25
 
 		complete_effect = {
-			#add_equipment_to_stockpile = { 
-			#	type = convoy_1
-			#	amount = -20 
-			#}
+			add_equipment_to_stockpile = { 
+				type = convoy_1
+				amount = -20 
+			}
+			navy_experience = -10
 		}
 		remove_effect = {
 			if = {

@@ -9,7 +9,7 @@ state = {
 	state_category = town
 	
 	history = {
-		owner = RAJ
+		owner = ENG
 		add_core_of = WST
 
 		buildings = {

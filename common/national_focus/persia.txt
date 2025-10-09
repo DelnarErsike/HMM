@@ -3393,18 +3393,6 @@ focus_tree = {
 			is_in_faction = no
 		}
 
-		bypass = {
-			OR = {
-				is_subject = yes
-				is_in_faction = yes
-				SOU = {
-					NOT = {
-						has_government = communism
-					}
-				}
-			}
-		}
-
 		allow_branch = {
 
 		}

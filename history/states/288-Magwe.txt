@@ -11,7 +11,7 @@ state = {
 	state_category = rural
 	
 	history = {
-		owner = RAJ
+		owner = ENG
 		add_core_of = WST
 
 		buildings = {

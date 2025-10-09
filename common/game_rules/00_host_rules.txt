@@ -128,12 +128,12 @@ Germany_Wirtschaftswunder = {
 	name = "Select if Germany is allowed to complete Wirtschaftswunder"
 	group = "HMM Rules"
 	icon = "GFX_volunteers"
-	option = {
+	default = {
 		name = Germany_no_wirtschaftswunder
 		text = "Germany cant do Wirtschaftswunder"
 		desc = ""
 	}
-	default = {
+	option = {
 		name = Germany_wirtschaftswunder
 		text = "Germany can do Wirtschaftswunder"
 		desc = ""
