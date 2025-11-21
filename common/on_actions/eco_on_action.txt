@@ -1778,53 +1778,59 @@ on_actions = {
 				#}
 			}
 			JAP = {
-				add_equipment_to_stockpile = {
-					type = train_equipment
-					amount = 29
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_0
-					amount = 5700
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_1
-					amount = 32100
-				}
-				add_equipment_to_stockpile = {
-					type = support_equipment_1
-					amount = 762
-				}
-				add_equipment_to_stockpile = {
-					type = motorized_equipment_0
-					amount = 0
-				}
-				add_equipment_to_stockpile = {
-					type = motorized_equipment_1
-					amount = 880
-				}
-				add_equipment_to_stockpile = {
-					type = artillery_equipment_1
-					amount = 25
-				}
-				add_equipment_to_stockpile = {
-					type = anti_tank_equipment_1
-					amount = 0
-				}
-				#add_equipment_to_stockpile = {
-				#	type = anti_air_equipment_1
-				#	amount = 0
-				#}
-				add_equipment_to_stockpile = {
-					type = armored_car_equipment
-					amount = 0
-				}
-				add_equipment_to_stockpile = {
-					type = light_tank_chassis_0
-					amount = 336
-					producer = JAP
-					variant_name = "Type 94 Tankette"
-				}
-			}
+                add_equipment_to_stockpile = {
+                    type = train_equipment
+                    amount = 29
+                }
+                add_equipment_to_stockpile = {
+                    type = infantry_equipment_0
+                    amount = 5760
+                }
+                add_equipment_to_stockpile = {
+                    type = infantry_equipment_1
+                    amount = 32128
+                }
+                add_equipment_to_stockpile = {
+                    type = support_equipment_1
+                    amount = 762
+                }
+                add_equipment_to_stockpile = {
+                    type = motorized_equipment_0
+                    amount = 0
+                }
+                add_equipment_to_stockpile = {
+                    type = motorized_equipment_1
+                    amount = 880
+                }
+                add_equipment_to_stockpile = {
+                    type = artillery_equipment_1
+                    amount = 228
+                }
+                add_equipment_to_stockpile = {
+                    type = anti_tank_equipment_1
+                    amount = 0
+                }
+                #add_equipment_to_stockpile = {
+                #    type = anti_air_equipment_1
+                #    amount = 0
+                #}
+                add_equipment_to_stockpile = {
+                    type = armored_car_equipment
+                    amount = 0
+                }
+                add_equipment_to_stockpile = {
+                    type = light_tank_chassis_0
+                    amount = 67
+                    producer = JAP
+                    variant_name = "Type 94 Tankette"
+                }
+                add_equipment_to_stockpile = {
+                    type = medium_tank_chassis_0
+                    amount = 280
+                    producer = JAP
+                    variant_name = "Type 89 I-Go"
+                }
+            }
 			GER = {
 				add_equipment_to_stockpile = {
 					type = train_equipment
