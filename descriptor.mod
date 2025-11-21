@@ -4,12 +4,6 @@ tags={
 	"Historical"
 	"Gameplay"
 }
-replace_path="common/characters"
-replace_path="history/countries"
-replace_path="history/states"
-replace_path="map/strategicregions"
-replace_path="common/national_focus"
-replace_path="common/opinion_modifiers"
 name="HMM"
-supported_version="1.16.10"
+supported_version="1.17.0"
 remote_file_id="3365264825"

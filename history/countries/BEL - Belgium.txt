@@ -55,7 +55,7 @@ if = {
 	give_guarantee = ENG
 }
 
-set_research_slots = 0 #optimization
+set_research_slots = 3
 set_stability = 0.7
 set_war_support = 0.3 #we see what you are doing there Adolf
 
@@ -67,7 +67,6 @@ set_technology = {
 	tech_engineers = 1
 	tech_trucks = 1
 	motorised_infantry = 1
-	trench_warfare = 1
 	fuel_silos = 1
 	fuel_refining = 1
 	basic_train = 1
@@ -76,6 +75,8 @@ set_technology = {
 	BEL_chasseurs_ardennais = 1 
 	tech_mountaineers = 1
 }
+
+set_grand_doctrine = grand_battleplan
 
 IF = {
 	limit = {
@@ -153,14 +154,14 @@ IF = {
 	set_variable = { BEL_scars_of_ww1_army_org_factor = -0.15 }
 	set_variable = { BEL_scars_of_ww1_conscription_factor = -0.15 }
 
-	# Corruption - Removed for the simple reason for them not to explode in a civil war.
-	#add_dynamic_modifier = {
-	#	modifier = BEL_corruption_dynamic_modifier
-	#}
-	#set_variable = { BEL_corruption_political_power_gain = -0.25 }
-	#set_variable = { BEL_corruption_stability_factor = -0.20 }
-	#set_variable = { BEL_corruption_production_speed_buildings_factor = -0.20 }
-	#set_variable = { BEL_corruption_fascism_drift = 0.10 }
+	# Corruption
+	add_dynamic_modifier = {
+		modifier = BEL_corruption_dynamic_modifier
+	}
+	set_variable = { BEL_corruption_political_power_gain = -0.25 }
+	set_variable = { BEL_corruption_stability_factor = -0.20 }
+	set_variable = { BEL_corruption_production_speed_buildings_factor = -0.20 }
+	set_variable = { BEL_corruption_fascism_drift = 0.10 }
 
 	# Economic Downturn
 	add_dynamic_modifier = {
@@ -287,10 +288,85 @@ if = {
 	limit = { has_dlc = Gotterdammerung }
 	recruit_character = BEL_hubert_pierlot
 	recruit_character = BEL_paul_van_zeeland
+	recruit_character = BEL_paul_emile_janson
+	recruit_character = BEL_paul_henri_spaak
+	recruit_character = BEL_emile_vanderveld
+	recruit_character = BEL_leon_degrelle
+	recruit_character = BEL_henri_de_man
+	recruit_character = BEL_achille_van_acker
+	recruit_character = BEL_king_leopold_iii
+	recruit_character = BEL_raoul_van_overstraeten
+	recruit_character = BEL_oscar_michiels
+	recruit_character = BEL_victor_van_strydonck_de_burkel
+	recruit_character = BEL_jules_pire
+	recruit_character = BEL_raoul_daufresne_de_la_chevalerie
+	recruit_character = BEL_maurice_keyaerts
+	recruit_character = BEL_yvan_gerard
+	recruit_character = BEL_lucien_lippert
+	recruit_character = BEL_jean_baptise_piron
+	recruit_character = BEL_victor_descamps
+	recruit_character = BEL_lambert_chardome
+	recruit_character = BEL_eddy_blondeel
+	recruit_character = BEL_georges_timmermans
+	recruit_character = BEL_willy_coppens
+	recruit_character = BEL_remy_van_lierde
+	recruit_character = BEL_jean_offenburg
+	recruit_character = BEL_raymond_lallemant
+	recruit_character = BEL_dieudonne_salve
+	recruit_character = BEL_prudent_nuyten
+	recruit_character = BEL_albert_deveze
+	recruit_character = BEL_edouard_van_den_burgen
+	recruit_character = BEL_camille_gutt
+	recruit_character = BEL_camille_huysmans
+	recruit_character = BEL_julien_lahaut
+	recruit_character = BEL_emile_de_cartier_de_marchienne
+	recruit_character = BEL_edgar_sengier
+	recruit_character = BEL_walthere_dewe
+	recruit_character = BEL_august_borms
+	recruit_character = BEL_charles_count_of_flanders_person
+	recruit_character = BEL_fernand_verstraete
+	recruit_character = BEL_nicolas_florine
+	recruit_character = BEL_karel_bossart
+	recruit_character = BEL_georges_lemaitre
+	recruit_character = BEL_alfred_renard
+	recruit_character = BEL_mike_donnet
+	recruit_character = BEL_auguste_piccard
+	else = {
+		recruit_character = BEL_hubert_pierlot
+		recruit_character = BEL_joseph_jacquemotte
+		recruit_character = BEL_mcl_keyaerts
+		recruit_character = BEL_georges_timmermans
+		recruit_character = BEL_gilles_wyvekens
+		recruit_character = BEL_fritz_conrad
+		recruit_character = BEL_raoul_van_overstraeten
+		recruit_character = BEL_georges_deffontaine
+		recruit_character = BEL_victor_strydonck_burkel
+		recruit_character = BEL_georges_vereecken
+		recruit_character = BEL_jules_pire
+		recruit_character = BEL_oscar_michiels
+		recruit_character = BEL_charles_bastin
+		recruit_character = BEL_yvan_gerard
+		recruit_character = BEL_rene_lagrou
+		recruit_character = BEL_leon_degrelle
+		recruit_character = BEL_fritz_lob
+		recruit_character = BEL_jules_iserentant
+		recruit_character = BEL_paul_henri_spaak
+		recruit_character = BEL_gaston_eyskens
+		recruit_character = BEL_paul_van_zeeland
+	}
 }
 
 
-
+IF = {
+	limit = {
+		has_dlc = "Gotterdammerung"
+	}
+	set_autonomy = {
+		target = COG
+		autonomous_state = autonomy_colony
+		freedom_level = 0.2
+	}
+}
 
 IF = {
 	limit = {
@@ -479,12 +555,7 @@ IF = {
 		support_weapons = 1
 
 		#doctrines
-		air_superiority = 1
-		grand_battle_plan = 1
-		trench_warfare = 1
-		fleet_in_being = 1
-		battlefleet_concentration = 1
-		convoy_sailing = 1
+		#air_superiority = 1
 
 		#electronics
 		electronic_mechanical_engineering = 1
@@ -503,6 +574,11 @@ IF = {
 		synth_oil_experiments = 1
 		fuel_refining2 = 1
 	}
+
+set_grand_doctrine = grand_battleplan
+set_grand_doctrine = new_fleet_in_being
+set_grand_doctrine = new_strategic_destruction
+
 	complete_special_project = {
 		project = sp:sp_air_radar
 	}

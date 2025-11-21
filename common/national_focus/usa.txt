@@ -64,9 +64,36 @@ focus_tree = {
 	focus = {
 		id = USA_continue_the_new_deal
 		icon = GFX_focus_generic_self_management
-		x = 10
+		x = 14
 		y = 0
-	
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				OR = {
+					NOT = { has_dlc = "Man the Guns" }
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = USA_reestablish_the_gold_standard
+					}
+				}
+			}
+		}
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = USA_neutrality_act
+			}
+		}
+
 
 		cost = 10
 
@@ -74,7 +101,19 @@ focus_tree = {
 			factor = 1
 		}
 
-	
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = USA_reestablish_the_gold_standard
+				}
+			}
+		}
 
 		available = {
 			has_government = democratic
@@ -107,8 +146,7 @@ focus_tree = {
 	focus = {
 		id = USA_suspend_the_presecution
 		icon = GFX_focus_generic_diplomatic_treaty
-		x = -5
-	
+		x = -7
 		y = 1
 		prerequisite = { focus = USA_continue_the_new_deal }
 		relative_position_id = USA_continue_the_new_deal
@@ -116,6 +154,20 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+		}
+		allow_branch = {
+			has_dlc = "Man the Guns"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = USA_reestablish_the_gold_standard
+				}
+			}
 		}
 		available = {
 
@@ -148,13 +200,6 @@ focus_tree = {
 		    }
 		}
 	}
-	
-	
-#  # #  # ###  ##  #  #     ###  ### ###  ###  ###  ## ### #  # ###  ##  ### ###  ##  #  # 
-#  # ## #  #  #  # ## #     #  # #   #  # #  # #   #   #   ## #  #  #  #  #   #  #  # ## # 
-#  # # ##  #  #  # # ##     ###  ##  ###  ###  ##   #  ##  # ##  #  ####  #   #  #  # # ## 
-#  # #  #  #  #  # #  #     #  # #   #    #  # #     # #   #  #  #  #  #  #   #  #  # #  # 
- ##  #  # ###  ##  #  #     #  # ### #    #  # ### ##  ### #  #  #  #  #  #  ###  ##  #  # 
 
 	
 #   #  ##  ###  ###      ##  ###   ##  #  # ###  
@@ -168,7 +213,7 @@ focus_tree = {
 		id = USA_reach_out_to_the_ware_group
 		icon = GFX_goal_generic_propaganda
 		x = 0
-		y = 2
+		y = 3
 		prerequisite = { focus = USA_suspend_the_presecution }
 		prerequisite = { focus = USA_agricultural_adjustment_act }
 		relative_position_id = USA_suspend_the_presecution
@@ -202,7 +247,7 @@ focus_tree = {
 			show_ideas_tooltip = whittaker_chambers
 		}
 	}
-	
+
 #	#   # ## #  
 #   # #  # #  # 
 # # # ###  #### 
@@ -214,10 +259,31 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = USA_continue_the_new_deal }
 		relative_position_id = USA_continue_the_new_deal
-		x = -3
+		x = -4
 		y = 1
 
-		
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = USA_neutrality_act
+			}
+		}
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = USA_limited_intervention
+			}
+		}
 
 		cost = 10
 		#ai_will_do = {
@@ -244,8 +310,7 @@ focus_tree = {
 		}
 
 		available = {
-			congress_low_support_trigger = yes
-			
+			congress_medium_support_trigger = yes
 			has_government = democratic
 		}
 		
@@ -285,7 +350,7 @@ focus_tree = {
 		}
 
 		available = {
-			congress_low_support_trigger = yes
+			congress_medium_support_trigger = yes
 			has_government = democratic
 			not = { has_country_flag = USA_great_depression_cooldown }
 		}
@@ -325,7 +390,7 @@ focus_tree = {
 		}
 
 		available = {
-			congress_low_support_trigger = yes
+			congress_medium_support_trigger = yes
 			has_government = democratic
 			not = { has_country_flag = USA_great_depression_cooldown }
 		}
@@ -475,11 +540,7 @@ focus_tree = {
 			}
 		}
 	}
-#   ### #   # ### ### ### ###      ### #  # ### ### ###  #   # ### #  # ### ###  ##  #  # 
-#    #  ## ##  #   #  #   #  #      #  ## #  #  #   #  # #   # #   ## #  #   #  #  # ## # 
-#    #  # # #  #   #  ##  #  #      #  # ##  #  ##  ###   # #  ##  # ##  #   #  #  # # ## 
-#    #  #   #  #   #  #   #  #      #  #  #  #  #   #  #  # #  #   #  #  #   #  #  # #  # 
-### ### #   # ###  #  ### ###      ### #  #  #  ### #  #   #   ### #  #  #  ###  ##  #  # 
+
 
 	focus = {
 		id = USA_scientist_haven
@@ -487,9 +548,42 @@ focus_tree = {
 		prerequisite = { focus = USA_arsenal_of_democracy }
 		x = -2
 		y = 1
-		relative_position_id = USA_arsenal_of_democracy 
+		relative_position_id = USA_arsenal_of_democracy
 
-	
+		offset = {
+			x = -1
+			y = -4
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = USA_neutrality_act
+			}
+		}
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = USA_neutrality_act
+				has_completed_focus = USA_reestablish_the_gold_standard
+			}
+		}
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = USA_limited_intervention
+			}
+		}
 
 		cost = 10
 		#ai_will_do = {
@@ -555,10 +649,38 @@ focus_tree = {
 	focus = {
 		id = USA_neutrality_act
 		icon = GFX_goal_generic_neutrality_focus
-		x = 2
+		x = 4
 		y = 1
-		prerequisite = { focus = USA_continue_the_new_deal  }
+		prerequisite = { focus = USA_continue_the_new_deal }
+		mutually_exclusive = { focus = USA_limited_intervention }
 		relative_position_id = USA_continue_the_new_deal
+
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				OR = {
+					has_completed_focus = USA_reestablish_the_gold_standard
+					has_completed_focus = USA_neutrality_act
+				}
+			}
+		}
+		offset = {
+			x = -2
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = USA_reestablish_the_gold_standard
+				has_completed_focus = USA_neutrality_act
+			}
+		}
 
 		cost = 10
 
@@ -645,11 +767,46 @@ focus_tree = {
 	focus = {
 		id = USA_lend_lease_act
 		icon = GFX_focus_generic_treaty
-		x = -1
-		y = 1
+		x = 2
+		y = 2
 		prerequisite = { focus = USA_neutrality_act }
 		relative_position_id = USA_neutrality_act
 
+		offset = {
+			x = -1
+			y = -1
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				NOT = { has_completed_focus = USA_reestablish_the_gold_standard }
+				has_completed_focus = USA_neutrality_act
+			}
+		}
+		offset = {
+			x = -2
+			y = -1
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = USA_reestablish_the_gold_standard
+				has_completed_focus = USA_neutrality_act
+			}
+		}
+		offset = {
+			x = 0
+			y = -1
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = USA_limited_intervention
+			}
+		}
 
 		cost = 10
 
@@ -770,6 +927,17 @@ focus_tree = {
 		y = 2
 		relative_position_id = USA_neutrality_act
 
+		offset = {
+			x = 0
+			y = -1
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = USA_neutrality_act
+			}
+		}
 
 		cost = 10
 		ai_will_do = {
@@ -906,7 +1074,7 @@ focus_tree = {
 		}
 		continue_if_invalid = yes
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = USA_arsenal_of_democracy
 		cost = 10
 		ai_will_do = {
@@ -946,7 +1114,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = USA_the_giant_wakes }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = USA_the_giant_wakes
 		cost = 10
 		ai_will_do = {
@@ -980,7 +1148,7 @@ focus_tree = {
 		continue_if_invalid = yes
 		available_if_capitulated = yes
 
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = USA_arsenal_of_democracy
 		cost = 10
@@ -1264,7 +1432,7 @@ focus_tree = {
 		continue_if_invalid = yes
 		
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = USA_military_construction
 		cost = 10
 		#ai_will_do = {
@@ -1368,19 +1536,6 @@ focus_tree = {
 		}
 	}
 
-###  ## ###  ##  ###  #   ###  ## #  #     ### #  # ###      ##   ##  #   ###       ## ###  ##  #  # ###   ##  ###  ###  
-#   #    #  #  # #  # #    #  #   #  #      #  #  # #       #    #  # #   #  #     #    #  #  # ## # #  # #  # #  # #  # 
-##   #   #  #### ###  #    #   #  ####      #  #### ##      # ## #  # #   #  #      #   #  #### # ## #  # #### ###  #  # 
-#     #  #  #  # #  # #    #    # #  #      #  #  # #       #  # #  # #   #  #       #  #  #  # #  # #  # #  # #  # #  # 
-### ##   #  #  # ###  ### ### ##  #  #      #  #  # ###      ##   ##  ### ###      ##   #  #  # #  # ###  #  # #  # ###  
-
-
-#   #  ##  ###      ###   ##  #   # ### ###   ##      ##   ##  ### 
-#   # #  # #  #     #  # #  # #   # #   #  # #       #  # #  #  #  
-# # # #### ###      ###  #  # # # # ##  ###   #      #### #     #  
-# # # #  # #  #     #    #  # # # # #   #  #   #     #  # #  #  #  
- # #  #  # #  #     #     ##   # #  ### #  # ##      #  #  ##   #  
-
 
 #   #  ##  ###      ###  #    ##  #  #  ## 
 #   # #  # #  #     #  # #   #  # ## # #   
@@ -1391,9 +1546,81 @@ focus_tree = {
  	focus = {
 		id = USA_war_plans_division
 		icon = GFX_goal_generic_position_armies
-		x = 20
+		x = 28
 		y = 0
-		
+		offset = {
+			x = -26
+			y = 0
+			trigger = {
+				NOT = { has_dlc = "Man the Guns" }
+			}
+		}
+		offset = {
+			x = -17
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_dlc = "Man the Guns"
+				has_completed_focus = USA_continue_the_new_deal
+			}
+		}
+		offset = {
+			x = -2
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				NOT = { has_dlc = "Man the Guns" }
+				has_completed_focus = USA_continue_the_new_deal
+			}
+		}
+		offset = {
+			x = -14
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_dlc = "Man the Guns"
+				has_completed_focus = USA_reestablish_the_gold_standard
+			}
+		}
+		offset = {
+			x = -2
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				NOT = { has_dlc = "Man the Guns" }
+				has_completed_focus = USA_reestablish_the_gold_standard
+			}
+		}
+		offset = {
+			x = -2
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				OR = {
+					has_completed_focus = USA_continue_the_new_deal
+					has_completed_focus = USA_reestablish_the_gold_standard
+				}
+				OR = {
+					has_completed_focus = USA_limited_intervention
+					has_completed_focus = USA_neutrality_act
+				}
+			}
+		}
 		
 		cost = 10
 
@@ -1448,12 +1675,12 @@ focus_tree = {
 			add_ideas = USA_intervention_in_the_americas
 		}
 	}
-	
+
 	focus = {
 		id = USA_reinforce_monroe_doctrine
 		icon = GFX_goal_generic_positive_trade_relations
 		x = 0
-		y = 1
+		y = 2
 		prerequisite = { focus = USA_intervention_in_the_americas }
 		relative_position_id = USA_intervention_in_the_americas
 		cost = 10
@@ -1463,29 +1690,6 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = USA_reinforce_monroe_doctrine_tt
 			unlock_decision_category_tooltip = USA_intervention_mandate
-			hidden_effect = {
-				CUB = { add_opinion_modifier =  { target = USA modifier = monroe_doctrine_trade } }
-				HAI = { add_opinion_modifier =  { target = USA modifier = monroe_doctrine_trade } }
-				DOM = { add_opinion_modifier =  { target = USA modifier = monroe_doctrine_trade } }
-				GUA = { add_opinion_modifier =  { target = USA modifier = monroe_doctrine_trade } }
-				ELS = { add_opinion_modifier =  { target = USA modifier = monroe_doctrine_trade } }
-				HON = { add_opinion_modifier =  { target = USA modifier = monroe_doctrine_trade } }
-				NIC = { add_opinion_modifier =  { target = USA modifier = monroe_doctrine_trade } }
-				COS = { add_opinion_modifier =  { target = USA modifier = monroe_doctrine_trade } }
-				CAN = { add_opinion_modifier =  { target = USA modifier = monroe_doctrine_trade } }
-				MEX = { add_opinion_modifier =  { target = USA modifier = monroe_doctrine_trade } }
-				COL = { add_opinion_modifier =  { target = USA modifier = monroe_doctrine_trade } }
-				VEN = { add_opinion_modifier =  { target = USA modifier = monroe_doctrine_trade } }
-				ECU = { add_opinion_modifier =  { target = USA modifier = monroe_doctrine_trade } }
-				PRU = { add_opinion_modifier =  { target = USA modifier = monroe_doctrine_trade } }
-				BRA = { add_opinion_modifier =  { target = USA modifier = monroe_doctrine_trade } }
-				BOL = { add_opinion_modifier =  { target = USA modifier = monroe_doctrine_trade } }
-				PAR = { add_opinion_modifier =  { target = USA modifier = monroe_doctrine_trade } }
-				URG = { add_opinion_modifier =  { target = USA modifier = monroe_doctrine_trade } }
-				ARG = { add_opinion_modifier =  { target = USA modifier = monroe_doctrine_trade } }
-				CHL = { add_opinion_modifier =  { target = USA modifier = monroe_doctrine_trade } }
-				"PAN" = { add_opinion_modifier =  { target = USA modifier = monroe_doctrine_trade } }
-			}
 		}
 	}
 
@@ -1493,7 +1697,7 @@ focus_tree = {
 		id = USA_war_plan_gray
 		icon = GFX_goal_generic_more_territorial_claims
 		x = 0
-		y = 2
+		y = 3
 		prerequisite = { focus = USA_reinforce_monroe_doctrine }
 		relative_position_id = USA_intervention_in_the_americas
 		cost = 10
@@ -1518,7 +1722,7 @@ focus_tree = {
 			unlock_decision_tooltip = { decision = USA_execute_war_plan_gray show_effect_tooltip = yes show_modifiers = yes } 
 		}
 	}
-	
+
 	focus = {
 		id = USA_intervention_in_europe
 		icon = GFX_goal_generic_territory_or_war
@@ -1554,7 +1758,6 @@ focus_tree = {
 			}
 		}
 	}
-	 
 	focus = {
 		id = USA_war_plan_silver
 		icon = GFX_focus_attack_italy
@@ -1601,8 +1804,8 @@ focus_tree = {
 		continue_if_invalid = yes
 		available_if_capitulated = yes
 
-		x = 1
-		y = 1
+		x = 0
+		y = 2
 		relative_position_id = USA_intervention_in_europe
 		cost = 10
 		#ai_will_do = {
@@ -1680,7 +1883,7 @@ focus_tree = {
 	focus = {
 		id = USA_intervention_in_asia
 		icon = GFX_goal_generic_major_war
-		x = 4
+		x = 3
 		y = 1
 		prerequisite = { focus = USA_war_plans_division }
 		relative_position_id = USA_war_plans_division
@@ -1914,7 +2117,7 @@ focus_tree = {
 					threat < 0.5
 					has_war = no
 				}
-				congress_medium_support_trigger = yes
+				congress_high_support_trigger = yes
 			}
 			else = {
 				congress_low_support_trigger = yes
@@ -2022,6 +2225,10 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			USA_george_s_patton = {
+				add_skill_level = 1
+			}	
 		}
 	}
 	focus = {
@@ -2092,6 +2299,13 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = USA_army_of_the_united_states
+			custom_effect_tooltip = generic_skip_one_line_tt
+			USA_omar_bradley = {
+				add_skill_level = 1
+			}
+			USA_mark_clark = {
+				add_skill_level = 1
+			}
 		}
 	}
 	focus = {
@@ -2742,6 +2956,10 @@ focus_tree = {
 					}
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			USA_ernest_king = {
+				add_skill_level = 1
+			}
 		}
 	}
 	focus = {
@@ -2813,6 +3031,13 @@ focus_tree = {
 				limit = { has_idea = bureau_of_ordnance_spirit }
 				remove_ideas = bureau_of_ordnance_spirit
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			USA_chester_w_nimitz = {
+				add_skill_level = 1
+			}
+			USA_william_halsey_jr = {
+				add_skill_level = 1
+			}
 		}
 	}
 	
@@ -2862,11 +3087,12 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_doctrine_cost_reduction = {
+
+			add_mastery_bonus = {
 				name = USA_advanced_mahanian_doctrine
-				cost_reduction = 0.5
-				uses = 1
-				category = cat_base_strike
+				bonus = 0.1
+				days = 180
+				grand_doctrine = new_base_strike
 			}
 		}
 	}
@@ -3065,11 +3291,15 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			navy_experience = 25
-			add_doctrine_cost_reduction = {
+			add_mastery = {
+				amount = 50
+				track = screens
+			}
+			add_mastery_bonus = {
 				name = USA_convoy_tactics
-				cost_reduction = 0.35
-				uses = 2
-				category = convoy_defense_tree
+				bonus = 0.1
+				days = 180
+				track = screens
 			}
 		}
 	}

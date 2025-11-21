@@ -96,6 +96,7 @@ IF = {
 	recruit_character = IRQ_ahmed_barzani
 	recruit_character = IRQ_mustafa_barzani
 	recruit_character = IRQ_muhammad_ali_jawad
+	recruit_character = IRQ_maruf_al_rusafi
 
 	IRQ_salah_al_din_al_sabbagh = {
 		set_character_flag = IRQ_golden_square_char
@@ -146,7 +147,7 @@ IF = {
 	set_variable = { IRQ_modifier_army_sub_unit_cavalry_speed_factor = 0 }
 
 	add_dynamic_modifier = {
-		modifier = IRQ_royal_army_modifier
+		modifier = IRQ_royal_army_modifier_IRQ
 	}
 
 	#Variables for Air Force Modifier 
@@ -262,6 +263,26 @@ IF = {
 		complete_national_focus = IRQ_found_southern_steel_plants
 		complete_national_focus = IRQ_modernization
 
+		diplomatic_relation = {
+			country = TUR
+			relation = non_aggression_pact
+			active = yes
+		}
+
+		diplomatic_relation = {
+			country = PER
+			relation = non_aggression_pact
+			active = yes
+		}
+
+		diplomatic_relation = {
+			country = AFG
+			relation = non_aggression_pact
+			active = yes
+		}
+
+		add_dynamic_modifier = { modifier = SSB_saadabad_pact }
+
 		remove_ideas = {
 			IRQ_bakr_sidqi
 			IRQ_ghazi_i
@@ -303,13 +324,7 @@ IF = {
 		gw_artillery = 1
 
 		#doctrines
-		air_superiority = 1
-		grand_battle_plan = 1
-		trench_warfare = 1
-		fleet_in_being = 1
-		battlefleet_concentration = 1
-		convoy_sailing = 1
-
+		#air_superiority = 1
 
 		#electronics
 		electronic_mechanical_engineering = 1
@@ -327,6 +342,11 @@ IF = {
 		dispersed_industry = 1
 		dispersed_industry2 = 1
 	}
+
+set_grand_doctrine = grand_battleplan
+set_grand_doctrine = new_fleet_in_being
+set_grand_doctrine = new_strategic_destruction
+
 	complete_special_project = {
 		project = sp:sp_air_radar
 	}

@@ -3877,11 +3877,17 @@ focus_tree = {
 
 			army_experience = 25
 
+			add_mastery= {
+				amount = 150
+				grand_doctrine = grand_battleplan
+				track = infantry
+			}
+
 			add_doctrine_cost_reduction = {
 				name = ITA_preserve_army_traditions
-				cost_reduction = 0.75
+				cost_reduction = 0.5
 				uses = 1
-				category = cat_grand_battle_plan
+				category = land_doctrine
 			}
 		}
 	}
@@ -4144,11 +4150,19 @@ focus_tree = {
 			custom_effect_tooltip = available_chief_of_army
 			show_ideas_tooltip = ITA_alberto_pariani
 
+
+			add_mastery_bonus = {
+				name = ITA_a_bandits_war
+				bonus = 0.2
+				days = 180
+				grand_doctrine = new_mobile_warfare
+				track = infantry
+			}
 			add_doctrine_cost_reduction = {
 				name = ITA_a_bandits_war
-				cost_reduction = 0.5
-				uses = 2
-				category = cat_mobile_warfare
+				cost_reduction = 0.25
+				uses = 1
+				category = land_doctrine
 			}
 
 			add_tech_bonus = {
@@ -4181,9 +4195,12 @@ focus_tree = {
 					limit = {
 						is_ai = yes
 					}
-					set_technology = {
-						trench_warfare = 0
-						mobile_warfare = 1
+					if = {
+						limit = {
+							has_doctrine = grand_battleplan
+						}
+
+						set_grand_doctrine = new_mobile_warfare
 					}
 				}
 			}
@@ -5744,11 +5761,21 @@ focus_tree = {
 				}
 			}
 			else = {
+
+
+
+				add_mastery_bonus = {
+					name = ITA_intensify_torpedo_manufacturing
+					bonus = 0.1
+					days = 180
+					grand_doctrine = new_convoy_raiding
+					track = submarines
+				}
 				add_doctrine_cost_reduction = {
 					name = ITA_intensify_torpedo_manufacturing
 					cost_reduction = 0.5
-					uses = 2
-					category = cat_trade_interdiction
+					uses = 1
+					category = naval_doctrine
 				}
 			}
 		}
@@ -6688,18 +6715,26 @@ focus_tree = {
 
 			navy_experience = 25
 
+			add_mastery_bonus = {
+				name = ITA_incrociatori_leggeri
+				bonus = 0.2
+				days = 180
+				grand_doctrine = new_convoy_raiding
+				track = screens
+			}
+
 			add_doctrine_cost_reduction = {
 				name = ITA_incrociatori_leggeri
-				cost_reduction = 0.75
-				uses = 2
-				category = cat_trade_interdiction
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
 			}
 
 			add_tech_bonus = {
 				name = ITA_incrociatori_leggeri
 				bonus = 1
 				uses = 1
-				category = cl_tech
+				category = ca_tech
 			}
 
 			#Update NS icon
@@ -6733,11 +6768,20 @@ focus_tree = {
 
 			navy_experience = 25
 
+
+			add_mastery_bonus = {
+				name = ITA_incrociatori_pesanti
+				bonus = 0.2
+				days = 180
+				grand_doctrine = new_fleet_in_being
+				track = capital_ships
+			}
+
 			add_doctrine_cost_reduction = {
 				name = ITA_incrociatori_pesanti
-				cost_reduction = 0.75
-				uses = 2
-				category = cat_fleet_in_being
+				cost_reduction = 0.50
+				uses = 1
+				category = naval_doctrine
 			}
 
 			add_tech_bonus = {
@@ -6828,12 +6872,15 @@ focus_tree = {
 
 		completion_reward = {
 			navy_experience = 15
-			add_doctrine_cost_reduction = {
+
+			add_mastery_bonus = {
 				name = ITA_cruiser_submarines
-				cost_reduction = 0.5
-				uses = 1
-				category = trade_interdiction_tree
+				bonus = 0.2
+				days = 180
+				grand_doctrine = new_convoy_raiding
+				track = submarines
 			}
+			
 
 			add_tech_bonus = {
 				name = ITA_cruiser_submarines
@@ -6884,12 +6931,15 @@ focus_tree = {
 
 		completion_reward = {
 			navy_experience = 15
-			add_doctrine_cost_reduction = {
+
+			add_mastery_bonus = {
 				name = ITA_midget_submarines
-				cost_reduction = 0.5
-				uses = 1
-				category = trade_interdiction_tree
+				bonus = 0.2
+				days = 180
+				grand_doctrine = new_convoy_raiding
+				track = submarines
 			}
+			
 
 			add_tech_bonus = {
 				name = ITA_midget_submarines
@@ -6963,11 +7013,20 @@ focus_tree = {
 
 		completion_reward = {
 			navy_experience = 15
+
+			add_mastery_bonus = {
+				name = ITA_cacciatorpediniere_di_scorta
+				bonus = 0.2
+				days = 180
+				grand_doctrine = new_base_strike
+				track = screens
+			}
+
 			add_doctrine_cost_reduction = {
 				name = ITA_cacciatorpediniere_di_scorta
-				cost_reduction = 0.50
-				uses = 2
-				category = convoy_defense_tree
+				cost_reduction = 0.25
+				uses = 1
+				category = naval_doctrine
 			}
 
 			add_tech_bonus = {
@@ -7012,7 +7071,7 @@ focus_tree = {
 					create_equipment_variant = {
 						name = "Comandanti Medaglie d'Oro Class"
 						type = ship_hull_light_3
-						name_group = ITA_DD_HISTORICAL #TODO_Manu: Name List
+						name_group = ITA_DD_HISTORICAL
 						parent_version = 0
 						allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
 						modules = {
@@ -7255,11 +7314,19 @@ focus_tree = {
 
 		completion_reward = {
 			navy_experience = 15
+
+			add_mastery_bonus = {
+				name = ITA_navi_da_battaglia
+				bonus = 0.2
+				days = 180
+				grand_doctrine = new_fleet_in_being
+				track = capital_ships
+			}
 			add_doctrine_cost_reduction = {
 				name = ITA_navi_da_battaglia
-				cost_reduction = 0.50
-				uses = 2
-				category = fleet_in_being_tree
+				cost_reduction = 0.25
+				uses = 1
+				category = naval_doctrine
 			}
 
 			add_tech_bonus = {
@@ -10231,10 +10298,6 @@ focus_tree = {
 		relative_position_id = ITA_triumph_in_africa_bba
 		cost = 5
 		available = {
-			NOT = {
-				has_completed_focus = ITA_unite_the_opposition
-				has_completed_focus = ITA_defy_the_duce
-			}
 		}
 
 		search_filters = {FOCUS_FILTER_POLITICAL}
@@ -10656,12 +10719,15 @@ focus_tree = {
 				uses = 1
 				category = ss_tech
 			}
-			add_doctrine_cost_reduction = {
+
+			add_mastery_bonus = {
 				name = ITA_sea_wolves_bba
-				cost_reduction = 0.5
-				uses = 2
-				category = submarine_doctrine
+				bonus = 0.2
+				days = 240
+				grand_doctrine = new_convoy_raiding
+				track = submarines
 			}
+
 		}
 	}
 
@@ -10996,51 +11062,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = ITA_demand_ticino
-		icon = GFX_focus_attack_switzerland
-		prerequisite = { 
-			focus = ITA_war_with_france
-			focus = ITA_request_control_of_french_territories 
-		}
-
-		x = -1
-		y = 1
-		relative_position_id = ITA_war_with_france
-		cost = 10
-		available = {
-
-			846 = {
-				is_owned_and_controlled_by = SWI
-			}
-			is_subject = no
-			159 = { 
-				is_controlled_by = ITA
-			}
-			158 = {
-				is_controlled_by = ITA
-			}
-			735 = {
-				is_controlled_by = ITA
-			}
-		}
-
-		will_lead_to_war_with = SWI
-
-		search_filters = {FOCUS_FILTER_ANNEXATION}
-
-		completion_reward = { 
-
-			SWI = {
-				country_event = {
-				    id = BBA_italy_interaction_events.1
-				    days = 2
-				    random = 6
-				}
-			}
-
-		}
-	}
 
 	focus = {
 		id = ITA_war_with_greece

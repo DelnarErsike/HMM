@@ -70,6 +70,14 @@ focus_tree = {
 			add = 100
 			tag = AUS
 		}
+		modifier = {
+			add = 100
+			tag = POR
+		}
+		modifier = {
+			add = 100
+			tag = TUR
+		}
 	}
 	default = no
 }

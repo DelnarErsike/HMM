@@ -82,6 +82,15 @@ technologies = {
 				factor = 4
 				date > "1939.1.1"
 			}
+
+			modifier = {
+				factor = 6
+				original_tag = CHI
+				NOT = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+			}
+
 		}
 	}
 
@@ -140,6 +149,15 @@ technologies = {
 				factor = 10
 				date > "1940.1.1"
 			}
+
+			modifier = {
+				factor = 6
+				original_tag = CHI
+				NOT = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+			}
+			
 		}
 
 		on_research_complete = {
@@ -156,6 +174,20 @@ technologies = {
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_PROJECT
 				PROJECT = sp_land_military_engineering_vehicles
+			}
+
+			if = {
+				limit = {
+					original_tag = AFG
+					has_dlc = "Graveyard of Empires"
+					has_completed_focus = AFG_expand_quami_template
+				}
+				add_units_to_division_template = {
+					template_name = "Pashtun Levy" 
+					support = {
+						engineer = 0 
+					}
+				}
 			}
 		}
 	}
@@ -700,6 +732,22 @@ technologies = {
 				has_war = yes
 			}
 		}
+
+		on_research_complete = {
+			if = {
+				limit = {
+					original_tag = AFG
+					has_dlc = "Graveyard of Empires"
+					has_completed_focus = AFG_expand_quami_template
+				}
+				add_units_to_division_template = {
+					template_name = "Pashtun Levy" 
+					support = {
+						military_police = 0 
+					}
+				}
+			}
+		}
 	}
 
 	tech_military_police2 = {
@@ -1096,14 +1144,26 @@ technologies = {
 				date > "1939.1.1"
 			}
 		}
+
+		on_research_complete = {
+			if = {
+				limit = {
+					original_tag = AFG
+					has_dlc = "Graveyard of Empires"
+					has_completed_focus = AFG_expand_quami_template
+				}
+				add_units_to_division_template = {
+					template_name = "Pashtun Levy" 
+					support = {
+						field_hospital = 0 
+					}
+				}
+			}
+		}
 	}
 
 	tech_field_hospital2 = {
-
-		allow = {
-			always = no
-		}
-
+		always = no
 		field_hospital = {
 			casualty_trickleback = 0.10
 			experience_loss_factor = -0.10
@@ -1753,7 +1813,7 @@ technologies = {
 		enable_equipments = {
 			railway_gun_equipment_1
 		}
-
+		always = no
 		enable_equipment_modules = {
 			lc_hull_mounted_railway_gun #Module for Land Cruiser
 		}
@@ -1764,12 +1824,7 @@ technologies = {
 				PROJECT = sp_land_super_heavy_railway_gun
 			}
 		}
-		allow = {
-			has_game_rule = {
-				rule = railway_gun
-				option = on
-			}
-		}
+
 		research_cost = 1.5
 		start_year = 1936
 		folder = {
@@ -1917,16 +1972,11 @@ technologies = {
 
 	sp_armored_engineer_tech = {
 		allow = {
-			has_game_rule = {
-				rule = urban_assault_vechile
-				option = on
-			}
-		}
-		allow = {
 	 		ROOT = {
 				is_special_project_completed = sp:sp_land_military_engineering_vehicles
 			}
 		}
+
 		is_special_project_tech = yes
 
 		research_cost = 2.0

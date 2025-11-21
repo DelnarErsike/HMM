@@ -12,12 +12,12 @@ state={
 		7448 7584 10896 12248 12877 
 	}
 	history={
-
+		owner = WST
 		buildings = {
 			infrastructure = 1 
 		}
-		owner = PER
-		add_core_of = PER
+		add_core_of = WST
+		
 		victory_points = {
 			12248 1
 		}
