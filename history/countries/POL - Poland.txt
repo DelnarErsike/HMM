@@ -29,7 +29,7 @@ if = {
 	}
 }
 
-set_research_slots = 0 #optimization
+set_research_slots = 3
 
 # Starting tech
 set_technology = {
@@ -42,11 +42,12 @@ set_technology = {
 	tech_recon = 1
 	gw_artillery = 1
 	interwar_antiair = 1
-	trench_warfare = 1
 	fuel_silos = 1
 	synth_oil_experiments = 1
 	basic_train = 1
 }
+
+set_grand_doctrine = grand_battleplan
 
 if = {
 	limit = {
@@ -103,6 +104,7 @@ if = {
 	add_ideas = {
 		uncontrolled_exports
 		POL_april_constitution_1
+		POL_looming_peasants_strike
 		POL_sanation_left_opposition_1
 		POL_sanation_right_opposition_1
 	}
@@ -214,12 +216,7 @@ if = {
 		interwar_artillery = 1
 
 		#doctrines
-		air_superiority = 1
-		grand_battle_plan = 1
-		trench_warfare = 1
-		fleet_in_being = 1
-		battlefleet_concentration = 1
-		convoy_sailing = 1
+		#air_superiority = 1
 
 		#electronics
 		electronic_mechanical_engineering = 1
@@ -244,6 +241,11 @@ if = {
 		concentrated_industry3 = 1
 		concentrated_industry4 = 1
 	}
+
+set_grand_doctrine = grand_battleplan
+set_grand_doctrine = new_fleet_in_being
+set_grand_doctrine = new_strategic_destruction
+
 	complete_special_project = {
 		project = sp:sp_air_radar
 	}
@@ -330,7 +332,7 @@ if = {
 				fixed_main_weapon_slot = bomb_locks
 				fixed_auxiliary_weapon_slot_1 = light_mg_4x
 				engine_type_slot = engine_2_1x
-				special_type_slot_1 = lmg_defense_turret_2x
+				special_type_slot_1 = lmg_defense_turret
 			}
 		}
 	}
@@ -361,9 +363,90 @@ set_popularities = {
 	}
 }
 
-
+recruit_character = POL_ignacy_moscicki
+recruit_character = POL_wladyslaw_sikorski
+recruit_character = POL_boleslaw_wieniawa_glugoszowski
+recruit_character = POL_wladyslaw_gomulka
+recruit_character = POL_maria_koszutska
+recruit_character = POL_stanislaw_mikolajczyk
+recruit_character = POL_wincenty_witos
+recruit_character = POL_wladyslaw_raczkiewicz
+recruit_character = POL_boleslaw_piasecki
+recruit_character = POL_edward_rydzsmigly
+recruit_character = POL_wladyslaw_bortnowski
+recruit_character = POL_stanislaw_kopanski
+recruit_character = POL_marian_kukiel
+recruit_character = POL_jozef_haller
+recruit_character = POL_stanislaw_sosabowski
+recruit_character = POL_lucjan_zeligowski
+recruit_character = POL_kazimierz_sosnkowski
+recruit_character = POL_tadeusz_kutrzeba
+recruit_character = POL_wladyslaw_anders
+recruit_character = POL_roman_abraham
+recruit_character = POL_wincenty_kowalski
+recruit_character = POL_stefan_frankowski
+recruit_character = POL_karol_korytowski
+recruit_character = POL_jozef_unrug
+recruit_character = POL_xawery_czernicki
+recruit_character = POL_jozef_zajac
+recruit_character = POL_ludomil_rayski
+recruit_character = POL_stanislaw_pawluc
+recruit_character = POL_stanislav_maczek
+recruit_character = POL_wladyslaw_kalkus
+recruit_character = POL_kazimierz_switalski
+recruit_character = POL_wanda_wasilewska
+recruit_character = POL_tomislaw_lupaszko
+recruit_character = POL_zygmunt_buhusz_szysko
+recruit_character = POL_roman_dmowski
+recruit_character = POL_witold_pilecki
+recruit_character = POL_irena_anders
+recruit_character = POL_mieczyslaw_michalowicz
+recruit_character = POL_boleslaw_bierut
+recruit_character = POL_edward_osobka_morawski
+recruit_character = POL_jozef_beck
+recruit_character = POL_zdzislaw_lubomirski
+recruit_character = POL_aleksander_kakowski
+recruit_character = POL_stanislaw_radkiewicz
+recruit_character = POL_jan_kowalewski
+recruit_character = POL_eugeniusz_kwiatkowiski
+recruit_character = POL_marian_rejewski
+recruit_character = POL_jerzy_rutkowski
 recruit_character = POL_karl_albrecht
+recruit_character = POL_pavel_bermondt_avalov
 recruit_character = POL_anna_andersson
+recruit_character = POL_friedrich_christian
+recruit_character = POL_rudinger_von_der_goltz
+recruit_character = POL_vladislav_korchits
+recruit_character = POL_wojtek
+
+if = {
+	limit = {
+		OR = {
+			has_dlc = "No Step Back"
+			has_dlc = "Poland: United and Ready"
+		}
+	}
+	recruit_character = POL_walery_slawek
+	recruit_character = POL_jan_mosdorf
+	recruit_character = POL_tadeusz_bielecki
+	recruit_character = POL_joachim_stefan_bartoszewicz
+	recruit_character = POL_stanislaw_wojciechowski
+}
+
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	recruit_character = POL_henryk_floyar_rajchman
+	recruit_character = POL_sejmik_regency
+}
+if = {
+	limit = {
+		has_dlc = "Gotterdammerung"
+	}
+	recruit_character = POL_jan_zumbach
+}
+
 if = {
 	limit = {
 		has_dlc = "La Resistance"
@@ -429,15 +512,35 @@ if = {
 			special_type_slot_1 = empty
 		}
 	}
-	create_equipment_variant = {
-		name = "PZL P.23"
-		type = small_plane_cas_airframe_1
-		modules = {
-			fixed_main_weapon_slot = bomb_locks
-			engine_type_slot = engine_1_1x
-			special_type_slot_1 = lmg_defense_turret
+	if = {
+		limit = {
+			has_dlc = "Poland: United and Ready"
 		}
+		create_equipment_variant = {
+			name = "PZL P.23"
+			type = small_plane_cas_airframe_1
+			modules = {
+				fixed_main_weapon_slot = bomb_locks
+				engine_type_slot = engine_1_1x
+				special_type_slot_1 = lmg_defense_turret
+			}
+			icon = "GFX_POL_CAS1_medium"
+		}		
 	}
+	if = {
+		limit = {
+			NOT = { has_dlc = "Poland: United and Ready" }
+		}
+		create_equipment_variant = {
+			name = "PZL P.23"
+			type = small_plane_cas_airframe_1
+			modules = {
+				fixed_main_weapon_slot = bomb_locks
+				engine_type_slot = engine_1_1x
+				special_type_slot_1 = lmg_defense_turret
+			}
+		}		
+	}	
 }
 
 ### VARIANTS ###
@@ -500,7 +603,7 @@ if = {
 			}
 			upgrades = {
 				tank_nsb_armor_upgrade = 2
-				tank_nsb_engine_upgrade = 2
+				tank_nsb_engine_upgrade = 3
 			}
 			icon = "GFX_POL_improved_light_tank_medium"
 		}

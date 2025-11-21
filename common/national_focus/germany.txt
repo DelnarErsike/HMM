@@ -137,7 +137,13 @@ focus_tree = {
 				option = Germany_wirtschaftswunder
 			}
 		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER }
+
 		completion_reward = {
+			add_ideas = civilian_economy
+
+			custom_effect_tooltip = generic_skip_one_line_tt
 
 			add_stability = -0.1
 			add_popularity = {
@@ -229,7 +235,7 @@ focus_tree = {
 
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_consumer_goods_factor = -0.15
+				GER_industrial_consumer_goods_factor = -0.2
 				tooltip = consumer_goods_factor_tt
 			}
 		}
@@ -824,7 +830,7 @@ focus_tree = {
 
 			custom_effect_tooltip = GER_replace_recovering_economy_with_wirtschaftswunder_tt
 			add_to_variable = { 
-				GER_industrial_consumer_goods_factor = -0.2
+				GER_industrial_consumer_goods_factor = -0.15
 				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = { 
@@ -1141,7 +1147,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			51 = {
 				add_building_construction = {
-					type =  dam
+					type = dam
 					level = 1
 					instant_build = yes
 					province = {
@@ -1680,6 +1686,10 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
+			custom_effect_tooltip = expand_german_coal_mines_tt
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			custom_effect_tooltip = GER_improve_trade_relations_tt
 			every_other_country = {
 				limit = {
@@ -1875,59 +1885,35 @@ focus_tree = {
 
 		bypass = {
 			OR = {
-				has_resources_in_country = {
+				has_resources_in_collection = {
+					collection = collection:country_and_all_subjects
 					resource = steel
 					amount > 799
 					extracted = yes
 				}
-				any_subject_country = {
-					has_resources_in_country = {
-						resource = steel
-						amount > 799
-						extracted = yes
-					}
-				}
 			}
 			OR = {
-				has_resources_in_country = {
+				has_resources_in_collection = {
+					collection = collection:country_and_all_subjects
 					resource = aluminium
 					amount > 499
 					extracted = yes
 				}
-				any_subject_country = {
-					has_resources_in_country = {
-						resource = aluminium
-						amount > 499
-						extracted = yes
-					}
-				}
 			}
 			OR = {
-				has_resources_in_country = {
+				has_resources_in_collection = {
+					collection = collection:country_and_all_subjects
 					resource = tungsten
 					amount > 99
 					extracted = yes
 				}
-				any_subject_country = {
-					has_resources_in_country = {
-						resource = tungsten
-						amount > 99
-						extracted = yes
-					}
-				}
 			}
 			OR = {
-				has_resources_in_country = {
+				has_resources_in_collection = {
+					collection = collection:country_and_all_subjects
 					resource = chromium
 					amount > 99
 					extracted = yes
-				}
-				any_subject_country = {
-					has_resources_in_country = {
-						resource = chromium
-						amount > 99
-						extracted = yes
-					}
 				}
 			}
 		}
@@ -2155,19 +2141,11 @@ focus_tree = {
 		continue_if_invalid = yes
 
 		bypass = {
-			OR = {
-				has_resources_in_country = {
+			has_resources_in_collection = {
+				collection = collection:country_and_all_subjects
 					resource = oil
 					amount > 149
 					extracted = yes
-				}
-				any_subject_country = {
-					has_resources_in_country = {
-						resource = oil
-						amount > 149
-						extracted = yes
-					}
-				}
 			}
 		}
 
@@ -2250,19 +2228,11 @@ focus_tree = {
 		continue_if_invalid = yes
 
 		bypass = {
-			OR = {
-				has_resources_in_country = {
+			has_resources_in_collection = {
+				collection = collection:country_and_all_subjects
 					resource = rubber
 					amount > 99
 					extracted = yes
-				}
-				any_subject_country = {
-					has_resources_in_country = {
-						resource = rubber
-						amount > 99
-						extracted = yes
-					}
-				}
 			}
 		}
 
@@ -2338,50 +2308,26 @@ focus_tree = {
 			all_core_state = {
 				is_fully_controlled_by = ROOT
 			}
-			OR = {
-				has_resources_in_country = {
+			has_resources_in_collection = {
+				collection = collection:country_and_all_subjects
 					resource = steel
 					amount > 799 #This needs to correspond to the Bypass values in the previous focuses
 					extracted = yes
 				}
-				any_subject_country = {
-					has_resources_in_country = {
-						resource = steel
-						amount > 799 #This needs to correspond to the Bypass values in the previous focuses
-						extracted = yes
-					}
-				}
-			}
-			OR = {
-				has_resources_in_country = {
+			has_resources_in_collection = {
+				collection = collection:country_and_all_subjects
 					resource = aluminium
 					amount > 199 #This needs to correspond to the Bypass values in the previous focuses
 					extracted = yes
 				}
-				any_subject_country = {
-					has_resources_in_country = {
-						resource = aluminium
-						amount > 199 #This needs to correspond to the Bypass values in the previous focuses
-						extracted = yes
-					}
-				}
-			}
-			OR = {
-				has_resources_in_country = {
+			has_resources_in_collection = {
+				collection = collection:country_and_all_subjects
 					resource = oil
 					amount > 149 #This needs to correspond to the Bypass values in the previous focuses
 					extracted = yes
 				}
-				any_subject_country = {
-					has_resources_in_country = {
-						resource = oil
-						amount > 149 #This needs to correspond to the Bypass values in the previous focuses
-						extracted = yes
-					}
-				}
-			}
-			OR = {
-				has_resources_in_country = {
+			has_resources_in_collection = {
+				collection = collection:country_and_all_subjects
 					resource = tungsten
 					amount > 99 #This needs to correspond to the Bypass values in the previous focuses
 					extracted = yes
@@ -2400,18 +2346,16 @@ focus_tree = {
 					amount > 99 #This needs to correspond to the Bypass values in the previous focuses
 					extracted = yes
 				}
-				any_subject_country = {
-					has_resources_in_country = {
-						resource = chromium
+			has_resources_in_collection = {
+				collection = collection:country_and_all_subjects
+				resource = rubber
 						amount > 99 #This needs to correspond to the Bypass values in the previous focuses
 						extracted = yes
 					}
-				}
-			}
-			OR = {
-				has_resources_in_country = {
-					resource = rubber
-					amount > 49 #This needs to correspond to the Bypass values in the previous focuses
+			has_resources_in_collection = {
+				collection = collection:country_and_all_subjects
+				resource = coal
+				amount > 499 #This needs to correspond to the Bypass values in the previous focuses
 					extracted = yes
 				}
 				any_subject_country = {
@@ -2422,7 +2366,6 @@ focus_tree = {
 					}
 				}
 			}
-		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -3003,11 +2946,16 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
+			add_mastery = {
+				amount = 150
+				track = infantry
+			}
+
 			add_doctrine_cost_reduction = {
 				name = GER_the_prussian_legacy
-				cost_reduction = 0.5
+				cost_reduction = 0.25
 				uses = 2
-				category = cat_grand_battle_plan
+				category = land_doctrine
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -3015,6 +2963,19 @@ focus_tree = {
 			custom_effect_tooltip = GER_unlock_operational_planning_bewegungskrieg_tt
 			effect_tooltip = { #This is done for tooltip purposes
 				add_dynamic_modifier = { modifier = GER_bewegungskrieg_modifier }
+			}
+			IF = {
+				limit = { 
+					has_dlc = "No Compromise, No Surrender"
+					is_faction_leader = yes
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				add_faction_goal_slot = {
+					category  = short_term # options: short_term, medium_term, long_term 
+					value = 1 
+				}
+				add_faction_goal = faction_goal_an_infantry_army
+				
 			}
 		}
 	}
@@ -4061,8 +4022,8 @@ focus_tree = {
 		completion_reward = {
 			GER_modify_army_modifier = yes
 			add_to_variable = { 
-				GER_military_supply_factor = 0.15
-				tooltip = supply_factor_tt
+				GER_military_supply_consumption_factor = -0.15
+				tooltip = supply_consumption_factor_tt
 			}
 			add_to_variable = { 
 				GER_military_army_fuel_consumption_factor = -0.1
@@ -4335,11 +4296,26 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
+			add_mastery_bonus = {
+				name = GER_adopt_new_panzer_doctrine
+				bonus = 0.1
+				days = 240
+				track = armor
+				grand_doctrine = new_mobile_warfare
+			}
+			add_mastery_bonus = {
+				name = GER_adopt_new_panzer_doctrine
+				bonus = 0.1
+				days = 240
+				track = infantry
+				grand_doctrine = new_mobile_warfare
+			}
+
 			add_doctrine_cost_reduction = {
 				name = GER_adopt_new_panzer_doctrine
 				cost_reduction = 0.5
 				uses = 1
-				category = cat_mobile_warfare
+				category = land_doctrine
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -4356,6 +4332,18 @@ focus_tree = {
 			custom_effect_tooltip = GER_unlock_operational_planning_blitzkrieg_tt
 			effect_tooltip = { #This is done for tooltip purposes
 				add_dynamic_modifier = { modifier = GER_blitzkrieg_modifier }
+			}
+			IF = {
+				limit = { 
+					has_dlc = "No Compromise, No Surrender"
+					is_faction_leader = yes
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				add_faction_goal_slot = {
+					category  = short_term # options: short_term, medium_term, long_term 
+					value = 1 
+				}
+				add_faction_goal = faction_goal_an_armored_fist
 			}
 		}
 	}
@@ -4955,11 +4943,18 @@ focus_tree = {
 
 		completion_reward = {
 
+			add_mastery_bonus = {
+				name = GER_dive_bombers
+				bonus = 0.2
+				days = 180
+				track = strike_aircraft
+				grand_doctrine = new_battlefield_support
+			}
 			add_doctrine_cost_reduction = {
 				name = GER_dive_bombers
 				cost_reduction = 0.25
 				uses = 1
-				category = battlefield_support_tree
+				category = air_doctrine
 			}
 			add_tech_bonus = {
 				name = GER_dive_bombers
@@ -5088,11 +5083,19 @@ focus_tree = {
 			custom_effect_tooltip = available_military_high_command
 			show_ideas_tooltip = erhard_milch
 
+			add_mastery_bonus = {
+				name = GER_tactical_bombers
+				bonus = 0.2
+				days = 180
+				grand_doctrine = new_operational_integrity
+				track = medium_aircraft
+			}
+
 			add_doctrine_cost_reduction = {
 				name = GER_tactical_bombers
 				cost_reduction = 0.25
 				uses = 2
-				category = operational_integrity_tree
+				category = air_doctrine
 			}
 			add_tech_bonus = {
 				name = GER_tactical_bombers
@@ -5210,7 +5213,6 @@ focus_tree = {
 		relative_position_id = GER_aeronautical_research_institute
 		cost = 5
 		available = {
-			always = no
 		}
 
 		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
@@ -5221,11 +5223,18 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
+			add_mastery_bonus = {
+				name = GER_uralbomber_program
+				bonus = 0.2
+				days = 180
+				grand_doctrine = new_strategic_destruction
+				track = heavy_aircraft
+			}
 			add_doctrine_cost_reduction = {
 				name = GER_uralbomber_program
 				cost_reduction = 0.25
 				uses = 2
-				category = strategic_destruction_tree
+				category = air_doctrine
 			}
 			add_tech_bonus = {
 				name = GER_uralbomber_program
@@ -5700,7 +5709,7 @@ focus_tree = {
 		relative_position_id = GER_form_the_jagdwaffe
 		cost = 5
 		available = {
-			is_special_project_completed = sp:sp_air_radar
+			has_tech = improved_radio
 		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
@@ -5789,7 +5798,7 @@ focus_tree = {
 		cost = 5
 		available = {
 			has_war_with_major = yes
-			has_tech = cavity_magnatron
+			is_special_project_completed = sp:sp_air_radar
 			custom_trigger_tooltip = {
 				tooltip = GER_controls_atlantic_coast_brittany_finnmark_tt
 				OR = {
@@ -6340,12 +6349,24 @@ focus_tree = {
 
 		complete_tooltip = {
 		}
+		
+
+
 		completion_reward = {
+
+			add_mastery_bonus = {
+				name = GER_plan_z
+				bonus = 0.2
+				days = 180
+				grand_doctrine = new_fleet_in_being
+				
+			}
+
 			add_doctrine_cost_reduction = {
 				name = GER_plan_z
 				cost_reduction = 0.25
-				uses = 3
-				category = fleet_in_being_tree
+				uses = 1
+				category = naval_doctrine
 			}
 
 			if = {
@@ -6687,8 +6708,17 @@ focus_tree = {
 		relative_position_id = GER_expand_kriegsmarinewerft
 		cost = 5
 		available = {
+			IF = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
 			NOT = { has_completed_focus = GER_high_seas_fleet }
 			has_tech = early_ship_hull_carrier
+			}
+			ELSE = {
+				NOT = { has_completed_focus = GER_high_seas_fleet }
+				has_tech = early_carrier
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MILITARY_CHARACTER }
@@ -6895,8 +6925,17 @@ focus_tree = {
 		relative_position_id = GER_expand_kriegsmarinewerft
 		cost = 10
 		available = {
+			IF = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
 			NOT = { has_completed_focus = GER_high_seas_fleet }
 			has_tech = improved_ship_hull_heavy
+			}
+			ELSE = {
+				NOT = { has_completed_focus = GER_high_seas_fleet }
+				has_tech = improved_battleship
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_INDUSTRY }
@@ -7466,11 +7505,20 @@ focus_tree = {
 		complete_tooltip = {
 		}
 		completion_reward = {
+
+			add_mastery_bonus = {
+				name = GER_trade_interdiction
+				bonus = 0.2
+				days = 180
+				grand_doctrine = new_convoy_raiding
+				
+			}
+
 			add_doctrine_cost_reduction = {
 				name = GER_trade_interdiction
 				cost_reduction = 0.25
-				uses = 2
-				category = trade_interdiction_tree	
+				uses = 1
+				category = naval_doctrine	
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -7529,7 +7577,7 @@ focus_tree = {
 				name = GER_cruiser_warfare
 				bonus = 0.5
 				uses = 1
-				category = cl_tech
+				category = ca_tech
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -7711,12 +7759,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MILITARY_CHARACTER }
 
 		completion_reward = {
-			add_doctrine_cost_reduction = {
+			
+			add_mastery_bonus = {
 				name = GER_wolfpack_tactics
-				cost_reduction = 0.25
-				uses = 1
-				category = trade_interdiction_tree	
+				bonus = 0.1
+				days = 240
+				grand_doctrine = new_convoy_raiding
+				track = submarines
 			}
+			
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -7968,12 +8019,17 @@ focus_tree = {
 					NOT = { has_trait = blue_water_expert }
 				}
 				add_trait = { trait = blue_water_expert }
-			}
+				ROOT = {
 			random_navy_leader = {
 				limit = {
-					NOT = { has_trait = blue_water_expert }
+							NOT = {
+								is_character = PREV.PREV
+								has_trait = blue_water_expert
+							}
 				}
 				add_trait = { trait = blue_water_expert }
+					}
+				}
 			}
 
 			add_ideas = GER_seeherrschaft_ns

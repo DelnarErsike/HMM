@@ -23,7 +23,6 @@ is_playable_country = {
 		tag = SOV
 		tag = PHI
 		tag = IRQ
-		tag = PER
 	}
 }
 
@@ -48,7 +47,6 @@ allies = {
 		tag = POL
 		tag = DEN
 		tag = PHI
-		tag = PER
 	}
 }
 
@@ -115,7 +113,9 @@ ai_annex = {
 		tag = EST
 		tag = AUS
 		tag = CZE
-		tag = COG	
+		tag = COG
+		tag = MON
+		tag = TAN	
 	}
 }
 ai_rk = {
@@ -149,8 +149,8 @@ ai_rk = {
 ai_black = {
 	OR = {
 		tag = WST
-		tag = TUM
-		tag = CHO
+		tag = TUR
+		tag = POR
 		tag = SWE
 	}
 }

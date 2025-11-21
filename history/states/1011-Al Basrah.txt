@@ -1,14 +1,19 @@
 state = {
 	id = 1011
 	name = "STATE_1011"
+
+	resources = {
+		steel = 4
+		aluminium = 7
+	}
 	
 	state_category = town
 	manpower = 980164
 
 	history = {
 
-		owner = IRQ
-		add_core_of = IRQ
+		owner = ENG
+		add_core_of = WST
 
 		victory_points = {
 			2089 5 # Basrah

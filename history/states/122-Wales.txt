@@ -8,6 +8,7 @@ state= {
 	resources={
 		steel=11 # was: 16
 		aluminium=3 # was: 4
+		coal = 55 #initial distribution
 	}
 
 	history=
@@ -28,7 +29,7 @@ state= {
 			}
 		}
 		add_core_of = ENG
-		add_core_of = WST
+		
 	}
 
 	provinces=

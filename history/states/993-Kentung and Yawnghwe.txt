@@ -7,10 +7,14 @@ state = {
 	
 	history = {
 		owner = ENG
-		add_core_of = WST
+		add_core_of = BRM
 
 		buildings = {
 			infrastructure = 0
+		}
+
+		victory_points = {
+			7909 1 # Kyaingtong
 		}
 	}
 
