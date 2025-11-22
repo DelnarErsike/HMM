@@ -72,10 +72,6 @@ operations = {
                         target = ETH
                         transfer_troops = no
                     }
-                    annex_country = {
-                        target = AFA
-                        transfer_troops = no
-                    }
                     complete_national_focus = ITA_solid_progress 
 
                 }

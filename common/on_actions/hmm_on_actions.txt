@@ -673,55 +673,69 @@ on_actions = {
 	}
 	on_weekly = {
 		effect = {
-			if = {
-				limit = { is_ai = no }
-			}
+			limit = {
+					is_playable_country = yes
+					NOT = {
+						OR = {
+							has_war = yes
+							AND = {
+								tag = SPR
+								any_country = {
+									has_volunteers_amount_from = {
+										tag = SPR
+										count > 0
+									} 
+								}	
+							}
+						}
+					}
+				}
 			add_mastery = {
-				amount = 25
+				amount = 7
 				track = infantry
 			}
 			add_mastery = {
-				amount = 25
+				amount = 7
 				track = combat_support
 			}
 			add_mastery = {
-				amount = 25
+				amount = 7
 				track = armor
 			}
 			add_mastery = {
-				amount = 25
+				amount = 7
 				track = operations
 			}
 			add_mastery = {
-				amount = 25
+				amount = 7
 				track = capital_ships
 			}
 			add_mastery = {
-				amount = 25
+				amount = 7
 				track = carriers
 			}
 			add_mastery = {
-				amount = 25
+				amount = 7
 				track = screens
 			}
 			add_mastery = {
-				amount = 25
+				amount = 7
 				track = submarines
 			}
 			add_mastery = {
-				amount = 25
+				amount = 7
 				track = fighter_aircraft
 			}
 			add_mastery = {
-				amount = 25
+				amount = 7
 				track = strike_aircraft
 			}
 			add_mastery = {
-				amount = 25
+				amount = 7
 				track = medium_aircraft
 			}
 			add_mastery = {
-				amount = 25
+				amount = 7
 				track = heavy_aircraft
 			}
 		}
