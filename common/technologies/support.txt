@@ -1163,7 +1163,9 @@ technologies = {
 	}
 
 	tech_field_hospital2 = {
-		always = no
+		allow = {
+			always = no
+		}
 		field_hospital = {
 			casualty_trickleback = 0.10
 			experience_loss_factor = -0.10
