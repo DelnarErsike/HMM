@@ -204,3 +204,7 @@ NDefines_Graphics.NMapMode.NAVAL_REGION_TRANSPARENCY_RATIO_MIN = 0										-- M
 NDefines_Graphics.NMapMode.NAVAL_REGION_TRANSPARENCY_RANGE = 0									-- The range of naval dominance to be rendered on the strategic navy region map
 NDefines_Graphics.NMapMode.NAVAL_DOMINANCE_TREND_BAR_HIDE_RATIO = 0	
 -------------------------------------------------------------------------------------------
+NDefines.NNavy.DOMINANCE_PER_SHIP_PER_RANGE_NEUTRAL = 10					-- ship range where there is no penalty nor bonus to naval dominance, below or above this will be scaled accordingly with penalty or bonus, min value is 0
+NDefines.NNavy.DOMINANCE_PER_SHIP_PER_SPEED_NEUTRAL = 2						-- ship speed where there is no penalty nor bonus to naval dominance, below or above this will be scaled accordingly with penalty or bonus, min value is 0
+NDefines.NNavy.DOMINANCE_PER_SHIP_PER_CARRIER_SIZE = 1						-- bonus to dominance based on the carrier size - e.g. regular carrier hangar has carrier_size of 2, so it would be a bonus of 2 * DOMINANCE_PER_SHIP_PER_CARRIER_SIZE, min value is 0
+NDefines.NNavy.DOMINANCE_PER_SHIP_PER_HEAVY_GUN_ATTACK = 1					-- bonus to dominance based on the heavy attack, min value is 0
