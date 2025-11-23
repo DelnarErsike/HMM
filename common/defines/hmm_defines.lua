@@ -135,7 +135,7 @@ NDefines.NTrade.MAX_MONTH_TRADE_FACTOR = 0				-- This is the maximum bonus that 
 NDefines.NTrade.DISTANCE_TRADE_FACTOR = 0				-- Trade factor is modified by distance times this
 NDefines.NTrade.RELATION_TRADE_FACTOR = 0				-- Trade factor is modified by Opinion value times this
 NDefines.NBuildings.OWNER_CHANGE_EXTRA_SHARED_SLOTS_FACTOR = 1.0 -- You get all the factories in a territory when you annex it
-
+NDefines.NAir.STRATEGIC_BOMBING_RAILWAY_PRIORITY_SCALE = 0					-- The scale of extra priority assigned to railway for strategic bombing
 NDefines.NSupply.RAILWAY_FLOW_PENALTY_PER_DAMAGED = 4.9
 NDefines.NAir.AIR_WING_BOMB_DAMAGE_FACTOR = 0.5 --Vanilla 2
 NDefines.NIndustrialOrganisation.DESIGN_TEAM_CHANGE_XP_COST = 0
