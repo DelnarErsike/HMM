@@ -199,4 +199,8 @@ NDefines_Graphics.NGraphics.DRAW_SHADOWS_CUTOFF = 0
 NDefines_Graphics.NGraphics.DRAW_SHADOWS_FADE_LENGTH = 0
 NDefines_Graphics.NGraphics.DRAW_FOW_CUTOFF = 0
 NDefines_Graphics.NGraphics.DRAW_FOW_FADE_LENGTH = 0
+NDefines_Graphics.NMapMode.NAVAL_REGION_TRANSPARENCY_RATIO_MAX = 0										-- Maximum transparency ratio for the strategic navy region map
+NDefines_Graphics.NMapMode.NAVAL_REGION_TRANSPARENCY_RATIO_MIN = 0										-- Minimum transparency ratio for the strategic navy region map
+NDefines_Graphics.NMapMode.NAVAL_REGION_TRANSPARENCY_RANGE = 0									-- The range of naval dominance to be rendered on the strategic navy region map
+NDefines_Graphics.NMapMode.NAVAL_DOMINANCE_TREND_BAR_HIDE_RATIO = 0	
 -------------------------------------------------------------------------------------------
