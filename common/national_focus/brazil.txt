@@ -1182,7 +1182,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_resource = {
 					type = rubber
-					amount = 7
+					amount = 20
 				}
 				add_to_variable = {
 					BRA_state_development_local_building_slots_factor = 0.2

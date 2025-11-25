@@ -249,47 +249,6 @@ focus_tree = {
 		
 		relative_position_id = JAP_okadas_military_purge_speech
 
-		offset = {
-			x = -58
-			y = 0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					has_completed_focus = JAP_sea_purge_the_kodoha_faction
-					has_dlc = "No Compromise, No Surrender"
-				}
-			}
-		}
-
-		offset = {
-			x = -26
-			y = 0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					has_completed_focus = JAP_sea_purge_the_kodoha_faction
-					NOT = {
-						has_dlc = "No Compromise, No Surrender"
-					}
-				}
-			}
-		}
-
-		offset = {
-			x = -33
-			y = 0
-			trigger = {
-				NOT = {
-					has_dlc = "No Compromise, No Surrender"
-				}
-			}
-		}
 
 		cost = 0
 
@@ -2951,13 +2910,7 @@ focus_tree = {
 
 		cost = 5
 
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_country_flag = JAP_tohokai_prime_minister_added
-			}
-		}
+	
 
 		ai_will_do = {
 			factor = 1
@@ -3031,13 +2984,6 @@ focus_tree = {
 
 		cost = 5
 
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_country_flag = JAP_tohokai_prime_minister_added
-			}
-		}
 
 		ai_will_do = {
 			factor = 1
@@ -3102,13 +3048,7 @@ focus_tree = {
 
 		cost = 5
 
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_country_flag = JAP_tohokai_prime_minister_added
-			}
-		}
+
 
 		ai_will_do = {
 			factor = 1
@@ -3190,13 +3130,7 @@ focus_tree = {
 			}
 		}
 
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_country_flag = JAP_tohokai_prime_minister_added
-			}
-		}
+
 
 		cost = 5
 
@@ -4097,19 +4031,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_sea_purge_the_kodoha_faction
 
-		offset = {
-			x = -34
-			y = 0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
-				}
-			}
-		}
+
 
 		prerequisite = { focus = JAP_sea_purge_the_kodoha_faction focus = JAP_revere_the_emperor_destroy_the_traitors }
 
@@ -4931,19 +4853,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_sea_purge_the_kodoha_faction
 
-		offset = {
-			x = -34 
-			y = 0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
-				}
-			}
-		}
+
 
 		prerequisite = { focus = JAP_sea_purge_the_kodoha_faction focus = JAP_revere_the_emperor_destroy_the_traitors }
 
@@ -6623,103 +6533,6 @@ focus_tree = {
 		x = 16
 		y = 0
 
-		offset = {
-			x = -62
-			y = 0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					has_completed_focus = JAP_okadas_military_purge_speech
-				}
-			}
-		}
-
-		offset = {
-			x = -42
-			y = 0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
-				}
-			}
-		}
-
-		offset = {
-			x = -50
-			y = 0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					has_completed_focus = JAP_support_the_kodoha_faction
-				}
-			}
-		}
-
-		offset = {
-			x = -55
-			y = 0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					has_completed_focus = JAP_strengthen_civilian_government
-				}
-			}
-		}
-
-		offset = {
-			x = -53
-			y = 0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					has_completed_focus = JAP_the_unthinkable_option
-				}
-			}
-		}
-
-		offset = {
-			x = -4
-			y = 0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					has_completed_focus = JAP_a_red_sun_rises_for_a_new_era
-				}
-			}
-		}
-
-		offset = {
-			x = -4
-			y = 0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					has_completed_focus = JAP_organize_a_general_election
-				}
-			}
-		}
 
 		cost = 5
 

@@ -1285,16 +1285,6 @@ shared_focus = {
 		IF = {
 			limit = {
 				has_dlc = "Arms Against Tyranny"
-				OR = {
-					NOT = { original_tag = BRA }
-					AND = {
-						original_tag = BRA
-						has_game_rule = {
-							rule = extra_sf_branch_bra
-							option = yes
-						}
-					}
-				}
 			}
 			add_potential_special_forces_tree = yes
 			add_doctrine_cost_reduction = {

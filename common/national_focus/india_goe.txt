@@ -92,13 +92,16 @@ focus_tree = {
         mutually_exclusive = { focus = RAJ_his_majestys_loyal_government }
         x = -40
         y = 0
-
         cost = 5
 
         ai_will_do = {
             factor = 1
         }
-
+        allow_branch = {
+            always = {
+                NO
+            }
+        }
         available = {
             always = no
         }
@@ -338,48 +341,9 @@ focus_tree = {
         id = RAJ_trade_port
         icon = GFX_focus_POL_develop_polish_shipbuilding
         prerequisite = { focus = RAJ_great_depression_price_controls focus = RAJ_provincial_autonomy }
-        x = 19
+        x = -47
         y = 1
-        relative_position_id = RAJ_great_depression_price_controls 
 
-        offset = {
-            x = -4
-            y = 0
-            trigger = {
-                has_game_rule = {
-                    rule = obsolete_focus_branches_visibility
-                    option = HIDE
-                }
-                has_completed_focus = RAJ_great_depression_price_controls
-            }
-        }
-
-        offset = {
-            x = -13
-            y = 0
-            trigger = {
-                has_game_rule = {
-                    rule = obsolete_focus_branches_visibility
-                    option = HIDE
-                }
-                OR = {
-                    has_completed_focus = RAJ_look_to_the_past
-                    has_completed_focus = RAJ_look_to_the_future
-                }
-            }
-        }
-
-        offset = {
-            x = 2
-            y = 0
-            trigger = {
-                has_game_rule = {
-                    rule = obsolete_focus_branches_visibility
-                    option = HIDE
-                }
-                has_completed_focus = RAJ_provincial_autonomy
-            }
-        }
 
         cost = 5
 
@@ -600,6 +564,7 @@ focus_tree = {
 
         allow_branch = {
         	if = {
+                always = no
 				limit = {
 					has_game_rule = {
 						rule = obsolete_focus_branches_visibility
@@ -10527,7 +10492,6 @@ focus = {
 	relative_position_id = RAJ_the_indian_parliament 
 	cost = 10
     available = {
-        always = no
     }
 
 	search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_TFV_AUTONOMY FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_MANPOWER }
@@ -12580,7 +12544,6 @@ focus = {
 	cost = 10
 
 	available = {
-        always = no
 		NOT = { has_idea = RAJ_mobilization_of_the_indian_army }
 	}
 

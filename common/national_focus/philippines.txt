@@ -146,6 +146,7 @@ initial_show_position = {
 		cost = 10
 
 		available = {
+			always= no
 		}
 
 		bypass = {
@@ -3120,6 +3121,7 @@ initial_show_position = {
 			is_ally_with = USA
 			always = no
 		}
+		allow_branch = { always = no}
 
 		bypass = {
 		}
@@ -7182,7 +7184,7 @@ initial_show_position = {
 
 		bypass = {
 		}
-
+		allow_branch = { always = no}
 		available_if_capitulated = no
 	
 		completion_reward = {

@@ -542,14 +542,8 @@
         if = {
             limit = { 
                 has_dlc = "Arms Against Tyranny"
-                has_game_rule = {
-                    rule = extra_sf_branch_ast
-                    option = yes
-                }
             }
-            custom_effect_tooltip = CHL_skip_one_line_tt
             add_potential_special_forces_tree = yes
-            custom_effect_tooltip = CHL_skip_one_line_tt
             add_doctrine_cost_reduction = {
                 name = AST_introduce_unconventional_warfare
                 cost_reduction = 0.5

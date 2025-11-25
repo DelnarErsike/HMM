@@ -66,34 +66,6 @@ focus_tree = {
 		icon = GFX_focus_generic_self_management
 		x = 14
 		y = 0
-		offset = {
-			x = -12
-			y = 0
-			trigger = {
-				OR = {
-					NOT = { has_dlc = "Man the Guns" }
-					AND = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-						has_completed_focus = USA_reestablish_the_gold_standard
-					}
-				}
-			}
-		}
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_neutrality_act
-			}
-		}
-
 
 		cost = 10
 
@@ -262,28 +234,6 @@ focus_tree = {
 		x = -4
 		y = 1
 
-		offset = {
-			x = 1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_neutrality_act
-			}
-		}
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_limited_intervention
-			}
-		}
 
 		cost = 10
 		#ai_will_do = {
@@ -550,40 +500,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = USA_arsenal_of_democracy
 
-		offset = {
-			x = -1
-			y = -4
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_neutrality_act
-			}
-		}
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_neutrality_act
-				has_completed_focus = USA_reestablish_the_gold_standard
-			}
-		}
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_limited_intervention
-			}
-		}
+		
 
 		cost = 10
 		#ai_will_do = {
@@ -655,32 +572,7 @@ focus_tree = {
 		mutually_exclusive = { focus = USA_limited_intervention }
 		relative_position_id = USA_continue_the_new_deal
 
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				OR = {
-					has_completed_focus = USA_reestablish_the_gold_standard
-					has_completed_focus = USA_neutrality_act
-				}
-			}
-		}
-		offset = {
-			x = -2
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_reestablish_the_gold_standard
-				has_completed_focus = USA_neutrality_act
-			}
-		}
+		
 
 		cost = 10
 
@@ -772,41 +664,8 @@ focus_tree = {
 		prerequisite = { focus = USA_neutrality_act }
 		relative_position_id = USA_neutrality_act
 
-		offset = {
-			x = -1
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				NOT = { has_completed_focus = USA_reestablish_the_gold_standard }
-				has_completed_focus = USA_neutrality_act
-			}
-		}
-		offset = {
-			x = -2
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_reestablish_the_gold_standard
-				has_completed_focus = USA_neutrality_act
-			}
-		}
-		offset = {
-			x = 0
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_limited_intervention
-			}
-		}
+	
+		
 
 		cost = 10
 
@@ -927,17 +786,8 @@ focus_tree = {
 		y = 2
 		relative_position_id = USA_neutrality_act
 
-		offset = {
-			x = 0
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_neutrality_act
-			}
-		}
+
+		
 
 		cost = 10
 		ai_will_do = {
@@ -1548,79 +1398,8 @@ focus_tree = {
 		icon = GFX_goal_generic_position_armies
 		x = 28
 		y = 0
-		offset = {
-			x = -26
-			y = 0
-			trigger = {
-				NOT = { has_dlc = "Man the Guns" }
-			}
-		}
-		offset = {
-			x = -17
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_dlc = "Man the Guns"
-				has_completed_focus = USA_continue_the_new_deal
-			}
-		}
-		offset = {
-			x = -2
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				NOT = { has_dlc = "Man the Guns" }
-				has_completed_focus = USA_continue_the_new_deal
-			}
-		}
-		offset = {
-			x = -14
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_dlc = "Man the Guns"
-				has_completed_focus = USA_reestablish_the_gold_standard
-			}
-		}
-		offset = {
-			x = -2
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				NOT = { has_dlc = "Man the Guns" }
-				has_completed_focus = USA_reestablish_the_gold_standard
-			}
-		}
-		offset = {
-			x = -2
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				OR = {
-					has_completed_focus = USA_continue_the_new_deal
-					has_completed_focus = USA_reestablish_the_gold_standard
-				}
-				OR = {
-					has_completed_focus = USA_limited_intervention
-					has_completed_focus = USA_neutrality_act
-				}
-			}
-		}
+	
+		
 		
 		cost = 10
 
