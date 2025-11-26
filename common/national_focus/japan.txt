@@ -347,7 +347,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_sea_purge_the_kodoha_faction }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -11364,7 +11364,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = JAP_develop_new_fighters
 				bonus = 1
-				ahead_reduction = 0.75 
+				ahead_reduction = 1
 				category = light_air
 			}
 
