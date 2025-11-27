@@ -106,122 +106,6 @@ focus_tree = {
 		
 		position = { X = 8000 y = 1300 }
 
-		override_position = {
-			x = 6800
-			y = 700
-			trigger = {
-				NOT = {
-					has_dlc = "No Compromise, No Surrender"
-				}
-				NOT = {
-					has_completed_focus = JAP_support_the_kodoha_faction
-					has_completed_focus = JAP_strengthen_civilian_government
-					has_completed_focus = JAP_the_unthinkable_option
-					has_completed_focus = JAP_sea_purge_the_kodoha_faction
-				}
-			}
-		}
-
-		override_position = {
-			x = 4400
-			y = 700
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = JAP_sea_purge_the_kodoha_faction
-			}
-		}
-
-		override_position = {
-			x = 6000
-			y = 700
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
-			}
-		}
-
-		override_position = {
-			x = 4100
-			y = 700
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = JAP_okadas_military_purge_speech
-				NOT = {
-					has_completed_focus = JAP_organize_a_general_election
-					has_completed_focus = JAP_a_red_sun_rises_for_a_new_era
-				}
-			}
-		}
-
-		override_position = {
-			x = 3000
-			y = 700
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = JAP_organize_a_general_election
-			}
-		}
-
-		override_position = {
-			x = 3000
-			y = 700
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = JAP_a_red_sun_rises_for_a_new_era
-			}
-		}
-
-		override_position = {
-			x = 2000
-			y = 700
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = JAP_support_the_kodoha_faction
-			}
-		}
-
-		override_position = {
-			x = 1500
-			y = 700
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = JAP_strengthen_civilian_government
-			}
-		}
-
-		override_position = {
-			x = 1700
-			y = 700
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = JAP_the_unthinkable_option
-			}
-		}
-
 	}
 
 	default = no
@@ -4375,9 +4259,6 @@ focus_tree = {
 				is_ally_with = CHI
 			}
 			OR = {
-				NOT = {
-					has_completed_focus = JAP_ensure_temporary_peace_with_china
-				}
 				AND = {
 					has_country_flag = {
 					 	flag = JAP_chinese_japanese_neutrality_pact_flag
@@ -4866,9 +4747,6 @@ focus_tree = {
 		available = {
 			JAP_naval_faction_is_not_subdued = yes
 			OR = {
-				NOT = {
-					has_completed_focus = JAP_hokushin_ron
-				}
 				AND = {
 					has_country_flag = {
 					 	flag = JAP_hokushin_ron_started_flag
