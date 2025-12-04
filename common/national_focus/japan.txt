@@ -4253,12 +4253,15 @@ focus_tree = {
 		}
 
 		available = {
-			is_subject = no 
+				is_subject = no 
 			NOT = { 
 				has_war_with = CHI 
 				is_ally_with = CHI
 			}
 			OR = {
+				NOT = {
+					has_completed_focus = JAP_ensure_temporary_peace_with_china
+				}
 				AND = {
 					has_country_flag = {
 					 	flag = JAP_chinese_japanese_neutrality_pact_flag
@@ -11333,8 +11336,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			
-			IF = {
+				IF = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
@@ -11354,11 +11356,18 @@ focus_tree = {
 				CHARACTER = JAP_jiro_horikoshi
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_breakthrough_progress = {
-				specialization = specialization_air
-				value = 0.25
+			IF = {
+				limit = {
+					531 = {
+						is_controlled_by = ROOT
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				add_resource = {
+				    type = aluminium
+				    amount = 5
+				    state = 531
+				}
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
