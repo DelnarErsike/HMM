@@ -27,7 +27,7 @@ if = {
 		}
 	}
 }
-
+create_faction_from_template = faction_template_chinese_united_front
 
 IF = {
 	limit = {

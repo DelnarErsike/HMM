@@ -5,5 +5,5 @@ tags={
 	"Gameplay"
 }
 name="HMM"
-supported_version="1.17.1.0"
+supported_version="1.17.1.1"
 remote_file_id="3365264825"

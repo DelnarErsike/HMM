@@ -2005,9 +2005,6 @@ focus_tree = {
 				category = land_doctrine
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			USA_george_s_patton = {
-				add_skill_level = 1
-			}	
 		}
 	}
 	focus = {

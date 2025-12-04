@@ -1049,7 +1049,7 @@ characters = {
 
 		corps_commander = {
 			traits = { inflexible_strategist trait_reckless JAP_samurai_lineage organizer infantry_leader skilled_staffer }
-			skill = 4
+			skill = 6
 			attack_skill = 4
 			defense_skill = 3
 			planning_skill = 4
