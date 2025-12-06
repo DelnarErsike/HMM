@@ -258,6 +258,7 @@ initial_show_position = {
 		cost = 10
 
 		available = {
+			always = no
 			327 = { #Manila
 				is_owned_and_controlled_by = ROOT
 			}
