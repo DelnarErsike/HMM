@@ -1115,8 +1115,9 @@ USA_douglas_aircraft_company_organization = {
 	
 	allowed = {	
 		tag = USA 
-		always = no
 	}
+	visible = 
+	{always = No}
 
 	override_trait = {
 		token = generic_mio_trait_low_altitude_attacks

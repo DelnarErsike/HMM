@@ -561,8 +561,9 @@ CHI_camco_bomber_organization = {
 				}
 			}
 		} 
-		always = no
+		
 	}
+	visible = { always = no}
 	available = {
 		owner = {
 			hidden_trigger = {

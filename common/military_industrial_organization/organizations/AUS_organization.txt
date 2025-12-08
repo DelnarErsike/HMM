@@ -409,7 +409,7 @@ AUS_osterreichische_fleugzeugfabrik_organization = {
 				has_dlc = "Gotterdammerung"
 			}
 		}
-		always = no
+
 	}
 
 	visible = {
@@ -419,6 +419,7 @@ AUS_osterreichische_fleugzeugfabrik_organization = {
 			}
 			FROM = { has_completed_focus = wuw_HUN_integrate_bohemian_and_austrian_industries }
 		}
+				always = no
 	}
 
 	add_trait = { 
