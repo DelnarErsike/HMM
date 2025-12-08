@@ -109,7 +109,7 @@ air_subdoctrine_operational_air_support = {
     xp_type = air
 
     available = {
-        always = no
+        always = yes
     }
 
     ai_will_do = {
@@ -167,7 +167,7 @@ air_subdoctrine_tactical_battlefield_support = {
     xp_type = air
 
     available = {
-        always = yes
+        always = no
     }
 
     ai_will_do = {

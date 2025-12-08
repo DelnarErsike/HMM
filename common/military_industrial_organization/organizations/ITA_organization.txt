@@ -566,7 +566,6 @@ ITA_caproni_organization = {
 				has_dlc = "By Blood Alone"
 			}
 		}
-		always = no
 	}
 
 	visible = {
@@ -574,6 +573,7 @@ ITA_caproni_organization = {
 			limit = { FROM = { original_tag = ETH } }
 			FROM = { has_country_flag = ETH_ITA_sends_air_designers }
 		}
+		always = no
 	}
 	
 	available = {

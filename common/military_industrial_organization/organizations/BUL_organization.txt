@@ -134,12 +134,12 @@ BUL_kaproni_bulgarski_organization = {
 	allowed = {	
 		tag = BUL
 		has_dlc = "Battle for the Bosporus"
-		always = no
 	}
 
 	available = {
 		FROM = { has_completed_focus = BUL_kaproni_bulgarski }
 	}
+	visible = { always = no}
 
 	add_trait = { 
 		token = BUL_mio_trait_prussia_of_the_balkans

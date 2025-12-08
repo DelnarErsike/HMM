@@ -433,8 +433,8 @@ RAJ_hawker_organization = {
 	allowed = {	
 		has_dlc = "Graveyard of Empires"
 		original_tag = RAJ
-		always = no
 	}
+	visible = { always = no}
 
 }
 

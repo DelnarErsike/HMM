@@ -1990,6 +1990,7 @@ GER_junkers_organization = {
 			limit = { FROM = { original_tag = ETH } }
 			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
 		}
+		always = no
 	}
 
 	available = {

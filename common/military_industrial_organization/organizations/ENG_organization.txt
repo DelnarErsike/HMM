@@ -580,7 +580,7 @@ ENG_hawker_organization = {
 		}
 		has_dlc = "Arms Against Tyranny"
 	}
-	always = no
+	visible = { always = no}
 }
 
 ENG_de_havilland_organization = {

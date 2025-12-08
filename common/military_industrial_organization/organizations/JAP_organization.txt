@@ -2380,9 +2380,8 @@ JAP_tachikawa_aircraft_company_organization = {
 	allowed = {	 
 		original_tag = JAP
 		has_dlc = "Arms Against Tyranny"
-		always = no
 	}
-
+	visible = { always = no}
 	initial_trait = {
 		name = JAP_mio_trait_army_aircraft_manufacturer
 		

@@ -649,7 +649,7 @@ characters={
 		}
 		corps_commander={
 			traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster}
-			skill = 6
+			skill = 8
 			attack_skill = 7
 			defense_skill = 7
 			planning_skill = 4
