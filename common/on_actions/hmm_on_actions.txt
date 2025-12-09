@@ -81,6 +81,21 @@ on_actions = {
 					no_faction
 				}
 			}
+			WST = {
+				add_ideas = {
+					no_faction
+				}
+			}
+			TUR = {
+				add_ideas = {
+					no_faction
+				}
+			}
+			POR = {
+				add_ideas = {
+					no_faction
+				}
+			}
 			HOL = {
 				add_ideas = {
 					noresistance

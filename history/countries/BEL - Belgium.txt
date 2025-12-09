@@ -161,7 +161,6 @@ IF = {
 	set_variable = { BEL_corruption_political_power_gain = -0.25 }
 	set_variable = { BEL_corruption_stability_factor = -0.20 }
 	set_variable = { BEL_corruption_production_speed_buildings_factor = -0.20 }
-	set_variable = { BEL_corruption_fascism_drift = 0.10 }
 
 	# Economic Downturn
 	add_dynamic_modifier = {

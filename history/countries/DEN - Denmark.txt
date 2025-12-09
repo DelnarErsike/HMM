@@ -202,8 +202,6 @@ if = {
 	#ECONOMIC CRISIS
 	set_variable = { DEN_economic_crisis_monthly_population = -0.1 }
 	set_variable = { DEN_economic_crisis_stability_weekly = -0.001 }
-	set_variable = { DEN_economic_crisis_neutrality_drift = 0.02 }
-	set_variable = { DEN_economic_crisis_democratic_drift = -0.05 }
 	add_dynamic_modifier = { modifier = DEN_economic_crisis_dynamic_modifier }
 
 	#INDUSTRIAL CAPABILITIES
