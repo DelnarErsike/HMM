@@ -689,21 +689,7 @@ on_actions = {
 	on_weekly = {
 		effect = {
 			limit = {
-					is_playable_country = yes
-					NOT = {
-						OR = {
-							has_war = yes
-							AND = {
-								tag = SPR
-								any_country = {
-									has_volunteers_amount_from = {
-										tag = SPR
-										count > 0
-									} 
-								}	
-							}
-						}
-					}
+				has_idea = peace_training
 				}
 			add_mastery = {
 				amount = 7
