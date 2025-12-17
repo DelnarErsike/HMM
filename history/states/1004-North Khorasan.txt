@@ -2,8 +2,8 @@
 state={
 	id=1004
 	name="STATE_1004"
-	manpower = 353246
-	state_category = rural
+	manpower = 1
+	state_category = wasteland
 
 	history={
 		owner = WST
@@ -16,5 +16,5 @@ state={
 		7573 1521 10351
 	}
 
-	local_supplies=0.0 
+	local_supplies = 0.0 
 }
