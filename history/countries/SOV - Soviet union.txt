@@ -202,6 +202,26 @@ SOV_lev_trotsky = { #Not in the country
 SOV_patriarch_sergy = { #Priests are not political enemies at this point
 	set_character_flag = SOV_safe_from_purge_flag
 }
+SOV_konstantin_rokossovsky = {
+	set_character_flag = SOV_safe_from_purge_flag
+}
+SOV_markian_popov = {
+	set_character_flag = SOV_safe_from_purge_flag
+}
+SOV_vasily_kuznetsov = {
+	set_character_flag = SOV_safe_from_purge_flag
+}
+SOV_ivan_konev = {
+	set_character_flag = SOV_safe_from_purge_flag
+}
+SOV_georgy_zhukov = {
+	set_character_flag = SOV_safe_from_purge_flag
+}
+SOV_nikolay_vatutin = {
+	set_character_flag = SOV_safe_from_purge_flag
+}
+
+
 if = {
 	limit = {
 		has_dlc = "No Step Back"
