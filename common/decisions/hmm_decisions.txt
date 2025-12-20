@@ -166,6 +166,13 @@ operations = {
                         transfer_troops = yes
                     }
                 }
+				every_state = {
+					limit = {
+						is_core_of = COG
+						is_controlled_by = FRA
+					}
+					add_compliance = 100
+				}
             }
 
         }

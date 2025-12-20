@@ -940,6 +940,11 @@ on_actions = {
 							capital_scope = { is_on_continent = europe }
 							original_tag = TUR
 							original_tag = DEN
+							original_tag = HOL
+							original_tag = BEL
+							original_tag = NOR
+							original_tag = POL
+							original_tag = FRA
 						}
 					}
 				}
