@@ -31,6 +31,7 @@ hmm_capitulations_on_actions = {
 			}
 		}
 		
+		
 		GER = {
 			country_event = france.69420
 		}

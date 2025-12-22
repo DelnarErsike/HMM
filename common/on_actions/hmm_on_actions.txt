@@ -682,16 +682,16 @@ on_actions = {
 	}
 	on_weekly = {
 			effect = {
-			
-			limit = {
+			if={
+				limit = {
 				has_idea = peace_training
 				}
-			add_daily_mastery = {
-				amount = 1
-				days = 7
-				name = peace
+				add_daily_mastery = {
+					amount = 1
+					days = 7
+					name = peace
+				}
 			}
-			
 		}
 	}
 }
