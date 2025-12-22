@@ -10685,12 +10685,7 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
-			random_army_leader = {	
-				limit = {
-					NOT = {
-						has_trait = trait_mountaineer
-					}
-				}	
+			JAP_tadaichi_wakamatsu ={
 				add_trait = { trait = trait_mountaineer }
 			}
 			
@@ -12656,7 +12651,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			random_navy_leader = {	
+			JAP_yuzuru_hiraga = {	
 				limit = {
 					NOT = {
 						has_trait = air_controller
@@ -12856,7 +12851,7 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			random_navy_leader = {	
+			JAP_yuzuru_hiraga = {	
 				limit = {
 					NOT = {
 						has_trait = air_controller
@@ -12864,7 +12859,7 @@ focus_tree = {
 				}	
 				add_trait = { trait = air_controller }
 			}
-			random_navy_leader = {	
+			JAP_yuzuru_hiraga = {	
 				limit = {
 					NOT = {
 						has_trait = ironside
@@ -12945,7 +12940,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			random_navy_leader = {	
+			JAP_yuzuru_hiraga = {	
 				limit = {
 					NOT = {
 						has_trait = ironside
