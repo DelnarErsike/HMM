@@ -634,11 +634,6 @@ country_event = {
 			base = 10
 		}
 
-		add_timed_idea = {
-			idea = SOV_training_activities_curtailed
-			days = 365
-		}
-
 		#Update purged portraits in UI
 		hidden_effect = {
 			SOV_paranoia_update_portraits_ui = yes
@@ -655,30 +650,6 @@ country_event = {
 		}
 		# Increase opposition Army Support 
 		SOV_increase_opposition_army_support_small = yes 
-	}
-
-	option = { #NO WAIT! Let's Think about it
-		name = NSB_soviet_paranoia_system_events.23.b
-		ai_chance = {
-			base = 1
-			modifier = { #Don't go to negative PP please
-				factor = 0
-				has_political_power < SOV_purge_event_pp_to_avoid_regular_pay
-			}
-			modifier = { #Don't risk starting CW too early
-				factor = 0
-				SOV_is_opposition = yes 
-			}
-		}
-
-		trigger = {
-			NOT = { has_political_power < SOV_purge_event_pp_to_avoid_regular }
-		}
-
-		add_political_power = SOV_purge_event_pp_to_avoid_regular_pay
-
-		#PARANOIA increases
-		SOV_paranoia_low_increase_effect = yes
 	}
 }
 
