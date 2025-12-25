@@ -1138,15 +1138,15 @@ on_actions = {
 				}
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_0
-					amount = 1000
+					amount = 6000
 				}
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
-					amount = 9600
+					amount = 20000
 				}
 				add_equipment_to_stockpile = {
 					type = support_equipment_1
-					amount = 259
+					amount = 510
 				}
 				add_equipment_to_stockpile = {
 					type = motorized_equipment_0
@@ -1158,7 +1158,7 @@ on_actions = {
 				}
 				add_equipment_to_stockpile = {
 					type = artillery_equipment_1
-					amount = 100
+					amount = 200
 				}
 				#add_equipment_to_stockpile = {
 				#	type = anti_tank_equipment_1
@@ -1170,7 +1170,7 @@ on_actions = {
 				}
 				add_equipment_to_stockpile = {
 					type = armored_car_equipment
-					amount = 0
+					amount = 462
 				}
 				add_equipment_to_stockpile = {
 					type = light_tank_chassis_1
@@ -1877,20 +1877,6 @@ on_actions = {
 					amount = 720
 					producer = GER
 					variant_name = "Panzer I Ausf. A"
-				}
-			}
-			PER = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_1
-					amount = 4000
-				}
-				add_equipment_to_stockpile = {
-					type = support_equipment_1
-					amount = 70
-				}
-				add_equipment_to_stockpile = {
-					type = artillery_equipment_1
-					amount = 25
 				}
 			}
 			BUL = {

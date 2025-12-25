@@ -109,33 +109,33 @@ select_host_country = {
 	}
 }
 Brasil_AC_rule = {
-	name = "Select if Brasil can be AC"
+	name = "Select if Brazil can be AC"
 	group = "HMM Rules"
 	icon = "GFX_volunteers"
 	option = {
 		name = Brasil_AC
-		text = "Brasil can AC"
+		text = "Brazil can AC"
 		desc = ""
 	} 
 	default = {
 		name = Brasil_no_AC
-		text = "Brasil cant AC"
+		text = "Brazil can't AC"
 		desc = ""
 	}
 
 }
 Germany_Wirtschaftswunder = {
-	name = "Select if Germany is allowed to complete Wirtschaftswunder"
+	name = "Select if Germany is allowed to complete Prioritize Economic Growth "
 	group = "HMM Rules"
 	icon = "GFX_volunteers"
 	default = {
 		name = Germany_no_wirtschaftswunder
-		text = "Germany cant do Wirtschaftswunder"
+		text = "Germany can't do the Left Side Economy Tree"
 		desc = ""
 	}
 	option = {
 		name = Germany_wirtschaftswunder
-		text = "Germany can do Wirtschaftswunder"
+		text = "Germany can do the Left Side Economy Tree"
 		desc = ""
 	}
 
@@ -146,7 +146,7 @@ Germany_Cancel_Mefo= {
 	icon = "GFX_volunteers"
 	default = {
 		name = Germany_no_cancel_MEFO_Bills
-		text = "Germany cant cancel MEFO Bills"
+		text = "Germany can't cancel MEFO Bills"
 		desc = ""
 	}
 	option = {
@@ -157,22 +157,22 @@ Germany_Cancel_Mefo= {
 
 }
 urban_assault_vechile= {
-	name = "Select if Urban Assault Vechile is allowed or not "
+	name = "Select if Urban Assault Vehicle is allowed or not "
 	group = "HMM Rules"
 	icon = "GFX_decision_generic_tank"
 	default = {
 		name = off
-		text = "You CANNOT research armoured enginieer company."
-		desc = "You also don't get the urban assault vechile."
+		text = "You CANNOT research armoured engineer company."
+		desc = "You also don't get the urban assault vehicle."
 	}
 	option = {
 		name = on
-		text = "You CAN research armoured enginieer company"
-		desc = "You also get the urban assault vechile."
+		text = "You CAN research armoured engineer company"
+		desc = "You also get the urban assault vehicle."
 	}
 }
 railway_gun= {
-	name = "Select if Railway Battery is allowed or not "
+	name = "Select if Railway Gun is allowed or not "
 	group = "HMM Rules"
 	icon = "GFX_decision_generic_ignite_civil_war"
 	default = {
@@ -223,22 +223,22 @@ sov_boost = {
 	default = {
 		name = off
 		text = "GOff"
-		desc = "Soviets won't have civilian factories buff (Recommmended)"
+		desc = "Soviets won't receive civilian factories"
 	}
 	option = {
 		name = sov4
 		text = "ROn-4"
-		desc = "Soviets get 4 Civilian factories (Not Recommmended)"
+		desc = "Soviets receives 4 Civilian factories"
 	}
 	option = {
 		name = sov8
 		text = "ROn-8"
-		desc = "Soviets get 8 Civilian factories (Not Recommmended)"
+		desc = "Soviets receives 8 Civilian factories"
 	}
 	option = {
 		name = sov12
 		text = "ROn-12"
-		desc = "Soviets get 12 Civilian factories (Not Recommmended)"
+		desc = "Soviets receives 12 Civilian factories"
 	}
 }     
   
@@ -274,22 +274,22 @@ jap_boost = {
 	default = {
 		name = off
 		text = "GOff"
-		desc = "Japan won't have civilian factories buff (Recommmended)"
+		desc = "Japan won't receive civilian factories"
 	}
 	option = {
 		name = jap4
 		text = "ROn-4"
-		desc = "Japan get 4 Civilian factories (Not Recommmended)"
+		desc = "Japan receives 4 Civilian factories"
 	}
 	option = {
 		name = jap8
 		text = "ROn-8"
-		desc = "Japan get 8 Civilian factories (Not Recommmended)"
+		desc = "Japan receives 8 Civilian factories)"
 	}
 	option = {
 		name = jap12
 		text = "ROn-12"
-		desc = "Japan get 12 Civilian factories (Not Recommmended)"
+		desc = "Japan receives 12 Civilian factories"
 	}
 }          
 eng_boost = {
@@ -299,72 +299,72 @@ eng_boost = {
 	default = {
 		name = off
 		text = "GOff"
-		desc = "Britain won't have civilian factories buff (Recommmended)"
+		desc = "Britain won't receive civilian factories"
 	}
 	option = {
 		name = eng4
 		text = "ROn-4"
-		desc = "Britain get 4 Civilian factories (Not Recommmended)"
+		desc = "Britain receives 4 Civilian factories"
 	}
 	option = {
 		name = eng8
 		text = "ROn-8"
-		desc = "Britain get 8 Civilian factories (Not Recommmended)"
+		desc = "Britain receives 8 Civilian factories"
 	}
 	option = {
 		name = eng12
 		text = "ROn-12"
-		desc = "Britain get 12 Civilian factories (Not Recommmended)"
+		desc = "Britain receives 12 Civilian factories"
 	}
 }
 ita_boost = {
-	name = "Italiano Civ Boost"
+	name = "Italy Civ Boost"
 	group = "HMM Rules"
 	icon = "GFX_decision_generic_merge_plant_materiel"
 	default = {
 		name = off
 		text = "GOff"
-		desc = "Italiano won't have civilian factories buff (Recommmended)"
+		desc = "Italy won't have civilian factories buff"
 	}
 	option = {
 		name = ita4
 		text = "ROn-4"
-		desc = "Italiano get 4 Civilian factories (Not Recommmended)"
+		desc = "Italy receives 4 Civilian factories"
 	}
 	option = {
 		name = ita8
 		text = "ROn-8"
-		desc = "Italiano get 8 Civilian factories (Not Recommmended)"
+		desc = "Italy receives 8 Civilian factories"
 	}
 	option = {
 		name = ita12
 		text = "ROn-12"
-		desc = "Italiano get 12 Civilian factories (Not Recommmended)"
+		desc = "Italy receives 12 Civilian factories"
 	}
 }
 fra_boost = {
-	name = "Français Civ Boost"
+	name = "French Civ Boost"
 	group = "HMM Rules"
 	icon = "GFX_decision_generic_merge_plant_materiel"
 	default = {
 		name = off
 		text = "GOff"
-		desc = "Français won't have civilian factories buff (Recommmended)"
+		desc = "France won't receive civilian factories"
 	}
 	option = {
 		name = fra4
 		text = "ROn-4"
-		desc = "Français get 4 Civilian factories (Not Recommmended)"
+		desc = "France receives 4 Civilian factories"
 	}
 	option = {
 		name = fra8
 		text = "ROn-8"
-		desc = "Français get 8 Civilian factories (Not Recommmended)"
+		desc = "France receives 8 Civilian factories"
 	}
 	option = {
 		name = fra12
 		text = "ROn-12"
-		desc = "Français get 12 Civilian factories (Not Recommmended)"
+		desc = "France receives 12 Civilian factories"
 	}
 }
 usa_boost = {
@@ -374,17 +374,17 @@ usa_boost = {
 	default = {
 		name = off
 		text = "GOff"
-		desc = "USA won't have civilian factories buff (Recommmended)"
+		desc = "USA won't receive civilian factories"
 	}
 	option = {
 		name = usa4
 		text = "ROn-4"
-		desc = "USA get 4 Civilian factories (Not Recommmended)"
+		desc = "USA receives 4 Civilian factories"
 	}
 	option = {
 		name = usa8
 		text = "ROn-8"
-		desc = "USA get 8 Civilian factories (Not Recommmended)"
+		desc = "USA receives 8 Civilian factories"
 	}
 }
 playable_iraq = {
@@ -409,26 +409,41 @@ extra_sf_branch_ast = {
 	default = {
 		name = no
 		text = "No"
-		desc = "AST doesn't get extra SF branch from focus"
+		desc = "Australia doesn't get an extra SF branch from focus"
 	}
 	option = {
 		name = yes
 		text = "Yes"
-		desc = "AST does get extra SF branch from focus"
+		desc = "Australia gets an extra SF branch from focus"
 	}
 }
 extra_sf_branch_bra = {
-	name = "SF branch BRA"
+	name = "SF branch Brazil"
 	group = "HMM Rules"
 	icon = "GFX_decision_category_usa_intervention_mandate"
 	default = {
 		name = no
 		text = "No"
-		desc = "BRA doesn't get extra SF branch from focus"
+		desc = "Brazil doesn't get an extra SF branch from focus"
 	}
 	option = {
 		name = yes
 		text = "Yes"
-		desc = "BRA does get extra SF branch from focus"
+		desc = "Brazil gets an extra SF branch from focus"
+	}
+}
+finish_production = {
+	name = "Finnish Production"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_industry"
+	option = {
+		name = ger_gun
+		text = "GGerman Lend Lease for Guns"
+		desc = "The gun amount progressively increases as time passes"
+	}
+	default = {
+		name = off
+		text = "RNo German Lend Lease for Guns"
+		desc = "Use if Finland has a player on it"
 	}
 }

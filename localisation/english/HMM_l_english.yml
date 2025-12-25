@@ -64,6 +64,7 @@ annex_South_Africa:0 "Annex South Africa"
 annex_Ethopia:0 "Annex Ethiopia"
 annex_Mexiko:0 "Annex Mexico"
 annex_CONGO:0 "Annex Congo"
+annex_Ireland:0 "Annex Ireland"
 annex_siam:0 "Annex Siam"
 annex_manchukuo:0 "Annex Manchukuo"
 annex_new_zealand:0 "Annex New Zealand"
@@ -76,6 +77,13 @@ move_capital_to_Stalingrad:0 "Move Capital to Stalingrad"
 move_capital_to_Vladivostok:0 "Move Capital to Vladivostok"
 SOV_assist_republican_spain:0 "Assist Republican Spain"
 continuous_recruitment_drive:0 "Continuous Recruitment Drive"
+
+GER_close_gun_LL:0 "Close Gun. Delivery"
+GER_recieving_ll_gun_1a:0 "Receiving Gun. Delivery"
+GER_recieving_ll_gun_2a:0 "Receiving Gun. Delivery"
+GER_gun_delivery_FIN:0 "Started Gun. Delivery"
+GER_started_ll_gun:0 "Started Gun. Delivery"
+GER_annex_FIN:0"Economic Annex of Finland"
 
   # Template decisions category and decisions
  templates:0 "Division Templates"
@@ -95,3 +103,4 @@ continuous_recruitment_drive:0 "Continuous Recruitment Drive"
  
  a50cw:0 "Create 50W Infantry Template"
  a50cw_desc:0 "Create a 50-width infantry division (25 battalions) template."
+

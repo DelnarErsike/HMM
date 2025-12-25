@@ -68,6 +68,7 @@ send_embargo = RAJ
 send_embargo = AST
 send_embargo = SOV
 send_embargo = NZL
+send_embargo = BRA
 
 set_technology = {
 	tech_trucks = 1

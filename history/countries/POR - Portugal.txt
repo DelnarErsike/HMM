@@ -21,6 +21,18 @@ if = {
 	}
 }
 
+send_embargo = USA
+send_embargo = ENG
+send_embargo = FRA
+send_embargo = MEX
+send_embargo = CAN
+send_embargo = SAF
+send_embargo = RAJ
+send_embargo = AST
+send_embargo = SOV
+send_embargo = NZL
+send_embargo = BRA
+
 set_research_slots = 3
 
 set_technology = {
