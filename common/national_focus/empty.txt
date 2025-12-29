@@ -9,10 +9,6 @@ focus_tree = {
 		# NEUTRALS
 		modifier = {
 			add = 100
-			tag = CHO
-		}
-		modifier = {
-			add = 100
 			tag = WST
 		}
 		modifier = {
@@ -22,10 +18,6 @@ focus_tree = {
 		modifier = {
 			add = 100
 			tag = HOL
-		}
-		modifier = {
-			add = 100
-			tag = TUM
 		}
 		# ANNEXED SOV FOOD
 		modifier = {

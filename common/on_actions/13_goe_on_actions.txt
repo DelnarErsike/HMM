@@ -50,49 +50,36 @@ on_actions = {
 	#ROOT is the nation being released, FROM is the overlord.
 	on_startup = {
 		effect = {
-			if = {
+			every_state = {
 				limit = {
-					has_dlc = "Graveyard of Empires"
+					is_owned_by = RAJ
+					check_variable = { core_countries^num > 0 }
 				}
-				if = { #Fix for OOS
-					limit = { is_historical_focus_on = no }
-					RAJ = {
-						random_owned_state = {
-							set_variable = { global.famine_state = THIS }	
-							
-						}
-					}
-				}
-				RAJ = {
-					every_owned_state = {
+				
+				for_each_scope_loop = {
+					array = core_countries
+					if = {
 						limit = {
-							check_variable = { core_countries^num > 0 }
-						}
-						
-						for_each_scope_loop = {
-							array = core_countries
-							if = {
-								limit = {
-									NOT = { THIS = { original_tag = RAJ } }	
-									NOT = { THIS = { original_tag = YEM } } #not u
-									NOT = { 
-										is_in_array = {
-										 	array = RAJ.raj_releasables
-										 	value = THIS
-										 } 
-									}
-								}
-								add_to_array = { RAJ.raj_releasables = THIS }
+							NOT = { THIS = { original_tag = RAJ } }	
+							NOT = { THIS = { original_tag = YEM } } #not u
+							NOT = { 
+								is_in_array = {
+								 	array = RAJ.raj_releasables
+								 	value = THIS
+								 } 
 							}
-							
 						}
+						add_to_array = { RAJ.raj_releasables = THIS }
 					}
-				}
-
-				RAJ = {
-					set_occupation_law_where_available = foreign_civilian_oversight
+					
 				}
 			}
+
+			RAJ = {
+				set_occupation_law_where_available   = foreign_civilian_oversight
+			}
+
+
 		}
 		#Achievement Related Arrays
 		effect = {
@@ -156,7 +143,7 @@ on_actions = {
 						state = 990 #Manipur
 					}
 				}
-				#add_to_array = { AFG.AFG_himalaya_states_array = THIS }
+#				add_to_array = { AFG.AFG_himalaya_states_array = THIS }
 			}
 		}
 	}
@@ -447,135 +434,6 @@ on_actions = {
 	#FROM = defending side
 	#fired when two countries end up at war with each other (on_war is fired when a country goes to war against anyone and is not fired again when it enters war against another country unless it went to peace first)
 	on_war_relation_added = {
-		effect = {
-			if = {
-				limit = {
-					OR = {
-						FROM = { 
-							original_tag = RAJ
-							has_completed_focus = RAJ_jugantar 
-						}
-
-						ROOT = { 
-							original_tag = RAJ
-							has_completed_focus = RAJ_jugantar 
-						}
-					}
-
-					OR = {
-						FROM = { original_tag = PAK }
-						ROOT = { original_tag = PAK }
-					}
-				}
-
-				RAJ = {
-					division_template = {
-						name = "Jugantar Militia"
-						is_locked = no
-						regiments = {
-							irregular_infantry = { x = 0 y = 0 }
-							irregular_infantry = { x = 0 y = 1 }
-							irregular_infantry = { x = 0 y = 2 }
-							irregular_infantry = { x = 0 y = 3 }
-							irregular_infantry = { x = 1 y = 0 }
-							irregular_infantry = { x = 1 y = 1 }
-							
-						}
-						support = {
-							
-						}
-					}
-					if = {
-						limit = {
-							controls_state = 435
-						}
-						435 = {
-							create_unit = {
-								division = "name = \"Jugantar Militia\" division_template = \"Jugantar Militia\" start_experience_factor = 0.05 start_equipment_factor = 1 start_manpower_factor = 1"
-								owner = RAJ
-								allow_spawning_on_enemy_provs = yes 
-								count = 3
-							}
-						}
-					}
-
-					if = {
-						limit = {
-							controls_state = 426
-						}
-						426 = {
-							create_unit = {
-								division = "name = \"Jugantar Militia\" division_template = \"Jugantar Militia\" start_experience_factor = 0.05 start_equipment_factor = 1 start_manpower_factor = 1"
-								owner = RAJ
-								allow_spawning_on_enemy_provs = yes 
-								count = 3
-							}
-						}
-					}
-
-					if = {
-						limit = {
-							controls_state = 432
-						}
-						432 = {
-							create_unit = {
-								division = "name = \"Jugantar Militia\" division_template = \"Jugantar Militia\" start_experience_factor = 0.05 start_equipment_factor = 1 start_manpower_factor = 1"
-								owner = RAJ
-								allow_spawning_on_enemy_provs = yes 
-								count = 3
-							}
-						}
-					}
-
-				}
-			}
-		}
-		effect = {
-			if = { 
-				limit = {
-					
-					FROM = {
-						original_tag = PER
-						has_country_flag = PER_sold_oil_flag
-					}
-					ROOT = { 
-						NOT = {
-							original_tag = PER
-						}
-						has_country_flag = PER_has_PER_resource_rights
-					}
-				}
-				ROOT = {
-					remove_resource_rights = 413
-				}
-				FROM = {
-					add_offsite_building = { type = industrial_complex  level = -3 }
-				}
-			}
-
-			if = {
-				limit = {
-					AND = {
-						ROOT = {
-							original_tag = PER
-							has_country_flag = PER_sold_oil_flag
-						}
-						FROM = { 
-							NOT = {
-								original_tag = PER
-							}
-							has_country_flag = PER_has_PER_resource_rights
-						}
-					}
-				}
-				FROM = {
-					remove_resource_rights = 413
-				}
-				ROOT = {
-					add_offsite_building = { type = industrial_complex  level = -3 }
-				}
-			}			
-		}
 		effect = {
 			#block raj releasables from insta joining facftions if they spawn
 			if = {
@@ -1215,12 +1073,10 @@ on_actions = {
 							}
 
 							NOT = { has_dynamic_modifier = { modifier = idea_RAJ_resistant_to_occupation } }
-							NOT = {has_state_flag = RAJ_resistance_already_squashed_flag }
 						}
 
 						add_dynamic_modifier = {
 						 	modifier = idea_RAJ_resistant_to_occupation
-						 	days = 1400
 						 } 
 
 
@@ -1387,7 +1243,6 @@ on_actions = {
 							AND = {
 								original_tag = JAP 
 								has_country_flag = agreed_to_help_bose
-								NOT = { has_war_with = RAJ }
 							}
 							AND = {
 								original_tag = RAJ
@@ -1428,9 +1283,7 @@ on_actions = {
 					add_dynamic_modifier = {
 					 	modifier = idea_RAJ_resistant_to_occupation
 					 	days = 1400
-					}
-
-					set_state_flag = RAJ_resistance_already_squashed_flag 
+					 } 
 				}
 			}
 			else_if = {
@@ -1459,7 +1312,7 @@ on_actions = {
 				limit = {
 					FROM.FROM = {
 						OR = {
-							is_core_of = WST
+							is_core_of = BRM
 							is_in_array = {
 								array = RAJ.owned_states_at_game_start
 								value = THIS
@@ -1471,57 +1324,13 @@ on_actions = {
 					FROM = {
 						OR = {
 							original_tag = RAJ
-							original_tag = WST
+							original_tag = BRM
 						}
 					}
 				}
 
 				FROM.FROM =  {
 					set_state_flag = { flag = RAJ_time_to_retake_state_famine days = 30 value = 1 }
-				}
-			}
-		}
-		effect = { #does not work when placed in on_capitulation or on_annexation, might be connected to an assert that fires off once the Raj caps the Mughals stating that the Raj doesn't have a war with them...
-			if = {
-				limit = {
-					has_dlc = "Graveyard of Empires"
-					FROM.FROM = {
-						has_dynamic_modifier = {
-							modifier = idea_RAJ_mughal_influence
-						}
-					}
-				}
-
-				FROM.FROM = {
-					remove_dynamic_modifier = {
-						modifier = idea_RAJ_mughal_influence
-						days = 1400
-					}
-				}
-			}
-		}
-
-		effect = { #does not work when placed in on_capitulation or on_annexation, might be connected to an assert that fires off once the Raj caps the Mughals stating that the Raj doesn't have a war with them...
-			if = {
-				limit = {
-					has_dlc = "Graveyard of Empires"
-					ROOT = {
-						original_tag = RAJ
-						has_completed_focus = RAJ_the_legacy_of_babur
-					}
-					FROM.FROM = {
-						NOT = {
-							has_dynamic_modifier = {
-								modifier = idea_RAJ_mughal_influence
-							}
-						}
-					}
-				}
-
-				FROM.FROM = {
-					add_dynamic_modifier = {
-						modifier = idea_RAJ_mughal_influence
-					}
 				}
 			}
 		}
@@ -1571,36 +1380,6 @@ on_actions = {
 					add_offsite_building = {
 						type = industrial_complex
 						level = 1
-					}
-				}
-			}
-		}
-	}
-
-	on_monthly_PER = {
-		effect = {
-			IF = {
-				limit = {
-					AND = {
-						kurdistan_exists = no
-						1000 = {
-							is_owned_by = SOU
-						}
-						420 = {
-							is_owned_by = SOU
-						}
-						419 = {
-							is_owned_by = SOU
-						}
-						SOU = {
-							has_government = communism
-						}
-					}
-				}
-				SOU = {
-					country_event = {
-						id = PER_communist_events.20
-						hours = 1
 					}
 				}
 			}
@@ -1770,93 +1549,6 @@ on_actions = {
 					min = 0
 					max = 32
 				}
-			}
-		}
-	}
-
-	on_declare_war = {
-		effect = {
-			IF = {
-				limit = {
-					OR = {
-						tag = IRQ
-						tag = AFG
-						tag = PER
-						tag = TUR
-					}
-					has_dynamic_modifier = { modifier = SSB_saadabad_pact }
-					OR = {
-						AND = {
-							FROM = { tag = PER }
-							PER = { has_dynamic_modifier = { modifier = SSB_saadabad_pact} }
-						}
-						AND = {
-							FROM = { tag = TUR }
-							TUR = { has_dynamic_modifier = { modifier = SSB_saadabad_pact} }
-						}
-						AND = {
-							FROM = { tag = AFG }
-							AFG = { has_dynamic_modifier = { modifier = SSB_saadabad_pact} }
-						}
-						AND = {
-							FROM = { tag = IRQ }
-							IRQ = { has_dynamic_modifier = { modifier = SSB_saadabad_pact} }
-						}
-					}
-				}
-				custom_effect_tooltip = SSB_you_will_lose_the_bonus_tt
-				hidden_effect = {
-					remove_dynamic_modifier = { modifier = SSB_saadabad_pact }
-					PER = {
-						if = {
-							limit = { has_dynamic_modifier = { modifier = SSB_saadabad_pact } }
-							country_event = {
-								id = PER_SSB_events.8
-								hours = 12
-							}
-						}
-					}
-					AFG = {
-						if = {
-							limit = { has_dynamic_modifier = { modifier = SSB_saadabad_pact } }
-							country_event = {
-								id = PER_SSB_events.8
-								hours = 12
-							}
-						}
-					}
-					IRQ = {
-						if = {
-							limit = { has_dynamic_modifier = { modifier = SSB_saadabad_pact } }
-							country_event = {
-								id = PER_SSB_events.8
-								hours = 12
-							}
-						}
-					}
-					TUR = {
-						if = {
-							limit = { has_dynamic_modifier = { modifier = SSB_saadabad_pact } }
-							country_event = {
-								id = PER_SSB_events.8
-								hours = 12
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
-	on_annex = {
-		effect = {
-			if = {
-				limit = {
-					FROM = {
-						has_country_flag = IRQ_has_become_kurdistan_flag
-					}
-				}
-				clr_global_flag = kurdistan_exists_flag
 			}
 		}
 	}

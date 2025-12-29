@@ -32,9 +32,9 @@ bookmarks = {
 				FRA_protected_by_the_maginot_line
 			}
 			focuses = {
-				FRA_invite_communist_ministers
-				FRA_utilize_the_leagues
-				FRA_je_suis_la_deluge
+				FRA_strengthen_government_support
+				FRA_revive_the_national_bloc
+				FRA_form_the_popular_front
 			}
 		}
 		"USA"={
@@ -47,8 +47,8 @@ bookmarks = {
 			}
 			focuses = {
 				USA_war_plan_black
-				USA_limited_intervention
-				USA_reestablish_the_gold_standard
+				USA_arsenal_of_democracy
+				USA_the_giant_wakes
 			}
 		}
 		"ENG"={
@@ -61,9 +61,9 @@ bookmarks = {
 				george_v
 			}
 			focuses = {
-				ENG_imperial_federation
-				ENG_the_kings_party
-				ENG_organize_the_blackshirts
+				general_rearmament_focus
+				ENG_vickers_experimental_facility_focus
+				uk_commonwealth_focus
 			}
 		}
 		"ENG"={
@@ -93,8 +93,8 @@ bookmarks = {
 			}
 			focuses = {
 				GER_fuhrerprinzip
-				GER_the_peoples_victory
-				GER_glory_to_the_imperial_army
+				GER_remilitarize_the_rhineland
+				GER_danzig_or_war
 			}
 		}
 
@@ -124,8 +124,8 @@ bookmarks = {
 				ITA_re_fake_ns
 			}	
 			focuses = {
-				ITA_comandante_diavolo
-				ITA_il_sol_dell_avvenire
+				ITA_by_blood_alone
+				ITA_towards_a_greater_italy
 				ITA_a_colonial_empire
 			}		
 		}
@@ -139,7 +139,7 @@ bookmarks = {
 				ITA_re_fake_ns
 			}	
 			focuses = {
-				ITA_comandante_diavolo
+				ITA_by_blood_alone
 				ITA_to_live_as_a_lion
 				ITA_a_colonial_empire
 			}		
@@ -157,8 +157,8 @@ bookmarks = {
 			}
 			focuses = {
 				JAP_sea_purge_the_kodoha_faction
-				JAP_the_unthinkable_option
-				JAP_support_the_kodoha_faction
+				JAP_sea_greater_east_asian_co_prosperity_sphere
+				JAP_okadas_military_purge_speech
 			}
 		}
 
@@ -175,7 +175,7 @@ bookmarks = {
 			}
 			focuses = {
 				JAP_sea_purge_the_kodoha_faction
-				JAP_revere_the_emperor_destroy_the_traitors
+				JAP_sea_greater_east_asian_co_prosperity_sphere
 				JAP_okadas_military_purge_speech
 			}
 		}
@@ -189,9 +189,9 @@ bookmarks = {
 				SOV_politicized_military
 			}
 			focuses = {
-				SOV_behead_the_snake
-				SOV_the_supreme_soviet
-				SOV_reconvene_the_zemsky_sobor
+				SOV_reorganize_the_pc_of_heavy_industry
+				SOV_stalins_cult_of_personality
+				SOV_desperate_measures
 			}	
 		}
 		"SOV"={
@@ -204,9 +204,9 @@ bookmarks = {
 				SOV_politicized_military
 			}
 			focuses = {
-				SOV_behead_the_snake
+				SOV_reorganize_the_pc_of_heavy_industry
 				SOV_father_of_nations
-				SOV_the_supreme_soviet
+				SOV_desperate_measures
 			}	
 		}
 
@@ -225,9 +225,9 @@ bookmarks = {
 				CAN_conscription_crisis
 			}
 			focuses = {
-				CAN_skewer_the_eagle
-				CAN_north_american_alliance
-				CAN_join_comintern
+				CAN_war_fueled_economy
+				CAN_send_in_the_zombies
+				CAN_the_plan
 			}
 		}
 		"AST"={
@@ -238,22 +238,9 @@ bookmarks = {
 				AST_great_depression_1
 			}
 			focuses = {
-				AST_never_another_gallipoli
-				AST_support_indonesian_uprising
-				AST_delegation_to_china
-			}
-		}
-		"NZL"={
-			minor = yes
-			history = "NZL_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				
-			}
-			focuses = {
-				NZL_bob_semple_tank
-				NZL_independent_new_zealand
-				NZL_maori_volunteers
+				AST_fight_work_or_perish
+				AST_allied_works_council
+				AST_rats_of_tobruk
 			}
 		}
 		"SAF"={
@@ -266,8 +253,8 @@ bookmarks = {
 			}
 			focuses = {
 				SAF_secure_interests_in_africa
-				SAF_support_the_german_coup
-				SAF_anti_colonialist_crusade
+				SAF_war_measures_act
+				SAF_suppress_the_stormjaers
 			}
 		}
 
@@ -298,9 +285,9 @@ bookmarks = {
 				idea_RAJ_great_depression_1
 			}
 			focuses = {
-				RAJ_mahatma
-				RAJ_netaji
-				RAJ_a_peacock_prince
+				RAJ_the_dominion_of_india
+				RAJ_the_empires_workshop
+				RAJ_the_ordnance_factories_board
 			}
 		}
 
@@ -330,7 +317,7 @@ bookmarks = {
 				neutrality_idea
 			}
 			focuses = {
-				ROM_balkans_dominance
+				ROM_force_abdication
 				ROM_institute_royal_dictatorship
 				ROM_preserve_greater_romania
 			}
@@ -364,9 +351,9 @@ bookmarks = {
 				MEX_oil_concessions
 			}
 			focuses = {
-				MEX_focus_aztec_eagles
-				MEX_focus_hispanic_alliance
-				MEX_focus_smash_the_bureaucrats
+				MEX_focus_jefe_maximo
+				MEX_focus_national_bank
+				MEX_focus_soldaderas
 			}
 		}
 
@@ -382,8 +369,8 @@ bookmarks = {
 			}
 			focuses = {
 				SPA_caudillo_of_spain
-				SPA_no_compromise_on_carlist_ideals
-				SPR_anarchism_knows_no_borders
+				SPA_national_recovery
+				SPR_expand_the_axis_gold_trade
 			}
 		}
 
@@ -398,7 +385,7 @@ bookmarks = {
 				BUL_imro_01
 			}
 			focuses = {
-				BUL_the_fatherland_front
+				BUL_the_path_towards_a_greater_bulgaria
 				BUL_restore_the_bulgarian_patriarchate
 				BUL_prussia_of_the_balkans
 			}
@@ -427,7 +414,7 @@ bookmarks = {
 				FIN_sisu_2
 			}
 			focuses = {
-				FIN_red_finland
+				FIN_found_pohjolan_voima
 				FIN_winter_warfare
 				FIN_greater_finland
 			}
@@ -448,7 +435,7 @@ bookmarks = {
 			focuses = {
 				BRA_coffee_crisis_aftermath
 				BRA_tribunal_de_seguranca_nacional
-				BRA_end_the_state_of_emergency
+				BRA_defense_spending
 			}
 		}
 		HUN = {
@@ -462,9 +449,9 @@ bookmarks = {
 				HUN_hungarian_national_defense_association
 			}
 			focuses = {
-				wuw_HUN_renovato_imperii
 				wuw_HUN_strengthen_horthys_reign
-				wuw_HUN_reviving_the_spirit_of_1848
+				wuw_HUN_carrying_on_arpads_legacy
+				wuw_HUN_proclaim_greater_hungary
 			}
 		}
 		MAN = {
@@ -480,8 +467,8 @@ bookmarks = {
 			}
 			focuses = {
 				MAN_tsr_obedience
-				MAN_tsr_depose_puyi
-				MAN_tsr_claim_the_mandate_of_heaven
+				MAN_tsr_the_question_of_leadership
+				MAN_tsr_empire_of_manchukuo
 			}
 		}							
 		effect = {

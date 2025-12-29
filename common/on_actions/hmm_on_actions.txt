@@ -549,7 +549,6 @@ on_actions = {
 					FROM = {
 						allies = yes
 						NOT = { tag = SOV}
-						NOT = {tag = PER}
 					}
 				}
 				ENG = {

@@ -1,5 +1,4 @@
 capital = 126
-
 if = {
 	limit = {
 		NOT = {
@@ -14,27 +13,15 @@ if = {
 		NOT = {
 			has_dlc = "No Step Back"
 		}
-		has_dlc = "La Resistance"
 	}
-	set_oob = "ENG_1936_LaR"
+	set_oob = "ENG_1936"
 }
 if = {
 	limit = {
-		NOT = {
-			has_dlc = "La Resistance"
-		}
 		has_dlc = "No Step Back"
 	}
 	set_oob = "ENG_1936_nsb"
 }
-if = {
-	limit = {
-		has_dlc = "La Resistance"
-		has_dlc = "No Step Back"
-	}
-	set_oob = "ENG_1936_nsb_LaR"
-}
-
 starting_train_buffer = 4
 
 if = {

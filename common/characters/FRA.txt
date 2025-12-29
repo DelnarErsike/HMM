@@ -140,7 +140,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ brilliant_strategist cavalry_leader organizer war_hero trickster }
+			traits={ brilliant_strategist cavalry_leader organizer war_hero trickster tank_pre_grind skilled_staffer }
 			skill=4
 			attack_skill=4
 			defense_skill=5
@@ -159,7 +159,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ career_officer trait_cautious armor_officer panzer_leader trait_engineer tank_pre_grind }
+			traits={ career_officer trait_cautious armor_officer panzer_leader trait_engineer tank_pre_grind skilled_staffer }
 			skill=4
 			attack_skill= 4
 			defense_skill= 6
