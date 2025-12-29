@@ -4,6 +4,6 @@ tags={
 	"Historical"
 	"Gameplay"
 }
-name="HMM2"
+name="HMM"
 supported_version="1.17.3.0"
 remote_file_id="3365264825"
