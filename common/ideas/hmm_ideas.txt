@@ -91,6 +91,11 @@ ideas = {
 				resistance_damage_to_garrison = -1
 			}
 		}
+		ai_conscription_laws = {
+			modifier = {
+				mobilization_laws_cost_factor = 10
+			}
+		}
 		novols = {
 			allowed = {
 				always = no

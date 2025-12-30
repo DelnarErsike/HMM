@@ -101,6 +101,11 @@ on_actions = {
 					noresistance
 				}
 			}
+			HOL = {
+				add_ideas = {
+					ai_conscription_laws
+				}
+			}
 			every_country = {
 				add_ideas = {
 					Spies_no_capture
