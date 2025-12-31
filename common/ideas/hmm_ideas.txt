@@ -93,7 +93,7 @@ ideas = {
 		}
 		ai_conscription_laws = {
 			modifier = {
-				mobilization_laws_cost_factor = 10
+				mobilization_laws_cost_factor = 10000
 			}
 		}
 		novols = {
