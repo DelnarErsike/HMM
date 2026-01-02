@@ -16189,21 +16189,13 @@ focus = {
         search_filters = {FOCUS_FILTER_MILITARY_CHARACTER}
 
         completion_reward = {
-            random_army_leader = {
-                limit = {
-                    NOT = { has_trait = hill_fighter }   
-                }
-
+            RAJ_GOE_sam_manekshaw = {
                 add_trait = {
                     trait = hill_fighter
                 }
             }
 
-            random_army_leader = {
-                limit = {
-                    NOT = { has_trait = trait_mountaineer }   
-                }
-
+            RAJ_GOE_mohammad_usman = {
                 add_trait = {
                     trait = trait_mountaineer
                 }
