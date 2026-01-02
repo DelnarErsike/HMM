@@ -852,7 +852,7 @@ characters = {
 		}
 		
 		corps_commander = {
-			traits = {  panzer_leader trickster trait_engineer skilled_staffer tank_pre_grind cavalry_leader  organizer ranger commando urban_assault_specialist}
+			traits = {  panzer_leader trickster trait_engineer skilled_staffer cavalry_leader  organizer ranger commando urban_assault_specialist}
 			skill = 6
 			attack_skill = 6
 			defense_skill = 9

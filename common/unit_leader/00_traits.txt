@@ -3140,10 +3140,6 @@ leader_traits = {
 		type = all
 		trait_type = status_trait
 		
-		attack_skill = -1
-		defense_skill = -1
-		logistics_skill = -1
-		planning_skill = -1
 	}
 
 	motivated = { 
