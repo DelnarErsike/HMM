@@ -1046,7 +1046,7 @@ Technologies = {
                 add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 22000 }
             }
             else_if = {
-                limit = { date > 1942.1.31 }
+                limit = { date > 1941.12.31 }
                 add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 13000 }
                 add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 18000 }
             }
@@ -1099,22 +1099,26 @@ Technologies = {
             if = {
                 limit = { date > 1942.12.31 }
                 ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 13000 producer = FIN } }
-                GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 30000 producer = FIN } }
+                ITA = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 16000 producer = FIN } }
+                GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 14000 producer = FIN } }
             }
             else_if = {
                 limit = { date > 1942.9.31 }
                 ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 13000 producer = FIN } }
-                GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 24000 producer = FIN } }
+                ITA = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 10000 producer = FIN } }
+                GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 14000 producer = FIN } }
             }
             else_if = {
                 limit = { date > 1942.5.31 }
                 ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 13000 producer = FIN } }
-                GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 22000 producer = FIN } }
+                ITA = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 8000 producer = FIN } }
+                GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 14000 producer = FIN } }
             }
             else_if = {
-                limit = { date > 1942.1.31 }
+                limit = { date > 1941.12.31 }
                 ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 13000 producer = FIN } }
-                GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 18000 producer = FIN } }
+                ITA = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 4000 producer = FIN } }
+                GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 14000 producer = FIN } }
             }
             else_if = {
                 limit = { date > 1941.9.31 }
@@ -1194,7 +1198,7 @@ Technologies = {
                 add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 22000 }
             }
             else_if = {
-                limit = { date > 1942.1.31 }
+                limit = { date > 1941.12.31 }
                 add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 13000 }
                 add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 18000 }
             }
@@ -1247,22 +1251,26 @@ Technologies = {
             if = {
                 limit = { date > 1942.12.31 }
                 ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 13000 producer = FIN } }
-                GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 30000 producer = FIN } }
+                ITA = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 16000 producer = FIN } }
+                GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 14000 producer = FIN } }
             }
             else_if = {
                 limit = { date > 1942.9.31 }
                 ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 13000 producer = FIN } }
-                GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 24000 producer = FIN } }
+                ITA = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 10000 producer = FIN } }
+                GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 14000 producer = FIN } }
             }
             else_if = {
                 limit = { date > 1942.5.31 }
                 ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 13000 producer = FIN } }
-                GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 22000 producer = FIN } }
+                ITA = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 8000 producer = FIN } }
+                GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 14000 producer = FIN } }
             }
             else_if = {
-                limit = { date > 1942.1.31 }
+                limit = { date > 1941.12.31 }
                 ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 13000 producer = FIN } }
-                GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 18000 producer = FIN } }
+                ITA = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 4000 producer = FIN } }
+                GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 14000 producer = FIN } }
             }
             else_if = {
                 limit = { date > 1941.9.31 }

@@ -70,6 +70,10 @@ focus_tree = {
 			add = 100
 			tag = TUR
 		}
+		modifier = {
+			add = 100
+			tag = ICE
+		}
 	}
 	default = no
 }
