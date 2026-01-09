@@ -27,6 +27,8 @@ on_actions = {
 						ai_manpower = yes
 						ai_black = yes
 						tag = SWE
+						tag = POR
+						tag = TUR
 					}
 				}
 				country_lock_all_division_template = yes

@@ -148,6 +148,7 @@ ideas = {
 				trade_laws_cost_factor = 10000
 				conversion_cost_civ_to_mil_factor = 100
 				conversion_cost_mil_to_civ_factor = 100
+				ai_license_acceptance = -1000
 			}
 			
 		}

@@ -9,7 +9,7 @@ NDefines.NOperatives.INTEL_NETWORK_DETECTION_GLOBAL_FACTOR = 0
 NDefines.NProduction.MIN_LAND_EQUIPMENT_CONVERSION_RESOURCE_COST_FACTOR = 1	-- Minimum fraction of a land equipment's strategic resource cost that any conversion will cost.
 NDefines.NDiplomacy.LICENSE_ACCEPTANCE_TECH_DIFFERENCE = 200 		-- Acceptance modifier for each year of technology difference.
 NDefines.NDiplomacy.LICENSE_ACCEPTANCE_TECH_DIFFERENCE_BASE = 1000    -- Acceptance base for tech difference
-NDefines.NDiplomacy.LICENSE_ACCEPTANCE_OPINION_FACTOR = 30
+NDefines.NDiplomacy.EMBARGO_NEIGHBOUR_AI_WEIGHT = -100
 NDefines.NMilitary.TRAINING_MAX_DAILY_COUNTRY_EXP = 0
 NDefines.NDoctrines.MASTERY_BANK_CONVERSION_RATE = 1  -- The rate at which mastery gained when a track is finished or empty is "banked"
 --AI no lend lease
@@ -40,8 +40,8 @@ NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 30                           -- Up fr
 NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROLLED = 0
 NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROL_DIFF = 0
 NDefines.NGame.GAME_SPEED_SECONDS = { 1000.0, 0.25, 0.20, 0.12, 0.0 } 
-NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 720
-NDefines.NGame.LAG_DAYS_FOR_PAUSE = 30
+NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 999
+NDefines.NGame.LAG_DAYS_FOR_PAUSE = 999
 NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 14 							    -- WAS 48 | drastically cuts down on save file sizes after WW2 starts and well into barbarossa
 NDefines.NGame.MESSAGE_TIMEOUT_DAYS = 14					     	    -- WAS 60 | less messages lying around at the top of your screen
 

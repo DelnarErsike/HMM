@@ -131,10 +131,6 @@ if = {
 			limited_conscription
 			export_focus
 			civilian_economy
-			TUR_kemalist_army_officers_limited_power_loyal
-			TUR_sectarian_woes
-			TUR_disorganised_armed_forces
-			TUR_debt_council
 		}
 	
 		set_variable = { var = TUR_kemalist_officers_loyalty value = 1 }
