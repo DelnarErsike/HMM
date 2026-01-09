@@ -1219,9 +1219,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_expand_the_axis_gold_trade
-		available = {
-			NOT = { has_completed_focus = SPA_the_stabilization_plan }
-		}
 		bypass = {
 		}
 		prerequisite = { focus = SPA_spanish_austerity }

@@ -9,6 +9,7 @@ NDefines.NOperatives.INTEL_NETWORK_DETECTION_GLOBAL_FACTOR = 0
 NDefines.NProduction.MIN_LAND_EQUIPMENT_CONVERSION_RESOURCE_COST_FACTOR = 1	-- Minimum fraction of a land equipment's strategic resource cost that any conversion will cost.
 NDefines.NDiplomacy.LICENSE_ACCEPTANCE_TECH_DIFFERENCE = 200 		-- Acceptance modifier for each year of technology difference.
 NDefines.NDiplomacy.LICENSE_ACCEPTANCE_TECH_DIFFERENCE_BASE = 1000    -- Acceptance base for tech difference
+NDefines.NDiplomacy.LICENSE_ACCEPTANCE_OPINION_FACTOR = 0
 NDefines.NDiplomacy.EMBARGO_NEIGHBOUR_AI_WEIGHT = -100
 NDefines.NMilitary.TRAINING_MAX_DAILY_COUNTRY_EXP = 0
 NDefines.NDoctrines.MASTERY_BANK_CONVERSION_RATE = 1  -- The rate at which mastery gained when a track is finished or empty is "banked"
