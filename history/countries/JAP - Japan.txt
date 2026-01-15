@@ -317,12 +317,7 @@ add_ideas = {
 	JAP_japanese_armor_doctrine
 }
 
-IF = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	add_ideas = MTG_naval_treaty_adherent
-}
+
 
 
 
