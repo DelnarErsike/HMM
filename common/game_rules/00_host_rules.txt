@@ -218,6 +218,26 @@ multi_charge_large_caliber_gun= {
 		desc = "###"
 	}
 }
+max_submarine_tech= {
+	name = "Select if Submarine 3 and 4 are allowed. "
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_ignite_civil_war"
+	default = {
+		name = sub2
+		text = "You CANNOT research Submarine 3 or 4."
+		desc = "###."
+	}
+	option = {
+		name = sub3
+		text = "You CAN research Submarine 3 and Snorkel 1."
+		desc = "###"
+	}
+	option = {
+		name = sub4
+		text = "You CAN research Submarine 4 and Snorkel 2."
+		desc = "###"
+	}
+}
 sov_boost = {
 	name = "Soviet Civ Boost"
 	group = "HMM Rules"
