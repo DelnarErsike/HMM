@@ -162,7 +162,6 @@ ideas = {
 			modifier = {
 				enemy_operative_detection_chance = -200
 				enemy_operative_capture_chance_factor = -2
-				enemy_operative_forced_into_hiding_time_factor = -200
 			}
 		}
 		ai_tradelaw ={
