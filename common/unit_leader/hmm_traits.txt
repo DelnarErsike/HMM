@@ -54,7 +54,7 @@ leader_traits = {
 				trait_trickster_xp_gain_factor = -0.99
 				trait_engineer_xp_gain_factor = -0.99
 				terrain_trait_xp_gain_factor = -0.99	
-				experience_gain_factor = -0.99
+				experience_gain_factor = -1
 		}
 		
 		new_commander_weight = {
