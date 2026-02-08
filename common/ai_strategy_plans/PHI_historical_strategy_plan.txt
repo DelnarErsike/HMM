@@ -4,24 +4,10 @@ PHI_historical_plan = {
 
 	allowed = {
 		original_tag = PHI
-		has_dlc = "No Compromise, No Surrender"
 	}
 
 	enable = {
-		OR = {
-			AND = {
-				is_historical_focus_on = yes 
-				has_game_rule = {
-					rule = PHI_AI_BEHAVIOR
-					option = DEFAULT
-				}
-			}
-			has_country_flag = PHI_AI_RANDOM_HISTORICAL
-			has_game_rule = {
-				rule = PHI_ai_behavior
-				option = HISTORICAL
-			}
-		}
+		is_historical_focus_on = yes 
 	}
 
 	abort = {
@@ -34,8 +20,10 @@ PHI_historical_plan = {
 		PHI_commonwealth_of_the_philippines
 		PHI_align_with_the_usa
 		PHI_peg_the_peso_to_the_dollar
-		PHI_american_capital_injection
 		PHI_quezon_city
+		PHI_offshore_patrol
+		PHI_cavite_naval_base
+		PHI_american_capital_injection
 		PHI_national_fiscal_policy
 		PHI_subsidies
 		PHI_reduce_unneccessary_expenditure
