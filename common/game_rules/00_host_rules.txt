@@ -424,6 +424,31 @@ playable_iraq = {
 		desc = "Iraq is playable"
 	}
 }
+spanish_production = {
+	name = "Spanish Production"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_industry"
+	option = {
+		name = ger_mech
+		text = "GGerman Lend Lease for Mech"
+		desc = "It progressively gets better as time passes"
+	}
+	option = {
+		name = bul_mech
+		text = "BGerman-Bulgarian Lend Lease for Mech"
+		desc = "It progressively gets better as more time passes, sent to Bulgaria"
+	}
+	option = {
+		name = mixer
+		text = "4Germany can choose either BUL or GER"
+		desc = "It progressively gets better as time passes, Germany can choose between itself and Bulgaria"
+	}
+	default = {
+		name = off
+		text = "RGermany doesn't get a button for Mech Lend Lease"
+		desc = "No DDAY wall"
+	}
+}
 finish_production = {
 	name = "Finnish Production"
 	group = "HMM Rules"
