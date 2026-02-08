@@ -129,7 +129,7 @@ if = {
 		set_variable = { var = TUR_kemalist_power_variable value = 5 }
 		add_ideas = {
 			limited_conscription
-			export_focus
+			free_trade
 			civilian_economy
 		}
 	
@@ -141,7 +141,7 @@ if = {
 		limit = { NOT = { has_dlc = "Battle for the Bosporus" }	}
 		add_ideas = {
 			limited_conscription
-			export_focus
+			free_trade
 			civilian_economy
 		}
 	}
