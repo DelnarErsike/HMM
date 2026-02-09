@@ -1561,8 +1561,8 @@
 					instant_build = yes
 				}
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = Cockatoo_doe
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = AST_cockatoo_doe_organization
 		}
 
 			
@@ -1587,8 +1587,8 @@
 				}
 				set_state_flag = AST_cockatoo_island_shipyards_DY
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = Cockatoo_doe
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = AST_cockatoo_doe_organization
 		}
 	}
 	
@@ -1633,12 +1633,13 @@
 					instant_build = yes
 				}
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = evans_deakin_co
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = AST_evans_deakin_co_organization
 		}
 
 		completion_reward = {
 			navy_experience = 25
+			add_ideas = british_convoy_discount
 			random_owned_controlled_state = {
 				prioritize = { 521 }
 				limit = {
@@ -1658,8 +1659,8 @@
 				}
 				set_state_flag = AST_kangaroo_point_shipyards_DY
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = evans_deakin_co
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = AST_evans_deakin_co_organization
 		}
 	}
 	
