@@ -464,3 +464,23 @@ finish_production = {
 		desc = "Use if Finland has a player on it"
 	}
 }
+tradebacks = {
+	name = "No Tradebacks Idea"
+	group = "HMM Rules"
+	icon = "GFX_decision_category_generic_trade"
+	default = {
+		name = off
+		text = "GOff"
+		desc = "No tradeback idea (Recommmended)"
+	}
+	option = {
+		name = on
+		text = "ROn"
+		desc = "Everyone has a tradeback idea that gives -100% missing resource penalty"
+	}
+	option = {
+		name = only_axis
+		text = "YOnly Axis"
+		desc = "The axis has a tradeback idea that gives -100% missing resource penalty"
+	}
+}

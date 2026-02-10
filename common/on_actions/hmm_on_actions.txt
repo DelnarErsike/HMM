@@ -150,6 +150,49 @@ on_actions = {
 					days = 912
 				}
 			}
+			
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = tradebacks
+						option = on
+					}
+				}
+				every_country = {
+					limit = {
+						is_playable_country = yes
+					}
+					add_ideas = no_tradebacks
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = tradebacks
+						option = only_axis
+					}
+				}
+				every_country = {
+					limit = {
+						AND = {
+							is_playable_country = yes
+							NOT = {
+								tag = USA
+								tag = ENG
+								tag = CAN
+								tag = BRA
+								tag = MEX
+								tag = SAF
+								tag = AST
+								tag = NZL
+								tag = RAJ
+								tag = FRA
+							}
+						}
+					}
+					add_ideas = no_tradebacks
+				}
+			}
 		}
 	}
 	on_monthly = {
