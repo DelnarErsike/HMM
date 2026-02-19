@@ -1385,7 +1385,7 @@ focus_tree = {
 					category = cat_heavy_fighter
 				}
 				add_doctrine_cost_reduction = {
-					name = ENG_fighter_command_focus #land_doc_bonus
+					name = fighter_command_focus #land_doc_bonus
 					cost_reduction = 0.5
 					uses = 1
 					category = air_doctrine
@@ -1434,7 +1434,7 @@ focus_tree = {
 					category = tactical_bomber
 				}
 				add_doctrine_cost_reduction = {
-					name = ENG_bomber_command_focus #land_doc_bonus
+					name = bomber_command_focus #land_doc_bonus
 					cost_reduction = 0.5
 					uses = 1
 					category = air_doctrine
@@ -1483,7 +1483,7 @@ focus_tree = {
 					category = cas_bomber
 				}
 				add_doctrine_cost_reduction = {
-					name = ENG_coastal_command_focus #land_doc_bonus
+					name = coastal_command_focus #land_doc_bonus
 					cost_reduction = 0.5
 					uses = 1
 					category = air_doctrine
@@ -1695,7 +1695,7 @@ focus_tree = {
 				name = ENG_secure_the_imperial_shipping_routes
 				bonus = 1.0
 				uses = 2
-				category = cl_tech
+				category = ca_tech
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = ENG_secure_the_imperial_shipping_routes

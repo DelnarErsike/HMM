@@ -534,13 +534,7 @@ on_actions = {
 			#make sure warlords don't use the same guy
 			if = {
 				limit = {
-					OR = {
-						original_tag = YUN
-						original_tag = SIK
-						original_tag = GXC
-						original_tag = SHX
-						original_tag = XSM
-					}
+					is_chinese_warlord = yes
 				}
 				if = {
 					limit = {
