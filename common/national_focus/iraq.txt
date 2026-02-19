@@ -181,6 +181,8 @@ focus_tree = {
 					INDENT = "    "
 				}
 			}
+			custom_effect_tooltip = newline_tt
+			custom_effect_tooltip = can_flood_plains_tt #Narratively speaking this would work slightly better in Extensive Irrigation Projects, however we include it here so that it can be used on a reasonably appropriate historical timeline by the AI.
 
 			
 		}
