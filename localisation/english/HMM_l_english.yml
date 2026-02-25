@@ -49,7 +49,7 @@ hmm.7.n:0 "no"
 
 WAR_join:0 "Auto Join War"
 
-
+ # Tech Decisions
 add_convoy:0 "Add Convoy"
 auto_mech:0 "Cheap Mechanized"
 hosttool_aa2:0 "Anti-Air Equipment 2"
@@ -67,6 +67,7 @@ hosttool_armored_train:0 "Armored Train"
 auto_basic_med:0 "Basic Medium Tank Chassis"
 auto_improved_med:0 "Improved Medium Tank Chassis"
 
+ # Annex Decisions
 annex_South_Africa:0 "Annex South Africa"
 annex_Ethopia:0 "Annex Ethiopia"
 annex_Mexiko:0 "Annex Mexico"
@@ -77,6 +78,7 @@ annex_manchukuo:0 "Annex Manchukuo"
 annex_new_zealand:0 "Annex New Zealand"
 annex_philippines:0 "Annex Philippines"
 
+ # Moving Capital City
 move_capital_to_dublin:0 "Move Capital to Dublin"
 move_capital_to_cascablanca:0 "Move Capital to Casablanca"
 move_capital_to_gabon:0 "Move Capital to Gabon"
@@ -86,12 +88,13 @@ move_capital_to_Vladivostok:0 "Move Capital to Vladivostok"
 SOV_assist_republican_spain:0 "Assist Republican Spain"
 continuous_recruitment_drive:0 "Continuous Recruitment Drive"
 
+
+ # Spain and Finland Simulators
 GER_started_ll_mech:0 "Started Mech. Delivery"
 GER_mech_delivery_SPR:0 "Start Spanish Mech. Delivery"
 GER_mech_delivery_SPR_to_BUL:0 "Start Spanish Mech. Delivery to Bulgaria"
 bul_caudillo:0 "Bulgarian Caudillo"
 bul_caudillo_2:0 "Bulgarian Caudillo"
-HMM_innovative_weapons_designer:0 "Innovative Weapons Designer"
 GER_mech_delivery_SPR_to_BUL:0 "Start Spanish Mech. Delivery to Bulgaria"
 GER_recieving_ll_mech_1a:0 "Receiving Spanish Mech. Delivery"
 GER_recieving_ll_mech_2a:0 "Receiving Spanish Mech. Delivery"
@@ -106,6 +109,10 @@ GER_recieving_ll_gun_2a:0 "Receiving Gun. Delivery"
 GER_gun_delivery_FIN:0 "Started Gun. Delivery"
 GER_started_ll_gun:0 "Started Gun. Delivery"
 GER_annex_FIN:0"Economic Annex of Finland"
+
+ # Custom Ideas
+HMM_innovative_weapons_designer:0 "Innovative Weapons Designer"
+ger_eco_nerf:0 "No Strategic Bombing Economy Nerf"
 
   # Template decisions category and decisions
  templates:0 "Division Templates"

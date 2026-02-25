@@ -34,6 +34,7 @@ ideas = {
 				navy_fuel_consumption_factor = -0.99
 			}
 		}
+
 		WAR_join = {
 			allowed = {
 				always = no
@@ -52,6 +53,7 @@ ideas = {
 					}
 			}
 			}
+
 			no_tradebacks = {
 			cancel = {
 				GER = {
@@ -74,6 +76,14 @@ ideas = {
 				production_factory_start_efficiency_factor = 0.8
 			} 
 		}
+
+		ger_eco_nerf = {
+			picture = combined_bomber_offensive
+			modifier = { 
+				production_speed_arms_factory_factor = -0.2
+			} 
+		}
+
 		ai_idea = {
 			cancel = {
 				is_ai = no

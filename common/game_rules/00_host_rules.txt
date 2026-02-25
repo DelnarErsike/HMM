@@ -424,6 +424,26 @@ playable_iraq = {
 		desc = "Iraq is playable"
 	}
 }
+strat_bombing = {
+	name = "Strategic Bombing"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_industry"
+	default = {
+		name = allowed
+		text = "GAllowed"
+		desc = "Strategic Bombers allowed and German Eco Unnerfed"
+	}
+	option = {
+		name = banned
+		text = "RBanned"
+		desc = "Strategic Bombers banned and German Eco Nerfed"
+	}
+	option = {
+		name = banned_no_eco_nerf
+		text = "YBanned and German Eco Unnerfed"
+		desc = "Strategic Bombers banned and German Eco Unnerfed"
+	}
+}
 spanish_production = {
 	name = "Spanish Production"
 	group = "HMM Rules"

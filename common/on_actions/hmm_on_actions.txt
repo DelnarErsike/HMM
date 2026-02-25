@@ -198,7 +198,8 @@ on_actions = {
 	on_monthly = {
 		effect = {
 			if = {
-				limit = {date > 1941.8.31
+				limit = {
+				date > 1941.8.31
 				NOT = { GER = {has_war_with = SOV}}
 			}
 				GER = {
@@ -354,6 +355,21 @@ on_actions = {
 				BUL = {
 					remove_country_leader_trait = bul_caudillo
 					add_country_leader_trait = bul_caudillo_2
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+					rule = strat_bombing
+					option = banned
+					}
+					date > 1940.1.1
+				}
+				GER = {
+					add_timed_idea = {
+    					idea = ger_eco_nerf
+    					days = 365
+					}
 				}
 			}
 		}
