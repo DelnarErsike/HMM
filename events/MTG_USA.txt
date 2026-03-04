@@ -4462,3 +4462,129 @@ country_event = {
 		add_political_power = 100
 	}
 }
+
+
+
+add_namespace = mtg_usa_hmm
+#Event for capitulation of Japan (Fate of China)
+country_event = {
+	id = mtg_usa_hmm.1
+	title = mtg_usa_hmm.1.t
+	desc = mtg_usa_hmm.1.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	option = { #British Administration
+		name = mtg_usa_hmm.1.a
+
+			every_state = {
+				limit = {
+					is_core_of = CHI
+					NOT = {
+						state = 326
+						state = 729
+					}
+				}
+			transfer_state_to = ENG
+			}
+			every_state = {
+				limit = {
+					is_core_of = KOR
+				}
+			transfer_state_to = ENG
+			}
+			every_state = {
+				limit = {
+					is_core_of = SIA
+				}
+			transfer_state_to = ENG
+			}
+
+		hidden_effect = {
+			USA = {
+				country_event = { id = mtg_usa_hmm.2 days = 2 }
+			}
+		}				
+	}
+
+	option = { #French Administration
+		name = mtg_usa_hmm.1.b
+			every_state = {
+				limit = {
+					is_core_of = CHI
+					NOT = {
+						state = 326
+						state = 729
+					}
+				}
+			transfer_state_to = FRA
+			}
+			every_state = {
+				limit = {
+					is_core_of = KOR
+				}
+			transfer_state_to = FRA
+			}
+
+			every_state = {
+				limit = {
+					is_core_of = SIA
+				}
+			transfer_state_to = FRA	
+			}
+
+
+		hidden_effect = {
+			USA = {
+				country_event = { id = mtg_usa_hmm.2 days = 2 }
+			}
+		}	
+	}
+
+	option = { #American Administration (Status Quo)
+		name = mtg_usa_hmm.1.c
+
+		hidden_effect = {
+			USA = {
+				country_event = { id = mtg_usa_hmm.2 days = 2 }
+			}
+		}
+	}
+}
+
+
+#Event for capitulation of Japan, the following event of "Fate of China" (Fate of Japan)
+country_event = {
+	id = mtg_usa_hmm.2
+	title = mtg_usa_hmm.2.t
+	desc = mtg_usa_hmm.2.d
+	picture = GFX_report_event_generic_conference
+
+	is_triggered_only = yes
+
+	option = { #British Administration
+		name = mtg_usa_hmm.2.a
+
+			every_state = {
+				limit = {
+					is_core_of = JAP
+				}
+			transfer_state_to = ENG
+			}			
+	}
+
+	option = { #French Administration
+		name = mtg_usa_hmm.2.b
+			every_state = {
+				limit = {
+					is_core_of = JAP
+				}
+			transfer_state_to = FRA
+			}	
+	}
+
+	option = { #American Administration (Status Quo)
+		name = mtg_usa_hmm.2.c
+	}
+}

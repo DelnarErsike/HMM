@@ -47,6 +47,20 @@ hmm.6.a:0 "integrate RAJ"
 hmm.7.y:0 "yes"
 hmm.7.n:0 "no"
 
+### Japan Capitulation Script
+
+mtg_usa_hmm.1.t:0 "The Fate of China"
+mtg_usa_hmm.1.d:0 "We have successfully stopped the Japanese Aggression, and they are no longer a threat to us and our Allies.\nNow, until a proper peace treaty has been signed, we need to decide who is going to pacify the lands of China."
+mtg_usa_hmm.1.a:0 "It should be under British occupation."
+mtg_usa_hmm.1.b:0 "It should be under French occupation."
+mtg_usa_hmm.1.c:0 "It should be under American occupation."
+
+mtg_usa_hmm.2.t:0 "The Fate of Japan"
+mtg_usa_hmm.2.d:0 "Now that we have decided on who's handling China, it's time to decide what do we do about mainland Japan."
+mtg_usa_hmm.2.a:0 "It should be under British occupation."
+mtg_usa_hmm.2.b:0 "It should be under French occupation."
+mtg_usa_hmm.2.c:0 "It should be under American occupation."
+
 WAR_join:0 "Auto Join War"
 
  # Tech Decisions

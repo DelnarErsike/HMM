@@ -245,11 +245,15 @@ hmm_capitulations_on_actions = {
 			transfer_navy = { target = USA }
 		}
 		USA = {
+			country_event = { id = mtg_usa_hmm.1 days = 1 }
+		}
+		USA = {
 			annex_country = {
 				target = JAP
 				transfer_troops = no
 			}
 		}
+
 	}
 
 	# Soviet Union
