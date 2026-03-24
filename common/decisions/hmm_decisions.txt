@@ -1050,6 +1050,18 @@ Technologies = {
                     }
                 }
 			}
+			SPR = {
+				give_resource_rights = { receiver = ITA state = 792}
+				give_resource_rights = { receiver = ITA state = 791}
+				give_resource_rights = { receiver = ITA state = 790}
+				give_resource_rights = { receiver = ITA state = 788}
+				give_resource_rights = { receiver = ITA state = 166}
+				give_resource_rights = { receiver = ITA state = 174}
+				give_resource_rights = { receiver = ITA state = 173}
+				give_resource_rights = { receiver = ITA state = 170}
+				give_resource_rights = { receiver = ITA state = 165}
+				give_resource_rights = { receiver = ITA state = 41}
+			}
 		}
 	}
     GER_mech_delivery_SPR_to_BUL = {
@@ -1133,6 +1145,18 @@ Technologies = {
                         mech_cost_upgrade = 5
                     }
                 }
+			}
+			SPR = {
+				give_resource_rights = { receiver = ITA state = 792}
+				give_resource_rights = { receiver = ITA state = 791}
+				give_resource_rights = { receiver = ITA state = 790}
+				give_resource_rights = { receiver = ITA state = 788}
+				give_resource_rights = { receiver = ITA state = 166}
+				give_resource_rights = { receiver = ITA state = 174}
+				give_resource_rights = { receiver = ITA state = 173}
+				give_resource_rights = { receiver = ITA state = 170}
+				give_resource_rights = { receiver = ITA state = 165}
+				give_resource_rights = { receiver = ITA state = 41}
 			}
 		}
 	}
