@@ -144,14 +144,6 @@ country_event = {
 		}
 		add_war_support = 0.05
 	}
-
-	option = {
-		name = election.3.b
-		ai_chance = {
-			base = 0
-		}
-		add_stability = -0.05
-	}
 }
 
 # Fascists in Government?
