@@ -110,7 +110,7 @@ focus_tree = {
 
 	default = no
 
-	continuous_focus_position = { x = 20 y = 1200 }
+	continuous_focus_position = { x = 8750 y = 1400 }
 
 
 
@@ -1446,84 +1446,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = JAP_sea_mil_tech_coop_with_germany
-		icon = GFX_focus_BRA_acquire_german_tanks
-		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = 0
-		y = 1
-		relative_position_id = JAP_sea_tripartite_pact
-
-		prerequisite = { focus = JAP_sea_tripartite_pact }
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			is_subject = no
-			GER = {
-				has_government = ROOT
-			}
-			NOT = { has_war_with = GER }
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			
-			add_tech_bonus = {
-				name = JAP_german_rocketry
-				bonus = 0.5
-				uses = 1
-				category = rocketry	
-			}
-			add_tech_bonus = {
-				name = JAP_sea_mil_tech_coop_with_germany
-				bonus = 0.5
-				uses = 1
-				category = armor	
-			}
-			add_tech_bonus = {
-				name = JAP_sea_mil_tech_coop_with_germany
-				bonus = 0.5
-				uses = 1
-				category = cat_mechanized_equipment	
-			}
-			add_tech_bonus = {
-				name = JAP_sea_mil_tech_coop_with_germany
-				bonus = 0.25
-				uses = 1
-				category = air_equipment	
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_ideas = JAP_german_tech_exchange
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			every_country_with_original_tag = {
-				original_tag_to_check = GER
-				limit = {
-					has_government = fascism
-				}
-				add_to_tech_sharing_group = JAP_german_rocketry
-				ROOT = { add_to_tech_sharing_group = JAP_german_rocketry }
-			}
-			
-		}
-	}
 
 	focus = {
 		id = JAP_imperial_rule_assistance_association
@@ -3694,7 +3616,7 @@ focus_tree = {
 		id = JAP_invest_in_senbu
 		icon = GFX_focus_generic_concessions
 		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = 0
+		x = -2
 		y = 1
 		relative_position_id = JAP_revisit_the_thirteen_demands
 
@@ -3738,229 +3660,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = JAP_establish_mongol_military_government
-		icon = GFX_focus_JAP_establish_the_mongol_military_government
-		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = -2
-		y = 1
-		relative_position_id = JAP_revisit_the_thirteen_demands
-
-		prerequisite = { focus = JAP_revisit_the_thirteen_demands }
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			MEN = {
-				exists = yes
-				is_subject = no
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
-		}
-
-		bypass = {
-			MEN = {
-				is_ally_with = ROOT
-			}
-		}
-
-		will_lead_to_war_with = MEN
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
-
-		completion_reward = {
-
-			MEN = {
-				country_event = {
-					id = SEA_japan_foreign_policy.1
-					hours = 6
-					random_hours = 12
-				}	
-			}
-			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-				add_political_power = 25
-
-				custom_effect_tooltip = generic_skip_one_line_tt
-
-				set_autonomy = {
-					target = MEN
-					autonomous_state = autonomy_wtt_imperial_protectorate
-					end_wars = no
-					end_civil_wars = no
-				}
-
-				custom_effect_tooltip = generic_skip_one_line_tt
-
-				MEN = {
-					drop_cosmetic_tag = yes
-					set_cosmetic_tag = MEN_mongol_military_government_tag
-				}
-			}
-			
-		}
-	}
-
-
-	focus = {
-		id = JAP_reorganize_the_united_autonomous_government
-		icon = GFX_focus_JAP_reorganize_the_united_autonomous_government
-		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = -1
-		y = 1
-		relative_position_id = JAP_establish_mongol_military_government
-
-		prerequisite = { focus = JAP_establish_mongol_military_government }
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			has_subject = MEN
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_HISTORICAL }
-
-		completion_reward = {
-			
-			MEN = {
-				country_event = {
-					id = SEA_japan_foreign_policy.14
-					hours = 2
-				}	
-			}
-			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-				MEN = {
-					drop_cosmetic_tag = yes
-					set_cosmetic_tag = MEN_autonomy
-
-					add_state_claim = 616 
-					add_state_claim = 1040
-
-					add_political_power = 100
-					add_war_support = 0.05
-					add_manpower = 5000
-				}
-			}
-			
-		}
-	}
-
-	focus = {
-		id = JAP_mengjiang_united_autonomous_government
-		icon = GFX_focus_JAP_mengjiang_united_autonomous_government
-		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = 0
-		y = 1
-		relative_position_id = JAP_reorganize_the_united_autonomous_government
-
-		prerequisite = { focus = JAP_reorganize_the_united_autonomous_government }
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			has_subject = MEN
-			IF = {
-				limit = {
-					has_dlc = "No Compromise, No Surrender"
-				}
-				OR = {
-					has_completed_focus = JAP_the_imperial_colors
-					has_completed_focus = JAP_imperial_rule_assistance_association
-				}
-			}
-			ELSE = {
-				has_completed_focus = JAP_imperial_rule_assistance_association
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_HISTORICAL }
-
-		completion_reward = {
-			
-			MEN = {
-				country_event = {
-					id = SEA_japan_foreign_policy.21
-					hours = 2
-				}	
-			}
-			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-				MEN = {
-					IF = {
-						limit = {
-							JAP = {
-								OR = {
-									has_completed_focus = JAP_sea_purge_the_kodoha_faction
-									has_government = fascism
-								}
-							}
-							NOT = {
-								has_government = fascism
-							}
-						}
-						set_politics = {
-							ruling_party = fascism
-							elections_allowed = no
-						}	
-						add_popularity = {
-							ideology = fascism
-							popularity = 0.25
-						}	
-						custom_effect_tooltip = generic_skip_one_line_tt
-					}
-
-					drop_cosmetic_tag = yes
-					set_cosmetic_tag = MEN_mengjiang_autonomy
-
-					custom_effect_tooltip = generic_skip_one_line_tt
-
-					add_state_core = 616
-					add_state_core = 1040
-
-					custom_effect_tooltip = generic_skip_one_line_tt
-
-					add_ideas = MEN_true_mongol_state
-				}
-			}
-			
-		}
-	}
-
 
 	focus = {
 		id = JAP_reinforce_the_beijing_garrison
@@ -3985,9 +3684,6 @@ focus_tree = {
 				is_ally_with = CHI
 			}
 			OR = {
-				NOT = {
-					has_completed_focus = JAP_ensure_temporary_peace_with_china
-				}
 				AND = {
 					has_country_flag = {
 					 	flag = JAP_chinese_japanese_neutrality_pact_flag
@@ -4265,114 +3961,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = JAP_strategic_offensives
-		icon = GFX_goal_generic_position_armies
-		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = -1
-		y = 1
-		relative_position_id = JAP_reinforce_the_beijing_garrison
-
-		prerequisite = { focus = JAP_reinforce_the_beijing_garrison }
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			any_enemy_country = {
-				is_literally_china = yes
-			}
-			NOT = {
-				has_idea = JAP_surprise_invasion_idea
-			}
-		}
-
-		bypass = {
-			OR = {
-				owns_state = 613
-				CHI = {
-					is_subject_of = ROOT
-				}
-			}
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_HISTORICAL }
-
-		completion_reward = {
-
-			custom_effect_tooltip = JAP_strategic_offensives_tt
-
-			IF = {
-				limit = {
-					USA = {
-						has_war = no
-					}
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				USA = { add_war_support = 0.05 }
-			}
-				
-			
-		}
-	}
-
-	focus = {
-		id = JAP_intensify_anti_guerilla_operations
-		icon = GFX_focus_generic_attack_chinese_soviets
-		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = -1
-		y = 2
-		relative_position_id = JAP_strategic_offensives
-
-		prerequisite = { focus = JAP_strategic_offensives }
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			any_controlled_state = {
-				OR = {
-					has_dynamic_modifier = {
-						modifier = PRC_guerilla_cells_active_1
-					}
-					has_dynamic_modifier = {
-						modifier = PRC_guerilla_cells_active_2
-					}
-					has_dynamic_modifier = {
-						modifier = PRC_anti_japanese_base
-					}
-				}
-			}	
-		}
-
-		bypass = {
-			
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_HISTORICAL }
-
-		completion_reward = {
-
-			custom_effect_tooltip = JAP_intensify_anti_guerilla_operations_tt
-				
-			
-		}
-	}
-
 
 
 	focus = {
@@ -4380,7 +3968,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civilian
 		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
 		x = 0
-		y = 3
+		y = 1
 		relative_position_id = JAP_reinforce_the_beijing_garrison
 
 		prerequisite = { focus = JAP_reinforce_the_beijing_garrison }
@@ -4474,26 +4062,7 @@ focus_tree = {
 		}
 
 		available = {
-			JAP_naval_faction_is_not_subdued = yes
-			OR = {
-				NOT = {
-					has_completed_focus = JAP_hokushin_ron
-				}
-				AND = {
-					has_country_flag = {
-					 	flag = JAP_hokushin_ron_started_flag
-					 	days > 180
-					} 
-					custom_trigger_tooltip = {
-						tooltip = JAG_hokushin_ron_focus_days_tt
-						has_country_flag = {
-							flag = JAP_hokushin_ron_started_flag
-							days > 180
-						}
-					}
-				}
-			}
-			
+			JAP_naval_faction_is_not_subdued = yes	
 		}
 
 		bypass = {
