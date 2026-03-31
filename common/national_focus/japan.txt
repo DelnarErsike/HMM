@@ -5246,9 +5246,6 @@ focus_tree = {
 							}
 						}
 					}
-					OR = {
-						16 = { NOT = { is_controlled_by = FRA } } #Paris has fallen
-					}
 				}
 				custom_trigger_tooltip = {
 					tooltip = JAP_demand_tonkinese_bases_2_tt
