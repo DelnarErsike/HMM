@@ -3683,21 +3683,6 @@ focus_tree = {
 				has_war_with = CHI 
 				is_ally_with = CHI
 			}
-			OR = {
-				AND = {
-					has_country_flag = {
-					 	flag = JAP_chinese_japanese_neutrality_pact_flag
-					 	days > 365
-					} 
-					custom_trigger_tooltip = {
-						tooltip = JAG_chinese_neutality_pact_focus_days_tt
-						has_country_flag = {
-							flag = JAP_chinese_japanese_neutrality_pact_flag
-							days > 365
-						}
-					}
-				}
-			}
 		}
 
 		bypass = {
