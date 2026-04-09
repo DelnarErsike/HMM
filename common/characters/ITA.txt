@@ -341,11 +341,11 @@ characters = {
 		}
 		
 		corps_commander = {
-			traits = { armor_officer war_hero  infantry_leader organizer commando}
+			traits = { armor_officer war_hero infantry_leader organizer commando trickster }
 			skill = 6
 			attack_skill = 4
-			defense_skill = 3
-			planning_skill = 2
+			defense_skill = 4
+			planning_skill = 4
 			logistics_skill = 4
 			legacy_id = 0
 		}
@@ -416,12 +416,12 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { career_officer trait_cautious }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			traits = { career_officer trait_cautious infantry_leader commando trickster }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
 			legacy_id = 0
 			visible = { has_government = fascism }
 		}
@@ -437,12 +437,12 @@ characters = {
 		}
 		
 		corps_commander = {
-			traits = { infantry_officer career_officer }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			traits = { infantry_officer career_officer infantry_leader commando trickster }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
 			legacy_id = 0
 			visible = { has_government = fascism }
 		}
@@ -681,12 +681,12 @@ characters = {
 		}
 		
 		corps_commander = {
-			traits = { infantry_officer }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			traits = { infantry_officer infantry_leader commando trickster }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
 			legacy_id = 0
 		}
 	}
