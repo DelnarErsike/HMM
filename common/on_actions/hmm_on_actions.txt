@@ -108,6 +108,11 @@ on_actions = {
 					ai_conscription_laws
 				}
 			}
+			GER = {
+				add_ideas = {
+					axis_fuel
+				}
+			}
 			every_country = {
 				add_ideas = {
 					Spies_no_capture
@@ -371,6 +376,14 @@ on_actions = {
     					idea = ger_eco_nerf
     					days = 365
 					}
+				}
+			}
+			if = {
+				limit = {
+					date > 1939.4.31
+				}
+				SWE = {
+					give_military_access = GER
 				}
 			}
 		}

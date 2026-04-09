@@ -83,6 +83,12 @@ ideas = {
 				production_speed_arms_factory_factor = -0.2
 			} 
 		}
+		axis_fuel = {
+            picture = generic_stockpile_fuel
+            modifier = {
+                base_fuel_gain = 3122
+            }
+        }
 
 		ai_idea = {
 			cancel = {
