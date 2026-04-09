@@ -29,6 +29,11 @@ NDefines.NNavy.RESOURCE_ORIGIN_PRIORITY = 3								-- Default convoy priority fo
 NDefines.NNavy.RESOURCE_EXPORT_PRIORITY = 4								-- Default convoy priority for export trade
 NDefines.NNavy.RESOURCE_LENDLEASE_PRIORITY = 5                          -- Default convoy priority for export lend lease
 
+---LOGI STRIKE NERFS---
+
+NDefines.NSupply.BASE_TRUCK_HP = 1000.0
+NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_RAILWAY_DAMAGE_SPILL_FACTOR = 0 -- Portion of train damage to additionally deal to railways
+
 
 -- QOL
 NDefines.NMilitary.PROMOTE_LEADER_CP_COST = 0.1
