@@ -1832,6 +1832,7 @@ faction_goal_develop_ploiesti_oil_fields = {
 		
 	}
 	visible = {
+		always = no
 		46 = { is_controlled_by_ROOT_or_ally = yes }
 	}
 	available = {
