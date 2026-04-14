@@ -23,8 +23,6 @@ state={
 			air_base = 3
 			1047 = { # Guangzhou
 				naval_base = 5
-				coastal_bunker = 1
-				bunker = 1
 			}
 
 		}
