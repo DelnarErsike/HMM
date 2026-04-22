@@ -216,7 +216,7 @@ on_actions = {
 			}
 			if = {
 				limit = {
-					date > 1941.5.31
+					date > 1941.8.31
 					NOT = { JAP = {has_war_with = USA}}
 				}
 				JAP = {
