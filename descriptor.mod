@@ -1,9 +1,9 @@
-version="1.16.5"
+version="1.18"
 tags={
 	"Balance"
 	"Historical"
 	"Gameplay"
 }
 name="HMM"
-supported_version="1.17.*"
+supported_version="1.18.*"
 remote_file_id="3365264825"
