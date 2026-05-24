@@ -1,0 +1,14 @@
+# VS Code files for those working on multiple tools
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Files used by CWTools for Visual Studio Code
+*.cwt
+.cwtools/*
+
+# Local History for Visual Studio Code
+.history/
