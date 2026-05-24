@@ -2207,11 +2207,7 @@ GER_my_precisioussss = {
 
 	abort_when_not_enabled = yes
 
-	ai_strategy = {
-		type = send_lend_lease_desire
-		id = SLO
-		value = -999
-	}
+
 	ai_strategy = {
 		type = send_lend_lease_desire
 		id = MAN
@@ -2220,26 +2216,6 @@ GER_my_precisioussss = {
 	ai_strategy = {
 		type = send_lend_lease_desire
 		id = CHI
-		value = -999
-	}
-	ai_strategy = {
-		type = send_lend_lease_desire
-		id = YUN
-		value = -999
-	}
-	ai_strategy = {
-		type = send_lend_lease_desire
-		id = SHX
-		value = -999
-	}
-	ai_strategy = {
-		type = send_lend_lease_desire
-		id = XSM
-		value = -999
-	}
-	ai_strategy = {
-		type = send_lend_lease_desire
-		id = SIK
 		value = -999
 	}
 }

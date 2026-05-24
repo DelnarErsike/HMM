@@ -34,6 +34,13 @@ NDefines.NNavy.RESOURCE_LENDLEASE_PRIORITY = 5                          -- Defau
 NDefines.NSupply.BASE_TRUCK_HP = 1000.0
 NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_RAILWAY_DAMAGE_SPILL_FACTOR = 0 -- Portion of train damage to additionally deal to railways
 
+-- CHANGES TO HELP STR LOSS IN COMBAT --
+NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.050   -- old vanilla 0.050, -- vanilla 0.060,  -- global damage modifier... but some equipment is returned at end of battles see : EQUIPMENT_COMBAT_LOSS_FACTOR
+NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 15.0 -- vanilla 10 Modifier for army manpower reinforcement delivery speed (travel time)
+
+-- Faster Naval Dominance Gain
+NDefines.NNavy.DOMINANCE_DAILY_GAIN_FACTOR = 0.04							-- Daily dominance gain, as a fraction of target value
+
 
 -- QOL
 NDefines.NMilitary.PROMOTE_LEADER_CP_COST = 0.1
@@ -67,6 +74,9 @@ NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 999                            -- WAS 5
 NDefines.NMilitary.MAX_AIR_EXPERIENCE = 999			                    -- WAS 500 || XP Cap
 NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 999		                    -- WAS 500 || XP Cap
 NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 90			-- how many divisions a field marshall is limited to. 0 = inf, < 0 = blocked
+
+-- Increased General Size
+
 NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 90			-- how many divisions a corps commander is limited to. 0 = inf, < 0 = blocked
 NDefines.NMilitary.GARRISON_ORDER_ARMY_CAP_FACTOR = 1.0			-- armies gets increased cap when they are garrisoned
 

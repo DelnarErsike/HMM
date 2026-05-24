@@ -3423,32 +3423,6 @@ on_actions = {
 						}
 					}
 				}
-				ELSE_IF = {
-					limit = {
-						XSM = {
-							exists = yes
-						}
-					}
-					XSM = {
-						country_event = {
-							id = SEA_warlords.12
-							hours = 6
-						}
-					}
-				}
-				ELSE_IF = {
-					limit = {
-						GSM = {
-							exists = yes
-						}
-					}
-					GSM = {
-						country_event = {
-							id = SEA_warlords.12
-							hours = 6
-						}
-					}
-				}
 			}
 
 		}

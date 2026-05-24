@@ -53,8 +53,7 @@ SLO = "countries/Slovakia.txt"
 RAJ = "countries/British Raj.txt"
 GXC = "countries/Guangxi.txt"
 PRC = "countries/ComChina.txt"
-SHX = "countries/Shanxi.txt"
-XSM = "countries/Xibei San Ma.txt"
+
 
 ICE = "countries/Iceland.txt" # tag cannot be removed
 

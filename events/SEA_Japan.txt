@@ -2071,22 +2071,7 @@ country_event = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
-				limit = {
-					SHX = {
-						exists = yes
-						NOT = {
-							is_ally_with = ROOT
-						}
-					}
-				}
-				SHX = {
-					country_event = {
-						id = SEA_japan_foreign_policy.30
-						hours = 2
-					}	
-				}
-			}
+
 		}		
 
 	}
