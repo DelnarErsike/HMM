@@ -855,7 +855,7 @@ characters = {
 			traits = {  panzer_leader trickster trait_engineer skilled_staffer cavalry_leader  organizer ranger commando urban_assault_specialist pre_grind }
 			skill = 6
 			attack_skill = 6
-			defense_skill = 9
+			defense_skill = 10
 			planning_skill = 8
 			logistics_skill = 8
 			legacy_id = 0
@@ -1031,7 +1031,7 @@ characters = {
 			attack_skill = 5
 			defense_skill = 10
 			planning_skill = 7
-			logistics_skill = 10
+			logistics_skill = 8
 			legacy_id = 0
 			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
 		}
