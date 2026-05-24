@@ -41,7 +41,6 @@ state = {
 				limit = {
 					has_dlc = "No Compromise, No Surrender" 
 				}
-				remove_core_of = XIC
 			}		
 			owner = CHI
 			controller = CHI

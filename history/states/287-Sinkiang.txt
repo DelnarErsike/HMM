@@ -17,16 +17,7 @@ state = {
 
 		}	
 
-		1938.10.25 = {
-			IF = {
-				limit = {
-					has_dlc = "No Compromise, No Surrender" 
-				}
-				remove_core_of = KHM
-			}	
-			owner = CHI
-			controller = SIK		
-		}	
+
 	}
 
 

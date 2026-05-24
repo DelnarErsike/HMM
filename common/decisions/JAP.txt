@@ -5643,18 +5643,6 @@ JAP_kwantung_army_decisions = {
 			IF = {
 				limit = {
 					OR = {
-						HBC = {
-							OR = {
-								controls_state = 608
-								controls_state = 614
-							}
-						}
-						XIC = {
-							OR = {
-								controls_state = 608
-								controls_state = 614
-							}
-						}
 						CHI = { #if CHI owns one of these states, they get the event
 							OR = {
 								controls_state = 608

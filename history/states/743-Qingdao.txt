@@ -15,7 +15,6 @@ state = {
 			limit = {
 				has_dlc = "No Compromise, No Surrender"
 			}
-			add_core_of = SND
 		}
 
 		victory_points = {

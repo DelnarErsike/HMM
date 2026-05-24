@@ -1132,22 +1132,6 @@ is_unlikely_country_tag = {
 		tag = THU
 		tag = HES
 		tag = RHI
-		tag = RNG 
-		tag = PSR 
-		tag = GXC
-		tag = YUN
-		tag = SHX
-		tag = XSM
-		tag = SIK
-		tag = GDC
-		tag = SND
-		tag = SIC
-		tag = NXM
-		tag = GSM
-		tag = XIC
-		tag = KHM
-		tag = KUM
-		tag = HBC
 	}
 }
 

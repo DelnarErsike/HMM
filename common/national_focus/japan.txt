@@ -3691,31 +3691,16 @@ focus_tree = {
 					608 = {
 						NOT = {
 							is_controlled_by = CHI
-							is_controlled_by = PRC
-							is_controlled_by = SHX
-							is_controlled_by = SND
-							is_controlled_by = HBC
-							is_controlled_by = XIC
 						}
 					}
 					597 = {
 						NOT = {
 							is_controlled_by = CHI
-							is_controlled_by = PRC
-							is_controlled_by = SHX
-							is_controlled_by = SND
-							is_controlled_by = HBC
-							is_controlled_by = XIC
 						}
 					}
 					614 = {
 						NOT = {
 							is_controlled_by = CHI
-							is_controlled_by = PRC
-							is_controlled_by = SHX
-							is_controlled_by = SND
-							is_controlled_by = HBC
-							is_controlled_by = XIC
 						}
 					}
 				}
@@ -3725,10 +3710,7 @@ focus_tree = {
 		}
 
 		will_lead_to_war_with = CHI
-		will_lead_to_war_with = SHX
-		will_lead_to_war_with = HBC
-		will_lead_to_war_with = SND
-		will_lead_to_war_with = XIC 
+
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -3813,76 +3795,6 @@ focus_tree = {
 						}
 					}
 					CHI = {
-						country_event = {
-							id = china.1
-							days = 1
-							random_days = 3
-						}	
-					}
-				}
-				ELSE_IF = {
-					limit = {
-						PRC = { #only fires the event for PRC if they control ALL of the states (to ensure that only one of them gets it, to avoid issues when one selects to turn over the states and the other doesn't)
-							AND = {
-								controls_state = 608
-								controls_state = 614
-							}
-						}
-					}
-					PRC = {
-						country_event = {
-							id = china.1
-							days = 1
-							random_days = 3
-						}	
-					}
-				}
-				ELSE_IF = {
-					limit = {
-						SHX = { #only fires the event for SHX if they control ALL of the states (to ensure that only one of them gets it, to avoid issues when one selects to turn over the states and the other doesn't)
-							AND = {
-								controls_state = 608
-								controls_state = 614
-							}
-						}
-					}
-					SHX = {
-						country_event = {
-							id = china.1
-							days = 1
-							random_days = 3
-						}	
-					}
-				}
-				ELSE_IF = {
-					limit = {
-						SND = { #only fires the event for SND if they control ALL of the states (to ensure that only one of them gets it, to avoid issues when one selects to turn over the states and the other doesn't)
-							AND = {
-								controls_state = 608
-								controls_state = 597
-								controls_state = 614
-							}
-						}
-					}
-					SND = {
-						country_event = {
-							id = china.1
-							days = 1
-							random_days = 3
-						}	
-					}
-				}
-				ELSE_IF = {
-					limit = {
-						XIC = { #only fires the event for XIC if they control ALL of the states (to ensure that only one of them gets it, to avoid issues when one selects to turn over the states and the other doesn't)
-							AND = {
-								controls_state = 608
-								controls_state = 1039 
-								controls_state = 614
-							}
-						}
-					}
-					XIC = {
 						country_event = {
 							id = china.1
 							days = 1
@@ -5108,9 +5020,6 @@ focus_tree = {
 								original_tag = CHM
 								original_tag = SIA
 								original_tag = BRM
-								original_tag = GXC
-								original_tag = GDC
-								original_tag = YUN
 							}
 						}
 					}
@@ -5136,9 +5045,6 @@ focus_tree = {
 							original_tag = CHM
 							original_tag = SIA
 							original_tag = BRM
-							original_tag = GXC
-							original_tag = GDC
-							original_tag = YUN
 						}
 					}
 					
