@@ -57,6 +57,12 @@ PRC = "countries/ComChina.txt"
 
 ICE = "countries/Iceland.txt" # tag cannot be removed
 
+LBA = "countries/Libya.txt"
+INS = "countries/Indonesia.txt"
+COG = "countries/Congo.txt"
+PAK = "countries/Pakistan.txt"
+MAN = "countries/Manchukou.txt"
+
 # GoE # removing these tags causes Raj to get cores on states it should not have cores on
 DIP = "countries/Partisans.txt"
 PSH = "countries/Pashtunistan.txt"
@@ -75,13 +81,6 @@ SIN = "countries/Sindh.txt"
 KLT = "countries/Kalat.txt"
 SKK = "countries/Sikkim.txt"
 BLC = "countries/Balochistan.txt"
-
-LBA = "countries/Libya.txt"
-INS = "countries/Indonesia.txt"
-COG = "countries/Congo.txt"
-PAK = "countries/Pakistan.txt"
-MAN = "countries/Manchukou.txt"
-
 
 WST = "countries/Wasteland.txt"
 
