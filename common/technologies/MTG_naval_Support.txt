@@ -947,47 +947,6 @@ technologies = {
 		special_project_specialization = { specialization_naval }
 	}
 
-	#basic_dp_medium_battery = {
-
-		#research_cost = 1.5
-
-		#start_year = 1944
-
-		#enable_equipment_modules = {
-		#	dp_ship_medium_1
-		#}
-
-		#on_research_complete = {
-		#	custom_effect_tooltip = secondary_battery_advice_tt
-		#}
-
-		#folder = {
-		#	name = mtgnavalsupportfolder
-		#	position = { x = 3 y = 19 }
-		#}
-
-		#ai_will_do = {
-		#	factor = 2
-		#	modifier = {
-		#		OR = {
-		#			tag = ENG
-		#			tag = USA
-		#			tag = JAP
-		#		}
-		#		factor = 20
-		#	}
-		#}
-
-		#categories = {
-		#	naval_artillery
-		#	naval_equipment
-		#	ship_modules_tech
-		#	mio_cat_tech_all_capital_ship_and_modules
-		#	mio_cat_tech_all_screen_ship_and_modules
-		#	mio_cat_tech_all_cruiser_and_modules
-		#}
-		#special_project_specialization = { specialization_naval }
-	#}
 
 ###  ##  ###  ###  ### ###   ##      #   #  ##  ###   ##  ### ###  ###
  #  #  # #  # #  # #   #  # #  #     #   # #  # #  # #  # #   #  # #  
@@ -1184,47 +1143,6 @@ technologies = {
 		special_project_specialization = { specialization_naval }
 	}
 
-	#electric_torpedo = {
-
-	#	xp_research_type = navy
-	#	xp_boost_cost = 50
-	#	xp_research_bonus = 1.50
-	#	research_cost = 2.5
-
-	#	start_year = 1940
-
-
-	#	naval_torpedo_reveal_chance_factor = -0.25
-
-
-	#	folder = {
-	#		name = mtgnavalsupportfolder
-	#		position = { x = 3 y = 13 }
-	#	}
-
-	#	ai_will_do = {
-	#		factor = 2
-	#		modifier = {
-	#			OR = {
-	#				tag = JAP
-	#				tag = USA
-	#				tag = GER
-	#			}
-	#			factor = 5
-	#		}
-	#	}
-
-	#	categories = {
-	#		naval_equipment
-	#		ship_modules_tech
-	#		cat_torpedoes
-	#		mio_cat_tech_all_screen_ship_and_modules
-	#		mio_cat_tech_all_cruiser_and_modules
-	#		mio_cat_tech_all_destroyer_and_modules
-	#		mio_cat_tech_all_submarine_and_modules
-	#	}
-	#	special_project_specialization = { specialization_naval }
-	#}
 	improved_ship_torpedo_launcher = {
 
 		research_cost = 1.5
@@ -1269,6 +1187,7 @@ technologies = {
 		}
 		special_project_specialization = { specialization_naval }
 	}
+	
 	advanced_ship_torpedo_launcher = {
 
 		research_cost = 1.5
@@ -1315,6 +1234,7 @@ technologies = {
 		}
 		special_project_specialization = { specialization_naval }
 	}
+
 	modern_ship_torpedo_launcher = {
 
 		research_cost = 1.5
@@ -1380,7 +1300,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
+			factor = 1
 
 			modifier = {
 				has_navy_size = { size < 10 }
@@ -1541,7 +1461,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
+			factor = 1
 			modifier = {
 				has_navy_size = { size < 10 }
 				factor = 0.1
@@ -1595,7 +1515,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
+			factor = 1
 			modifier = {
 				has_war = yes
 				factor = 2
@@ -1649,7 +1569,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
+			factor = 1
 			modifier = {
 				has_war = yes
 				factor = 2
@@ -1851,7 +1771,7 @@ technologies = {
 					tag = ENG
 					tag = SOV
 				}
-				factor = 6
+				factor = 4
 			}
 			modifier = {
 				has_war = yes

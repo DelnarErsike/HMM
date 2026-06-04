@@ -1287,7 +1287,12 @@ technologies = {
 			factor = 1
 
 			modifier = {
-				factor = 4
+				factor = 0
+				date < 1939.1.1
+			}
+
+			modifier = {
+				factor = 3
 				OR = {
 					tag = ENG
 					tag = USA

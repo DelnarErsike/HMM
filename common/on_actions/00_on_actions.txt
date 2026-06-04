@@ -2141,6 +2141,21 @@ on_actions = {
 		}
 	}
 
+	# Achievement: "Steiner!" - track if GER reaches 30% surrender progress after Barbarossa
+	# HMM: Disabled, useless to us
+	#on_daily_GER = {
+	#	effect = {
+	#		if = {
+	#			limit = {
+	#				date > 1941.06.22
+	#				surrender_progress > 0.30
+	#				NOT = { has_country_flag = achievement_steiner_reached_surrender }
+	#			}
+	#			set_country_flag = achievement_steiner_reached_surrender
+	#		}
+	#	}
+	#}
+
 	on_weekly_GER = {
 		effect = {
 			GER = {
