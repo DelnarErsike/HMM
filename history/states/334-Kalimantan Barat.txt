@@ -15,7 +15,7 @@ state = {
 	history = {
 
 		owner = HOL
-		add_core_of = POK
+		add_core_of = WST
 
 		victory_points = {
 			4279 1

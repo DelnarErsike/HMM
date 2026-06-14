@@ -1768,6 +1768,13 @@ on_actions = {
 							}
 							OR = {
 								is_core_of = PHI
+								AND = {
+									is_core_of = WST
+									OR = {
+										owner = ENG
+										owner = HOL
+									}
+								}
 								is_core_of = VIN
 								is_core_of = CAM
 								is_core_of = SIA

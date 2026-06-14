@@ -9,7 +9,7 @@ state={
 	history = {
 
 		owner = HOL
-		add_core_of = TNE
+		add_core_of = WST
 
 		set_resistance = 0
 		set_compliance = 55
