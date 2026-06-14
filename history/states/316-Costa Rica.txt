@@ -4,7 +4,6 @@ state={
 	name="STATE_316"
 	manpower = 1
 	
-	
 	state_category = wasteland
 	
 
@@ -20,13 +19,11 @@ state={
 			}
 		}
 		add_core_of = WST
-		
-
 	}
 
 	provinces={
 		12878 13087 13092 
 	}
 
-	local_supplies = 0.0 
+	local_supplies=0.0 
 }

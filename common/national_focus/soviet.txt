@@ -2952,7 +2952,6 @@ focus_tree = {
 				bonus = 1.0
 				uses = 1
 				category = ca_tech
-				category = ca_tech
 			}
 
 			#Kronshtadt Class Battlecruiser
@@ -3088,7 +3087,7 @@ focus_tree = {
 						#}
 					#}
 					#custom_effect_tooltip = SOV_an_oceangoing_navy_shbb_tt
-				create_equipment_variant = { #TODO_Manu: Engine should be 3 (but also should Yamato's)
+				create_equipment_variant = { #MM: Engine should be 3 (but also should Yamato's)
 					name = "Sovetsky Soyuz Class"
 					type = ship_hull_super_heavy_1
 					name_group = SOV_STATES
@@ -6342,7 +6341,7 @@ focus_tree = {
 
 			#New
 			hidden_effect = {
-				unlock_tactic = tactic_masterful_blitz
+			    unlock_tactic = tactic_masterful_blitz
 			}
 			custom_effect_tooltip = SOV_the_glory_of_the_red_army_masterful_blitz_tactic_tt
 
@@ -6576,7 +6575,7 @@ focus_tree = {
 			add_political_power = 25
 
 			SOV_paranoia_high_increase_effect = yes
-			
+
 			#HISTORICAL
 			#Zinovyev
 			if = {

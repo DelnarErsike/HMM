@@ -3220,7 +3220,7 @@ AUS_eugen_beyer = {
 					has_completed_focus = GER_reestablish_free_elections 
 				}
 				ELSE = {
-					has_completed_focus = GER_re_establish_free_elections_ww
+					has_completed_focus = GER_monarchist_sentiment
 				}
 			}
 			traits = {

@@ -1,3 +1,4 @@
+################################################
 ### search_filters = {FOCUS_FILTER_POLITICAL}
 ### search_filters = {FOCUS_FILTER_RESEARCH}
 ### search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -130,7 +131,6 @@ focus_tree = {
 		cost = 5
 		#relative_position_id = GER_strengthen_the_kriegsmarine
 
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER }
 		available = {
 			has_game_rule = {
 				rule = Germany_Wirtschaftswunder
@@ -1156,7 +1156,7 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = {
-			localization_key = building_state_modifier|dam 
+				localization_key = building_state_modifier|dam
 				INDENT = "    "
 			}
 		}
@@ -2143,9 +2143,9 @@ focus_tree = {
 		bypass = {
 			has_resources_in_collection = {
 				collection = collection:country_and_all_subjects
-					resource = oil
-					amount > 149
-					extracted = yes
+				resource = oil
+				amount > 149
+				extracted = yes
 			}
 		}
 
@@ -2230,9 +2230,9 @@ focus_tree = {
 		bypass = {
 			has_resources_in_collection = {
 				collection = collection:country_and_all_subjects
-					resource = rubber
-					amount > 99
-					extracted = yes
+				resource = rubber
+				amount > 99
+				extracted = yes
 			}
 		}
 
@@ -3664,8 +3664,23 @@ focus_tree = {
 					name = GER_establish_the_skijager
 					cost_reduction = 0.25
 					uses = 2
-					category = cat_mountaineers_doctrine
+					category = special_forces_doctrine
 				}
+				custom_effect_tooltip = mountaineer_subdoctrines_default_add_mastery_bonus_effect_tooltip
+				hidden_effect = {
+					add_mastery_bonus = {
+						name = GER_establish_the_skijager
+						bonus = 0.1
+						days = 240
+						sub_doctrine = mountaineers_1
+					}
+					add_mastery_bonus = {
+						name = GER_establish_the_skijager
+						bonus = 0.1
+						days = 240
+						sub_doctrine = mountaineers_2
+					}
+				}				
 			}
 			add_tech_bonus = {
 				name = GER_establish_the_skijager
@@ -5213,6 +5228,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 	focus = {
 		id = GER_uralbomber_program
 		icon = GFX_focus_generic_long_range_aircraft
@@ -5435,8 +5451,23 @@ focus_tree = {
 					name = GER_fallschirmjager
 					cost_reduction = 0.25
 					uses = 2
-					category = cat_paratroopers_doctrine
+					category = special_forces_doctrine
 				}
+				custom_effect_tooltip = paratrooper_subdoctrines_default_add_mastery_bonus_effect_tooltip
+				hidden_effect = {
+					add_mastery_bonus = {
+						name = GER_fallschirmjager
+						bonus = 0.1
+						days = 240
+						sub_doctrine = paratroopers_1
+					}
+					add_mastery_bonus = {
+						name = GER_fallschirmjager
+						bonus = 0.1
+						days = 240
+						sub_doctrine = paratroopers_2
+					}
+				}				
 			}
 			add_tech_bonus = {
 				name = GER_fallschirmjager
@@ -6234,7 +6265,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GER_war_with_american_country_tt
-				 any_enemy_country = {
+				any_enemy_country = {
 					capital_scope = { 
 						OR = {
 							is_on_continent = north_america
@@ -6726,8 +6757,8 @@ focus_tree = {
 				limit = {
 					has_dlc = "Man the Guns"
 				}
-			NOT = { has_completed_focus = GER_high_seas_fleet }
-			has_tech = early_ship_hull_carrier
+				NOT = { has_completed_focus = GER_high_seas_fleet }
+				has_tech = early_ship_hull_carrier
 			}
 			ELSE = {
 				NOT = { has_completed_focus = GER_high_seas_fleet }
@@ -6943,8 +6974,8 @@ focus_tree = {
 				limit = {
 					has_dlc = "Man the Guns"
 				}
-			NOT = { has_completed_focus = GER_high_seas_fleet }
-			has_tech = improved_ship_hull_heavy
+				NOT = { has_completed_focus = GER_high_seas_fleet }
+				has_tech = improved_ship_hull_heavy
 			}
 			ELSE = {
 				NOT = { has_completed_focus = GER_high_seas_fleet }
@@ -7249,8 +7280,23 @@ focus_tree = {
 					name = GER_marinestosstrupp
 					cost_reduction = 0.25
 					uses = 2
-					category = cat_marines_doctrine
+					category = special_forces_doctrine
 				}
+				custom_effect_tooltip = marine_subdoctrines_default_add_mastery_bonus_effect_tooltip
+				hidden_effect = {
+					add_mastery_bonus = {
+						name = GER_marinestosstrupp
+						bonus = 0.1
+						days = 240
+						sub_doctrine = marines_1
+					}
+					add_mastery_bonus = {
+						name = GER_marinestosstrupp
+						bonus = 0.1
+						days = 240
+						sub_doctrine = marines_2
+					}
+				}				
 			}
 			add_tech_bonus = {
 				name = GER_marinestosstrupp
@@ -8047,14 +8093,14 @@ focus_tree = {
 				}
 				add_trait = { trait = blue_water_expert }
 				ROOT = {
-			random_navy_leader = {
-				limit = {
+					random_navy_leader = {
+						limit = {
 							NOT = {
 								is_character = PREV.PREV
 								has_trait = blue_water_expert
 							}
-				}
-				add_trait = { trait = blue_water_expert }
+						}
+						add_trait = { trait = blue_water_expert }
 					}
 				}
 			}
@@ -11952,7 +11998,6 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				OR = {
-					
 					any_home_area_neighbor_country = {
 						has_war_with = ROOT
 					}
@@ -13014,69 +13059,56 @@ focus_tree = {
 		alternate_icon = GFX_focus_GER_support_the_fuhrer_historical
 
 		icon = {
-			trigger = {
+			GFX_focus_GER_fuhrerprinzip_todt = {
 				has_country_leader = {
 					ruling_only = yes
 					character = GER_fritz_todt
 				}
 			}
-			value = GFX_focus_GER_fuhrerprinzip_todt
-		}
-		icon = {
-			trigger = {
+			GFX_focus_GER_fuhrerprinzip_speer = {
 				has_country_leader = {
 					ruling_only = yes
 					character = GER_albert_speer
 				}
 			}
-			value = GFX_focus_GER_fuhrerprinzip_speer
-		}
-		icon = {
-			trigger = {
+			GFX_focus_GER_fuhrerprinzip_goring = {
 				has_country_leader = {
 					ruling_only = yes
 					character = GER_hermann_goring
 				}
 			}
-			value = GFX_focus_GER_fuhrerprinzip_goring
-		}
-		icon = {
-			trigger = {
+			GFX_focus_GER_fuhrerprinzip_himmler = {
 				has_country_leader = {
 					ruling_only = yes
 					character = GER_heinrich_himmler
 				}
 			}
-			value = GFX_focus_GER_fuhrerprinzip_himmler
-		}
-		icon = {
-			trigger = {
+			GFX_focus_GER_fuhrerprinzip_goebbels = {
 				has_country_leader = {
 					ruling_only = yes
 					character = GER_joseph_goebbels
 				}
 			}
-			value = GFX_focus_GER_fuhrerprinzip_goebbels
-		}
-		icon = {
-			trigger = {
+			GFX_focus_GER_fuhrerprinzip_hess = {
 				has_country_leader = {
 					ruling_only = yes
 					character = GER_rudolf_hess
 				}
 			}
-			value = GFX_focus_GER_fuhrerprinzip_hess
-		}
-		icon = {
-			trigger = {
+			GFX_focus_GER_fuhrerprinzip_bormann = {
 				has_country_leader = {
 					ruling_only = yes
 					character = GER_martin_bormann
 				}
 			}
-			value = GFX_focus_GER_fuhrerprinzip_bormann
+			GFX_focus_GER_fuhrerprinzip_braun = {
+				has_country_leader = {
+					ruling_only = yes
+					character = GER_eva_braun
+				}
+			}
+			GFX_focus_GER_support_the_fuhrer = yes
 		}
-		icon = GFX_focus_GER_support_the_fuhrer
 
 		prerequisite = { focus = GER_remilitarize_the_rhineland }
 		x = -17

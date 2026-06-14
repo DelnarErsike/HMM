@@ -3107,7 +3107,12 @@ shared_focus = {
 
 	available = {
 		OR = {
-			JAP = { has_government = ROOT }
+			JAP = { 
+				AND = {
+					has_government = ROOT 
+					exists = yes 
+				}
+			}
 			JAP_will_support = yes
 		}
 		NOT = { has_wargoal_against = JAP }

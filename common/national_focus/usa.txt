@@ -24,6 +24,7 @@ focus_tree = {
 		}
 	}
 	continuous_focus_position = { x = 50 y = 1600 }
+	shared_focus = ABDA_abdacom
 	default = no
 #	focus = {
 #		id = USA_
@@ -2918,7 +2919,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = escort_effort_focus
-			
 		}
 	}
 
@@ -3034,7 +3034,7 @@ focus_tree = {
 		x = 7
 		y = 1
 		relative_position_id = USA_two_ocean_navy_act
-		cost = 10
+		cost = 5
 		prerequisite = { focus = USA_two_ocean_navy_act }
 		ai_will_do = {
 			factor = 1

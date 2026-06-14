@@ -15,9 +15,6 @@ state = {
 				naval_base = 1
 			}
 		}
-
-		
-
 	}
 
 	provinces = {
@@ -26,5 +23,5 @@ state = {
 
 	buildings_max_level_factor = 1.000
 	
-	local_supplies = 0.0
+	local_supplies = 0.000
 }

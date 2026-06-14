@@ -5,7 +5,6 @@ state = {
 	manpower = 1
 
 	
-	
 	state_category = wasteland
 
 	history = {
@@ -22,13 +21,6 @@ state = {
 				naval_base = 4
 			}
 		}
-		
-		
-
-		
-
-		
-
 	}
 
 	provinces = {

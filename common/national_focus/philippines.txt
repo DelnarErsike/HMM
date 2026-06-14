@@ -2710,7 +2710,6 @@ initial_show_position = {
 
 		available = {
 			is_ally_with = USA
-			
 		}
 
 		ai_will_do = {
@@ -5744,7 +5743,6 @@ initial_show_position = {
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = PHI_vicente_lava
 		}
@@ -6991,9 +6989,23 @@ focus = {
 				name = PHI_philippine_scouts
 				cost_reduction = 0.25
 				uses = 2
-				category = cat_rangers_doctrine
+				category = special_forces_doctrine
 			}
-			
+			custom_effect_tooltip = ranger_subdoctrines_default_add_mastery_bonus_effect_tooltip
+			hidden_effect = {
+				add_mastery_bonus = {
+					name = PHI_philippine_scouts
+					bonus = 0.1
+					days = 240
+					sub_doctrine = rangers_1
+				}
+				add_mastery_bonus = {
+					name = PHI_philippine_scouts
+					bonus = 0.1
+					days = 240
+					sub_doctrine = rangers_2
+				}
+			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_potential_special_forces_tree = yes
 		}
@@ -7815,7 +7827,22 @@ focus = {
 					name = PHI_marine_corps
 					cost_reduction = 0.25
 					uses = 1
-					category = cat_marines_doctrine
+					category = special_forces_doctrine
+				}
+				custom_effect_tooltip = marine_subdoctrines_default_add_mastery_bonus_effect_tooltip
+				hidden_effect = {
+					add_mastery_bonus = {
+						name = PHI_marine_corps
+						bonus = 0.1
+						days = 240
+						sub_doctrine = marines_1
+					}
+					add_mastery_bonus = {
+						name = PHI_marine_corps
+						bonus = 0.1
+						days = 240
+						sub_doctrine = marines_2
+					}
 				}
 			}
 			add_tech_bonus = {

@@ -9,7 +9,6 @@ state = {
 
 		owner = FRA
 		add_core_of = WST
-		add_core_of = WST
 
 		victory_points = {
 			2056 1 # Niamey

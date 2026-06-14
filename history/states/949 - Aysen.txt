@@ -17,9 +17,6 @@ state = {
 			infrastructure = 1
 			#dockyard = 1
 		}
-
-		
-		
 	}
 
 	provinces = {

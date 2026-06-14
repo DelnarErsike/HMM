@@ -11,10 +11,8 @@ state = {
 	history = {
 
 		owner = CHI
-		
+		add_core_of = WST
 		add_core_of = CHI
-		
-		
 
 		victory_points = {
 			7158 1 # Ulanqab 
@@ -37,7 +35,7 @@ state = {
 			}
 
 			owner = CHI
-			controller = MEN
+			controller = JAP
 
 		}
 

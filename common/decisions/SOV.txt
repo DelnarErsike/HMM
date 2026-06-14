@@ -6592,6 +6592,7 @@ SOV_diplomacy_middle_east_decision_category = {
 ############
 
 SOV_diplomacy_asia_decision_category = {
+
 	SOV_send_infantry_equipment_asia = {
 		priority = 50
 
@@ -7653,7 +7654,6 @@ SOV_diplomacy_asia_decision_category = {
 					target = SIK
 					modifier = SOV_complied_with_our_demands
 				}
-			}
 				SIK = {
 					set_cosmetic_tag = SIK_ssr
 					set_party_name = {
@@ -7662,6 +7662,7 @@ SOV_diplomacy_asia_decision_category = {
 					    name = SIK_CPSU_communism_party
 					}
 				}
+			}
 
 			# IF THEY REFUSE
 			custom_effect_tooltip = if_they_refuse_tt
@@ -10952,13 +10953,10 @@ SOV_industry_relocation = {
 			}
 		}
 
-		state_target = yes
-
-		#targets = { core_states }
+		state_target = any_owned_state
 
 		target_trigger = {
 			FROM = {
-				is_owned_by = ROOT
 				is_core_of = ROOT
 				is_fully_controlled_by = ROOT
 				is_on_continent = europe
@@ -18097,9 +18095,8 @@ SOV_polish_territory = {
 				is_subject_of = ROOT
 				NOT = { has_completed_focus = POL_surrender_the_east }
 			}
-			any_state = {
+			any_owned_state = {
 				is_core_of = POL
-				is_owned_by = ROOT
 				OR = {
 
 					any_country_with_core = {

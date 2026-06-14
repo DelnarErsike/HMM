@@ -6,10 +6,16 @@ bookmarks = {
 		picture = "GFX_select_date_1936"
 		default_country = "GER"
 		default = yes
-		
+
+		filters = { new_content continent }
+		# filters can also contain 'label'
+		# in that case the countries below can have 'label = { label_1 }' or 'label = { label_1 label_2 }'
+		# all these labels will be gathered and displayed as filter buttons
+
 		"FRA"={
 			history = "FRA_GATHERING_STORM_DESC"
 			ideology = democratic
+			version = base_game
 			available = { NOT = { has_dlc = "La Resistance" } }
 			ideas = {
 				FRA_victors_of_wwi
@@ -25,7 +31,8 @@ bookmarks = {
 		"FRA"={
 			history = "FRA_GATHERING_STORM_DESC"
 			ideology = democratic
-			available = { has_dlc = "La Resistance" } 
+			version = la_resistance
+			required_dlc = { "La Resistance" }
 			ideas = {
 				FRA_victors_of_wwi
 				FRA_disjointed_government
@@ -40,6 +47,7 @@ bookmarks = {
 		"USA"={
 			history = "USA_GATHERING_STORM_DESC"
 			ideology = democratic
+			version = base_game
 			ideas = {
 				home_of_the_free
 				great_depression
@@ -54,7 +62,8 @@ bookmarks = {
 		"ENG"={
 			history = "ENG_GATHERING_STORM_DESC"
 			ideology = democratic
-			available = { has_dlc = "Man the Guns" }
+			version = man_the_guns
+			required_dlc = { "Man the Guns" }
 			ideas = {
 				stiff_upper_lip
 				ENG_the_war_to_end_all_wars
@@ -69,6 +78,7 @@ bookmarks = {
 		"ENG"={
 			history = "ENG_GATHERING_STORM_DESC"
 			ideology = democratic
+			version = base_game
 			available = { NOT = { has_dlc = "Man the Guns" } }
 			ideas = {
 				stiff_upper_lip
@@ -85,7 +95,8 @@ bookmarks = {
 		GER = {
 			history = "GER_GATHERING_STORM_DESC"
 			ideology = fascism
-			available = { has_dlc = "Gotterdammerung" }
+			version = gotterdammerung
+			required_dlc = { "Gotterdammerung" }
 			ideas = {
 				GER_mefo_bills_1936_fake_ns
 				GER_army_1936_fake_ns
@@ -101,6 +112,7 @@ bookmarks = {
 		GER = {
 			history = "GER_GATHERING_STORM_DESC"
 			ideology = fascism
+			version = base_game
 			available = { NOT = { has_dlc = "Gotterdammerung" } }
 			ideas = {
 				GER_mefo_bills_1936_fake_ns
@@ -117,7 +129,8 @@ bookmarks = {
 		"ITA"={
 			history = "ITA_GATHERING_STORM_DESC"
 			ideology = fascism
-			available = { has_dlc = "By Blood Alone" }
+			version = by_blood_alone
+			required_dlc = { "By Blood Alone" }
 			ideas = {
 				vittorio_emanuele
 				ITA_iri_fake_ns
@@ -132,6 +145,7 @@ bookmarks = {
 		"ITA"={
 			history = "ITA_GATHERING_STORM_DESC"
 			ideology = fascism
+			version = base_game
 			available = { NOT = { has_dlc = "By Blood Alone" } }
 			ideas = {
 				vittorio_emanuele
@@ -148,7 +162,7 @@ bookmarks = {
 			history = "JAP_GATHERING_STORM_DESC"
 			available = {  NOT = { has_dlc = "No Compromise, No Surrender" } }
 			ideology = neutrality
-			new_content = yes
+			version = base_game
 			override_leader_portrait = JAP_emperor_hirohito
 			ideas = {
 				JAP_1936_fake_state_shintoism_idea
@@ -164,9 +178,9 @@ bookmarks = {
 
 		JAP = {
 			history = "JAP_GATHERING_STORM_DESC"
-			available = {  has_dlc = "No Compromise, No Surrender" }
+			required_dlc = { "No Compromise, No Surrender" }
+			version = no_compromise_no_surrender
 			ideology = neutrality
-			new_content = yes
 			override_leader_portrait = JAP_emperor_hirohito
 			ideas = {
 				JAP_1936_fake_state_shintoism_idea
@@ -182,7 +196,8 @@ bookmarks = {
 		"SOV"={
 			history = "SOV_GATHERING_STORM_DESC"
 			ideology = communism
-			available = { has_dlc = "No Step Back" }
+			version = no_step_back
+			required_dlc = { "No Step Back" }
 			ideas = {
 				trotskyite_plot_nsb
 				SOV_second_five_year_plan_fake_1936_ns
@@ -197,6 +212,7 @@ bookmarks = {
 		"SOV"={
 			history = "SOV_GATHERING_STORM_DESC"
 			ideology = communism
+			version = base_game
 			available = { NOT = { has_dlc = "No Step Back" } }
 			ideas = {
 				trotskyite_plot_nsb
@@ -219,6 +235,7 @@ bookmarks = {
 		"CAN"={
 			minor = yes
 			history = "CAN_GATHERING_STORM_DESC"
+			version = base_game
 			ideology = democratic
 			ideas = {
 				CAN_great_depression_1
@@ -233,6 +250,9 @@ bookmarks = {
 		"AST"={
 			minor = yes
 			history = "AST_GATHERING_STORM_DESC"
+			available = {  NOT = { has_dlc = "Thunder at Our Gates" } }
+			version = base_game
+			assume_not_played_if_missing_data = yes
 			ideology = democratic
 			ideas = {
 				AST_great_depression_1
@@ -243,9 +263,28 @@ bookmarks = {
 				AST_rats_of_tobruk
 			}
 		}
+		"AST"={
+			minor = yes
+			history = "AST_GATHERING_STORM_DESC"
+			required_dlc = { "Thunder at Our Gates" }
+			version = thunder_at_our_gates
+			assume_not_played_if_missing_data = yes
+			ideology = democratic
+			ideas = {
+				AST_poor_population_growth
+				AST_great_depression_taog_spirit_fake
+				AST_citizen_army_spirit_fake
+			}
+			focuses = {
+				AST_war_is_coming
+				AST_overseas_loyalties
+				AST_anzac_spirit
+			}
+		}
 		"SAF"={
 			minor = yes
 			history = "SAF_GATHERING_STORM_DESC"
+			version = base_game
 			ideology = democratic
 			ideas = {
 				SAF_ossewabrandwag
@@ -263,6 +302,7 @@ bookmarks = {
 			history = "RAJ_GATHERING_STORM_DESC"
 			available = {  NOT = { has_dlc = "Graveyard of Empires" } }
 			ideology = neutrality
+			version = base_game
 			ideas = {
 				RAJ_agrarian_society
 				RAJ_princely_states
@@ -277,8 +317,9 @@ bookmarks = {
 		RAJ = {
 			minor = yes
 			history = "RAJ_GATHERING_STORM_DESC"
-			available = {  has_dlc = "Graveyard of Empires" }
+			required_dlc = { "Graveyard of Empires" }
 			ideology = neutrality
+			version = graveyard_of_empires
 			ideas = {
 				RAJ_marginalized_muslim_community
 				RAJ_princely_states
@@ -297,6 +338,7 @@ bookmarks = {
 			history = "HUN_GATHERING_STORM_DESC"
 			ideology = neutrality
 			available = {  NOT = { has_dlc = "Gotterdammerung" } }
+			version = base_game
 			ideas = {
 				HUN_treaty_of_triannon
 				HUN_gombos_trade_treaty
@@ -312,6 +354,7 @@ bookmarks = {
 			minor = yes
 			history = "ROM_GATHERING_STORM_DESC"
 			ideology = neutrality
+			version = base_game
 			ideas = {
 				ROM_king_carol_ii_hedonist
 				neutrality_idea
@@ -329,6 +372,7 @@ bookmarks = {
 			history = "MAN_GATHERING_STORM_DESC"
 			available = { NOT = { has_dlc = "No Compromise, No Surrender" } }
 			ideology = fascism
+			version = base_game
 			ideas = {
 				MAN_banditry
 				MAN_kwantung_veto
@@ -345,6 +389,7 @@ bookmarks = {
 			minor = yes
 			history = "MEXICO_GATHERING_STORM_DESC"
 			ideology = neutrality
+			version = base_game
 			ideas = {
 				MEX_church_power_2
 				MEX_politicised_army
@@ -362,6 +407,7 @@ bookmarks = {
 			minor = yes
 			history = "SPAIN_GATHERING_STORM_DESC"
 			ideology = democratic
+			version = base_game
 			ideas = {
 				SPR_military_disloyalty
 				SPA_carlism_1
@@ -379,6 +425,7 @@ bookmarks = {
 			minor = yes
 			history = "BUL_GATHERING_STORM_DESC"
 			ideology = neutrality
+			version = base_game
 			ideas = {
 				BUL_second_national_catastrophe
 				BUL_army_restrictions
@@ -396,6 +443,7 @@ bookmarks = {
 			history = FIN_GATHERING_STORM_DESC
 			ideology = neutrality
 			available = {  NOT = { has_dlc = "Arms Against Tyranny" } }
+			version = base_game
 			ideas = {
 				FIN_sisu_2
 			}
@@ -409,7 +457,8 @@ bookmarks = {
 			minor = yes
 			history = FIN_GATHERING_STORM_DESC
 			ideology = neutrality
-			available = { has_dlc = "Arms Against Tyranny" } 
+			required_dlc = { "Arms Against Tyranny" }
+			version = arms_against_tyranny
 			ideas = {
 				FIN_sisu_2
 			}
@@ -423,7 +472,8 @@ bookmarks = {
 			minor = yes
 			history = BRA_GATHERING_STORM_DESC
 			ideology = democratic
-			available = { has_dlc = "Trial of Allegiance" }
+			required_dlc = { "Trial of Allegiance" }
+			version = trial_of_allegiance
 			ideas = {
 				#BRA_undiversified_economy_modifier
 				#SMB_MTG_naval_arms_race_legacy
@@ -442,7 +492,8 @@ bookmarks = {
 			minor = yes
 			history = "HUN_GATHERING_STORM_DESC"
 			ideology = neutrality
-			available = { has_dlc = "Gotterdammerung" }
+			required_dlc = { "Gotterdammerung" }
+			version = gotterdammerung
 			ideas = {
 				HUN_treaty_of_triannon_wuw
 				HUN_gombos_trade_treaty
@@ -457,9 +508,9 @@ bookmarks = {
 		MAN = {
 			minor = yes
 			history = "MAN_TSR_GATHERING_STORM_DESC"
-			available = { has_dlc = "No Compromise, No Surrender" } 
+			required_dlc = { "No Compromise, No Surrender" }
 			ideology = fascism
-			new_content = yes
+			version = no_compromise_no_surrender
 			ideas = {
 				MAN_banditry
 				MAN_the_kangde_emperor
@@ -470,7 +521,7 @@ bookmarks = {
 				MAN_tsr_the_question_of_leadership
 				MAN_tsr_empire_of_manchukuo
 			}
-		}							
+		}
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }

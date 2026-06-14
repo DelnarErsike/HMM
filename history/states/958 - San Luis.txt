@@ -16,9 +16,6 @@ state = {
 			# Minister Pistarini Reservoir
 			5152 = { dam = 1 }
 		}
-		
-		
-
 	}
 
 	provinces = {

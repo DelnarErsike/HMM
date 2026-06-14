@@ -13,7 +13,7 @@ state={
 		owner = MAN
 		add_core_of = CHI
 		add_core_of = MAN
-		
+		add_core_of = WST
 
 		victory_points = {
 			10612 1 # Manzhouli
@@ -25,6 +25,10 @@ state={
 
 		victory_points = {
 			13150 1 # Hailar
+		}
+
+		victory_points = {
+			12690 1 # Tauran
 		}
 
 		buildings = {

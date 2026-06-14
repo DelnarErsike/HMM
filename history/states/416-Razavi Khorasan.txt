@@ -11,7 +11,6 @@ state={
 			infrastructure = 2
 			industrial_complex = 2
 		}
-		
 		add_core_of = WST
 	}
 
@@ -19,5 +18,5 @@ state={
 		1888 1957 2000 5029 5073 10806 
 	}
 
-	local_supplies = 0.0 
+	local_supplies=0.0 
 }
