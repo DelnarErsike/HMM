@@ -383,6 +383,7 @@ characters={
 			portraits = {
 				civilian = {
 					small = GFX_portrait_PHI_sergio_osmena_small
+					large = GFX_portrait_PHI_sergio_osmena
 				}
 			}
 		}
@@ -2012,5 +2013,4 @@ characters={
 			}
 		}
 	}
-
 }
