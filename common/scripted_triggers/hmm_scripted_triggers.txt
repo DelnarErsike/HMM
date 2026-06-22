@@ -26,6 +26,25 @@ is_playable_country = {
 	}
 }
 
+# Playable countries that are supposed to be annexed at some point or have an annex decision available
+is_annexable_playable_country = {
+	OR = {
+		# Annexed into Japan
+		tag = SIA
+		tag = MAN
+		# Annexed into Australia
+		tag = NZL
+		# Annexed into USA
+		tag = PHI
+		# Annexed into UK
+		tag = IRQ
+		# Brazil has annex decision
+		tag = MEX
+		# France/Raj have annex decision
+		tag = SAF
+	}
+}
+
 allies = {
 	OR = {
 		tag = ENG
