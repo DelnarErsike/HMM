@@ -28,9 +28,9 @@ NDefines.NMilitary.PLANNING_CAP_COMMS_SCALING = { 1.0, 1.0, 1.0, 1.0, 1.0 }		-- 
 NDefines.NMilitary.PLANNING_CAP_NO_HQ_SCALING = 1.0								-- Scaling applied to planning cap when there's no HQ (no leader or leader not deployed or not the same root order)
 NDefines.NMilitary.PLANNING_SPEED_COMMS_SCALING = { 1.0, 1.0, 1.0, 1.0, 1.0 }		-- Same as PLANNING_CAP_COMMS_SCALING but for planning speed
 NDefines.NMilitary.PLANNING_SPEED_NO_HQ_SCALING = 1.0								-- Same as PLANNING_CAP_NO_HQ_SCALING but for planning speed
-NDefines.NMilitary.LEADER_MOD_COMMS_SCALING = { 1.06, 1.04, 1.02, 1.01, 1.0 }		-- Same as PLANNING_CAP_COMMS_SCALING but for leader modifiers
+NDefines.NMilitary.LEADER_MOD_COMMS_SCALING = { 1.0, 1.0, 1.0, 1.0, 1.0 }		-- Same as PLANNING_CAP_COMMS_SCALING but for leader modifiers
 NDefines.NMilitary.LEADER_MOD_NO_HQ_SCALING = 1.0									-- Same as PLANNING_CAP_NO_HQ_SCALING but for leader modifiers
-NDefines.NMilitary.ABILITY_COMMS_SCALING = { 1.06, 1.04, 1.02, 1.01, 1.0 }			-- Same as PLANNING_CAP_COMMS_SCALING but for active abilities
+NDefines.NMilitary.ABILITY_COMMS_SCALING = { 1.0, 1.0, 1.0, 1.0, 1.0 }			-- Same as PLANNING_CAP_COMMS_SCALING but for active abilities
 NDefines.NMilitary.ABILITY_NO_HQ_SCALING = 1.0									-- Same as PLANNING_CAP_NO_HQ_SCALING but for active abilities
 NDefines.NMilitary.GENERAL_PROXIMITY_CLOSE = 1									-- At the "close" proximity setting, the general should stay this many provinces behind the frontline
 NDefines.NMilitary.GENERAL_PROXIMITY_MEDIUM = 2									-- At the "medium" proximity setting, the general should stay this many provinces behind the frontline
@@ -38,7 +38,11 @@ NDefines.NMilitary.GENERAL_PROXIMITY_FAR = 3										-- At the "far" proximity 
 NDefines.NMilitary.GENERAL_PROXIMITY_DEFAULT = 1									-- The default proximity setting for a deployed general. This number should correspond to one of the values above
 NDefines.NMilitary.GENERAL_RANK_TO_ARMY_HQ_EXP_LEVEL_FACTOR = 1				    -- The general's rank is multiplied by this factor (rounded up) to determine the spawned Army HQ division's experience level
 NDefines.NMilitary.ARMY_HQ_REQUISITION_MINIMUM_REMAINING_PERCENTAGE = 1		    -- When deploying an Army HQ, divisions will not have their equipment or manpower requisitioned below this percentage of their target manpower or equipment
-
+NDefines.NMilitary.UNIT_LEADER_MODIFIER_COOLDOWN_ON_DEPLOY = 0		-- base time in days for a unit leader to be deployed while not already deployed. Instantaneous if 0. Scaled by HQ template manpower.
+NDefines.NMilitary.UNIT_LEADER_MODIFIER_COOLDOWN_ON_DEPLOY_MIN = 0		-- minimum cooldown in days for deploying a unit leader, even for very small HQ templates
+NDefines.NMilitary.UNIT_LEADER_MODIFIER_COOLDOWN_ON_REDEPLOY = 0		-- time in days for a unit leader to de redeployed to a new unit. Instantaneous if 0
+NDefines.NMilitary.UNIT_LEADER_MODIFIER_COOLDOWN_ON_WITHDRAW = 0		-- base time in days for withdrawing a deployed unit leader. Instantaneous if 0. Scaled by HQ template manpower.
+NDefines.NMilitary.UNIT_LEADER_MODIFIER_COOLDOWN_ON_WITHDRAW_MIN = 0		-- minimum cooldown in days for withdrawing a unit leader, even for very small HQ templates
 
 
 --AI no lend lease
