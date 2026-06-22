@@ -13,12 +13,11 @@ state={
 
 		}
 		add_core_of = WST
-		
 	}
 
 	provinces={
 		1981 5317 7915 8050 10736 10849 10879 13362
 	}
 
-	local_supplies = 0.0 
+	local_supplies=0.0 
 }

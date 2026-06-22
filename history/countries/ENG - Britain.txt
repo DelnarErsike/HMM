@@ -1,4 +1,5 @@
 capital = 126
+
 if = {
 	limit = {
 		NOT = {
@@ -208,6 +209,7 @@ if = {
 		mtg_transport = 1
 		basic_fire_control_system = 1
 		basic_dp_light_battery = 1
+		coastal_defense_ships = 1
 	}
 }
 
@@ -558,6 +560,7 @@ IF= {
 	}
 }
 add_to_faction = ENG
+#add_to_faction = FRA
 add_to_faction = CAN
 add_to_faction = AST
 add_to_faction = NZL
@@ -669,6 +672,13 @@ recruit_character = ENG_john_cockcroft
 recruit_character = ENG_charles_goodeve
 recruit_character = ENG_nevil_shute
 recruit_character = ENG_robert_watson_watt
+
+if = { 
+	limit = {
+		has_dlc = "Thunder at Our Gates"
+	}
+	recruit_character = ENG_robert_menzies #Through AST focus tree, Australian PM Menzies can become leader in ENG
+}
 
 if = {
 	limit = {
@@ -1152,25 +1162,25 @@ if = {
 		}
 	}
 	create_equipment_variant = {
-			name = "Town Class"
-			type = ship_hull_cruiser_2
-			name_group = ENG_CL_HISTORICAL
-			parent_version = 0
-			design_team = mio:ENG_harland_wolff_organization
-			modules = {
-				fixed_ship_battery_slot = ship_light_medium_battery_2
-				fixed_ship_anti_air_slot = ship_anti_air_2
-				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-				fixed_ship_radar_slot = empty
-				fixed_ship_engine_slot = cruiser_ship_engine_2
-				fixed_ship_armor_slot = ship_armor_cruiser_2
-				fixed_ship_secondaries_slot = dp_ship_secondaries_2
-				front_1_custom_slot = ship_anti_air_2
-				mid_1_custom_slot = ship_torpedo_1
-				mid_2_custom_slot = ship_secondaries_2
-				rear_1_custom_slot = ship_light_medium_battery_2
-			}
+		name = "Town Class"
+		type = ship_hull_cruiser_2
+		name_group = ENG_CL_HISTORICAL
+		parent_version = 0
+		design_team = mio:ENG_harland_wolff_organization
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_2
+			fixed_ship_secondaries_slot = dp_ship_secondaries_2
+			front_1_custom_slot = ship_anti_air_2
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = ship_secondaries_2
+			rear_1_custom_slot = ship_light_medium_battery_2
 		}
+	}
 	# Heavy Cruisers #
 	create_equipment_variant = {
 		name = "County Class"
@@ -1293,6 +1303,29 @@ if = {
 			rear_1_custom_slot = empty
 		}
 	}
+
+	# Monitors
+	create_equipment_variant = {
+		name = "Erebus Class"
+		type = ship_hull_cruiser_coastal_defense_ship
+		name_group = ENG_BM_HISTORICAL
+		parent_version = 0
+		design_team = mio:ENG_harland_wolff_organization
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_secondaries_slot = empty
+			fixed_ship_armor_slot = ship_armor_cruiser_2
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+
 	# Battleships #
 	create_equipment_variant = {
 		name = "Nelson Class"
@@ -1685,6 +1718,28 @@ if = {
 				rear_1_custom_slot = ship_heavy_battery_3
 			}
 		}
+		# Monitors
+		create_equipment_variant = {
+			name = "Erebus Class"
+			type = ship_hull_cruiser_coastal_defense_ship
+			name_group = ENG_BM_HISTORICAL
+			parent_version = 0
+			design_team = mio:ENG_harland_wolff_organization
+			modules = {
+				fixed_ship_battery_slot = ship_heavy_battery_1
+				fixed_ship_anti_air_slot = ship_anti_air_2
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = cruiser_ship_engine_1
+				fixed_ship_secondaries_slot = ship_secondaries_1
+				fixed_ship_armor_slot = ship_armor_cruiser_2
+				mid_1_custom_slot = empty
+				mid_2_custom_slot = empty
+				rear_1_custom_slot = empty
+			}
+			obsolete = yes
+		}
+
 		create_equipment_variant = {
 			name = "T Class"
 			type = ship_hull_submarine_2

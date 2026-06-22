@@ -24,6 +24,7 @@ on_actions = {
 							NOT = {
 								OR = {
 									is_island_state = yes
+									has_state_category = large_island
 									has_state_category = small_island
 									has_state_category = tiny_island
 								}
@@ -289,6 +290,7 @@ on_actions = {
 							has_completed_focus = RAJ_red_in_the_shadows
 							has_completed_focus = RAJ_great_depression_price_controls
 							has_completed_focus = RAJ_forward_bloc
+							has_completed_focus = RAJ_his_majestys_loyal_government
 						}
 					}
 
@@ -445,6 +447,8 @@ on_actions = {
 								}
 							}
 						}
+						is_raj_or_raj_inheritor = no
+						exists = no 
 					}
 
 					event_target:UK_INDIA = { release = PREV }
@@ -1008,10 +1012,12 @@ on_actions = {
 							}
 
 							NOT = { has_dynamic_modifier = { modifier = idea_RAJ_resistant_to_occupation } }
+							NOT = {has_state_flag = RAJ_resistance_already_squashed_flag }
 						}
 
 						add_dynamic_modifier = {
 						 	modifier = idea_RAJ_resistant_to_occupation
+						 	days = 1400
 						 } 
 
 
@@ -1178,6 +1184,7 @@ on_actions = {
 							AND = {
 								original_tag = JAP 
 								has_country_flag = agreed_to_help_bose
+								NOT = { has_war_with = RAJ }
 							}
 							AND = {
 								original_tag = RAJ
@@ -1218,7 +1225,9 @@ on_actions = {
 					add_dynamic_modifier = {
 					 	modifier = idea_RAJ_resistant_to_occupation
 					 	days = 1400
-					 } 
+					}
+
+					set_state_flag = RAJ_resistance_already_squashed_flag 
 				}
 			}
 			else_if = {

@@ -214,6 +214,7 @@ characters = {
 
 	CHI_soong_ching_ling={
 		name=CHI_soong_ching_ling
+		gender = female
 		portraits={
 			civilian={
 				large = GFX_portrait_CHI_soong_ching_ling
@@ -460,13 +461,12 @@ characters = {
 			}
 			corps_commander={
 				traits={ brilliant_strategist }
-				skill=4
-				attack_skill=5
-				defense_skill=4
-				planning_skill=2
-				logistics_skill=2
+				skill=3
+				attack_skill=4
+				defense_skill=3
+				planning_skill=3
+				logistics_skill=3
 				legacy_id=-1
-				visible = { has_completed_focus = CHI_draw_support_from_the_big_families }
 			}
 
 			advisor={
@@ -482,10 +482,6 @@ characters = {
 				cost = 100
 				ai_will_do = {
 					factor = 1.000
-				}
-
-				available = {
-					has_completed_focus = CHI_draw_support_from_the_big_families
 				}
 			}
 		}
@@ -1268,6 +1264,7 @@ characters = {
 		name=CHI_he_yingqin
 		portraits={
 			army={
+				large = GFX_portrait_chi_he_yingqin
 				small="GFX_idea_CHI_he_yingqin"
 			}
 		}
@@ -1287,6 +1284,17 @@ characters = {
 					factor = 2
 					has_war = yes
 				}
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+			traits = { organizer }
+			visible = {
+				has_completed_focus = CHI_crackdown_on_corruption_in_recruitment
 			}
 		}
 	}
@@ -1775,15 +1783,19 @@ characters = {
 				original_tag  = CHI
 				has_dlc = "No Compromise, No Surrender"
 			}
-			available  = {
-				has_completed_focus = CHI_revive_the_western_hills_group
-			}
+
 			visible = {
 				NOT = {
 					has_completed_focus = CHI_prepare_for_a_change_in_leadership
 					has_completed_focus = CHI_denounce_feudalism
+					has_completed_focus = CHI_end_military_primacy
 				}
 			}
+
+			available  = {
+				has_completed_focus = CHI_revive_the_western_hills_group
+			}
+			
 			cost = 100
 			traits  = {
 				CHI_president_of_examination_yuan 
@@ -1820,6 +1832,7 @@ characters = {
 				visible = {
 					NOT = {
 						has_completed_focus = CHI_strengthening_our_resolve
+						has_completed_focus = CHI_end_military_primacy
 					}
 				}
 
@@ -2039,6 +2052,12 @@ characters = {
 				CHI_minister_of_education
 			}
 
+			visible = {
+				NOT = {
+					has_completed_focus = CHI_end_military_primacy
+				}
+			}
+
 			available = {
 				OR = {
 					has_completed_focus = CHI_draw_support_from_the_big_families
@@ -2063,12 +2082,17 @@ characters = {
 				has_completed_focus = CHI_reinforce_connections_with_shanghai_elites
 				NOT = { has_completed_focus = CHI_reshuffle_the_green_gang }
 			}
+			visible = {
+				NOT = {
+					has_completed_focus = CHI_end_military_primacy
+				}
+			}
 			allowed  = {
 				original_tag  = CHI
 				has_dlc = "No Compromise, No Surrender"
 			}
 			traits  = {
-				 CHI_shanghai_financier
+				CHI_shanghai_financier
 			}
 		}
 	}
@@ -2086,6 +2110,11 @@ characters = {
 			idea_token = CHI_huang_jinrong
 			available  = {
 				has_completed_focus = CHI_reshuffle_the_green_gang
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = CHI_end_military_primacy
+				}
 			}
 			allowed  = {
 				original_tag  = CHI
@@ -2416,6 +2445,30 @@ characters = {
 		}
 	}
 
+	CHI_zhu_jiahua = {
+		name = CHI_zhu_jiahua
+		portraits = {
+			civilian = {
+				small = GFX_portrait_CHI_zhu_jihua_small
+			}
+		}
+		gender = male
+		advisor = {
+			slot = political_advisor
+			idea_token = CHI_zhu_jiahua
+			allowed  = {
+				original_tag  = CHI
+				has_dlc = "No Compromise, No Surrender"
+			}
+			available  = {
+				
+			}
+			traits  = {
+				CHI_minister_of_transport_trait 
+			}
+		}
+	}
+
 	CHI_zou_taofen={
 		name=CHI_zou_taofen
 		portraits={
@@ -2594,7 +2647,7 @@ characters = {
 				small= GFX_portrait_CHI_chen_bijun_small
 			}
 		}
-		gender = male
+		gender = female
 		advisor={
 			slot = political_advisor
 			idea_token = CHI_chen_bijun
@@ -2917,12 +2970,13 @@ characters = {
 						has_completed_focus = CHI_scout_for_air_experts
 						has_completed_focus = CHI_sea_hire_chennault
 						has_completed_focus = CHI_aeronautical_expertise
-					}
-					NOT = { is_hired_as_advisor = yes }
+					}	
+					not_already_hired_except_as = air_chief
+
 					NOT = { has_war_with = USA }
 				}
 				idea_token = CHI_claire_lee_chennault_ground_support
-				traits = { air_chief_ground_support_2 }
+				traits = { air_chief_reform_2 }
 				ai_will_do = {
 					factor = 0.5
 				}
@@ -2937,7 +2991,7 @@ characters = {
 						has_completed_focus = CHI_aeronautical_expertise
 						has_completed_focus = CHI_scout_for_air_experts
 					}
-					NOT = { is_hired_as_advisor = yes }
+					not_already_hired_except_as = theorist
 					NOT = { has_war_with = USA }
 				}
 				idea_token = CHI_claire_lee_chennault_theorist
@@ -3045,6 +3099,11 @@ characters = {
 			}
 			advisor={
 				slot = political_advisor
+				visible = {
+					NOT = {
+						has_completed_focus = CHI_end_military_primacy
+					}
+				}
 				available  = {
 					has_completed_focus = CHI_draw_support_from_the_big_families
 				}
@@ -3142,7 +3201,7 @@ characters = {
 		}
 	}
 
-	CHI_zhang_guotao={ # Exist for pre-sea TODO_JNS
+	CHI_zhang_guotao={ 
 		name=CHI_zhang_guotao
 		portraits={
 			civilian={
@@ -3157,17 +3216,60 @@ characters = {
 		}
 	}
 
-	CHI_weng_wenhao={ # Exist for pre-sea TODO_JNS
-		name=CHI_weng_wenhao
-		portraits={
-			civilian={
-				large="GFX_portrait_chi_weng_wenhao"
+	CHI_weng_wenhao = { 
+		
+		instance = {
+			allowed = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+
+			name = CHI_weng_wenhao
+			portraits = {
+				civilian = {
+					large = GFX_portrait_chi_weng_wenhao
+					small = GFX_idea_CHI_weng_wenhao 
+				}
+			}
+
+			advisor = {
+				slot = political_advisor
+				allowed = {
+					original_tag = CHI 
+				}
+				visible = {
+					
+				}
+				available  = {
+					
+				}
+				idea_token = CHI_weng_wenhao
+				traits  = {
+					CHI_geologist_trait 
+				}
 			}
 		}
-		country_leader={
-			ideology=socialism
-			expire="1965.1.1.1"
-			id=-1
+
+		instance = {
+			allowed = {
+				NOT = { 
+					has_dlc = "No Compromise, No Surrender" 
+				}
+			}
+
+			name = CHI_weng_wenhao
+			portraits = {
+				civilian = {
+					large = GFX_portrait_chi_weng_wenhao
+					small = GFX_idea_CHI_weng_wenhao 
+				}
+			}
+			
+			country_leader = {
+				ideology = socialism
+				expire = "1965.1.1.1"
+				id = -1
+			}
+			
 		}
 	}
 

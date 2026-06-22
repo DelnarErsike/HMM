@@ -15,13 +15,6 @@ state = {
 		buildings = {
 			infrastructure = 2
 		}
-
-		
-
-		
-
-		
-		
 	}
 
 	provinces = {

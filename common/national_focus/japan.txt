@@ -4665,6 +4665,8 @@ focus_tree = {
 				}
 			}
 			
+			INS_cancel_hol_ally_strategy_entirely_effect = yes
+			
 			unlock_decision_category_tooltip = prospect_for_resources
 				
 			
@@ -5087,6 +5089,7 @@ focus_tree = {
 				NOT = {
 					has_war_with = ROOT
 				}
+				has_rule = can_join_factions
 			}
 		}
 
@@ -5399,6 +5402,7 @@ focus_tree = {
 						}
 					}
 				}
+				INS_cancel_hol_ally_strategy_entirely_effect = yes
 			}
 			IF = {
 				limit = {
@@ -9859,8 +9863,23 @@ focus_tree = {
 					name = JAP_sea_mountaineers
 					cost_reduction = 0.25
 					uses = 2
-					category = cat_mountaineers_doctrine
+					category = special_forces_doctrine
 				}
+				custom_effect_tooltip = mountaineer_subdoctrines_default_add_mastery_bonus_effect_tooltip
+				hidden_effect = {
+					add_mastery_bonus = {
+						name = JAP_sea_mountaineers
+						bonus = 0.1
+						days = 240
+						sub_doctrine = mountaineers_1
+					}
+					add_mastery_bonus = {
+						name = JAP_sea_mountaineers
+						bonus = 0.1
+						days = 240
+						sub_doctrine = mountaineers_2
+					}
+				}				
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
@@ -9925,8 +9944,23 @@ focus_tree = {
 					name = JAP_jungle_adaptation
 					cost_reduction = 0.25
 					uses = 2
-					category = cat_rangers_doctrine
+					category = special_forces_doctrine
 				}
+				custom_effect_tooltip = ranger_subdoctrines_default_add_mastery_bonus_effect_tooltip
+				hidden_effect = {
+					add_mastery_bonus = {
+						name = JAP_jungle_adaptation
+						bonus = 0.1
+						days = 240
+						sub_doctrine = rangers_1
+					}
+					add_mastery_bonus = {
+						name = JAP_jungle_adaptation
+						bonus = 0.1
+						days = 240
+						sub_doctrine = rangers_2
+					}
+				}				
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
@@ -11732,9 +11766,24 @@ focus_tree = {
 				add_potential_special_forces_tree = yes
 				add_doctrine_cost_reduction = {
 					name = JAP_expand_the_snlf
-					cost_reduction = 0.5
+					cost_reduction = 0.25
 					uses = 1
-					category = cat_marines_doctrine
+					category = special_forces_doctrine
+				}
+				custom_effect_tooltip = marine_subdoctrines_default_add_mastery_bonus_effect_tooltip
+				hidden_effect = {
+					add_mastery_bonus = {
+						name = JAP_expand_the_snlf
+						bonus = 0.1
+						days = 240
+						sub_doctrine = marines_1
+					}
+					add_mastery_bonus = {
+						name = JAP_expand_the_snlf
+						bonus = 0.1
+						days = 240
+						sub_doctrine = marines_2
+					}
 				}
 			}
 			
@@ -12367,6 +12416,10 @@ focus_tree = {
 			JAP_add_or_modify_army_and_naval_air_services = yes
 			add_to_variable = { JAP_airforce_sortie_efficiency = 0.1 tooltip = sortie_efficiency_tt }
 
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = JAP_form_the_kido_butai_tt
+
 		}
 
 	}
@@ -12532,7 +12585,7 @@ focus_tree = {
 						creator = "JAP"
 						version_name = "Shokaku Class"
 					}
-					name = "Zaikaku"
+					name = "Zuikaku"
 					requested_factories = 1
 					progress = 0.75
 					amount = 1
@@ -12600,7 +12653,7 @@ focus_tree = {
 						creator = "JAP"
 						version_name = "Shokaku Class"
 					}
-					name = "Zaikaku"
+					name = "Zuikaku"
 					requested_factories = 1
 					progress = 0.75
 					amount = 1

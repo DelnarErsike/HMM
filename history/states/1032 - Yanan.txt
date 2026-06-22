@@ -8,9 +8,8 @@ state = {
 	history = {
 
 		owner = CHI
-		
+		add_core_of = WST
 		add_core_of = CHI
-
 
 
 		victory_points = {
@@ -38,8 +37,6 @@ state = {
 		}
 
 		1938.10.25 = {
-			owner = CHI
-			controller = PRC	
 			add_victory_points = {
 				province = 8049
 				value = 2

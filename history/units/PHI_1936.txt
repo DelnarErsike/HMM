@@ -21,13 +21,39 @@
 
 
 instant_effect = {
-	add_equipment_production = {
-		equipment = {
-			type = infantry_equipment_1
-			creator = "PHI"
+	if = {
+		limit = { has_dlc = "No Compromise, No Surrender" }
+			add_equipment_production = {
+				equipment = {
+					type = infantry_equipment_0
+					creator = "PHI"
+				}
+				requested_factories = 1
+				progress = 0.40
+				efficiency = 100
+			}
+
+			add_equipment_production = {
+				equipment = {
+					type = convoy_1
+					creator = "PHI" 
+					version_name = "Casco Convoy"
+				}
+				requested_factories = 1
+				progress = 0.55
+				amount = 50
+				industrial_manufacturer = mio:PHI_compania_maritima_de_cebu_organization
+			}
+		else = {
+			add_equipment_production = {
+				equipment = {
+					type = infantry_equipment_0
+					creator = "PHI"
+				}
+				requested_factories = 1
+				progress = 0.40
+				efficiency = 100
+			}
 		}
-		requested_factories = 1
-		progress = 0.40
-		efficiency = 100
 	}
 }

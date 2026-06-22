@@ -16,7 +16,7 @@ country_event = {
 	option = { # Accept demands
 		name = france.1.a
 		ai_chance = {
-			factor = 25 
+			base = 25 
 			modifier = {
 				factor = 50
 				has_war = yes
@@ -36,7 +36,6 @@ country_event = {
 			country_event = { days = 5 id = japan.6 }
 		}
 	}
-	
 }
 
 # Maginot Line Extension

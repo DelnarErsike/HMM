@@ -116,7 +116,6 @@ allow_release_nations = {
 		text = "RULE_OPTION_PEACE_ONLY"
 		desc = "RULE_ALLOW_RELEASE_NATIONS_PEACE_ONLY_DESC"
 	}
-	
 }
 
 allow_licensing = {
@@ -320,7 +319,6 @@ allow_coups = {
 		desc = "RULE_ALLOW_COUPS_AI_ONLY_DESC"
 		allow_achievements = yes
 	}
-	
 }
 
 allow_party_boosting = {
@@ -371,7 +369,6 @@ allow_paratroopers = {
 		text = "RULE_OPTION_ALLOWED"
 		desc = "RULE_ALLOW_PARATROOPERS_ALLOWED_DESC"
 	}
-	
 }
 
 
@@ -385,9 +382,9 @@ maximum_fort_level = {
 	name = "RULE_MAXIMUM_FORT_LEVEL"
 	group = "RULE_GROUP_GAMEPLAY"
 	icon = "GFX_maximum_fort_level"
-	default = {
-		name = level_5
-		text = "RULE_OPTION_5"
+	option = {
+		name = level_2
+		text = "RULE_OPTION_2"
 		desc = "RULE_MAXIMUM_FORT_LEVEL_DESC"
 	}
 	option = {
@@ -401,11 +398,6 @@ maximum_fort_level = {
 		desc = "RULE_MAXIMUM_FORT_LEVEL_DESC"
 	}
 	option = {
-		name = level_2
-		text = "RULE_OPTION_2"
-		desc = "RULE_MAXIMUM_FORT_LEVEL_DESC"
-	}
-	option = {
 		name = level_3
 		text = "RULE_OPTION_3"
 		desc = "RULE_MAXIMUM_FORT_LEVEL_DESC"
@@ -413,6 +405,11 @@ maximum_fort_level = {
 	option = {
 		name = level_4
 		text = "RULE_OPTION_4"
+		desc = "RULE_MAXIMUM_FORT_LEVEL_DESC"
+	}
+	option = {
+		name = level_5
+		text = "RULE_OPTION_5"
 		desc = "RULE_MAXIMUM_FORT_LEVEL_DESC"
 	}
 	option = {
@@ -441,6 +438,7 @@ allow_scorched_earth = {
 	name = "RULE_ALLOW_SCORCHED_EARTH"
 	group = "RULE_GROUP_GAMEPLAY"
 	icon = "GFX_scorched_earth"
+	required_dlc = "No Step Back"
 	default = {
 		name = no
 		text = "RULE_OPTION_BLOCKED"
@@ -451,7 +449,6 @@ allow_scorched_earth = {
 		text = "RULE_OPTION_ALLOWED"
 		desc = "RULE_ALLOW_SCORCHED_EARTH_ALLOWED_DESC"
 	}
-	
 }
 
 

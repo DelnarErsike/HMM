@@ -9,7 +9,7 @@ state = {
 
 		owner = CHI
 		add_core_of = CHI
-		
+		add_core_of = WST
 		
 		buildings = {
 			infrastructure = 2
@@ -24,9 +24,6 @@ state = {
 		victory_points = {
 			1367 1 # Guanghan
 		}
-
-
-
 
 		
 		1939.1.1 = {

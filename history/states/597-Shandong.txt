@@ -13,8 +13,7 @@ state = {
 
 		owner = CHI
 		add_core_of = CHI
-		
-
+		add_core_of = WST
 
 
 		victory_points = {
@@ -39,13 +38,11 @@ state = {
 		}
 
 		1938.10.25 = {
-			IF = {
-				limit = {
-					has_dlc = "No Compromise, No Surrender" 
-				}
-			}	
 			owner = CHI
-			controller = JAP		
+			controller = JAP	
+			buildings = {
+				air_base = 1
+			}	
 		}
 		
 	}

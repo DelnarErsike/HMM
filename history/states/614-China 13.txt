@@ -14,13 +14,11 @@ state={
 
 		owner = CHI
 		add_core_of = CHI
-		
+		add_core_of = WST
 
 		victory_points = {
 			4190 3 # Shijiazhuang
 		}
-
-
 		
 		buildings = {
 			infrastructure = 2

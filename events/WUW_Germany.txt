@@ -3974,7 +3974,7 @@ country_event = {
 
 			add_state_claim = 980
 			add_state_claim = 34
-    			add_to_faction = FROM	
+			add_to_faction = FROM	
 		}
 		ELSE_IF = {
 			limit = {
@@ -4603,7 +4603,7 @@ country_event = { #Germany integrates us
 	picture = GFX_report_event_german_troops
 
 	is_triggered_only = yes
-
+	
 	option = { #we had a good run
 		name = wuw_GER_diplomacy.81.a
 
@@ -4613,6 +4613,7 @@ country_event = { #Germany integrates us
 				transfer_troops = yes
 			}
 		}
+		
 		effect_tooltip = {
 			every_controlled_state = {
 				limit = {
@@ -4632,9 +4633,7 @@ country_event = { #Germany integrates us
 					add_compliance = 50
 					add_extra_state_shared_building_slots = 1
 				}
-
 			}
-
 		}
 
 		custom_effect_tooltip = GAME_OVER_TT
@@ -7542,7 +7541,7 @@ country_event = {
 		BEL = {
 			# Congo folds
 			country_event = { 
-				id = wuw_GER_weltpolitik.11
+				id = wuw_GER_weltpolitik.10
 				days = 1
 			}
 		}
@@ -7763,6 +7762,7 @@ country_event = {
 		name = wuw_GER_weltpolitik.10.a
 		trigger = {
 			has_global_flag = COG_refused_partition_flag
+			NOT = { original_tag = BEL }
 		}
 		ai_chance = {
 			base = 100
@@ -7819,6 +7819,7 @@ country_event = {
 		trigger = {
 			NOT = {
 				has_global_flag = COG_refused_partition_flag
+				original_tag = BEL
 			}
 		}
 		ai_chance = {
@@ -7831,6 +7832,10 @@ country_event = {
 			}
 			every_state = {
 				limit = {
+					OR = {
+						is_controlled_by = BEL
+						is_controlled_by = FROM
+					}
 					OR = {
 						state = 888
 						state = 889
@@ -7846,6 +7851,10 @@ country_event = {
 			every_state = {
 				limit = {
 					OR = {
+						is_controlled_by = BEL
+						is_controlled_by = FROM
+					}
+					OR = {
 						state = 295
 						state = 538
 						state = 718
@@ -7857,7 +7866,51 @@ country_event = {
 				transfer_state_to = ROOT
 			}
 		}
+	}
+	option = { # There's nothing to be done....
+		name = wuw_GER_weltpolitik.21.b #Intentional
+		trigger = {
+			NOT = {
+				has_global_flag = COG_refused_partition_flag
+			}
+			original_tag = BEL
+		}
+		ai_chance = {
+			base = 100
+		}	
 
+		effect_tooltip = {
+			every_state = {
+				limit = {
+					OR = {
+						is_controlled_by = ROOT
+						is_controlled_by = FROM
+					}
+					OR = {
+						state = 888
+						state = 889
+					}
+				}
+				transfer_state_to = ENG
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_controlled_by = ROOT
+						is_controlled_by = FROM
+					}
+					OR = {
+						state = 295
+						state = 538
+						state = 718
+						state = 890
+						state = 768
+						state = 769
+					}
+				}
+				transfer_state_to = GER
+			}
+		}
 	}
 }
 
@@ -7949,12 +8002,22 @@ country_event = {
 
 	option = { # We must destroy them for the protection of our people! ("CONGO SAID NO!!!")
 		name = wuw_GER_weltpolitik.11.a	
+		ai_chance = {
+			base = 75
+		}
 
 		create_wargoal = {
 			type = puppet_wargoal_focus
 			target = COG
 		}	
 		
+	}
+
+	option = { # We must destroy them for the protection of our people! ("CONGO SAID NO!!!")
+		name = wuw_GER_realpolitik.7.a #INtentional
+		ai_chance = {
+			base = 25
+		}	
 	}
 }
 
@@ -8886,7 +8949,13 @@ country_event = {
 				}
 			}
 		}
-		
+		hidden_effect = {
+			RKB = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 
 	option = { # It might be wise to use a local puppet
@@ -8909,12 +8978,18 @@ country_event = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = GER_local_controlled_reichskommissariat
 		}
-
+		hidden_effect = {
+			RKB = {
+				every_controlled_state = {
+					set_compliance = 25
+				}
+			}
+		}
 	}
 }
 
 # A Leader for Niederlande - event for GER
-country_event = { 
+country_event = {
 	id = wuw_GER_reichskommissariats.2
 	title = wuw_GER_reichskommissariats.2.t
 	desc = wuw_GER_reichskommissariats.2.desc 
@@ -9303,7 +9378,7 @@ country_event = {
 }
 
 # A Leader for Ostland - event for GER
-country_event = { 
+country_event = {
 	id = wuw_GER_reichskommissariats.5
 	title = wuw_GER_reichskommissariats.5.t
 	desc = wuw_GER_reichskommissariats.5.desc 
@@ -9667,7 +9742,7 @@ country_event = {
 					    character = SOV_konstantin_rodzayevsky
 					}
 				}
-			}
+			}	
 		}
 	}
 
@@ -9700,7 +9775,6 @@ country_event = {
 				}
 			}
 		}
-		
 	}
 
 	option = { # It might be wise to use a local puppet
@@ -13061,6 +13135,11 @@ country_event = {
 					has_game_rule = {
 						rule = GER_ai_behavior
 						option = KAISER
+					}
+					has_country_flag = GER_AI_RANDOM_DEMOCRATIC
+					has_game_rule = {
+						rule = GER_ai_behavior
+						option = DEMOCRATIC
 					}
 				}
 			}

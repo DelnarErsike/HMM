@@ -7,7 +7,6 @@ state={
 	
 	history={
 		owner = WST
-		
 		buildings = {
 			infrastructure = 1 
 			industrial_complex = 1
@@ -17,5 +16,5 @@ state={
 	provinces={
 		658 661 3660 3662 11601 
 	}
-	local_supplies = 0.0 
+	local_supplies=0.0 
 }

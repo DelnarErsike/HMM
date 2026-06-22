@@ -4,7 +4,6 @@ state={
 	name="STATE_847"
 	manpower = 1
 	state_category = wasteland
-	
 	history={
 		owner = WST
 		buildings = {
@@ -16,5 +15,5 @@ state={
 	provinces={
 		636 9587 3612 9618  
 	}
-	local_supplies = 0.0 
+	local_supplies=0.0 
 }

@@ -4613,7 +4613,7 @@ country_event = {
 			limit =  {
 				OR = {
 					any_war_score < 39
-					has_stability < 60
+					has_stability < 0.6
 				}
 			}
 			start_civil_war = {
@@ -4655,7 +4655,7 @@ country_event = {
 				PREV.PREV = {
 					set_variable = { GER_military_army_org_factor = 0.05 }
 					set_variable = { GER_military_planning_speed = 0.25 }
-					set_variable = { GER_military_supply_factor = -0.15 }
+					set_variable = { GER_military_supply_consumption_factor = 0.15 }
 					set_variable = { GER_military_equipment_capture = 0 }
 					set_variable = { GER_military_initiative_factor = 0 }
 					set_variable = { GER_military_army_fuel_consumption_factor = 0 }
@@ -4726,7 +4726,7 @@ country_event = {
 			limit =  {
 				NOT = {
 					any_war_score < 39
-					has_stability < 60
+					has_stability < 0.6
 				}
 			}
 			start_civil_war = {
@@ -4768,7 +4768,7 @@ country_event = {
 				PREV.PREV = {
 					set_variable = { GER_military_army_org_factor = 0.05 }
 					set_variable = { GER_military_planning_speed = 0.25 }
-					set_variable = { GER_military_supply_factor = -0.15 }
+					set_variable = { GER_military_supply_consumption_factor = 0.15 }
 					set_variable = { GER_military_equipment_capture = 0 }
 					set_variable = { GER_military_initiative_factor = 0 }
 					set_variable = { GER_military_army_fuel_consumption_factor = 0 }
@@ -4867,7 +4867,7 @@ country_event = {
 			limit =  {
 				OR = {
 					any_war_score < 39
-					has_stability < 60
+					has_stability < 0.6
 				}
 			}
 			start_civil_war = {
@@ -4935,7 +4935,7 @@ country_event = {
 				PREV.PREV = {
 					set_variable = { GER_military_army_org_factor = 0.05 }
 					set_variable = { GER_military_planning_speed = 0.25 }
-					set_variable = { GER_military_supply_factor = -0.15 }
+					set_variable = { GER_military_supply_consumption_factor = 0.15 }
 					set_variable = { GER_military_equipment_capture = 0 }
 					set_variable = { GER_military_initiative_factor = 0 }
 					set_variable = { GER_military_army_fuel_consumption_factor = 0 }
@@ -4980,7 +4980,7 @@ country_event = {
 			limit =  {
 				NOT = {
 					any_war_score < 39
-					has_stability < 60
+					has_stability < 0.6
 				}
 			}
 			start_civil_war = {
@@ -5123,7 +5123,7 @@ country_event = {
 			limit =  {
 				OR = {
 					any_war_score < 39
-					has_stability < 60
+					has_stability < 0.6
 				}
 			}
 			start_civil_war = {
@@ -5236,7 +5236,7 @@ country_event = {
 			limit =  {
 				NOT = {
 					any_war_score < 39
-					has_stability < 60
+					has_stability < 0.6
 				}
 			}
 			start_civil_war = {
@@ -5304,7 +5304,7 @@ country_event = {
 				PREV.PREV = {
 					set_variable = { GER_military_army_org_factor = 0.05 }
 					set_variable = { GER_military_planning_speed = 0.25 }
-					set_variable = { GER_military_supply_factor = -0.15 }
+					set_variable = { GER_military_supply_consumption_factor = 0.15 }
 					set_variable = { GER_military_equipment_capture = 0 }
 					set_variable = { GER_military_initiative_factor = 0 }
 					set_variable = { GER_military_army_fuel_consumption_factor = 0 }
@@ -6590,7 +6590,10 @@ country_event = {
 				remove_from_faction = GER
 			}
 			add_stability = -0.2
-			create_faction = the_berlin_moscow_axis
+			create_faction_from_template = {
+				template = faction_template_regional_anti_democratic
+				name = the_berlin_moscow_axis
+			}
 			add_to_faction = SOV
 			add_named_threat = { threat = 10 name = germany.89.t }
 			every_other_country = {
@@ -9144,7 +9147,10 @@ country_event = {
 			limit = {
 				is_in_faction = no
 			}
-			create_faction = "anti_soviet_pact_faction"
+			create_faction_from_template = {
+				template = faction_template_anti_communist
+				name = anti_soviet_pact_faction
+			}
 		}
 	}
 
@@ -9966,7 +9972,13 @@ country_event = { #Germany wants resource rights for Sweden
 
 			modifier = {
 				FROM = {
-					surrender_progress > 0.2
+					surrender_progress > 0.1
+				}
+				factor = 2
+			}
+			modifier = {
+				FROM = {
+					surrender_progress > 0.25
 				}
 				factor = 10
 			}
@@ -9997,7 +10009,7 @@ country_event = { #Germany wants resource rights for Sweden
 
 	option = { #Yes
 		ai_chance = {
-			base = 9
+			base = 30
 		}
 		name = AAT_germany.1.b
 

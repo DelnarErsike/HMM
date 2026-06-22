@@ -435,6 +435,10 @@ propaganda_efforts = {
 					has_idea = extensive_conscription
 				}
 			}
+			modifier = {
+				factor = 0
+				has_war_support > 0.9
+			}
 		}
 	}
 	
@@ -570,19 +574,14 @@ propaganda_efforts = {
 		available = {
 			IF = {
 				limit = {
+					has_dlc = "Trial of Allegiance"
 					tag = BRA
 				}
 				threat > 0.25
 				#has_tech = radio
 				has_completed_focus = BRA_radio_nacional
 			}
-			ELSE = {
-				threat > 0.25
-				has_tech = radio
-			}
-		
-
-			IF = {
+			ELSE_IF = {
 				limit = {
 					tag = AFG
 				}
@@ -684,6 +683,7 @@ propaganda_efforts = {
 			}
 			hidden_effect = {
 				country_event = political.33
+				set_country_flag = has_taken_the_war_propaganda_film_industry_decision
 			}
 		}
 
@@ -1957,6 +1957,18 @@ war_measures = {
 						}
 					}
 				}
+				AND = {
+					has_dlc = "No Compromise, No Surrender"
+					NOT = {
+						tag = PHI #has a focus
+					}
+				}
+				AND = {
+					has_dlc = "Thunder at Our Gates"
+					NOT = {
+						tag = INS #has a focus
+					}
+				}
 			}
 		}
 
@@ -1968,10 +1980,39 @@ war_measures = {
 			add_potential_special_forces_tree = yes
 		}
 		ai_will_do = {
-			factor = 201
+			base = 201
 			modifier = {
 				factor = 0
 				is_major = no
+			}
+			modifier = {
+				factor = 0
+				original_tag = CHI 
+				amount_taken_ideas = {
+					amount < 1
+					slots = {
+						army_chief
+					}
+				}
+				amount_taken_ideas = {
+					amount < 2
+					slots = {
+						high_command
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					has_doctrine = mountaineers_1
+					has_doctrine = mountaineers_2
+					has_doctrine = marines_1
+					has_doctrine = marines_2
+					has_doctrine = paratroopers_1
+					has_doctrine = paratroopers_2
+					has_doctrine = rangers_1
+					has_doctrine = rangers_2
+				}
 			}
 		}
 	}

@@ -10,9 +10,8 @@ state={
 	history={
 
 		owner = CHI
-		
+		add_core_of = WST
 		add_core_of = CHI
-		
 
 		victory_points = {
 			4783 1 # Ejin Banner
@@ -21,22 +20,6 @@ state={
 		buildings = {
 			infrastructure = 1
 		}
-
-
-
-		1938.10.25 = {
-			IF = {
-				limit = {
-					NOT = {
-						has_dlc = "Waking the Tiger" 
-					}
-				}
-				CHI = {
-					transfer_state = PREV
-				}
-			}
-		}
-
 	}
 
 	local_supplies = 0.0 

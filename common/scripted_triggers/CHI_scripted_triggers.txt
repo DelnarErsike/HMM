@@ -77,7 +77,9 @@ is_literally_china_not_prc = { ## Needed for SEA MIO reasons
 	}
 }
 
-
+is_chinese_warlord = {
+	always = no
+}
 is_chinese_warlord_tooltip = {
 	custom_trigger_tooltip = {
 		tooltip = is_chinese_warlord_tt
@@ -215,6 +217,10 @@ CHI_indo_chinese_states = {
 		state = 670 # Laos
 		state = 1017 # Trung Bo
 		state = 671 # Tonkin
+		state = 1066 # Cochinchina
+		state = 1067 # Battambang
+		state = 1068 # Bassac
+		state = 1069 # Lan Chang 
 	} 
 }
 

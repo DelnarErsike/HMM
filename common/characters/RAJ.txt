@@ -140,15 +140,6 @@ characters={
 				allowed = {
 					original_tag = RAJ
 				}
-				available = {
-					OR = {
-						has_country_flag = has_swayed_bose_to_communism
-						ROOT = { 
-							has_completed_focus = RAJ_forward_bloc 
-							NOT = { has_country_flag = has_arrested_bose }
-						}
-					}
-				}
 
 				visible = {
 					OR = {
@@ -159,6 +150,17 @@ characters={
 						}
 					}
 				}
+
+				available = {
+					OR = {
+						has_country_flag = has_swayed_bose_to_communism
+						ROOT = { 
+							has_completed_focus = RAJ_forward_bloc 
+							NOT = { has_country_flag = has_arrested_bose }
+						}
+					}
+				}
+				
 				traits = {
 					pragmatic_authoritarian 
 				}
@@ -1953,6 +1955,16 @@ characters={
 			allowed = {
 				original_tag = RAJ
 			}
+			available = {
+				PAK = {
+					exists = no
+				}
+			}
+			visible = {
+				PAK = {
+					exists = no
+				}
+			}
 			traits = {
 				muslim_scholar 
 			}
@@ -1991,6 +2003,16 @@ characters={
 			allowed = {
 				original_tag = RAJ
 			}
+			available = {
+				PAK = {
+					exists = no
+				}
+			}
+			visible = {
+				PAK = {
+					exists = no
+				}
+			}
 			traits = {
 				well_mannered_iman 
 			}
@@ -2011,6 +2033,22 @@ characters={
 		#country_leader = {
 		#	ideology = despotism
 		#	traits = { RAJ_heir_of_the_empire }
+		#	expire = "1965.1.1.1"
+		#	id = -1
+		#}
+	}
+
+	RAJ_abdul_ghaffar_khan = {
+		name = RAJ_abdul_ghaffar_khan
+		portraits = {
+			civilian = {
+				large = GFX_portrait_RAJ_abdul_ghaffar_khan
+				small = GFX_portrait_RAJ_abdul_ghaffar_khan_small
+			}
+		}
+		#country_leader = {
+		#	ideology = despotism
+		#	traits = { RAJ_khudai_khidmatgar_leader }
 		#	expire = "1965.1.1.1"
 		#	id = -1
 		#}

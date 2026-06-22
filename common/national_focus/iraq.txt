@@ -420,16 +420,13 @@ focus_tree = {
 	focus = {
 		id = IRQ_found_the_iraqi_state_railways
 		icon = {
-		    trigger = { 
+		    GFX_focus_IRQ_found_the_iraqi_state_railways_alt = { 
 		    	OR = {
 		    		has_cosmetic_tag = IRQ_kurdistan_tag 
 		    		has_cosmetic_tag = greater_kurdistan 
 		    	}
 		    }
-		    value = GFX_focus_IRQ_found_the_iraqi_state_railways_alt
-		}
-		icon = {
-		    value = GFX_focus_IRQ_found_the_iraqi_state_railways
+		    GFX_focus_IRQ_found_the_iraqi_state_railways = yes
 		}
 		prerequisite = { focus = IRQ_decouple_from_the_pound }
 		#mutually_exclusive = { focus = }
@@ -687,16 +684,13 @@ focus_tree = {
 	focus = {
 		id = IRQ_found_the_state_company_for_iron_and_steel
 		icon = {
-		    trigger = { 
+		    GFX_focus_IRQ_found_the_state_company_for_iron_and_steel_alt = { 
 		    	OR = {
 		    		has_cosmetic_tag = IRQ_kurdistan_tag 
 		    		has_cosmetic_tag = greater_kurdistan 
 		    	}
 		    }
-		    value = GFX_focus_IRQ_found_the_state_company_for_iron_and_steel_alt
-		}
-		icon = {
-		    value = GFX_focus_IRQ_found_the_state_company_for_iron_and_steel
+			GFX_focus_IRQ_found_the_state_company_for_iron_and_steel = yes
 		}
 		dynamic = yes
 		prerequisite = { focus = IRQ_found_southern_steel_plants }
@@ -747,16 +741,13 @@ focus_tree = {
 	focus = {
 		id = IRQ_baghdad_colleges_of_engineering_and_education
 		icon = {
-		    trigger = { 
+		    GFX_focus_IRQ_baghdad_colleges_of_engineering_and_education_alt = { 
 		    	OR = {
 		    		has_cosmetic_tag = IRQ_kurdistan_tag 
 		    		has_cosmetic_tag = greater_kurdistan 
 		    	}
 		    }
-		    value = GFX_focus_IRQ_baghdad_colleges_of_engineering_and_education_alt
-		}
-		icon = {
-		    value = GFX_focus_IRQ_baghdad_colleges_of_engineering_and_education
+		    GFX_focus_IRQ_baghdad_colleges_of_engineering_and_education = yes
 		}
 		dynamic = yes
 		prerequisite = { focus = IRQ_decouple_from_the_pound }
@@ -816,7 +807,7 @@ focus_tree = {
 
 		}
 
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1013,14 +1004,14 @@ focus_tree = {
 	focus = {
 		id = IRQ_construct_the_dukan_dam
 		icon = GFX_focus_generic_hydroelectric_energy
-		prerequisite = { focus = IRQ_heavy_industry_investments }
+		prerequisite = { focus = IRQ_found_company_for_cement }
 		prerequisite = { focus = IRQ_baghdad_colleges_of_engineering_and_education }
 		#mutually_exclusive = { focus = }
 		x = 0
 		y = 3
 		relative_position_id = IRQ_baghdad_colleges_of_engineering_and_education
 
-		cost = 10
+		cost = 12
 
 		ai_will_do = {
 			base = 1
@@ -1043,6 +1034,10 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+
+			add_stability = 0.05
+
+			custom_effect_tooltip = generic_skip_one_line_tt
 
 			676 = {
 				add_building_construction = {
@@ -1344,8 +1339,7 @@ focus_tree = {
 
 		}
 
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1374,12 +1368,15 @@ focus_tree = {
 			set_rule = { 
 				can_create_factions = yes 
 			}	
-
 			IF = {
 				limit = {
 					is_in_faction = no
 				}
-				create_faction = PER_opec
+				create_faction_from_template = {
+					template = faction_template_regional
+					name = PER_opec
+					icon = GFX_faction_logo_generic_15
+				}
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -1571,16 +1568,13 @@ focus_tree = {
 	focus = {
 		id = IRQ_royal_iraqi_army
 		icon = {
-		    trigger = { 
+		    GFX_focus_IRQ_royal_iraqi_army_alt = { 
 		    	OR = {
 		    		has_cosmetic_tag = IRQ_kurdistan_tag 
 		    		has_cosmetic_tag = greater_kurdistan 
 		    	}
 		    }
-		    value = GFX_focus_IRQ_royal_iraqi_army_alt
-		}
-		icon = {
-		    value = GFX_focus_IRQ_royal_iraqi_army
+		    GFX_focus_IRQ_royal_iraqi_army = yes
 		}
 		#prerequisite = { focus = }
 		#mutually_exclusive = { focus = }
@@ -1602,7 +1596,7 @@ focus_tree = {
 
 		}
 
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1610,7 +1604,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			custom_effect_tooltip = IRQ_royal_army_intro_tt
+			IRQ_modify_army_modifier_version = yes
 			add_to_variable = { 
 				IRQ_conscription_factor = 0.05
 				tooltip = conscription_factor_tt
@@ -1658,7 +1652,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			custom_effect_tooltip = IRQ_royal_army_intro_tt
+			IRQ_modify_army_modifier_version = yes
 			add_to_variable = { 
 				IRQ_army_core_defence_factor = 0.1
 				tooltip = army_core_defence_factor_tt
@@ -1810,7 +1804,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			custom_effect_tooltip = IRQ_royal_army_intro_tt
+			IRQ_modify_army_modifier_version = yes
 			add_to_variable = { 
 				IRQ_modifier_army_sub_unit_cavalry_attack_factor = 0.1
 				tooltip = cavalry_attack_factor_tt
@@ -1841,6 +1835,8 @@ focus_tree = {
 		y = 1
 		relative_position_id = IRQ_cavalry_integration
 
+		dynamic = yes 
+
 		allow_branch = {
 			has_dlc = "Battle for the Bosporus"
 		}
@@ -1864,6 +1860,16 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+
+			add_tech_bonus = {
+				name = IRQ_expand_camel_corps
+				bonus = 0.5
+				uses = 2
+				category = military_police_tech
+			}	
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			division_template = {
 				name = "Camel Corps" 			# Tank Battalion
 
@@ -1883,6 +1889,7 @@ focus_tree = {
 					count = 2
 				}
 			}
+
 		}
 	}
 
@@ -1916,7 +1923,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			custom_effect_tooltip = IRQ_royal_army_intro_tt
+			IRQ_modify_army_modifier_version = yes
 			add_to_variable = { 
 				IRQ_motorized_attack_factor = 0.05
 				tooltip = motorized_attack_factor_tt
@@ -2065,7 +2072,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = IRQ_royal_iraqi_army
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			base = 1
@@ -2135,6 +2142,14 @@ focus_tree = {
 			    }
 			}
 
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_equipment_to_stockpile = { 
+				type = artillery_equipment
+				amount = 50
+				producer = IRQ
+			}	
+
 			IF = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
@@ -2181,7 +2196,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			custom_effect_tooltip = IRQ_royal_army_intro_tt
+			IRQ_modify_army_modifier_version = yes
 			add_to_variable = { 
 				IRQ_conscription_factor = 0.05
 				tooltip = conscription_factor_tt
@@ -2305,11 +2320,8 @@ focus_tree = {
 					naval_facility < 1
 				}
 				prioritize = { 1011 }
-				add_building_construction = {
-					type = land_facility
-					level = 1
-					instant_build = yes
-					province = 2004 
+				construct_building_in_random_province = {
+					land_facility = 1
 				}
 			}
 
@@ -2369,7 +2381,7 @@ focus_tree = {
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = IRQ_royal_army_intro_tt
+			IRQ_modify_army_modifier_version = yes
 			add_to_variable = { 
 				IRQ_mechanized_attack_factor = 0.05
 				tooltip = mechanized_attack_factor_tt
@@ -2418,7 +2430,7 @@ focus_tree = {
 
 	focus = {
 		id = IRQ_expand_habbaniya_airbase
-		icon = GFX_focus_IRQ_airforce
+		icon = GFX_focus_IRQ_expand_habbaniya_airbase
 		prerequisite = { focus = IRQ_royal_iraqi_army }
 		#mutually_exclusive = { focus = }
 		x = -7
@@ -2443,7 +2455,7 @@ focus_tree = {
 			}
 		}
 
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL FOCUS_FILTER_AIR_XP }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -2489,7 +2501,7 @@ focus_tree = {
 
 	focus = {
 		id = IRQ_independent_flight_schools
-		icon = GFX_focus_SOV_flying_clubs
+		icon = GFX_focus_IRQ_airforce #GFX_focus_SOV_flying_clubs
 		prerequisite = { focus = IRQ_expand_habbaniya_airbase }
 		#mutually_exclusive = { focus = }
 		x = 0
@@ -2517,21 +2529,20 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_dynamic_modifier = {
-				modifier = IRQ_air_force_modifier
-			}
 
-			#custom_effect_tooltip = IRQ_air_force_intro_tt
-			#add_to_variable = { 
-			#	IRQ_air_accidents_factor = -0.1
-			#	tooltip = air_accidents_factor_tt
+			#if = {
+			#	limit = {
+			#		has_completed_focus = IRQ_kurdish_revolt
+			#	}
+			#	add_dynamic_modifier = {
+			#		modifier = IRQ_air_force_modifier_KUR
+			#	}
 			#}
-
-			#add_to_variable = { 
-			#	IRQ_air_weather_penalty = -0.05
-			#	tooltip = air_weather_penalty_tt
+			#else = {
+			#	add_dynamic_modifier = {
+			#		modifier = IRQ_air_force_modifier_IRQ
+			#	}
 			#}
-			
 		}
 	}
 
@@ -2782,7 +2793,7 @@ focus_tree = {
 
 		}
 
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -2803,14 +2814,14 @@ focus_tree = {
 						has_dlc = "By Blood Alone"
 					}
 					add_equipment_to_stockpile = { 
-						type = small_plane_airframe_1
+						type = small_plane_airframe_0
 						amount = 30
 						producer = ITA
 					}
 				}
 				ELSE = {
 					add_equipment_to_stockpile = { 
-						type = fighter_equipment_1
+						type = fighter_equipment_0
 						amount = 30
 						producer = ITA
 					}
@@ -2821,14 +2832,14 @@ focus_tree = {
 					has_dlc = "By Blood Alone"
 				}
 				add_equipment_to_stockpile = { 
-					type = small_plane_airframe_1
+					type = small_plane_airframe_0
 					amount = 55
 					producer = ITA
 				}
 			}
 			ELSE = {
 				add_equipment_to_stockpile = { 
-					type = fighter_equipment_1
+					type = fighter_equipment_0
 					amount = 55
 					producer = ITA
 				}
@@ -2876,6 +2887,8 @@ focus_tree = {
 
 		}
 
+		search_filters = { FOCUS_FILTER_AIR_XP }
+
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2885,8 +2898,8 @@ focus_tree = {
 			air_experience = 15
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = IRQ_royal_air_force_intro_tt
+			IRQ_modify_air_force_modifier_version = yes
+		
 			add_to_variable = { 
 				IRQ_air_strategic_bomber_bombing_factor = 0.1
 				tooltip = air_strategic_bomber_bombing_factor_tt
@@ -2941,7 +2954,7 @@ focus_tree = {
 
 		}
 
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIR_XP }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -2953,7 +2966,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			custom_effect_tooltip = IRQ_royal_air_force_intro_tt
+			IRQ_modify_air_force_modifier_version =  yes
 			add_to_variable = { 
 				IRQ_air_nav_efficiency = 0.1
 				tooltip = air_nav_efficiency_tt
@@ -3024,7 +3037,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			custom_effect_tooltip = IRQ_royal_air_force_intro_tt
+			IRQ_modify_air_force_modifier_version = yes
 			add_to_variable = { 
 				IRQ_air_agility_factor = 0.1
 				tooltip = air_agility_factor_tt
@@ -3251,7 +3264,7 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt	
 			}	
 
-			custom_effect_tooltip = IRQ_royal_air_force_intro_tt
+			IRQ_modify_air_force_modifier_version = yes
 			add_to_variable = { 
 				IRQ_special_forces_cap = 0.15 
 				tooltip = special_forces_cap_tt 
@@ -3262,16 +3275,13 @@ focus_tree = {
 	focus = {
 		id = IRQ_establish_iraqi_coastal_defense_force
 		icon = {
-		    trigger = { 
+		    GFX_focus_IRQ_navy_alt = { 
 		    	OR = {
 		    		has_cosmetic_tag = IRQ_kurdistan_tag 
 		    		has_cosmetic_tag = greater_kurdistan 
 		    	}
 		    }
-		    value = GFX_focus_IRQ_navy_alt
-		}
-		icon = {
-		    value = GFX_focus_IRQ_navy
+		    GFX_focus_IRQ_navy = yes
 		}
 		prerequisite = { focus = IRQ_royal_iraqi_army }
 		#mutually_exclusive = { focus = }
@@ -3279,7 +3289,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = IRQ_royal_iraqi_army
 
-		search_filters = { FOCUS_FILTER_HISTORICAL }
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_NAVY_XP }
 
 		cost = 10
 
@@ -3301,9 +3311,35 @@ focus_tree = {
 
 		completion_reward = {
 
-			add_dynamic_modifier = {
-				modifier = IRQ_navy_modifier
-			}		
+			IF = {
+				limit = {
+					has_completed_focus = IRQ_kurdish_revolt
+				}
+				add_dynamic_modifier = {
+					modifier = IRQ_navy_modifier_KUR
+				}
+			}
+			ELSE = {
+				add_dynamic_modifier = {
+					modifier = IRQ_navy_modifier_IRQ
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			every_core_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					OR = {
+						state = 1011
+						state = 291 
+						state = 676 
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = IRQ_river_navy
+				}
+			}
 
 			IF = {
 				limit = {
@@ -3351,7 +3387,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			custom_effect_tooltip = IRQ_navy_modifier_intro_tt
+			IRQ_modify_navy_modifier_version = yes
 			add_to_variable = { 
 				IRQ_navy_spirit_category_type_cost_factor = -0.1
 				tooltip = navy_spirit_category_type_cost_factor_tt
@@ -3560,13 +3596,106 @@ focus_tree = {
 	}
 
 	focus = {
-		id = IRQ_develop_the_kuwaiti_port
-		icon = GFX_focus_POL_develop_polish_shipbuilding
+		id = IRQ_basra_military_port_focus
+		icon = GFX_focus_generic_refit_civilian_ships
 		prerequisite = { focus = IRQ_create_repair_yards }
 		#mutually_exclusive = { focus = }
 		x = 0
 		y = 1
 		relative_position_id = IRQ_create_repair_yards
+
+		cost = 10
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			1011 = {
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		bypass = {
+			1011 = {
+				is_fully_controlled_by = ROOT
+				NOT = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}	
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			1011 = {
+				IF = {
+					limit = { 
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}	
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				ELSE_IF = {
+					limit = { 
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}	
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+				ELSE_IF = {
+					limit = { 
+						free_building_slots = {
+							building = dockyard
+							size > 0
+							include_locked = yes
+						}	
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+		}
+	}
+
+	focus = {
+		id = IRQ_develop_the_kuwaiti_port
+		icon = GFX_focus_POL_develop_polish_shipbuilding
+		prerequisite = { focus = IRQ_basra_military_port_focus }
+		#mutually_exclusive = { focus = }
+		x = 0
+		y = 1
+		relative_position_id = IRQ_basra_military_port_focus
 
 		cost = 10
 
@@ -3624,7 +3753,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			custom_effect_tooltip = IRQ_navy_modifier_intro_tt
+			IRQ_modify_navy_modifier_version = yes
 			add_to_variable = {
 				IRQ_navy_refit_speed = 0.1
 				tooltip = refit_speed_tt
@@ -3652,6 +3781,164 @@ focus_tree = {
 		}
 	}
 
+
+
+	### Hashemite/Golden Square Branches ###
+
+	focus = {
+		id = IRQ_ensure_sunni_dominance 
+		icon = GFX_focus_IRQ_arab_dominance
+		#prerequisite = { focus = }
+		mutually_exclusive = { focus = IRQ_promote_kurdish_culture }
+		x = 34
+		y = 0
+		#relative_position_id = IRQ_ensure_sunni_dominance
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = IRQ_promote_kurdish_culture
+				}
+			}
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}	
+
+			add_stability = 0.1
+			
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes 
+			}
+		}
+	}
+
+	focus = {
+		id = IRQ_rally_behind_the_hashemite_dynasty
+		icon = GFX_focus_IRQ_rally_behind_the_hashemite_dynasty
+		prerequisite = { focus = IRQ_ensure_sunni_dominance }
+		mutually_exclusive = { focus = IRQ_party_of_national_brotherhood }
+		x = -2
+		y = 1
+		relative_position_id = IRQ_ensure_sunni_dominance
+
+		cost = 10
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			add_stability = 0.1
+			add_political_power = 100
+
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes 
+			}
+		}
+	}
+
+	focus = {
+		id = IRQ_increase_anglo_iraqi_economic_ties
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		prerequisite = { focus = IRQ_rally_behind_the_hashemite_dynasty }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = IRQ_rally_behind_the_hashemite_dynasty
+
+		cost = 10
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			ENG = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = IRQ_purchased_our_equipment
+				}
+			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
+		}
+	}
 
 	focus = {
 		id = IRQ_raf_levies_focus
@@ -3903,10 +4190,11 @@ focus_tree = {
 	focus = {
 		id = IRQ_party_of_national_brotherhood
 		icon = GFX_focus_IRQ_party_of_national_brotherhood
-		#prerequisite = { focus = }
-		mutually_exclusive = { focus = IRQ_rally_behind_the_hashemite_dynasty focus = IRQ_promote_kurdish_culture }
+		prerequisite = { focus = IRQ_ensure_sunni_dominance }
+		mutually_exclusive = { focus = IRQ_rally_behind_the_hashemite_dynasty }
 		x = 28
 		y = 0
+		relative_position_id = IRQ_rally_behind_the_hashemite_dynasty
 
 		allow_branch = {
 			if = {
@@ -4102,7 +4390,7 @@ focus_tree = {
 
 		}
 
-		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_HISTORICAL }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL_CHARACTER }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -4190,7 +4478,7 @@ focus_tree = {
 		bypass = {
 		}
 
-		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_HISTORICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -4237,7 +4525,7 @@ focus_tree = {
 	focus = {
 		id = IRQ_iraqi_al_futuwwa
 		icon = GFX_focus_generic_fascist_troops
-		prerequisite = { focus = IRQ_strengthen_the_golden_square }
+		prerequisite = { focus = IRQ_strengthen_the_golden_square focus = IRQ_curtail_arabism }
 		#mutually_exclusive = { focus = IRQ_curtail_arabism }
 		x = 4
 		y = 1
@@ -4309,7 +4597,7 @@ focus_tree = {
 
 		}
 
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_MILITARY_CHARACTER }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -4322,7 +4610,12 @@ focus_tree = {
 				}
 				add_equipment_to_stockpile = { 
 					type = small_plane_airframe_1
-					amount = 100
+					amount = 50
+					producer = GER
+				}
+				add_equipment_to_stockpile = { 
+					type = medium_plane_airframe_1
+					amount = 50
 					producer = GER
 				}
 			}
@@ -4399,7 +4692,7 @@ focus_tree = {
 
 		}
 
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MILITARY_CHARACTER }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -4503,6 +4796,7 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = IRQ_anglo_iraqi_treaty
 			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = IRQ_revoke_anglo_iraq_treaty_tt
 			ENG = {
 				diplomatic_relation = {
 					country = ROOT
@@ -4541,6 +4835,7 @@ focus_tree = {
 				has_government = fascism
 			}
 			is_in_faction = no
+			is_subject = no
 		}
 
 		bypass = {
@@ -4624,7 +4919,7 @@ focus_tree = {
 
 		cost = 10
 
-		search_filters = { FOCUS_FILTER_HISTORICAL }
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP FOCUS_FILTER_AIR_XP }
 
 		ai_will_do = {
 			base = 1

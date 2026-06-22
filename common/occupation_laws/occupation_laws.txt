@@ -863,6 +863,7 @@ senbu_occupation_law = {
 					tag = TIB
 				}
 			}
+
 		}
 		
 	}

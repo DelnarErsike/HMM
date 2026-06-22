@@ -4,9 +4,8 @@ state={
 
 	history={
 		owner = CHI
-		
-		add_core_of = CHI
 		add_core_of = WST
+		add_core_of = CHI
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 2
@@ -24,20 +23,19 @@ state={
 		victory_points = {
 			4682 1 # Aksu
 		}
-		
 
-		
-
-		
+		victory_points = {
+			12601 1 # Yining
+		}
 
 	}
 
 	provinces={
 		1703 4682 4709 4770 7702 7792 7850 10545 10614 12526 12601 12656 
 	}
-	manpower = 1080500
+	manpower=1080500
 	buildings_max_level_factor=1.000
-	state_category = rural
+	state_category=rural
 
-	local_supplies = 6.0 
+	local_supplies=6.0 
 }
