@@ -203,12 +203,12 @@ characters = {
 			}
 		}
 		field_marshal = {
-			traits = { career_officer politically_connected trait_BUL_tsar_loyalist fortress_buster }
-			skill = 4
-			attack_skill = 4
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 3
+			traits = { trait_reckless harsh_leader trait_BUL_zveno_member organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster }
+			skill = 6
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 5
 			legacy_id = 1201
 		}
 	}
@@ -226,13 +226,13 @@ characters = {
 				}
 			}
 			corps_commander = {
-				traits = { infantry_officer war_hero skilled_staffer }
-				skill = 4
-				attack_skill = 3
-				defense_skill = 3
-				planning_skill = 3
-				logistics_skill = 4
-				legacy_id = 1202
+			traits = { trait_reckless harsh_leader trait_BUL_zveno_member organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster }
+			skill = 6
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 5
+			legacy_id = 1202
 			}
 		}
 		instance = {
@@ -267,12 +267,12 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { trait_reckless cavalry_leader }
-			skill = 3
-			attack_skill = 4
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 3
+			traits = { trait_reckless harsh_leader trait_BUL_zveno_member organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster }
+			skill = 6
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 5
 			legacy_id = 1205
 		}
 	}
@@ -330,12 +330,12 @@ characters = {
 				}
 			}
 			corps_commander = {
-				traits = { career_officer infantry_officer }
-				skill = 2
-				attack_skill = 2
-				defense_skill = 2
-				planning_skill = 2
-				logistics_skill = 3
+				traits = { trait_reckless harsh_leader trait_BUL_zveno_member organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster }
+				skill = 6
+				attack_skill = 5
+				defense_skill = 5
+				planning_skill = 4
+				logistics_skill = 5
 				legacy_id = 1207
 			}
 		}
@@ -397,7 +397,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { trait_reckless harsh_leader trait_BUL_zveno_member organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster}
+			traits = { trait_reckless harsh_leader trait_BUL_zveno_member organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster }
 			skill = 6
 			attack_skill = 5
 			defense_skill = 5

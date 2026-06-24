@@ -667,12 +667,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ infantry_officer trait_SPA_nationalist_sympathies }
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=2
+			traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster combined_arms_expert ambusher camouflage_expert}
+			skill = 6
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 5
 			legacy_id=1110
 		}
 	}
@@ -955,12 +955,12 @@ characters={
 			}
 			
 			corps_commander={
-				traits={ infantry_officer trait_SPA_nationalist_sympathies }
-				skill=3
-				attack_skill=2
-				defense_skill=3
-				planning_skill=3
-				logistics_skill=2
+				traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster combined_arms_expert ambusher camouflage_expert}
+				skill = 6
+				attack_skill = 5
+				defense_skill = 5
+				planning_skill = 4
+				logistics_skill = 5
 				legacy_id=1113
 			}
 		}
@@ -1060,12 +1060,12 @@ characters={
 			}
 
 			corps_commander={
-				traits={ trait_SPA_nationalist_sympathies organizer infantry_leader }
-				skill=3
-				attack_skill=3
-				defense_skill=2
-				planning_skill=3
-				logistics_skill=2
+				traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster combined_arms_expert ambusher camouflage_expert}
+				skill = 6
+				attack_skill = 5
+				defense_skill = 5
+				planning_skill = 4
+				logistics_skill = 5
 				legacy_id=1114
 				visible = {
 					OR = {
@@ -1250,12 +1250,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ trait_reckless war_hero trait_SPA_nationalist_sympathies }
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=2
+			traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster combined_arms_expert ambusher camouflage_expert}
+			skill = 6
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 5
 			legacy_id=1116
 		}
 	}

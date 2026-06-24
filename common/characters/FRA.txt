@@ -161,9 +161,9 @@ characters={
 		corps_commander={
 			traits={ career_officer trait_cautious armor_officer panzer_leader trait_engineer skilled_staffer pre_grind }
 			skill=4
-			attack_skill= 4
-			defense_skill= 6
-			planning_skill=4
+			attack_skill= 5
+			defense_skill= 5
+			planning_skill=5
 			logistics_skill=5
 			legacy_id=0
 		}
@@ -342,12 +342,12 @@ characters={
 		}
 		
 		corps_commander={
-			traits={ media_personality harsh_leader armor_officer }
+			traits={ career_officer trait_cautious armor_officer panzer_leader trait_engineer skilled_staffer pre_grind }
 			skill=4
-			attack_skill=4
-			defense_skill=4
-			planning_skill=3
-			logistics_skill=2
+			attack_skill= 5
+			defense_skill= 5
+			planning_skill=5
+			logistics_skill=5
 			legacy_id=101
 		}
 	}

@@ -145,6 +145,7 @@ NDefines.NOperatives.AGENCY_CREATION_FACTORIES = 5				        -- Number of facto
 NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 90			-- how many divisions a corps commander is limited to. 0 = inf, < 0 = blocked
 NDefines.NMilitary.GARRISON_ORDER_ARMY_CAP_FACTOR = 1.0			-- armies gets increased cap when they are garrisoned
 NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 90			-- how many divisions a field marshall is limited to. 0 = inf, < 0 = blocked
+NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 10				-- how many armies a field marshall is limited to. 0 = inf, < 0 = blocked
 
 
 -- License Stuff
