@@ -31,7 +31,6 @@ hmm_capitulations_on_actions = {
 			}
 		}
 		
-		
 		GER = {
 			country_event = france.69420
 		}
@@ -47,7 +46,19 @@ hmm_capitulations_on_actions = {
 				days = 90
 			}
 		}
+		
+		if = {
+    		limit = {
+        		FRA = { has_completed_focus = FRA_the_blum_viollette_proposal }
+    		}
+    		FRA = {
+        		add_state_core = 459
+        		add_state_core = 460
+        		add_state_core = 513
+    		}
+		}
 	}
+
 
 	if = {
 		limit = {
@@ -253,7 +264,6 @@ hmm_capitulations_on_actions = {
 				transfer_troops = no
 			}
 		}
-
 	}
 
 	# Soviet Union
@@ -300,12 +310,8 @@ hmm_capitulations_on_actions = {
 				ai_war
 			}
 			delete_unit = {}
-		}
-		
+		}	
 	}
-
-
-
 }
 
 
@@ -620,7 +626,4 @@ initilize_victory_system = {
 			}
 		}
 	}
-
 }		
-
-		

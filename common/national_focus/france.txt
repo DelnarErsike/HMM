@@ -2079,21 +2079,18 @@
 			}
 		}
 
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {
-			add_state_core = 459
-			add_state_core = 460
-			add_state_core = 513
-			if = {
-				limit = {
-					country_exists = ALG
-				}
-				annex_country = { target = ALG }
+			effect_tooltip = {
+				add_state_core = 459
+				add_state_core = 460
+				add_state_core = 513
 			}
-			FRA_right_wing_riot_effect = yes
+		FRA_right_wing_riot_effect = yes
 		}
 	}
 	focus = {
