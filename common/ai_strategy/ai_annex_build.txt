@@ -51,3 +51,22 @@ HMM_ai_annex_build_no_mils_until_gun2 = {
         value = -1000
     }
 }
+
+HMM_ai_annex_build_no_messing_up_deterrence = {
+    enable = {
+        OR = { # Don't apply this to "main" countries to prevent test build interference
+            is_playable_country = no
+            is_annexable_playable_country = yes
+        }
+	}
+    ai_strategy = {
+        type = building_target
+        id = bunker
+        value = -9999
+    }
+    ai_strategy = {
+        type = building_target
+        id = coastal_bunker
+        value = -9999
+    }
+}
