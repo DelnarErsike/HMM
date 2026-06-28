@@ -21,7 +21,7 @@ HMM_ai_annex_build_infra_until_off_toaster_eco = {
     ai_strategy = {
         type = building_target
         id = infrastructure
-        value = 1000
+        value = 9999
     }
 }
 
@@ -48,17 +48,46 @@ HMM_ai_annex_build_no_mils_until_gun2 = {
     }
     ai_strategy = {
         type = added_military_to_civilian_factory_ratio
-        value = -1000
+        value = -9999
     }
 }
 
-HMM_ai_annex_build_no_messing_up_deterrence = {
+HMM_ai_annex_build_only_infra_mils_civs = {
     enable = {
         OR = { # Don't apply this to "main" countries to prevent test build interference
             is_playable_country = no
             is_annexable_playable_country = yes
         }
 	}
+    ai_strategy = {
+        type = dockyard_to_military_factory_ratio
+        value = -9999
+    }
+    ai_strategy = {
+        type = building_target
+        id = air_base
+        value = -9999
+    }
+    ai_strategy = {
+        type = building_target
+        id = supply_node
+        value = -9999
+    }
+    ai_strategy = {
+        type = building_target
+        id = rail_way
+        value = -9999
+    }
+    ai_strategy = {
+        type = building_target
+        id = naval_facility
+        value = -9999
+    }
+    ai_strategy = {
+        type = building_target
+        id = naval_base
+        value = -9999
+    }
     ai_strategy = {
         type = building_target
         id = bunker
@@ -67,6 +96,96 @@ HMM_ai_annex_build_no_messing_up_deterrence = {
     ai_strategy = {
         type = building_target
         id = coastal_bunker
+        value = -9999
+    }
+    ai_strategy = {
+        type = building_target
+        id = stronghold_network
+        value = -9999
+    }
+    ai_strategy = {
+        type = building_target
+        id = dockyard
+        value = -9999
+    }
+    ai_strategy = {
+        type = building_target
+        id = anti_air_building
+        value = -9999
+    }
+    ai_strategy = {
+        type = building_target
+        id = synthetic_refinery
+        value = -9999
+    }
+    ai_strategy = {
+        type = building_target
+        id = fuel_silo
+        value = -9999
+    }
+    ai_strategy = {
+        type = building_target
+        id = radar_station
+        value = -9999
+    }
+    ai_strategy = {
+        type = building_target
+        id = mega_gun_emplacement
+        value = -9999
+    }
+    ai_strategy = {
+        type = building_target
+        id = rocket_site
+        value = -9999
+    }
+    ai_strategy = {
+        type = building_target
+        id = naval_supply_hub
+        value = -9999
+    }
+    ai_strategy = {
+        type = building_target
+        id = naval_headquarters
+        value = -9999
+    }
+    ai_strategy = {
+        type = building_target
+        id = nuclear_reactor
+        value = -9999
+    }
+    ai_strategy = {
+        type = building_target
+        id = nuclear_reactor_heavy_water
+        value = -9999
+    }
+    ai_strategy = {
+        type = building_target
+        id = commercial_nuclear_reactor
+        value = -9999
+    }
+    ai_strategy = {
+        type = building_target
+        id = nuclear_facility
+        value = -9999
+    }
+    ai_strategy = {
+        type = building_target
+        id = air_facility
+        value = -9999
+    }
+    ai_strategy = {
+        type = building_target
+        id = land_facility
+        value = -9999
+    }
+    ai_strategy = {
+        type = building_target
+        id = energy_infrastructure
+        value = -9999
+    }
+    ai_strategy = {
+        type = building_target
+        id = industrial_infrastructure
         value = -9999
     }
 }
