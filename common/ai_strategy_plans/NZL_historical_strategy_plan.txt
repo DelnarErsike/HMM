@@ -18,7 +18,7 @@ NZL_historical = {
 		NZL_restart_the_onekaka_ironworks
 		NZL_domestic_car_industry
         NZL_full_employment
-		NZL_electricification
+		NZL_electrification
 		NZL_army_reforms
 		NZL_charlton_automatic_rifle	
 		NZL_domestic_arms_industry
