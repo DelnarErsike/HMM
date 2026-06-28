@@ -345,9 +345,9 @@ GER_seize_gold_reserves_cat = {
 							NOT = { has_state_flag = GER_seize_gold_reserves_state_flag }
 						}
 						# HMM: add the factories in this state to our count
-						add_to_temp_variable = { GER.occupied_state_num_factory = num_of_military_factories }
-						add_to_temp_variable = { GER.occupied_state_num_factory = num_of_civilian_factories }
-						add_to_temp_variable = { GER.occupied_state_num_factory = num_of_naval_factories }
+						add_to_temp_variable = { GER.occupied_state_num_factory = arms_factory_level }
+						add_to_temp_variable = { GER.occupied_state_num_factory = industrial_complex_level }
+						add_to_temp_variable = { GER.occupied_state_num_factory = building_level@dockyard }
 						add_compliance = -5
 						add_resistance = 10
 						set_state_flag = GER_seize_gold_reserves_state_flag
@@ -363,9 +363,9 @@ GER_seize_gold_reserves_cat = {
 							NOT = { has_state_flag = GER_seize_gold_reserves_state_flag }
 						}
 						# HMM: add the factories in this state to our count
-						add_to_temp_variable = { GER.occupied_state_num_factory = num_of_military_factories }
-						add_to_temp_variable = { GER.occupied_state_num_factory = num_of_civilian_factories }
-						add_to_temp_variable = { GER.occupied_state_num_factory = num_of_naval_factories }
+						add_to_temp_variable = { GER.occupied_state_num_factory = arms_factory_level }
+						add_to_temp_variable = { GER.occupied_state_num_factory = industrial_complex_level }
+						add_to_temp_variable = { GER.occupied_state_num_factory = building_level@dockyard }
 						add_compliance = -5
 						add_resistance = 10
 						set_state_flag = GER_seize_gold_reserves_state_flag
