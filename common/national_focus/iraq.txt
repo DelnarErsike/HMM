@@ -3790,7 +3790,7 @@ focus_tree = {
 		icon = GFX_focus_IRQ_arab_dominance
 		#prerequisite = { focus = }
 		mutually_exclusive = { focus = IRQ_promote_kurdish_culture }
-		x = 34
+		x = 28
 		y = 0
 		#relative_position_id = IRQ_ensure_sunni_dominance
 
@@ -3851,99 +3851,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = IRQ_rally_behind_the_hashemite_dynasty
-		icon = GFX_focus_IRQ_rally_behind_the_hashemite_dynasty
-		prerequisite = { focus = IRQ_ensure_sunni_dominance }
-		mutually_exclusive = { focus = IRQ_party_of_national_brotherhood }
-		x = -2
-		y = 1
-		relative_position_id = IRQ_ensure_sunni_dominance
-
-		cost = 10
-
-		ai_will_do = {
-			base = 1
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-
-		}
-
-		search_filters = { FOCUS_FILTER_STABILITY }
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-
-			add_stability = 0.1
-			add_political_power = 100
-
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				mark_focus_tree_layout_dirty = yes 
-			}
-		}
-	}
-
-	focus = {
-		id = IRQ_increase_anglo_iraqi_economic_ties
-		icon = GFX_goal_tfv_strengthen_commonwealth_ties
-		prerequisite = { focus = IRQ_rally_behind_the_hashemite_dynasty }
-		#mutually_exclusive = { focus =  }
-		x = 0
-		y = 1
-		relative_position_id = IRQ_rally_behind_the_hashemite_dynasty
-
-		cost = 10
-
-		ai_will_do = {
-			base = 1
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-
-		}
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			ENG = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = IRQ_purchased_our_equipment
-				}
-			}
-			add_offsite_building = {
-				type = industrial_complex
-				level = 2
-			}
-		}
-	}
-
-	focus = {
 		id = IRQ_raf_levies_focus
 		icon = GFX_focus_generic_air_bases
-		prerequisite = { focus = IRQ_increase_anglo_iraqi_economic_ties focus = IRQ_bakr_sidqi_coup }
+		prerequisite = { focus = IRQ_bakr_sidqi_coup }
 		#mutually_exclusive = { focus =  }
 		x = -2
 		y = 1
@@ -4192,23 +4102,11 @@ focus_tree = {
 		icon = GFX_focus_IRQ_party_of_national_brotherhood
 		prerequisite = { focus = IRQ_ensure_sunni_dominance }
 		mutually_exclusive = { focus = IRQ_rally_behind_the_hashemite_dynasty }
-		x = 28
-		y = 0
-		relative_position_id = IRQ_rally_behind_the_hashemite_dynasty
+		x = 0
+		y = 1
+		relative_position_id = IRQ_ensure_sunni_dominance
 
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = IRQ_promote_kurdish_culture
-				}
-			}
-		}
+
 
 		cost = 10
 
