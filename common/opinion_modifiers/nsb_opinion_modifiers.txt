@@ -1,0 +1,219 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+
+	LIT_anti_soviet_opinion = {
+		value = 0 #-20
+	}
+
+	LIT_arrested_party_members = {
+		value = 0 #-20
+	}
+
+	LIT_appease_opinion = {
+		value = 0 #25
+	}
+
+	partitioned_poland_together = {
+		value = 0 #25
+	}
+
+	partitioned_poland_refused = {
+		value = 0 #-15
+	}
+
+	refused_to_make_peace_opinion = {
+		value = 0 #-20
+	}
+
+	returned_vilnius_opinion = {
+		value = 0 #30
+	}
+
+	refused_to_give_vilnius_opinion = {
+		value = 0 #-15
+	}
+
+	BALTIC_investments = {
+		value = 0 #15
+	}
+
+	BALTIC_trade = {
+		value = 0 #20
+	}
+	refused_baltic_entente_opinion = {
+		value = 0 #-50
+	}
+	POL_annexation_refused = {
+		value = 0 #-50
+	}
+
+	fortified_memel = {
+		value = 0 #-25
+	}
+
+	BALTIC_reached_out = {
+		value = 0 #35
+	}
+
+	BALTIC_supported_fascism = {
+		value = 0 #25
+	}
+
+	accepted_catholics = {
+		value = 0 #-50
+	}
+
+	annex_liberia_opinion = {
+		value = 0 #-25
+	}
+
+	baltic_security_opinion = {
+		value = 0 #15
+	}
+
+	POL_anti_germans_abroad = {
+		value = 0 #25
+	}
+
+	SOV_pressured_our_government = {
+		value = 0 #-60
+		months = 12
+	}
+
+	SOV_stirring_the_masses = {
+		value = 0 #-25
+		months = 12
+	}
+
+	SOV_supported_china_good = {
+		value = 0 #25
+	}
+
+	SOV_supported_china_bad = {
+		value = 0 #-25
+	}
+
+	SOV_supported_japan_good = {
+		value = 0 #25
+	}
+
+	SOV_supported_japan_bad = {
+		value = 0 #-25
+	}
+
+	SOV_cooperating_with_us = {
+		value = 0 #50
+	}
+
+	SOV_cooperating_with_other = {
+		value = 0 #-50
+	}
+
+	SOV_sent_us_weapons = {
+		value = 0 #15
+		months = 12
+	}
+
+	SOV_soviet_japanese_pact_against_usa = {
+		value = 0 #50
+		months = 24
+	}
+
+	SOV_refused_to_follow_our_guidelines = {
+		value = 0 #-15
+		months = 12
+	}
+
+	SOV_anti_fascist_policies_good = {
+		value = 0 #35
+	}
+
+	SOV_anti_fascist_policies_bad = {
+		value = 0 #-50
+	}
+
+	SOV_anti_capitalist_policies_good = {
+		value = 0 #35
+	}
+
+	SOV_anti_capitalist_policies_bad = {
+		value = 0 #-50
+	}
+
+	SOV_cordial_relations_developed_by_soviet_diplomat = {
+		value = 0 #50
+	}
+
+	SOV_strengthened_relations_with_us = { 
+		value = 0 #35
+		months = 36
+	}
+
+	SOV_strengthened_relations_with_us_trade = { 
+		value = 0 #35
+		months = 36
+		trade = yes
+	}
+
+	SOV_complied_with_our_demands = {
+		value = 0 #25
+		months = 36
+	}
+
+	SOV_rejected_our_demands = {
+		value = 0 #-25
+		months = 36
+	}
+
+	SOV_attempted_to_infiltrate_manhattan_project = {
+		value = 0 #-75
+	}
+
+	SOV_attempted_to_infiltrate_our_atomic_program = {
+		value = 0 #-75
+	}
+
+	SOV_policies_of_collective_security_opinion = {
+		value = 0 #50
+		months = 36
+	}
+
+	SOV_rejected_defensive_pact = {
+		value = 0 #-50
+		months = 36
+	}
+
+	SOV_international_socialist_association = {
+		value = 0 #40
+		months = 48
+	}
+
+	SOV_international_socialist_association_bad = {
+		value = 0 #-40
+		months = 48
+	}
+
+	SOV_support_for_exiles = {
+		value = 0 #50
+		months = 48
+	}
+
+	SOV_fourth_international_good = {
+		value = 0 #50
+		months = 48
+	}
+
+	SOV_fourth_international_bad = {
+		value = 0 #-50
+		months = 24
+	}
+}	

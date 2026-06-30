@@ -1,0 +1,17 @@
+opinion_modifiers = {
+	
+	faction_traitor = {
+		value = 0 #-75
+	}
+	
+	faction_traitor_trade = {
+		trade = yes
+		value = 0 #-40
+	}
+	
+	our_liberators = {
+		value = 0 #40
+		months = 18
+		decay = 1
+	}
+}

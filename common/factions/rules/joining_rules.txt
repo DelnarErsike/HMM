@@ -104,9 +104,21 @@ joining_rule_non_communist = {
 		
 	}
 	trigger = {
-		NOT = {
-			has_government = communism 
+		if = {
+			limit = {
+				NOT = {
+					original_tag = SWE
+					has_country_leader = {
+						character = SWE_nils_flyg 
+					}
+				}
+			}
+
+			NOT = {
+				has_government = communism 
+			}
 		}
+
 		IF = {
 			limit = { NOT = { has_rule = can_join_opposite_factions } }
 			has_government = FROM
@@ -642,7 +654,77 @@ joining_rule_islamic_only = {
 			original_tag = OMA
 			original_tag = YEM
 			original_tag = IRQ
+			original_tag = PER
+			original_tag = FSA
+			original_tag = JOR
+			original_tag = PAL
+			original_tag = SYR
+			original_tag = LEB
 			original_tag = TUR
+			original_tag = QAT
+			original_tag = BHR
+			original_tag = UAE
+			original_tag = EGY
+			original_tag = SUD
+			original_tag = LBA
+			original_tag = TUN
+			original_tag = ALG
+			original_tag = MOR
+			original_tag = RIF
+			original_tag = MAL
+			original_tag = INS
+			original_tag = MLD
+			original_tag = BAN
+			original_tag = PAK
+			original_tag = WES
+			original_tag = MRT
+			original_tag = SOK
+			original_tag = MLI
+			original_tag = NGR
+			original_tag = NGA
+			original_tag = SOM
+			original_tag = AFA
+			original_tag = AZR
+			original_tag = DAG
+			original_tag = CIN
+			original_tag = ALB
+			original_tag = TAT
+			original_tag = BSK
+			original_tag = BUK
+			original_tag = KHI
+			original_tag = UZB
+			original_tag = KAZ
+			original_tag = TAJ
+			original_tag = KYR
+			original_tag = TMS
+			original_tag = KKP
+			original_tag = SIN
+			original_tag = KAS                  
+			original_tag = CRI              
+			original_tag = KOS              
+			original_tag = KUR      
+			original_tag = BLC      
+			original_tag = IMO      
+			original_tag = KLT      
+			original_tag = KBK      
+			original_tag = DJI      
+			original_tag = HAR      
+			original_tag = SEN      
+			original_tag = GAM      
+			original_tag = GNB      
+			original_tag = SIE      
+			original_tag = VOL      
+			original_tag = GNA      
+			original_tag = XSM      
+			original_tag = SIK
+			original_tag = KHM
+			original_tag = GSM
+			original_tag = NXM
+			original_tag = KUM
+			original_tag = SAB
+			original_tag = BRN
+			original_tag = CHM  
+			original_tag = AFG
 		}
 	}
 	can_remove = {
@@ -660,11 +742,81 @@ joining_rule_islamic_only = {
 		custom_trigger_tooltip = {
 			tooltip = is_islamic_country_tt
 			OR = {
-			original_tag = SAU
-			original_tag = OMA
-			original_tag = YEM
-			original_tag = IRQ
-			original_tag = TUR
+				original_tag = SAU
+				original_tag = OMA
+				original_tag = YEM
+				original_tag = IRQ
+				original_tag = PER
+				original_tag = FSA
+				original_tag = JOR
+				original_tag = PAL
+				original_tag = SYR
+				original_tag = LEB
+				original_tag = TUR
+				original_tag = QAT
+				original_tag = BHR
+				original_tag = UAE
+				original_tag = EGY
+				original_tag = SUD
+				original_tag = LBA
+				original_tag = TUN
+				original_tag = ALG
+				original_tag = MOR
+				original_tag = RIF
+				original_tag = MAL
+				original_tag = INS
+				original_tag = MLD
+				original_tag = BAN
+				original_tag = PAK
+				original_tag = WES
+				original_tag = MRT
+				original_tag = SOK
+				original_tag = MLI
+				original_tag = NGR
+				original_tag = NGA
+				original_tag = SOM
+				original_tag = AFA
+				original_tag = AZR
+				original_tag = DAG
+				original_tag = CIN
+				original_tag = ALB
+				original_tag = TAT
+				original_tag = BSK
+				original_tag = BUK
+				original_tag = KHI
+				original_tag = UZB
+				original_tag = KAZ
+				original_tag = TAJ
+				original_tag = KYR
+				original_tag = TMS
+				original_tag = KKP
+				original_tag = SIN
+				original_tag = KAS                  
+				original_tag = CRI              
+				original_tag = KOS              
+				original_tag = KUR      
+				original_tag = BLC      
+				original_tag = IMO      
+				original_tag = KLT      
+				original_tag = KBK      
+				original_tag = DJI      
+				original_tag = HAR      
+				original_tag = SEN      
+				original_tag = GAM      
+				original_tag = GNB      
+				original_tag = SIE      
+				original_tag = VOL      
+				original_tag = GNA      
+				original_tag = XSM      
+				original_tag = SIK
+				original_tag = KHM
+				original_tag = GSM
+				original_tag = NXM
+				original_tag = KUM
+				original_tag = SAB
+				original_tag = BRN
+				original_tag = CHM  
+				original_tag = AFG
 			}
 		}
 	}
@@ -751,6 +903,14 @@ joining_rule_east_asia_only = {
 		OR = {
 			original_tag = JAP
 			original_tag = KOR
+			original_tag = KUM
+			original_tag = MON
+			original_tag = TAN
+			original_tag = TIB 
+			original_tag = FOR  
+			original_tag = OKN   
+			original_tag = EZO    
+			original_tag = ANU     
 			WTT_is_chinese_country = yes 
 		}
 	}
@@ -758,10 +918,21 @@ joining_rule_east_asia_only = {
 		faction_manifest_fulfillment > 0.95	
 	}
 	trigger = {
-		OR = {
-			original_tag = JAP
-			original_tag = KOR
-			WTT_is_chinese_country = yes 
+		custom_trigger_tooltip = {
+			tooltip = is_east_asian_country_tt
+			OR = {
+				original_tag = JAP
+				original_tag = KOR
+				original_tag = KUM
+				original_tag = MON
+				original_tag = TAN
+				original_tag = TIB 
+				original_tag = FOR 
+				original_tag = OKN 
+				original_tag = EZO 
+				original_tag = ANU 
+				WTT_is_chinese_country = yes 
+			}
 		}
 	}
 }
