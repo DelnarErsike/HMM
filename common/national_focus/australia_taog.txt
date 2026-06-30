@@ -1117,10 +1117,11 @@ focus_tree = {
 		available_if_capitulated = no
 	
 		completion_reward = {
-			AST_add_or_modify_AST_australian_military_forces_spirit = yes
+			#AST_add_or_modify_AST_australian_military_forces_spirit = yes
+			#add_to_variable = { AST_australian_military_forces_spirit_army_non_core_attack_factor = 0.025 tooltip = army_non_core_attack_factor_tt }
+			#add_to_variable = { AST_australian_military_forces_spirit_army_non_core_defence_factor = 0.05 tooltip = army_non_core_defence_factor_tt }
 
-
-			custom_effect_tooltip = generic_skip_one_line_tt
+			#custom_effect_tooltip = generic_skip_one_line_tt
 			show_unit_leaders_tooltip = AST_horace_robertson
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = AST_expeditionary_leader
@@ -1493,6 +1494,11 @@ focus_tree = {
 			add_to_variable = { AST_war_is_coming_war_support_factor = 0.10 tooltip = war_support_factor_tt }
 
 			custom_effect_tooltip = generic_skip_one_line_tt
+			#AST_add_or_modify_AST_australian_military_forces_spirit = yes
+			#add_to_variable = { AST_australian_military_forces_spirit_army_non_core_attack_factor = 0.025 tooltip = army_non_core_attack_factor_tt }
+			#add_to_variable = { AST_australian_military_forces_spirit_army_non_core_defence_factor = 0.025 tooltip = army_non_core_defence_factor_tt }
+
+			#custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = AST_conscription_law_so_far
 			hidden_effect = {
 				AST_conscription_level_scripted_effect = yes
@@ -1792,6 +1798,9 @@ focus_tree = {
 					}
 				}
 				custom_effect_tooltip = AST_seven_million_britishers_conscription_tt
+				#AST_add_or_modify_AST_australian_military_forces_spirit = yes
+				#add_to_variable = { AST_australian_military_forces_spirit_army_non_core_attack_factor = 0.025 tooltip = army_non_core_attack_factor_tt }
+				#add_to_variable = { AST_australian_military_forces_spirit_army_non_core_defence_factor = 0.025 tooltip = army_non_core_defence_factor_tt }
 				}
 
 			IF = {
@@ -3475,8 +3484,8 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			AST = {
-				owns_state = 725
+			725 = {
+				is_owned_and_controlled_by = ROOT
 			}
 		}
 
@@ -4690,6 +4699,7 @@ focus = {
 		completion_reward = {
 			custom_effect_tooltip = AST_australian_military_forces_spirit_tt
 			add_to_variable = { AST_australian_military_forces_spirit_coordination_bonus = 0.05 tooltip = coordination_bonus_tt }
+			#add_to_variable = { AST_australian_military_forces_spirit_army_org_regain = 0.05 tooltip = army_org_regain_tt }
 		}
 
 		search_filters = {  }
@@ -4888,6 +4898,11 @@ focus = {
 			custom_effect_tooltip = AST_australian_military_forces_spirit_tt
 			add_to_variable = { AST_australian_military_forces_spirit_army_core_attack_factor = 0.05 tooltip = army_core_attack_factor_tt }
 			add_to_variable = { AST_australian_military_forces_spirit_army_core_defence_factor = 0.05 tooltip = army_core_defence_factor_tt }
+
+			#custom_effect_tooltip = generic_skip_one_line_tt
+			#custom_effect_tooltip = AST_citizen_army_spirit_tt
+			#add_to_variable = { AST_citizen_army_spirit_army_non_core_attack_factor = 0.05 tooltip = army_non_core_attack_factor_tt }
+			#add_to_variable = { AST_citizen_army_spirit_army_non_core_defence_factor = 0.05 tooltip = army_non_core_defence_factor_tt }
 		}
 
 		search_filters = {  }
@@ -4958,7 +4973,9 @@ focus = {
 	
 		completion_reward = {
 			custom_effect_tooltip = AST_australian_military_forces_spirit_tt
-			add_to_variable = { AST_australian_military_forces_spirit_army_org_regain = 0.05 tooltip = army_org_regain_tt }
+			add_to_variable = { AST_australian_military_forces_spirit_army_org_factor = 0.05 tooltip = army_org_factor_tt }
+			#add_to_variable = { AST_australian_military_forces_spirit_army_non_core_attack_factor = 0.025 tooltip = army_non_core_attack_factor_tt }
+			#add_to_variable = { AST_australian_military_forces_spirit_army_non_core_defence_factor = 0.025 tooltip = army_non_core_defence_factor_tt }
 		}
 
 		search_filters = {  }
@@ -5095,8 +5112,11 @@ focus = {
 		available_if_capitulated = no
 	
 		completion_reward = {
+			#custom_effect_tooltip = AST_australian_military_forces_spirit_tt
+			#add_to_variable = { AST_australian_military_forces_spirit_army_non_core_attack_factor = 0.025 tooltip = army_non_core_attack_factor_tt }
+			#add_to_variable = { AST_australian_military_forces_spirit_army_non_core_defence_factor = 0.05 tooltip = army_non_core_defence_factor_tt }
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			#custom_effect_tooltip = generic_skip_one_line_tt
 			show_unit_leaders_tooltip = AST_alan_vasey
 			show_unit_leaders_tooltip = AST_george_wootten
 
@@ -5164,6 +5184,7 @@ focus = {
 	
 		completion_reward = {
 			custom_effect_tooltip = AST_australian_military_forces_spirit_tt
+			#add_to_variable = { AST_australian_military_forces_spirit_max_dig_in = 2 tooltip = max_dig_in_tt }
 			add_to_variable = { AST_australian_military_forces_spirit_army_defence_factor = 0.05 tooltip = army_defence_factor_tt }
 		}
 
@@ -5464,6 +5485,7 @@ focus = {
 	
 		completion_reward = {
 			custom_effect_tooltip = AST_australian_military_forces_spirit_tt
+			#add_to_variable = { AST_australian_military_forces_spirit_army_org_factor = 0.10 tooltip = army_org_factor_tt }
 			add_to_variable = { AST_australian_military_forces_spirit_army_attack_factor = 0.05 tooltip = army_attack_factor_tt }
 		}
 
@@ -5592,7 +5614,7 @@ focus = {
 		x = 0
 		y = 1
 	
-		cost = 10
+		cost = 5
 
 		available = {
 		}
@@ -5656,6 +5678,9 @@ focus = {
 	
 		completion_reward = {
 			custom_effect_tooltip = AST_australian_military_forces_spirit_tt
+			#add_to_variable = { AST_australian_military_forces_spirit_army_org = 2.5 tooltip = army_org_tt }
+			#add_to_variable = { AST_australian_military_forces_spirit_army_non_core_attack_factor = 0.025 tooltip = army_non_core_attack_factor_tt }
+			#add_to_variable = { AST_australian_military_forces_spirit_army_non_core_defence_factor = 0.025 tooltip = army_non_core_defence_factor_tt }
 			add_to_variable = { AST_australian_military_forces_spirit_acclimatization_hot_climate_gain_factor = 0.20 tooltip = acclimatization_hot_climate_gain_factor_tt }
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -5808,7 +5833,6 @@ focus = {
 		cost = 5
 
 		available = {
-			always = false
 		}
 
 		bypass = {
@@ -5820,7 +5844,7 @@ focus = {
 			custom_effect_tooltip = AST_royal_australian_air_force_spirit_tt
 			add_to_variable = { AST_royal_australian_air_force_spirit_production_speed_air_base_factor = 0.20 tooltip = production_speed_air_base_factor_tt }
 			add_to_variable = { AST_royal_australian_air_force_spirit_air_accidents_factor = -0.10 tooltip = air_accidents_factor_tt }
-			add_to_variable = { AST_royal_australian_air_force_spirit_air_mission_efficiency = 0.05 tooltip = air_mission_efficiency_tt }
+			add_to_variable = { AST_royal_australian_navy_spirit_air_wing_xp_loss_when_killed_factor = -0.10 tooltip = air_wing_xp_loss_when_killed_factor_tt }
 		}
 
 		search_filters = { }
@@ -5839,7 +5863,6 @@ focus = {
 		cost = 5
 
 		available = {
-			always = false
 		}
 
 		bypass = {
@@ -5849,8 +5872,44 @@ focus = {
 	
 		completion_reward = {
 			custom_effect_tooltip = AST_royal_australian_air_force_spirit_tt
-			add_to_variable = { AST_royal_australian_air_force_spirit_air_mission_efficiency = 0.10 tooltip = air_mission_efficiency_tt }
 			add_to_variable = { AST_royal_australian_air_force_spirit_experience_gain_air_factor = 0.10 tooltip = experience_gain_air_factor_tt }
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = AST_advanced_pilot_training_tt
+
+			hidden_effect = {
+				add_mastery_bonus = {
+					bonus = 0.1
+					days = 9999 #Remove when the modifier can take no timer
+					name = AST_advanced_pilot_training
+
+					track = fighter_aircraft
+				}
+
+				add_mastery_bonus = {
+					bonus = 0.1
+					days = 9999 #Remove when the modifier can take no timer
+					name = AST_advanced_pilot_training
+
+					track = strike_aircraft
+				}
+
+				add_mastery_bonus = {
+					bonus = 0.1
+					days = 9999 #Remove when the modifier can take no timer
+					name = AST_advanced_pilot_training
+
+					track = medium_aircraft
+				}
+
+				add_mastery_bonus = {
+					bonus = 0.1
+					days = 9999 #Remove when the modifier can take no timer
+					name = AST_advanced_pilot_training
+
+					track = heavy_aircraft
+				}
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_AIR_XP }
@@ -6195,6 +6254,7 @@ focus = {
 		cost = 10
 
 		available = {
+			always = no
 		}
 
 		bypass = {
@@ -6265,9 +6325,9 @@ focus = {
 	
 		completion_reward = {
 			custom_effect_tooltip = AST_royal_australian_air_force_spirit_tt
-			add_to_variable = { AST_royal_australian_air_force_spirit_air_cas_efficiency = 0.15 tooltip = air_cas_efficiency_tt }
-			add_to_variable = { AST_royal_australian_air_force_spirit_air_mission_efficiency = 0.15 tooltip = air_mission_efficiency_tt }
-			add_to_variable = { AST_royal_australian_air_force_spirit_air_superiority_efficiency = 0.15 tooltip = air_superiority_efficiency_tt }
+			add_to_variable = { AST_royal_australian_air_force_spirit_air_cas_efficiency = 0.05 tooltip = air_cas_efficiency_tt }
+			add_to_variable = { AST_royal_australian_air_force_spirit_air_superiority_efficiency = 0.05 tooltip = air_superiority_efficiency_tt }
+			add_to_variable = { AST_royal_australian_air_force_spirit_air_mission_efficiency = 0.05 tooltip = air_mission_efficiency_tt }
 		}
 
 		search_filters = {  }
@@ -6379,6 +6439,7 @@ focus = {
 		available_if_capitulated = no
 	
 		completion_reward = {
+			add_potential_special_forces_tree = yes
 			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"

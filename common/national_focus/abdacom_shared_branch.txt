@@ -2,6 +2,8 @@
 	id = ABDA_abdacom
 	icon = GFX_focus_ARG_join_the_allies
 
+	text_icon = ABDACOM_focus_style
+
 	x = 0
 	y = 0
 
@@ -66,6 +68,7 @@
 				has_completed_focus = INS_the_declaration_of_independence
 			}
 		}
+		is_vichy_france = no
 	}
 
 	available = {
@@ -94,6 +97,9 @@
 			set_variable = { ABDA_screen_defence_factor = 0 }
 			set_variable = { ABDA_experience_gain_navy_unit_factor = 0 }
 		}
+
+		custom_effect_tooltip = ABDA_faction_membership_requirement_tt
+		
 		every_country = {
 			limit = {
 				OR = {
@@ -119,6 +125,8 @@ joint_focus = {
 	icon = GFX_focus_chi_british_cooperation
 	prerequisite = { focus = ABDA_abdacom }
 	relative_position_id = ABDA_abdacom
+
+	text_icon = ENG_focus_style
 
 	x = -2
 	y = 1
@@ -157,6 +165,8 @@ joint_focus = {
 	icon = GFX_focus_chi_reach_out_to_france
 	prerequisite = { focus = ABDA_abdacom }
 	relative_position_id = ABDA_abdacom
+
+	text_icon = FRA_focus_style
 
 	x = 0
 	y = 1
@@ -237,6 +247,8 @@ joint_focus = {
 	prerequisite = { focus = ABDA_abdacom }
 	relative_position_id = ABDA_abdacom
 
+	text_icon = USA_focus_style
+
 	x = 2
 	y = 1
 
@@ -268,6 +280,8 @@ joint_focus = {
 	icon = GFX_goal_fortify_the_westwall
 	prerequisite = { focus = ABDA_fortress_singapore focus = ABDA_corps_expeditionnaire }
 	relative_position_id = ABDA_abdacom
+
+	text_icon = ABDACOM_focus_style
 
 	x = -1
 	y = 2
@@ -348,6 +362,8 @@ joint_focus = {
 	icon = GFX_goal_generic_construct_naval_dockyard
 	prerequisite = { focus = ABDA_corps_expeditionnaire focus = ABDA_maintain_strategic_flexibility}
 	relative_position_id = ABDA_abdacom
+
+	text_icon = ABDACOM_focus_style
 
 	x = 1
 	y = 2
@@ -456,6 +472,8 @@ joint_focus = {
 	prerequisite = { focus = ABDA_the_malay_barrier focus = ABDA_develop_naval_infrastructure }
 	relative_position_id = ABDA_abdacom
 
+	text_icon = ABDACOM_focus_style
+
 	x = 0
 	y = 3
 
@@ -513,6 +531,8 @@ joint_focus = {
 	prerequisite = { focus = ABDA_unified_naval_command }
 	relative_position_id = ABDA_abdacom
 
+	text_icon = ABDACOM_focus_style
+
 	x = -2
 	y = 4
 
@@ -559,6 +579,8 @@ joint_focus = {
 	icon = GFX_SOV_an_oceangoing_navy_ccp_2d_sov_compatibility
 	prerequisite = { focus = ABDA_unified_naval_command }
 	relative_position_id = ABDA_abdacom
+
+	text_icon = ABDACOM_focus_style
 
 	x = 0
 	y = 4
@@ -700,6 +722,8 @@ joint_focus = {
 	prerequisite = { focus = ABDA_unified_naval_command }
 	relative_position_id = ABDA_abdacom
 
+	text_icon = ABDACOM_focus_style
+
 	x = 2
 	y = 4
 
@@ -748,6 +772,8 @@ joint_focus = {
 	prerequisite = { focus = ABDA_keep_trade_open }
 	prerequisite = { focus = ABDA_ship_a_day_sinking_quotas }
 	relative_position_id = ABDA_abdacom
+
+	text_icon = ABDACOM_focus_style
 
 	x = 0
 	y = 5
