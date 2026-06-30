@@ -23,15 +23,13 @@ WTT_show_build_support_decisions = {
 WTT_can_ROOT_select_state_support_decision_state = {
 	custom_trigger_tooltip = {
 		tooltip = WTT_china_pol_struggle_state_controlled_by_leader
-		state = {
-			CONTROLLER = {
-				OR = {
-					tag = event_target:WTT_current_china_leader
-					is_subject_of = event_target:WTT_current_china_leader
-				}
+		CONTROLLER = {
+			OR = {
+				tag = event_target:WTT_current_china_leader
+				is_subject_of = event_target:WTT_current_china_leader
 			}
-			CONTROLLER = { NOT = { has_war_with = ROOT } }
 		}
+		CONTROLLER = { NOT = { has_war_with = ROOT } }
 	}
 	if = {
 		limit = {
@@ -171,6 +169,14 @@ WTT_is_chinese_warlord = {
 		original_tag = XSM
 		original_tag = SIK
 		original_tag = SHX
+		original_tag = GDC
+		original_tag = XIC
+		original_tag = SND
+		original_tag = SIC
+		original_tag = KHM
+		original_tag = NXM
+		original_tag = GSM
+		original_tag = HBC
 	}
 }
 

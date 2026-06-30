@@ -661,6 +661,11 @@ is_available_to_collaboration_government = { # occupied_countries.1 should be up
 		NOT = { FROM = { original_tag = KUR } }
 	}
 	NOT = {
+		FROM = {
+			original_tag = SDL
+		}
+	}
+	NOT = {
 		any_country_with_original_tag = {
 			original_tag_to_check = FROM
 			is_puppet_of = PREV # if already created one do not create another
@@ -1148,6 +1153,22 @@ is_unlikely_country_tag = {
 		tag = THU
 		tag = HES
 		tag = RHI
+		tag = RNG 
+		tag = PSR 
+		tag = GXC
+		tag = YUN
+		tag = SHX
+		tag = XSM
+		tag = SIK
+		tag = GDC
+		tag = SND
+		tag = SIC
+		tag = NXM
+		tag = GSM
+		tag = XIC
+		tag = KHM
+		tag = KUM
+		tag = HBC
 	}
 }
 

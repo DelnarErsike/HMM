@@ -1768,13 +1768,6 @@ on_actions = {
 							}
 							OR = {
 								is_core_of = PHI
-								AND = {
-									is_core_of = WST
-									OR = {
-										owner = ENG
-										owner = HOL
-									}
-								}
 								is_core_of = VIN
 								is_core_of = CAM
 								is_core_of = SIA
@@ -3409,11 +3402,19 @@ on_actions = {
 			IF = {
 				limit = {
 					ROOT = {
+						OR = {
+							original_tag = KUM
+							original_tag = KHM
+						}
 						has_character = KUM_yulbars_khan
 						has_war_with = SIK
 					}
 				}
 				IF = {
+					limit = {
+						original_tag = KUM
+						is_subject_of = KHM
+					}
 					IF = {
 						limit = {
 							KHM = {
@@ -3439,6 +3440,27 @@ on_actions = {
 									id = SEA_warlords.11
 									hours = 6
 								}
+							}
+						}
+					}
+				}
+				ELSE_IF = {
+					limit = {
+						original_tag = KUM
+						NOT = {
+							is_subject_of = KHM
+						}
+					}
+					IF = {
+						limit = {
+							CHI = {
+								exists = yes
+							}
+						}
+						CHI = {
+							country_event = {
+								id = SEA_warlords.11
+								hours = 6
 							}
 						}
 					}
@@ -3478,6 +3500,32 @@ on_actions = {
 						}
 					}
 					NXM = {
+						country_event = {
+							id = SEA_warlords.12
+							hours = 6
+						}
+					}
+				}
+				ELSE_IF = {
+					limit = {
+						XSM = {
+							exists = yes
+						}
+					}
+					XSM = {
+						country_event = {
+							id = SEA_warlords.12
+							hours = 6
+						}
+					}
+				}
+				ELSE_IF = {
+					limit = {
+						GSM = {
+							exists = yes
+						}
+					}
+					GSM = {
 						country_event = {
 							id = SEA_warlords.12
 							hours = 6
