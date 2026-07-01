@@ -1013,7 +1013,7 @@ Technologies = {
 		visible = {
 			original_tag = GER
 			SPR = { is_ai = yes }
-			is_ai = NO
+			is_ai = no
             NOT = {
                 OR = {
                     has_country_flag = annexed_SPR
@@ -1093,7 +1093,7 @@ Technologies = {
 		visible = {
 			original_tag = GER
 			SPR = { is_ai = yes }
-			is_ai = NO
+			is_ai = no
             NOT = {
                 OR = {
                     has_country_flag = annexed_SPR
@@ -1535,7 +1535,7 @@ Technologies = {
 		visible = {
 			original_tag = GER
 			FIN = { is_ai = yes }
-			is_ai = NO
+			is_ai = no
             NOT = {
                 OR = {
                     has_country_flag = GER_started_ll_gun

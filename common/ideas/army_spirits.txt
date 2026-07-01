@@ -790,7 +790,7 @@ ideas = {
 			ledger = army
 			visible = { has_dlc = "No Compromise, No Surrender" }
 			available = { 
-				always = false
+				always = no
 				OR = {
 					has_doctrine = mass_assault 
 					has_doctrine = guerilla_war

@@ -289,7 +289,7 @@ focus_tree = {
 	focus = {
 		id = SPR_the_popular_front
 		available = {
-			always = false
+			always = no
 			is_ai = yes
 			NOT = {
 				has_country_flag = SPR_spanish_elections_flag
@@ -2092,7 +2092,6 @@ focus_tree = {
 				bonus = 1
 				uses = 1
 				category = ca_tech
-				category = ca_tech
 			}
 			add_tech_bonus = {
 				name = SPA_restart_small_scale_shipbuilding
@@ -3277,7 +3276,6 @@ focus_tree = {
 				name = SPR_navy_modernization
 				bonus = 1
 				uses = 2
-				category = ca_tech
 				category = ca_tech
 			}
 		}

@@ -59,6 +59,7 @@ HMM_ai_annex_build_only_infra_mils_civs = {
             is_annexable_playable_country = yes
         }
 	}
+    abort = { always = no }
     ai_strategy = {
         type = dockyard_to_military_factory_ratio
         value = -9999

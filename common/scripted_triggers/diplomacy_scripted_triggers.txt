@@ -108,7 +108,10 @@ DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {
 				option = BLOCKED
 			}
 		}
-		always = no
+		custom_trigger_tooltip = {
+			tooltip = RULE_ALLOW_RELEASE_NATIONS_BLOCKED_DESC
+			always = no
+		}
 	}
 	if = {
 		limit = {

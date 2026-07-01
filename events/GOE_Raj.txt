@@ -2259,8 +2259,10 @@ country_event = {
 
 	option = {
 		name =  GOE_RAJ_partition.2.a
-		var:RAJ.unrest_target_state = { 
-			resistance < 25 # Added in HMM to make sure we can never get to 90 resistance or more (no civil wars!)
+		trigger = {
+			var:RAJ.unrest_target_state = { 
+				resistance < 25 # Added in HMM to make sure we can never get to 90 resistance or more (no civil wars!)
+			}
 		}
 		if = {
 			limit = {
