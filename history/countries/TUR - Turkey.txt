@@ -10,6 +10,7 @@ add_ideas = {
 	limited_conscription
 	civilian_economy
 }
+
 set_politics = {
 	ruling_party = neutrality
 	last_election = "1935.2.8"
@@ -19,6 +20,7 @@ set_popularities = {
 	democratic = 6
 	neutrality = 94
 }
+
 set_convoys = 500
 set_stability = 0.5
 set_war_support = 0.3

@@ -441,7 +441,7 @@ ideas = {
 
 				# HMM: we want the AI to get off of civilian economy as soon as it can so that it can use its civs more efficiently
 				modifier = {
-					add = 1000
+					factor = 100000
 					OR = {
 						has_idea = undisturbed_isolation 
 						has_idea = isolation
@@ -694,7 +694,7 @@ ideas = {
 
 				# HMM: we want the AI to get off of civilian economy as soon as it can so that it can use its civs more efficiently
 				modifier = {
-					add = 1000
+					factor = 100000
 					OR = {
 						has_idea = undisturbed_isolation 
 						has_idea = isolation
