@@ -213,7 +213,6 @@ NDefines.NAI.AI_UPDATE_ROLES_FREQUENCY_HOURS = 672 -- vanilla: 48
 NDefines.NAI.AI_NAVAL_GOALS_UPDATE_FREQUENCY_DAYS = 28 -- vanilla: 7
 NDefines.NAI.UPDATE_SUPPLY_BOTTLENECKS_FREQUENCY_HOURS = 672 -- vanilla: 168
 NDefines.NAI.UPDATE_SUPPLY_MOTORIZATION_FREQUENCY_HOURS = 168 -- vanilla: 52
--- Don't modify force concentration stuff because it can affect the AI a lot more noticeably for Yugo and SCW, even if we can squeeze more performance from it, too
 NDefines.NAI.RAIDS_ENABLE_AI = false -- vanilla: true
 NDefines.NAI.RAIDS_CREATE_FREQUENCY_DAYS = 9999 -- vanilla: 7
 NDefines.NAI.RESEARCH_DAYS_BETWEEN_WEIGHT_UPDATE = 28 -- vanilla: 7
@@ -226,6 +225,11 @@ NDefines.NAI.STRIKE_FORCE_TARGET_RECALC_DAYS = 28 -- vanilla: 5
 NDefines.NAI.AI_OBJECTIVE_DEFAULT_TARGET_RECALC_DAYS = 28 -- vanilla: 5
 -- Modifying this should be fine because raids are disallowed/banned anyway
 NDefines.NRaids.MAX_STATE_TARGETS_TO_EVALUATE_PER_HOUR = 1 -- vanilla: 50
+
+-- EXPERIMENTAL: Disabling the AI Force Concentration mechanic speeds up the game (specifically, reduces CPU overhead), but makes the AI behave in non-vanilla ways
+NDefines.NAI.AIFC_UPDATE_FREQUENCY_DAYS = 9999
+NDefines.NAI.AIFC_UNIT_NUDGE_FREQUENCY_DAYS = 9999
+NDefines.NAI.AIFC_PATH_MAX_COST = 0.0
 
 --THANKS THRASHY
 NDefines.NAir.ACE_WING_SIZE_MAX_BONUS = 1                       -- biggest bonus we can get from having a small wing with an ace on
