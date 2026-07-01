@@ -202,6 +202,23 @@ NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROLLED = 0
 NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROL_DIFF = 0
 NDefines.NAI.MINIMUM_CONVOY_TO_ASK_LEND_LEASE = 0
 
+-- Contingencies for disabling international market
+NDefines.NMarket.MAX_CIV_FACTORIES_PER_CONTRACT = 0
+NDefines.NAI.EQUIPMENT_MARKET_UPDATE_FREQUENCY_DAYS = 9999
+NDefines.NAI.EQUIPMENT_MARKET_MAX_CIVS_FOR_PURCHASES_RATIO = 0.0
+NDefines.NAI.EQUIPMENT_MARKET_BASE_MARKET_RATIO = 0.0
+
+-- Removed unnecessary AI calculations (don't disable completely in case it screws with test builds)
+NDefines.NAI.AI_UPDATE_ROLES_FREQUENCY_HOURS = 672 -- vanilla: 48
+NDefines.NAI.AI_NAVAL_GOALS_UPDATE_FREQUENCY_DAYS = 28 -- vanilla: 7
+NDefines.NAI.UPDATE_SUPPLY_BOTTLENECKS_FREQUENCY_HOURS = 672 -- vanilla: 168
+NDefines.NAI.UPDATE_SUPPLY_MOTORIZATION_FREQUENCY_HOURS = 168 -- vanilla: 52
+-- Don't modify force concentration stuff because it can affect the AI a lot more noticeably for Yugo and SCW, even if we can squeeze more performance from it, too
+NDefines.NAI.RAIDS_ENABLE_AI = false -- vanilla: true
+NDefines.NAI.RAIDS_CREATE_FREQUENCY_DAYS = 9999 -- vanilla: 7
+-- Modifying this should be fine because raids are disallowed/banned anyway
+NDefines.NRaids.MAX_STATE_TARGETS_TO_EVALUATE_PER_HOUR = 1 -- vanilla: 50
+
 --THANKS THRASHY
 NDefines.NAir.ACE_WING_SIZE_MAX_BONUS = 1                       -- biggest bonus we can get from having a small wing with an ace on
 NDefines.NNavy.INITIAL_ALLOWED_DOCKYARD_RATIO_FOR_REPAIRS = 1.0				-- initially countries will allocate this ratio of dockyards for repairs
