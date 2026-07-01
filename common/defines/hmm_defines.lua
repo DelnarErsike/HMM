@@ -208,7 +208,7 @@ NDefines.NAI.EQUIPMENT_MARKET_UPDATE_FREQUENCY_DAYS = 9999
 NDefines.NAI.EQUIPMENT_MARKET_MAX_CIVS_FOR_PURCHASES_RATIO = 0.0
 NDefines.NAI.EQUIPMENT_MARKET_BASE_MARKET_RATIO = 0.0
 
--- Removed unnecessary AI calculations (don't disable completely in case it screws with test builds)
+-- Removed unnecessary AI calculations and extended time between updates (don't disable completely in case it screws with test builds)
 NDefines.NAI.AI_UPDATE_ROLES_FREQUENCY_HOURS = 672 -- vanilla: 48
 NDefines.NAI.AI_NAVAL_GOALS_UPDATE_FREQUENCY_DAYS = 28 -- vanilla: 7
 NDefines.NAI.UPDATE_SUPPLY_BOTTLENECKS_FREQUENCY_HOURS = 672 -- vanilla: 168
@@ -216,6 +216,14 @@ NDefines.NAI.UPDATE_SUPPLY_MOTORIZATION_FREQUENCY_HOURS = 168 -- vanilla: 52
 -- Don't modify force concentration stuff because it can affect the AI a lot more noticeably for Yugo and SCW, even if we can squeeze more performance from it, too
 NDefines.NAI.RAIDS_ENABLE_AI = false -- vanilla: true
 NDefines.NAI.RAIDS_CREATE_FREQUENCY_DAYS = 9999 -- vanilla: 7
+NDefines.NAI.RESEARCH_DAYS_BETWEEN_WEIGHT_UPDATE = 28 -- vanilla: 7
+NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_DOCTRINE = 365 -- vanilla: 30
+NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_TEMPLATE = 28 -- vanilla: 7
+NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_EQUIPMENT = 28 -- vanilla: 7
+NDefines.NAI.DAYS_BETWEEN_AIR_PRIORITIES_UPDATE = 28 -- vanilla: 4
+NDefines.NAI.CONVOY_RAIDING_TARGET_RECALC_DAYS = 180 -- vanilla: 15
+NDefines.NAI.STRIKE_FORCE_TARGET_RECALC_DAYS = 28 -- vanilla: 5
+NDefines.NAI.AI_OBJECTIVE_DEFAULT_TARGET_RECALC_DAYS = 28 -- vanilla: 5
 -- Modifying this should be fine because raids are disallowed/banned anyway
 NDefines.NRaids.MAX_STATE_TARGETS_TO_EVALUATE_PER_HOUR = 1 -- vanilla: 50
 
