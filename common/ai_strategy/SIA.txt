@@ -175,6 +175,50 @@ SIA_unit_production = {
 		value = 0
 	}
 
+	# Build factories in Bangkok first before other states
+	ai_strategy = {
+		type = factory_build_score_factor
+		target = 1076
+		value = 100
+	}
+}
+
+# HMM: Build infra in rubber state and Bangkok (for slots) first
+# Note, this doesn't reliably work for some reason, PDS messed up how AI strategies work and it's probably why Sheep gave up on his mod
+SIA_max_infra_in_rubber = {
+	allowed = {
+		original_tag = SIA
+	}
+	enable = {
+		724 = {
+			infrastructure < 5
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		target = 724
+		value = 10000
+	}
+}
+
+SIA_max_infra_in_rubber = {
+	allowed = {
+		original_tag = SIA
+	}
+	enable = {
+		1076 = {
+			infrastructure < 5
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		target = 1076
+		value = 10000
+	}
 }
 
 SIA_save_for_partial = {
@@ -293,32 +337,13 @@ SIA_chemical_imports_requirement = {
 		
 }
 
-# HMM: Make sure we research trucks ASAP to get enough trucks in time for mechanization of agriculture
-SIA_mechanization_of_agriculture_pre_prep = {
-	allowed = {
-	  original_tag = SIA
-	}
-	enable = {
-		NOT = { has_tech = tech_trucks }
-		NOT = { has_completed_focus = SIA_mechanization_of_agriculture	}
-	}
-	
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = research_weight_factor
-		id = tech_trucks
-		value = 100000
-	}
-}
-
 SIA_mechanization_of_agriculture_prep = {
 	allowed = {
 	  original_tag = SIA
 	}
 	enable = {
 		# HMM: we are rushing mechanization of agriculture, so get started as soon as we have the tech, don't wait for focuses
-		has_tech = tech_trucks
+		has_tech = motorised_infantry
 		has_equipment = {
 			motorized_equipment < 1000
 		}

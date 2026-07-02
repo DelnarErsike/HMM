@@ -29,25 +29,26 @@ SIA_historical = {
 		SIA_renegotiate_teak_control
 		SIA_the_bank_of_siam
 		SIA_siamese_development_cooperative
+		SIA_for_the_preservation_of_siamese_independence # Note: reduces civilian by 1, but we need the mil early to make enough trucks
+		# Navy focuses next is very not-ideal, but necessary to make sure we can get enough trucks made on time (to increase stability via increasing civilian by 1)
+		SIA_royal_thai_navy # Left side is better if Japan waits with annex and/or prefers more dockyards, but right side is safer option for a blind annex build
+		SIA_focus_on_commercial_civilian_ships # Note: increases civilian by 1
 		SIA_boon_rawd_brewery
 		SIA_siam_cement_group
 		SIA_all_weather_roads
-		SIA_national_savings_bond # Note: from here on, it's better to switch to Disarmed Nation, which increases civilian by 1
+		SIA_national_savings_bond # Note: from here on, it's better to switch to Disarmed Nation, which increases civilian by 1, but it's basically impossible to get the AI to do it
 		SIA_deficit_spending
 		SIA_acquire_light_tools
 		SIA_mechanization_of_agriculture
 		SIA_foreign_currency_exchange
 		SIA_public_credit
-		SIA_a_fledgling_tobacco_industry # Note: +1 civ with with Limited Exports, but that reduces civilian by 1, so only do it after we've switched to Disarmed Nation
+		SIA_a_fledgling_tobacco_industry # Note: +1 civ with with Limited Exports, but it's extremely difficult to get the AI to switch to that reliably, so leave late
 		SIA_irrigation
 		SIA_farmers_into_the_city
 		SIA_railway_and_port_extensions # mainly for the slots
 
-		# End of the obvious choices at end of 1937, now come the ones that are more variable in importance
+		# End of the obvious choices around early-mid 1938, now come the ones that are more variable in importance
 		# Decided to go with option that is safe, even if less optimal in some builds and/or if Japan waits to annex us
-		SIA_royal_thai_navy # Left side is better if Japan waits with annex and/or prefers more dockyards, but right side is safer option for a blind annex build
-		SIA_focus_on_commercial_civilian_ships # Note: increases civilian by 1
-		SIA_for_the_preservation_of_siamese_independence # Note: reduces civilian by 1
 		SIA_shuffle_pridi_to_the_minister_of_interior # Note: increases civilian by 1
 		SIA_civil_nationalism
 		SIA_dominate_public_symbols
@@ -77,6 +78,9 @@ SIA_historical = {
 
 	research = {
 		industry = 1000
+		motorized_equipment = 2000 # Special for Siam to help with mechanized agriculture focus
+		armor = -1000 # Offsets the above for armored cars
+		cat_mechanized_equipment = -1000 # Offsets the above for mechanized equipment
 		air_equipment = -1000
 	}
 
@@ -89,8 +93,8 @@ SIA_historical = {
 	}
 
 	traits = {
-		TAOG_acting_minister_defense = 100000 # Necessary for us to get the War Support for Partial (we won't have enough CP for sending attache)
-		humanist = -100000 # Really bad for our war support if we take him, nukes our ability to go Partial early
+		BRA_minister_of_defense = 2000 # Necessary for us to get the War Support for Partial (we won't have enough CP for sending attache)
+		humanist = -1000 # Really bad for our war support if we take him, nukes our ability to go Partial early
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)

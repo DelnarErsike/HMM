@@ -1563,6 +1563,12 @@ ideas = {
 						has_idea = autarkic_economy_improved
 					}
 				}
+				modifier = { # HMM: Siam annex build should decrease to Limited Exports before they get to completing the tobacco industry focus (so they get an extra civ)
+					add = 1000
+					original_tag = SIA
+					NOT = { has_completed_focus = SIA_a_fledgling_tobacco_industry }
+					NOT = { has_idea = idea_SIA_civilian_opposition }
+				}
    			}
 
    			on_add = {
