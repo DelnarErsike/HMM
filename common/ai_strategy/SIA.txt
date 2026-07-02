@@ -1,0 +1,358 @@
+SIA_unit_production = {
+	allowed = {
+		original_tag = SIA
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = paratroopers
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineers
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = marines
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = cavalry
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = motorized
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mechanized
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 0
+	}
+
+
+
+	#Air unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = 0
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = cas
+		value = 0
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = tactical_bomber
+		value = 0
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = strategic_bomber
+		value = 0
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = naval_bomber
+		value = 0
+	}
+
+
+	# Naval unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = capital_ship
+		value = 0
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = carrier
+		value = 0
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = submarine
+		value = 0
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = 0
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = convoy
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = tactical_bomber
+		value = 0
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = strategic_bomber
+		value = 0
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = naval_bomber
+		value = 0
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 0
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = 0
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = support
+		value = 0
+	}
+
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = anti_tank
+		value = 0
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armor
+		value = 0
+	}
+
+}
+
+SIA_save_for_partial = {
+	allowed = {
+		original_tag = SIA
+	}
+	enable = {
+		has_war_support > 0.25
+		OR = {
+			NOT = { has_idea = partial_economic_mobilisation }
+			NOT = { has_idea = war_economy }
+			NOT = { has_idea = tot_economic_mobilisation }
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+    	type = pp_spend_amount
+    	id = idea
+    	value = 500
+	}
+}
+
+
+#Encourage siam to join japan's faction instead
+SIA_dont_join_axis_historical = {
+  allowed = {
+	  original_tag = SIA
+  }
+  enable = {
+	  is_historical_focus_on = yes
+	  date < 1942.1.1
+  }
+  abort_when_not_enabled = yes
+
+  ai_strategy = {
+	  type = alliance
+	  id = GER
+	  value = -60 #a weak score so that players can still find a way around it if they want
+  }
+}
+
+SIA_stay_independent = {
+	allowed = {
+	  original_tag = SIA
+  }
+  enable = {
+	  is_historical_focus_on = yes
+	  NOT = { has_truce_with = JAP }
+  }
+  abort_when_not_enabled = yes
+
+  ai_strategy = {
+  	type = alliance
+  	id = JAP
+  	value = -80 #Hold off on JAP alliance until we've fought and white-peaced them
+  }
+}
+
+SIA_ger_dont_invite_siam_hisorical = {
+  allowed = {
+	  original_tag = GER
+  }
+  enable = {
+	  is_historical_focus_on = yes
+	  date < 1944.1.1
+  }
+  abort_when_not_enabled = yes
+
+  ai_strategy = {
+	  type = alliance
+	  id = SIA
+	  value = -60 #a weak score so that players can still find a way around it if they want
+  }
+}
+
+SIA_chemical_imports_requirement = {
+	allowed = {
+	  original_tag = SIA
+  }
+  enable = {
+	OR = {
+		focus_progress = {
+			focus = SIA_railway_and_port_extensions
+			progress > 0
+		}
+		has_completed_focus = SIA_railway_and_port_extensions # HMM: added just in case
+	}
+  	NOT = { has_completed_focus = SIA_chemical_imports }
+  }
+  abort_when_not_enabled = yes
+
+  ai_strategy = {
+	  type = befriend
+	  id = ENG
+	  value = 300 
+  }
+
+   ai_strategy = {
+	  type = befriend
+	  id = JAP
+	  value = 300 
+  }
+
+   ai_strategy = {
+	  type = befriend
+	  id = INS
+	  value = 300 
+  }
+
+  ai_strategy = {
+	  type = befriend
+	  id = MAL
+	  value = 300 
+  }
+		
+}
+
+# HMM: Make sure we research trucks ASAP to get enough trucks in time for mechanization of agriculture
+SIA_mechanization_of_agriculture_pre_prep = {
+	allowed = {
+	  original_tag = SIA
+	}
+	enable = {
+		NOT = { has_tech = tech_trucks }
+		NOT = { has_completed_focus = SIA_mechanization_of_agriculture	}
+	}
+	
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_weight_factor
+		id = tech_trucks
+		value = 100000
+	}
+}
+
+SIA_mechanization_of_agriculture_prep = {
+	allowed = {
+	  original_tag = SIA
+	}
+	enable = {
+		# HMM: we are rushing mechanization of agriculture, so get started as soon as we have the tech, don't wait for focuses
+		has_tech = tech_trucks
+		has_equipment = {
+			motorized_equipment < 1000
+		}
+		NOT = { has_completed_focus = SIA_mechanization_of_agriculture	}
+	}
+	
+	abort_when_not_enabled = yes
+
+	# HMM: we are rushing mechanization of agriculture, so we need a lot more mils on trucks to make sure we get it in time
+	ai_strategy = {
+		type = equipment_production_factor
+		id = motorized
+		value = 1000
+	}
+
+	ai_strategy = {
+	    type = equipment_production_min_factories
+	    id = motorized
+	    value = 5
+	}
+}
+
+SIA_reject_invitations_on_historical = {
+	allowed = {
+	  original_tag = SIA
+	}
+	enable = {
+		is_historical_focus_on = yes
+	}
+
+	abort_when_not_enabled = yes
+  ai_strategy = {
+	  type = alliance
+	  id = GER
+	  value = -50 #a weak score so that players can still find a way around it if they want
+  }
+}
