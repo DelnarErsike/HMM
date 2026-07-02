@@ -21,9 +21,9 @@ PHI_historical_plan = {
 		PHI_align_with_the_usa
 		PHI_peg_the_peso_to_the_dollar
 		PHI_quezon_city
+		PHI_american_capital_injection
 		PHI_offshore_patrol
 		PHI_cavite_naval_base
-		PHI_american_capital_injection
 		PHI_national_fiscal_policy
 		PHI_subsidies
 		PHI_reduce_unneccessary_expenditure
@@ -33,11 +33,34 @@ PHI_historical_plan = {
 		PHI_sugar_barons
 		PHI_luzon_transport
 		PHI_textile_mills
+		PHI_mindanao_transport
+		PHI_expand_gold_mining
+		PHI_nationality_act
+		PHI_luce_celler_act
+		PHI_uncouple_the_peso_and_dollar
+		PHI_break_chinese_monopoly
+		# End of spawn-ins from political tree (and spawn-in civs), switch over to doing them in military and navy trees
+		PHI_national_defense_act
+		PHI_army_air_corps
+		PHI_expand_airbases
+		PHI_develop_domestic_aircraft_industry
+		PHI_pt_boat_development
+		PHI_mosquito_fleet
+		PHI_fast_attack_craft
+		PHI_philippine_naval_patrol
+		PHI_thalassocracy
+		PHI_militarize_the_constabulary
+		PHI_philippine_division
+		PHI_philippine_scouts
+		PHI_philippine_military_academy
+		PHI_philippine_army_orchestra
+		PHI_10_year_training_plan
+		PHI_self_reliance_defense
 	}
 
 	#Focuses never to take
 	focus_factors = {
-
+		PHI_treaty_of_manila = 0 # Never attempt to go independent
 	}			
 
 	research = {

@@ -38,23 +38,6 @@ division_template = {
 	}
 }
 
-
-units = {
-	######## LAND OOB ########
-	##### Philippine High Command #####
-	division = { # "1st Philippines Division"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 1
-		}
-		location = 10265
-		division_template = "Philippine Scouts Division"		
-		start_experience_factor = 0.1
-	}
-
-	######## No Naval OOB ########
-}
-
 instant_effect = {
 	if = {
 		limit = { has_dlc = "No Compromise, No Surrender" }
