@@ -562,8 +562,9 @@ if = {
 		CZE_skoda_works
 		CZE_divided_nation
 	}
-	give_guarantee = YUG
-	give_guarantee = ROM
+	# HMM: no guarantees
+	#give_guarantee = YUG
+	#give_guarantee = ROM
 }
 
 if = {
@@ -574,4 +575,45 @@ if = {
 		CZE_fortification_focus
 	}
 }
+
+### SETUP NATIONAL SPIRITS PFOT ### - WARNING: NEEDS TO GO AFTER CHARACTER RECRUITMENT!
+if = {
+	limit = {
+		has_dlc = "Peace For Our Time"
+	}
+	add_ideas = {
+		CZE_sudeten_german_quandary
+		CZE_taticek_of_czechoslovakia
+		CZE_industrialists_veto
+		CZE_agrarian_politics_1
+		CZE_a_divided_nation_fake_ns
+		CZE_edvard_benesh_idea
+	}
+	if = {
+		limit = {
+			has_dlc = "No Step Back"
+		}
+		add_ideas = CZE_legacy_of_the_czechoslovak_legion_army_spirit
+	}
+}
+
+# RETIRE CHARCTER EVENTS
+if = {
+	limit = {
+		has_dlc = "Peace For Our Time"
+	}
+	#The death of Tomas Masaryk
+	country_event = {
+		id = MUN_czech.5
+		days = 622
+		random_hours = 12
+	}
+}
+
+country_event = { #Flavor for a real start date non-aligned party leader placeholder Hlinka to be retired - hidden
+	id = MUN_czech.6
+	days = 958
+	random_hours = 12
+}
+
 
