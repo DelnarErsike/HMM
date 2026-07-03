@@ -1651,28 +1651,6 @@ characters = {
 		}		
 	}
 
-	SOV_aleksandr_golovanov = {
-		name = SOV_aleksandr_golovanov
-		portraits = {
-			army = {
-				small = "GFX_idea_alexander_golovanov"
-			}
-		}
-
-		advisor = {
-			cost = 100
-			slot = theorist
-			idea_token = alexander_golovanov
-			ledger = air
-			allowed = {
-				original_tag = SOV
-			}
-			traits = { air_warfare_theorist }
-			ai_will_do = {
-				base = 0.5
-			}
-		}		
-	}
 
 	SOV_mikhail_frinovsky = {
 		name = SOV_mikhail_frinovsky
@@ -4256,5 +4234,40 @@ characters = {
 		}
 	}
 
+                              
+ #          ##    #    #  #####  
+ #         #  #   ##   #  #    # 
+ #        #    #  # #  #  #    # 
+ #        ######  #  # #  #    # 
+ #        #    #  #   ##  #    # 
+ #######  #    #  #    #  #####  
+
+
+	SOV_aleksandr_golovanov = {
+		name = SOV_aleksandr_golovanov
+		portraits = {
+			army = {
+				large = GFX_portrait_SOV_alexander_golovanov
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_armored_specialist }
+			skills = {
+				specialization_land = 2
+			}
+		}
+	}
+
+		#advisor = {
+			#cost = 100
+			#slot = theorist
+			#idea_token = alexander_golovanov
+			#ledger = air
+			#allowed = {
+				#original_tag = SOV
+			#}
+			#traits = { air_warfare_theorist }
+		#}		
 
 }

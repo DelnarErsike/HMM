@@ -6,7 +6,7 @@ state={
 	
 	resources = {
 		coal = 90 # HMM: moved from Stalino, originally 8 # initial distribution
-		oil = 50 # HMM: added to make Soviet one-shot less likely
+		oil = 80 # HMM: added to make Soviet one-shot less likely
 	}
 	state_category = town
 
@@ -18,7 +18,10 @@ state={
 		buildings = {
 			infrastructure = 3 #was: 6
 			industrial_complex = 1
-
+            
+			9292 = {
+                land_facility = 1
+            }
 		}
 		add_core_of = SOV
 	}
