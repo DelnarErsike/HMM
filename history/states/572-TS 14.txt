@@ -6,7 +6,7 @@ state={
 	
 	resources = {
 		coal = 90 # initial distribution
-		oil = 50 
+		oil = 80 
 	}
 	state_category = town
 
@@ -18,7 +18,10 @@ state={
 		buildings = {
 			infrastructure = 3 #was: 6
 			industrial_complex = 1
-
+            
+			9292 = {
+                land_facility = 1
+            }
 		}
 		add_core_of = SOV
 	}
