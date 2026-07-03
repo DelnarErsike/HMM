@@ -129,6 +129,9 @@ HMM_innovative_weapons_designer:0 "Innovative Weapons Designer"
 ger_eco_nerf:0 "No Strategic Bombing Economy Nerf"
 axis_fuel:0 "Axis Fuel Production"
 
+ # Altered versions of vanilla descriptions that we only want to override in specific spots
+HMM_seize_gold_modify_economy_of_conquest_modifier_tt: "Modify §Y$GER_economy_of_conquest_modifier$§! by up to (less than if country is not fully occupied or has already had its reserves seized before):"
+
   # Template decisions category and decisions
  templates:0 "Division Templates"
  templates_desc:0 "Create predefined division templates with a single click."
