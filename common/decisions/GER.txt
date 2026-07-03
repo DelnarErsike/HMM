@@ -324,9 +324,10 @@ GER_seize_gold_reserves_cat = {
 
 		complete_effect = {
 			set_temp_variable = { occupied_state_num_factory = 0 } #This will show how many factories in total Germany controls from FROM's cores
-			add_to_temp_variable = { GER.occupied_state_num_factory = FROM.num_of_military_factories_in_cores@GER }
-			add_to_temp_variable = { GER.occupied_state_num_factory = FROM.num_of_civilian_factories_in_cores@GER }
-			add_to_temp_variable = { GER.occupied_state_num_factory = FROM.num_of_naval_factories_in_cores@GER }
+			# HMM: this is stupid an exploitable, we don't want to count all occupied factories each time the decision is taken, just the ones in the states that would be exploited
+			#add_to_temp_variable = { GER.occupied_state_num_factory = FROM.num_of_military_factories_in_cores@GER }
+			#add_to_temp_variable = { GER.occupied_state_num_factory = FROM.num_of_civilian_factories_in_cores@GER }
+			#add_to_temp_variable = { GER.occupied_state_num_factory = FROM.num_of_naval_factories_in_cores@GER }
 
 			if = {
 				limit = {
@@ -343,6 +344,10 @@ GER_seize_gold_reserves_cat = {
 							is_fully_controlled_by = ROOT
 							NOT = { has_state_flag = GER_seize_gold_reserves_state_flag }
 						}
+						# HMM: add the factories in this state to our count
+						add_to_temp_variable = { GER.occupied_state_num_factory = arms_factory_level }
+						add_to_temp_variable = { GER.occupied_state_num_factory = industrial_complex_level }
+						add_to_temp_variable = { GER.occupied_state_num_factory = building_level@dockyard }
 						add_compliance = -5
 						add_resistance = 10
 						set_state_flag = GER_seize_gold_reserves_state_flag
@@ -357,6 +362,10 @@ GER_seize_gold_reserves_cat = {
 							is_fully_controlled_by = ROOT
 							NOT = { has_state_flag = GER_seize_gold_reserves_state_flag }
 						}
+						# HMM: add the factories in this state to our count
+						add_to_temp_variable = { GER.occupied_state_num_factory = arms_factory_level }
+						add_to_temp_variable = { GER.occupied_state_num_factory = industrial_complex_level }
+						add_to_temp_variable = { GER.occupied_state_num_factory = building_level@dockyard }
 						add_compliance = -5
 						add_resistance = 10
 						set_state_flag = GER_seize_gold_reserves_state_flag
