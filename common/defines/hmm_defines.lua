@@ -204,7 +204,11 @@ NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROL_DIFF = 0
 NDefines.NAI.MINIMUM_CONVOY_TO_ASK_LEND_LEASE = 0
 
 -- Contingencies for disabling international market
-NDefines.NMarket.MAX_CIV_FACTORIES_PER_CONTRACT = 0
+NDefines.NMarket.MAX_CIV_FACTORIES_PER_CONTRACT = 1 -- This can't go lower than 1, so we also have to alter other defines to make the market unusable for sending equipment or gaining CIC from the AI
+NDefines.NMarket.IC_TO_CIC_FACTOR = 9999.0
+NDefines.NMarket.LOW_PRICE_LEVEL_FACTOR = 1.0
+NDefines.NMarket.HIGH_PRICE_LEVEL_FACTOR = 1.0
+NDefines.NMarket.PURCHASE_CONTRACT_DELIVERY_TOTAL_DAYS = 9999
 NDefines.NAI.EQUIPMENT_MARKET_UPDATE_FREQUENCY_DAYS = 9999
 NDefines.NAI.EQUIPMENT_MARKET_MAX_CIVS_FOR_PURCHASES_RATIO = 0.0
 NDefines.NAI.EQUIPMENT_MARKET_BASE_MARKET_RATIO = 0.0
