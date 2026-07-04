@@ -6820,7 +6820,7 @@ initial_show_position = {
 		id = PHI_war_for_the_oceans
 		icon = GFX_focus_PHI_war_for_the_oceans
 
-		prerequisite = { focus = PHI_treaty_of_manila }
+		prerequisite = { focus = PHI_second_philippine_republic focus = PHI_treaty_of_manila focus = PHI_pan_pacific_trade_union_secretariat focus = PHI_comitern focus = PHI_reino_de_filipinas }
 
 		relative_position_id = PHI_treaty_of_manila	
 
