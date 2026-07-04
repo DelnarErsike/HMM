@@ -19,15 +19,15 @@ PHI_historical_plan = {
 
 		PHI_commonwealth_of_the_philippines
 		PHI_align_with_the_usa
-		PHI_peg_the_peso_to_the_dollar
+		PHI_leverage_the_peso # It's actually better to go with Japan here, we end up with more stuff earlier and a lot of saved focus time if USA delays the annex
 		PHI_quezon_city
-		PHI_american_capital_injection
+		PHI_encourage_japanese_investment
 		PHI_offshore_patrol
-		PHI_cavite_naval_base
+		PHI_cavite_naval_base # Right around here or the one above is when we expect USA to annex, but let's keep going just in case
 		PHI_national_fiscal_policy
 		PHI_subsidies
 		PHI_reduce_unneccessary_expenditure
-		PHI_quezon_city_campus
+		PHI_basic_welfare
 		PHI_pro_hacendados
 		PHI_investment_fund
 		PHI_sugar_barons
@@ -37,9 +37,12 @@ PHI_historical_plan = {
 		PHI_expand_gold_mining
 		PHI_nationality_act
 		PHI_luce_celler_act
-		PHI_uncouple_the_peso_and_dollar
 		PHI_break_chinese_monopoly
 		# End of spawn-ins from political tree (and spawn-in civs), switch over to doing them in military and navy trees
+		PHI_united_states_army_forces_in_the_far_east
+		PHI_appoint_macarthur
+		PHI_military_requisitions
+		PHI_mariveles_naval_base
 		PHI_national_defense_act
 		PHI_army_air_corps
 		PHI_expand_airbases
@@ -56,6 +59,10 @@ PHI_historical_plan = {
 		PHI_philippine_army_orchestra
 		PHI_10_year_training_plan
 		PHI_self_reliance_defense
+		PHI_small_arms_and_artillery_requisition
+		PHI_far_east_air_force
+		PHI_aircraft_requisition
+		PHI_expand_us_bases
 	}
 
 	#Focuses never to take
