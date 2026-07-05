@@ -4,7 +4,7 @@
 	country = {
 		factor = 0
 		modifier = {
-			add = 100
+			add = 10
 			tag = MAN
 			has_dlc = "Waking the Tiger"
 		}

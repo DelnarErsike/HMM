@@ -34,25 +34,18 @@ CHI = "countries/China.txt"
 ETH = "countries/Ethiopia.txt"
 IRQ = "countries/Iraq.txt"
 JAP = "countries/Japan.txt"
-KOR = "countries/Korea.txt"
 MEX = "countries/Mexico.txt"
-MEN = "countries/Mengkukuo.txt"
 NZL = "countries/New Zealand.txt"
 PER = "countries/Persia.txt"
 PHI = "countries/Philippines.txt"
 SAF = "countries/South Africa.txt"
 SIA = "countries/Siam.txt"
-SIK = "countries/Sinkiang.txt"
-TIB = "countries/Tibet.txt"
-VEN = "countries/Venezula.txt"
-YUN = "countries/Yunnan.txt"
 USA = "countries/USA.txt"
 MON = "countries/Mongolia.txt"
 TAN = "countries/Tannu Tuva.txt"
 SLO = "countries/Slovakia.txt"
 RAJ = "countries/British Raj.txt"
-GXC = "countries/Guangxi.txt"
-PRC = "countries/ComChina.txt"
+
 
 
 ICE = "countries/Iceland.txt" # tag cannot be removed
@@ -85,14 +78,3 @@ BLC = "countries/Balochistan.txt"
 WST = "countries/Wasteland.txt"
 
 #NOTE: Useful to add a basic default loc entry for each tag in 00_countries.txt so that hovering over a tag will show the tag's name in loc (ie. PAP: "Papal States")
-
-# TAOG
-BLI = "countries/Bali.txt"
-ATJ = "countries/Atjeh.txt"
-SSI = "countries/Siak.txt"
-POK = "countries/Pontianak.txt"
-GOW = "countries/Gowa.txt"
-TNE = "countries/Ternate.txt"
-BOU = "countries/Bougainville.txt"
-VAN = "countries/Vanuatu.txt"
-CPS = "countries/Champasak.txt"
