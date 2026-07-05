@@ -284,6 +284,7 @@ GER_seize_gold_reserves_cat = {
 		target_array = ROOT.GER_seize_gold_targets_array
 
 		target_trigger = {
+			NOT = { has_country_flag = hmm_seize_gold_disabled }
 			FROM = {
 				has_country_flag = GER_has_capitulated_to_germany
 				NOT = { #Don't seize France's gold reserves too soon; set up Vichy France first. Set in event France.10 and cleared in event france.14
@@ -307,6 +308,7 @@ GER_seize_gold_reserves_cat = {
 				has_country_flag = GER_has_capitulated_to_germany
 			}
 			ROOT = {
+				NOT = { has_country_flag = hmm_seize_gold_disabled }
 				custom_trigger_tooltip = {
 					tooltip = GER_economy_of_conquest_modifier_consumer_goods_tt
 					check_variable = { GER_industrial_consumer_goods_factor > 0 }
@@ -420,6 +422,7 @@ GER_seize_gold_reserves_cat = {
 		#States being targeted: Leningrad, Moscow, Stalingrad, Smolensk, Rostov, Minsk, Kyiv, Crimea
 
 		target_trigger = {
+			NOT = { has_country_flag = hmm_seize_gold_disabled }
 			FROM = {
 				owner = {
 					original_tag = SOV
