@@ -236,6 +236,15 @@ NDefines.NAI.AIFC_UPDATE_FREQUENCY_DAYS = 9999
 NDefines.NAI.AIFC_UNIT_NUDGE_FREQUENCY_DAYS = 9999
 NDefines.NAI.AIFC_PATH_MAX_COST = 0.0
 
+-- Prevent AI from using XP to create new division templates or variants because they bloat save games unnecessarily (and test builds should still work fine)
+NDefines.NAI.DESIRE_USE_XP_TO_UPDATE_LAND_TEMPLATE = 0.0
+NDefines.NAI.DESIRE_USE_XP_TO_UPGRADE_LAND_EQUIPMENT = 0.0
+NDefines.NAI.DESIRE_USE_XP_TO_UPGRADE_NAVAL_EQUIPMENT = 0.0
+NDefines.NAI.DESIRE_USE_XP_TO_UPGRADE_AIR_EQUIPMENT = 0.0
+
+-- Why is this even a thing? No, no wacky crazy AIs trying to do wacky crazy things, that is really dumb to bake into a define
+NDefines.NAI.IRRATIONALITY_LAMBDA = 0.0
+
 --THANKS THRASHY
 NDefines.NAir.ACE_WING_SIZE_MAX_BONUS = 1                       -- biggest bonus we can get from having a small wing with an ace on
 NDefines.NNavy.INITIAL_ALLOWED_DOCKYARD_RATIO_FOR_REPAIRS = 1.0				-- initially countries will allocate this ratio of dockyards for repairs
