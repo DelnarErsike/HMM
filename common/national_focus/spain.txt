@@ -5459,7 +5459,11 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		allow_branch = { always = no }
+		allow_branch = {
+			is_ai = yes
+			NOT = { has_completed_focus = SPA_unify_the_nationalist_front }
+			has_global_flag = spanish_civil_war
+		}
 		prerequisite = { focus = SPA_negotiate_carlist_support }
 		mutually_exclusive = { focus = SPA_the_phalanx_ascendant focus = SPA_unify_the_nationalist_front }
 		
