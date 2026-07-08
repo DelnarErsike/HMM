@@ -289,6 +289,21 @@ bookmarks = {
 				AST_anzac_spirit
 			}
 		}
+		"NZL"={
+			minor = yes
+			history = "NZL_GATHERING_STORM_DESC"
+			version = thunder_at_our_gates
+			assume_not_played_if_missing_data = yes
+			ideology = democratic
+			ideas = {
+				
+			}
+			focuses = {
+				NZL_bob_semple_tank
+				NZL_statute_of_westminster
+				NZL_maori_volunteers
+			}
+		}
 		"SAF"={
 			minor = yes
 			history = "SAF_GATHERING_STORM_DESC"
