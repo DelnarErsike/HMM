@@ -1210,6 +1210,8 @@ country_event = {
 		if = {
 			limit = {
 				is_subject = yes
+				tag = RAJ
+				is_dynamic_country = no
 				OVERLORD = { has_government = fascism }
 				NOT = {
 					has_autonomy_state = autonomy_satellite
@@ -1230,6 +1232,8 @@ country_event = {
 			limit = {
 				is_subject = yes
 				OVERLORD = { has_government = communism }
+				tag = RAJ
+				is_dynamic_country = no
 				NOT = {
 					has_autonomy_state = autonomy_dominion
 				}

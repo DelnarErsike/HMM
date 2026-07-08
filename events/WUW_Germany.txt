@@ -6481,6 +6481,7 @@ country_event = {
 	# We will never submit!
 	option = {
 		name = wuw_GER_diplomacy.117.b
+		trigger = { always = no }
 		ai_chance = {
 			base = 2
 			modifier = {
@@ -6509,7 +6510,7 @@ country_event = {
 
 		FROM = { # FROM Rejects
 			country_event = { 
-				id = wuw_GER_diplomacy.118
+				id = wuw_GER_diplomacy.119
 				hours = 5 
 				random_hours = 6
 			}

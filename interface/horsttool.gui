@@ -153,7 +153,6 @@ guiTypes = {
 			name = "pause_blocker_major"
 			position = {x=280 y=300}
 			spriteType = "GFX_generic_box_125"
-			visible = "[?has_variable('pause_dropdown_open')]"
 		}
 
 		instantTextboxType = {
@@ -165,14 +164,12 @@ guiTypes = {
 			maxHeight = 23
 			format = left
 			alwaystransparent = yes
-			visible = "[?has_variable('pause_dropdown_open')]"
 		}
 
 		buttonType = {
 			name = "pause_blocker_all"
 			position = {x=280 y=323}
 			spriteType = "GFX_generic_box_125"
-			visible = "[?has_variable('pause_dropdown_open')]"
 		}
 
 		instantTextboxType = {
@@ -184,14 +181,12 @@ guiTypes = {
 			maxHeight = 23
 			format = left
 			alwaystransparent = yes
-			visible = "[?has_variable('pause_dropdown_open')]"
 		}
 
 		buttonType = {
 			name = "pause_blocker_host"
 			position = {x=280 y=345}
 			spriteType = "GFX_generic_box_125"
-			visible = "[?has_variable('pause_dropdown_open')]"
 		}
 
 		instantTextboxType = {
@@ -203,7 +198,6 @@ guiTypes = {
 			maxHeight = 23
 			format = left
 			alwaystransparent = yes
-			visible = "[?has_variable('pause_dropdown_open')]"
 		}
 		buttonType = {
 			name = "pause_blocker_unblock_country"

@@ -305,7 +305,7 @@ country_event = {
 	option = { # Surrender Slovenia
 		name = yugoslavia.5.a
 		ai_chance = {
-			factor = 100
+			factor = 90
 			modifier = { # Decrease chance YUG resists if AUS isn't taken first
 				AUS = { exists = yes }
 				factor = 0.5
@@ -330,6 +330,21 @@ country_event = {
 			}
 		}
 		GER = { country_event = germany.94 } #Germany gets Slovenia
+	}
+	option = { # Refuse anyway
+		name = yugoslavia.5.b
+		trigger = { always = no }
+		ai_chance = { factor = 10 }
+		GER = {
+			country_event = germany.95 #Germany gains wargoal
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state_focus
+					target = YUG
+					generator = { 102 853 }
+				}
+			}
+		}
 	}
 }
 

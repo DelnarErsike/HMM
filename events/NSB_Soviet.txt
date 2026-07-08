@@ -651,6 +651,31 @@ country_event = {
 		# Increase opposition Army Support 
 		SOV_increase_opposition_army_support_small = yes 
 	}
+
+	option = { #NO WAIT! Let's Think about it
+		name = NSB_soviet_paranoia_system_events.23.b
+		trigger = { always = no }
+		ai_chance = {
+			base = 1
+			modifier = { #Don't go to negative PP please
+				factor = 0
+				has_political_power < SOV_purge_event_pp_to_avoid_regular_pay
+			}
+			modifier = { #Don't risk starting CW too early
+				factor = 0
+				SOV_is_opposition = yes 
+			}
+		}
+
+		trigger = {
+			NOT = { has_political_power < SOV_purge_event_pp_to_avoid_regular }
+		}
+
+		add_political_power = SOV_purge_event_pp_to_avoid_regular_pay
+
+		#PARANOIA increases
+		SOV_paranoia_low_increase_effect = yes
+	}
 }
 
 ### GENERAL ACCUSES GENERAL - ARMY ###
@@ -2119,6 +2144,11 @@ country_event = {
 
 	option = { #Join Faction - Keep government
 		name = NSB_soviet_foreign_politics_events.1.a
+		trigger = {
+			FROM = {
+				is_faction_leader = yes
+			}
+		}
 
 		ai_chance = {
 			base = 10
@@ -3270,9 +3300,9 @@ country_event = {
 					is_subject = yes
 					strength_ratio = {
 						tag = FROM
-						ratio < 0.6
+						ratio < 0.4
 					}
-					surrender_progress > 0.5
+					surrender_progress > 0.15
 				}
 			}
 		}
@@ -4209,6 +4239,8 @@ country_event = {
 			modifier = { #Is going commie or historical
 				factor = 0
 				OR = {
+					has_completed_focus = JAP_the_unthinkable_option
+					has_completed_focus = JAP_return_of_the_manchukuo_exiles
 					has_completed_focus = JAP_sea_purge_the_kodoha_faction
 				}
 			}
