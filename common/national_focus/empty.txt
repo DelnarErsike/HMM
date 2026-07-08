@@ -37,10 +37,6 @@ focus_tree = {
 			add = 100
 			tag = DEN
 		}
-		modifier = {
-			add = 100
-			tag = SIA
-		}
 		#BALKAN
 		modifier = {
 			add = 10

@@ -51,7 +51,16 @@ HMM_ai_annex_build_reserve_pp_for_partial = {
         }
 	}
     enable = {
-        has_war_support > 0.25
+        OR = {
+            has_war_support > 0.249
+            AND = { # these countries have special advisors that give +10% war support, so should start saving up for partial at lower WS
+                has_war_support > 0.149
+                OR = {
+                    original_tag = SIA
+                    original_tag = MAN
+                }
+            }
+        }
 		NOR = {
 			has_idea = partial_economic_mobilisation
 			has_idea = war_economy
@@ -204,4 +213,46 @@ HMM_ai_annex_build_only_infra_mils_civs = {
         id = industrial_infrastructure
         value = -9999
     }
+}
+
+HMM_ai_annex_convoys_only = {
+    allowed = {
+		OR = { # Don't apply this to "main" countries to prevent test build interference
+            is_playable_country = no
+            is_annexable_playable_country = yes
+        }
+	}
+    enable = { always = yes }
+    abort = { always = no }
+
+    ai_strategy = {
+		type = unit_ratio
+		id = capital_ship
+		value = -9999
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = carrier
+		value = -9999
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = submarine
+		value = -9999
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = -9999
+	}
+    ai_strategy = {
+		type = unit_ratio
+		id = convoy
+		value = 9999
+	}
+    ai_strategy = {
+		type = equipment_production_min_factories
+		id = convoy
+		value = 30
+	}
 }

@@ -547,6 +547,23 @@ bookmarks = {
 				MAN_tsr_empire_of_manchukuo
 			}
 		}
+		"SIA"={
+			minor = yes
+			history = "SIA_GATHERING_STORM_DESC"
+			ideology = neutrality
+			required_dlc  = { "Thunder at Our Gates" }
+			version = thunder_at_our_gates
+			assume_not_played_if_missing_data = yes
+			ideas = {
+				idea_SIA_military_neutral
+				idea_SIA_civilian_neutral
+			}
+			focuses = {
+				SIA_the_khana_ratsadon
+				SIA_for_the_preservation_of_siamese_independence
+				SIA_phibuns_premiership
+			}
+		}
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }

@@ -103,6 +103,7 @@ MAN_historical = {
         air_airborne_1 = -1000
         air_airborne_2 = -1000
         air_airborne_3 = -1000
+        BRA_minister_of_defense = 2000 # Necessary for us to get the War Support for Partial (we won't have enough CP for sending attache)
     }	
 
 	focus_factors = {

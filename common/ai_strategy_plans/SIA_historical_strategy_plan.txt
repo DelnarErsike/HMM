@@ -1,0 +1,114 @@
+SIA_historical = {
+	name = "Siam historical plan"
+	desc = ""
+
+	allowed = {
+		original_tag = SIA
+		has_dlc = "Thunder at Our Gates"
+	}
+	enable = {
+		is_historical_focus_on = yes
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		# HMM: necessary to start any path we'd want to do.
+		SIA_the_khana_ratsadon 									#7
+
+		# HMM: two schools of thought here. We could spend 105 days picking up stability bonuses alongside 1 civ and 2 infra (we start at very low stability and war support), 
+		# or we just jump straight into the eco tree. Stability bonuses are only helpful if we get above 50% though, and while a player can do that with proper PP clicks, we can't trust the AI.
+		# So, straight into the eco tree it is.
+
+		# Also, we need to keep an eye on which focuses change faction balance so the AI never accidentally triggers a civil war by being on rebellious for 150 days
+		# Civ -> Partial downgrades civilian by 1 and upgrades military by 1, so we cannot downgrade civilian further until we've gotten one of our civilian boosts in
+
+		SIA_industrialization_drive
+		SIA_revision_of_unequal_treaties
+		SIA_renegotiate_teak_control
+		SIA_the_bank_of_siam
+		SIA_siamese_development_cooperative
+		SIA_for_the_preservation_of_siamese_independence # Note: reduces civilian by 1, but we need the mil early to make enough trucks
+		# Navy focuses next is very not-ideal, but necessary to make sure we can get enough trucks made on time (to increase stability via increasing civilian by 1)
+		SIA_royal_thai_navy # Left side is better if Japan waits with annex and/or prefers more dockyards, but right side is safer option for a blind annex build
+		SIA_focus_on_commercial_civilian_ships # Note: increases civilian by 1
+		SIA_boon_rawd_brewery
+		SIA_siam_cement_group
+		SIA_all_weather_roads
+		SIA_national_savings_bond # Note: from here on, it's better to switch to Disarmed Nation, which increases civilian by 1, but it's basically impossible to get the AI to do it
+		SIA_deficit_spending
+		SIA_acquire_light_tools
+		SIA_mechanization_of_agriculture
+		SIA_foreign_currency_exchange
+		SIA_public_credit
+		SIA_a_fledgling_tobacco_industry # Note: +1 civ with with Limited Exports, but it's extremely difficult to get the AI to switch to that reliably, so leave late
+		SIA_irrigation
+		SIA_farmers_into_the_city
+		SIA_railway_and_port_extensions # mainly for the slots
+
+		# End of the obvious choices around early-mid 1938, now come the ones that are more variable in importance
+		# Decided to go with option that is safe, even if less optimal in some builds and/or if Japan waits to annex us
+		SIA_shuffle_pridi_to_the_minister_of_interior # Note: increases civilian by 1
+		SIA_civil_nationalism
+		SIA_dominate_public_symbols
+		
+		# Japan really should've annexed us by now, but let's keep going assuming they're waiting for a long time for whatever reason
+		SIA_chemical_imports
+		SIA_textile_mills
+		# End of straightforward spawn-ins
+		SIA_embed_technocrats_in_civilian_institutions
+		SIA_sell_privy_purse_lands
+		# And now we need to schedule 270 (35x8) days' worth of focuses while we wait for spirit to expire
+		SIA_kasetsart_university					# 1x 35
+		SIA_thammasat_university					# 2x 35 = 70
+		SIA_the_army_of_siam						# 1x 35
+		SIA_intermediate_war_preparation 			# 1x 35
+		SIA_prepare_northern_infrastructure_for_war	# 1x 35
+		SIA_send_bureaucrats_abroad					# 1x 35
+		SIA_baht_stabilization_act					# 1x 35
+		SIA_phibuns_premiership
+		SIA_expand_domestic_arms_workshops
+		SIA_look_to_european_fascism
+		SIA_the_songsuradet_rebellion
+		SIA_sue_the_king_in_exile
+		
+		# End of spawn-in focuses, don't bother with railroading after this
+	}
+
+	research = {
+		industry = 1000
+		motorized_equipment = 2000 # Special for Siam to help with mechanized agriculture focus
+		armor = -1000 # Offsets the above for armored cars
+		cat_mechanized_equipment = -1000 # Offsets the above for mechanized equipment
+		air_equipment = -1000
+	}
+
+	ideas = {
+		limited_exports = 1000 # We want to go down to Limited before we finish tobacco industry focus (so it gives +1 civ). But we need to be on Partial before we can do that.
+		# We want to go down on manpower law because it gives us +10% construction speed with National Savings Bond and is an easy way to boost civilian approval. 
+		disarmed_nation = 100
+		volunteer_only = -1000
+		limited_conscription = -1000
+	}
+
+	traits = {
+		BRA_minister_of_defense = 2000 # Necessary for us to get the War Support for Partial (we won't have enough CP for sending attache)
+		humanist = -1000 # Really bad for our war support if we take him, nukes our ability to go Partial early
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
