@@ -228,8 +228,7 @@ NDefines.NAI.DAYS_BETWEEN_AIR_PRIORITIES_UPDATE = 28 -- vanilla: 4
 NDefines.NAI.CONVOY_RAIDING_TARGET_RECALC_DAYS = 180 -- vanilla: 15
 NDefines.NAI.STRIKE_FORCE_TARGET_RECALC_DAYS = 28 -- vanilla: 5
 NDefines.NAI.AI_OBJECTIVE_DEFAULT_TARGET_RECALC_DAYS = 28 -- vanilla: 5
--- Modifying this should be fine because raids are disallowed/banned anyway
-NDefines.NRaids.MAX_STATE_TARGETS_TO_EVALUATE_PER_HOUR = 1 -- vanilla: 50
+NDefines.NAI.AI_PREFERRED_TACTIC_WEEKLY_CHANGE_CHANCE = 0 -- vanilla: 0.05
 
 -- EXPERIMENTAL: Disabling the AI Force Concentration mechanic speeds up the game (specifically, reduces CPU overhead), but makes the AI behave in non-vanilla ways
 NDefines.NAI.AIFC_UPDATE_FREQUENCY_DAYS = 9999
@@ -243,7 +242,19 @@ NDefines.NAI.DESIRE_USE_XP_TO_UPGRADE_NAVAL_EQUIPMENT = 0.0
 NDefines.NAI.DESIRE_USE_XP_TO_UPGRADE_AIR_EQUIPMENT = 0.0
 
 -- Why is this even a thing? No, no wacky crazy AIs trying to do wacky crazy things, that is really dumb to bake into a define
-NDefines.NAI.IRRATIONALITY_LAMBDA = 0.0
+NDefines.NAI.IRRATIONALITY_LAMBDA = 0
+
+-- Garbage building, never build
+NDefines.NAI.NUM_FACTORIES_IN_STATE_TO_WANT_ENERGY_REDUCTION = 9999
+-- Less garbage building, but be pickier about where we'd build it
+NDefines.NAI.TOTAL_STATE_EXTRACTED_RESOURCES_FOR_BUILDING_RESOURCE_CAP_BUILDING = 100
+
+-- AI only builds convoys (helpful for performance and annex builds)
+NDefines.NAI.CONVOY_NEED_SAFETY_BUFFER = 9999
+
+-- Avoid building in non-cores and especially occupied territory (helps with annex builds especially)
+NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_OCCUPIED_TERRITORY = 0.01
+NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_OWNED_NONCORE = 0.10
 
 --THANKS THRASHY
 NDefines.NAir.ACE_WING_SIZE_MAX_BONUS = 1                       -- biggest bonus we can get from having a small wing with an ace on
