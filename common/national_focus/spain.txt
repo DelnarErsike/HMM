@@ -5461,6 +5461,7 @@ focus_tree = {
 		}
 		allow_branch = {
 			is_ai = yes
+			has_completed_focus = SPA_negotiate_carlist_support
 			NOT = { has_completed_focus = SPA_unify_the_nationalist_front }
 			has_global_flag = spanish_civil_war
 		}
