@@ -1858,9 +1858,6 @@ characters = {
 			maneuvering_skill = 3
 			coordination_skill = 6
 			legacy_id = 0
-			visible = {
-
-			}
 		}
 
 	}

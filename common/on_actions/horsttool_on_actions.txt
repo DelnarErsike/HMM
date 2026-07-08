@@ -30,22 +30,10 @@ on_actions = {
 				limit = {has_game_rule = {rule = horst_host_country option = BUL}}
 				set_variable={host = BUL.id}
 			}
-			else_if = {
-				limit = {has_game_rule = {rule = horst_host_country option = YUG}}
-				set_variable={host = YUG.id}
-			}
 			# Co-prosperity Sphere
 			else_if = {
 				limit = {has_game_rule = {rule = horst_host_country option = JAP}}
 				set_variable={host = JAP.id}
-			}
-			else_if = {
-				limit = {has_game_rule = {rule = horst_host_country option = MAN}}
-				set_variable={host = MAN.id}
-			}
-			else_if = {
-				limit = {has_game_rule = {rule = horst_host_country option = SIA}}
-				set_variable={host = SIA.id}
 			}
 			# allies
 			else_if = {
@@ -83,10 +71,6 @@ on_actions = {
 			else_if = {
 				limit = {has_game_rule = {rule = horst_host_country option = BRA}}
 				set_variable={host = BRA.id}
-			}
-			else_if = {
-				limit = {has_game_rule = {rule = horst_host_country option = HOL}}
-				set_variable={host = HOL.id}
 			}
 			# comintern
 			else_if = {

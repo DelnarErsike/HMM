@@ -179,8 +179,8 @@ bookmarks = {
 			}
 			focuses = {
 				JAP_sea_purge_the_kodoha_faction
-				JAP_sea_greater_east_asian_co_prosperity_sphere
-				JAP_okadas_military_purge_speech
+				JAP_imperial_rule_assistance_association
+				JAP_sea_greater_east_asian_co_properity_sphere
 			}
 		}
 
@@ -197,8 +197,8 @@ bookmarks = {
 			}
 			focuses = {
 				JAP_sea_purge_the_kodoha_faction
-				JAP_sea_greater_east_asian_co_prosperity_sphere
-				JAP_okadas_military_purge_speech
+				JAP_imperial_rule_assistance_association
+				JAP_sea_greater_east_asian_co_properity_sphere
 			}
 		}
 		"SOV"={
@@ -423,8 +423,8 @@ bookmarks = {
 			}
 			focuses = {
 				SPA_caudillo_of_spain
-				SPA_national_recovery
-				SPR_expand_the_axis_gold_trade
+				SPA_dictator_for_life
+				SPA_autarky
 			}
 		}
 

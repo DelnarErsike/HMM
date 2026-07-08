@@ -87,6 +87,11 @@ horst_host_country = {
 		text = "Brazil"
 		desc = ""
 	}
+	option = {
+		name = MEX
+		text = "Mexico"
+		desc = ""
+	}
 	# comintern
 	option = {
 		name = SOV
