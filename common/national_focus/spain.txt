@@ -878,7 +878,6 @@ focus_tree = {
 		id = SPA_equipment_shipments
 		available = {
 			NOT = { has_global_flag = scw_over }
-			
 		}
 		bypass = {
 		}
@@ -910,16 +909,6 @@ focus_tree = {
 		id = SPA_obtain_training_staff
 		available = {
 			NOT = { has_global_flag = scw_over }
-			OR = {
-				has_volunteers_amount_from = {
-					tag = ITA
-					count > 0
-				}
-				has_volunteers_amount_from = {
-					tag = GER
-					count > 0
-				}
-			}
 		}
 		bypass = {
 		}
@@ -943,7 +932,6 @@ focus_tree = {
 		id = SPA_doctrinal_advancements
 		available = {
 			NOT = { has_global_flag = scw_over }
-			
 		}
 		bypass = {
 		}
@@ -9826,10 +9814,6 @@ focus_tree = {
 			NOT = { has_war_with = SOV }
 			NOT = { has_global_flag = scw_over }
 			SOV = { has_government = communism }
-			has_volunteers_amount_from = {
-			    tag = SOV
-			    count > 0
-			}
 		}
 		bypass = {
 			AND = {
