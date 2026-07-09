@@ -574,6 +574,31 @@ axis_fuel_spirit = {
 		desc = "Romanian and Hungarian oil decisions and focuses are kept as they are in the base game."
 	}
 }
+cas_doctrines_status = {
+	name = "Ground Support doctrines are..."
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_air"
+	default = {
+		name = banned
+		text = "Fully Banned"
+		desc = "Battlefield Support and all air subdoctrines that provide ground support bonuses cannot be taken by anyone."
+	}
+	option = {
+		name = axis
+		text = "Axis Only"
+		desc = "Battlefield Support and all air subdoctrines that provide ground support bonuses are only allowed for Axis countries."
+	}
+	option = {
+		name = allies
+		text = "Allies Only"
+		desc = "Battlefield Support and all air subdoctrines that provide ground support bonuses are only allowed for Allied countries."
+	}
+	option = {
+		name = allowed
+		text = "Allowed for Everyone"
+		desc = "All grand doctrines and air subdoctrines can be taken by anyone."
+	}
+}
 tradebacks = {
 	name = "No Tradebacks Idea"
 	group = "HMM Rules"

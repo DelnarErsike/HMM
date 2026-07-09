@@ -125,6 +125,10 @@ GER_gun_delivery_FIN:0 "Started Gun. Delivery"
 GER_started_ll_gun:0 "Started Gun. Delivery"
 GER_annex_FIN:0"Economic Annex of Finland"
 
+HMM_banned_by_rules: "Banned by Game Rules"
+HMM_axis_only: "Axis Only"
+HMM_allies_only: "Allies Only"
+
  # Custom Ideas
 HMM_innovative_weapons_designer:0 "Innovative Weapons Designer"
 ger_eco_nerf:0 "No Strategic Bombing Economy Nerf"

@@ -843,4 +843,85 @@ on_actions = {
 				}
 			}
 	}
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = cas_doctrines_status
+							option = allowed
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						if = {
+							limit = {
+								has_game_rule = {
+									rule = cas_doctrines_status
+									option = axis
+								}
+							}
+							allies = yes
+						}
+						else_if = {
+							limit = {
+								has_game_rule = {
+									rule = cas_doctrines_status
+									option = allies
+								}
+							}
+							axis = yes
+						}
+						OR = {
+							has_doctrine = new_battlefield_support
+							has_doctrine = air_subdoctrine_fighter_bombers
+							has_doctrine = air_subdoctrine_tactical_battlefield_support
+							has_doctrine = air_subdoctrine_flying_artillery
+							has_doctrine = air_subdoctrine_dive_bombers
+							has_doctrine = air_subdoctrine_carrier_strikes
+						}
+					}
+					if = {
+						limit = {
+							has_doctrine = new_battlefield_support
+						}
+						set_grand_doctrine = new_strategic_destruction
+					}
+					if = {
+						limit = {
+							has_doctrine = air_subdoctrine_fighter_bombers
+						}
+						set_sub_doctrine = {
+							sub_doctrine = air_subdoctrine_dogfighting_mastery
+							folder = air
+						}
+					}
+					if = {
+						limit = {
+							has_doctrine = air_subdoctrine_tactical_battlefield_support
+						}
+						set_sub_doctrine = {
+							sub_doctrine = air_subdoctrine_operational_air_support
+							folder = air
+						}
+					}
+					if = {
+						limit = {
+							OR = {
+								has_doctrine = air_subdoctrine_flying_artillery
+								has_doctrine = air_subdoctrine_dive_bombers
+								has_doctrine = air_subdoctrine_carrier_strikes
+							}
+						}
+						set_sub_doctrine = {
+							sub_doctrine = air_subdoctrine_flexible_fire_support
+							folder = air
+						}
+					}
+				}
+			}
+		}
+	}
 }
