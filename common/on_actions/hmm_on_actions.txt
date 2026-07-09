@@ -134,6 +134,26 @@ on_actions = {
 					}
 				}
 			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = axis_fuel_spirit
+						option = off
+					}
+				}
+				46 = { # Romania
+					add_resource = {
+						type = oil
+						amount = 44
+					}
+				}
+				974 = { # South Transdanubia
+					add_resource = {
+						type = oil
+						amount = 1
+					}
+				}
+			}
 			every_country = {
 				add_ideas = {
 					Spies_no_capture
