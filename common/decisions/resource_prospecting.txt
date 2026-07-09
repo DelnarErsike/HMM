@@ -8490,7 +8490,7 @@ prospect_for_resources = {
 		icon = oil
 
 		allowed = {
-			
+
 		}
 		highlight_states = {
 			highlight_state_targets = {
