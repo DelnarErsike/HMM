@@ -1735,6 +1735,7 @@ characters={
 			slot = high_command
 			idea_token = NOR_rasmus_hatledal
 			allowed = {
+				is_ai = no
 				original_tag = NOR
 			}
 			traits = {
