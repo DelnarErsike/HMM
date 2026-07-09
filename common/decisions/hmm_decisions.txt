@@ -330,7 +330,7 @@ operations = {
 				}
 			}
 		}
-		annex_philippines= {
+		annex_philippines = {
 			# icon = generic_operation
 			allowed = {
 				tag = USA
@@ -375,6 +375,66 @@ operations = {
 					}
 					add_compliance = 100
 				}
+			}
+		}
+        annex_iraq = {
+			# icon = generic_operation
+			allowed = {
+				tag = ENG
+                NOT = {
+                    has_game_rule = {
+						rule = playable_iraq
+						option = axis
+					}
+                }
+			}
+			fire_only_once = yes
+			cost = 0
+			ai_will_do = {
+				factor = 0
+			}
+			available = {
+				IRQ = {
+					is_ai = yes
+				}
+			}
+			targets = {
+				IRQ	
+			}
+			complete_effect = {
+				IRQ = {
+					transfer_units_fraction = {
+						target = ENG
+						size = 1
+						stockpile_ratio = 1
+						army_ratio = 1
+						navy_ratio = 1
+						air_ratio = 1
+						keep_unit_leaders_trigger = {
+							always = no
+						}
+					}
+				}
+				ENG = {
+					annex_country = {
+						target = IRQ
+						transfer_troops = yes
+					}
+				}
+				every_state = {
+                    limit = {
+                        is_core_of = IRQ
+                        is_controlled_by = ENG
+                    }
+                    if = {
+                        limit = {
+                            has_dynamic_modifier = { modifier = IRQ_shia_resistance_modifier }
+                        }
+                        # Modifier should automatically invalidate, but let's manually remove them, just in case.
+                        remove_dynamic_modifier = { modifier = IRQ_shia_resistance_modifier }
+                    }
+                    set_compliance = 80
+                }
 			}
 		}
 	soviet_cap_timer = {

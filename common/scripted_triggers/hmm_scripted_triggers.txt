@@ -66,6 +66,17 @@ allies = {
 		tag = POL
 		tag = DEN
 		tag = PHI
+		if = {
+			limit = {
+				NOT = {
+					has_game_rule = {
+						rule = playable_iraq
+						option = axis
+					}
+				}
+			}
+			tag = IRQ
+		}
 	}
 }
 
@@ -106,7 +117,15 @@ axis = {
 		tag = RAR
 		tag = ROA
 		tag = RAA
-		tag = IRQ
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = playable_iraq
+					option = axis
+				}
+			}
+			tag = IRQ
+		}
 	}
 }
 ai_manpower = {

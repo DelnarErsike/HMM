@@ -13,6 +13,7 @@ send_embargo = AST
 send_embargo = SOV
 send_embargo = NZL
 send_embargo = BRA
+send_embargo = PHI
 
 set_research_slots = 0
 

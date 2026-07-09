@@ -2634,19 +2634,19 @@ focus_tree = {
 
 		completion_reward = {
 
-			#if = {
-			#	limit = {
-			#		has_completed_focus = IRQ_kurdish_revolt
-			#	}
-			#	add_dynamic_modifier = {
-			#		modifier = IRQ_air_force_modifier_KUR
-			#	}
-			#}
-			#else = {
-			#	add_dynamic_modifier = {
-			#		modifier = IRQ_air_force_modifier_IRQ
-			#	}
-			#}
+			if = {
+				limit = {
+					has_completed_focus = IRQ_kurdish_revolt
+				}
+				add_dynamic_modifier = {
+					modifier = IRQ_air_force_modifier_KUR
+				}
+			}
+			else = {
+				add_dynamic_modifier = {
+					modifier = IRQ_air_force_modifier_IRQ
+				}
+			}
 		}
 	}
 
@@ -2983,9 +2983,9 @@ focus_tree = {
 		icon = GFX_focus_usa_escort_fighters
 		prerequisite = { focus = IRQ_purchase_alternative_aricraft focus = IRQ_purchase_british_aircraft }
 		#mutually_exclusive = { focus = }
-		x = -1
-		y = 1
-		relative_position_id = IRQ_purchase_british_aircraft
+		x = -2
+		y = 2
+		relative_position_id = IRQ_independent_flight_schools
 
 		cost = 10
 
@@ -3017,11 +3017,12 @@ focus_tree = {
 			add_to_variable = { 
 				IRQ_air_strategic_bomber_bombing_factor = 0.1
 				tooltip = air_strategic_bomber_bombing_factor_tt
-			}		
-			add_to_variable = { 
-				IRQ_air_range_factor = 0.1
-				tooltip = air_range_factor_tt
-			}	
+			}
+			# HMM: we don't want range bonuses
+			#add_to_variable = { 
+			#	IRQ_air_range_factor = 0.1
+			#	tooltip = air_range_factor_tt
+			#}	
 			add_to_variable = { 
 				IRQ_air_cas_efficiency = 0.1
 				tooltip = air_cas_efficiency_tt
@@ -3050,9 +3051,9 @@ focus_tree = {
 		icon = GFX_goal_generic_air_naval_bomber
 		prerequisite = { focus = IRQ_purchase_alternative_aricraft focus = IRQ_purchase_british_aircraft }
 		#mutually_exclusive = { focus = }
-		x = 1
-		y = 1
-		relative_position_id = IRQ_purchase_british_aircraft
+		x = 0
+		y = 2
+		relative_position_id = IRQ_independent_flight_schools
 
 		cost = 10
 
@@ -3123,9 +3124,9 @@ focus_tree = {
 		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = IRQ_purchase_alternative_aricraft focus = IRQ_purchase_british_aircraft }
 		#mutually_exclusive = { focus = }
-		x = 1
-		y = 1
-		relative_position_id = IRQ_purchase_alternative_aricraft
+		x = 2
+		y = 2
+		relative_position_id = IRQ_independent_flight_schools
 
 		cost = 10
 
@@ -3160,10 +3161,11 @@ focus_tree = {
 				IRQ_air_ace_generation_chance_factor = 0.05
 				tooltip = air_ace_generation_chance_factor_tt
 			}
-			add_to_variable = {
-				IRQ_air_superiority_efficiency = 0.1
-				tooltip = air_superiority_efficiency_tt
-			}		
+			# HMM: we don't want air superiority mission efficiency bonuses
+			#add_to_variable = {
+			#	IRQ_air_superiority_efficiency = 0.1
+			#	tooltip = air_superiority_efficiency_tt
+			#}		
 
 		}
 	}
@@ -4434,7 +4436,7 @@ focus_tree = {
 		prerequisite = { focus = IRQ_embargo_the_axis_powers focus = IRQ_restore_regent }
 		#mutually_exclusive = { focus =  }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = IRQ_embargo_the_axis_powers
 
 		cost = 5
@@ -4853,8 +4855,8 @@ focus_tree = {
 		icon = GFX_focus_IRQ_discuss_a_new_treaty
 		prerequisite = { focus = IRQ_support_the_allied_war_effort focus = IRQ_a_new_caliph focus = IRQ_hashemite_arab_federation }
 		#mutually_exclusive = { focus =  }
-		x = -5
-		y = 2
+		x = -1
+		y = 1
 		relative_position_id = IRQ_support_the_allied_war_effort
 
 		cost = 10
@@ -4885,10 +4887,10 @@ focus_tree = {
 				remove_idea = IRQ_anglo_iraqi_treaty
 				add_idea = IRQ_anglo_iraqi_mutual_defense_agreement
 			}
-			give_guarantee = ENG
-			ENG = {
-				give_guarantee = ROOT
-			}						
+			#give_guarantee = ENG
+			#ENG = {
+			#	give_guarantee = ROOT
+			#}						
 		}
 	}
 
@@ -4955,6 +4957,7 @@ focus_tree = {
 		bypass = {
 
 		}
+		allow_branch = { always = no }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -6229,7 +6232,7 @@ focus_tree = {
 		icon = GFX_focus_IRQ_attempted_assasination_of_sidqi
 		prerequisite = { focus = IRQ_increase_italian_business_relations }
 		mutually_exclusive = { focus = IRQ_assasination_of_sidqi }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = IRQ_increase_italian_business_relations
 
@@ -6858,7 +6861,7 @@ focus_tree = {
 		prerequisite = { focus = IRQ_attempted_assasination_of_sidqi focus = IRQ_assasination_of_sidqi }
 		# HMM: more foolproof version than using available block
 		mutually_exclusive = { focus = IRQ_curtail_arabism focus = IRQ_eliminate_the_golden_square }
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = IRQ_attempted_assasination_of_sidqi
 
@@ -7882,9 +7885,9 @@ focus_tree = {
 		id = IRQ_refuge_for_the_grand_mufti
 		icon = GFX_focus_IRQ_refuge_for_the_grand_mufti
 		prerequisite = { focus = IRQ_attempted_assasination_of_sidqi focus = IRQ_assasination_of_sidqi}
-		x = -2
+		x = 2
 		y = 1
-		relative_position_id = IRQ_attempted_assasination_of_sidqi
+		relative_position_id = IRQ_assasination_of_sidqi
 
 		cost = 10
 
@@ -9824,12 +9827,12 @@ focus_tree = {
 
 			hidden_effect = {
 				delete_unit_template_and_units = {
-					division_template = "Milîsên Barzan"
+					division_template = "MilÃ®sÃªn Barzan"
 					disband = yes #if yes, will refund equipment/manpower.
 				}
 
 				division_template = {
-				    name = "Milîsên Barzan"
+				    name = "MilÃ®sÃªn Barzan"
 				    is_locked = no
 				    division_names_group = IRQ_INF_01
 					role = garrison
@@ -9850,15 +9853,15 @@ focus_tree = {
 						is_fully_controlled_by = ROOT
 					}
 					create_unit = {
-					    division = "name = \"1 Milîsên Barzan\" division_template = \"Milîsên Barzan\" start_experience_factor = 0.5 start_equipment_factor = 0.6"
+					    division = "name = \"1 MilÃ®sÃªn Barzan\" division_template = \"MilÃ®sÃªn Barzan\" start_experience_factor = 0.5 start_equipment_factor = 0.6"
 					    owner = PREV
 					}
 					create_unit = {
-					    division = "name = \"2 Milîsên Barzan\" division_template = \"Milîsên Barzan\" start_experience_factor = 0.5 start_equipment_factor = 0.6"
+					    division = "name = \"2 MilÃ®sÃªn Barzan\" division_template = \"MilÃ®sÃªn Barzan\" start_experience_factor = 0.5 start_equipment_factor = 0.6"
 					    owner = PREV
 					}
 					create_unit = {
-					    division = "name = \"3 Milîsên Barzan\" division_template = \"Milîsên Barzan\" start_experience_factor = 0.5 start_equipment_factor = 0.6"
+					    division = "name = \"3 MilÃ®sÃªn Barzan\" division_template = \"MilÃ®sÃªn Barzan\" start_experience_factor = 0.5 start_equipment_factor = 0.6"
 					    owner = PREV
 					}
 				}
