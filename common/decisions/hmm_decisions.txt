@@ -381,12 +381,6 @@ operations = {
 			# icon = generic_operation
 			allowed = {
 				tag = ENG
-                NOT = {
-                    has_game_rule = {
-						rule = playable_iraq
-						option = axis
-					}
-                }
 			}
 			fire_only_once = yes
 			cost = 0
@@ -394,9 +388,13 @@ operations = {
 				factor = 0
 			}
 			available = {
-				IRQ = {
-					is_ai = yes
-				}
+				IRQ = { is_ai = yes }
+                NOT = {
+                    has_game_rule = {
+						rule = playable_iraq
+						option = axis
+					}
+                }
 			}
 			targets = {
 				IRQ	
