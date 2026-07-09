@@ -2754,6 +2754,7 @@ focus_tree = {
 		bypass = {
 		}
 		prerequisite = { focus = SPA_motorization }
+		prerequisite = { focus = SPA_join_the_axis }
 		
 		icon = GFX_goal_generic_army_tanks
 		x = 1
@@ -3384,7 +3385,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SPA_spanish_austerity
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
