@@ -341,7 +341,7 @@ characters = {
 		}
 		
 		corps_commander = {
-			traits = { armor_officer war_hero infantry_leader organizer commando trickster }
+			traits = { armor_officer war_hero infantry_leader organizer commando trickster pre_grind }
 			skill = 6
 			attack_skill = 4
 			defense_skill = 4
@@ -396,7 +396,7 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { inflexible_strategist career_officer organizer cavalry_leader trait_engineer infantry_leader commando skilled_staffer }
+			traits = { inflexible_strategist career_officer organizer cavalry_leader trait_engineer infantry_leader skilled_staffer pre_grind }
 			skill = 6
 			attack_skill = 6
 			defense_skill = 6
@@ -416,7 +416,7 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { career_officer trait_cautious infantry_leader commando trickster }
+			traits = { career_officer trait_cautious infantry_leader commando trickster pre_grind }
 			skill = 5
 			attack_skill = 4
 			defense_skill = 4
@@ -437,7 +437,7 @@ characters = {
 		}
 		
 		corps_commander = {
-			traits = { infantry_officer career_officer infantry_leader commando trickster }
+			traits = { infantry_officer career_officer infantry_leader commando trickster pre_grind }
 			skill = 5
 			attack_skill = 4
 			defense_skill = 4
@@ -681,7 +681,7 @@ characters = {
 		}
 		
 		corps_commander = {
-			traits = { infantry_officer infantry_leader commando trickster }
+			traits = { infantry_officer infantry_leader commando trickster pre_grind }
 			skill = 5
 			attack_skill = 4
 			defense_skill = 4

@@ -648,7 +648,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster combined_arms_expert ambusher camouflage_expert}
+			traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster combined_arms_expert ambusher camouflage_expert pre_grind }
 			skill = 6
 			attack_skill = 5
 			defense_skill = 5
@@ -667,7 +667,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster combined_arms_expert ambusher camouflage_expert}
+			traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster combined_arms_expert ambusher camouflage_expert pre_grind }
 			skill = 6
 			attack_skill = 5
 			defense_skill = 5
@@ -823,7 +823,7 @@ characters={
 			}
 
 			corps_commander={
-				traits={ brilliant_strategist trait_reckless trait_SPA_nationalist_sympathies panzer_leader cavalry_leader infantry_leader organizer trickster commando }
+				traits={ brilliant_strategist trait_reckless trait_SPA_nationalist_sympathies panzer_leader cavalry_leader infantry_leader organizer trickster pre_grind }
 				skill = 8
 				attack_skill = 4
 				defense_skill = 5
@@ -955,7 +955,7 @@ characters={
 			}
 			
 			corps_commander={
-				traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster combined_arms_expert ambusher camouflage_expert}
+				traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster combined_arms_expert ambusher camouflage_expert pre_grind }
 				skill = 6
 				attack_skill = 5
 				defense_skill = 5
@@ -1060,7 +1060,7 @@ characters={
 			}
 
 			corps_commander={
-				traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster combined_arms_expert ambusher camouflage_expert}
+				traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster combined_arms_expert ambusher camouflage_expert pre_grind }
 				skill = 6
 				attack_skill = 5
 				defense_skill = 5
@@ -1250,7 +1250,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster combined_arms_expert ambusher camouflage_expert}
+			traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster combined_arms_expert ambusher camouflage_expert pre_grind }
 			skill = 6
 			attack_skill = 5
 			defense_skill = 5

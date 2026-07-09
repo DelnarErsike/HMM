@@ -203,7 +203,7 @@ characters = {
 			}
 		}
 		field_marshal = {
-			traits = { trait_reckless harsh_leader trait_BUL_zveno_member organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster }
+			traits = { trait_reckless harsh_leader trait_BUL_zveno_member organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster pre_grind }
 			skill = 6
 			attack_skill = 5
 			defense_skill = 5
@@ -226,7 +226,7 @@ characters = {
 				}
 			}
 			corps_commander = {
-			traits = { trait_reckless harsh_leader trait_BUL_zveno_member organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster }
+			traits = { trait_reckless harsh_leader trait_BUL_zveno_member organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster pre_grind }
 			skill = 6
 			attack_skill = 5
 			defense_skill = 5
@@ -267,7 +267,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { trait_reckless harsh_leader trait_BUL_zveno_member organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster }
+			traits = { trait_reckless harsh_leader trait_BUL_zveno_member organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster pre_grind }
 			skill = 6
 			attack_skill = 5
 			defense_skill = 5
@@ -306,7 +306,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { old_guard panzer_leader infantry_leader organizer trickster commando}
+			traits = { old_guard panzer_leader infantry_leader organizer trickster pre_grind }
 			skill = 8
 			attack_skill = 5
 			defense_skill = 5
@@ -330,7 +330,7 @@ characters = {
 				}
 			}
 			corps_commander = {
-				traits = { trait_reckless harsh_leader trait_BUL_zveno_member organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster }
+				traits = { trait_reckless harsh_leader trait_BUL_zveno_member organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster pre_grind }
 				skill = 6
 				attack_skill = 5
 				defense_skill = 5
@@ -397,7 +397,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { trait_reckless harsh_leader trait_BUL_zveno_member organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster }
+			traits = { trait_reckless harsh_leader trait_BUL_zveno_member organizer panzer_leader cavalry_leader infantry_leader commando skilled_staffer trickster pre_grind }
 			skill = 6
 			attack_skill = 5
 			defense_skill = 5
