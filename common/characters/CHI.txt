@@ -2928,7 +2928,6 @@ characters = {
 	CHI_alexander_von_falkenhausen = {
 		instance = {
 			allowed = {
-				is_ai = no
 				has_dlc = "No Compromise, No Surrender"
 				#original_tag = CHI
 			}
@@ -2945,6 +2944,7 @@ characters = {
 
 			advisor = {
 				slot = army_chief
+				allowed = { is_ai = no }
 				available = {
 					NOT = { has_global_flag = falkenhausen_recalled }
 				}
@@ -2991,6 +2991,7 @@ characters = {
 			advisor = {
 				slot = army_chief
 				allowed = {
+					is_ai = no
 					OR = {
 						is_literally_china = yes
 						tag = MAN
@@ -3022,7 +3023,6 @@ characters = {
 	CHI_claire_lee_chennault = {
 		instance = {
 			allowed = {
-				is_ai = no
 				has_dlc = "No Compromise, No Surrender"
 				# original_tag = CHI 
 			}
@@ -3062,6 +3062,7 @@ characters = {
 				slot = theorist
 				ledger = air
 				cost = 25
+				allowed = { is_ai = no }
 				available = {
 					OR = {
 						has_completed_focus = CHI_aeronautical_expertise
