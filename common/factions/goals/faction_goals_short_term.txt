@@ -2108,7 +2108,10 @@ faction_goal_develop_ploiesti_oil_fields = {
 	category = short_term
 	group = resources_to_market_icon
 	allowed = {
-		
+		has_game_rule = {
+			rule = axis_fuel_spirit
+			option = off
+		}
 	}
 	visible = {
 		46 = { is_controlled_by_ROOT_or_ally = yes }

@@ -554,6 +554,26 @@ finish_production = {
 		desc = "Use if Finland has a player on it"
 	}
 }
+axis_fuel_spirit = {
+	name = "Axis Fuel Spirit"
+	group = "HMM Rules"
+	icon = "GFX_decision_oil
+	default = {
+		name = on_ger
+		text = "GOn (Germany)"
+		desc = "Romanian and Hungarian oil decisions and focuses are replaced with a spirit on Germany that gives fuel."
+	}
+	option = {
+		name = on_ita
+		text = "GOn (Italy)"
+		desc = "Romanian and Hungarian oil decisions and focuses are replaced with a spirit on Italy that gives fuel."
+	}
+	option = {
+		name = off
+		text = "ROff"
+		desc = "Romanian and Hungarian oil decisions and focuses are kept as they are in the base game."
+	}
+}
 tradebacks = {
 	name = "No Tradebacks Idea"
 	group = "HMM Rules"

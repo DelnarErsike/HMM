@@ -16476,8 +16476,12 @@ focus_tree = {
 		bypass = {
 
 		}
-		# HMM: removed in favor for Axis fuel spirit
-		allow_branch = { always = no }
+		allow_branch = {
+			has_game_rule = {
+				rule = axis_fuel_spirit
+				option = off
+			}
+		}
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
@@ -16532,9 +16536,22 @@ focus_tree = {
 		icon = GFX_focus_generic_stockpile_fuel
 		prerequisite = { focus = wuw_HUN_hungarian_tradition focus = wuw_HUN_tap_newfound_oil_deposits }
 		#mutually_exclusive = { focus = wuw_HUN_avoid_interventionalist_destablilization }
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = wuw_HUN_hungarian_tradition
+
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				NOT = {
+					has_game_rule = {
+						rule = axis_fuel_spirit
+						option = off
+					}
+				}
+			}
+		}
 
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_RESEARCH }
 
@@ -16623,9 +16640,22 @@ focus_tree = {
 		icon = GFX_focus_HUN_hungarian_tradition
 		prerequisite = { focus = wuw_HUN_expand_the_lignite_industry }
 		mutually_exclusive = { focus = wuw_HUN_tap_newfound_oil_deposits }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = wuw_HUN_expand_the_lignite_industry
+		
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				NOT = {
+					has_game_rule = {
+						rule = axis_fuel_spirit
+						option = off
+					}
+				}
+			}
+		}
 
 		cost = 10
 

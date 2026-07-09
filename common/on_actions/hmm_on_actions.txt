@@ -108,9 +108,30 @@ on_actions = {
 					ai_conscription_laws
 				}
 			}
-			GER = {
-				add_ideas = {
-					axis_fuel
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = axis_fuel_spirit
+						option = on_ger
+					}
+				}
+				GER = {
+					add_ideas = {
+						axis_fuel
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = axis_fuel_spirit
+						option = on_ita
+					}
+				}
+				ITA = {
+					add_ideas = {
+						axis_fuel
+					}
 				}
 			}
 			every_country = {
