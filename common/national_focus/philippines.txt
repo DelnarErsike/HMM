@@ -5335,7 +5335,7 @@ initial_show_position = {
 		completion_reward = {
 			custom_effect_tooltip = PHI_philippine_resistance_movement_dynamic_modifier_tt
 			add_to_variable = { PHI_resistance_conscription = 0.02 tooltip = conscription_tt }
-			add_to_variable = { PHI_resistance_army_org_factor = 0.05 tooltip = army_org_factor_tt }
+			#add_to_variable = { PHI_resistance_army_org_factor = 0.05 tooltip = army_org_factor_tt }
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = PHI_will_gain_hukbalahap
@@ -6893,6 +6893,7 @@ initial_show_position = {
 
 		bypass = {
 		}
+		allow_branch = { always = no }
 
 		available_if_capitulated = no
 	
@@ -6915,7 +6916,7 @@ initial_show_position = {
 		mutually_exclusive = { focus = PHI_assume_the_naval_burden }	
 		relative_position_id = PHI_war_for_the_oceans	
 
-		x = 1
+		x = 0
 		y = 1
 	
 		cost = 10
@@ -6976,6 +6977,7 @@ initial_show_position = {
 
 		bypass = {
 		}
+		allow_branch = { always = no }
 
 		available_if_capitulated = no
 	
@@ -7020,6 +7022,7 @@ initial_show_position = {
 
 		bypass = {
 		}
+		allow_branch = { always = no }
 
 		available_if_capitulated = no
 	
@@ -7085,6 +7088,7 @@ initial_show_position = {
 
 		bypass = {
 		}
+		allow_branch = { always = no }
 
 		available_if_capitulated = no
 	
@@ -7135,6 +7139,7 @@ initial_show_position = {
 
 		bypass = {
 		}
+		allow_branch = { always = no }
 
 		available_if_capitulated = no
 	
@@ -7171,6 +7176,7 @@ initial_show_position = {
 
 		bypass = {
 		}
+		allow_branch = { always = no }
 
 		available_if_capitulated = no
 	
@@ -8720,7 +8726,9 @@ focus = {
 	
 		completion_reward = {
 			custom_effect_tooltip = PHI_philippine_army_dynamic_modifier_tt
-			add_to_variable = { PHI_philippine_army_army_org_factor = 0.15 tooltip = army_org_factor_tt }
+			# HMM: replaced giant org bonus with training time bonus from Philippine Division
+			#add_to_variable = { PHI_philippine_army_army_org_factor = 0.15 tooltip = army_org_factor_tt }
+			add_to_variable = { PHI_philippine_army_training_time_factor = -0.10 tooltip = training_time_factor_tt }
 		}
 	}
 
@@ -8789,7 +8797,7 @@ focus = {
 		completion_reward = {
 			custom_effect_tooltip = PHI_philippine_army_dynamic_modifier_tt
 			add_to_variable = { PHI_philippine_army_industrial_capacity_factory = 0.10 tooltip = industrial_capacity_factory_tt }
-			add_to_variable = { PHI_philippine_army_training_time_factor = -0.10 tooltip = training_time_factor_tt }
+			#add_to_variable = { PHI_philippine_army_training_time_factor = -0.10 tooltip = training_time_factor_tt } # HMM: moved to orchestra focus to replace org bonus
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -8852,6 +8860,7 @@ focus = {
 
 		bypass = {
 		}
+		allow_branch = { always = no }
 
 		available_if_capitulated = no
 	
@@ -9046,6 +9055,7 @@ focus = {
 
 		bypass = {
 		}
+		allow_branch = { always = no } # HMM: disabled, too much air stats
 
 		available_if_capitulated = no
 	

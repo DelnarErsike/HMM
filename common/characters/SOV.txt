@@ -3648,6 +3648,7 @@ characters = {
 			slot = political_advisor
 			idea_token = SOV_grigory_semyonov
 			allowed = {
+				always = no # HMM: Disabled because +15% attack against majors is asking for silliness
 				OR = {
 					original_tag = SOV
 					original_tag = MAN # This is where he starts the game

@@ -7967,8 +7967,10 @@
 		}
 		available = {
 		}
-		#allow_branch = {
-		#}
+		# HMM: disabled because both this and the terrain focuses under it can lead to unparalleled nonsense
+		allow_branch = {
+			always = no
+		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
@@ -7981,7 +7983,7 @@
 		icon = GFX_focus_generic_tank_production
 		x = 4
 		y = 0
-		relative_position_id = SIA_unconventional_tank_construction
+		relative_position_id = SIA_prepare_for_a_long_war
 		prerequisite = { focus = SIA_the_army_of_siam }
 		mutually_exclusive = { focus = SIA_unconventional_tank_construction }
 		cost = 5
@@ -8182,7 +8184,7 @@
 	focus = {
 		id = SIA_reluctant_submission
 		icon = GFX_focus_generic_surrender
-		x = 15
+		x = 12
 		y = 0
 		relative_position_id = SIA_the_army_of_siam
 		#prerequisite = { focus = }

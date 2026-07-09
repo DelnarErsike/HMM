@@ -633,7 +633,8 @@ characters = {
 				original_tag = MAN
 			}
 			traits = {
-				MAN_continental_ronin
+				air_chief_ground_support_2
+				#MAN_continental_ronin
 			}
 			cost = 100
 			ai_will_do = {
