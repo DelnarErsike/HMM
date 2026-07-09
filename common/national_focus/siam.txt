@@ -13,7 +13,7 @@
 	
 	default = no
 
-	continuous_focus_position = { x = 50 y = 2500 }
+	continuous_focus_position = { x = 50 y = 1500 }
 
 	inlay_window = {
 		id = sia_khana_ratsadon_inlay_window
@@ -8093,9 +8093,9 @@
 	focus = {
 		id = SIA_tankettes
 		icon = GFX_focus_generic_tankette
-		x = 2
+		x = -2
 		y = 1
-		relative_position_id = SIA_unconventional_tank_construction
+		relative_position_id = SIA_conventional_tank_construction
 		prerequisite = { focus = SIA_unconventional_tank_construction focus = SIA_conventional_tank_construction }
 		#mutually_exclusive = { focus =  }
 		cost = 5
@@ -8539,9 +8539,9 @@
 	focus = {
 		id = SIA_the_phayap_army
 		icon = GFX_focus_generic_army_attack
-		x = 5
-		y = 0
-		relative_position_id = SIA_seri_thai
+		x = 0
+		y = 1
+		relative_position_id = SIA_reluctant_submission
 		prerequisite = { focus = SIA_reluctant_submission }
 		mutually_exclusive = { focus = SIA_seri_thai }
 		cost = 5
