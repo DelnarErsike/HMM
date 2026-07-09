@@ -3018,11 +3018,20 @@ focus_tree = {
 				IRQ_air_strategic_bomber_bombing_factor = 0.1
 				tooltip = air_strategic_bomber_bombing_factor_tt
 			}
-			# HMM: we don't want range bonuses
-			#add_to_variable = { 
-			#	IRQ_air_range_factor = 0.1
-			#	tooltip = air_range_factor_tt
-			#}	
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = Iraq_AC_rule
+							option = Iraq_no_AC
+						}
+					}
+				}
+				add_to_variable = { 
+					IRQ_air_range_factor = 0.1
+					tooltip = air_range_factor_tt
+				}
+			}
 			add_to_variable = { 
 				IRQ_air_cas_efficiency = 0.1
 				tooltip = air_cas_efficiency_tt
@@ -3161,12 +3170,20 @@ focus_tree = {
 				IRQ_air_ace_generation_chance_factor = 0.05
 				tooltip = air_ace_generation_chance_factor_tt
 			}
-			# HMM: we don't want air superiority mission efficiency bonuses
-			#add_to_variable = {
-			#	IRQ_air_superiority_efficiency = 0.1
-			#	tooltip = air_superiority_efficiency_tt
-			#}		
-
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = Iraq_AC_rule
+							option = Iraq_no_AC
+						}
+					}
+				}
+				add_to_variable = {
+					IRQ_air_superiority_efficiency = 0.1
+					tooltip = air_superiority_efficiency_tt
+				}
+			}
 		}
 	}
 	
@@ -4855,7 +4872,7 @@ focus_tree = {
 		icon = GFX_focus_IRQ_discuss_a_new_treaty
 		prerequisite = { focus = IRQ_support_the_allied_war_effort focus = IRQ_a_new_caliph focus = IRQ_hashemite_arab_federation }
 		#mutually_exclusive = { focus =  }
-		x = -1
+		x = -3
 		y = 1
 		relative_position_id = IRQ_support_the_allied_war_effort
 
@@ -4957,7 +4974,14 @@ focus_tree = {
 		bypass = {
 
 		}
-		allow_branch = { always = no }
+		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = Iraq_AC_rule
+					option = Iraq_no_AC
+				}
+			}
+		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -4971,27 +4995,27 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
-				limit = {
-					has_war_with = GER
-				}
-				add_ideas = IRQ_GER_attack_bonus
-			}
-			IF = {
-				limit = {
-					has_war_with = ITA
-				}
-				add_ideas = IRQ_ITA_attack_bonus
-			}
-			IF = {
-				limit = {
-					NOT = {
-						has_war_with = ITA
-						has_war_with = GER
-					}
-				}
-				add_ideas = IRQ_generic_attack_bonus
-			}
+			#IF = {
+			#	limit = {
+			#		has_war_with = GER
+			#	}
+			#	add_ideas = IRQ_GER_attack_bonus
+			#}
+			#IF = {
+			#	limit = {
+			#		has_war_with = ITA
+			#	}
+			#	add_ideas = IRQ_ITA_attack_bonus
+			#}
+			#IF = {
+			#	limit = {
+			#		NOT = {
+			#			has_war_with = ITA
+			#			has_war_with = GER
+			#		}
+			#	}
+			#	add_ideas = IRQ_generic_attack_bonus
+			#}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_military_high_command

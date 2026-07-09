@@ -10877,7 +10877,14 @@ focus = {
 
 		bypass = {
 		}
-		allow_branch = { always = no }
+		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = Australia_AC_rule
+					option = Australia_no_AC
+				}
+			}
+		}
 
 		available_if_capitulated = no
 	

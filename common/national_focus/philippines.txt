@@ -9055,7 +9055,14 @@ focus = {
 
 		bypass = {
 		}
-		allow_branch = { always = no } # HMM: disabled, too much air stats
+		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = Philippines_AC_rule
+					option = Philippines_no_AC
+				}
+			}
+		}
 
 		available_if_capitulated = no
 	

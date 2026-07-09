@@ -99,21 +99,81 @@ horst_host_country = {
 		desc = ""
 	}
 }
+Australia_AC_rule = {
+	name = "Can Australia do its more powerful air focuses?"
+	group = "HMM Rules"
+	icon = "GFX_volunteers"
+	option = {
+		name = Australia_AC
+		text = "Yes"
+		desc = "Australia can do its more powerful air focuses"
+	} 
+	default = {
+		name = Australia_no_AC
+		text = "No"
+		desc = "Australia cannot do its more powerful air focuses"
+	}
+}
 Brasil_AC_rule = {
-	name = "Select if Brazil can be AC"
+	name = "Can Brazil do its air focuses?"
 	group = "HMM Rules"
 	icon = "GFX_volunteers"
 	option = {
 		name = Brasil_AC
-		text = "Brazil can AC"
-		desc = ""
+		text = "Yes"
+		desc = "Brazil can do its air focuses"
 	} 
 	default = {
 		name = Brasil_no_AC
-		text = "Brazil can't AC"
-		desc = ""
+		text = "No"
+		desc = "Brazil cannot do its air focuses"
 	}
 
+}
+Finland_AC_rule = {
+	name = "Can Finland do its air focuses?"
+	group = "HMM Rules"
+	icon = "GFX_volunteers"
+	option = {
+		name = Finland_AC
+		text = "Yes"
+		desc = "Finland can do its air focuses"
+	} 
+	default = {
+		name = Finland_no_AC
+		text = "No"
+		desc = "Finland cannot do its air focuses"
+	}
+}
+Iraq_AC_rule = {
+	name = "Can Iraq's air focuses give their more powerful bonuses?"
+	group = "HMM Rules"
+	icon = "GFX_volunteers"
+	option = {
+		name = Iraq_AC
+		text = "Yes"
+		desc = "Iraq's air focuses can give their more powerful bonuses"
+	} 
+	default = {
+		name = Iraq_no_AC
+		text = "No"
+		desc = "Iraq's air focuses cannot give their more powerful bonuses"
+	}
+}
+Philippines_AC_rule = {
+	name = "Can the Philippines do their more powerful air focuses?"
+	group = "HMM Rules"
+	icon = "GFX_volunteers"
+	option = {
+		name = Philippines_AC
+		text = "Yes"
+		desc = "The Philippines can do their more powerful air focuses"
+	} 
+	default = {
+		name = Philippines_no_AC
+		text = "No"
+		desc = "The Philippines cannot do their more powerful air focuses"
+	}
 }
 Germany_Wirtschaftswunder = {
 	name = "Select if Germany is allowed to complete Prioritize Economic Growth "

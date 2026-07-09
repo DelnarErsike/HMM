@@ -12424,8 +12424,14 @@ focus_tree = {
 		cost = 10
 		available = {
 		}
-		# HMM: no air focuses for Finland
-		allow_branch = { always = no }
+		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = Finland_AC_rule
+					option = Finland_no_AC
+				}
+			}
+		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_AIR_XP FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 
@@ -13802,6 +13808,20 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = FIN_increase_military_budget
+		
+		offset = {
+			x = 3
+			y = 0
+			trigger = {
+				NOT = {
+					has_game_rule = {
+						rule = Finland_AC_rule
+						option = Finland_no_AC
+					}
+				}
+			}
+		}
+		
 		cost = 10
 		available = {
 		}
@@ -15414,4 +15434,3 @@ focus_tree = {
 		}
 	}
 }
-
