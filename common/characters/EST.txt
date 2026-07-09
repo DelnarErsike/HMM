@@ -69,6 +69,7 @@ characters={
 				original_tag = EST
 			}
 			available = {
+				is_ai = no
 				if = {
 					limit = { has_DLC = "No Step Back" }
 					has_completed_focus = BALTIC_restore_workers_republic
@@ -107,6 +108,7 @@ characters={
 				original_tag = EST
 			}
 			available = {
+				is_ai = no
 				IF = { 
 					limit = { has_dlc = "No Step Back" }
 					has_completed_focus = EST_establish_the_rahvuskogu 
@@ -166,6 +168,7 @@ characters={
 				original_tag = EST
 			}
 			available = {
+				is_ai = no
 				IF = { 
 					limit = { has_dlc = "No Step Back" }
 					has_completed_focus = EST_rally_the_nation 
@@ -251,6 +254,7 @@ characters={
 			idea_token = EST_alexander_jaakson
 			ledger = army
 			allowed = {
+				is_ai = no
 				original_tag = EST
 				has_dlc = "No Step Back"
 			}
@@ -276,6 +280,7 @@ characters={
 			slot = army_chief
 			idea_token = EST_johan_laidoner
 			allowed = {
+				is_ai = no
 				original_tag = EST
 			}
 			traits = {
@@ -315,6 +320,7 @@ characters={
 			idea_token = EST_juhan_tuuling
 			ledger = army
 			allowed = {
+				is_ai = no
 				original_tag = EST
 			}
 			
@@ -337,6 +343,7 @@ characters={
 			idea_token = EST_alex_nirk
 			ledger = navy
 			allowed = {
+				is_ai = no
 				original_tag = EST
 			}
 			
@@ -356,6 +363,7 @@ characters={
 			slot = army_chief
 			idea_token = EST_alfons_rebane
 			allowed = {
+				is_ai = no
 				original_tag = EST
 				has_dlc = "No Step Back" 
 			}
@@ -390,6 +398,7 @@ characters={
 			slot = navy_chief
 			idea_token = EST_oskar_eiriksson
 			allowed = {
+				is_ai = no
 				original_tag = EST
 			}
 			traits = {
@@ -413,6 +422,7 @@ characters={
 			slot = navy_chief
 			idea_token = EST_alfred_vendt
 			allowed = {
+				is_ai = no
 				original_tag = EST
 			}
 			traits = {
@@ -439,6 +449,7 @@ characters={
 			slot = air_chief
 			idea_token = EST_richard_tomberg
 			allowed = {
+				is_ai = no
 				original_tag = EST
 			}
 			traits = {
@@ -462,6 +473,7 @@ characters={
 			slot = air_chief
 			idea_token = EST_leo_sepp
 			allowed = {
+				is_ai = no
 				original_tag = EST
 			}
 			traits = {
@@ -491,6 +503,7 @@ characters={
 			idea_token = EST_richard_veermaa
 			ledger = army
 			allowed = {
+				is_ai = no
 				original_tag = EST
 			}
 			traits = {
@@ -518,6 +531,7 @@ characters={
 			idea_token = EST_nikolay_g_karotamm
 			ledger = army
 			allowed = {
+				is_ai = no
 				original_tag = EST
 			}
 			traits = {
@@ -542,6 +556,7 @@ characters={
 			idea_token = EST_voldemar_mere
 			ledger = navy
 			allowed = {
+				is_ai = no
 				original_tag = EST
 			}
 			traits = {
@@ -574,6 +589,7 @@ characters={
 			slot = political_advisor
 			idea_token = EST_boris_kumm
 			allowed = {
+				is_ai = no
 				original_tag = EST
 			}
 			traits = {
@@ -596,6 +612,7 @@ characters={
 			slot = political_advisor
 			idea_token = EST_august_rei
 			allowed = {
+				is_ai = no
 				original_tag = EST
 			}
 			traits = {
@@ -615,6 +632,7 @@ characters={
 			slot = political_advisor
 			idea_token = EST_august_jakobson
 			allowed = {
+				is_ai = no
 				OR = {
 					original_tag = EST
 					original_tag = SWE
@@ -645,6 +663,7 @@ characters={
 			slot = political_advisor
 			idea_token = EST_juri_uluots
 			allowed = {
+				is_ai = no
 				original_tag = EST
 			}
 			traits = {
@@ -664,6 +683,7 @@ characters={
 			slot = political_advisor
 			idea_token = EST_viktor_puskar
 			allowed = {
+				is_ai = no
 					original_tag = EST
 					has_dlc = "No Step Back"
 			}
@@ -687,6 +707,7 @@ characters={
 			slot = political_advisor
 			idea_token = EST_voldemar_voolman
 			allowed = {
+				is_ai = no
 				OR = {
 					original_tag = EST
 					original_tag = SWE
@@ -716,6 +737,7 @@ characters={
 			slot = political_advisor
 			idea_token = EST_henrik_allik
 			allowed = {
+				is_ai = no
 				OR = {
 					original_tag = EST
 					original_tag = SWE
@@ -745,6 +767,7 @@ characters={
 			slot = political_advisor
 			idea_token = EST_johan_pitka
 			allowed = {
+				is_ai = no
 				original_tag = EST
 				has_dlc = "No Step Back"
 			}
@@ -768,6 +791,7 @@ characters={
 			slot = political_advisor
 			idea_token = EST_hjalmar_mae
 			allowed = {
+				is_ai = no
 				original_tag = EST
 				has_dlc = "No Step Back"
 			}

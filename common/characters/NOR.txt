@@ -52,6 +52,7 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_martin_tranmael
 			allowed  = {
+				is_ai = no
 				NOR_AAT = yes 
 			}
 			traits  = {
@@ -90,6 +91,7 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_johan_h_andresen
 			allowed  = {
+				is_ai = no
 				NOR_AAT = yes
 			}
 			available = {
@@ -144,6 +146,7 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_olav_scheflo
 			allowed  = {
+				is_ai = no
 				NOR_AAT = yes
 			}
 			available = {
@@ -174,6 +177,7 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_eivind_heiberg
 			allowed  = {
+				is_ai = no
 				NOR_AAT = yes
 			}
 			available = {
@@ -207,6 +211,7 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_christopher_hornsrud
 			allowed  = {
+				is_ai = no
 				NOR_AAT = yes
 			}
 			available = {
@@ -239,6 +244,7 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_kirsten_hansteen
 			allowed  = {
+				is_ai = no
 				NOR_AAT = yes
 			}
 			available = {
@@ -278,6 +284,7 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_peder_anker_wedel_jarlsberg
 			allowed  = {
+				is_ai = no
 				NOR_AAT = yes
 			}
 			traits  = {
@@ -433,6 +440,7 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_vidkun_quisling
 			allowed  = {
+				is_ai = no
 				NOR_AAT = yes
 			}
 			available = {				
@@ -457,6 +465,7 @@ characters={
 			slot = army_chief
 			idea_token = NOR_vidkun_quisling
 			allowed = {
+				is_ai = no
 				NOR_AAT = yes
 			}
 			available = {
@@ -476,6 +485,7 @@ characters={
 			idea_token = NOR_vidkun_quisling
 			ledger = army
 			allowed = {
+				is_ai = no
 				NOR_AAT = yes
 			}
 			traits = {
@@ -536,6 +546,7 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_jonas_lie
 			allowed  = {
+				is_ai = no
 				NOR_AAT = yes
 			}
 			available = {
@@ -550,6 +561,7 @@ characters={
 			slot = army_chief
 			idea_token = NOR_jonas_lie
 			allowed = {
+				is_ai = no
 				original_tag = NOR
 			}
 			available = {
@@ -589,6 +601,7 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_axel_aubert
 			allowed  = {
+				is_ai = no
 				NOR_aat = yes 
 			}
 			visible = {
@@ -622,6 +635,7 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_johan_ludwig_mowinckel
 			allowed  = {
+				is_ai = no
 				NOR_AAT = yes
 			}
 			available = {
@@ -668,6 +682,7 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_peder_furubotn
 			allowed  = {
+				is_ai = no
 				NOR_AAT = yes
 			}
 			traits  = {
@@ -692,6 +707,7 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_jeanette_olsen
 			allowed  = {
+				is_ai = no
 				NOR_AAT = yes
 			}
 			available = {
@@ -725,6 +741,7 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_lev_trotsky
 			allowed  = {
+				is_ai = no
 				NOR_AAT = yes
 			}	
 			ai_will_do = {
@@ -781,6 +798,7 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_sverre_riisnaes
 			allowed  = {
+				is_ai = no
 				NOR_AAT = yes
 			}
 			available = {
@@ -808,6 +826,7 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_birger_meidell
 			allowed  = {
+				is_ai = no
 				NOR_AAT = yes
 			}
 			available = {
@@ -838,6 +857,7 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_ragnar_skancke
 			allowed  = {
+				is_ai = no
 				NOR_AAT = yes
 			}
 			available = {
@@ -865,6 +885,7 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_rolf_fuglesang
 			allowed  = {
+				is_ai = no
 				NOR_AAT = yes
 			}
 			available = {
@@ -893,6 +914,7 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_eivind_blehr
 			allowed  = {
+				is_ai = no
 				NOR_AAT = yes
 			}
 			available = {
@@ -924,6 +946,7 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_joakim_lehmkuhl
 			allowed  = {
+				is_ai = no
 				NOR_AAT = yes
 			}
 			available = {
@@ -951,6 +974,7 @@ characters={
 			slot = political_advisor 
 			idea_token = NOR_hans_ystgaard
 			allowed = {
+				is_ai = no
 				NOR_AAT = yes 
 			}
 			visible = {
@@ -1013,6 +1037,7 @@ characters={
 			slot = army_chief
 			idea_token = NOR_carl_gustav_fleischer
 			allowed = {
+				is_ai = no
 				original_tag = NOR
 			}
 			visible = {
@@ -1102,6 +1127,7 @@ characters={
 			idea_token = NOR_jacob_von_der_lippe
 			ledger = navy
 			allowed = {
+				is_ai = no
 				original_tag = NOR
 			}
 			traits = {
@@ -1135,6 +1161,7 @@ characters={
 			slot = navy_chief
 			idea_token = NOR_edgar_otto
 			allowed = {
+				is_ai = no
 				original_tag = NOR
 			}
 			traits = {
@@ -1182,6 +1209,7 @@ characters={
 			slot = army_chief
 			idea_token = NOR_wilhelm_von_tangen_hansteen
 			allowed = {
+				is_ai = no
 					original_tag = NOR
 				}
 				traits = {
@@ -1242,6 +1270,7 @@ characters={
 			idea_token = NOR_skule_storheil
 			ledger = navy
 				allowed = {
+					is_ai = no
 					original_tag = NOR
 				}
 				
@@ -1262,6 +1291,7 @@ characters={
 			slot = air_chief
 			idea_token = NOR_ole_reistad
 			allowed = {
+				is_ai = no
 					original_tag = NOR
 				}
 				traits = {
@@ -1293,6 +1323,7 @@ characters={
 			idea_token = NOR_tryggve_gran
 			ledger = air
 				allowed = {
+					is_ai = no
 					original_tag = NOR
 				}
 				
@@ -1317,6 +1348,7 @@ characters={
 				idea_token = NOR_birger_ljungberg
 				ledger = army
 					allowed = {
+						is_ai = no
 						original_tag = NOR
 					}
 					available = {
@@ -1349,6 +1381,7 @@ characters={
 				idea_token = NOR_birger_ljungberg
 				ledger = army
 					allowed = {
+						is_ai = no
 						original_tag = NOR
 					}
 					traits = {
@@ -1371,6 +1404,7 @@ characters={
 			slot = navy_chief
 			idea_token = NOR_henry_diesen
 			allowed = {
+				is_ai = no
 					original_tag = NOR
 				}
 				traits = {
@@ -1386,6 +1420,7 @@ characters={
 			idea_token = NOR_henry_diesen
 			ledger = navy
 				allowed = {
+					is_ai = no
 					original_tag = NOR
 				}
 				traits = {
@@ -1419,6 +1454,7 @@ characters={
 			idea_token = NOR_edvard_christian_danielsen
 			ledger = navy
 				allowed = {
+					is_ai = no
 					original_tag = NOR
 				}
 				traits = {
@@ -1474,6 +1510,7 @@ characters={
 
 			ledger = army
 				allowed = {
+					is_ai = no
 					NOR_AAT = yes 
 				}
 				
@@ -1505,6 +1542,7 @@ characters={
 				idea_token = NOR_alfred_roscher_lund
 				ledger = army
 					allowed = {
+						is_ai = no
 						original_tag = NOR
 					}
 					traits = {
@@ -1531,6 +1569,7 @@ characters={
 				idea_token = NOR_alfred_roscher_lund
 				ledger = army
 					allowed = {
+						is_ai = no
 						original_tag = NOR
 					}
 					traits = {
@@ -1565,6 +1604,7 @@ characters={
 
 				ledger = army
 					allowed = {
+						is_ai = no
 						original_tag = NOR
 					}
 					
@@ -1600,6 +1640,7 @@ characters={
 
 				ledger = army
 					allowed = {
+						is_ai = no
 						original_tag = NOR
 					}
 					
@@ -1630,6 +1671,7 @@ characters={
 
 			ledger = army
 				allowed = {
+					is_ai = no
 					original_tag = NOR
 				}
 				
@@ -1655,6 +1697,7 @@ characters={
 			slot = army_chief
 			idea_token = NOR_otto_ruge
 			allowed = {
+				is_ai = no
 				original_tag = NOR
 			}
 			traits = {
@@ -1721,6 +1764,7 @@ characters={
 			slot = high_command
 			idea_token = NOR_bjorn_christophersen
 			allowed = {
+				is_ai = no
 				original_tag = NOR
 			}
 			traits = {
@@ -1754,6 +1798,7 @@ characters={
 				slot = army_chief
 				idea_token = NOR_kristian_laake
 				allowed = {
+					is_ai = no
 					original_tag = NOR
 				}
 				traits = {
@@ -1784,6 +1829,7 @@ characters={
 				slot = army_chief
 				idea_token = NOR_kristian_laake
 				allowed = {
+					is_ai = no
 					original_tag = NOR
 				}
 				traits = {
@@ -1809,6 +1855,7 @@ characters={
 			slot = air_chief
 			idea_token = NOR_hjalmar_riiser_larsen
 			allowed = {
+				is_ai = no
 					original_tag = NOR
 				}
 				traits = {
@@ -1837,6 +1884,7 @@ characters={
 			slot = air_chief
 			idea_token = NOR_bjarne_oen
 			allowed = {
+				is_ai = no
 					original_tag = NOR
 				}
 				traits = {
@@ -1847,7 +1895,7 @@ characters={
 					factor = 1.000
 				}
 		}
-		name="Bjarne Øen"
+		name="Bjarne ï¿½en"
 		portraits={
 			army={
 				small="GFX_idea_generic_air_europe_1"
@@ -1860,6 +1908,7 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_adolf_indrebo
 			allowed  = {
+				is_ai = no
 				original_tag = NOR
 				has_aat = no 
 			}
@@ -1867,7 +1916,7 @@ characters={
 				captain_of_industry 
 			}
 		}
-		name="Adolf Indrebø"
+		name="Adolf Indrebï¿½"
 
 		allowed_civil_war = {
 			NOR_char_cw_democratic = yes 
@@ -1894,6 +1943,7 @@ characters={
 				slot = political_advisor
 				idea_token = NOR_halvdan_koht
 				allowed  = {
+					is_ai = no
 					original_tag = NOR
 				}
 				visible = {
@@ -1925,6 +1975,7 @@ characters={
 				slot = political_advisor
 				idea_token = NOR_halvdan_koht
 				allowed  = {
+					is_ai = no
 					original_tag = NOR
 				}
 				traits  = {
@@ -1954,6 +2005,7 @@ characters={
 				slot = political_advisor
 				idea_token = NOR_trygve_halvdan_lie
 				allowed  = {
+					is_ai = no
 						original_tag = NOR
 					}
 					traits  = {
@@ -1975,6 +2027,7 @@ characters={
 				slot = political_advisor
 				idea_token = NOR_trygve_halvdan_lie
 				allowed  = {
+					is_ai = no
 						original_tag = NOR
 					}
 					traits  = {

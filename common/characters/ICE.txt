@@ -20,7 +20,7 @@ characters={
 			slot = political_advisor
 			idea_token = ICE_hermann_jonasson
 			allowed = {
-			
+				is_ai = no
 			}
 			available = {
 				OR = {
@@ -66,7 +66,7 @@ characters={
 			slot = political_advisor
 			idea_token = ICE_gisli_sigurbjornsson
 			allowed = {
-			
+				is_ai = no
 			}
 			available = {
 				has_completed_focus = ICE_anti_capitalist_propaganda
@@ -109,7 +109,7 @@ characters={
 			slot = political_advisor
 			idea_token = ICE_brynjolfur_bjarnason
 			allowed = {
-			
+				is_ai = no
 			}
 			available = {
 				has_completed_focus = ICE_anti_capitalist_propaganda
@@ -152,7 +152,7 @@ characters={
 			slot = political_advisor
 			idea_token = ICE_sveinn_bjornsson
 			allowed = {
-			
+				is_ai = no
 			}
 			available = {
 				OR = {
@@ -197,7 +197,7 @@ characters={
 			slot = political_advisor
 			idea_token = ICE_olafur_thors
 			allowed = {
-			
+				is_ai = no
 			}
 			available = {
 				OR = {
@@ -247,7 +247,7 @@ characters={
 			slot = political_advisor
 			idea_token = ICE_eysteinn_jonsson
 			allowed = {
-			
+				is_ai = no
 			}
 			available = {
 				NOT = { has_government = fascism }
@@ -290,7 +290,7 @@ characters={
 			slot = political_advisor
 			idea_token = ICE_haraldur_gudhmundsson
 			allowed = {
-			
+				is_ai = no
 			}
 			available = {
 				NOT = { has_government = fascism }
@@ -333,7 +333,7 @@ characters={
 			slot = political_advisor
 			idea_token = ICE_skuli_gudhmundsson
 			allowed = {
-			
+				is_ai = no
 			}
 			available = {
 				NOT = { has_government = fascism }
@@ -376,7 +376,7 @@ characters={
 			slot = political_advisor
 			idea_token = ICE_stefan_johann_stefansson
 			allowed = {
-			
+				is_ai = no
 			}
 			available = {
 				NOT = { has_government = fascism }
@@ -419,7 +419,7 @@ characters={
 			slot = political_advisor
 			idea_token = ICE_jakob_moller
 			allowed = {
-			
+				is_ai = no
 			}
 			available = {
 				NOT = { has_government = communism }
@@ -451,7 +451,7 @@ characters={
 			slot = political_advisor
 			idea_token = ICE_magnus_jonsson
 			allowed = {
-				
+				is_ai = no
 			}
 			available = {
 				OR = {
@@ -530,7 +530,7 @@ characters={
 			slot = political_advisor
 			idea_token = ICE_bjorn_olafsson
 			allowed = {
-			
+				is_ai = no
 			}
 			available = {
 				NOT = { has_government = communism }
@@ -578,7 +578,7 @@ characters={
 			slot = political_advisor
 			idea_token = ICE_vilhjalmur_thor
 			allowed = {
-			
+				is_ai = no
 			}
 			available = {
 				OR = {
@@ -612,7 +612,7 @@ characters={
 			slot = political_advisor
 			idea_token = ICE_johann_saemundsson
 			allowed = {
-			
+				is_ai = no
 			}
 			available = {
 				OR = {
@@ -646,7 +646,7 @@ characters={
 			slot = political_advisor
 			idea_token = ICE_bjorn_thordharson
 			allowed = {
-			
+				is_ai = no
 			}
 			available = {
 				OR = {
@@ -681,7 +681,7 @@ characters={
 			slot = political_advisor
 			idea_token = ICE_olafur_petursson
 			allowed = {
-			
+				is_ai = no
 			}
 			available = {
 				has_government = fascism
@@ -712,7 +712,7 @@ characters={
 			slot = political_advisor
 			idea_token = ICE_olaf_j_thorlacius
 			allowed = {
-			
+				is_ai = no
 			}
 			available = {
 				
@@ -747,7 +747,7 @@ characters={
 			slot = political_advisor
 			idea_token = ICE_einar_olgeirsson
 			allowed = {
-				
+				is_ai = no
 			}
 			available = {
 				OR = {
@@ -781,7 +781,7 @@ characters={
 			slot = political_advisor
 			idea_token = ICE_isleifur_hognason
 			allowed = {
-			
+				is_ai = no
 			}
 			available = {
 				OR = {
@@ -815,7 +815,7 @@ characters={
 			slot = political_advisor
 			idea_token = ICE_werner_gerlach
 			allowed = {
-			
+				is_ai = no
 			}
 			available = {
 				has_government = fascism 
@@ -849,7 +849,7 @@ characters={
 			slot = army_chief
 			idea_token = ICE_agnar_eldberg_kofoed_hansen_army
 			allowed = {
-			
+				is_ai = no
 			}
 			available = {
 				not_already_hired_except_as = army_chief
@@ -869,7 +869,7 @@ characters={
 			slot = air_chief
 			idea_token = ICE_agnar_eldberg_kofoed_hansen_navy
 			allowed = {
-			
+				is_ai = no
 			}
 			available = {
 				not_already_hired_except_as = air_chief
@@ -889,7 +889,7 @@ characters={
 			slot = navy_chief
 			idea_token = ICE_agnar_eldberg_kofoed_hansen_air
 			allowed = {
-			
+				is_ai = no
 			}
 			available = {
 				not_already_hired_except_as = navy_chief

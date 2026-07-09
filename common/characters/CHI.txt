@@ -84,6 +84,7 @@ characters = {
 			advisor={
 				slot = political_advisor
 				available  = {
+					is_ai = no
 					OR = {
 						is_country_leader = no 
 						has_country_leader  = {
@@ -97,7 +98,7 @@ characters = {
 					}
 				}
 				visible = {
-					always = no
+					is_ai = no
 					is_country_leader = no 
 				}
 				idea_token = CHI_dai_li
@@ -131,6 +132,7 @@ characters = {
 			advisor={
 				slot = political_advisor
 				available  = {
+					is_ai = no
 					is_country_leader = no 
 				}
 				idea_token = CHI_dai_li
@@ -152,6 +154,7 @@ characters = {
 			advisor={
 				slot = political_advisor
 				allowed = {
+					is_ai = no
 					OR = {
 						original_tag  = CHI
 						is_chinese_warlord = yes 
@@ -180,6 +183,7 @@ characters = {
 			advisor={
 				slot = political_advisor
 				allowed = {
+					is_ai = no
 					OR = {
 						original_tag  = CHI
 						is_chinese_warlord = yes 
@@ -267,6 +271,7 @@ characters = {
 				slot = political_advisor
 				idea_token = CHI_soong_mei_ling
 				available  = {
+					is_ai = no
 					has_country_leader  = {
 						ruling_only  = yes 
 						character  = CHI_chiang_kaishek
@@ -292,6 +297,7 @@ characters = {
 				slot = political_advisor
 				idea_token = CHI_soong_mei_ling
 				available  = {
+					is_ai = no
 					has_country_leader  = {
 						ruling_only  = yes 
 						character  = CHI_chiang_kaishek
@@ -474,6 +480,7 @@ characters = {
 				idea_token = CHI_sun_li_jen
 				ledger = army
 				allowed = {
+					is_ai = no
 					original_tag = CHI
 				}
 				traits = {
@@ -687,6 +694,7 @@ characters = {
 				idea_token = CHI_chen_cheng
 				ledger = army
 				allowed = {
+					is_ai = no
 					original_tag = CHI
 				}
 				traits = {
@@ -715,6 +723,7 @@ characters = {
 				idea_token = CHI_chen_cheng
 				ledger = army
 				allowed = {
+					is_ai = no
 					original_tag = CHI
 				}
 				traits = {
@@ -956,6 +965,7 @@ characters = {
 				slot = navy_chief
 				idea_token = CHI_chen_shaokuan
 				allowed = {
+					is_ai = no
 					original_tag = CHI
 				}
 				traits = {
@@ -982,6 +992,7 @@ characters = {
 				slot = navy_chief
 				idea_token = CHI_chen_shaokuan
 				allowed = {
+					is_ai = no
 					original_tag = CHI
 				}
 				traits = {
@@ -1016,6 +1027,7 @@ characters = {
 			slot = navy_chief
 			idea_token = CHI_chan_chak
 			allowed = {
+				is_ai = no
 				original_tag = CHI
 				has_dlc = "No Compromise, No Surrender"
 
@@ -1053,6 +1065,7 @@ characters = {
 			idea_token = CHI_bo_yibo
 			ledger = army
 			allowed = {
+				is_ai = no
 				original_tag = CHI
 			}
 			
@@ -1075,6 +1088,7 @@ characters = {
 			idea_token = CHI_fang_zeyi
 			ledger = air
 			allowed = {
+				is_ai = no
 				original_tag = CHI
 				NOT = { has_dlc = "No Compromise, No Surrender"}
 			}
@@ -1098,6 +1112,7 @@ characters = {
 			idea_token = CHI_shen_honglie
 			ledger = navy
 			allowed = {
+				is_ai = no
 				original_tag = CHI
 			}
 			
@@ -1120,6 +1135,7 @@ characters = {
 			idea_token = CHI_chen_qingyun
 			ledger = air
 			allowed = {
+				is_ai = no
 				original_tag = CHI
 			}
 			available = {
@@ -1144,6 +1160,7 @@ characters = {
 			idea_token = CHI_huang_shen
 			ledger = navy
 			allowed = {
+				is_ai = no
 				original_tag = CHI
 			}
 			
@@ -1162,6 +1179,7 @@ characters = {
 		}
 		advisor={
 			allowed = {
+				is_ai = no
 				has_dlc = "No Compromise, No Surrender"
 				original_tag = CHI
 			}
@@ -1197,6 +1215,7 @@ characters = {
 			slot = army_chief
 			idea_token = CHI_zhu_de
 			allowed = {
+				is_ai = no
 				original_tag = CHI
 				NOT = { has_dlc = "No Compromise, No Surrender" }
 			}
@@ -1223,6 +1242,7 @@ characters = {
 			slot = army_chief
 			idea_token = CHI_chen_jitang
 			allowed = {
+				is_ai = no
 				original_tag = CHI
 			}
 			traits = {
@@ -1248,6 +1268,7 @@ characters = {
 			slot = army_chief
 			idea_token = CHI_li_zongren
 			allowed = {
+				is_ai = no
 				original_tag = CHI
 			}
 			traits = {
@@ -1272,6 +1293,7 @@ characters = {
 			slot = army_chief
 			idea_token = CHI_he_yingqin
 			allowed = {
+				is_ai = no
 				original_tag = CHI
 			}
 			traits = {
@@ -1310,6 +1332,7 @@ characters = {
 			slot = army_chief
 			idea_token = CHI_teng_chie
 			allowed = {
+				is_ai = no
 				original_tag = CHI
 			}
 			visible = {
@@ -1342,6 +1365,7 @@ characters = {
 			slot = army_chief
 			idea_token = CHI_huang_qixiang
 			allowed = {
+				is_ai = no
 				original_tag = CHI
 			}
 			visible = {
@@ -1385,6 +1409,7 @@ characters = {
 		slot = navy_chief
 		idea_token = CHI_bai_chongxi
 		allowed = {
+			is_ai = no
 			original_tag = CHI
 		}
 		traits = {
@@ -1417,6 +1442,7 @@ characters = {
 			slot = air_chief
 			idea_token = CHI_wang_shuming
 			allowed = {
+				is_ai = no
 				original_tag = CHI
 			}
 			traits = {
@@ -1444,6 +1470,7 @@ characters = {
 				slot = air_chief
 				idea_token = CHI_zhou_zhirou
 				allowed = {
+					is_ai = no
 					original_tag = CHI
 				}
 				traits = {
@@ -1468,6 +1495,7 @@ characters = {
 				slot = air_chief
 				idea_token = CHI_zhou_zhirou
 				allowed = {
+					is_ai = no
 					original_tag = CHI
 				}
 				traits = {
@@ -1495,6 +1523,7 @@ characters = {
 			idea_token = CHI_gao_zhihang
 			ledger = air
 			allowed = {
+				is_ai = no
 				original_tag = CHI
 			}
 			traits = {
@@ -1519,6 +1548,7 @@ characters = {
 			idea_token = CHI_hsu_huang_sheng
 			ledger = air
 			allowed = {
+				is_ai = no
 				original_tag = CHI
 			}
 			traits = {
@@ -1543,6 +1573,7 @@ characters = {
 			idea_token = CHI_gui_yongqing
 			ledger = navy
 			allowed = {
+				is_ai = no
 				original_tag = CHI
 			}
 			traits = {
@@ -1571,6 +1602,7 @@ characters = {
 				idea_token = CHI_xiao_yisu
 				ledger = army
 				allowed = {
+					is_ai = no
 					original_tag = CHI
 				}
 				traits = {
@@ -1597,6 +1629,7 @@ characters = {
 				idea_token = CHI_xiao_yisu
 				ledger = army
 				allowed = {
+					is_ai = no
 					original_tag = CHI
 				}
 				traits = {
@@ -1623,6 +1656,7 @@ characters = {
 			idea_token = CHI_yu_hanmou
 			ledger = army
 			allowed = {
+				is_ai = no
 				original_tag = CHI
 			}
 			traits = {
@@ -1647,6 +1681,7 @@ characters = {
 			idea_token = CHI_zhang_zhizhong
 			ledger = army
 			allowed = {
+				is_ai = no
 				original_tag = CHI
 				has_dlc = "No Compromise, No Surrender"
 			}
@@ -1688,6 +1723,7 @@ characters = {
 				slot = political_advisor
 				idea_token = CHI_chiang_ching_kuo
 				available  = {
+					is_ai = no
 					OR = {
 						has_country_leader  = {
 							ruling_only  = yes 
@@ -1721,6 +1757,7 @@ characters = {
 				slot = political_advisor
 				idea_token = CHI_chiang_ching_kuo
 				allowed  = {
+					is_ai = no
 					original_tag  = CHI
 				}
 				traits  = {
@@ -1749,6 +1786,7 @@ characters = {
 				has_completed_focus = CHI_empower_the_bureau_of_investigation_and_statistics
 			}
 			allowed  = {
+				is_ai = no
 				original_tag  = CHI
 				has_dlc = "No Compromise, No Surrender"
 				has_dlc = "La Resistance"
@@ -1780,6 +1818,7 @@ characters = {
 			slot = political_advisor
 			idea_token = CHI_dai_jitao
 			allowed  = {
+				is_ai = no
 				original_tag  = CHI
 				has_dlc = "No Compromise, No Surrender"
 			}
@@ -1823,6 +1862,7 @@ characters = {
 				slot = political_advisor
 				idea_token = CHI_h_h_kung
 				allowed  = {
+					is_ai = no
 					original_tag  = CHI
 				}
 				traits  = {
@@ -1857,6 +1897,7 @@ characters = {
 				slot = political_advisor
 				idea_token = CHI_h_h_kung
 				allowed  = {
+					is_ai = no
 					original_tag  = CHI
 				}
 				traits  = {
@@ -1878,6 +1919,7 @@ characters = {
 			slot = political_advisor
 			idea_token = CHI_chen_yi
 			allowed  = {
+				is_ai = no
 				original_tag  = CHI
 			}
 			traits  = {
@@ -1896,6 +1938,7 @@ characters = {
 			slot = political_advisor
 			idea_token = CHI_random_prince_of_terror
 			available  = {
+				is_ai = no
 				has_completed_focus  = CHI_bureau_of_investigation_and_statistics 
 			}
 			visible  = {
@@ -1931,6 +1974,7 @@ characters = {
 				slot = political_advisor
 				idea_token = CHI_lin_sen
 				allowed  = {
+					is_ai = no
 					original_tag  = CHI
 					has_dlc = "Waking the Tiger"
 				}
@@ -1955,6 +1999,7 @@ characters = {
 				slot = political_advisor
 				idea_token = CHI_lin_sen
 				allowed  = {
+					is_ai = no
 					original_tag  = CHI
 					has_dlc = "Waking the Tiger"
 				}
@@ -1980,6 +2025,7 @@ characters = {
 				slot = political_advisor
 				idea_token = CHI_chen_guofu
 				allowed  = {
+					is_ai = no
 					original_tag  = CHI
 				}
 				visible = {
@@ -2015,6 +2061,7 @@ characters = {
 				slot = political_advisor
 				idea_token = CHI_chen_guofu
 				allowed  = {
+					is_ai = no
 					original_tag  = CHI
 					has_dlc = "Waking the Tiger"
 				}
@@ -2045,6 +2092,7 @@ characters = {
 			available  = {
 			}
 			allowed  = {
+				is_ai = no
 				original_tag  = CHI
 				has_dlc = "No Compromise, No Surrender"
 			}
@@ -2079,6 +2127,7 @@ characters = {
 			slot = political_advisor
 			idea_token = CHI_du_yuesheng
 			available  = {
+				is_ai = no
 				has_completed_focus = CHI_reinforce_connections_with_shanghai_elites
 				NOT = { has_completed_focus = CHI_reshuffle_the_green_gang }
 			}
@@ -2109,6 +2158,7 @@ characters = {
 			slot = political_advisor
 			idea_token = CHI_huang_jinrong
 			available  = {
+				is_ai = no
 				has_completed_focus = CHI_reshuffle_the_green_gang
 			}
 			visible = {
@@ -2143,6 +2193,7 @@ characters = {
 				has_completed_focus = CHI_look_for_allies
 			}
 			allowed  = {
+				is_ai = no
 				original_tag  = CHI
 				has_dlc = "No Compromise, No Surrender"
 			}
@@ -2167,6 +2218,7 @@ characters = {
 				has_completed_focus = CHI_look_for_allies
 			}
 			allowed  = {
+				is_ai = no
 				original_tag  = CHI
 				has_dlc = "No Compromise, No Surrender"
 			}
@@ -2191,6 +2243,7 @@ characters = {
 				has_completed_focus = CHI_look_for_allies
 			}
 			allowed  = {
+				is_ai = no
 				original_tag  = CHI
 				has_dlc = "No Compromise, No Surrender"
 			}
@@ -2217,6 +2270,7 @@ characters = {
 				has_completed_focus = CHI_mend_the_rift_with_hu
 			}
 			allowed  = {
+				is_ai = no
 				original_tag  = CHI
 				has_dlc = "No Compromise, No Surrender"
 			}
@@ -2251,6 +2305,7 @@ characters = {
 				has_completed_focus = CHI_revive_the_western_hills_group
 			}
 			allowed  = {
+				is_ai = no
 				original_tag  = CHI
 				has_dlc = "No Compromise, No Surrender"
 			}
@@ -2281,6 +2336,7 @@ characters = {
 				has_completed_focus = CHI_revive_the_western_hills_group
 			}
 			allowed  = {
+				is_ai = no
 				original_tag  = CHI
 				has_dlc = "No Compromise, No Surrender"
 			}
@@ -2312,6 +2368,7 @@ characters = {
 			idea_token = CHI_y_c_james_yen
 			
 			allowed  = {
+				is_ai = no
 				original_tag  = CHI
 				has_dlc = "No Compromise, No Surrender"
 			}
@@ -2337,6 +2394,7 @@ characters = {
 			idea_token = CHI_liang_shuming
 			
 			allowed  = {
+				is_ai = no
 				original_tag  = CHI
 				has_dlc = "No Compromise, No Surrender"
 			}
@@ -2361,6 +2419,7 @@ characters = {
 			slot = political_advisor
 			idea_token = CHI_li_huang
 			allowed  = {
+				is_ai = no
 				original_tag  = CHI
 				has_dlc = "No Compromise, No Surrender"
 			}
@@ -2385,6 +2444,7 @@ characters = {
 			slot = political_advisor
 			idea_token = CHI_zhang_qun
 			allowed  = {
+				is_ai = no
 				original_tag  = CHI
 				has_dlc = "No Compromise, No Surrender"
 			}
@@ -2409,6 +2469,7 @@ characters = {
 			slot = political_advisor
 			idea_token = CHI_symeon_du
 			allowed  = {
+				is_ai = no
 				original_tag  = CHI
 				has_dlc = "No Compromise, No Surrender"
 			}
@@ -2433,6 +2494,7 @@ characters = {
 			slot = political_advisor
 			idea_token = CHI_sun_fo
 			allowed  = {
+				is_ai = no
 				original_tag  = CHI
 				has_dlc = "No Compromise, No Surrender"
 			}
@@ -2457,6 +2519,7 @@ characters = {
 			slot = political_advisor
 			idea_token = CHI_zhu_jiahua
 			allowed  = {
+				is_ai = no
 				original_tag  = CHI
 				has_dlc = "No Compromise, No Surrender"
 			}
@@ -2482,6 +2545,7 @@ characters = {
 			idea_token = CHI_zou_taofen
 
 			allowed  = {
+				is_ai = no
 				original_tag  = CHI
 				has_dlc = "No Compromise, No Surrender"
 			}
@@ -2519,6 +2583,7 @@ characters = {
 			idea_token = CHI_tao_xingzhi
 
 			allowed  = {
+				is_ai = no
 				original_tag  = CHI
 				has_dlc = "No Compromise, No Surrender"
 			}
@@ -2555,6 +2620,7 @@ characters = {
 			idea_token = CHI_shen_junru
 
 			allowed  = {
+				is_ai = no
 				original_tag  = CHI
 				has_dlc = "No Compromise, No Surrender"
 			}
@@ -2591,6 +2657,7 @@ characters = {
 			idea_token = CHI_shi_liang
 
 			allowed  = {
+				is_ai = no
 				original_tag  = CHI
 				has_dlc = "No Compromise, No Surrender"
 			}
@@ -2628,6 +2695,7 @@ characters = {
 			idea_token = CHI_chang_kia_ngau
 			
 			allowed  = {
+				is_ai = no
 				original_tag  = CHI
 				has_dlc = "No Compromise, No Surrender"
 			}
@@ -2658,6 +2726,7 @@ characters = {
 				}
 			}
 			allowed  = {
+				is_ai = no
 				original_tag  = CHI
 				has_dlc = "No Compromise, No Surrender"
 			}
@@ -2685,6 +2754,7 @@ characters = {
 				}
 			}
 			allowed  = {
+				is_ai = no
 				original_tag  = CHI
 				has_dlc = "No Compromise, No Surrender"
 			}
@@ -2712,6 +2782,7 @@ characters = {
 				}
 			}
 			allowed  = {
+				is_ai = no
 				original_tag  = CHI
 				has_dlc = "No Compromise, No Surrender"
 			}
@@ -2735,6 +2806,7 @@ characters = {
 			visible  = {
 			}
 			allowed  = {
+				is_ai = no
 				original_tag  = CHI
 				has_dlc = "No Compromise, No Surrender"
 			}
@@ -2856,6 +2928,7 @@ characters = {
 	CHI_alexander_von_falkenhausen = {
 		instance = {
 			allowed = {
+				is_ai = no
 				has_dlc = "No Compromise, No Surrender"
 				#original_tag = CHI
 			}
@@ -2903,6 +2976,7 @@ characters = {
 	
 		instance = {
 			allowed = {
+				is_ai = no
 				NOT = {
 					has_dlc = "No Compromise, No Surrender"
 				}
@@ -2948,6 +3022,7 @@ characters = {
 	CHI_claire_lee_chennault = {
 		instance = {
 			allowed = {
+				is_ai = no
 				has_dlc = "No Compromise, No Surrender"
 				# original_tag = CHI 
 			}
@@ -2960,6 +3035,7 @@ characters = {
 				slot = air_chief
 				cost = 25
 				allowed = {
+					is_ai = no
 					OR = {
 						is_literally_china = yes
 						tag = MAN
@@ -3016,6 +3092,7 @@ characters = {
 				slot = air_chief
 				cost = 25
 				allowed = {
+					is_ai = no
 					OR = {
 						is_literally_china = yes
 						tag = MAN
@@ -3039,6 +3116,7 @@ characters = {
 				ledger = air
 				cost = 25
 				allowed = {
+					is_ai = no
 					OR = {
 						is_literally_china = yes
 						tag = MAN
@@ -3069,6 +3147,7 @@ characters = {
 			}
 			ledger = army
 			allowed = {
+				is_ai = no
 				original_tag = CHI
 			}
 			slot = high_command
@@ -3105,6 +3184,7 @@ characters = {
 					}
 				}
 				available  = {
+					is_ai = no
 					has_completed_focus = CHI_draw_support_from_the_big_families
 				}
 				idea_token = CHI_t_v_soong
@@ -3134,6 +3214,7 @@ characters = {
 					}
 				}
 				available  = {
+					is_ai = no
 					has_completed_focus  = CHI_financial_policy 
 				}
 				idea_token = CHI_t_v_soong
@@ -3162,6 +3243,7 @@ characters = {
 					}
 				}
 				available  = {
+					is_ai = no
 					has_completed_focus = CHI_sea_legislative_yuan
 				}
 				idea_token = CHI_kwong_jiang
@@ -3183,6 +3265,7 @@ characters = {
 			advisor={
 				slot = political_advisor
 				available  = {
+					is_ai = no
 					has_completed_focus  = CHI_legislative_yuan 
 					if  = {
 						limit  = {
@@ -3234,6 +3317,7 @@ characters = {
 			advisor = {
 				slot = political_advisor
 				allowed = {
+					is_ai = no
 					original_tag = CHI 
 				}
 				visible = {

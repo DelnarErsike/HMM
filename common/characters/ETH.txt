@@ -22,7 +22,7 @@ characters = {
 			slot = political_advisor
 			idea_token = ETH_haile_selassie
 			allowed  = {
-
+				is_ai = no
 			}
 			available = {
 				NOT = { has_character_flag = ETH_imprisoned_flag}
@@ -294,6 +294,7 @@ characters = {
 				slot = political_advisor
 				idea_token = ETH_ras_imru_haile_selassie
 				allowed  = {
+					is_ai = no
 					original_tag  = ETH
 				}
 				available = {
@@ -318,6 +319,7 @@ characters = {
 				ledger = army
 				idea_token = ETH_ras_imru_haile_selassie_army_chief
 				allowed  = {
+					is_ai = no
 					original_tag  = ETH
 					has_dlc = "By Blood Alone"
 				}
@@ -343,6 +345,7 @@ characters = {
 				ledger = army
 				idea_token = ETH_ras_imru_haile_selassie_high_command
 				allowed  = {
+					is_ai = no
 					original_tag  = ETH
 					has_dlc = "By Blood Alone"
 				}
@@ -396,6 +399,7 @@ characters = {
 				slot = political_advisor
 				idea_token = ETH_ras_imru_haile_selassie
 				allowed  = {
+					is_ai = no
 					original_tag  = ETH
 				}
 				traits  = {
@@ -454,6 +458,7 @@ characters = {
 			ledger = army
 			idea_token = ETH_seyoum_mengesha
 			allowed = {
+				is_ai = no
 				original_tag = ETH
 				has_dlc = "By Blood Alone"
 			}
@@ -527,6 +532,7 @@ characters = {
 				ledger = army
 				idea_token = ETH_desta_damtew
 				allowed = {
+					is_ai = no
 					original_tag = ETH
 				}
 				traits = {
@@ -573,6 +579,9 @@ characters = {
 					character = ETH_haile_selassie
 				}
 			}
+			allowed = {
+				is_ai = no
+			}
 			cost = 50
 			on_add = {
 				owner = {
@@ -607,6 +616,7 @@ characters = {
 				slot = political_advisor
 				idea_token = ETH_ras_kassa
 				allowed  = {
+					is_ai = no
 					original_tag  = ETH
 				}
 				available = {
@@ -639,6 +649,7 @@ characters = {
 				ledger = army
 				idea_token = ETH_ras_kassa_army_chief
 				allowed = {
+					is_ai = no
 					original_tag = ETH
 				}
 				available = {
@@ -664,6 +675,7 @@ characters = {
 				ledger = army
 				idea_token = ETH_ras_kassa_high_command
 				allowed = {
+					is_ai = no
 					original_tag = ETH
 				}
 				available = {
@@ -710,6 +722,7 @@ characters = {
 				ledger = army
 				idea_token = ETH_ras_kassa
 				allowed = {
+					is_ai = no
 					original_tag = ETH
 				}
 				traits = {
@@ -744,6 +757,7 @@ characters = {
 				slot = political_advisor
 				idea_token = ETH_abebe_aregai
 				allowed  = {
+					is_ai = no
 					original_tag  = ETH
 				}
 				available = {
@@ -794,6 +808,7 @@ characters = {
 				slot = political_advisor
 				idea_token = ETH_abebe_aregai
 				allowed  = {
+					is_ai = no
 					original_tag  = ETH
 				}
 				available = {
@@ -966,6 +981,7 @@ characters = {
 			slot = political_advisor
 			idea_token = ETH_abuna_qerellos_iv
 			allowed  = {
+				is_ai = no
 				original_tag  = ETH
 			}
 			available = {
@@ -1009,6 +1025,7 @@ characters = {
 				slot = political_advisor
 				idea_token = ETH_makonnen_endelkatchew
 				allowed  = {
+					is_ai = no
 					original_tag  = ETH
 				}
 				available = {
@@ -1036,6 +1053,7 @@ characters = {
 				slot = political_advisor
 				idea_token = ETH_makonnen_endelkatchew
 				allowed  = {
+					is_ai = no
 					original_tag  = ETH
 				}
 				traits  = {
@@ -1063,6 +1081,7 @@ characters = {
 			slot = political_advisor
 			idea_token = ETH_heruy_wolde_selassie
 			allowed  = {
+				is_ai = no
 				original_tag  = ETH
 			}
 			available = {
@@ -1105,6 +1124,7 @@ characters = {
 			slot = political_advisor
 			idea_token = ETH_getachew_abate
 			allowed  = {
+				is_ai = no
 				original_tag  = ETH
 			}
 			available = {
@@ -1154,6 +1174,7 @@ characters = {
 				slot = political_advisor
 				idea_token = ETH_tadesse_birru
 				allowed  = {
+					is_ai = no
 					original_tag = ETH
 				}
 				available = {
@@ -1210,6 +1231,7 @@ characters = {
 				slot = political_advisor
 				idea_token = ETH_tadesse_birru
 				allowed  = {
+					is_ai = no
 					original_tag = ETH
 				}
 				available = {
@@ -1240,6 +1262,7 @@ characters = {
 			slot = political_advisor
 			idea_token = ETH_workneh_eshete
 			allowed  = {
+				is_ai = no
 				original_tag = ETH
 			}
 			available = {
@@ -1269,6 +1292,7 @@ characters = {
 			slot = political_advisor
 			idea_token = ETH_yilma_deressa
 			allowed  = {
+				is_ai = no
 				original_tag = ETH
 			}
 			available = {
@@ -1310,6 +1334,7 @@ characters = {
 			slot = political_advisor
 			idea_token = ETH_tekle_hawariat_tekle_mariyam
 			allowed  = {
+				is_ai = no
 				original_tag = ETH
 			}
 			available = {
@@ -1349,6 +1374,7 @@ characters = {
 			slot = political_advisor
 			idea_token = ETH_menen_asfaw
 			allowed  = {
+				is_ai = no
 				original_tag = ETH
 			}
 			available = {
@@ -1387,6 +1413,7 @@ characters = {
 			slot = political_advisor
 			idea_token = ETH_abuna_abraham
 			allowed  = {
+				is_ai = no
 				original_tag = ETH
 			}
 			available = {
@@ -1428,6 +1455,7 @@ characters = {
 			ledger = army
 			idea_token = ETH_viking_tamm
 			allowed  = {
+				is_ai = no
 				original_tag = ETH
 			}
 			available = {
@@ -1472,6 +1500,7 @@ characters = {
 				ledger = air
 				idea_token = ETH_john_robinson
 				allowed = {
+					is_ai = no
 					original_tag = ETH
 				}
 				available = { 
@@ -1500,6 +1529,7 @@ characters = {
 				ledger = air
 				idea_token = ETH_john_robinson
 				allowed = {
+					is_ai = no
 					original_tag = ETH
 				}
 				traits = {
@@ -1531,6 +1561,7 @@ characters = {
 			ledger = air
 			idea_token = ETH_carl_gustav_von_rosen
 			allowed  = {
+				is_ai = no
 				original_tag = ETH
 			}
 			available = {
@@ -1560,6 +1591,7 @@ characters = {
 			ledger = air
 			idea_token = ETH_domenico_mondelli
 			allowed  = {
+				is_ai = no
 				original_tag = ETH
 			}
 			available = {
@@ -1581,6 +1613,7 @@ characters = {
 			slot = political_advisor
 			idea_token = ETH_random_sud_advisor
 			allowed = {
+				is_ai = no
 				original_tag = ETH
 			}
 			visible = {
@@ -1603,6 +1636,7 @@ characters = {
 			slot = political_advisor
 			idea_token = ETH_random_sud_advisor
 			allowed = {
+				is_ai = no
 				original_tag = ETH
 			}
 			visible = {
@@ -1635,6 +1669,7 @@ characters = {
 			ledger = army
 			idea_token = ETH_wehib_pasha
 			allowed  = {
+				is_ai = no
 				OR = {
 					original_tag = ETH
 					original_tag = TUR
@@ -1671,6 +1706,7 @@ characters = {
 			ledger = army
 			idea_token = ETH_feodor_konovalov
 			allowed  = {
+				is_ai = no
 				OR = {
 					original_tag = ETH
 					original_tag = SOV
@@ -1748,6 +1784,7 @@ characters = {
 			idea_token = ETH_gabriel_zawde_gilaneh
 			ledger = air
 				allowed = {
+					is_ai = no
 					original_tag = ETH
 				}
 				
@@ -1768,6 +1805,7 @@ characters = {
 			idea_token = ETH_woldemeskal_tariku
 			ledger = army
 				allowed = {
+					is_ai = no
 					original_tag = ETH
 				}
 				traits = {
@@ -1792,6 +1830,7 @@ characters = {
 			idea_token = ETH_ras_kebbede
 			ledger = army
 				allowed = {
+					is_ai = no
 					original_tag = ETH
 				}
 				
@@ -1813,6 +1852,7 @@ characters = {
 			idea_token = ETH_wondossen_kassa
 			ledger = navy
 				allowed = {
+					is_ai = no
 					original_tag = ETH
 				}
 				
@@ -1834,6 +1874,7 @@ characters = {
 			idea_token = ETH_dedja_zinatch_nadeon
 			ledger = navy
 				allowed = {
+					is_ai = no
 					original_tag = ETH
 				}
 				traits = {
@@ -1857,6 +1898,7 @@ characters = {
 			idea_token = ETH_haile_abba_mersa
 			ledger = army
 				allowed = {
+					is_ai = no
 					original_tag = ETH
 				}
 				traits = {
@@ -1879,6 +1921,7 @@ characters = {
 			slot = navy_chief
 			idea_token = ETH_ras_seyum
 			allowed = {
+				is_ai = no
 					original_tag = ETH
 				}
 				traits = {
@@ -1901,6 +1944,7 @@ characters = {
 			slot = air_chief
 			idea_token = ETH_mesfin_sileshi
 			allowed = {
+				is_ai = no
 					original_tag = ETH
 				}
 				traits = {
@@ -1924,6 +1968,7 @@ characters = {
 			idea_token = ETH_lij_abiye_abebe
 			ledger = army
 				allowed = {
+					is_ai = no
 					original_tag = ETH
 				}
 				traits = {
@@ -1947,6 +1992,7 @@ characters = {
 			slot = navy_chief
 			idea_token = ETH_lij_johannes
 			allowed = {
+				is_ai = no
 					original_tag = ETH
 				}
 				traits = {
@@ -1970,6 +2016,7 @@ characters = {
 			idea_token = ETH_fitauri_zawde_gobena
 			ledger = air
 				allowed = {
+					is_ai = no
 					original_tag = ETH
 				}
 				traits = {
@@ -1994,6 +2041,7 @@ characters = {
 			slot = political_advisor
 			idea_token = ETH_bedjironde_tekle_hawariate
 			allowed  = {
+				is_ai = no
 					original_tag  = ETH
 				}
 				traits  = {
@@ -2013,6 +2061,7 @@ characters = {
 			slot = political_advisor
 			idea_token = ETH_random_leader_1
 			allowed = {
+				is_ai = no
 				original_tag = ETH
 			}
 			visible = {
@@ -2035,6 +2084,7 @@ characters = {
 			slot = political_advisor
 			idea_token = ETH_random_leader_2
 			allowed = {
+				is_ai = no
 				original_tag = ETH
 			}
 			visible = {
@@ -2057,6 +2107,7 @@ characters = {
 			slot = political_advisor
 			idea_token = ETH_random_leader_3
 			allowed = {
+				is_ai = no
 				original_tag = ETH
 			}
 			visible = {
@@ -2080,6 +2131,7 @@ characters = {
 			slot = political_advisor
 			idea_token = ETH_random_leader_4
 			allowed = {
+				is_ai = no
 				original_tag = ETH
 			}
 			visible = {
@@ -2103,6 +2155,7 @@ characters = {
 			slot = political_advisor
 			idea_token = ETH_random_leader_5
 			allowed = {
+				is_ai = no
 				original_tag = ETH
 			}
 			visible = {
@@ -2126,6 +2179,7 @@ characters = {
 			slot = political_advisor
 			idea_token = ETH_random_leader_6
 			allowed = {
+				is_ai = no
 				original_tag = ETH
 			}
 			visible = {
@@ -2149,6 +2203,7 @@ characters = {
 			slot = political_advisor
 			idea_token = ETH_senedu_gebru
 			allowed = {
+				is_ai = no
 				original_tag = ETH
 			}
 			visible = {

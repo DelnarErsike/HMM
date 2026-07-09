@@ -34,7 +34,9 @@ characters = {
 				traits = {
 					fascist_corporatist
 				}
-				allowed = {}
+				allowed = {
+					is_ai = no
+				}
 				available = {
 					NOT = {
 						has_country_leader = {
@@ -98,6 +100,7 @@ characters = {
 			slot = political_advisor
 			idea_token = AUS_ernst_rudiger_starhemberg
 			allowed = {
+				is_ai = no
 				original_tag = AUS
 			}
 			traits = {
@@ -205,6 +208,7 @@ characters = {
 				slot = political_advisor
 				idea_token = AUS_karl_renner
 				allowed = {
+					is_ai = no
 					original_tag = AUS
 				}
 				traits = {
@@ -297,6 +301,7 @@ characters = {
 				slot = political_advisor
 				idea_token = AUS_arthur_seyss-inquart
 				allowed = {
+					is_ai = no
 					original_tag = AUS
 				}
 				traits = {
@@ -338,6 +343,7 @@ characters = {
 				slot = political_advisor
 				idea_token = AUS_arthur_seyss-inquart
 				allowed = {
+					is_ai = no
 					original_tag = AUS
 				}
 				traits = {
@@ -448,6 +454,7 @@ characters = {
 				slot = political_advisor
 				idea_token = AUS_julius_raab
 				allowed = {
+					is_ai = no
 					original_tag = AUS
 				}
 				traits = { 
@@ -481,6 +488,7 @@ characters = {
 				slot = political_advisor
 				idea_token = AUS_julius_raab
 				allowed = {
+					is_ai = no
 					original_tag = AUS
 				}
 				traits = { 
@@ -499,6 +507,7 @@ characters = {
 				slot = political_advisor
 				idea_token = AUS_leopold_figl
 				allowed = {
+					is_ai = no
 					original_tag = AUS
 				}
 				available = {
@@ -531,6 +540,7 @@ characters = {
 				slot = political_advisor
 				idea_token = AUS_leopold_figl
 				allowed = {
+					is_ai = no
 					original_tag = AUS
 				}
 				available = {
@@ -560,6 +570,7 @@ characters = {
 			slot = political_advisor
 			idea_token = AUS_franz_winkler
 			allowed = { 
+				is_ai = no
 				original_tag = AUS
 			}
 			available = {
@@ -600,6 +611,7 @@ characters = {
 			slot = political_advisor
 			idea_token = AUS_ludwig_von_mises
 			allowed = { 
+				is_ai = no
 				original_tag = AUS
 			}
 			traits = { 
@@ -630,6 +642,7 @@ characters = {
 			slot = political_advisor
 			idea_token = AUS_heimito_von_doderer
 			allowed = { 
+				is_ai = no
 				original_tag = AUS
 			}
 			traits = { 
@@ -657,6 +670,7 @@ characters = {
 			slot = political_advisor
 			idea_token = AUS_hans_pertner
 			allowed = { 
+				is_ai = no
 				original_tag = AUS
 			}
 			available = {
@@ -683,6 +697,7 @@ characters = {
 			slot = political_advisor
 			idea_token = AUS_johannes_of_liechtenstein
 			allowed = { 
+				is_ai = no
 				OR = {
 					original_tag = AUS
 					original_tag = HUN
@@ -749,6 +764,7 @@ characters = {
 			slot = political_advisor
 			idea_token = AUS_alois_of_liechtenstein
 			allowed = { 
+				is_ai = no
 				OR = {
 					original_tag = AUS
 					original_tag = HUN
@@ -790,6 +806,7 @@ characters = {
 			slot = political_advisor
 			idea_token = AUS_heinrich_maier
 			allowed = {
+				is_ai = no
 				original_tag = AUS
 				has_dlc = "La Resistance"
 			}
@@ -828,6 +845,7 @@ characters = {
 			slot = political_advisor
 			idea_token = AUS_leopold_waber
 			allowed = { 
+				is_ai = no
 				original_tag = AUS
 			}
 			traits = { 
@@ -847,6 +865,7 @@ characters = {
 			slot = political_advisor
 			idea_token = AUS_viktor_kienbock
 			allowed = { 
+				is_ai = no
 				original_tag = AUS
 			}
 			available = {
@@ -880,6 +899,7 @@ characters = {
 			slot = political_advisor
 			idea_token = AUS_karl_polheim
 			allowed = { 
+				is_ai = no
 				original_tag = AUS
 			}
 			traits = { 
@@ -907,6 +927,7 @@ characters = {
 			slot = political_advisor
 			idea_token = AUS_marianne_pollak
 			allowed = { 
+				is_ai = no
 				original_tag = AUS
 			}
 			available = {
@@ -940,6 +961,7 @@ characters = {
 			slot = political_advisor
 			idea_token = AUS_bruno_kreisky
 			allowed = { 
+				is_ai = no
 				original_tag = AUS
 			}
 			traits = { 
@@ -970,6 +992,7 @@ characters = {
 			slot = political_advisor
 			idea_token = AUS_theodor_innitzer
 			allowed = { 
+				is_ai = no
 				original_tag = AUS
 			}
 			available = {
@@ -1003,6 +1026,7 @@ characters = {
 			slot = political_advisor
 			idea_token = AUS_elizabet_von_gutmann
 			allowed = { 
+				is_ai = no
 				original_tag = AUS
 			}
 			available = {
@@ -1037,6 +1061,7 @@ characters = {
 			slot = political_advisor
 			idea_token = AUS_malke_schorr
 			allowed = { 
+				is_ai = no
 				original_tag = AUS
 			}
 			available = {
@@ -1067,6 +1092,7 @@ characters = {
 			slot = political_advisor
 			idea_token = AUS_egon_schonhof
 			allowed = { 
+				is_ai = no
 				original_tag = AUS
 			}
 			available = {
@@ -1097,6 +1123,7 @@ characters = {
 			slot = political_advisor
 			idea_token = AUS_franz_koritschoner
 			allowed = { 
+				is_ai = no
 				original_tag = AUS
 			}
 			traits = { 
@@ -1124,6 +1151,7 @@ characters = {
 			slot = political_advisor
 			idea_token = AUS_adolf_scharf
 			allowed = { 
+				is_ai = no
 				original_tag = AUS
 			}
 			traits = { 
@@ -1146,6 +1174,7 @@ characters = {
 			slot = political_advisor
 			idea_token = AUS_adolf_hoch
 			allowed = { 
+				is_ai = no
 				original_tag = AUS
 			}
 			available = {
@@ -1171,6 +1200,7 @@ characters = {
 			slot = political_advisor
 			idea_token = AUS_otto_bauer
 			allowed = { 
+				is_ai = no
 				original_tag = AUS
 			}
 			available = {
@@ -1216,6 +1246,7 @@ characters = {
 				slot = political_advisor
 				idea_token = AUS_ernst_kaltenbrunner
 				allowed = { 
+					is_ai = no
 					original_tag = AUS
 				}
 				available = {
@@ -1246,6 +1277,7 @@ characters = {
 				slot = army_chief
 				idea_token = AUS_ernst_kaltenbrunner
 				allowed = {
+					is_ai = no
 					original_tag = AUS
 				}
 				traits = {
@@ -1272,6 +1304,7 @@ characters = {
 			slot = political_advisor
 			idea_token = AUS_maximilian_ronge
 			allowed = { 
+				is_ai = no
 				original_tag = AUS
 				has_dlc = "La Resistance"
 			}
@@ -1299,6 +1332,7 @@ characters = {
 			slot = political_advisor
 			idea_token = AUS_friedrich_mandl
 			allowed = { 
+				is_ai = no
 				original_tag = AUS
 			}
 			traits = {
@@ -1751,6 +1785,7 @@ characters = {
 			slot = army_chief
 			idea_token = AUS_alfred_jansa
 			allowed = {
+				is_ai = no
 				original_tag = AUS
 			}
 			available = {
@@ -1811,6 +1846,7 @@ characters = {
 			slot = army_chief
 			idea_token = AUS_wilhelm_gebauer
 			allowed = {
+				is_ai = no
 				OR = {
 					original_tag = AUS
 					original_tag = GER
@@ -1867,6 +1903,7 @@ characters = {
 				slot = army_chief
 				idea_token = AUS_franz_bohme
 				allowed = {
+					is_ai = no
 					original_tag = AUS
 				}
 				available = {
@@ -1930,6 +1967,7 @@ characters = {
 				slot = army_chief
 				idea_token = AUS_franz_bohme
 				allowed = {
+					is_ai = no
 					original_tag = AUS
 				}
 				traits = {
@@ -1961,6 +1999,7 @@ characters = {
 			slot = army_chief
 			idea_token = AUS_odilo_globocnik
 			allowed = {
+				is_ai = no
 				original_tag = AUS
 			}
 			traits = {
@@ -1986,6 +2025,7 @@ characters = {
 			slot = army_chief
 			idea_token = AUS_eduard_freiherr
 			allowed = {
+				is_ai = no
 				original_tag = AUS
 			}
 			traits = {
@@ -2010,6 +2050,7 @@ characters = {
 			slot = high_command
 			idea_token = AUS_godwin_von_brumowski
 			allowed = {
+				is_ai = no
 				original_tag = AUS
 			}
 			available = { has_country_flag = AUS_von_brumowski_recruited_flag }
@@ -2044,6 +2085,7 @@ characters = {
 				slot = air_chief
 				idea_token = AUS_alexander_lohr
 				allowed = {
+					is_ai = no
 					original_tag = AUS
 				}
 				traits = {
@@ -2074,6 +2116,7 @@ characters = {
 				slot = air_chief
 				idea_token = AUS_alexander_lohr
 				allowed = {
+					is_ai = no
 					original_tag = AUS
 				}
 				traits = {
@@ -2107,6 +2150,7 @@ characters = {
 				slot = air_chief
 				idea_token = AUS_otto_schobel
 				allowed = {
+					is_ai = no
 					original_tag = AUS
 				}
 				traits = {
@@ -2139,6 +2183,7 @@ characters = {
 				slot = air_chief
 				idea_token = AUS_otto_schobel
 				allowed = {
+					is_ai = no
 					original_tag = AUS
 				}
 				traits = {
@@ -2165,6 +2210,7 @@ characters = {
 			slot = navy_chief
 			idea_token = AUS_paul_von_hegedus
 			allowed = {
+				is_ai = no
 				original_tag = AUS
 				NOT = { has_dlc = "Gotterdammerung" }
 			}
@@ -2195,6 +2241,7 @@ characters = {
 			slot = navy_chief
 			idea_token = AUS_josef_teufl
 			allowed = {
+				is_ai = no
 				original_tag = AUS
 				NOT = { has_dlc = "Gotterdammerung" }
 			}
@@ -2225,6 +2272,7 @@ characters = {
 			slot = navy_chief
 			idea_token = AUS_franz_von_keil
 			allowed = {
+				is_ai = no
 				original_tag = AUS
 			}
 			traits = {
@@ -2255,6 +2303,7 @@ characters = {
 			slot = navy_chief
 			idea_token = AUS_gottfried_freiherr_von_banfeld
 			allowed = {
+				is_ai = no
 				original_tag = AUS
 			}
 			traits = {
@@ -2296,6 +2345,7 @@ characters = {
 				idea_token = AUS_julius_yllam
 				ledger = air
 				allowed = {
+					is_ai = no
 					original_tag = AUS
 				}
 				
@@ -2324,6 +2374,7 @@ characters = {
 				idea_token = AUS_julius_yllam
 				ledger = air
 				allowed = {
+					is_ai = no
 					original_tag = AUS
 				}
 				
@@ -2350,6 +2401,7 @@ characters = {
 			idea_token = AUS_alois_schonburg_hartenstein
 			ledger = air
 			allowed = {
+				is_ai = no
 				original_tag = AUS
 			}
 			
@@ -2374,6 +2426,7 @@ characters = {
 			idea_token = AUS_otto_meixner_von_zweienstamm
 			ledger = army
 			allowed = {
+				is_ai = no
 				original_tag = AUS
 			}
 			traits = {
@@ -2406,6 +2459,7 @@ characters = {
 				idea_token = AUS_wilhelm_zehner
 				ledger = army
 				allowed = {
+					is_ai = no
 					original_tag = AUS
 				}
 				traits = {
@@ -2434,6 +2488,7 @@ characters = {
 				idea_token = AUS_wilhelm_zehner
 				ledger = army
 				allowed = {
+					is_ai = no
 					original_tag = AUS
 				}
 				traits = {
@@ -2460,6 +2515,7 @@ characters = {
 			idea_token = AUS_viktor_seebauer
 			ledger = air
 			allowed = {
+				is_ai = no
 				original_tag = AUS
 			}
 			traits = {
@@ -2487,6 +2543,7 @@ characters = {
 				idea_token = AUS_lothar_rendulic
 				ledger = army
 				allowed = {
+					is_ai = no
 					original_tag = AUS
 				}
 				traits = {
@@ -2524,6 +2581,7 @@ characters = {
 				idea_token = AUS_lothar_rendulic
 				ledger = army
 				allowed = {
+					is_ai = no
 					original_tag = AUS
 				}
 				traits = {
@@ -2556,6 +2614,7 @@ characters = {
 				idea_token = AUS_eugen_beyer
 				ledger = army
 				allowed = {
+					is_ai = no
 					OR = {
 						original_tag = AUS
 						original_tag = GER
@@ -2608,6 +2667,7 @@ characters = {
 				idea_token = AUS_eugen_beyer
 				ledger = army
 				allowed = {
+					is_ai = no
 					original_tag = AUS
 				}
 				traits = {
@@ -2634,6 +2694,7 @@ characters = {
 			idea_token = AUS_arthur_von_pongracz
 			ledger = army
 			allowed = {
+				is_ai = no
 				original_tag = AUS
 			}
 			traits = {
@@ -2658,6 +2719,7 @@ characters = {
 			idea_token = AUS_theodor_korner
 			ledger = army
 			allowed = {
+				is_ai = no
 				original_tag = AUS
 			}
 			traits = {
@@ -2704,6 +2766,7 @@ characters = {
 			idea_token = AUS_josef_brunner
 			ledger = air
 			allowed = {
+				is_ai = no
 				original_tag = AUS
 			}
 			traits = {

@@ -174,6 +174,7 @@ characters = {
 			idea_token = COG_cyrille_adoula
 
 			allowed = {
+				is_ai = no
 				OR = {
 					original_tag = COG
 					original_tag = BEL
@@ -243,6 +244,7 @@ characters = {
 			idea_token = COG_joris_six
 
 			allowed = {
+				is_ai = no
 				original_tag = COG
 			}
 
@@ -280,6 +282,7 @@ characters = {
 			idea_token = COG_simon_kimbangu
 
 			allowed = {
+				is_ai = no
 				original_tag = COG
 			}
 
@@ -317,6 +320,7 @@ characters = {
 			idea_token = COG_marcel_maquet
 
 			allowed = {
+				is_ai = no
 				original_tag = COG
 			}
 
@@ -367,6 +371,7 @@ characters = {
 			idea_token = COG_alexandre_safiannikoff
 
 			allowed = {
+				is_ai = no
 				original_tag = COG
 			}
 
@@ -402,6 +407,7 @@ characters = {
 			idea_token = COG_robert_de_muelenaere
 
 			allowed = {
+				is_ai = no
 				original_tag = COG
 			}
 
@@ -443,6 +449,7 @@ characters = {
 			idea_token = COG_jean_bolikango
 
 			allowed = {
+				is_ai = no
 				original_tag = COG
 			}
 
@@ -482,6 +489,7 @@ characters = {
 			idea_token = COG_patrice_lumumba
 
 			allowed = {
+				is_ai = no
 				original_tag = COG
 			}
 
@@ -521,6 +529,7 @@ characters = {
 			idea_token = COG_joseph_ileo
 
 			allowed = {
+				is_ai = no
 				original_tag = COG
 			}
 
@@ -587,6 +596,7 @@ characters = {
 			idea_token = COG_isaac_kalonji
 
 			allowed = {
+				is_ai = no
 				original_tag = COG
 			}
 
@@ -634,6 +644,7 @@ characters = {
 			idea_token = RWA_yuhi_musinga
 
 			allowed = {
+				is_ai = no
 				OR = {
 					original_tag = COG
 					original_tag = RWA
@@ -712,6 +723,7 @@ characters = {
 			slot = high_command
 			idea_token = COG_louis_bobozo
 			allowed = {
+				is_ai = no
 				original_tag = COG
 			}
 			available = {
@@ -762,6 +774,7 @@ characters = {
 			slot = army_chief
 			idea_token = COG_justin_kokolo
 			allowed = {
+				is_ai = no
 				original_tag = COG
 			}
 			available = {
@@ -812,6 +825,7 @@ characters = {
 			slot = high_command
 			idea_token = COG_cristophe_gbenye
 			allowed = {
+				is_ai = no
 				original_tag = COG
 			}
 			visible = {
@@ -851,6 +865,7 @@ characters = {
 			idea_token = COG_gerard_greindl
 
 			allowed = {
+				is_ai = no
 				original_tag = COG
 			}
 
@@ -903,6 +918,7 @@ characters = {
 			slot = army_chief
 			idea_token = COG_paul_ermens
 			allowed = {
+				is_ai = no
 				original_tag = COG
 			}
 			available = {
@@ -951,6 +967,7 @@ characters = {
 			slot = high_command
 			idea_token = COG_auguste_gilliaert
 			allowed = {
+				is_ai = no
 				original_tag = COG
 			}
 			available = {
@@ -1026,6 +1043,7 @@ characters = {
 			idea_token = COG_frederic_vandewalle
 			ledger = army
 			allowed = {
+				is_ai = no
 				original_tag = COG
 			}
 			
@@ -1083,6 +1101,7 @@ characters = {
 			idea_token = COG_armand_huyghe
 
 			allowed = {
+				is_ai = no
 				original_tag = COG
 			}
 
@@ -1226,6 +1245,7 @@ characters = {
 			idea_token = COG_eugene_jungers
 
 			allowed = {
+				is_ai = no
 				original_tag = COG
 			}
 
@@ -1268,6 +1288,7 @@ characters = {
 			idea_token = COG_auguste_tilkens
 
 			allowed = {
+				is_ai = no
 				original_tag = COG
 			}
 
@@ -1301,6 +1322,7 @@ characters = {
 			slot = political_advisor
 			idea_token = BEL_albert_de_vleeschauwer
 			allowed  = {
+				is_ai = no
 				original_tag  = BEL
 			}
 			visible = {

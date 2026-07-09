@@ -31,6 +31,7 @@ characters={
 				slot = political_advisor
 				idea_token = DEN_thorvald_stauning
 				allowed = {
+					is_ai = no
 					original_tag = DEN
 					#Already checked for DLC in the instance
 				}
@@ -97,6 +98,7 @@ characters={
 				slot = political_advisor
 				idea_token = DEN_knud_bach
 				allowed = {
+					is_ai = no
 					original_tag = DEN
 					#Already checked for DLC in the instance
 				}
@@ -193,6 +195,7 @@ characters={
 				idea_token = DEN_knud_bach
 				cost = 0
 				allowed = {
+					is_ai = no
 					original_tag = DEN
 					#Already checked for DLC in the instance
 				}
@@ -271,6 +274,7 @@ characters={
 				idea_token = DEN_knud_bach
 				cost = 50
 				allowed = {
+					is_ai = no
 					original_tag = DEN
 					#Already checked for DLC in the instance
 				}
@@ -389,6 +393,7 @@ characters={
 				slot = political_advisor
 				idea_token = DEN_aksel_larsen
 				allowed = {
+					is_ai = no
 					original_tag = DEN
 					#Already checked for DLC in the instance
 				}
@@ -472,6 +477,7 @@ characters={
 				slot = political_advisor
 				idea_token = DEN_frits_clausen
 				allowed = {
+					is_ai = no
 					original_tag = DEN
 					#Already checked for DLC in the instance
 				}
@@ -560,6 +566,7 @@ characters={
 			slot = army_chief
 			idea_token = DEN_erik_with
 			allowed = {
+				is_ai = no
 				original_tag = DEN
 				has_dlc = "Arms Against Tyranny"				
 			}
@@ -598,6 +605,7 @@ characters={
 				slot = army_chief
 				idea_token = DEN_william_wain_prior
 				allowed = {
+					is_ai = no
 					original_tag = DEN
 					#Already checked for DLC in the instance
 				}
@@ -637,6 +645,7 @@ characters={
 				slot = army_chief
 				idea_token = DEN_william_wain_prior
 				allowed = {
+					is_ai = no
 					original_tag = DEN
 				}
 				traits = {
@@ -653,6 +662,7 @@ characters={
 				idea_token = DEN_william_wain_prior
 				ledger = army
 					allowed = {
+						is_ai = no
 						original_tag = DEN
 					}	
 					traits = {
@@ -687,6 +697,7 @@ characters={
 				slot = army_chief
 				idea_token = DEN_ebbe_gortz
 				allowed = {
+					is_ai = no
 					original_tag = DEN
 					#Already checked for DLC in the instance
 				}
@@ -728,6 +739,7 @@ characters={
 				slot = army_chief
 				idea_token = DEN_ebbe_gortz
 				allowed = {
+					is_ai = no
 					original_tag = DEN
 					#Already checked for DLC in the instance
 				}
@@ -943,6 +955,7 @@ characters={
 				idea_token = DEN_christian_frederik_von_schalburg
 				ledger = army
 					allowed = {
+						is_ai = no
 						original_tag = DEN
 					}
 					traits = {
@@ -972,6 +985,7 @@ characters={
 				slot = navy_chief
 				idea_token = DEN_hjalmar_rechnitzer
 				allowed = {
+					is_ai = no
 						original_tag = DEN
 						#Already checked for DLC in the instance
 					}
@@ -1007,6 +1021,7 @@ characters={
 				idea_token = DEN_hjalmar_rechnitzer
 				ledger = navy
 				allowed = {
+					is_ai = no
 					original_tag = DEN
 				}
 				traits = {
@@ -1036,6 +1051,7 @@ characters={
 				slot = navy_chief
 				idea_token = DEN_aage_vedel
 				allowed = {
+					is_ai = no
 					original_tag = DEN
 					#Already checked for DLC in the instance
 				}
@@ -1076,6 +1092,7 @@ characters={
 				slot = navy_chief
 				idea_token = DEN_aage_vedel
 				allowed = {
+					is_ai = no
 					original_tag = DEN
 				}
 				traits = {
@@ -1102,6 +1119,7 @@ characters={
 			idea_token = DEN_emmanuel_briand_de_crevecoeur
 			ledger = navy
 			allowed = {
+				is_ai = no
 				original_tag = DEN
 				has_dlc = "Arms Against Tyranny"
 			}
@@ -1136,6 +1154,7 @@ characters={
 			idea_token = DEN_christian_evers
 			ledger = navy
 			allowed = {
+				is_ai = no
 				original_tag = DEN
 				has_dlc = "Arms Against Tyranny"
 			}
@@ -1174,6 +1193,7 @@ characters={
 				idea_token = DEN_carl_hammerich
 				ledger = navy
 				allowed = {
+					is_ai = no
 					original_tag = DEN
 					#Already checked for DLC in the instance
 				}
@@ -1208,6 +1228,7 @@ characters={
 				slot = navy_chief
 				idea_token = DEN_carl_hammerich
 				allowed = {
+					is_ai = no
 						original_tag = DEN
 					}
 					traits = {
@@ -1234,6 +1255,7 @@ characters={
 			idea_token = DEN_paul_ipsen
 			ledger = navy
 			allowed = {
+				is_ai = no
 				original_tag = DEN
 				has_dlc = "Arms Against Tyranny"
 			}
@@ -1267,6 +1289,7 @@ characters={
 			slot = navy_chief
 			idea_token = DEN_prince_frederik
 			allowed = {
+				is_ai = no
 				original_tag = DEN
 				has_dlc = "Arms Against Tyranny"
 			}
@@ -1308,6 +1331,7 @@ characters={
 			slot = navy_chief
 			idea_token = DEN_frederik_ix
 			allowed = {
+				is_ai = no
 				original_tag = DEN
 				has_dlc = "Arms Against Tyranny"
 			}
@@ -1339,6 +1363,7 @@ characters={
 			slot = air_chief
 			idea_token = DEN_christian_forslev
 			allowed = {
+				is_ai = no
 				original_tag = DEN
 				has_dlc = "Arms Against Tyranny"
 			}
@@ -1364,6 +1389,7 @@ characters={
 			slot = air_chief
 			idea_token = DEN_asger_grandjean
 			allowed = {
+				is_ai = no
 				original_tag = DEN
 				has_dlc = "Arms Against Tyranny"
 			}
@@ -1389,6 +1415,7 @@ characters={
 			idea_token = DEN_aage_falking
 			ledger = army
 				allowed = {
+					is_ai = no
 				original_tag = DEN
 				has_dlc = "Arms Against Tyranny"
 			}
@@ -1419,6 +1446,7 @@ characters={
 				idea_token = DEN_hans_a_rolsted
 				ledger = army
 					allowed = {
+						is_ai = no
 					original_tag = DEN
 					#Already checked for DLC in the instance
 				}
@@ -1446,6 +1474,7 @@ characters={
 				idea_token = DEN_hans_a_rolsted
 				ledger = army
 					allowed = {
+						is_ai = no
 						original_tag = DEN
 					}
 					traits = {
@@ -1475,6 +1504,7 @@ characters={
 				idea_token = DEN_kaj_birksted
 				ledger = air
 				allowed = {
+					is_ai = no
 					original_tag = DEN
 					#Already checked for DLC in the instance
 				}
@@ -1501,6 +1531,7 @@ characters={
 				slot = air_chief
 				idea_token = DEN_kaj_birksted
 				allowed = {
+					is_ai = no
 						original_tag = DEN
 					}
 					traits = {
@@ -1530,6 +1561,7 @@ characters={
 				idea_token = DEN_poul_sommer
 				ledger = air
 				allowed = {
+					is_ai = no
 					original_tag = DEN
 				}
 				traits = {
@@ -1556,6 +1588,7 @@ characters={
 				idea_token = DEN_poul_sommer
 				ledger = air
 				allowed = {
+					is_ai = no
 					original_tag = DEN
 				}
 				traits = {
@@ -1581,6 +1614,7 @@ characters={
 			idea_token = DEN_johan_von_stemann
 			ledger = army
 			allowed = {
+				is_ai = no
 				original_tag = DEN
 				has_dlc = "Arms Against Tyranny"
 			}
@@ -1606,6 +1640,7 @@ characters={
 			idea_token = DEN_peter_horn
 			ledger = army
 				allowed = {
+					is_ai = no
 				original_tag = DEN
 				has_dlc = "Arms Against Tyranny"
 			}
@@ -1624,6 +1659,7 @@ characters={
 			slot = air_chief
 			idea_token = DEN_paul_sommer
 			allowed = {
+				is_ai = no
 				original_tag = DEN
 				NOT = { has_dlc = "Arms Against Tyranny" }
 			}
@@ -1656,6 +1692,7 @@ characters={
 			idea_token = DEN_hans_lunding
 			ledger = navy
 			allowed = {
+				is_ai = no
 				original_tag = DEN
 				NOT = { has_dlc = "Arms Against Tyranny" }
 			}
@@ -1685,6 +1722,7 @@ characters={
 			slot = political_advisor
 			idea_token = DEN_peter_rochegune_munch
 			allowed = {
+				is_ai = no
 				original_tag = DEN
 				has_dlc = "Arms Against Tyranny"
 			}
@@ -1738,6 +1776,7 @@ characters={
 			slot = political_advisor
 			idea_token = DEN_christmas_moller
 			allowed = {
+				is_ai = no
 				original_tag = DEN
 				has_dlc = "Arms Against Tyranny"
 			}
@@ -1794,6 +1833,7 @@ characters={
 			slot = political_advisor
 			idea_token = DEN_vilhelm_buhl
 			allowed = {
+				is_ai = no
 				original_tag = DEN
 				has_dlc = "Arms Against Tyranny"
 			}
@@ -1842,6 +1882,7 @@ characters={
 			slot = political_advisor
 			idea_token = DEN_erik_scavenius
 			allowed = {
+				is_ai = no
 				original_tag = DEN
 				has_dlc = "Arms Against Tyranny"
 			}
@@ -1886,6 +1927,7 @@ characters={
 			slot = political_advisor
 			idea_token = DEN_jorgen_jorgensen
 			allowed = {
+				is_ai = no
 				original_tag = DEN
 				has_dlc = "Arms Against Tyranny"	
 			}
@@ -1930,6 +1972,7 @@ characters={
 				slot = political_advisor
 				idea_token = DEN_knud_kristensen
 				allowed  = {
+					is_ai = no
 						original_tag  = DEN
 					}
 				traits  = {
@@ -1964,6 +2007,7 @@ characters={
 				slot = political_advisor
 				idea_token = DEN_knud_kristensen
 				allowed  = {
+					is_ai = no
 						original_tag  = DEN
 					}
 				traits  = {
@@ -1987,6 +2031,7 @@ characters={
 			slot = political_advisor
 			idea_token = DEN_arnold_peter_moller
 			allowed = {
+				is_ai = no
 				original_tag  = DEN
 				has_dlc = "Arms Against Tyranny"
 			}
@@ -2042,6 +2087,7 @@ characters={
 			slot = political_advisor
 			idea_token = DEN_hans_hedtoft
 			allowed = {
+				is_ai = no
 				original_tag = DEN
 				has_dlc = "Arms Against Tyranny"
 			}
@@ -2075,6 +2121,7 @@ characters={
 			slot = political_advisor
 			idea_token = DEN_alsing_andersen
 			allowed  = {
+				is_ai = no
 				original_tag  = DEN
 				has_dlc = "Arms Against Tyranny"
 			}
@@ -2125,6 +2172,7 @@ characters={
 			slot = political_advisor
 			idea_token = DEN_karl_kristian_steincke
 			allowed = {
+				is_ai = no
 				original_tag  = DEN
 				has_dlc = "Arms Against Tyranny"
 			}
@@ -2172,6 +2220,7 @@ characters={
 			slot = political_advisor
 			idea_token = DEN_cay_lembcke
 			allowed = {
+				is_ai = no
 				original_tag = DEN
 				has_dlc = "Arms Against Tyranny"	
 			}
@@ -2217,6 +2266,7 @@ characters={
 			slot = political_advisor
 			idea_token = DEN_emil_strobech
 			allowed = {
+				is_ai = no
 				original_tag  = DEN
 				has_dlc = "Arms Against Tyranny"
 				has_dlc = "La Resistance"
@@ -2258,6 +2308,7 @@ characters={
 			slot = political_advisor
 			idea_token = DEN_ejnar_warum
 			allowed  = {
+				is_ai = no
 				original_tag  = DEN
 				NOT = { has_dlc = "Arms Against Tyranny" }
 			}
@@ -2278,6 +2329,7 @@ characters={
 			slot = political_advisor
 			idea_token = DEN_viggo_kampman
 			allowed  = {
+				is_ai = no
 				original_tag  = DEN
 				NOT = { has_dlc = "Arms Against Tyranny" }
 			}

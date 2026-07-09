@@ -58,6 +58,7 @@ characters={
 					cost = 125
 					idea_token = SWE_sven_linderot
 					allowed  = {
+						is_ai = no
 						original_tag  = SWE
 					}
 
@@ -121,6 +122,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWE_axel_pehrssonbramstorp
 			allowed  = {
+				is_ai = no
 				original_tag  = SWE
 			}
 			traits  = {
@@ -153,6 +155,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWE_nils_flyg
 			allowed  = {
+				is_ai = no
 				original_tag  = SWE
 			}
 			traits  = {
@@ -185,6 +188,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWE_raoul_wallenberg
 			available = {
+				is_ai = no
 			}
 			allowed = {
 				original_tag = SWE
@@ -215,6 +219,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWE_gosta_bagge
 			allowed  = {
+				is_ai = no
 				original_tag  = SWE
 			}
 			traits  = {
@@ -238,6 +243,7 @@ characters={
 				slot = political_advisor
 				idea_token = SWE_ernst_wigforss
 				allowed = {
+					is_ai = no
 					original_tag  = SWE	
 				}
 				traits  = {
@@ -266,6 +272,7 @@ characters={
 				slot = political_advisor
 				idea_token = SWE_ernst_wigforss
 				allowed  = {
+					is_ai = no
 						original_tag  = SWE
 					}
 					traits  = {
@@ -286,6 +293,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWE_frans_severin
 			allowed = {
+				is_ai = no
 				original_tag  = SWE	
 			}
 			traits  = {
@@ -409,6 +417,7 @@ characters={
 			idea_token = SWE_exiled_revolutionaries
 			ledger = army
 			allowed = {
+				is_ai = no
 				original_tag = SWE
 			}
 			visible = {
@@ -428,6 +437,7 @@ characters={
 				slot = army_chief
 				idea_token = SWE_per_sylvan
 				allowed = {
+					is_ai = no
 						original_tag = SWE
 					}
 					traits = {
@@ -462,6 +472,7 @@ characters={
 				slot = army_chief
 				idea_token = SWE_per_sylvan
 				allowed = {
+					is_ai = no
 						original_tag = SWE
 					}
 					traits = {
@@ -508,6 +519,7 @@ characters={
 				slot = navy_chief
 				idea_token = SWE_gosta_ehrensvard
 				allowed = {
+					is_ai = no
 						original_tag = SWE
 					}
 					traits = {
@@ -533,6 +545,7 @@ characters={
 				slot = navy_chief
 				idea_token = SWE_gosta_ehrensvard
 				allowed = {
+					is_ai = no
 						original_tag = SWE
 					}
 					traits = {
@@ -568,6 +581,7 @@ characters={
 				slot = navy_chief
 				idea_token = SWE_gosta_ehrensvard
 				allowed = {
+					is_ai = no
 						original_tag = SWE
 					}
 					traits = {
@@ -593,6 +607,7 @@ characters={
 				slot = air_chief
 				idea_token = SWE_torsten_friis
 				allowed = {
+					is_ai = no
 						original_tag = SWE
 					}
 					traits = {
@@ -617,6 +632,7 @@ characters={
 				slot = air_chief
 				idea_token = SWE_torsten_friis
 				allowed = {
+					is_ai = no
 						original_tag = SWE
 					}
 					traits = {
@@ -643,6 +659,7 @@ characters={
 			idea_token = SWE_erik_palmstierna
 			ledger = navy
 				allowed = {
+					is_ai = no
 					original_tag = SWE
 				}
 				traits = { naval_theorist }
@@ -662,6 +679,7 @@ characters={
 				idea_token = SWE_helge_stromback
 				ledger = navy
 					allowed = {
+						is_ai = no
 						original_tag = SWE
 					}
 					traits = {
@@ -698,6 +716,7 @@ characters={
 				idea_token = SWE_helge_stromback
 				ledger = navy
 					allowed = {
+						is_ai = no
 						original_tag = SWE
 					}
 					traits = {
@@ -725,6 +744,7 @@ characters={
 				idea_token = SWE_helge_jung
 				ledger = army
 				allowed = {
+					is_ai = no
 					original_tag = SWE
 				}
 				traits = {
@@ -753,6 +773,7 @@ characters={
 				slot = high_command
 				idea_token = SWE_helge_jung
 				allowed = {
+					is_ai = no
 						original_tag = SWE
 					}
 					traits = {
@@ -773,6 +794,7 @@ characters={
 				idea_token = SWE_helge_jung
 				ledger = army
 					allowed = {
+						is_ai = no
 						original_tag = SWE
 					}
 					traits = {
@@ -792,6 +814,7 @@ characters={
 			slot = army_chief
 			idea_token = SWE_olof_thornell
 			allowed = {
+				is_ai = no
 					original_tag = SWE
 				}
 				traits = {
@@ -825,6 +848,7 @@ characters={
 			slot = air_chief
 			idea_token = SWE_bengt_nordenskiold
 			allowed = {
+				is_ai = no
 					original_tag = SWE
 				}
 				traits = {
@@ -847,6 +871,7 @@ characters={
 			slot = army_chief
 			idea_token = SWE_ivar_holmquist
 			allowed = {
+				is_ai = no
 					original_tag = SWE
 				}
 				traits = {
@@ -871,6 +896,7 @@ characters={
 				slot = navy_chief
 				idea_token = SWE_fabian_tamm
 				allowed = {
+					is_ai = no
 						original_tag = SWE
 					}
 					traits = {
@@ -907,6 +933,7 @@ characters={
 				slot = navy_chief
 				idea_token = SWE_fabian_tamm
 				allowed = {
+					is_ai = no
 						original_tag = SWE
 					}
 					traits = {
@@ -932,6 +959,7 @@ characters={
 				slot = navy_chief
 				idea_token = SWE_charles_de_champs
 				allowed = {
+					is_ai = no
 						original_tag = SWE
 					}
 					traits = {
@@ -967,6 +995,7 @@ characters={
 				slot = navy_chief
 				idea_token = SWE_charles_de_champs
 				allowed = {
+					is_ai = no
 						original_tag = SWE
 					}
 					traits = {
@@ -993,6 +1022,7 @@ characters={
 				idea_token = SWE_axel_rappe
 				ledger = army
 					allowed = {
+						is_ai = no
 						original_tag = SWE
 					}
 					traits = {
@@ -1028,6 +1058,7 @@ characters={
 				idea_token = SWE_axel_rappe
 				ledger = army
 					allowed = {
+						is_ai = no
 						original_tag = SWE
 					}
 					traits = {
@@ -1053,6 +1084,7 @@ characters={
 			idea_token = SWE_martin_ekstrom
 			ledger = army
 				allowed = {
+					is_ai = no
 					original_tag = SWE
 				}
 				traits = {
@@ -1077,6 +1109,7 @@ characters={
 				slot = army_chief
 				idea_token = SWE_oscar_nygren
 				allowed = {
+					is_ai = no
 						original_tag = SWE
 					}
 					traits = {
@@ -1112,6 +1145,7 @@ characters={
 				slot = army_chief
 				idea_token = SWE_oscar_nygren
 				allowed = {
+					is_ai = no
 						original_tag = SWE
 					}
 					traits = {
@@ -1138,6 +1172,7 @@ characters={
 				idea_token = SWE_axel_ljungdahl
 				ledger = air
 					allowed = {
+						is_ai = no
 						original_tag = SWE
 					}
 					traits = {
@@ -1173,6 +1208,7 @@ characters={
 				idea_token = SWE_axel_ljungdahl
 				ledger = air
 					allowed = {
+						is_ai = no
 						original_tag = SWE
 					}
 					traits = {
@@ -1200,6 +1236,7 @@ characters={
 				idea_token = SWE_archibald_douglas
 				ledger = army
 					allowed = {
+						is_ai = no
 						original_tag = SWE
 					}
 					traits = {
@@ -1237,6 +1274,7 @@ characters={
 				idea_token = SWE_archibald_douglas
 				ledger = army
 					allowed = {
+						is_ai = no
 						original_tag = SWE
 					}
 					traits = {
@@ -1271,6 +1309,7 @@ characters={
 			slot = high_command
 			idea_token = SWE_ernst_linder
 			allowed  = {
+				is_ai = no
 					original_tag  = SWE
 				}
 			traits  = {
@@ -1296,6 +1335,7 @@ characters={
 				slot = political_advisor
 				idea_token = SWE_thorwald_bergquist
 				allowed  = {
+					is_ai = no
 						original_tag  = SWE
 					}
 					traits  = {
@@ -1315,6 +1355,7 @@ characters={
 				slot = political_advisor
 				idea_token = SWE_thorwald_bergquist
 				allowed  = {
+					is_ai = no
 						original_tag  = SWE
 				}
 				traits  = {
@@ -1342,6 +1383,7 @@ characters={
 				slot = political_advisor
 				idea_token = SWE_osten_unden
 				allowed  = {
+					is_ai = no
 					original_tag  = SWE
 				}
 				available = {
@@ -1371,6 +1413,7 @@ characters={
 				slot = political_advisor
 				idea_token = SWE_osten_unden
 				allowed  = {
+					is_ai = no
 						original_tag  = SWE
 					}
 					traits  = {
@@ -1394,6 +1437,9 @@ characters={
 			idea_token = SWE_arne_beurling
 			visible = {
 				has_country_flag = SWE_spying_on_GER
+			}
+			allowed = {
+				is_ai = no
 			}
 			available  = {
 					original_tag  = SWE
@@ -1431,14 +1477,11 @@ characters={
 			slot = political_advisor
 			cost = 200
 			idea_token = SWE_king_gustaf_v
-			visible = { 
-
-			}
-
 			visible = {
 				is_country_leader = no
 			}
 			available = { 
+				is_ai = no
 				is_country_leader = no
 				NOT = {
 					has_completed_focus = SWE_liquidate_the_monarchy
@@ -1464,6 +1507,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWE_natanael_beskow
 			allowed  = {
+				is_ai = no
 				original_tag  = SWE
 			}
 			available = {
@@ -1514,6 +1558,7 @@ characters={
 				}
 			}
 			allowed  = {
+				is_ai = no
 				original_tag  = SWE
 			}
 			traits  = {
@@ -1549,6 +1594,7 @@ characters={
 			cost = 75
 			idea_token = SWE_ebba_palmstierna
 			allowed  = {
+				is_ai = no
 				original_tag  = SWE
 			}
 			traits  = {
@@ -1617,6 +1663,7 @@ characters={
 				cost = 75
 				idea_token = SWE_christian_gunter
 				allowed = {
+					is_ai = no
 					original_tag  = SWE
 				}
 				traits = { SWE_foreign_minister }
@@ -1641,6 +1688,7 @@ characters={
 				cost = 75
 				idea_token = SWE_christian_gunter
 				allowed = {
+					is_ai = no
 					original_tag  = SWE
 				}
 				traits = { SWE_foreign_minister_no_bba }
@@ -1664,6 +1712,7 @@ characters={
 			cost = 150
 			idea_token = SWE_rickard_sandler
 			allowed  = {
+				is_ai = no
 				original_tag  = SWE
 			}
 
@@ -1710,6 +1759,7 @@ characters={
 			cost = 150
 			idea_token = SWE_alva_myrdal
 			allowed  = {
+				is_ai = no
 				original_tag  = SWE
 			}
 			available = { 
@@ -1758,6 +1808,7 @@ characters={
 			cost = 150
 			idea_token = SWE_gunnar_myrdal
 			allowed  = {
+				is_ai = no
 				original_tag  = SWE
 			}
 			available = { 
@@ -1806,6 +1857,7 @@ characters={
 			cost = 100
 			idea_token = SWE_per_edvin_skold
 			allowed  = {
+				is_ai = no
 				original_tag  = SWE
 			}
 			visible = { 
@@ -1835,6 +1887,7 @@ characters={
 			cost = 150
 			idea_token = SWE_birger_furugard
 			allowed  = {
+				is_ai = no
 				original_tag  = SWE
 			}
 			available = { is_country_leader = no }
@@ -1856,6 +1909,7 @@ characters={
 			cost = 150
 			idea_token = SWE_karl_kilbom
 			allowed  = {
+				is_ai = no
 				original_tag  = SWE
 			}
 			visible = { 
@@ -1881,6 +1935,7 @@ characters={
 			cost = 150
 			idea_token = SWE_sven_hedengren
 			allowed  = {
+				is_ai = no
 				original_tag  = SWE
 			}
 			visible = { has_government = fascism }
@@ -1901,6 +1956,7 @@ characters={
 			cost = 150
 			idea_token = SWE_sven_hedin
 			allowed  = {
+				is_ai = no
 				original_tag  = SWE
 			}
 			visible = { 
@@ -1958,6 +2014,7 @@ characters={
 			cost = 150
 			idea_token = SWE_ture_nerman
 			allowed  = {
+				is_ai = no
 				OR = {
 					original_tag  = SWE
 					original_tag  = CHL
@@ -2012,6 +2069,7 @@ characters={
 			cost = 150
 			idea_token = SWE_fredrik_strom
 			allowed  = {
+				is_ai = no
 				OR = {
 					original_tag  = SWE
 					original_tag  = CHL
@@ -2058,6 +2116,7 @@ characters={
 			cost = 150
 			idea_token = SWE_zeth_hoglund
 			allowed  = {
+				is_ai = no
 				OR = {
 					original_tag  = SWE
 					original_tag  = CHL
@@ -2101,6 +2160,7 @@ characters={
 			cost = 150
 			idea_token = SWE_carl_lindhagen
 			allowed  = {
+				is_ai = no
 				original_tag  = SWE
 			}
 			visible = {
@@ -2126,6 +2186,7 @@ characters={
 			cost = 150
 			idea_token = SWE_hugo_silen
 			allowed  = {
+				is_ai = no
 				original_tag  = SWE
 			}
 			visible = {

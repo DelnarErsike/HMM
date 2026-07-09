@@ -77,6 +77,7 @@
 				idea_token = CZE_edvard_benesh_idea
 				can_be_fired = no
 				allowed  = {
+					is_ai = no
 					original_tag  = CZE
 				}
 				available = {
@@ -210,6 +211,7 @@
 			slot = political_advisor
 			idea_token = CZE_karel_schwarzenberg
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			available = {
@@ -300,6 +302,7 @@
 			slot = political_advisor
 			idea_token = CZE_josef_rozsevac
 			allowed  = {
+				is_ai = no
 				OR = {
 					original_tag  = CZE
 					tag = RKH
@@ -354,6 +357,7 @@
 				slot = political_advisor
 				idea_token = CZE_konrad_henlein
 				allowed  = {
+					is_ai = no
 					original_tag  = CZE
 				}
 				available  = {
@@ -404,6 +408,7 @@
 				slot = political_advisor
 				idea_token = CZE_konrad_henlein
 				allowed  = {
+					is_ai = no
 					original_tag  = CZE
 				}
 				on_add = {
@@ -480,6 +485,7 @@
 			slot = political_advisor
 			idea_token = CZE_gustav_husak
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			available  = {
@@ -543,6 +549,7 @@
 				slot = political_advisor
 				idea_token = CZE_vojtech_tuka
 				allowed  = {
+					is_ai = no
 					original_tag = CZE
 				}
 				visible = {
@@ -579,6 +586,7 @@
 				slot = political_advisor
 				idea_token = CZE_vojtech_tuka
 				allowed  = {
+					is_ai = no
 					original_tag = CZE
 				}
 				visible = {
@@ -638,6 +646,7 @@
 			slot = political_advisor
 			idea_token = CZE_bohumil_lausman
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			available = { #too important to restrict
@@ -692,6 +701,7 @@
 			slot = political_advisor
 			idea_token = CZE_alois_tucny
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			cost = 150
@@ -715,6 +725,7 @@
 			slot = political_advisor
 			idea_token = CZE_jozef_tiso
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			available = {
@@ -768,6 +779,7 @@
 			slot = political_advisor
 			idea_token = CZE_rudolf_bechyne
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			available = {
@@ -797,6 +809,7 @@
 			idea_token = CZE_ferdinand_catlos
 			cost = 150
 			allowed = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			traits = {
@@ -850,6 +863,7 @@
 				slot = political_advisor
 				idea_token = CZE_zdenek_fierlinger
 				allowed  = {
+					is_ai = no
 					original_tag  = CZE
 				}
 				available = {
@@ -911,6 +925,7 @@
 				slot = political_advisor
 				idea_token = CZE_zdenek_fierlinger_dod
 				allowed = {
+					is_ai = no
 					original_tag = CZE
 				}
 				traits = {
@@ -931,6 +946,7 @@
 			slot = political_advisor
 			idea_token = CZE_kamil_krofta
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			available = {
@@ -961,6 +977,7 @@
 			slot = political_advisor
 			idea_token = CZE_milada_horakova
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			available = {
@@ -998,6 +1015,7 @@
 				slot = political_advisor
 				idea_token = CZE_stefan_osusky
 				allowed  = {
+					is_ai = no
 					original_tag  = CZE
 				}
 				available = {
@@ -1031,6 +1049,7 @@
 				slot = political_advisor
 				idea_token = CZE_stefan_osusky
 				allowed  = {
+					is_ai = no
 					original_tag  = CZE
 				}
 				available  = {
@@ -1070,6 +1089,7 @@
 			slot = political_advisor
 			idea_token = CZE_frantisek_chvalkovsky
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			available = {
@@ -1126,6 +1146,7 @@
 			slot = political_advisor
 			idea_token = CZE_bozena_machacova_dostalova
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			available = {
@@ -1158,6 +1179,7 @@
 			slot = political_advisor
 			idea_token = CZE_jaroslav_slechta
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			available = {
@@ -1208,6 +1230,7 @@
 			slot = political_advisor
 			idea_token = CZE_hugo_vavrecka
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			available = {
@@ -1263,6 +1286,7 @@
 			slot = political_advisor
 			idea_token = CZE_jan_antonin_bata
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			available = {
@@ -1322,6 +1346,7 @@
 			slot = political_advisor
 			idea_token = CZE_dominik_cipera
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			available = {
@@ -1385,6 +1410,7 @@
 			slot = political_advisor
 			idea_token = CZE_ferdinand_peroutka
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			available = {
@@ -1417,6 +1443,7 @@
 			slot = political_advisor
 			idea_token = CZE_karel_domin
 			allowed = {
+				is_ai = no
 				original_tag = CZE
 			}
 			cost = 150
@@ -1476,6 +1503,7 @@
 			slot = political_advisor
 			idea_token = CZE_josef_kalfus
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			available = { #too important to restrict
@@ -1532,6 +1560,7 @@
 				slot = political_advisor
 				idea_token = CZE_emil_kolben_dod
 				allowed = {
+					is_ai = no
 					original_tag = CZE
 				}
 				available = {
@@ -1556,6 +1585,7 @@
 				slot = political_advisor
 				idea_token = CZE_emil_kolben
 				allowed  = {
+					is_ai = no
 					original_tag  = CZE
 				}
 				available = {
@@ -1610,6 +1640,7 @@
 			slot = political_advisor
 			idea_token = CZE_jan_dostalek
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			available = {
@@ -1636,6 +1667,7 @@
 			slot = political_advisor
 			idea_token = CZE_emil_franke
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			visible = {
@@ -1663,6 +1695,7 @@
 			slot = political_advisor
 			idea_token = CZE_jan_krcmar
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			visible = {
@@ -1688,6 +1721,7 @@
 			slot = political_advisor
 			idea_token = CZE_jan_sramek
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			available = {
@@ -1726,6 +1760,7 @@
 			slot = political_advisor
 			idea_token = CZE_karel_husarek
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			available = {
@@ -1773,6 +1808,7 @@
 			slot = army_chief
 			idea_token = CZE_karel_husarek_chief
 			allowed  = {
+				is_ai = no
 				original_tag = CZE
 			}
 			traits  = {
@@ -1835,6 +1871,7 @@
 				slot = political_advisor
 				idea_token = CZE_frantisek_machnik
 				allowed  = {
+					is_ai = no
 					original_tag  = CZE
 				}
 				available = {
@@ -1897,6 +1934,7 @@
 				slot = political_advisor
 				idea_token = CZE_frantisek_machnik_dod
 				allowed = {
+					is_ai = no
 					original_tag = CZE
 				}
 				available = {
@@ -1920,6 +1958,7 @@
 			slot = political_advisor
 			idea_token = CZE_stanislav_bukovsky
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			available = {
@@ -1950,6 +1989,7 @@
 			slot = political_advisor
 			idea_token = CZE_josef_cerny
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			available = {
@@ -1983,6 +2023,7 @@
 			slot = political_advisor
 			idea_token = CZE_rudolf_mlcoch
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			available = {
@@ -2017,6 +2058,7 @@
 			slot = political_advisor
 			idea_token = CZE_ludwig_czech
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			available = {
@@ -2059,6 +2101,7 @@
 				slot = political_advisor
 				idea_token = CZE_karel_englis
 				allowed  = {
+					is_ai = no
 					original_tag  = CZE
 				}
 				available = {
@@ -2095,6 +2138,7 @@
 				slot = political_advisor
 				idea_token = CZE_karel_englis
 				allowed  = {
+					is_ai = no
 					original_tag  = CZE
 				}
 				available = {
@@ -2121,6 +2165,7 @@
 			slot = political_advisor
 			idea_token = CZE_augustin_voloshyn
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			available = {
@@ -2152,7 +2197,7 @@
 			logistics_skill=1
 			legacy_id=-1
 			visible = {
-				always = no
+				is_ai = no
 			}
 		}
 	}
@@ -2169,6 +2214,7 @@
 			slot = political_advisor
 			idea_token = CZE_jan_ruckl
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			#cost = 75
@@ -2205,6 +2251,7 @@
 			slot = political_advisor
 			idea_token = CZE_pavel_reiman
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			available = {
@@ -2243,6 +2290,7 @@
 			slot = political_advisor
 			idea_token = CZE_vaclav_kopecky
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			available = {
@@ -2283,6 +2331,7 @@
 			slot = political_advisor
 			idea_token = CZE_josef_guttman
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			available = {
@@ -2318,6 +2367,7 @@
 			slot = political_advisor
 			idea_token = AUS_ernst_fischer
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			available = {
@@ -2353,6 +2403,7 @@
 			slot = political_advisor
 			idea_token = CZE_vladimir_mandl
 			allowed  = {
+				is_ai = no
 				original_tag  = CZE
 			}
 			available = {
@@ -2392,6 +2443,7 @@
 				slot = political_advisor
 				idea_token = CZE_frantisek_moravec_no_mun
 				allowed  = {
+					is_ai = no
 					has_dlc = "La Resistance"
 					original_tag  = CZE
 				}
@@ -2421,6 +2473,7 @@
 				slot = political_advisor
 				idea_token = CZE_frantisek_moravec_mun
 				allowed  = {
+					is_ai = no
 					OR = {
 						original_tag = CZE
 						original_tag = ENG
@@ -2601,6 +2654,7 @@
 				slot = political_advisor
 				idea_token = CZE_frantisek_moravec_mun_no_lar
 				allowed  = {
+					is_ai = no
 					OR = {
 						original_tag = CZE
 						original_tag = ENG
@@ -2749,6 +2803,7 @@
 			slot = political_advisor
 			idea_token = CZE_simon_drgac
 			allowed  = {
+				is_ai = no
 				has_dlc = "La Resistance"
 				original_tag  = CZE
 			}
@@ -2981,6 +3036,7 @@
 			slot = high_command
 			idea_token = CZE_frantisek_hrabcik
 			allowed = {
+				is_ai = no
 				original_tag = CZE
 			}
 			traits = {
@@ -3109,6 +3165,7 @@
 			slot = army_chief
 			idea_token = CZE_jan_syrovy
 			allowed = {
+				is_ai = no
 				original_tag = CZE
 			}
 			traits = {
@@ -3216,6 +3273,7 @@
 			idea_token = CZE_emanuel_moravec
 			ledger = army
 			allowed = {
+				is_ai = no
 				original_tag = CZE
 			}
 			available = {
@@ -3310,6 +3368,7 @@
 				slot = army_chief
 				idea_token = CZE_rudolf_viest
 				allowed = {
+					is_ai = no
 					original_tag = CZE
 				}
 				available = {
@@ -3376,6 +3435,7 @@
 				slot = army_chief
 				idea_token = CZE_rudolf_viest
 				allowed = {
+					is_ai = no
 					original_tag = CZE
 				}
 				traits = {
@@ -3434,6 +3494,7 @@
 			idea_token = CZE_karel_vaclav_petrik
 			ledger = army
 			allowed = {
+				is_ai = no
 				original_tag = CZE
 			}
 			
@@ -3481,6 +3542,7 @@
 			idea_token = CZE_alois_vicherek
 			ledger = air
 			allowed = {
+				is_ai = no
 				original_tag = CZE
 			}
 			available = {
@@ -3522,6 +3584,7 @@
 			slot = air_chief
 			idea_token = CZE_alois_vicherek_advisor_idea_reform
 			allowed = {
+				is_ai = no
 				original_tag = CZE
 			}
 			available = {
@@ -3597,6 +3660,7 @@
 				idea_token = CZE_ludvik_krejci
 				ledger = army
 				allowed = {
+					is_ai = no
 					original_tag = CZE
 				}
 				traits = {
@@ -3649,6 +3713,7 @@
 				slot = army_chief
 				idea_token = CZE_ludvik_krejci
 				allowed = {
+					is_ai = no
 					original_tag = CZE
 				}
 				traits = {
@@ -3673,6 +3738,7 @@
 			slot = army_chief
 			idea_token = CZE_ludvik_svoboda
 			allowed = {
+				is_ai = no
 				original_tag = CZE
 			}
 			traits = {
@@ -3696,6 +3762,7 @@
 			slot = army_chief
 			idea_token = CZE_louis_eugene_faucher
 			allowed = {
+				is_ai = no
 				original_tag = CZE
 			}
 			available = {
@@ -3788,6 +3855,7 @@
 			slot = army_chief
 			idea_token = CZE_melichar_frantisek
 			allowed = {
+				is_ai = no
 				original_tag = CZE
 			}
 			available = {
@@ -3839,6 +3907,7 @@
 			slot = army_chief
 			idea_token = CZE_mikulas_dolezal
 			allowed = {
+				is_ai = no
 				original_tag = CZE
 			}
 			traits = {
@@ -3897,6 +3966,7 @@
 				slot = navy_chief
 				idea_token = CZE_karel_pavala
 				allowed = {
+					is_ai = no
 					original_tag = CZE
 				}
 				traits = {
@@ -3932,6 +4002,7 @@
 				slot = navy_chief
 				idea_token = CZE_karel_pavala
 				allowed = {
+					is_ai = no
 					original_tag = CZE
 				}
 				traits = {
@@ -4016,6 +4087,7 @@
 			slot = navy_chief
 			idea_token = CZE_frantisek_placak
 			allowed = {
+				is_ai = no
 				original_tag = CZE
 			}
 			available = {
@@ -4074,6 +4146,7 @@
 				idea_token = CZE_zdenko_hudecek_theorist_mun
 				ledger = navy
 				allowed = {
+					is_ai = no
 					original_tag = CZE
 				}
 				available = {
@@ -4118,6 +4191,7 @@
 				slot = navy_chief
 				idea_token = CZE_zdenko_hudecek_navy_chief_mun
 				allowed = {
+					is_ai = no
 					original_tag = CZE
 				}
 				available = {
@@ -4167,6 +4241,7 @@
 				idea_token = CZE_zdenko_hudecek_high_command_mun
 				ledger = navy
 				allowed = {
+					is_ai = no
 					original_tag = CZE
 				}
 				available = {
@@ -4238,6 +4313,7 @@
 				slot = navy_chief
 				idea_token = CZE_zdenko_hudecek_navy_chief
 				allowed = {
+					is_ai = no
 					original_tag = CZE
 				}
 				available = {
@@ -4257,6 +4333,7 @@
 				idea_token = CZE_zdenko_hudecek_high_command
 				ledger = navy
 				allowed = {
+					is_ai = no
 					original_tag = CZE
 				}
 				available = {
@@ -4287,6 +4364,7 @@
 			slot = air_chief
 			idea_token = CZE_karel_janousek
 			allowed = {
+				is_ai = no
 				original_tag = CZE
 			}
 			traits = {
@@ -4335,6 +4413,7 @@
 			slot = air_chief
 			idea_token = CZE_jaroslav_fajfr
 			allowed = {
+				is_ai = no
 				original_tag = CZE
 			}
 			traits = {
@@ -4383,6 +4462,7 @@
 			slot = air_chief
 			idea_token = CZE_jaroslav_kejla_idea
 			allowed = {
+				is_ai = no
 				original_tag = CZE
 			}
 			available = {
@@ -4437,6 +4517,7 @@
 			idea_token = CZE_jan_golian
 			ledger = army
 			allowed = {
+				is_ai = no
 				original_tag = CZE
 			}
 			traits = {
@@ -4486,6 +4567,7 @@
 			idea_token = CZE_josef_frantisek
 			ledger = air
 			allowed = {
+				is_ai = no
 				original_tag = CZE
 			}
 			traits = {
@@ -4535,6 +4617,7 @@
 			idea_token = CZE_karel_kuttelwascher
 			ledger = air
 			allowed = {
+				is_ai = no
 				original_tag = CZE
 			}
 			traits = {
@@ -4584,6 +4667,7 @@
 			idea_token = CZE_karel_prochazka
 			ledger = air
 			allowed = {
+				is_ai = no
 				original_tag = CZE
 			}
 			traits = {
@@ -4633,6 +4717,7 @@
 			idea_token = CZE_frantisek_havel
 			ledger = army
 			allowed = {
+				is_ai = no
 				original_tag = CZE
 			}
 			traits = {
@@ -4682,6 +4767,7 @@
 			idea_token = CZE_antonin_pavlik
 			ledger = army
 			allowed = {
+				is_ai = no
 				original_tag = CZE
 			}
 			traits = {
@@ -4731,6 +4817,7 @@
 			idea_token = CZE_vladimir_prikryl
 			ledger = army
 			allowed = {
+				is_ai = no
 				OR = {
 					original_tag = CZE
 					original_tag = SOV
@@ -4807,6 +4894,7 @@
 			idea_token = CZE_sergej_ingr
 			ledger = army
 			allowed = {
+				is_ai = no
 				OR = {
 					original_tag = CZE
 					original_tag = ENG

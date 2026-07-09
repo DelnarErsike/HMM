@@ -72,6 +72,7 @@ characters = {
 				slot = political_advisor
 				idea_token = LUX_pierre_dupong
 				allowed = {
+					is_ai = no
 					original_tag  = LUX
 				}
 				traits  = {
@@ -102,6 +103,7 @@ characters = {
 				slot = political_advisor
 				idea_token = LUX_pierre_dupong
 				allowed = {
+					is_ai = no
 					original_tag  = LUX
 				}
 				traits  = {
@@ -134,6 +136,7 @@ characters = {
 			idea_token = LUX_damien_roeser
 			ledger = air
 				allowed = {
+					is_ai = no
 					original_tag = LUX
 				}
 				traits = {
@@ -160,6 +163,7 @@ characters = {
 			idea_token = LUX_florent_destriveaux
 			ledger = navy
 				allowed = {
+					is_ai = no
 					original_tag = LUX
 				}
 				
@@ -210,6 +214,7 @@ characters = {
 			idea_token = LUX_pierre_fischbach
 			ledger = navy
 				allowed = {
+					is_ai = no
 					original_tag = LUX
 				}
 				traits = {
@@ -235,6 +240,7 @@ characters = {
 			slot = air_chief
 			idea_token = LUX_guillaume_soisson
 			allowed = {
+				is_ai = no
 					original_tag = LUX
 				}
 				traits = {
@@ -261,6 +267,7 @@ characters = {
 			idea_token = LUX_alex_federspiel
 			ledger = army
 				allowed = {
+					is_ai = no
 					original_tag = LUX
 				}
 				
@@ -283,6 +290,7 @@ characters = {
 			slot = navy_chief
 			idea_token = LUX_henri_ahnen
 			allowed = {
+				is_ai = no
 					original_tag = LUX
 				}
 				traits = {
@@ -320,6 +328,7 @@ characters = {
 				slot = army_chief
 				idea_token = LUX_emile_speller
 				allowed = {
+					is_ai = no
 					original_tag = LUX
 				}
 				traits = {
@@ -360,6 +369,7 @@ characters = {
 				slot = army_chief
 				idea_token = LUX_emile_speller
 				allowed = {
+					is_ai = no
 					original_tag = LUX
 				}
 				traits = {
@@ -403,6 +413,7 @@ characters = {
 				slot = army_chief
 				idea_token = LUX_guillaume_konsbruck
 				allowed = {
+					is_ai = no
 					original_tag = LUX
 				}
 				traits = {
@@ -443,6 +454,7 @@ characters = {
 				slot = army_chief
 				idea_token = LUX_guillaume_konsbruck
 				allowed = {
+					is_ai = no
 					original_tag = LUX
 				}
 				traits = {
@@ -500,6 +512,7 @@ characters = {
 			idea_token = LUX_francois_schammel
 			ledger = army
 				allowed = {
+					is_ai = no
 					original_tag = LUX
 				}
 				traits = {
@@ -526,6 +539,7 @@ characters = {
 			idea_token = LUX_aloyse_glodt
 			ledger = army
 				allowed = {
+					is_ai = no
 					original_tag = LUX
 				}
 				traits = {
@@ -552,6 +566,7 @@ characters = {
 			idea_token = LUX_nicolas_de_dixmude
 			ledger = air
 				allowed = {
+					is_ai = no
 					original_tag = LUX
 				}
 				
@@ -574,6 +589,7 @@ characters = {
 			slot = navy_chief
 			idea_token = LUX_paul_medinger
 			allowed = {
+				is_ai = no
 					original_tag = LUX
 				}
 				traits = {
@@ -599,6 +615,7 @@ characters = {
 			slot = air_chief
 			idea_token = LUX_nicholas_diedrich
 			allowed = {
+				is_ai = no
 					original_tag = LUX
 				}
 				traits = {
@@ -622,6 +639,7 @@ characters = {
 			slot = political_advisor
 			idea_token = LUX_pierre_krier
 			allowed  = {
+				is_ai = no
 					original_tag  = LUX
 				}
 				traits  = {
@@ -641,6 +659,7 @@ characters = {
 			slot = political_advisor
 			idea_token = LUX_martin_karp
 			allowed  = {
+				is_ai = no
 					original_tag  = LUX
 				}
 				traits  = {

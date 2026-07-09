@@ -91,6 +91,7 @@ characters = {
 			slot = political_advisor
 			idea_token = MEN_chin_yung_chang
 			allowed = {
+				is_ai = no
 				original_tag = MEN
 			}
 			available = {
@@ -245,6 +246,7 @@ characters = {
 			idea_token = MEN_hesehn_tiemei
 			ledger = army
 			allowed = {
+				is_ai = no
 				original_tag = MEN
 			}
 			traits = {
@@ -273,6 +275,7 @@ characters = {
 			slot = army_chief
 			idea_token = MEN_guan_xingde
 			allowed = {
+				is_ai = no
 				original_tag = MEN
 			}
 			traits = {
@@ -302,6 +305,7 @@ characters = {
 			idea_token = MEN_kyoiji_tomonaga
 			ledger = army
 			allowed = {
+				is_ai = no
 				original_tag = MEN
 			}
 			traits = {
@@ -331,6 +335,7 @@ characters = {
 			idea_token = MEN_wang_ying
 			ledger = army
 			allowed = {
+				is_ai = no
 				original_tag = MEN
 			}
 			traits = {
@@ -360,6 +365,7 @@ characters = {
 			idea_token = MEN_deng_linge
 			ledger = air
 			allowed = {
+				is_ai = no
 				original_tag = MEN
 			}
 			traits = {
@@ -386,6 +392,7 @@ characters = {
 			idea_token = MEN_hung_zhehuang
 			ledger = army
 			allowed = {
+				is_ai = no
 				original_tag = MEN
 			}
 			traits = {
@@ -410,6 +417,7 @@ characters = {
 			slot = air_chief
 			idea_token = MEN_nakajima_kesago
 			allowed = {
+				is_ai = no
 				original_tag = MEN
 			}
 			traits = {
@@ -439,6 +447,7 @@ characters = {
 			idea_token = MEN_yonimitsu_kasahara
 			ledger = army
 			allowed = {
+				is_ai = no
 				original_tag = MEN
 			}
 			traits = {
@@ -467,6 +476,7 @@ characters = {
 			slot = political_advisor
 			idea_token = MEN_nalan_kang_an
 			allowed  = {
+				is_ai = no
 				original_tag  = MEN
 			}
 			traits  = {
@@ -491,6 +501,7 @@ characters = {
 			slot = political_advisor
 			idea_token = MEN_songgotu_zhanshan
 			allowed  = {
+				is_ai = no
 				original_tag  = MEN
 			}
 			traits  = {
@@ -515,6 +526,7 @@ characters = {
 			slot = political_advisor
 			idea_token = MEN_megata_toshiro
 			allowed  = {
+				is_ai = no
 				original_tag  = MEN
 			}
 			traits  = {

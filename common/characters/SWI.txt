@@ -48,6 +48,7 @@ characters={
 				slot = political_advisor
 				idea_token = SWI_max_leo_keller
 				allowed  = {
+					is_ai = no
 					original_tag  = SWI
 				}
 				visible = {
@@ -142,6 +143,7 @@ characters={
 			slot = army_chief
 			idea_token = SWI_henri_guisan
 			allowed = {
+				is_ai = no
 				original_tag = SWI
 				SWI_bba = yes
 			}
@@ -167,6 +169,7 @@ characters={
 				idea_token = SWI_j_d_de_montenach
 				
 				allowed = {
+					is_ai = no
 					tag = SWI
 				}
 				visible = {
@@ -202,6 +205,7 @@ characters={
 				slot = air_chief
 				idea_token = SWI_j_d_de_montenach_2
 				allowed = {
+					is_ai = no
 					tag = SWI
 				}
 				traits = {
@@ -232,6 +236,7 @@ characters={
 				ledger = army
 				
 				allowed = {
+					is_ai = no
 					original_tag = SWI
 				}
 				
@@ -266,6 +271,7 @@ characters={
 				idea_token = SWI_jean_de_muralt
 				ledger = army
 					allowed = {
+						is_ai = no
 						original_tag = SWI
 					}
 					traits = {
@@ -294,6 +300,7 @@ characters={
 				idea_token = SWI_hans_oehler_high_command
 				ledger = navy
 				allowed = {
+					is_ai = no
 					original_tag = SWI
 				}
 				visible = {
@@ -314,6 +321,7 @@ characters={
 				slot = political_advisor
 				idea_token = SWI_hans_oehler
 				allowed  = {
+					is_ai = no
 					original_tag  = SWI
 				}
 				visible = {
@@ -364,6 +372,7 @@ characters={
 				idea_token = SWI_hans_oehler
 				ledger = navy
 					allowed = {
+						is_ai = no
 						original_tag = SWI
 					}
 					traits = {
@@ -391,6 +400,7 @@ characters={
 				slot = army_chief
 				idea_token = SWI_ernst_laur
 				allowed = {
+					is_ai = no
 					original_tag = SWI
 				}
 				visible = {
@@ -421,6 +431,7 @@ characters={
 				slot = army_chief
 				idea_token = SWI_ernst_laur
 				allowed = {
+					is_ai = no
 						original_tag = SWI
 					}
 					traits = {
@@ -450,6 +461,7 @@ characters={
 				idea_token = SWI_etienne_primault
 				ledger = air
 				allowed = {
+					is_ai = no
 					original_tag = SWI
 				}
 				visible = {
@@ -481,6 +493,7 @@ characters={
 				idea_token = SWI_etienne_primault
 				ledger = air
 					allowed = {
+						is_ai = no
 						original_tag = SWI
 					}
 					traits = {
@@ -507,6 +520,7 @@ characters={
 				slot = navy_chief
 				idea_token = SWI_hans_peter_bichsel_sohn
 				allowed = {
+					is_ai = no
 					original_tag = SWI
 				}
 				visible = {
@@ -537,6 +551,7 @@ characters={
 				slot = navy_chief
 				idea_token = SWI_hans_peter_bichsel_sohn
 				allowed = {
+					is_ai = no
 						original_tag = SWI
 					}
 					traits = {
@@ -564,6 +579,7 @@ characters={
 			idea_token = SWI_werner_jenni
 			ledger = army
 				allowed = {
+					is_ai = no
 					original_tag = SWI
 				}
 				
@@ -587,6 +603,7 @@ characters={
 				slot = navy_chief
 				idea_token = SWI_rene_von_graffenried
 				allowed = {
+					is_ai = no
 					original_tag = SWI
 				}
 				visible = {
@@ -618,6 +635,7 @@ characters={
 				slot = navy_chief
 				idea_token = SWI_rene_von_graffenried
 				allowed = {
+					is_ai = no
 						original_tag = SWI
 					}
 					traits = {
@@ -647,6 +665,7 @@ characters={
 				idea_token = SWI_eugen_bircher
 				ledger = army
 				allowed = {
+					is_ai = no
 					original_tag = SWI
 				}
 				visible = {
@@ -679,6 +698,7 @@ characters={
 			idea_token = SWI_eugen_bircher
 			ledger = army
 				allowed = {
+					is_ai = no
 					original_tag = SWI
 				}
 				traits = {
@@ -716,6 +736,7 @@ characters={
 				}
 				ledger = air
 				allowed = {
+					is_ai = no
 					original_tag = SWI
 				}
 				
@@ -741,6 +762,7 @@ characters={
 				idea_token = SWI_oskar_bider
 				ledger = air
 					allowed = {
+						is_ai = no
 						original_tag = SWI
 					}
 					
@@ -766,6 +788,7 @@ characters={
 				idea_token = SWI_hermann_hessel_lorenz
 				ledger = army
 				allowed = {
+					is_ai = no
 					original_tag = SWI
 				}
 				visible = {
@@ -797,6 +820,7 @@ characters={
 				idea_token = SWI_hermann_hessel_lorenz
 				ledger = army
 					allowed = {
+						is_ai = no
 						original_tag = SWI
 					}
 					traits = {
@@ -824,6 +848,7 @@ characters={
 				slot = army_chief
 				idea_token = SWI_johann_august_sutter
 				allowed = {
+					is_ai = no
 					original_tag = SWI
 				}
 				visible = {
@@ -854,6 +879,7 @@ characters={
 				slot = army_chief
 				idea_token = SWI_johann_august_sutter
 				allowed = {
+					is_ai = no
 						original_tag = SWI
 					}
 					traits = {
@@ -880,6 +906,7 @@ characters={
 				slot = air_chief
 				idea_token = SWI_carl_jacob_burckhardt
 				allowed = {
+					is_ai = no
 					original_tag = SWI
 				}
 				visible = {
@@ -911,6 +938,7 @@ characters={
 				slot = air_chief
 				idea_token = SWI_carl_jacob_burckhardt
 				allowed = {
+					is_ai = no
 						original_tag = SWI
 					}
 					traits = {
@@ -941,6 +969,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_albert_meyer
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -987,6 +1016,7 @@ characters={
 				slot = political_advisor
 				idea_token = SWI_johannes_baumann
 				allowed  = {
+					is_ai = no
 					original_tag  = SWI
 				}
 				visible = {
@@ -1037,6 +1067,7 @@ characters={
 				slot = political_advisor
 				idea_token = SWI_johannes_baumann
 				allowed  = {
+					is_ai = no
 						original_tag  = SWI
 					}
 					traits  = {
@@ -1057,6 +1088,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_herman_obrecht
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -1099,6 +1131,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_karl_kobelt
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -1141,6 +1174,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_max_petitpierre
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -1179,6 +1213,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_marcel_pilet_golaz
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -1229,6 +1264,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_walther_stampfli
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -1272,6 +1308,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_walter_stucki
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -1311,6 +1348,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_eduard_von_steiger
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -1355,6 +1393,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_friedrich_wahlen
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -1397,6 +1436,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_rudolf_minger
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -1441,6 +1481,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_rudolf_roessler
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -1492,6 +1533,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_walter_allgower
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -1535,6 +1577,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_carl_stucki
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -1573,6 +1616,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_august_lindt
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -1619,6 +1663,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_saly_mayer
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -1658,6 +1703,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_philip_etter
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -1701,6 +1747,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_enrico_celio
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -1744,6 +1791,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_robert_eibel
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -1795,6 +1843,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_ernst_nobs
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -1842,6 +1891,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_robert_grimm
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -1885,6 +1935,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_hans_oprecht
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -1933,6 +1984,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_max_weber
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -1979,6 +2031,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_adolf_brunner
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -2021,6 +2074,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_jakob_schaffner
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -2078,6 +2132,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_robert_tobler
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			available = {
@@ -2131,6 +2186,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_rolf_henne
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -2186,6 +2242,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_franz_riedweg
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			available = {
@@ -2231,6 +2288,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_benno_schaeppi
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -2280,6 +2338,7 @@ characters={
 			ledger = army
 			
 			allowed = {
+				is_ai = no
 				SWI_bba = yes
 			}
 			
@@ -2301,6 +2360,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_adolf_furrer
 			allowed  = {
+				is_ai = no
 				SWI_bba = yes
 			}
 			visible = {
@@ -2348,6 +2408,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_hans_hausamann
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			available = {
@@ -2387,6 +2448,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_clara_thalmann
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			available = {
@@ -2437,6 +2499,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_lucien_tronchet
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			available = {
@@ -2494,6 +2557,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_max_waibel
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -2534,6 +2598,7 @@ characters={
 			idea_token = SWI_jakob_labhart_high_command
 			ledger = army
 			allowed = {
+				is_ai = no
 				SWI_bba = yes 
 			}
 			visible = {
@@ -2557,6 +2622,7 @@ characters={
 			idea_token = SWI_jakob_labhart_theorist
 			ledger = army
 			allowed = {
+				is_ai = no
 				SWI_bba = yes 
 			}
 			visible = {
@@ -2574,6 +2640,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_jakob_labhart
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -2640,6 +2707,7 @@ characters={
 			slot = army_chief
 			idea_token = SWI_jakob_huber_army_chief
 			allowed = {
+				is_ai = no
 				original_tag = SWI
 				SWI_bba = yes
 			}
@@ -2665,6 +2733,7 @@ characters={
 			idea_token = SWI_jakob_huber_theorist
 			ledger = army
 			allowed = {
+				is_ai = no
 				original_tag = SWI
 			}
 			visible = {
@@ -2682,6 +2751,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_jakob_huber
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -2735,6 +2805,7 @@ characters={
 				slot = political_advisor
 				idea_token = SWI_roger_masson
 				allowed  = {
+					is_ai = no
 					original_tag  = SWI
 				}
 				
@@ -2781,6 +2852,7 @@ characters={
 				slot = political_advisor
 				idea_token = SWI_roger_masson
 				allowed  = {
+					is_ai = no
 						original_tag  = SWI
 					}
 					traits  = {
@@ -2811,6 +2883,7 @@ characters={
 					SWI_can_be_councilor = yes
 				}			
 				allowed  = {
+					is_ai = no
 						original_tag  = SWI
 					}
 				traits  = {
@@ -2853,6 +2926,7 @@ characters={
 				slot = political_advisor
 				idea_token = SWI_giuseppe_motta
 				allowed  = {
+					is_ai = no
 						original_tag  = SWI
 					}
 					traits  = {
@@ -2876,6 +2950,7 @@ characters={
 				slot = political_advisor
 				idea_token = SWI_ernst_wetter
 				allowed  = {
+					is_ai = no
 					original_tag  = SWI
 				}
 				visible = {
@@ -2922,6 +2997,7 @@ characters={
 				slot = political_advisor
 				idea_token = SWI_ernst_wetter
 				allowed  = {
+					is_ai = no
 						original_tag  = SWI
 					}
 					traits  = {
@@ -2952,6 +3028,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_christian_gasser
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			visible = {
@@ -2995,6 +3072,7 @@ characters={
 			slot = political_advisor
 			idea_token = SWI_empty_councilor_seat
 			allowed  = {
+				is_ai = no
 				original_tag  = SWI
 			}
 			available = {
@@ -3040,6 +3118,7 @@ characters={
 			slot = navy_chief
 			idea_token = SWI_georg_von_trapp
 			allowed = {
+				is_ai = no
 				OR = {
 					original_tag = SWI
 					original_tag = AUS
