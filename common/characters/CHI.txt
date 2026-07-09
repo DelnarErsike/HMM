@@ -2976,7 +2976,6 @@ characters = {
 	
 		instance = {
 			allowed = {
-				is_ai = no
 				NOT = {
 					has_dlc = "No Compromise, No Surrender"
 				}
