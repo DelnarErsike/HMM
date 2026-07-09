@@ -86,7 +86,7 @@ ideas = {
 		axis_fuel = {
             picture = generic_stockpile_fuel
             modifier = {
-                base_fuel_gain = 3122
+                base_fuel_gain = 2425
             }
         }
 
