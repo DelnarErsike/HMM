@@ -165,7 +165,10 @@
 		}
 
 		available = {
-			NOT = { has_idea = MAN_banditry }
+			if = { # HMM: Need this because the AI will select a focus before it clicks the decisions to get rid of banditry
+				limit = { is_ai = no }
+				NOT = { has_idea = MAN_banditry }
+			}
 			NOT = { has_war_with = JAP }
 			JAP = {
 				exists = yes
