@@ -2016,6 +2016,24 @@ on_actions = {
 				}
 			}
 		}
+
+		effect = { # HMM: switched these to events with specific trigger dates instead of MTTH events
+			if = {
+				limit = {
+					date < 1939.1.1
+				}
+				HUN = {
+					country_event = {
+						id = WW_hungary.123 # Scythe Cross March on Budapest
+						days = 121 # 1 May 36 (historical date of the march)
+					}
+					country_event = {
+						id = WW_hungary.3 # Gömbös dies
+						days = 279 # 6 Oct 36 (historical date of his death)
+					}
+				}
+			}
+		}
 	}
 
 	on_subject_free = {
