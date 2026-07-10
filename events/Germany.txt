@@ -4102,29 +4102,10 @@ country_event = {
 				}
 			}
 			annex_country = { target = CZE }
-			effect_tooltip = {
-				puppet = RKH
-			}
 			hidden_effect = {
 				activate_decision = GER_reichsprotektorat_bohemia_moravia #the part that's different 
 			}
 
-			if = {
-				limit = {
-					has_full_control_of_state = 75
-				}
-				RKH = {
-					transfer_state = 75
-				}
-			}
-			if = {
-				limit = {
-					has_full_control_of_state = 9
-				}
-				RKH = {
-					transfer_state = 9
-				}
-			}
 			add_political_power = 10
 			add_war_support = 0.1
 		}
@@ -4240,12 +4221,6 @@ country_event = {
 						}
 					}
 				}
-				hidden_effect = {
-					HUN = { country_event = { id = MUN_the_fall_of_the_republic.4 days = 1 } }
-					RUT = {
-						load_oob = "RUT_fall_of_the_republic"
-					}
-				}
 			}
 			else_if = {
 				limit = { #First some overly safe sanity checks
@@ -4300,11 +4275,7 @@ country_event = {
 						}
 						THIS = {
 							set_country_flag = CZE_pfot_rut_war_news_event_flag #Tags THIS so they can trigger the news event
-							country_event = { id = MUN_the_fall_of_the_republic.4 days = 1 } 
 						}
-					}
-					RUT = {
-						load_oob = "RUT_fall_of_the_republic"
 					}
 				}
 				
@@ -4773,12 +4744,6 @@ country_event = {
 						}
 					}
 				}
-				hidden_effect = {
-					HUN = { country_event = { id = MUN_the_fall_of_the_republic.4 days = 1 } }
-					RUT = {
-						load_oob = "RUT_fall_of_the_republic"
-					}
-				}
 			}
 			else_if = {
 				limit = { #First some overly safe sanity checks
@@ -4832,11 +4797,7 @@ country_event = {
 						}
 						THIS = {
 							set_country_flag = CZE_pfot_rut_war_news_event_flag #Tags THIS so they can trigger the news event
-							country_event = { id = MUN_the_fall_of_the_republic.4 days = 3 } 
 						}
-					}
-					RUT = {
-						load_oob = "RUT_fall_of_the_republic"
 					}
 				}
 			}
@@ -5087,9 +5048,6 @@ country_event = {
 						}
 					}
 				}
-				hidden_effect = {
-					HUN = { country_event = { id = MUN_the_fall_of_the_republic.4 days = 3 } }
-				}
 			}
 			else_if = {
 				limit = { #First some overly safe sanity checks
@@ -5143,11 +5101,7 @@ country_event = {
 						}
 						THIS = {
 							set_country_flag = CZE_pfot_rut_war_news_event_flag #Tags THIS so they can trigger the news event
-							country_event = { id = MUN_the_fall_of_the_republic.4 days = 3 } 
 						}
-					}
-					RUT = {
-						load_oob = "RUT_fall_of_the_republic"
 					}
 				}
 			}
@@ -5444,12 +5398,6 @@ country_event = {
 						}
 					}
 				}
-				hidden_effect = {
-					HUN = { country_event = { id = MUN_the_fall_of_the_republic.4 days = 1 } }
-					RUT = {
-						load_oob = "RUT_fall_of_the_republic"
-					}
-				}
 			}
 			else_if = {
 				limit = { #First some overly safe sanity checks
@@ -5503,11 +5451,7 @@ country_event = {
 						}
 						THIS = {
 							set_country_flag = CZE_pfot_rut_war_news_event_flag #Tags THIS so they can trigger the news event
-							country_event = { id = MUN_the_fall_of_the_republic.4 days = 3 } 
 						}
-					}
-					RUT = {
-						load_oob = "RUT_fall_of_the_republic"
 					}
 				}
 			}
