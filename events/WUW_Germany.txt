@@ -20332,7 +20332,9 @@ country_event = {
 		has_government = democratic
 	}
 
-	mean_time_to_happen = { days = 1 }
+	# HMM: disabled for performance, it's not needed for us anyway because Luxembourg is not a player
+	is_triggered_only = yes
+	#mean_time_to_happen = { days = 1 }
 
 	fire_only_once = yes
 

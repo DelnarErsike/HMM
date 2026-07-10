@@ -1560,30 +1560,14 @@
 
 		# HMM: removed unnecessary early air disaster launch because communist AST is not in the game
 
-		# HMM: moved the specific on-day events to a weekly action because it's unnecessary for it to be daily (for reference, MTTH events are checked every 20 days)
+		# HMM: moved the specific on-day events to a queued action at startup because it's completely unnecessary and stupid to keep checking every day
 	}
 
+	# HMM: there is no reason these checks needed to be checked every day, weekly pulse is fine
 	on_weekly_AST = {
-		effect = { #Launch event The 1938 Sesquicentenary 
-			IF = {
-				limit = {
-					original_tag = AST
-					has_dlc = "Thunder at Our Gates"
-					date > 1938.01.26
-					NOT = {
-						has_country_flag = AST_the_1938_sesquicentenary_trigger
-						has_country_flag = AST_1939_start
-					}
-				}
-				country_event = { id = AST_political_events.6 hours = 1 }
-				set_country_flag = AST_the_1938_sesquicentenary_trigger
-			}
-		}
-
 		effect = { #Launch War is Coming event
 			IF = {
 				limit = {
-					tag = AST
 					has_completed_focus = AST_war_is_coming
 					threat > 0.35
 					NOT = {
@@ -1592,94 +1576,17 @@
 					}
 				}
 				country_event = { id = AST_political_events.8 hours = 1 }
-
-				ELSE_IF = {
-					limit = {
-						tag = AST
-						NOT = {
-							has_country_flag = AST_war_is_coming_decisions_trigger
-						}
-						has_country_flag = AST_1939_start
-					}
-					country_event = { id = AST_diplomatic_events.77 hours = 3 }
-				}
 			}
-		}
-
-		effect = { #Election Season event
-			IF = {
+			ELSE_IF = {
 				limit = {
-					tag = AST
-					has_dlc = "Thunder at Our Gates"
-				}
-				IF = {
-					limit = {
-						date > 1937.06.17
-						NOT = {
-							has_completed_focus = AST_australia_first
-							has_completed_focus = AST_against_war_and_fascism
-							has_country_flag = AST_election_season_trigger_37
-							has_country_flag = AST_1939_start
-						}
+					NOT = {
+						has_country_flag = AST_war_is_coming_decisions_trigger
 					}
-					country_event = { id = AST_election_events.3 hours = 1 }
-					set_country_flag = AST_election_season_trigger_37
+					has_country_flag = AST_1939_start
 				}
-
-				ELSE_IF = {
-					limit = {
-						date > 1940.06.17
-						NOT = {
-							has_completed_focus = AST_australia_first
-							has_completed_focus = AST_against_war_and_fascism
-							has_country_flag = AST_election_season_trigger_40
-						}
-					}
-					country_event = { id = AST_election_events.3 hours = 1 }
-					set_country_flag = AST_election_season_trigger_40
-				}
-
-				ELSE_IF = {
-					limit = {
-						date > 1943.06.17
-						NOT = {
-							has_completed_focus = AST_australia_first
-							has_completed_focus = AST_against_war_and_fascism
-							has_country_flag = AST_election_season_trigger_43
-						}
-					}
-					country_event = { id = AST_election_events.3 hours = 1 }
-					set_country_flag = AST_election_season_trigger_43
-				}
-
-				ELSE_IF = {
-					limit = {
-						date > 1946.06.17
-						NOT = {
-							has_completed_focus = AST_australia_first
-							has_completed_focus = AST_against_war_and_fascism
-							has_country_flag = AST_election_season_trigger_46
-						}
-					}
-					country_event = { id = AST_election_events.3 hours = 1 }
-					set_country_flag = AST_election_season_trigger_46
-				}
-
-				ELSE_IF = {
-					limit = {
-						date > 1949.06.17
-						NOT = {
-							has_completed_focus = AST_australia_first
-							has_completed_focus = AST_against_war_and_fascism
-							has_country_flag = AST_election_season_trigger_49
-						}
-					}
-					country_event = { id = AST_election_events.3 hours = 1 }
-					set_country_flag = AST_election_season_trigger_49
-				}
+				country_event = { id = AST_diplomatic_events.77 hours = 3 }
 			}
 		}
-
 		effect = {
 			IF = {
 				limit = {
@@ -1693,6 +1600,37 @@
 				}
 				mark_focus_tree_layout_dirty = yes
 				set_country_flag = AST_bound_once_more_visible
+			}
+		}
+	}
+
+	# HMM: these are much better suited to be queued up once instead of being checked for the correct date on a daily pulse
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					date < 1939.1.1
+					has_dlc = "Thunder at Our Gates"
+				}
+				AST = {
+					country_event = {
+						id = AST_political_events.6 #Launch event The 1938 Sesquicentenary 
+						days = 756 # 26 Jan 1938
+					}
+					if = { # HMM: Only the first election season needs to be queued, since each one will queue up the next one in 3 years' time
+						limit = { has_country_flag = AST_1939_start }
+						country_event = {
+							id = AST_election_events.3 # Election Season
+							days = 308 # 18 Jun 1940
+						}
+					}
+					else = {
+						country_event = {
+							id = AST_election_events.3 # Election Season
+							days = 534 # 18 Jun 1937
+						}
+					}
+				}
 			}
 		}
 	}

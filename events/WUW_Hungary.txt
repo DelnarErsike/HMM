@@ -86,10 +86,6 @@ country_event = {
 
 	trigger = {
 		original_tag = HUN
-		
-		date > 1936.10.4
-
-		date < 1939.1.1
 
 		has_government = neutrality
 
@@ -98,7 +94,7 @@ country_event = {
 		has_dlc = "Gotterdammerung"
 	}
 
-	mean_time_to_happen = { days = 1 }
+	is_triggered_only = yes # HMM: switched from MTTH to triggered event
 
 	hidden = no
 
@@ -6489,17 +6485,13 @@ country_event = {
 
 	trigger = {
 		original_tag = HUN
-		
-		date > 1936.4.25
-
-		date < 1939.1.1
 
 		has_civil_war = no
 
 		has_dlc = "Gotterdammerung"
 	}
 
-	mean_time_to_happen = { days = 1 }
+	is_triggered_only = yes # HMM: switched from MTTH to triggered event
 
 	hidden = no
 

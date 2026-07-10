@@ -17,7 +17,7 @@
 
 	inlay_window = {
 		id = sia_khana_ratsadon_inlay_window
-		position = { x = 2200 y = 300 }
+		position = { x = 1900 y = 300 }
 	}
 
 	initial_show_position = {
@@ -5580,7 +5580,7 @@
 	focus = {
 		id = SIA_renegotiate_teak_control
 		icon = GFX_goal_generic_construct_infrastructure
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = SIA_asian_financial_compact	
 		prerequisite = { focus = SIA_asian_financial_compact focus = SIA_revision_of_unequal_treaties }
@@ -5777,6 +5777,7 @@
 		available = {
 		}
 		allow_branch = {
+			always = no
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -5816,9 +5817,9 @@
 	focus = {
 		id = SIA_thai_rice_company
 		icon = GFX_focus_SIA_thai_rice_company
-		x = 2
-		y = 2
-		relative_position_id = SIA_revision_of_unequal_treaties
+		x = 0
+		y = 3
+		relative_position_id = SIA_industrialization_drive
 		prerequisite = { focus = SIA_asian_financial_compact focus = SIA_revision_of_unequal_treaties }
 		mutually_exclusive = { focus = SIA_the_bank_of_siam }
 		cost = 5
@@ -5996,9 +5997,9 @@
 	focus = {
 		id = SIA_boon_rawd_brewery
 		icon = GFX_focus_SIA_boon_rawd_brewery
-		x = 2
+		x = -4
 		y = 1
-		relative_position_id = SIA_siamese_development_cooperative	
+		relative_position_id = SIA_reduction_of_agricultural_yield_taxes	
 		prerequisite = { focus = SIA_siamese_development_cooperative focus = SIA_reduction_of_agricultural_yield_taxes}
 		#mutually_exclusive = { focus =  }
 		cost = 5
@@ -7258,9 +7259,9 @@
 	focus = {
 		id = SIA_kasetsart_university
 		icon = GFX_focus_research
-		x = 4
+		x = -2
 		y = 1
-		relative_position_id = SIA_railway_and_port_extensions	
+		relative_position_id = SIA_prepare_for_the_next_blockade	
 		prerequisite = { focus = SIA_railway_and_port_extensions focus = SIA_prepare_for_the_next_blockade }
 		#mutually_exclusive = { focus =  }
 		cost = 5
