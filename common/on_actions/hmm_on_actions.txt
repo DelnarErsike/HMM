@@ -792,12 +792,18 @@ on_actions = {
 	on_startup = {
 		effect = {
 			if = {
+				limit ={
+					has_game_rule = {
+						rule = playable_iraq
+						option = allies
+					}
+				}
+				SWE = { send_embargo = IRQ }
+				POR = { send_embargo = IRQ }
+			}
+			else_if = {
 				limit = {
-					NOR = { # Set up this way for save compatibility (older versions of HMM used a different set of names for the options)
-						has_game_rule = {
-							rule = playable_iraq
-							option = allies
-						}
+					NOT = { # Set up this way for save compatibility (older versions of HMM used a different set of names for the options)
 						has_game_rule = {
 							rule = playable_iraq
 							option = axis
@@ -821,16 +827,6 @@ on_actions = {
 						set_compliance = 80
 					}
 				}
-			}
-			else_if = {
-				limit ={
-					has_game_rule = {
-						rule = playable_iraq
-						option = allies
-					}
-				}
-				SWE = { send_embargo = IRQ }
-				POR = { send_embargo = IRQ }
 			}
 		}
 	}
