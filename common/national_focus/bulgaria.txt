@@ -7379,6 +7379,7 @@ focus_tree = {
 			}
 			is_subject = no
 		}
+		allow_branch = { always = no }
 		
 		completion_reward = {
 			if = {
@@ -8033,8 +8034,8 @@ focus_tree = {
 		prerequisite = { focus = BUL_depose_the_tsar }
 		icon = GFX_goal_generic_political_pressure
 		relative_position_id = BUL_depose_the_tsar
-		x = 0
-		y = 3
+		x = 2
+		y = 1
 		cost = 10
 
 		available = {
@@ -8343,7 +8344,7 @@ focus_tree = {
 
 		icon = GFX_focus_chi_mission_to_germany
 		relative_position_id = BUL_bulgarian_irredentism
-		x = 2
+		x = 0
 		y = 2
 		cost = 10
 
@@ -8609,7 +8610,7 @@ focus_tree = {
 		icon = GFX_goal_support_fascism
 		relative_position_id = BUL_approach_germany
 		x = 0
-		y = 4
+		y = 3
 		cost = 5
 		mutually_exclusive = { focus = BUL_the_fate_of_the_balkans focus = BUL_join_the_allies }
 
