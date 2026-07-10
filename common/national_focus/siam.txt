@@ -5428,17 +5428,6 @@
 		#allow_branch = {
 		#}
 
-        offset = {
-            x = 4
-            y = 0
-            trigger = {
-                has_game_rule = {
-                    rule = obsolete_focus_branches_visibility
-                    option = HIDE
-                }
-                has_completed_focus = SIA_phibuns_premiership
-            }
-        }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
@@ -5475,17 +5464,6 @@
 			factor = 15
 		}
 		available = {
-		}
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { has_completed_focus = SIA_revision_of_unequal_treaties }
-			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 
@@ -5560,17 +5538,6 @@
 			factor = 15
 		}
 		available = {
-		}
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { has_completed_focus = SIA_asian_financial_compact }
-			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -5810,15 +5777,6 @@
 		available = {
 		}
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { has_completed_focus = SIA_thai_rice_company }
-			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -5870,15 +5828,6 @@
 		available = {
 		}
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { has_completed_focus = SIA_the_bank_of_siam }
-			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
