@@ -882,6 +882,46 @@ on_actions = {
 				limit = {
 					NOT = {
 						has_game_rule = {
+							rule = pinpoint_strikes_status
+							option = allowed
+						}
+					}
+					any_country = {
+						has_doctrine = air_subdoctrine_dive_bombers
+					}
+				}
+				every_country = {
+					limit = {
+						has_doctrine = air_subdoctrine_dive_bombers
+						if = {
+							limit = {
+								has_game_rule = {
+									rule = pinpoint_strikes_status
+									option = axis
+								}
+							}
+							allies = yes
+						}
+						else_if = {
+							limit = {
+								has_game_rule = {
+									rule = pinpoint_strikes_status
+									option = allies
+								}
+							}
+							axis = yes
+						}
+					}
+					set_sub_doctrine = {
+						sub_doctrine = air_subdoctrine_flexible_fire_support
+						folder = air
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
 							rule = ground_support_subdoctrines_status
 							option = allowed
 						}
@@ -943,7 +983,7 @@ on_actions = {
 							has_doctrine = air_subdoctrine_flying_artillery
 						}
 						set_sub_doctrine = {
-							sub_doctrine = air_subdoctrine_dive_bombers
+							sub_doctrine = air_subdoctrine_flexible_fire_support
 							folder = air
 						}
 					}
