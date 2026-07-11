@@ -1170,6 +1170,7 @@ faction_goal_marine_corps = {
 	category = medium_term
 	group = FOCUS_FILTER_NAVY_XP
 	available = {
+		always = no
 	}
 	visible = {
 		always = no
@@ -1283,6 +1284,7 @@ faction_goal_airborne_corps = {
 	category = medium_term
 	group = FOCUS_FILTER_AIR_XP
 	available = {
+		always = no
 	}
 	visible = {
 		always = no
@@ -1383,6 +1385,7 @@ faction_goal_mountaineer_corps = {
 	category = medium_term
 	group = FOCUS_FILTER_ARMY_XP
 	available = {
+		always = no
 	}
 	visible = {
 		always = no

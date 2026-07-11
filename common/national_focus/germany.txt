@@ -2959,7 +2959,7 @@ focus_tree = {
 					category  = short_term # options: short_term, medium_term, long_term 
 					value = 1 
 				}
-				add_faction_goal = faction_goal_an_infantry_army
+				#add_faction_goal = faction_goal_an_infantry_army
 				
 			}
 		}
@@ -4345,7 +4345,7 @@ focus_tree = {
 					category  = short_term # options: short_term, medium_term, long_term 
 					value = 1 
 				}
-				add_faction_goal = faction_goal_an_armored_fist
+				#add_faction_goal = faction_goal_an_armored_fist
 			}
 		}
 	}
