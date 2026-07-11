@@ -170,7 +170,7 @@ air_subdoctrine_tactical_battlefield_support = {
         if = {
             limit = {
                 has_game_rule = {
-                    rule = cas_doctrines_status
+                    rule = ground_support_subdoctrines_status
                     option = banned
                 }
             }
@@ -182,7 +182,7 @@ air_subdoctrine_tactical_battlefield_support = {
         else_if = {
             limit = {
                 has_game_rule = {
-                    rule = cas_doctrines_status
+                    rule = ground_support_subdoctrines_status
                     option = axis
                 }
             }
@@ -194,7 +194,7 @@ air_subdoctrine_tactical_battlefield_support = {
         else_if = {
             limit = {
                 has_game_rule = {
-                    rule = cas_doctrines_status
+                    rule = ground_support_subdoctrines_status
                     option = allies
                 }
             }
