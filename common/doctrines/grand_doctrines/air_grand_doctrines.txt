@@ -120,7 +120,7 @@ new_battlefield_support = {
         if = {
             limit = {
                 has_game_rule = {
-                    rule = cas_doctrines_status
+                    rule = battlefield_support_status
                     option = banned
                 }
             }
@@ -132,7 +132,7 @@ new_battlefield_support = {
         else_if = {
             limit = {
                 has_game_rule = {
-                    rule = cas_doctrines_status
+                    rule = battlefield_support_status
                     option = axis
                 }
             }
@@ -144,7 +144,7 @@ new_battlefield_support = {
         else_if = {
             limit = {
                 has_game_rule = {
-                    rule = cas_doctrines_status
+                    rule = battlefield_support_status
                     option = allies
                 }
             }

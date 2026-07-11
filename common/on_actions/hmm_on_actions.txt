@@ -845,17 +845,21 @@ on_actions = {
 				limit = {
 					NOT = {
 						has_game_rule = {
-							rule = cas_doctrines_status
+							rule = battlefield_support_status
 							option = allowed
 						}
+					}
+					any_country = {
+						has_doctrine = new_battlefield_support
 					}
 				}
 				every_country = {
 					limit = {
+						has_doctrine = new_battlefield_support
 						if = {
 							limit = {
 								has_game_rule = {
-									rule = cas_doctrines_status
+									rule = battlefield_support_status
 									option = axis
 								}
 							}
@@ -864,26 +868,57 @@ on_actions = {
 						else_if = {
 							limit = {
 								has_game_rule = {
-									rule = cas_doctrines_status
+									rule = battlefield_support_status
+									option = allies
+								}
+							}
+							axis = yes
+						}
+					}
+					set_grand_doctrine = new_strategic_destruction
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = ground_support_subdoctrines_status
+							option = allowed
+						}
+					}
+					any_country = {
+						OR = {
+							has_doctrine = air_subdoctrine_fighter_bombers
+							has_doctrine = air_subdoctrine_tactical_battlefield_support
+							has_doctrine = air_subdoctrine_flying_artillery
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						if = {
+							limit = {
+								has_game_rule = {
+									rule = ground_support_subdoctrines_status
+									option = axis
+								}
+							}
+							allies = yes
+						}
+						else_if = {
+							limit = {
+								has_game_rule = {
+									rule = ground_support_subdoctrines_status
 									option = allies
 								}
 							}
 							axis = yes
 						}
 						OR = {
-							has_doctrine = new_battlefield_support
 							has_doctrine = air_subdoctrine_fighter_bombers
 							has_doctrine = air_subdoctrine_tactical_battlefield_support
 							has_doctrine = air_subdoctrine_flying_artillery
-							has_doctrine = air_subdoctrine_dive_bombers
-							has_doctrine = air_subdoctrine_carrier_strikes
 						}
-					}
-					if = {
-						limit = {
-							has_doctrine = new_battlefield_support
-						}
-						set_grand_doctrine = new_strategic_destruction
 					}
 					if = {
 						limit = {
@@ -905,14 +940,10 @@ on_actions = {
 					}
 					if = {
 						limit = {
-							OR = {
-								has_doctrine = air_subdoctrine_flying_artillery
-								has_doctrine = air_subdoctrine_dive_bombers
-								has_doctrine = air_subdoctrine_carrier_strikes
-							}
+							has_doctrine = air_subdoctrine_flying_artillery
 						}
 						set_sub_doctrine = {
-							sub_doctrine = air_subdoctrine_flexible_fire_support
+							sub_doctrine = air_subdoctrine_dive_bombers
 							folder = air
 						}
 					}

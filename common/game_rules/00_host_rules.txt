@@ -574,29 +574,79 @@ axis_fuel_spirit = {
 		desc = "Romanian and Hungarian oil decisions and focuses are kept as they are in the base game."
 	}
 }
-cas_doctrines_status = {
-	name = "Ground Support doctrines are..."
+battlefield_support_status = {
+	name = "The Battlefield Support grand doctrine is..."
 	group = "HMM Rules"
 	icon = "GFX_decision_generic_air"
 	default = {
 		name = banned
-		text = "Fully Banned"
-		desc = "Battlefield Support and all air subdoctrines that provide ground support bonuses cannot be taken by anyone."
+		text = "RFully Banned"
+		desc = "Battlefield Support cannot be taken by anyone."
 	}
 	option = {
 		name = axis
-		text = "Axis Only"
-		desc = "Battlefield Support and all air subdoctrines that provide ground support bonuses are only allowed for Axis countries."
+		text = "YAxis Only"
+		desc = "Battlefield Support is only allowed for Axis countries."
 	}
 	option = {
 		name = allies
-		text = "Allies Only"
-		desc = "Battlefield Support and all air subdoctrines that provide ground support bonuses are only allowed for Allied countries."
+		text = "YAllies Only"
+		desc = "Battlefield Support is only allowed for Allied countries."
 	}
 	option = {
 		name = allowed
-		text = "Allowed for Everyone"
-		desc = "All grand doctrines and air subdoctrines can be taken by anyone."
+		text = "GAllowed for Everyone"
+		desc = "Battlefield Support can be taken by anyone."
+	}
+}
+ground_support_subdoctrines_status = {
+	name = "Ground Support-giving subdoctrines are..."
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_air"
+	default = {
+		name = banned
+		text = "RFully Banned"
+		desc = "Air subdoctrines that provide ground support bonuses cannot be taken by anyone."
+	}
+	option = {
+		name = axis
+		text = "YAxis Only"
+		desc = "Air subdoctrines that provide ground support bonuses are only allowed for Axis countries."
+	}
+	option = {
+		name = allies
+		text = "YAllies Only"
+		desc = "Air subdoctrines that provide ground support bonuses are only allowed for Allied countries."
+	}
+	option = {
+		name = allowed
+		text = "GAllowed for Everyone"
+		desc = "All air subdoctrines can be taken by anyone."
+	}
+}
+integrate_czech_manufacturers_status = {
+	name = "The Integrate Czech Manufacturers focus for Germany is..."
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_industry"
+	option = {
+		name = disabled
+		text = "RFully Disabled"
+		desc = "The Integrate Czech Manufacturers focus cannot be taken by Germany."
+	}
+	option = {
+		name = enabled_no_mios
+		text = "OEnabled Without MIOs"
+		desc = "The Integrate Czech Manufacturers focus can be taken, but does not unlock any new MIOs for Germany."
+	}
+	default = {
+		name = enabled_no_tank_mios
+		text = "YEnabled Without Tank-Related MIOs"
+		desc = "The Integrate Czech Manufacturers focus can be taken, but does not unlock tank-related MIOs for Germany."
+	}
+	option = {
+		name = enabled
+		text = "GEnabled"
+		desc = "The Integrate Czech Manufacturers focus functions as it does in vanilla."
 	}
 }
 tradebacks = {

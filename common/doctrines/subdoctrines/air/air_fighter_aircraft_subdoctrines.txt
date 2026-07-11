@@ -110,7 +110,7 @@ track = fighter_aircraft
         if = {
             limit = {
                 has_game_rule = {
-                    rule = cas_doctrines_status
+                    rule = ground_support_subdoctrines_status
                     option = banned
                 }
             }
@@ -122,7 +122,7 @@ track = fighter_aircraft
         else_if = {
             limit = {
                 has_game_rule = {
-                    rule = cas_doctrines_status
+                    rule = ground_support_subdoctrines_status
                     option = axis
                 }
             }
@@ -134,7 +134,7 @@ track = fighter_aircraft
         else_if = {
             limit = {
                 has_game_rule = {
-                    rule = cas_doctrines_status
+                    rule = ground_support_subdoctrines_status
                     option = allies
                 }
             }
