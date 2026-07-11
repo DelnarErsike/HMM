@@ -624,6 +624,29 @@ ground_support_subdoctrines_status = {
 		desc = "All air subdoctrines can be taken by anyone."
 	}
 }
+integrate_czech_manufacturers_status = {
+	name = "The Integrate Czech Manufacturers focus for Germany is..."
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_industry"
+	option = {
+		name = disabled
+		text = "RFully Disabled"
+		desc = "The Integrate Czech Manufacturers focus cannot be taken by Germany."
+	}
+	option = {
+		name = enabled_no_mios
+		text = "OEnabled Without MIOs"
+		desc = "The Integrate Czech Manufacturers focus can be taken, but does not unlock any new MIOs for Germany."
+	}
+	default = {
+		name = enabled_no_tank_mios
+		text = "YEnabled Without Tank-Related MIOs"
+		desc = "The Integrate Czech Manufacturers focus can be taken, but does not unlock tank-related MIOs for Germany."
+	}
+	option = {
+		name = enabled
+		text = "GEnabled"
+		desc = "The Integrate Czech Manufacturers focus functions as it does in vanilla."
 	}
 }
 tradebacks = {
