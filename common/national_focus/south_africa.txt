@@ -274,7 +274,6 @@
 				remove_idea = SAF_cheap_labor_2
 				add_idea = SAF_cheap_labor_3
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = hmm_SAF_outlaw_strikes_warning
 		}
 	}
