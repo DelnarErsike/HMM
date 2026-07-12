@@ -137,6 +137,7 @@
  # Altered versions of vanilla descriptions that we only want to override in specific spots
  HMM_seize_gold_modify_economy_of_conquest_modifier_tt: "Modify §Y$GER_economy_of_conquest_modifier$§! by up to (less than if country is not fully occupied or has already had its reserves seized before):"
  hmm_wuw_HUN_support_for_our_finnish_brothers_extra_arms: "After a few days, Finland will receive a shipment from us of infantry equipment, support equipment, and a military factory."
+ hmm_SAF_outlaw_strikes_warning: "§RWARNING!§!\nIf you take this focus instead of Expand the Cape Corps, you WILL run out of manpower for most builds!\n\n§YOnly take this if you know what you are doing!§!"
 
   # Template decisions category and decisions
  templates:0 "Division Templates"

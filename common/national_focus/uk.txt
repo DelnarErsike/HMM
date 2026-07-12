@@ -8541,15 +8541,7 @@ focus_tree = {
 					}
 					NOT = { state = 331 }
 					OWNER = {
-						NOT = {
-							OR = {
-								tag = ENG
-								tag = CAN
-								tag = SAF
-								tag = AST
-								tag = NZL
-							}
-						}
+						allies = no
 					}
 				}
 			}
@@ -8564,10 +8556,10 @@ focus_tree = {
 				exists = no
 			}
 			RAJ = {
-				OR = {
+				#OR = {
 					exists = no
-					NOT = { is_subject_of = ENG }
-				}
+				#	NOT = { is_subject_of = ENG }
+				#}
 			}
 			AST = {
 				exists = no
@@ -8585,7 +8577,7 @@ focus_tree = {
 						is_core_of = NZL
 					}
 					OWNER = {
-						NOT = { tag = ENG }
+						allies = no
 					}
 				}
 			}

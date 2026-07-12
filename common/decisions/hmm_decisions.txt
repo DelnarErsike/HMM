@@ -2256,7 +2256,7 @@ MOD_countdown_to_victory_cat = {
     	}
     	cost = 0
     	complete_effect = {
-    		initilize_victory_system = yes
+    		initialize_victory_system = yes
     	}
     }
 

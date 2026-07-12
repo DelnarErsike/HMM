@@ -46,35 +46,56 @@ is_annexable_playable_country = {
 }
 
 allies = {
-	OR = {
-		tag = ENG
-		tag = FRA
-		tag = CAN
-		tag = AST
-		tag = BRA
-		tag = MEX
-		tag = NZL
-		tag = USA
-		tag = RAJ
-		tag = SAF
-		tag = IRE
-		tag = SOV
-		tag = NOR
-		tag = HOL
-		tag = BEL
-		tag = LUX
-		tag = POL
-		tag = DEN
-		tag = PHI
-		if = {
-			limit = {
-				NOT = {
-					has_game_rule = {
-						rule = playable_iraq
-						option = axis
-					}
-				}
+	if = { # Has to be set up this way to not cause weird bugs
+		limit = {
+			has_game_rule = {
+				rule = playable_iraq
+				option = axis
 			}
+		}
+		OR = {
+			tag = ENG
+			tag = FRA
+			tag = CAN
+			tag = AST
+			tag = BRA
+			tag = MEX
+			tag = NZL
+			tag = USA
+			tag = RAJ
+			tag = SAF
+			tag = IRE
+			tag = SOV
+			tag = NOR
+			tag = HOL
+			tag = BEL
+			tag = LUX
+			tag = POL
+			tag = DEN
+			tag = PHI
+		}
+	}
+	else = {
+		OR = {
+			tag = ENG
+			tag = FRA
+			tag = CAN
+			tag = AST
+			tag = BRA
+			tag = MEX
+			tag = NZL
+			tag = USA
+			tag = RAJ
+			tag = SAF
+			tag = IRE
+			tag = SOV
+			tag = NOR
+			tag = HOL
+			tag = BEL
+			tag = LUX
+			tag = POL
+			tag = DEN
+			tag = PHI
 			tag = IRQ
 		}
 	}
@@ -82,49 +103,87 @@ allies = {
 
 
 axis = {
-	OR = {
-		tag = GER
-		tag = ITA
-		tag = HUN
-		tag = ROM
-		tag = SPR
-		tag = BUL
-		tag = JAP
-		tag = SIA
-		tag = MAN
-		tag = FIN
-		tag = RKB
-		tag = RKN
-		tag = RKG
-		tag = RKU
-		tag = RKO
-		tag = RKK
-		tag = RKT
-		tag = RKM
-		tag = RKL
-		tag = GEN
-		tag = RKH
-		tag = RKI
-		tag = RKC
-		tag = RGB
-		tag = RKA
-		tag = RNA
-		tag = RUS
-		tag = RCO
-		tag = RAN
-		tag = RKV
-		tag = RHD
-		tag = RAR
-		tag = ROA
-		tag = RAA
-		if = {
-			limit = {
-				has_game_rule = {
-					rule = playable_iraq
-					option = axis
-				}
+	if = { # Has to be set up this way to not cause weird bugs
+		limit = {
+			has_game_rule = {
+				rule = playable_iraq
+				option = axis
 			}
+		}
+		OR = {
+			tag = GER
+			tag = ITA
+			tag = HUN
+			tag = ROM
+			tag = SPR
+			tag = BUL
+			tag = JAP
+			tag = SIA
+			tag = MAN
+			tag = FIN
+			tag = RKB
+			tag = RKN
+			tag = RKG
+			tag = RKU
+			tag = RKO
+			tag = RKK
+			tag = RKT
+			tag = RKM
+			tag = RKL
+			tag = GEN
+			tag = RKH
+			tag = RKI
+			tag = RKC
+			tag = RGB
+			tag = RKA
+			tag = RNA
+			tag = RUS
+			tag = RCO
+			tag = RAN
+			tag = RKV
+			tag = RHD
+			tag = RAR
+			tag = ROA
+			tag = RAA
 			tag = IRQ
+		}
+	}
+	else = {
+		OR = {
+			tag = GER
+			tag = ITA
+			tag = HUN
+			tag = ROM
+			tag = SPR
+			tag = BUL
+			tag = JAP
+			tag = SIA
+			tag = MAN
+			tag = FIN
+			tag = RKB
+			tag = RKN
+			tag = RKG
+			tag = RKU
+			tag = RKO
+			tag = RKK
+			tag = RKT
+			tag = RKM
+			tag = RKL
+			tag = GEN
+			tag = RKH
+			tag = RKI
+			tag = RKC
+			tag = RGB
+			tag = RKA
+			tag = RNA
+			tag = RUS
+			tag = RCO
+			tag = RAN
+			tag = RKV
+			tag = RHD
+			tag = RAR
+			tag = ROA
+			tag = RAA
 		}
 	}
 }
@@ -141,7 +200,6 @@ ai_manpower = {
 		tag = DEN
 		tag = ALB
 		tag = IRE
-
 	}
 }
 ai_annex = {

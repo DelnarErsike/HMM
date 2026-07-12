@@ -599,6 +599,31 @@ battlefield_support_status = {
 		desc = "Battlefield Support can be taken by anyone."
 	}
 }
+pinpoint_strikes_status = {
+	name = "The Pinpoint Strikes subdoctrine is..."
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_air"
+	default = {
+		name = banned
+		text = "RFully Banned"
+		desc = "Pinpoint Strikes cannot be taken by anyone."
+	}
+	option = {
+		name = axis
+		text = "YAxis Only"
+		desc = "Pinpoint Strikes is only allowed for Axis countries."
+	}
+	option = {
+		name = allies
+		text = "YAllies Only"
+		desc = "Pinpoint Strikes is only allowed for Allied countries."
+	}
+	option = {
+		name = allowed
+		text = "GAllowed for Everyone"
+		desc = "Pinpoint Strikes can be taken by anyone."
+	}
+}
 ground_support_subdoctrines_status = {
 	name = "Ground Support-giving subdoctrines are..."
 	group = "HMM Rules"

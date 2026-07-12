@@ -1481,6 +1481,9 @@ faction_goal_an_armored_fist = {
 	description = an_armored_fist_goal_desc
 	category = short_term
 	group = FOCUS_FILTER_ARMY_XP
+	available = {
+		always = no
+	}
 	visible = {
 		always = no
 	}
@@ -1530,6 +1533,9 @@ faction_goal_an_infantry_army = {
 	description = an_infantry_army_goal_desc
 	category = short_term
 	group = FOCUS_FILTER_ARMY_XP
+	available = {
+		always = no
+	}
 	visible = {
 		always = no
 	}

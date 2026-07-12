@@ -2,19 +2,13 @@ defined_text = {
 	name = GetNanjingOwner
 	text = {
 		trigger = {
-			any_country = {
-				axis = yes
-				controls_state = 613
-			}
+			613 = { controller = { axis = yes } }
 		}
 		localization_key = vp_axis_owns
 	}
 	text = {
 		trigger = {
-			any_country = {
-				allies = yes
-				controls_state = 613
-			}
+			613 = { controller = { allies = yes } }
 		}
 		localization_key = vp_alies_owns
 	}
@@ -23,19 +17,13 @@ defined_text = {
 	name = GetDehliOwner
 	text = {
 		trigger = {
-			any_country = {
-				axis = yes
-				controls_state = 439
-			}
+			439 = { controller = { axis = yes } }
 		}
 		localization_key = vp_axis_owns
 	}
 	text = {
 		trigger = {
-			any_country = {
-				allies = yes
-				controls_state = 439
-			}
+			439 = { controller = { allies = yes } }
 		}
 		localization_key = vp_alies_owns
 	}
@@ -44,19 +32,13 @@ defined_text = {
 	name = GetAlexandriaOwner
 	text = {
 		trigger = {
-			any_country = {
-				axis = yes
-				controls_state = 447
-			}
+			447 = { controller = { axis = yes } }
 		}
 		localization_key = vp_axis_owns
 	}
 	text = {
 		trigger = {
-			any_country = {
-				allies = yes
-				controls_state = 447
-			}
+			447 = { controller = { allies = yes } }
 		}
 		localization_key = vp_alies_owns
 	}
@@ -65,19 +47,13 @@ defined_text = {
 	name = GetBenghasiOwner
 	text = {
 		trigger = {
-			any_country = {
-				axis = yes
-				controls_state = 450
-			}
+			450 = { controller = { axis = yes } }
 		}
 		localization_key = vp_axis_owns
 	}
 	text = {
 		trigger = {
-			any_country = {
-				allies = yes
-				controls_state = 450
-			}
+			450 = { controller = { allies = yes } }
 		}
 		localization_key = vp_alies_owns
 	}
@@ -86,19 +62,13 @@ defined_text = {
 	name = GetAmsterdamOwner
 	text = {
 		trigger = {
-			any_country = {
-				axis = yes
-				controls_state = 7
-			}
+			7 = { controller = { axis = yes } }
 		}
 		localization_key = vp_axis_owns
 	}
 	text = {
 		trigger = {
-			any_country = {
-				allies = yes
-				controls_state = 7
-			}
+			7 = { controller = { allies = yes } }
 		}
 		localization_key = vp_alies_owns
 	}
@@ -107,19 +77,13 @@ defined_text = {
 	name = GetParisOwner
 	text = {
 		trigger = {
-			any_country = {
-				axis = yes
-				controls_state = 16
-			}
+			16 = { controller = { axis = yes } }
 		}
 		localization_key = vp_axis_owns
 	}
 	text = {
 		trigger = {
-			any_country = {
-				allies = yes
-				controls_state = 16
-			}
+			16 = { controller = { allies = yes } }
 		}
 		localization_key = vp_alies_owns
 	}
@@ -128,19 +92,13 @@ defined_text = {
 	name = GetLyonOwner
 	text = {
 		trigger = {
-			any_country = {
-				axis = yes
-				controls_state = 20
-			}
+			20 = { controller = { axis = yes } }
 		}
 		localization_key = vp_axis_owns
 	}
 	text = {
 		trigger = {
-			any_country = {
-				allies = yes
-				controls_state = 20
-			}
+			20 = { controller = { allies = yes } }
 		}
 		localization_key = vp_alies_owns
 	}
@@ -149,19 +107,13 @@ defined_text = {
 	name = GetBryanskOwner
 	text = {
 		trigger = {
-			any_country = {
-				axis = yes
-				controls_state = 224
-			}
+			224 = { controller = { axis = yes } }
 		}
 		localization_key = vp_axis_owns
 	}
 	text = {
 		trigger = {
-			any_country = {
-				allies = yes
-				controls_state = 224
-			}
+			224 = { controller = { allies = yes } }
 		}
 		localization_key = vp_alies_owns
 	}
@@ -170,19 +122,13 @@ defined_text = {
 	name = GetMoscowOwner
 	text = {
 		trigger = {
-			any_country = {
-				axis = yes
-				controls_state = 219
-			}
+			219 = { controller = { axis = yes } }
 		}
 		localization_key = vp_axis_owns
 	}
 	text = {
 		trigger = {
-			any_country = {
-				allies = yes
-				controls_state = 219
-			}
+			219 = { controller = { allies = yes } }
 		}
 		localization_key = vp_alies_owns
 	}
@@ -191,19 +137,13 @@ defined_text = {
 	name = GetStalingradOwner
 	text = {
 		trigger = {
-			any_country = {
-				axis = yes
-				controls_state = 217
-			}
+			217 = { controller = { axis = yes } }
 		}
 		localization_key = vp_axis_owns
 	}
 	text = {
 		trigger = {
-			any_country = {
-				allies = yes
-				controls_state = 217
-			}
+			217 = { controller = { allies = yes } }
 		}
 		localization_key = vp_alies_owns
 	}
