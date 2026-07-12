@@ -13922,6 +13922,13 @@ focus_tree = {
 					SIA = { is_ai = yes }
 				}
 				annex_country = { target = SIA transfer_troops = yes }
+				every_state = {
+					limit = {
+						is_core_of = SIA
+						is_controlled_by = JAP
+					}
+					add_compliance = 100
+				}
 			}
 			else_if = {
 				limit = {
