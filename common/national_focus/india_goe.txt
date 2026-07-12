@@ -21575,6 +21575,7 @@ focus = {
             432 = {
                 is_fully_controlled_by = ROOT
             }
+            date > 1937.12.31 # Prevents newbies on SAF from taking Deterrence
         }
         
         bypass = {
@@ -21921,7 +21922,7 @@ focus = {
         }
 
         available = {
-
+            date > 1937.12.31 # Prevents newbies on SAF from taking Deterrence
         }
         
         bypass = {

@@ -136,7 +136,7 @@
 		}
 
 		available = {
-
+			date > 1937.12.31 # Prevents newbies on SAF from taking Deterrence
 		}
 		
 		bypass = {
@@ -3673,7 +3673,7 @@
 		}
 
 		available = {
-
+			date > 1937.12.31 # Prevents newbies on SAF from taking Deterrence
 		}
 		
 		bypass = {

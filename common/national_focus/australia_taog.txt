@@ -2702,6 +2702,7 @@ focus_tree = {
 		cost = 10
 
 		available = {
+			date > 1937.12.31 # Prevents newbies on SAF from taking Deterrence
 		}
 
 		bypass = {
