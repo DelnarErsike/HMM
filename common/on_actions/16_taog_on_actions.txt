@@ -1563,47 +1563,6 @@
 		# HMM: moved the specific on-day events to a queued action at startup because it's completely unnecessary and stupid to keep checking every day
 	}
 
-	# HMM: there is no reason these checks needed to be checked every day, weekly pulse is fine
-	on_weekly_AST = {
-		effect = { #Launch War is Coming event
-			IF = {
-				limit = {
-					has_completed_focus = AST_war_is_coming
-					threat > 0.35
-					NOT = {
-						has_country_flag = AST_war_is_coming_decisions_trigger
-						has_country_flag = AST_1939_start
-					}
-				}
-				country_event = { id = AST_political_events.8 hours = 1 }
-			}
-			ELSE_IF = {
-				limit = {
-					NOT = {
-						has_country_flag = AST_war_is_coming_decisions_trigger
-					}
-					has_country_flag = AST_1939_start
-				}
-				country_event = { id = AST_diplomatic_events.77 hours = 3 }
-			}
-		}
-		effect = {
-			IF = {
-				limit = {
-					original_tag = AST
-					has_completed_focus = AST_the_ultimate_overseas_duty
-					NOT = {
-						is_subject_of = ENG
-						is_in_faction_with = ENG
-						has_country_flag = AST_bound_once_more_visible
-					}
-				}
-				mark_focus_tree_layout_dirty = yes
-				set_country_flag = AST_bound_once_more_visible
-			}
-		}
-	}
-
 	# HMM: these are much better suited to be queued up once instead of being checked for the correct date on a daily pulse
 	on_startup = {
 		effect = {
@@ -1636,22 +1595,48 @@
 	}
 
 	on_war = {
-		effect = { #Launch Platypus event
-			IF = {
+		effect = {
+			if = {
 				limit = {
-					has_dlc = "Thunder at Our Gates"
 					ROOT = {
 						original_tag = AST
 						has_war = yes
-						OR = {
-							is_subject_of = ENG
-							is_in_faction_with = ENG
+					}
+				}
+				IF = { #Launch Platypus event
+					limit = {
+						has_dlc = "Thunder at Our Gates"
+						ROOT = {
+							OR = {
+								is_subject_of = ENG
+								is_in_faction_with = ENG
+							}
+						}
+						NOT = { has_country_flag = AST_platypus_event_trigger }
+					}
+					country_event = { id = AST_diplomatic_events.81 days = 90 }
+					set_country_flag = AST_platypus_event_trigger
+				}
+				# HMM: Moved the War is Coming event to trigger when Australia enters the war
+				IF = { #Launch War is Coming event
+					limit = {
+						has_completed_focus = AST_war_is_coming
+						NOT = {
+							has_country_flag = AST_war_is_coming_decisions_trigger
+							has_country_flag = AST_1939_start
 						}
 					}
-					NOT = { has_country_flag = AST_platypus_event_trigger }
+					country_event = { id = AST_political_events.8 hours = 1 }
 				}
-				country_event = { id = AST_diplomatic_events.81 days = 90 }
-				set_country_flag = AST_platypus_event_trigger
+				ELSE_IF = {
+					limit = {
+						NOT = {
+							has_country_flag = AST_war_is_coming_decisions_trigger
+						}
+						has_country_flag = AST_1939_start
+					}
+					country_event = { id = AST_diplomatic_events.77 hours = 3 }
+				}
 			}
 		}
 	}
