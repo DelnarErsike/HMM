@@ -4892,6 +4892,7 @@ focus_tree = {
 		bypass = {
 
 		}
+		allow_branch = { allies = yes }
 
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 
@@ -5041,7 +5042,8 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			has_army_manpower = { size > 30000 }
+			# HMM: no need to deploy army
+			#has_army_manpower = { size > 30000 }
 			OR = {
 				455 = { is_owned_and_controlled_by = ENG }
 				JOR = { is_subject_of = ENG }
@@ -5066,12 +5068,15 @@ focus_tree = {
 
 		completion_reward = {
 
+			if = {
+				limit = { allies = yes }
 			ENG = {
 				country_event = {
 					id = IRQ_political_events.16
 					hours = 1
 				}
-			}	
+			}
+			}
 
 			#set_cosmetic_tag = IRQ_kingdom_of_iraq_tag
 
@@ -5211,12 +5216,13 @@ focus_tree = {
 			base = 1
 		}
 
-		will_lead_to_war_with = PAL
-		will_lead_to_war_with = ENG
+		#will_lead_to_war_with = PAL
+		#will_lead_to_war_with = ENG
 
 		available = {
 			is_subject = no
-			has_army_manpower = { size > 45000 }
+			# HMM: no need to deploy manpower
+			#has_army_manpower = { size > 45000 }
 			OR = {
 				454 = { is_owned_and_controlled_by = ENG }
 				AND = {
@@ -5232,7 +5238,6 @@ focus_tree = {
 				PAL = { is_subject_of = ENG }
 			}
 		}
-		allow_branch = { always = no }
 
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_STABILITY }
 
@@ -5246,10 +5251,45 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			ENG = {
-				country_event = {
-					id = IRQ_political_events.21
-					hours = 1
+			if = {
+				limit = { allies = yes }
+				ENG = {
+					country_event = {
+						id = IRQ_political_events.21
+						hours = 1
+					}
+				}
+				custom_effect_tooltip = if_they_accept_tt
+				effect_tooltip = {
+					454 = {
+						transfer_state_to = ROOT
+					}
+				}
+				custom_effect_tooltip = if_they_reject
+				effect_tooltip = {
+					454 = { add_claim_by = ROOT }
+					add_war_support = 0.1
+					remove_ideas = IRQ_anglo_iraqi_treaty
+					ENG = {
+						diplomatic_relation = { 
+							country = ROOT
+							relation = military_access 
+							active = no
+						}
+					}
+				}
+			}
+			else = {
+				# Automate the UK's rejection
+				454 = { add_claim_by = ROOT }
+				add_war_support = 0.1
+				remove_ideas = IRQ_anglo_iraqi_treaty
+				ENG = {
+					diplomatic_relation = { 
+						country = ROOT
+						relation = military_access 
+						active = no
+					}
 				}
 			}
 
@@ -5266,6 +5306,12 @@ focus_tree = {
 		relative_position_id = IRQ_demand_palestine
 
 		cost = 10
+
+		offset = {
+			x = 2
+			y = 0
+			trigger = { axis = yes }
+		}
 
 		ai_will_do = {
 			base = 1
@@ -5325,6 +5371,7 @@ focus_tree = {
 				has_government = democratic
 			}
 		}
+		allow_branch = { allies = yes }
 
 		bypass = {
 		}
@@ -5461,6 +5508,7 @@ focus_tree = {
 				}
 			}
 		}
+		allow_branch = { allies = yes }
 
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
 
@@ -5632,6 +5680,7 @@ focus_tree = {
 		bypass = {
 
 		}
+		allow_branch = { always = no }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -5652,6 +5701,12 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = IRQ_demand_palestine
+
+		offset = {
+			x = 2
+			y = 0
+			trigger = { axis = yes }
+		}
 
 		cost = 10
 
@@ -5706,14 +5761,14 @@ focus_tree = {
 					}
 				}
 				add_core_of = ROOT
-				OWNER = {
-					ROOT = {
-						create_wargoal = {
-							target = PREV
-							type = take_core_state #This requires cores
-						}
-					}
-				}
+				#OWNER = {
+				#	ROOT = {
+				#		create_wargoal = {
+				#			target = PREV
+				#			type = take_core_state #This requires cores
+				#		}
+				#	}
+				#}
 			}	
 		}
 	}
@@ -5810,6 +5865,7 @@ focus_tree = {
 		bypass = {
 
 		}
+		allow_branch = { always = no }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -5925,6 +5981,7 @@ focus_tree = {
 		bypass = {
 
 		}
+		allow_branch = { always = no }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -7239,7 +7296,7 @@ focus_tree = {
 		icon = GFX_focus_IRQ_arab_free_legion
 		prerequisite = { focus = IRQ_rally_the_arab_world }
 		#mutually_exclusive = { focus =  }
-		x = 0
+		x = -2
 		y = 1
 		relative_position_id = IRQ_rally_the_arab_world
 
@@ -7355,7 +7412,6 @@ focus_tree = {
 				}
 			}
 		}
-		allow_branch = { always = no }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -7364,10 +7420,10 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			create_wargoal = {
-				target = SAU
-				type = puppet_wargoal_focus
-			}			
+			#create_wargoal = {
+			#	target = SAU
+			#	type = puppet_wargoal_focus
+			#}			
 		}
 	}
 
@@ -7512,6 +7568,7 @@ focus_tree = {
 		bypass = {
 
 		}
+		allow_branch = { always = no }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -7554,7 +7611,7 @@ focus_tree = {
 		icon = GFX_focus_IRQ_proclaim_united_arab_republic
 		prerequisite = { focus = IRQ_regime_change_in_arabia }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = IRQ_regime_change_in_arabia
 
 		cost = 10
