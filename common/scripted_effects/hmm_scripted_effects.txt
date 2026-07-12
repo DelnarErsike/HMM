@@ -315,7 +315,7 @@ hmm_capitulations_on_actions = {
 }
 
 
-initilize_victory_system = {
+initialize_victory_system = {
 	# state = 613 #Nanjing
 	# state = 439 #Dehli
 	# state = 447 #Alexandria
@@ -335,295 +335,235 @@ initilize_victory_system = {
 		var = global.allies_score
 		value = 0
 	}
-	every_country = {
-		limit = {
-			axis = yes
-		}
-		if = {
-			limit = {
-				controls_state = 613 #Nanjing
+	613 = { #Nanjing
+		controller = {
+			if = {
+				limit = {
+					axis = yes
+				}
+				add_to_variable = {
+					var = global.axis_score
+					value = 1
+				}
 			}
-			add_to_variable = {
-				var = global.axis_score
-				value = 1
-			}
-			clamp_variable = {
-				var = global.axis_score
-				min = 0
-				max = 10
-			}
-		}
-		if = {
-			limit = {
-				controls_state = 439 #Dehli
-			}
-			add_to_variable = {
-				var = global.axis_score
-				value = 1
-			}
-			clamp_variable = {
-				var = global.axis_score
-				min = 0
-				max = 10
+			else_if = {
+				limit = {
+					allies = yes
+				}
+				add_to_variable = {
+					var = global.allies_score
+					value = 1
+				}
 			}
 		}
-		if = {
-			limit = {
-				controls_state = 447 #Alexandria
+	}
+	439 = { #Dehli
+		controller = {
+			if = {
+				limit = {
+					axis = yes
+				}
+				add_to_variable = {
+					var = global.axis_score
+					value = 1
+				}
 			}
-			add_to_variable = {
-				var = global.axis_score
-				value = 1
-			}
-			clamp_variable = {
-				var = global.axis_score
-				min = 0
-				max = 10
-			}
-		}
-		if = {
-			limit = {
-				controls_state = 450 #Benghasi
-			}
-			add_to_variable = {
-				var = global.axis_score
-				value = 1
-			}
-			clamp_variable = {
-				var = global.axis_score
-				min = 0
-				max = 10
+			else_if = {
+				limit = {
+					allies = yes
+				}
+				add_to_variable = {
+					var = global.allies_score
+					value = 1
+				}
 			}
 		}
-		if = {
-			limit = {
-				controls_state = 7 #Amsterdam
+	}
+	447 = { #Alexandria
+		controller = {
+			if = {
+				limit = {
+					axis = yes
+				}
+				add_to_variable = {
+					var = global.axis_score
+					value = 1
+				}
 			}
-			add_to_variable = {
-				var = global.axis_score
-				value = 1
-			}
-			clamp_variable = {
-				var = global.axis_score
-				min = 0
-				max = 10
-			}
-		}
-		if = {
-			limit = {
-				controls_state = 16 #Paris
-			}
-			add_to_variable = {
-				var = global.axis_score
-				value = 1
-			}
-			clamp_variable = {
-				var = global.axis_score
-				min = 0
-				max = 10
+			else_if = {
+				limit = {
+					allies = yes
+				}
+				add_to_variable = {
+					var = global.allies_score
+					value = 1
+				}
 			}
 		}
-		if = {
-			limit = {
-				controls_state = 20 #Lyon
+	}
+	450 = { #Benghasi
+		controller = {
+			if = {
+				limit = {
+					axis = yes
+				}
+				add_to_variable = {
+					var = global.axis_score
+					value = 1
+				}
 			}
-			add_to_variable = {
-				var = global.axis_score
-				value = 1
-			}
-			clamp_variable = {
-				var = global.axis_score
-				min = 0
-				max = 10
-			}
-		}
-		if = {
-			limit = {
-				controls_state = 224 #Bryansk
-			}
-			add_to_variable = {
-				var = global.axis_score
-				value = 1
-			}
-			clamp_variable = {
-				var = global.axis_score
-				min = 0
-				max = 10
+			else_if = {
+				limit = {
+					allies = yes
+				}
+				add_to_variable = {
+					var = global.allies_score
+					value = 1
+				}
 			}
 		}
-		if = {
-			limit = {
-				controls_state = 219 #Moscow
+	}
+	7 = { #Amsterdam
+		controller = {
+			if = {
+				limit = {
+					axis = yes
+				}
+				add_to_variable = {
+					var = global.axis_score
+					value = 1
+				}
 			}
-			add_to_variable = {
-				var = global.axis_score
-				value = 1
-			}
-			clamp_variable = {
-				var = global.axis_score
-				min = 0
-				max = 10
+			else_if = {
+				limit = {
+					allies = yes
+				}
+				add_to_variable = {
+					var = global.allies_score
+					value = 1
+				}
 			}
 		}
-		if = {
-			limit = {
-				controls_state = 217 #Stalingrad
+	}
+	16 = { #Paris
+		controller = {
+			if = {
+				limit = {
+					axis = yes
+				}
+				add_to_variable = {
+					var = global.axis_score
+					value = 1
+				}
 			}
-			add_to_variable = {
-				var = global.axis_score
-				value = 1
+			else_if = {
+				limit = {
+					allies = yes
+				}
+				add_to_variable = {
+					var = global.allies_score
+					value = 1
+				}
 			}
-			clamp_variable = {
-				var = global.axis_score
-				min = 0
-				max = 10
+		}
+	}
+	20 = { #Lyon
+		controller = {
+			if = {
+				limit = {
+					axis = yes
+				}
+				add_to_variable = {
+					var = global.axis_score
+					value = 1
+				}
+			}
+			else_if = {
+				limit = {
+					allies = yes
+				}
+				add_to_variable = {
+					var = global.allies_score
+					value = 1
+				}
+			}
+		}
+	}
+	224 = { #Bryansk
+		controller = {
+			if = {
+				limit = {
+					axis = yes
+				}
+				add_to_variable = {
+					var = global.axis_score
+					value = 1
+				}
+			}
+			else_if = {
+				limit = {
+					allies = yes
+				}
+				add_to_variable = {
+					var = global.allies_score
+					value = 1
+				}
+			}
+		}
+	}
+	219 = { #Moscow
+		controller = {
+			if = {
+				limit = {
+					axis = yes
+				}
+				add_to_variable = {
+					var = global.axis_score
+					value = 1
+				}
+			}
+			else_if = {
+				limit = {
+					allies = yes
+				}
+				add_to_variable = {
+					var = global.allies_score
+					value = 1
+				}
+			}
+		}
+	}
+	217 = { #Stalingrad
+		controller = {
+			if = {
+				limit = {
+					axis = yes
+				}
+				add_to_variable = {
+					var = global.axis_score
+					value = 1
+				}
+			}
+			else_if = {
+				limit = {
+					allies = yes
+				}
+				add_to_variable = {
+					var = global.allies_score
+					value = 1
+				}
 			}
 		}
 	}
 
-	every_country = {
-		limit = {
-			allies = yes
-		}
-		if = {
-			limit = {
-				controls_state = 613 #Nanjing
-			}
-			add_to_variable = {
-				var = global.allies_score
-				value = 1
-			}
-			clamp_variable = {
-				var = global.allies_score
-				min = 0
-				max = 10
-			}
-		}
-		if = {
-			limit = {
-				controls_state = 439 #Dehli
-			}
-			add_to_variable = {
-				var = global.allies_score
-				value = 1
-			}
-			clamp_variable = {
-				var = global.allies_score
-				min = 0
-				max = 10
-			}
-		}
-		if = {
-			limit = {
-				controls_state = 447 #Alexandria
-			}
-			add_to_variable = {
-				var = global.allies_score
-				value = 1
-			}
-			clamp_variable = {
-				var = global.allies_score
-				min = 0
-				max = 10
-			}
-		}
-		if = {
-			limit = {
-				controls_state = 450 #Benghasi
-			}
-			add_to_variable = {
-				var = global.allies_score
-				value = 1
-			}
-			clamp_variable = {
-				var = global.allies_score
-				min = 0
-				max = 10
-			}
-		}
-		if = {
-			limit = {
-				controls_state = 7 #Amsterdam
-			}
-			add_to_variable = {
-				var = global.allies_score
-				value = 1
-			}
-			clamp_variable = {
-				var = global.allies_score
-				min = 0
-				max = 10
-			}
-		}
-		if = {
-			limit = {
-				controls_state = 16 #Paris
-			}
-			add_to_variable = {
-				var = global.allies_score
-				value = 1
-			}
-			clamp_variable = {
-				var = global.allies_score
-				min = 0
-				max = 10
-			}
-		}
-		if = {
-			limit = {
-				controls_state = 20 #Lyon
-			}
-			add_to_variable = {
-				var = global.allies_score
-				value = 1
-			}
-			clamp_variable = {
-				var = global.allies_score
-				min = 0
-				max = 10
-			}
-		}
-		if = {
-			limit = {
-				controls_state = 224 #Bryansk
-			}
-			add_to_variable = {
-				var = global.allies_score
-				value = 1
-			}
-			clamp_variable = {
-				var = global.allies_score
-				min = 0
-				max = 10
-			}
-		}
-		if = {
-			limit = {
-				controls_state = 219 #Moscow
-			}
-			add_to_variable = {
-				var = global.allies_score
-				value = 1
-			}
-			clamp_variable = {
-				var = global.allies_score
-				min = 0
-				max = 10
-			}
-		}
-		if = {
-			limit = {
-				controls_state = 217 #Stalingrad
-			}
-			add_to_variable = {
-				var = global.allies_score
-				value = 1
-			}
-			clamp_variable = {
-				var = global.allies_score
-				min = 0
-				max = 10
-			}
-		}
+	clamp_variable = {
+		var = global.axis_score
+		min = 0
+		max = 10
+	}
+	clamp_variable = {
+		var = global.allies_score
+		min = 0
+		max = 10
 	}
 }		
