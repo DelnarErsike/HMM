@@ -293,6 +293,12 @@ hmm_capitulations_on_actions = {
 				transfer_troops = no
 			}
 		}
+		GER = { # Cut collab compliance, needs to be on a delay because collabs are applied after this on action
+			country_event = {
+				id = hmm.8
+				hours = 1
+			}
+		}
 	}
 	if = {
 		limit = { 

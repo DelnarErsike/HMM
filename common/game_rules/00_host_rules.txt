@@ -663,15 +663,40 @@ integrate_czech_manufacturers_status = {
 		text = "OEnabled Without MIOs"
 		desc = "The Integrate Czech Manufacturers focus can be taken, but does not unlock any new MIOs for Germany."
 	}
-	default = {
+	option = {
 		name = enabled_no_tank_mios
 		text = "YEnabled Without Tank-Related MIOs"
 		desc = "The Integrate Czech Manufacturers focus can be taken, but does not unlock tank-related MIOs for Germany."
 	}
-	option = {
+	default = {
 		name = enabled
 		text = "GEnabled"
 		desc = "The Integrate Czech Manufacturers focus functions as it does in vanilla."
+	}
+}
+soviet_post_cap_compliance_scaling = {
+	name = "After the Soviets capitulate, collaboration government-based compliance should..."
+	group = "HMM Rules"
+	icon = "GFX_boosting_party_popularity"
+	option = {
+		name = scale_to_zero
+		text = "RBe Removed Entirely"
+		desc = "Compliance in Soviet cores will be 0% after they capitulate, regardless of how many collaboration government operations were done beforehand."
+	}
+	default = {
+		name = scale_as_if_1_collab
+		text = "OBe Scaled by 0.35x (One Collab)"
+		desc = "Compliance in Soviet cores after they capitulate will be scaled by 0.7x. Completing three collaboration government operations on them (= 100% Compliance) will produce post-capitulation compliance equivalent to having done only one collaboration government operation (= 35% Compliance)."
+	}
+	option = {
+		name = scale_as_if_2_collabs
+		text = "YBe Scaled by 0.7x (Two Collabs)"
+		desc = "Compliance in Soviet cores after they capitulate will be scaled by 0.7x. Completing three collaboration government operations on them (= 100% Compliance) will produce post-capitulation compliance equivalent to having done only two collaboration government operations (= 70% Compliance)."
+	}
+	option = {
+		name = no_scaling
+		text = "GRemain Unchanged"
+		desc = "Compliance in Soviet cores after they capitulate will behave as it does for any other country's cores."
 	}
 }
 tradebacks = {
