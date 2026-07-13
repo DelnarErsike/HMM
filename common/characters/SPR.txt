@@ -824,7 +824,7 @@ characters={
 
 			corps_commander={
 				traits={ brilliant_strategist trait_reckless trait_SPA_nationalist_sympathies panzer_leader cavalry_leader infantry_leader organizer trickster pre_grind }
-				skill = 8
+				skill = 6
 				attack_skill = 4
 				defense_skill = 5
 				planning_skill = 2
