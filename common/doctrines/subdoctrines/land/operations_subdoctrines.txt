@@ -166,7 +166,7 @@ infiltration_tactics = {
 
     # EFFECTS
     enable_tactic = tactic_infantry_charge
-    max_planning = 0.05 
+    max_planning = 0.1 
 
     ai_will_do = { }
 
@@ -188,7 +188,7 @@ infiltration_tactics = {
         self_sustaining_infiltration_units = {
         #3
             supply_consumption_factor = -0.10
-            command_power_gain = 0.015
+            command_power_gain = 0.1
             category_tanks = {
                 max_organisation = 2
             }
