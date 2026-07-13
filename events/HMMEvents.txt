@@ -122,3 +122,56 @@ news_event = {
 		name = hmm.7.a
 	}
 }
+
+country_event = {
+	id = hmm.8
+
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = { # Make sure it's set to an option where compliance is meant to be adjusted, otherwise skip this event
+		NOT = {
+			has_game_rule = {
+				rule = soviet_post_cap_compliance_scaling
+				option = no_scaling
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = soviet_post_cap_compliance_scaling
+					option = scale_to_zero
+				}
+			}
+			every_owned_state = {
+				limit = { is_core_of = SOV }
+				set_compliance = 0
+			}
+		}
+		else = {
+			set_temp_variable = { compliance_multiplier = 7.0 }
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = soviet_post_cap_compliance_scaling
+						option = scale_as_if_2_collabs
+					}
+				}
+				set_temp_variable = { compliance_multiplier = 14.0 }
+			}
+			divide_temp_variable = { compliance_multiplier = 20.0 }
+			every_owned_state = {
+				limit = { is_core_of = SOV }
+				set_temp_variable = {
+					var = bucket
+					value = compliance
+				}
+				multiply_temp_variable = { bucket = compliance_multiplier }
+				set_compliance = bucket
+			}
+		}
+	}
+}
