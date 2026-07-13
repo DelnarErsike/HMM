@@ -128,6 +128,7 @@
  HMM_banned_by_rules: "Banned by Game Rules"
  HMM_axis_only: "Axis Only"
  HMM_allies_only: "Allies Only"
+ HMM_spa_only_volunteers_to_ger_ita_bul: "Spain can only send volunteers to Germany, Italy, or Bulgaria."
 
  # Custom Ideas
  HMM_innovative_weapons_designer:0 "Innovative Weapons Designer"
