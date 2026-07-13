@@ -1571,6 +1571,21 @@ DIPLOMACY_KICK_FROM_FACTION_ENABLE_TRIGGER = {
 DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 	if = {
 		limit = {
+			tag = SPA
+		}
+		custom_trigger_tooltip = {
+			tooltip = HMM_spa_only_volunteers_to_ger_ita_bul
+			FROM = {
+				OR = {
+					tag = GER
+					tag = ITA
+					tag = BUL
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
 			has_game_rule = {
 				rule = allow_volunteers
 				option = ALWAYS_FREE
