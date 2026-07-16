@@ -3498,6 +3498,7 @@ country_event = {
 	}
 	option = {# war!
 		name = DOD_hungary.85.b
+		trigger = { always = no }
 		ai_chance = {
 			factor = 30
 			modifier = {
@@ -4233,6 +4234,21 @@ country_event = {
 
 	option = {# puppet
 		name = DOD_hungary.101.b
+		trigger = {
+			NOT = { # HMM: SLO is technically a released nation, so subject it to the releasing nations rule
+				has_game_rule = {
+					rule = allow_release_nations
+					option = BLOCKED
+				}
+			}
+			OR = {
+				war = no
+				has_game_rule = {
+					rule = allow_release_nations
+					option = FREE
+				}
+			}
+		}
 		ai_chance = {
 			factor = 30
 		}
@@ -4422,6 +4438,7 @@ country_event = {
 
 	option = {# war goal
 		name = DOD_hungary.105.b
+		trigger = { always = no }
 		ai_chance = {
 			factor = 90
 		}
@@ -4455,6 +4472,7 @@ country_event = {
 
 	option = {# take what is ours
 		name = DOD_hungary.106.b
+		trigger = { always = no }
 		ai_chance = {
 			factor = 95
 		}
@@ -4510,6 +4528,7 @@ country_event = {
 
 	option = {# refuse
 		name = DOD_hungary.107.b
+		trigger = { always = no }
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -5286,6 +5305,7 @@ country_event = {
 	}
 	option = {# refuse
 		name = DOD_hungary.129.b
+		trigger = { always = no }
 		ai_chance = {
 			base = 70
 			modifier = {

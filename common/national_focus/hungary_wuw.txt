@@ -10229,6 +10229,15 @@ focus_tree = {
 			# HMM: no need to bother deploying army
 			#has_army_manpower = { size > 175000 }
 
+			if = { # HMM: SLO is technically a released nation, so subject it to the releasing nations rule
+				limit = {
+					has_game_rule = {
+						rule = allow_release_nations
+						option = FREE
+					}
+				}
+				war = no
+			}
 		}
 
 		bypass = {
@@ -10246,6 +10255,14 @@ focus_tree = {
 				}
 			}
 
+		}
+		allow_branch = {
+			NOT = { # HMM: SLO is technically a released nation, so subject it to the releasing nations rule
+				has_game_rule = {
+					rule = allow_release_nations
+					option = BLOCKED
+				}
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
