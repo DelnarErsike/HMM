@@ -1875,6 +1875,21 @@ country_event = {
 
 	option = {# agree
 		name = DOD_romania.110.a
+		trigger = { # Agreeing would cause SLO to get released as a ROM puppet, so run some checks
+			NOT = { # HMM: SLO is technically a released nation, so subject it to the releasing nations rule
+				has_game_rule = {
+					rule = allow_release_nations
+					option = BLOCKED
+				}
+			}
+			OR = {
+				war = no
+				has_game_rule = {
+					rule = allow_release_nations
+					option = FREE
+				}
+			}
+		}
 		ai_chance = {
 			factor = 90
 			modifier = {

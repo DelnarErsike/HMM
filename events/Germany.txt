@@ -3868,6 +3868,12 @@ country_event = {
 	option = { #Same as germany.55.a but we puppet Bohemia as well
 		name = germany.55.e
 		trigger = {
+			NOT = { # HMM: SLO is technically a released nation, so subject it to the releasing nations rule
+				has_game_rule = {
+					rule = allow_release_nations
+					option = BLOCKED
+				}
+			}
 			ROOT = { #Some extra sanity checks to be overly safe in this context
 				has_war = no
 			}
@@ -4409,6 +4415,19 @@ country_event = {
 	option = {
 		name = germany.55.a
 		trigger = {
+			NOT = { # HMM: SLO is technically a released nation, so subject it to the releasing nations rule
+				has_game_rule = {
+					rule = allow_release_nations
+					option = BLOCKED
+				}
+			}
+			OR = {
+				war = no
+				has_game_rule = {
+					rule = allow_release_nations
+					option = FREE
+				}
+			}
 			any_state = {
 				or = {
 					state = 70
@@ -5822,6 +5841,21 @@ country_event = {
 
 	option = {
 		name = germany.57.a
+		trigger = {
+			NOT = { # HMM: SLO is technically a released nation, so subject it to the releasing nations rule
+				has_game_rule = {
+					rule = allow_release_nations
+					option = BLOCKED
+				}
+			}
+			OR = {
+				war = no
+				has_game_rule = {
+					rule = allow_release_nations
+					option = FREE
+				}
+			}
+		}
 		add_political_power = -20
 		ai_chance = { factor = 60 }
 		if = {
