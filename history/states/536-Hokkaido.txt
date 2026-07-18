@@ -15,8 +15,7 @@ state = {
 
 		owner = JAP
 		add_core_of = JAP
-		add_core_of = EZO
-		add_core_of = ANU
+		add_core_of = WSA
 
 		buildings = {
 			infrastructure = 2

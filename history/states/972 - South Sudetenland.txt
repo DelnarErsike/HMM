@@ -31,13 +31,6 @@ state = {
 			11525 = { dam = 1 }
 
 		}
-
-		1938.9.30 = {
-			owner = GER
-			controller = GER
-			add_core_of = GER
-		}
-
 	}
 
 	provinces = {

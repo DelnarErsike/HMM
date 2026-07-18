@@ -9,14 +9,13 @@ state={
 	
 
 	history={
-		owner = WST
+		owner = WSA
 		buildings = {
 			infrastructure = 1
 			arms_factory = 1
 			industrial_complex = 2 
 		}
-		add_core_of = WST
-		add_core_of = BHU
+		add_core_of = WSA
 	}
 
 	provinces={

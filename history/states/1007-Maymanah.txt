@@ -14,8 +14,6 @@ state={
 			infrastructure = 1 
 		}
 		add_core_of = WST
-		add_core_of = AFG
-		add_core_of = TMS
 	}
 	
 	buildings_max_level_factor=1.000

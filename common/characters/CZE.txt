@@ -381,16 +381,6 @@
 				}
 				ai_will_do  = {
 					base = 0
-					modifier = {
-						add = 20
-						OR = {
-							has_country_flag = CZE_AI_RANDOM_FASCIST
-							has_game_rule = {
-								rule = CZE_ai_behavior
-								option = FASCIST
-							}
-						}
-					}
 				}
 			}
 		}
@@ -518,16 +508,6 @@
 			}
 			ai_will_do  = {
 				base = 0
-				modifier = {
-					add = 20
-					OR = {
-						has_country_flag = CZE_AI_RANDOM_COMMUNIST
-						has_game_rule = {
-							rule = CZE_ai_behavior
-							option = COMMUNIST
-						}
-					}
-				}
 			}
 		}
 	}

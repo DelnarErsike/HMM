@@ -91,57 +91,7 @@ GRE_1936_election_category = {
 		cost = 0
 
 		ai_will_do = {
-			factor = 5
-			modifier = {
-				OR = {
-					AND = {
-						is_historical_focus_on = yes
-						has_game_rule = {
-							rule = GRE_ai_behavior
-							option = DEFAULT
-						}	
-					}
-					has_game_rule = {
-						rule = GRE_ai_behavior
-						option = HISTORICAL
-					}
-					has_country_flag = GRE_AI_NEUTRALITY_HISTORICAL
-					has_game_rule = {
-						rule = GRE_ai_behavior 
-						option = MONARCHIST
-					}
-					has_game_rule = {
-						rule = GRE_ai_behavior 
-						option = MONARCHIST_ALTERNATE
-					}
-					has_game_rule = {
-						rule = GRE_ai_behavior 
-						option = FASCISM
-					}
-				}
-				factor = 0
-			}
-			modifier = {
-				OR = {
-					has_game_rule = {
-						rule = GRE_ai_behavior 
-						option = COMMUNIST
-					}
-					has_game_rule = {
-						rule = GRE_ai_behavior 
-						option = COMMUNIST_ALTERNATE
-					}
-					has_game_rule = {
-						rule = GRE_ai_behavior 
-						option = DEMOCRATIC
-					}
-					has_game_rule = {
-						rule = GRE_ai_behavior 
-						option = FASCISM_ALTERNATE
-					}
-				}
-				factor = 100
-			}
+			factor = 0
 		}
 
 		complete_effect = {

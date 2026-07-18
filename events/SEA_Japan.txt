@@ -28,24 +28,7 @@ country_event = {
 	option = { 
 		name = SEA_japan.1.a
 		ai_chance = {
-			base = 0
-			modifier = {
-				add = 100
-				OR = {
-					AND = {
-						is_historical_focus_on = yes
-						has_game_rule = {
-							rule = JAP_ai_behavior
-							option = DEFAULT
-						}
-					}
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = FASCIST
-					}
-					has_country_flag = JAP_AI_RANDOM_FASCIST
-				}
-			}
+			base = 100
 		}
 
 		custom_effect_tooltip = JAP_kodoha_coup_will_fail_historically_tt
@@ -94,16 +77,6 @@ country_event = {
 		name = SEA_japan.1.b
 		ai_chance = {
 			base = 0
-			modifier = {
-				add = 100
-				OR = {
-					has_country_flag = JAP_AI_RANDOM_NEUTRALITY
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = NEUTRALITY
-					}
-				}
-			}
 		}
 
 		custom_effect_tooltip = JAP_kodoha_coup_will_succeed_tt
@@ -170,26 +143,6 @@ country_event = {
 		name = SEA_japan.1.c
 		ai_chance = {
 			base = 0
-			modifier = {
-				add = 100
-				OR = {
-					has_country_flag = JAP_AI_RANDOM_COMMUNIST
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = COMMUNIST
-					}
-					has_country_flag = JAP_AI_RANDOM_DEMOCRATIC
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = DEMOCRATIC
-					}
-					has_country_flag = JAP_AI_RANDOM_COMMUNIST_2
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = COMMUNIST_2
-					}
-				}
-			}
 		}
 		trigger = {
 			has_dlc = "No Compromise, No Surrender"
@@ -272,16 +225,6 @@ country_event = {
 		name = SEA_japan.1.d
 		ai_chance = {
 			base = 0
-			modifier = {
-				add = 100
-				OR = {
-					has_country_flag = JAP_AI_RANDOM_DEMOCRATIC
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = DEMOCRATIC
-					}
-				}
-			}
 		}
 		trigger = {
 			NOT = {
@@ -324,16 +267,6 @@ country_event = {
 		name = SEA_japan.1.e
 		ai_chance = {
 			base = 0
-			modifier = {
-				add = 100
-				OR = {
-					has_country_flag = JAP_AI_RANDOM_COMMUNIST
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = COMMUNIST
-					}
-				}
-			}
 		}
 		trigger = {
 			NOT = {
@@ -10308,22 +10241,7 @@ country_event = {
 	option = {
 		name = SEA_japan_popup_events.16.a
 		ai_chance = {
-			base = 50 
-			modifier = {
-				factor = 0 
-				OR = {
-					has_country_flag = JAP_AI_RANDOM_COMMUNIST
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = COMMUNIST
-					}
-					has_country_flag = JAP_AI_RANDOM_COMMUNIST_2
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = COMMUNIST_2
-					}
-				}
-			}
+			base = 50
 		}
 		
 		IF = {
@@ -10376,17 +10294,7 @@ country_event = {
 	option = {
 		name = SEA_japan_popup_events.16.b
 		ai_chance = {
-			base = 30 
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = JAP_AI_RANDOM_DEMOCRATIC
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = DEMOCRATIC
-					}
-				}
-			}
+			base = 30
 		}
 		
 		add_country_leader_role = {
@@ -10417,22 +10325,7 @@ country_event = {
 	option = {
 		name = SEA_japan_popup_events.16.c
 		ai_chance = {
-			base = 20 
-			modifier = {
-				factor = 0 
-				OR = {
-					has_country_flag = JAP_AI_RANDOM_COMMUNIST
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = COMMUNIST
-					}
-					has_country_flag = JAP_AI_RANDOM_COMMUNIST_2
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = COMMUNIST_2
-					}
-				}
-			}
+			base = 20
 		}
 		
 		add_country_leader_role = {
@@ -11460,17 +11353,7 @@ country_event = {
 	option = {
 		name = SEA_japan_popup_events.30.a
 		ai_chance = { 
-			base = 50 
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = JAP_AI_RANDOM_COMMUNIST_2
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = COMMUNIST_2
-					}
-				}
-			}
+			base = 50
 		}
 		
 		custom_effect_tooltip = JAP_supported_the_kozaha_idea_tt
@@ -11485,17 +11368,7 @@ country_event = {
 	option = {
 		name = SEA_japan_popup_events.30.b
 		ai_chance = { 
-			base = 50 
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = JAP_AI_RANDOM_COMMUNIST
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = COMMUNIST
-					}
-				}
-			}
+			base = 50
 		}
 		
 		custom_effect_tooltip = JAP_supported_the_rounoha_idea_tt

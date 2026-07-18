@@ -1506,60 +1506,6 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = SMB_nuclear_program
-	icon = GFX_focus_wonderweapons
-	relative_position_id = SMB_experimental_weapons_department
-	prerequisite = { focus = SMB_experimental_weapons_department }
-	prerequisite = { focus = SMB_strategic_bombing }
-	x = 3
-	y = 1
-
-	cost = 10
-
-	available = {
-
-	}
-
-	bypass = {
-		
-	}
-	allow_branch = { always = no }
-
-	ai_will_do = {
-		factor = 20
-	} 
-
-	completion_reward = {
-
-		if = {
-			limit = {
-				NOT = {
-					has_tech = atomic_research
-				}
-			}
-			add_tech_bonus = {
-				name = JUNO_nuclear_initiative
-				ahead_reduction = 2
-				bonus = 1
-				uses = 1
-				category = nuclear
-			}
-			add_breakthrough_progress = {
-				specialization = specialization_nuclear
-				value = 0.25
-			}
-		}
-		else = {
-			add_breakthrough_progress = {
-				specialization = specialization_nuclear
-				value = 0.75
-			}
-		}
-
-	}   
-}  
- 
-shared_focus = {
 	id = SMB_special_forces
 	icon = GFX_focus_eng_special_air_service
 	relative_position_id = SMB_army_professionalism

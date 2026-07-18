@@ -201,26 +201,6 @@ characters = {
 
 			ai_will_do = {
 				base = 1.000
-				modifier = {
-					factor = 10
-					OR = {
-						has_country_flag = COG_AI_RANDOM_COM_INDEPENDENCE
-						has_game_rule = {
-							rule = COG_AI_BEHAVIOR
-							option = COG_COM_INDEPENDENCE
-						}
-					}
-				}
-				modifier = {
-					factor = 10
-					OR = {
-						has_country_flag = COG_AI_RANDOM_COM_REVOLUTION
-						has_game_rule = {
-							rule = COG_AI_BEHAVIOR
-							option = COG_COM_REVOLUTION
-						}
-					}
-				}
 			}
 			
 		}
@@ -545,34 +525,7 @@ characters = {
 			}
 
 			ai_will_do = {
-				base = 1.000
-				modifier = {
-					factor = 10
-					OR = {
-						AND = {
-							is_historical_focus_on = yes 
-							has_game_rule = {
-								rule = COG_AI_BEHAVIOR
-								option = DEFAULT
-							}
-						}
-						has_country_flag = COG_AI_RANDOM_HISTORICAL
-						has_game_rule = {
-							rule = COG_AI_BEHAVIOR
-							option = HISTORICAL
-						}
-					}
-				}
-				modifier = {
-					factor = 10
-					OR = {
-						has_country_flag = COG_AI_RANDOM_DEM_INDEPENDENCE
-						has_game_rule = {
-							rule = COG_AI_BEHAVIOR
-							option = COG_DEM_INDEPENDENCE
-						}
-					}
-				}
+				base = 10.000
 			}
 			
 		}

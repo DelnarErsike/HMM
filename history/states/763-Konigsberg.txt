@@ -8,7 +8,7 @@ state = {
 
 		owner = GER
 		add_core_of = GER
-		add_core_of = PRE
+		add_core_of = WST
 		
 		victory_points = {
 			6332 10 # Königsberg
@@ -23,12 +23,6 @@ state = {
 				naval_base = 5
 			}
 			air_base = 6
-		}
-		
-		1939.1.1 = {
-			buildings = {
-				anti_air_building = 5
-			}
 		}
 	}
 

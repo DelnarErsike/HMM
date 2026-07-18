@@ -30,16 +30,6 @@ country_event = {
 		name = mtg_britain.1.c
 		ai_chance = {
 			factor = 70
-			modifier = {
-				factor = 0
-				OR = {
-					has_game_rule = {
-						rule = ENG_ai_behavior 
-						option = NEUTRALITY
-					}
-					has_country_flag = ENG_AI_RANDOM_NEUTRALITY
-				}
-			}
 		}
 		add_stability = 0.05
 		set_country_flag = ENG_edward_abdicating
@@ -60,48 +50,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 20
-			modifier = {
-				factor = 0
-				ENG_is_on_historical_plan_trigger = yes
-			}
-			modifier = {
-				factor = 0
-				has_completed_focus = ENG_steady_as_she_goes
-			}
-			modifier = {
-				factor = 0
-				has_completed_focus = ENG_organize_the_blackshirts
-			}
-			modifier = {
-				factor = 0
-				has_completed_focus = ENG_concessions_to_the_trade_unions
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					has_game_rule = {
-						rule = ENG_ai_behavior 
-						option = DEMOCRATIC_HISTORICAL
-					}
-					has_game_rule = {
-						rule = ENG_ai_behavior 
-						option = DEMOCRATIC_ALTERNATE
-					}
-					has_game_rule = {
-						rule = ENG_ai_behavior 
-						option = COMMUNIST
-					}
-					has_game_rule = {
-						rule = ENG_ai_behavior 
-						option = FASCIST
-					}
-					has_country_flag = ENG_AI_RANDOM_FASCIST
-					has_country_flag = ENG_AI_RANDOM_COMMUNIST
-					has_country_flag = ENG_AI_RANDOM_DEMOCRATIC_ALTERNATE
-					has_country_flag = ENG_AI_DEMOCRATIC_HISTORICAL
-				}
-			}
+			factor = 0
 		}
 		add_stability = -0.05
 		add_popularity = { ideology = neutrality popularity = 0.05 }
@@ -138,48 +87,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 0
-				ENG_is_on_historical_plan_trigger = yes
-			}
-			modifier = {
-				factor = 0
-				has_completed_focus = ENG_steady_as_she_goes
-			}
-			modifier = {
-				factor = 0
-				has_completed_focus = ENG_organize_the_blackshirts
-			}
-			modifier = {
-				factor = 0
-				has_completed_focus = ENG_concessions_to_the_trade_unions
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					has_game_rule = {
-						rule = ENG_ai_behavior 
-						option = DEMOCRATIC_HISTORICAL
-					}
-					has_game_rule = {
-						rule = ENG_ai_behavior 
-						option = DEMOCRATIC_ALTERNATE
-					}
-					has_game_rule = {
-						rule = ENG_ai_behavior 
-						option = COMMUNIST
-					}
-					has_game_rule = {
-						rule = ENG_ai_behavior 
-						option = FASCIST
-					}
-					has_country_flag = ENG_AI_RANDOM_FASCIST
-					has_country_flag = ENG_AI_RANDOM_COMMUNIST
-					has_country_flag = ENG_AI_RANDOM_DEMOCRATIC_ALTERNATE
-					has_country_flag = ENG_AI_DEMOCRATIC_HISTORICAL
-				}
-			}
+			factor = 0
 		}
 		add_stability = -0.15
 		add_popularity = { ideology = neutrality popularity = 0.1 }

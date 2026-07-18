@@ -228,17 +228,6 @@ country_event = {
 		name = usa.6.a
 		ai_chance = {
 			factor = 75
-			modifier = {
-				OR = {
-					has_game_rule = {
-						rule = USA_ai_behavior
-						option = FASCIST
-					}
-					has_country_flag = USA_AI_RANDOM_FASCIST
-				}
-				has_dlc = "Man the Guns"
-				factor = 0
-			}
 		}		
 		add_ideas = new_deal
 		if = {
@@ -266,15 +255,7 @@ country_event = {
 	option = {
 		name = usa.6.b
 		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-				has_game_rule = {
-					rule = USA_ai_behavior
-					option = DEFAULT
-				}
-			}
+			factor = 0
 		}		
 		set_party_name = { ideology = democratic long_name = USA_republican_party name = USA_republican_party }
 				set_variable = {

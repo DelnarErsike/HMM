@@ -10,7 +10,7 @@ state = {
 	history = {
 		owner = CHI
 		add_core_of = CHI
-		add_core_of = PRC
+		add_core_of = WSA
 
 		buildings = {
 			infrastructure = 2		
@@ -22,10 +22,6 @@ state = {
 
 		victory_points = {
 			4091 1 # Nantong
-		}
-
-		1938.10.25 = {
-			controller = JAP
 		}
 	}
 

@@ -8,20 +8,7 @@ mexico_historical = {
 		has_dlc = "Man the Guns"
 	}
 	enable = {
-		OR = {
-			AND = {
-				is_historical_focus_on = yes
-				has_game_rule = {
-					rule = MEX_ai_behavior
-					option = DEFAULT
-				}
-			}
-			has_country_flag = MEX_AI_SECULAR_REPUBLIC 
-			has_game_rule = {
-				rule = MEX_ai_behavior
-				option = SECULAR_REPUBLIC
-			}
-		}
+		always = yes
 	}
 	abort = {
 		OR = {

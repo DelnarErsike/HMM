@@ -14,8 +14,7 @@ state = {
 
 		owner = JAP
 		add_core_of = CHI
-		add_core_of = PRC
-		add_core_of = FOR
+		add_core_of = WSA
 
 		buildings = {
 			infrastructure = 3 #was: 5

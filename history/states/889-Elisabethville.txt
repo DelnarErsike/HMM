@@ -28,7 +28,7 @@ state = {
 		}
 
 		add_core_of = COG
-		add_core_of = KAT
+		add_core_of = WSF
 
 		victory_points = {
 			191 2 # Elizabehville

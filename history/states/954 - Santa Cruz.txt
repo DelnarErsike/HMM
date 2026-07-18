@@ -11,8 +11,6 @@ state = {
 
 		owner = WST
 		add_core_of = WST
-		add_core_of = ARG
-		add_core_of = WLA
 
 		buildings = {
 			infrastructure = 1

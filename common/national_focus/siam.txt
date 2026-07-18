@@ -817,17 +817,6 @@
 		cost = 10
 		ai_will_do = {
 			factor = 10
-			modifier = {
-				OR = {
-					has_country_flag = SIA_AI_RANDOM_DEMOCRATIC
-					has_game_rule = {
-						rule = SIA_ai_behavior
-						option = DEMOCRATIC
-					}
-				}
-
-				factor = 0
-			}
 		}
 		available = {
 		}

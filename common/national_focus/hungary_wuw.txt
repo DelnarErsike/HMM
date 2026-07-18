@@ -14819,40 +14819,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = wuw_HUN_economic_intervention
-		icon = GFX_goal_generic_demand_territory
-		#prerequisite = { focus = wuw_HUN_a_revolutionary_greater_hungary }
-		mutually_exclusive = { focus = wuw_HUN_avoid_interventionalist_destablilization }
-		x = 1
-		y = 0
-		relative_position_id = wuw_HUN_end_the_regency
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 5
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-		# HMM: remove noob trap focus
-		allow_branch = { always = no }
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_ideas = HUN_wuw_interventionism
-		}
-	}
-
-	focus = {
 		id = wuw_HUN_secret_rearmament
 		icon = GFX_focus_secret_rearmament
 		#prerequisite = { focus = wuw_HUN_a_revolutionary_greater_hungary }

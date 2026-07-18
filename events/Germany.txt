@@ -1938,13 +1938,7 @@ country_event = {
 
 			modifier = {
 				factor = 0.5
-				OR = {
 					has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
-					has_game_rule = {
-						rule = AUS_AI_BEHAVIOR
-						option = AUS_ANTI_ANSCLUSS_STRESS
-					}
-				}
 			}
 		}
 
@@ -2001,10 +1995,6 @@ country_event = {
 				}
 				NOT = {
 					has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
-					has_game_rule = {
-						rule = AUS_AI_BEHAVIOR
-						option = AUS_ANTI_ANSCLUSS_STRESS
-					}
 				}
 			}
 			modifier = {
@@ -2070,13 +2060,7 @@ country_event = {
 
 			modifier = {
 				factor = 2
-				OR = {
 					has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
-					has_game_rule = {
-						rule = AUS_AI_BEHAVIOR
-						option = AUS_ANTI_ANSCLUSS_STRESS
-					}
-				}
 			}
 		}
 
@@ -2231,18 +2215,6 @@ country_event = {
 			modifier = {
 				factor = 0
 				OR = {
-					has_game_rule = {
-						rule = ENG_ai_behavior
-						option = DEMOCRATIC_HISTORICAL
-					}
-					has_game_rule = {
-						rule = ENG_ai_behavior
-						option = DEMOCRATIC_ALTERNATE
-					}
-					has_game_rule = {
-						rule = ENG_ai_behavior
-						option = FASCIST
-					}
 					AND = {
 						has_global_flag = GER_has_started_war
 						NOT = { is_in_faction_with = GER }
@@ -2359,17 +2331,6 @@ country_event = {
 					is_in_faction_with = GER
 					AND = {
 						tag = ENG
-						OR = {
-							ENG_is_on_historical_plan_trigger = yes
-							has_game_rule = {
-								rule = ENG_ai_behavior
-								option = NEUTRALITY
-							}
-							has_game_rule = {
-								rule = ENG_ai_behavior
-								option = COMMUNIST
-							}
-						}
 						NOT = {
 							is_in_faction_with = CZE
 							CZE = {
@@ -6141,19 +6102,6 @@ country_event = {
 				has_global_flag = GER_has_started_war
 				factor = 0
 			}
-			modifier = {
-				factor = 0
-				OR = {
-					has_game_rule = {
-						rule = ENG_ai_behavior
-						option = DEMOCRATIC_ALTERNATE
-					}
-					has_game_rule = {
-						rule = ENG_ai_behavior
-						option = FASCIST
-					}
-				}
-			}
 		}
 
 		FRA = {
@@ -6177,13 +6125,6 @@ country_event = {
 				strength_ratio = {
 					tag = GER
 					ratio > 0.7
-				}
-			}
-			modifier = {
-				factor = 0
-				has_game_rule = {
-					rule = ENG_ai_behavior
-					option = NEUTRALITY
 				}
 			}
 		}

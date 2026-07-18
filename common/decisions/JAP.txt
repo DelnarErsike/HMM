@@ -5489,16 +5489,6 @@ JAP_kodoha_insurgency_decisions = {
 
 		ai_will_do = {
 			base = 0
-			modifier = {
-				add = 100
-				OR = {
-					has_country_flag = JAP_AI_RANDOM_DEMOCRATIC
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = DEMOCRATIC
-					}
-				}
-			}
 		}
 
 		allowed = {  
@@ -5549,16 +5539,6 @@ JAP_kodoha_insurgency_decisions = {
 
 		ai_will_do = {
 			base = 0
-			modifier = {
-				add = 10
-				OR = {
-					has_country_flag = JAP_AI_RANDOM_DEMOCRATIC
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = DEMOCRATIC
-					}
-				}
-			}
 		}
 
 		allowed = {  

@@ -1969,13 +1969,6 @@ characters={
 			traits = { harsh_propagandist }
 			ai_will_do = {
 				base = 0
-				modifier ={
-					add = 150
-					has_game_rule = {
-						rule = SWE_ai_behavior
-						option = SWE_FASCIST_INDEPENDENT
-					}
-				}
 			}
 		}
 		name=SWE_sven_hedin
@@ -2045,13 +2038,6 @@ characters={
 			traits = { socialist_writer }
 			ai_will_do = {
 				base = 0
-				modifier = {
-					has_game_rule = {
-						rule = SWE_ai_behavior
-						option = SWE_COMMUNISM
-					}
-					add = 200  
-				}
 			}
 		}
 		name=SWE_ture_nerman

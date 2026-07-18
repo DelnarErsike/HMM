@@ -20,18 +20,12 @@ state={
 		buildings = {
 			infrastructure = 1
 		}
-		if = {
-			limit = {
-				has_dlc = "Battle for the Bosporus"
-			}
-			add_core_of = KUR
-		}
+		add_core_of = WST
 		if = {
 			limit = {
 				NOT = { has_dlc = "Battle for the Bosporus" }
 			}
 			add_core_of = TUR
-			add_core_of = KUR
 		}
 	}
 

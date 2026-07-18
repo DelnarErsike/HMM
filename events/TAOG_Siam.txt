@@ -1846,20 +1846,10 @@ country_event = {
 
 	option = { 
 		name = siam.34.b
+		trigger = { always = no }
 		complete_national_focus = SIA_standing_our_ground
 		ai_chance = {
-			base = 1
-			modifier = {
-				OR = {
-					is_historical_focus_on = yes
-					has_game_rule = {
-						rule = SIA_ai_behavior
-						option = HISTORICAL
-					}
-				}
-
-				factor = 0
-			}
+			base = 0
 		}
 	}
 }
@@ -2823,13 +2813,6 @@ country_event = {
 		name = siam_dem.5.a
 		ai_chance = {
 			factor = 5
-			modifier = {
-				OR = {
-					has_country_flag = SIA_AI_RANDOM_DEMOCRATIC
-					has_game_rule = { rule = SIA_ai_behavior option = DEMOCRATIC }
-				}
-				factor = 10
-			}
 		}
 		add_country_leader_role = {
 			character = SIA_pridi_banomyong

@@ -10,9 +10,8 @@ state={
 	history={
 
 		owner = CHI
-		add_core_of = SIK
 		add_core_of = CHI
-		add_core_of = PRC
+		add_core_of = WSA
 
 		victory_points = {
 			2074 1 # Ruoqiang 
@@ -21,25 +20,6 @@ state={
 		buildings = {
 			infrastructure = 1
 		}
-
-		1936.1.1 = {
-			IF = {
-				limit = {
-					has_dlc = "No Compromise, No Surrender" 
-				}
-				add_core_of = KHM
-			}
-		}
-
-		1938.10.25 = {
-			IF = {
-				limit = {
-					has_dlc = "No Compromise, No Surrender" 
-				}
-				remove_core_of = KHM
-			}	
-		}
-
 	}
 
 	local_supplies=0.0 

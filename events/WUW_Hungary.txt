@@ -4795,31 +4795,6 @@ country_event = {
 		name = WW_hungary.94.a
 		ai_chance = {
 			base = 30
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = HUN_AI_RANDOM_COMMUNIST
-					has_game_rule = {
-						rule = HUN_ai_behavior
-						option = COMMUNIST
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = HUN_AI_RANDOM_REPUBLICAN_DEMOCRACY
-					has_game_rule = {
-						rule = HUN_ai_behavior
-						option = REPUBLICAN_DEMOCRACY
-					}
-					has_country_flag = HUN_AI_RANDOM_REPUBLICAN_DEMOCRACY_EXPANSIONIST
-					has_game_rule = {
-						rule = HUN_ai_behavior
-						option = REPUBLICAN_DEMOCRACY_EXPANSIONIST
-					}
-				}
-			}
 		}
 		trigger = {
 		    OR = {
@@ -4867,31 +4842,6 @@ country_event = {
 		name = WW_hungary.94.b 
 		ai_chance = {
 			base = 30
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = HUN_AI_RANDOM_RESTORE_THE_SOCIALIST_REPUBLIC
-					has_game_rule = {
-						rule = HUN_ai_behavior
-						option = RESTORE_THE_SOCIALIST_REPUBLIC
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = HUN_AI_RANDOM_REPUBLICAN_DEMOCRACY
-					has_game_rule = {
-						rule = HUN_ai_behavior
-						option = REPUBLICAN_DEMOCRACY
-					}
-					has_country_flag = HUN_AI_RANDOM_REPUBLICAN_DEMOCRACY_EXPANSIONIST
-					has_game_rule = {
-						rule = HUN_ai_behavior
-						option = REPUBLICAN_DEMOCRACY_EXPANSIONIST
-					}
-				}
-			}
 		}
 		trigger = {
 		    OR = {
@@ -4927,26 +4877,6 @@ country_event = {
 		name = WW_hungary.94.c 
 		ai_chance = {
 			base = 35
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = HUN_AI_RANDOM_RESTORE_THE_SOCIALIST_REPUBLIC
-					has_game_rule = {
-						rule = HUN_ai_behavior
-						option = RESTORE_THE_SOCIALIST_REPUBLIC
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = HUN_AI_RANDOM_COMMUNIST
-					has_game_rule = {
-						rule = HUN_ai_behavior
-						option = COMMUNIST
-					}
-				}
-			}
 		}
 		trigger = {
 		    OR = {

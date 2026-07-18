@@ -1892,31 +1892,6 @@ characters = {
 			cost = 100
 			ai_will_do = {
 				base = 2
-				modifier = {
-					factor = 0
-					OR = {
-						has_country_flag = GER_AI_RANDOM_COMMUNIST_STALINIST
-						has_game_rule = {
-							rule = GER_ai_behavior
-							option = GER_COMMUNIST_STALINIST
-						}
-						has_country_flag = GER_AI_RANDOM_COMMUNIST_SPARTACUS
-						has_game_rule = {
-							rule = GER_ai_behavior
-							option = GER_COMMUNIST_SPARTACUS
-						}
-						has_country_flag = GER_AI_RANDOM_KAISER
-						has_game_rule = {
-							rule = GER_ai_behavior
-							option = KAISER
-						}
-						has_country_flag = GER_AI_RANDOM_DEMOCRATIC
-						has_game_rule = {
-							rule = GER_ai_behavior
-							option = DEMOCRATIC
-						}
-					}
-				}
 			}
 		}
 	}
@@ -2438,21 +2413,6 @@ characters = {
 			}
 			ai_will_do = {
 				base = 15
-				modifier = {
-					factor = 0
-					OR = {
-						has_country_flag = GER_AI_RANDOM_COMMUNIST_STALINIST
-						has_game_rule = {
-							rule = GER_ai_behavior
-							option = GER_COMMUNIST_STALINIST
-						}
-						has_country_flag = GER_AI_RANDOM_COMMUNIST_SPARTACUS
-						has_game_rule = {
-							rule = GER_ai_behavior
-							option = GER_COMMUNIST_SPARTACUS
-						}
-					}
-				}
 			}
 		}		
 	}
@@ -3220,21 +3180,6 @@ characters = {
 			}
 			ai_will_do = {
 				base = 2
-				modifier = {
-					factor = 0
-					OR = {
-						has_country_flag = GER_AI_RANDOM_COMMUNIST_STALINIST
-						has_game_rule = {
-							rule = GER_ai_behavior
-							option = GER_COMMUNIST_STALINIST
-						}
-						has_country_flag = GER_AI_RANDOM_COMMUNIST_SPARTACUS
-						has_game_rule = {
-							rule = GER_ai_behavior
-							option = GER_COMMUNIST_SPARTACUS
-						}
-					}
-				}
 			}
 		}		
 	}

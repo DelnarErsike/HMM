@@ -13129,21 +13129,6 @@ country_event = {
 		name = wuw_GER_civil_war.1.a
 		ai_chance = {
 			base = 85
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = GER_AI_RANDOM_KAISER
-					has_game_rule = {
-						rule = GER_ai_behavior
-						option = KAISER
-					}
-					has_country_flag = GER_AI_RANDOM_DEMOCRATIC
-					has_game_rule = {
-						rule = GER_ai_behavior
-						option = DEMOCRATIC
-					}
-				}
-			}
 		}
 		
 		add_timed_idea = {
@@ -13164,21 +13149,6 @@ country_event = {
 		name = wuw_GER_civil_war.1.b
 		ai_chance = {
 			base = 15
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = GER_AI_RANDOM_COMMUNIST_STALINIST
-					has_game_rule = {
-						rule = GER_ai_behavior
-						option = GER_COMMUNIST_STALINIST
-					}
-					has_country_flag = GER_AI_RANDOM_COMMUNIST_SPARTACUS
-					has_game_rule = {
-						rule = GER_ai_behavior
-						option = GER_COMMUNIST_SPARTACUS
-					}
-				}
-			}
 		}
 
 		add_popularity = {
@@ -13239,26 +13209,6 @@ country_event = {
 		name = wuw_GER_civil_war.3.a
 		ai_chance = {
 			base = 60
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = GER_AI_RANDOM_COMMUNIST_STALINIST
-					has_game_rule = {
-						rule = GER_ai_behavior
-						option = GER_COMMUNIST_STALINIST
-					}
-					has_country_flag = GER_AI_RANDOM_COMMUNIST_SPARTACUS
-					has_game_rule = {
-						rule = GER_ai_behavior
-						option = GER_COMMUNIST_SPARTACUS
-					}
-					has_country_flag = GER_AI_RANDOM_DEMOCRATIC
-					has_game_rule = {
-						rule = GER_ai_behavior
-						option = DEMOCRATIC
-					}
-				}
-			}
 		}
 		
 		add_popularity = {
@@ -13275,16 +13225,6 @@ country_event = {
 		name = wuw_GER_civil_war.3.b
 		ai_chance = {
 			base = 40
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = GER_AI_RANDOM_KAISER
-					has_game_rule = {
-						rule = GER_ai_behavior
-						option = KAISER
-					}
-				}
-			}
 		}
 
 		add_popularity = {
@@ -13785,21 +13725,6 @@ country_event = {
 		name = wuw_GER_civil_war.7.a
 		ai_chance = {
 			base = 50
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = GER_AI_RANDOM_COMMUNIST_STALINIST
-					has_game_rule = {
-						rule = GER_ai_behavior
-						option = GER_COMMUNIST_STALINIST
-					}
-					has_country_flag = GER_AI_RANDOM_COMMUNIST_SPARTACUS
-					has_game_rule = {
-						rule = GER_ai_behavior
-						option = GER_COMMUNIST_SPARTACUS
-					}
-				}
-			}
 		}
 		
 		custom_effect_tooltip = GER_promised_erich_raeder_a_great_navy_tt

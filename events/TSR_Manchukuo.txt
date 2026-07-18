@@ -32,21 +32,7 @@ country_event = {
 			always = no
 		}
 		ai_chance = { 
-			base = 10 
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}
-			modifier = {
-				OR = {
-					has_country_flag = MAN_AI_RANDOM_OBEDIENCE_CHINA
-					has_game_rule = {
-						rule = MAN_ai_behavior
-						option = OBEDIENCE_CHINA
-					}
-				}
-				factor = 20
-			}
+			base = 0
 		}
 		add_stability = -0.025
 		add_country_leader_role = {

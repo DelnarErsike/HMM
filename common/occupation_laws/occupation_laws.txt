@@ -734,51 +734,13 @@ independent_rule = {
 					has_focus_tree = indian_focus_goe
 				}
 				any_controlled_state = {
-					OR = {
-						is_core_of = MYS
-						is_core_of = HYD
-						is_core_of = MYS
-						is_core_of = RJP
-						is_core_of = CIP
-						is_core_of = WIS
-						is_core_of = SIN
-						is_core_of = KAS
-						is_core_of = KOL
-						is_core_of = KAS
-						is_core_of = WIS
-						is_core_of = NWF
-						is_core_of = MPU
-						is_core_of = KHL
-						is_core_of = FSS
-						is_core_of = SKK
-						is_core_of = RAS
-						is_core_of = KLT
-					}
+					is_core_of = WSI
 				}	
 			}
 		}
 
 		FROM = {
-			OR = {
-				original_tag = MYS
-				original_tag = HYD
-				original_tag = MYS
-				original_tag = RJP
-				original_tag = CIP
-				original_tag = WIS
-				original_tag = SIN
-				original_tag = KAS
-				original_tag = KOL
-				original_tag = KAS
-				original_tag = WIS
-				original_tag = NWF
-				original_tag = MPU
-				original_tag = KHL
-				original_tag = FSS
-				original_tag = SKK
-				original_tag = RAS
-				original_tag = KLT
-			}
+			original_tag = WSI
 		}
 	}
 
@@ -828,51 +790,13 @@ princely_subjugation = {
 					has_focus_tree = indian_focus_goe
 				}
 				any_controlled_state = {
-					OR = {
-						is_core_of = MYS
-						is_core_of = HYD
-						is_core_of = MYS
-						is_core_of = RJP
-						is_core_of = CIP
-						is_core_of = WIS
-						is_core_of = SIN
-						is_core_of = KAS
-						is_core_of = KOL
-						is_core_of = KAS
-						is_core_of = WIS
-						is_core_of = NWF
-						is_core_of = MPU
-						is_core_of = KHL
-						is_core_of = FSS
-						is_core_of = SKK
-						is_core_of = RAS
-						is_core_of = KLT
-					}
+					is_core_of = WSI
 				}	
 			}	
 		}
 		
 		FROM = {
-			OR = {
-				original_tag = MYS
-				original_tag = HYD
-				original_tag = MYS
-				original_tag = RJP
-				original_tag = CIP
-				original_tag = WIS
-				original_tag = SIN
-				original_tag = KAS
-				original_tag = KOL
-				original_tag = KAS
-				original_tag = WIS
-				original_tag = NWF
-				original_tag = MPU
-				original_tag = KHL
-				original_tag = FSS
-				original_tag = SKK
-				original_tag = RAS
-				original_tag = KLT
-			}
+			original_tag = WSI
 		}
 	}
 
@@ -924,11 +848,9 @@ senbu_occupation_law = {
 			FROM = { 
 				OR = {
 					is_literally_china = yes
-					tag = MEN
-					tag = MAN
-					tag = KOR
-					tag = MON
-					tag = TIB
+					original_tag = MAN
+					original_tag = KOR
+					original_tag = MON
 				}
 			}
 

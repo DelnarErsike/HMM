@@ -8,20 +8,7 @@ MAN_TSR_historical_plan = {
 		has_dlc = "No Compromise, No Surrender"
 	}
 	enable = {
-		OR = {
-			AND = {
-				is_historical_focus_on = yes
-				has_game_rule = {
-					rule = MAN_ai_behavior
-					option = DEFAULT
-				}
-			}
-			has_country_flag = MAN_AI_RANDOM_OBEDIENCE
-			has_game_rule = {
-				rule = MAN_ai_behavior
-				option = OBEDIENCE
-			}
-		}
+		always = yes
 	}
 	abort = {
 		JAP = {

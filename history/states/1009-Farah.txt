@@ -13,7 +13,6 @@ state={
 			infrastructure = 0
 		}
 		add_core_of = WST
-		add_core_of = AFG
 	}
 	manpower = 1
 	buildings_max_level_factor=1.000

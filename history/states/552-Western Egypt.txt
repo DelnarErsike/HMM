@@ -10,7 +10,7 @@ state = {
 	history = {
 
 		owner = ENG
-		add_core_of = EGY
+		add_core_of = WSF
 
 		buildings = {
 			infrastructure = 0

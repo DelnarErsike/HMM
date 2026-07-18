@@ -36,18 +36,7 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
-
-				modifier = {
-					OR = {
-						is_historical_focus_on = yes
-						has_game_rule = {
-							rule = SIA_ai_behavior
-							option = HISTORICAL
-						}
-					}
-					factor = 0
-				}
+				factor = 0
 			}
 		}
 		portraits={
@@ -98,17 +87,6 @@ characters={
 					cost = 150
 					ai_will_do = {
 						factor = 1.000
-						modifier = {
-							OR = {
-								has_country_flag = SIA_AI_RANDOM_DEMOCRATIC
-								has_game_rule = {
-									rule = SIA_ai_behavior
-									option = DEMOCRATIC
-								}
-							}
-
-							factor = 100
-						}
 					}
 
 					on_add = {
@@ -397,35 +375,7 @@ characters={
 
 					cost = 150
 					ai_will_do = {
-						factor = 1.000
-						modifier = {
-							OR = {
-								is_historical_focus_on = yes
-								has_game_rule = {
-									rule = SIA_ai_behavior
-									option = HISTORICAL
-								}
-							}
-							factor = 50
-						}
-
-						modifier = {
-							OR = {
-								has_country_flag = SIA_AI_RANDOM_DEMOCRATIC 
-								has_country_flag = SIA_AI_RANDOM_MONARCHIST
-
-								has_game_rule = {
-									rule = SIA_ai_behavior
-									option = DEMOCRATIC
-								}
-
-								has_game_rule = {
-									rule = SIA_ai_behavior
-									option = MONARCHIST
-								}
-							}
-							factor = 0
-						}
+						factor = 50.000
 					}
 			}
 
@@ -605,17 +555,7 @@ characters={
 				}
 				cost = 150
 				ai_will_do = {
-					factor = 1.000
-					modifier = {
-						OR = {
-							is_historical_focus_on = yes
-							has_game_rule = {
-								rule = SIA_ai_behavior
-								option = HISTORICAL
-							}
-						}
-						factor = 50
-					}
+					factor = 50.000
 				}
 		}
 		name=SIA_luang_wichitwathakan
@@ -723,17 +663,6 @@ characters={
 				cost = 150
 				ai_will_do = {
 					factor = 1.000
-					modifier = {
-						OR = {
-							has_country_flag = SIA_AI_RANDOM_DEMOCRATIC
-							has_game_rule = {
-								rule = SIA_ai_behavior
-								option = DEMOCRATIC
-							}
-						}
-
-						factor = 100
-					}
 				}
 
 				on_add = {
@@ -792,17 +721,6 @@ characters={
 				cost = 150
 				ai_will_do = {
 					factor = 1.000
-					modifier = {
-						OR = {
-							has_country_flag = SIA_AI_RANDOM_DEMOCRATIC
-							has_game_rule = {
-								rule = SIA_ai_behavior
-								option = DEMOCRATIC
-							}
-						}
-
-						factor = 100
-					}
 				}
 
 				on_add = {

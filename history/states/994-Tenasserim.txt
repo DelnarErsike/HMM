@@ -8,7 +8,7 @@ state = {
 	history = {
 	
 		owner = ENG
-		add_core_of = BRM
+		add_core_of = WSA
 
 		victory_points = {
 			1403 1 # Moulmein

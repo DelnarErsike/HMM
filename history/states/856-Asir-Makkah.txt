@@ -6,7 +6,6 @@ state= {
 
 		owner = WST
 		add_core_of	= WST
-		add_core_of = SAU
 
 		buildings = {
 			infrastructure = 1
@@ -15,10 +14,6 @@ state= {
 				naval_base = 5
 			}
 		}
-
-		
-
-		
 	}
 	manpower = 1
 	state_category = wasteland

@@ -9,8 +9,6 @@ state = {
 
 		owner = WST
 		add_core_of = WST
-		add_core_of = ARG
-		add_claim_by = BOL
 
 		buildings = {
 			infrastructure = 1
