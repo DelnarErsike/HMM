@@ -793,13 +793,11 @@ leader_traits = {
 			FROM = {
 				OR = {
 					original_tag = ITA
-					original_tag = SWI
 					original_tag = SWE
 					original_tag = AUS
 					original_tag = BRA
 					original_tag = GER
-					original_tag = CHI # Intentionally not below 
-					original_tag = PRC
+					original_tag = CHI # Intentionally not below
 				}
 			}
 		}
@@ -813,12 +811,10 @@ leader_traits = {
 			owner = {
 				OR = {
 					original_tag = ITA
-					original_tag = SWI
 					original_tag = SWE
 					original_tag = AUS
 					original_tag = BRA
 					original_tag = GER
-					original_tag = PRC 
 				}
 				NOT = {
 					OR = {
@@ -840,10 +836,7 @@ leader_traits = {
 			modifier = {
 				add = 0.5
 				FROM = { #Looks like the allowed parameter is doing NOTHING :D 
-					OR = {
 						original_tag = ITA
-						original_tag = SWI
-					}
 				}
 			}
 			modifier = { #ITALY

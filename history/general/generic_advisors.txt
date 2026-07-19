@@ -232,7 +232,6 @@ every_possible_country = {
 			NOT = { original_tag = AST }
 		}
 
-		NOT = { is_chinese_warlord = yes }
 		IF = {
 			limit = {
 				has_dlc = "Battle for the Bosporus"

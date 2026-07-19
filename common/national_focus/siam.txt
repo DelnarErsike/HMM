@@ -1787,9 +1787,6 @@
 			}
 		}
 
-		will_lead_to_war_with = ENG
-		will_lead_to_war_with = BRM
-		will_lead_to_war_with = MAL
 		#allow_branch = {
 		#}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -1829,9 +1826,7 @@
 			}
 		}
 
-		will_lead_to_war_with = FRA
 		search_filters = { FOCUS_FILTER_ANNEXATION }
-		will_lead_to_war_with = VIC
 
 		completion_reward = {
 			#hidden_effect = {
@@ -1913,7 +1908,6 @@
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		will_lead_to_war_with = FRA
 		completion_reward = {
 			custom_effect_tooltip = SIA_demand_the_return_of_lost_territory_tt
 
@@ -4167,10 +4161,6 @@
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = MAL
-			}
 			add_tech_bonus = {
 				bonus = 0.25
 				uses = 2

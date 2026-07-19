@@ -564,7 +564,7 @@ focus_tree = {
     focus = {
         id = RAJ_purna_swaraj
         icon = GFX_focus_RAJ_pruna_swaraj
-        prerequisite = { focus = RAJ_provincial_autonomy }#focus = RAJ_renegotiate_adens_control focus = RAJ_hand_over_aden_to_the_crown  }
+        prerequisite = { focus = RAJ_provincial_autonomy }
         #prerequisite = { focus = RAJ_extended_franchise }
         x = 0
         y = 1
@@ -8041,7 +8041,6 @@ focus = {
                 any_enemy_country = {
                     is_major = yes
                     NOT = { 
-                        original_tag = BRM 
                         is_in_faction_with = RAJ
                         original_tag = RAJ
                     }
@@ -8442,7 +8441,6 @@ focus = {
                 any_enemy_country = {
                     is_major = yes
                     NOT = { 
-                        original_tag = BRM 
                         is_in_faction_with = RAJ
                         original_tag = RAJ
                     }
@@ -9558,156 +9556,4 @@ focus = {
             add_ideas = RAJ_modernized_navy_spirit
         }
     }
-
-    focus = {
-        id = RAJ_deathblow_to_imperial_remnants
-        icon = GFX_goal_generic_secret_weapon
-        prerequisite = { focus = RAJ_red_punjab_operation focus = RAJ_secure_rajahsthan focus = RAJ_strike_eastern_pakistan }
-        x = 2
-        y = 1
-        relative_position_id = RAJ_red_punjab_operation
-
-        cost = 10
-
-        ai_will_do = {
-            factor = 1
-        }
-
-        available = {
-            NOT = {
-                has_truce_with = PAK
-            }
-        }
-        
-        bypass = {
-
-        }
-
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
-
-        search_filters = {FOCUS_FILTER_ANNEXATION}
-
-        completion_reward = {
-            create_wargoal = {
-                type = annex_everything
-                target = PAK 
-            }
-            custom_effect_tooltip = generic_skip_one_line_tt
-            PAK = {
-                every_core_state = {
-                    add_core_of = ROOT
-                }
-            }
-
-            if = {
-                limit = {
-                    BRM = {
-                        is_in_faction_with = ENG
-                    }
-                }
-
-                create_wargoal = {
-                    type = annex_everything
-                    target = BRM 
-                }
-                custom_effect_tooltip = generic_skip_one_line_tt
-                BRM = {
-                    every_core_state = {
-                        add_core_of = ROOT
-                    }
-                }
-            }
-        }
-    }
-
-    focus = {
-        id = RAJ_stopping_the_japanese_threat_into_central_asia
-        icon = GFX_goal_generic_secret_weapon
-        prerequisite = { focus = RAJ_deathblow_to_imperial_remnants }
-        x = 2
-        y = 1
-        relative_position_id = RAJ_deathblow_to_imperial_remnants
-
-        cost = 10
-
-        ai_will_do = {
-            factor = 1
-        }
-
-        available = {
-            NOT = { is_in_faction_with = JAP }
-        }
-        
-        bypass = {
-
-        }
-
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
-
-        search_filters = {}
-
-        completion_reward = {
-            if = {
-                limit = {
-                    JAP = {
-                        OR = {
-                            any_enemy_country = {
-                                is_literally_china = yes
-                            } 
-                            is_in_faction_with = SIA
-                            has_government = fascism
-                            has_government = neutrality
-                        }
-                    }
-                }
-
-                create_wargoal = {
-                    type = annex_everything
-                    target = JAP
-                }
-            }
-            add_ideas = idea_RAJ_anti_japanese_war
-        }
-    }
-
-
-
-    focus = {
-        id = RAJ_nationalize_british_owned_factories
-        icon = GFX_focus_AUS_raid_military_storages
-        prerequisite = { focus = RAJ_deathblow_to_imperial_remnants }
-        x = -2
-        y = 1
-        relative_position_id = RAJ_deathblow_to_imperial_remnants
-
-        cost = 10
-
-        ai_will_do = {
-            factor = 1
-        }
-
-        available = {
-            is_subject = no
-        }
-        
-        bypass = {
-
-        }
-
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
-
-        search_filters = {FOCUS_FILTER_INDUSTRY}
-
-        completion_reward = {
-            try_build_civ_in_core_otherwise_build_in_controlled = yes
-            try_build_mil_in_core_otherwise_build_in_controlled_2_mil = yes
-        }
-    }
-
 }       

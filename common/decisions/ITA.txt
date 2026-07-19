@@ -1474,7 +1474,6 @@ ITA_missiolinis = {
 		selectable_mission = no
 		days_mission_timeout = ITA_missiolinis_default_days
 
-		cosmetic_tag = SWI
 		cosmetic_ideology = democratic
 
 		timeout_effect = { #MISSION FAILS
@@ -3819,9 +3818,7 @@ ITA_colonial_management_dec_cat = {
 			NOT = { has_global_flag = second_italo_ethiopian_war_flag }
 			any_controlled_state = {
 				OR = {
-					is_core_of = LBA
-					is_core_of = ERI
-					is_core_of = SOM
+					is_core_of = WSF
 					is_core_of = ETH
 				}
 			}
@@ -5960,198 +5957,6 @@ ITA_diplomacy_balkan_decision_category = {
 					}
 				}
 			}
-		}
-	}
-
-	ITA_coronate_prince_aimone = {
-		priority = 70
-
-		icon = GFX_decision_eng_ally_imperialist_coup
-
-		ai_will_do = {
-			base = 20
-			modifier = {
-				factor = 10
-				is_in_faction_with = CRO
-			}
-			modifier = { #ITA struggles to garrison puppets that can be naval invaded
-				factor = 0.5
-				ITA_is_historical_ai = yes
-			}
-		}
-
-		allowed = {
-			original_tag = ITA
-		}
-
-		available = {
-			is_subject = no
-			CRO = {
-				exists = yes
-				NOT = { has_war_with = ITA }
-				OR = {
-					is_subject = no
-					is_subject_of = ITA
-				}
-				OR = {
-					has_government = fascism
-					has_government = neutrality
-				}
-			}
-		}
-
-		visible = {
-			ITA = {
-				OR = {
-					has_government = neutrality
-					has_government = fascism
-				}
-			}
-			NOT = {
-				has_country_flag = ITA_aimones_coronation
-			}
-		}
-
-		cost = 75
-
-		days_remove = 7
-
-		remove_effect = {
-			IF = {
-				limit = {
-					CRO = {
-						NOT = {
-							is_subject_of = ITA
-						}
-					}
-				}
-				CRO = {
-					country_event = {
-					    id = BBA_italy_interaction_events.4
-					    days = 1
-					    random = 2
-					}
-				}
-			}
-			set_country_flag = ITA_aimones_coronation
-			hidden_effect = {
-				ITA_prince_aimone = {
-					set_nationality = CRO
-				}
-			}
-		}
-	}
-
-	ITA_demand_tomislavs_absolute_reign = {
-		priority = 69
-
-		icon = GFX_decision_eng_abdication_crisis
-
-		ai_will_do = {
-			base = 1 #Peviously 10
-			modifier = { #ITA struggles to garrison puppets that can be naval invaded
-				factor = 0.2
-				ITA_is_historical_ai = yes
-			}
-		}
-
-		allowed = {
-			original_tag = ITA
-		}
-
-		available = {
-			CRO = {
-				exists = yes
-				is_subject_of = ITA
-			}
-			has_country_flag = ITA_aimones_coronation
-		}
-
-		visible = {
-			has_country_flag = ITA_aimones_coronation
-			ITA = {
-				OR = {
-					has_government = neutrality
-					has_government = fascism
-				}
-			}
-			NOT = {
-				has_country_flag = ITA_aimones_absolute_reign
-			}
-		}
-
-		cost = 75
-
-		days_remove = 7
-
-		remove_effect = {
-			IF = {
-				limit = { has_dlc = "Together for Victory" }
-				ITA = {
-					set_autonomy = {
-					    target = CRO
-					    autonomy_state = autonomy_reichskommissariat
-					    end_wars = no
-					    end_civil_wars = no
-					}
-				}
-			}
-			IF = {
-				limit = { ITA = { has_government = fascism } }
-				CRO = {
-					ITA_prince_aimone = {
-						add_country_leader_role = {
-						  character = ITA_tomislav
-						  promote_leader = yes
-						  country_leader = {
-						    ideology = fascism_ideology
-						    expire = "1970.1.1.1"
-						    traits = { ITA_tomislav_of_croatia }
-						  }
-						}
-					}
-				}
-			}
-			IF = {
-				limit = { ITA = { has_government = neutrality } }
-				CRO = {
-					ITA_prince_aimone = {
-						add_country_leader_role = {
-						  character = ITA_tomislav
-						  promote_leader = yes
-						  country_leader = {
-						    ideology = despotism
-						    expire = "1970.1.1.1"
-						    traits = { ITA_tomislav_of_croatia }
-						  }
-						}
-					}
-				}
-			}
-			CRO = {
-				add_political_power = 75
-				division_template = {
-				    name = "Tomislav's Royal Guards"
-				    is_locked = yes
-				    division_names_group = ITA_INF_01
-				    regiments = {
-				        infantry = { x = 0 y = 0 }
-				        infantry = { x = 0 y = 1 }
-				        infantry = { x = 0 y = 2 }
-				        infantry = { x = 1 y = 0 }
-				        infantry = { x = 1 y = 1 }
-				        infantry = { x = 1 y = 2 }
-				    }
-				}
-			}
-			109 = {
-				create_unit = {
-				    division = "name = \"Tomislav's Royal Guards\" division_template = \"Tomislav's Royal Guards\" start_experience_factor = 0.5 start_equipment_factor = 1.0 start_manpower_factor = 1.0"
-				    owner = CRO
-				}
-			}
-
-			set_country_flag = ITA_aimones_absolute_reign
 		}
 	}
 

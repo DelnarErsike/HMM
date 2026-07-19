@@ -317,7 +317,6 @@
 				all_state = {
 					OR = {
 						NOT = { is_core_of = CHI }
-						NOT = { is_core_of = PRC }
 						OR = {
 							is_controlled_by = ROOT
 							CONTROLLER = { is_in_faction_with = ROOT }
@@ -1190,22 +1189,10 @@
 		available = {
 			is_subject_of = JAP
 			NOT = { has_war_with = JAP }
-			NOT = { has_war_with = MEN }
-			MEN = {
-				exists = yes
-				is_subject_of = JAP
-			}
 		}
 
 		bypass = {
-			MEN = {
-				OR = {
-					exists = no
-					NOT = {
-						is_subject_of = JAP
-					}
-				}
-			}
+			always = yes
 		}
 
 		cancel_if_invalid = yes
@@ -1216,7 +1203,6 @@
 		
 
 		completion_reward = {
-			annex_country = { target = MEN transfer_troops = yes }
 		}
 	}
 

@@ -195,21 +195,13 @@ joint_focus = {
 				limit = {
 					any_owned_state = {
 						is_controlled_by = ROOT
-						OR = {
-							is_core_of = VIE
-							is_core_of = CAM
-							is_core_of = LAM
-						}
+						CHI_indo_chinese_states = yes
 					}
 				}
 				random_owned_state = {
 					limit = {
 						is_controlled_by = ROOT
-						OR = {
-							is_core_of = VIE
-							is_core_of = CAM
-							is_core_of = LAM
-						}
+						CHI_indo_chinese_states = yes
 					}
 					create_unit = {
 						division = "name = \"Corps Expéditionnaire\" division_template = \"Corps Expéditionnaire\" start_experience_factor = 0.3"
@@ -292,11 +284,8 @@ joint_focus = {
 		}
 		every_state = {
 			limit = {
-				is_core_of = MAL
-				OR = {
-					is_owned_by = ENG
-					is_owned_by = MAL
-				}
+				is_core_of = WSA
+				is_controlled_by = ENG
 			}
 			add_building_construction = {
 				type = coastal_bunker
@@ -700,11 +689,7 @@ joint_focus = {
 			}
 			every_country = {
 				limit = {
-					OR = {
-						tag = SIA
-						tag = NZL
-						tag = MAL
-					}
+					tag = NZL
 					is_in_faction_with = ROOT
 					NOT = { has_country_flag = abdacom_member }
 					NOT = { has_country_flag = abdacom_declined }

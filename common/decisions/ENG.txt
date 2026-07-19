@@ -7993,13 +7993,8 @@ ENG_move_to_secure_the_dominions = {
 			}
 			NOT = { army_manpower_in_state = { state = 432 amount < 9600 } }
 			NOT = { army_manpower_in_state = { state = 434 amount < 9600 } }
-			if = {
-				limit = {
-					NOT = { country_exists = BRM }
-				}
 				NOT = { army_manpower_in_state = { state = 640 amount < 9600 } }
 				NOT = { army_manpower_in_state = { state = 288 amount < 9600 } }
-			}
 			NOT = { army_manpower_in_state = { state = 439 amount < 96000 } }
 		}
 
@@ -8108,13 +8103,8 @@ ENG_move_to_secure_the_dominions = {
 			}
 			NOT = { army_manpower_in_state = { state = 432 amount < 9600 } }
 			NOT = { army_manpower_in_state = { state = 434 amount < 9600 } }
-			if = {
-				limit = {
-					NOT = { country_exists = BRM }
-				}
 				NOT = { army_manpower_in_state = { state = 640 amount < 9600 } }
 				NOT = { army_manpower_in_state = { state = 288 amount < 9600 } }
-			}
 			NOT = { army_manpower_in_state = { state = 439 amount < 96000 } }
 			FROM = { has_country_flag = ENG_cannot_leave_faction }
 		}
@@ -8216,13 +8206,8 @@ ENG_move_to_secure_the_dominions = {
 			}
 			NOT = { army_manpower_in_state = { state = 432 amount < 9600 } }
 			NOT = { army_manpower_in_state = { state = 434 amount < 9600 } }
-			if = {
-				limit = {
-					NOT = { country_exists = BRM }
-				}
 				NOT = { army_manpower_in_state = { state = 640 amount < 9600 } }
 				NOT = { army_manpower_in_state = { state = 288 amount < 9600 } }
-			}
 			NOT = { army_manpower_in_state = { state = 439 amount < 96000 } }
 			FROM = { 
 				has_country_flag = ENG_cannot_leave_faction
@@ -8310,13 +8295,8 @@ ENG_move_to_secure_the_dominions = {
 			}
 			NOT = { army_manpower_in_state = { state = 432 amount < 9600 } }
 			NOT = { army_manpower_in_state = { state = 434 amount < 9600 } }
-			if = {
-				limit = {
-					NOT = { country_exists = BRM }
-				}
 				NOT = { army_manpower_in_state = { state = 640 amount < 9600 } }
 				NOT = { army_manpower_in_state = { state = 288 amount < 9600 } }
-			}
 			NOT = { army_manpower_in_state = { state = 439 amount < 96000 } }
 			FROM = {
 				has_country_flag = ENG_cannot_leave_faction

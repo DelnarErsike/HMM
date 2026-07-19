@@ -3053,24 +3053,13 @@ focus_tree = {
 		}	
 
 		available = {
-			MAL = {
-				any_core_state = {
-					is_controlled_by = ROOT
-				}
-			}
+			always = yes
 		}
 
 		available_if_capitulated = no
 
 		bypass = {
-			NOT = {
-				MAL = {
-					any_core_state = {
-						is_fully_controlled_by = ROOT
-					}
-				}
-				has_subject = MAL 
-			}
+			always = yes
 		}
 
 		completion_reward = {
@@ -3111,21 +3100,6 @@ focus_tree = {
 
 			}
 
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = MAL
-					is_fully_controlled_by = ROOT
-				}
-				create_unit = {
-				    division = "name = \"1st Royal Malay Regiment\" division_template = \"Royal Malay Regiment\" start_experience_factor = 0.3 start_equipment_factor = 0.95"
-				    owner = ROOT
-				}
-				create_unit = {
-				    division = "name = \"2nd Royal Malay Regiment\" division_template = \"Royal Malay Regiment\" start_experience_factor = 0.3 start_equipment_factor = 0.95"
-				    owner = ROOT
-				}
-			}
-
 		}
 
 	}
@@ -3150,61 +3124,16 @@ focus_tree = {
 		}	
 
 		available = {
-			has_subject = MAL
+			always = no
 		}
 
 		available_if_capitulated = no
 
 		bypass = {
-			NOT = {
-				has_subject = MAL 
-			}
+			always = yes
 		}
 
 		completion_reward = {
-
-			MAL = {
-				add_autonomy_score = { 
-					value = 150
-					localization = ENG_territorial_army_of_malaysia_focus
-				}	
-				army_experience = 50 
-				add_manpower = 10000
-			}
-
-			IF = {
-				limit = {
-					MAL = {
-						has_idea = MAL_ketuanan_melayu
-					}
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				MAL = {
-					remove_ideas = MAL_ketuanan_melayu
-				}
-			}
-			ELSE_IF = {
-				limit = {
-					MAL = {
-						has_idea = MAL_ketuanan_melayu_2
-					}
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				MAL = {
-					remove_ideas = MAL_ketuanan_melayu_2
-				}
-			}
-			ELSE_IF = {
-				limit = {
-					MAL = {
-						has_idea = MAL_ketuanan_melayu_3
-					}
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				MAL = {
-					remove_ideas = MAL_ketuanan_melayu_3
-				}
-			}
 
 		}
 
@@ -3387,13 +3316,9 @@ focus_tree = {
 		}	
 
 		available = {
-			OR = {
-				has_subject = MAL
-				has_subject = SAR
 				333 = {
 					is_owned_and_controlled_by = ROOT 
 				}
-			}
 		}
 
 		available_if_capitulated = no
@@ -3434,124 +3359,6 @@ focus_tree = {
 					}
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
-			}
-
-			IF = {
-				limit = {
-					has_subject = MAL
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				MAL = {
-
-					hidden_effect = {
-						set_technology = { 
-							TOA_jungle_pioneers_support_tech = 1 
-							popup = no
-						}
-					}
-					custom_effect_tooltip = SMB_jungle_pioneers_tt
-
-					IF = {
-						limit = {
-							has_dlc = "No Compromise, No Surrender"
-						}
-
-						custom_effect_tooltip = generic_skip_one_line_tt
-						
-						add_tech_bonus = {
-							name = ENG_sarawakrangers_focus
-							bonus = 0.75 
-							uses = 1
-							category = rangers_tech_cat
-						}
-						
-						IF = {
-							limit = {
-								has_dlc = "Arms Against Tyranny"
-							}
-							add_doctrine_cost_reduction = {
-								name = ENG_sarawakrangers_focus
-								cost_reduction = 0.75 
-								uses = 1
-								category = special_forces_doctrine
-							}
-							custom_effect_tooltip = ranger_subdoctrines_default_add_mastery_bonus_effect_tooltip
-							hidden_effect = {
-								add_mastery_bonus = {
-									name = PHI_philippine_scouts
-									bonus = 0.1
-									days = 240
-									sub_doctrine = rangers_1
-								}
-								add_mastery_bonus = {
-									name = PHI_philippine_scouts
-									bonus = 0.1
-									days = 240
-									sub_doctrine = rangers_2
-								}
-							}				
-						}
-					}
-				}
-			}
-
-			IF = {
-				limit = {
-					has_subject = SAR
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				SAR = {
-
-					hidden_effect = {
-						set_technology = { 
-							TOA_jungle_pioneers_support_tech = 1 
-							popup = no
-						}
-					}
-					custom_effect_tooltip = SMB_jungle_pioneers_tt
-
-					IF = {
-						limit = {
-							has_dlc = "No Compromise, No Surrender"
-						}
-
-						custom_effect_tooltip = generic_skip_one_line_tt
-						
-						add_tech_bonus = {
-							name = ENG_sarawakrangers_focus
-							bonus = 0.75 
-							uses = 1
-							category = rangers_tech_cat
-						}
-						
-						IF = {
-							limit = {
-								has_dlc = "Arms Against Tyranny"
-							}
-							add_doctrine_cost_reduction = {
-								name = ENG_sarawakrangers_focus
-								cost_reduction = 0.75 
-								uses = 1
-								category = special_forces_doctrine
-							}
-							custom_effect_tooltip = ranger_subdoctrines_default_add_mastery_bonus_effect_tooltip
-							hidden_effect = {
-								add_mastery_bonus = {
-									name = PHI_philippine_scouts
-									bonus = 0.1
-									days = 240
-									sub_doctrine = rangers_1
-								}
-								add_mastery_bonus = {
-									name = PHI_philippine_scouts
-									bonus = 0.1
-									days = 240
-									sub_doctrine = rangers_2
-								}
-							}				
-						}
-					}
-				}
 			}
 		}
 	}
@@ -3973,26 +3780,6 @@ focus_tree = {
 					original_tag = CAN
 					is_in_faction_with = ROOT
 				}
-				any_country = {
-					original_tag = MAL
-					is_in_faction_with = ROOT
-				}
-				any_country = {
-					original_tag = PAL
-					is_in_faction_with = ROOT
-				}
-				any_country = {
-					original_tag = JOR
-					is_in_faction_with = ROOT
-				}
-				any_country = {
-					original_tag = KUW
-					is_in_faction_with = ROOT
-				}
-				any_country = {
-					original_tag = BRM
-					is_in_faction_with = ROOT
-				}
 			}
 		}
 
@@ -4012,21 +3799,6 @@ focus_tree = {
 			NZL = {
 				exists = no
 			}
-			MAL = {
-				exists = no
-			}
-			PAL = {
-				exists = no
-			}
-			JOR = {
-				exists = no
-			}
-			KUW = {
-				exists = no
-			}
-			BRM = {
-				exists = no
-			}
 			NOT = {
 				any_state = {
 					OR = {
@@ -4036,8 +3808,6 @@ focus_tree = {
 						is_core_of = AST
 						is_core_of = NZL
 						is_core_of = RAJ
-						is_core_of = MAL
-						is_core_of = BRM
 					}
 					NOT = { state = 320 }
 					NOT = { state = 321 }
@@ -4098,51 +3868,6 @@ focus_tree = {
 			random_country = {
 				limit = {
 					original_tag = SAF
-					exists = yes
-					is_in_faction_with = ROOT
-				}
-				add_political_power = 50
-				add_opinion_modifier = { target = ENG modifier = ENG_commonwealth_ties }
-			}
-			random_country = {
-				limit = {
-					original_tag = MAL
-					exists = yes
-					is_in_faction_with = ROOT
-				}
-				add_political_power = 50
-				add_opinion_modifier = { target = ENG modifier = ENG_commonwealth_ties }
-			}
-			random_country = {
-				limit = {
-					original_tag = PAL
-					exists = yes
-					is_in_faction_with = ROOT
-				}
-				add_political_power = 50
-				add_opinion_modifier = { target = ENG modifier = ENG_commonwealth_ties }
-			}
-			random_country = {
-				limit = {
-					original_tag = JOR
-					exists = yes
-					is_in_faction_with = ROOT
-				}
-				add_political_power = 50
-				add_opinion_modifier = { target = ENG modifier = ENG_commonwealth_ties }
-			}
-			random_country = {
-				limit = {
-					original_tag = KUW
-					exists = yes
-					is_in_faction_with = ROOT
-				}
-				add_political_power = 50
-				add_opinion_modifier = { target = ENG modifier = ENG_commonwealth_ties }
-			}
-			random_country = {
-				limit = {
-					original_tag = BRM
 					exists = yes
 					is_in_faction_with = ROOT
 				}

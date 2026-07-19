@@ -27,17 +27,6 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}
-		if = {
-			limit = { ROOT = { tag = HOL }
-			}
-			FROM = { puppet = INS }
-		}
-
-		if = {
-			limit = { ROOT = { tag = ENG }
-			}
-			FROM = { puppet = MAL }
-		}
 
 		if = {
 			limit = { ROOT = { tag = FRA } }
@@ -144,17 +133,6 @@ country_event = {
 			base = 10
 		}
 		effect_tooltip = {
-			if = {
-				limit = { FROM = { tag = HOL }
-				}
-				puppet = INS
-			}
-
-			if = {
-				limit = { FROM = { tag = ENG }
-				}
-				puppet = MAL
-			}
 
 			if = {
 				limit = { FROM = { tag = FRA } }
@@ -319,19 +297,6 @@ country_event = {
 			country_event = { 
 				id = wtt_japan.12 
 				days = 1 
-			}
-			if = {
-				limit = {
-					original_tag = SOV
-				}
-				hidden_effect = {
-					PRC = {
-						country_event = { 
-							id = SEA_PRC_misc_events.12
-							days = 2
-						}
-					}
-				}
 			}
 		}
 
@@ -1197,12 +1162,6 @@ country_event = {
 				MAN = { is_subject_of = ROOT }
 			}
 			set_autonomy = { target = MAN autonomy_state = autonomy_free }
-			if = {
-				limit = {
-					MEN = { is_subject_of = ROOT }
-				}
-				MAN = { puppet = MEN }
-			}
 			MAN = {
 				set_cosmetic_tag = MAN_kwantung_army
 				hidden_effect = {
@@ -1752,18 +1711,6 @@ country_event = {
 						has_war_with = ROOT
 					}
 					white_peace = ROOT
-					hidden_effect = {
-						if = {
-							limit = {
-								original_tag = PRC
-								has_government = communism
-							}
-						}
-						country_event = {
-							id = SEA_PRC_misc_events.9
-							days = 15
-						}
-					}
 				}
 			}
 		}
@@ -1989,21 +1936,6 @@ country_event = {
 				white_peace = ROOT
 			}
 		}
-		if = {
-			limit = {
-				RNG = {
-					exists = yes
-					is_ally_with = JAP
-				}
-			}
-			event_target:WTT_current_china_leader = {
-				annex_country = {
-					target = RNG 
-					transfer_troops = no
-				}	
-			}
-		}
-		else = {
 			every_other_country = {
 				limit = {
 					OR = {
@@ -2043,7 +1975,6 @@ country_event = {
 				}
 				white_peace = ROOT
 			}
-		}
 	}
 }
 
@@ -2143,13 +2074,7 @@ country_event = {
 			MAN = {
 				every_controlled_state = {
 					limit = {
-						OR = {
 							is_owned_by = JAP
-							AND = {
-								is_owned_by = MEN
-								MEN = { is_subject_of = JAP }
-							}
-						}
 						NOT = {
 							state = 525
 							state = 527
@@ -2289,13 +2214,7 @@ country_event = {
 		MAN = {
 			every_controlled_state = {
 				limit = {
-					OR = {
-						is_owned_by = JAP
-						AND = {
-							is_owned_by = MEN
-							MEN = { is_subject_of = JAP }
-						}
-					}
+					is_owned_by = JAP
 				}
 				MAN = {
 					transfer_state = PREV
@@ -2464,23 +2383,13 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		original_tag = JAP
-		OR = {
 			AND = {
 				has_war_with = RAJ
 				OR = {
 					RAJ = { is_subject = yes }
 					RAJ = { is_in_faction_with = ENG }
-					RAJ = { NOT = { has_completed_focus = RAJ_forward_bloc } }
 				}
 			}
-			AND = {
-				has_war_with = BRM
-				OR = {
-					BRM = { is_in_faction_with = ENG }
-					BRM = { is_subject_of = ENG }
-				}
-			}
-		}
 	}
 
 	option = {

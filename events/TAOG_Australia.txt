@@ -645,141 +645,6 @@ country_event = { #NZL refuses to be annexed
 	}
 }
 
-country_event = { #INS: Australian request to puppet/military access
-	id = AST_diplomatic_events.17
-	title = AST_diplomatic_events.17.t
-	desc = AST_diplomatic_events.17.desc
-	picture = GFX_report_event_ast_parliament_house
-
-	is_triggered_only = yes
-
-	option = { #Agree to puppet
-		name = AST_diplomatic_events.17.a
-		ai_chance = { 
-			base = 6
-			modifier = {
-				OR = {
-					has_government = democratic
-					has_government = neutrality
-				}
-				add = 10
-			}
-		}
-
-		trigger = {
-			AST = { 
-				NOT = {
-					is_subject = yes
-				}
-			}
-		}
-
-		custom_effect_tooltip = AST_diplomatic_events.17.a.tt
-
-		hidden_effect = {
-			AST = { 
-				set_country_flag = AST_INS_puppet
-				country_event = { id = AST_diplomatic_events.18 hours = 1 }
-			}
-		}
-	}
-
-	option = { #Agree to military access
-		name = AST_diplomatic_events.17.b
-		ai_chance = { 
-			base = 3
-			modifier = {
-				OR = {
-					has_government = democratic
-					has_government = neutrality
-				}
-				add = 10
-			}
-		}
-
-		trigger = {
-			AST = { 
-				NOT = {
-		  			has_military_access_to = INS
-		  		}
-			}
-		}
-
-		custom_effect_tooltip = AST_diplomatic_events.17.b.tt
-
-		hidden_effect = {
-			AST = { 
-				set_country_flag = AST_INS_military_access
-				country_event = { id = AST_diplomatic_events.18 hours = 1 }
-			}
-		}
-	}
-
-	option = { #Refuse all
-		name = AST_diplomatic_events.17.c
-		ai_chance = {
-			base = 1
-		}
-
-		hidden_effect = {
-			AST = { country_event = { id = AST_diplomatic_events.19 hours = 1 } }
-		}
-	}
-}
-
-country_event = { #INS agree
-	id = AST_diplomatic_events.18
-	title = AST_diplomatic_events.18.t
-	desc = AST_diplomatic_events.18.desc
-	picture = GFX_report_event_generic_handshake
-
-	is_triggered_only = yes
-
-	option = { 
-		name = AST_diplomatic_events.18.a
-
-		IF = {
-			limit = {
-				has_country_flag = AST_INS_puppet
-			}
-			AST = {
-				puppet = INS
-			}
-			hidden_effect = {
-				INS = {
-					drop_cosmetic_tag = yes
-					set_cosmetic_tag = INS_subject
-				}
-			}
-
-			ELSE = {
-				limit = {
-					has_country_flag = AST_INS_military_access
-				}
-
-				diplomatic_relation = {
-  					country = INS
- 					relation = military_access
-  					active = yes
-  				}
-			}
-		}
-	}
-}
-
-country_event = { #INS refusal
-	id = AST_diplomatic_events.19
-	title = AST_diplomatic_events.19.t
-	desc = AST_diplomatic_events.19.desc
-	picture = GFX_report_event_ast_parliament_house
-
-	is_triggered_only = yes
-
-	option = { 
-		name = AST_diplomatic_events.19.a
-	}
-}
-
 country_event = { #Summons to British War Cabinet
 	id = AST_diplomatic_events.20
 	title = AST_diplomatic_events.20.t
@@ -1107,29 +972,12 @@ country_event = { #ENG: Choice to create a pacific commonwealth under Australian
 				transfer_state_to = AST 
 				} 
 			}
-
-		IF = {	
-			limit = { 
-				MAL = {
-					is_puppet_of = ENG
-				}
+		
+		every_owned_state = {
+			limit = {
+				is_core_of = WSA
 			}
-			AST = {
-				set_country_flag = AST_canberra_rule_mal
-				annex_country = { target = MAL }
-			}
-		}
-
-		IF = {	
-			limit = { 
-				BRM = { 
-					is_puppet_of = ENG	
-				}
-			}
-			AST = {
-				set_country_flag = AST_canberra_rule_brm
-				annex_country = { target = BRM }
-			}
+			transfer_state_to = AST
 		}
 
 		hidden_effect = {
@@ -1179,21 +1027,12 @@ country_event = { #UK agrees for Australia to create Pacific Commonwealth
 					} 
 				}
 
-			IF = {	
-				limit = { 
-					has_country_flag = AST_canberra_rule_mal
-				}
-				AST = {
-					annex_country = { target = MAL }
-				}
-			}
-
-			IF = {	
-				limit = { 
-					has_country_flag = AST_canberra_rule_brm
-				}
-				AST = {
-					annex_country = { target = BRM }
+			ENG = {
+				every_owned_state = {
+					limit = {
+						is_core_of = WSA
+					}
+					transfer_state_to = AST
 				}
 			}
 		}
@@ -1564,204 +1403,6 @@ country_event = { #INS/SIA/FRA/ENG disagrees to Australia request of resource ri
 			clr_country_flag = AST_brm_resources_flag 
 			clr_country_flag = AST_ind_resources_flag
 			clr_country_flag = AST_resource_request_ongoing_flag
-		}
-	}
-}
-
-country_event = { #JAP: Australia requests to divide Pacific territories
-	id = AST_diplomatic_events.34
-	title = AST_diplomatic_events.34.t
-	desc = AST_diplomatic_events.34.desc
-	picture = GFX_report_event_ast_parliament_house
-
-	is_triggered_only = yes
-
-	option = { 
-		name = AST_diplomatic_events.34.a
-		ai_chance = {
-			base = 1
-		}
-		ROOT = { country_event = { id = AST_diplomatic_events.35 days = 1 } }
-		
-		custom_effect_tooltip = effects_of_event_tt
-		effect_tooltip = {
-			AST_divide_the_pacific_effect = yes
-		}
-
-		hidden_effect = {
-			FROM = { 
-				country_event = { id = AST_diplomatic_events.35 days = 1 } 
-			}
-		}
-	}
-
-	option = { 
-		name = AST_diplomatic_events.34.b
-		ai_chance = {
-			base = 0
-			modifier = {
-				has_government = democratic
-				add = 3
-			}
-		}
-
-		hidden_effect = {
-			FROM = { country_event = { id = AST_diplomatic_events.36 days = 1 } }
-		}
-	}
-}
-
-country_event = { #JAP agreed to divide Pacific territories
-	id = AST_diplomatic_events.35
-	title = AST_diplomatic_events.35.t
-	desc = AST_diplomatic_events.35.desc
-	picture = GFX_report_event_generic_handshake
-
-	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-			AST_divide_the_pacific_effect = yes
-		}
-	}
-
-	option = { 
-		name = AST_diplomatic_events.35.a
-
-		effect_tooltip = {
-			IF = {
-				limit = {
-					AST = { has_country_flag = AST_jap_join_ast_faction }
-				}
-				AST = {
-					faction_leader = {
-						add_to_faction = JAP
-					}
-				}
-			}
-			IF = {
-				limit = {
-					AST = { has_country_flag = AST_ast_join_jap_faction }
-				}
-				JAP = {
-					faction_leader = {
-						add_to_faction = AST
-					}
-				}
-			}
-			IF = {
-				limit = {
-					AST = { has_country_flag = AST_non_agression_pact_jap }
-				}
-				JAP = { diplomatic_relation = { country = AST relation = non_aggression_pact } }
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = AST_dividing_the_pacific_ast_gain_tt 
-			every_state = {
-				limit = {
-					has_state_flag = AST_claims_to_ast
-				}
-				add_claim_by = AST
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = AST_dividing_the_pacific_jap_gain_tt
-			every_state = {
-				limit = {
-					has_state_flag = AST_claims_to_jap
-				}
-				add_claim_by = JAP
-			}
-
-			IF = { #Only for tooltip
-			    limit = {
-			        OR = {
-			            BRM = { 
-			            	OR = {
-			            		is_subject_of = AST 
-			            		has_country_flag = AST_brm_puppet_to_jap
-			            	}
-			            }
-			            any_state = {
-			                is_core_of = BRM
-			                OR = {
-				                is_controlled_by = AST
-				                has_state_flag = AST_transfer_to_jap
-				            }
-			            }
-			            any_state = {
-			            	OR = {
-				                is_controlled_by = AST
-				                has_state_flag = AST_transfer_to_jap
-				            }
-			                OR = {
-			                    state = 286
-			                    state = 670
-			                    state = 671
-			                    state = 741
-			                    state = 1017
-			                    state = 1066
-			                    state = 1067
-			                    state = 1068
-			                    state = 1069
-			                }
-			            }
-			        }
-			    }
-				custom_effect_tooltip = generic_skip_one_line_tt
-				custom_effect_tooltip = AST_dividing_the_pacific_tt3
-			}
-
-			IF = {
-				limit = {
-					BRM = { 
-						has_country_flag = AST_brm_puppet_to_jap
-					}
-				}
-				JAP = {
-					puppet = BRM
-				}	
-			}
-
-			every_state = {
-				limit = {
-					has_state_flag = AST_transfer_to_jap
-				}
-				transfer_state_to = JAP
-			}
-		}	
-	}
-}
-
-country_event = { #JAP disagrees to divide Pacific territories
-	id = AST_diplomatic_events.36
-	title = AST_diplomatic_events.36.t
-	desc = AST_diplomatic_events.36.desc
-	picture = GFX_report_event_generic_read_write
-
-	is_triggered_only = yes
-
-	option = { 
-		name = AST_diplomatic_events.36.a
-	}
-}
-
-country_event = { #BRM: Overlordship is transferred to JAP
-	id = AST_diplomatic_events.37
-	title = AST_diplomatic_events.37.t
-	desc = AST_diplomatic_events.37.desc
-	picture = GFX_report_event_ast_parliament_house
-
-	is_triggered_only = yes
-
-	option = { 
-		name = AST_diplomatic_events.37.a
-
-		effect_tooltip = {
-			JAP = {
-				puppet = BRM
-			}
 		}
 	}
 }
@@ -3623,29 +3264,6 @@ country_event = { # Australian agitators on the streets
 	option = { # Troubling...
 		name = AST_union_control_events.2.a
 
-	}
-}
-
-country_event = { # Revolution breaks out in Malaya, communist forces need a mainland foothold
-	id = AST_union_control_events.3
-	title = AST_union_control_events.3.t
-	desc = AST_union_control_events.3.desc
-	picture = GFX_report_event_PHI_communism_in_philippines
-
-	is_triggered_only = yes
-
-	option = {
-		name = AST_union_control_events.3.a
-		set_country_flag = AST_malaya_foothold_raid_unlocked
-		every_country = {
-			limit = {
-				has_country_flag = AST_instigated_communist_civil_war
-				has_government = communism
-				any_owned_state = { is_core_of = MAL }
-			}
-			save_global_event_target_as = AST_malaya_cw_communist_country
-		}
-		custom_effect_tooltip = AST_malaya_foothold_raid_unlock_tt
 	}
 }
 

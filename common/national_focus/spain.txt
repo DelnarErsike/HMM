@@ -4860,7 +4860,6 @@ focus_tree = {
 			owns_state = 795
 		}
 
-		will_lead_to_war_with = POR
 		prerequisite = { focus = SPR_the_threats_abound }
 		
 		icon = GFX_focus_generic_attack_portugal

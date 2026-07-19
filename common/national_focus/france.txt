@@ -552,13 +552,19 @@
 		}
 
 		available = {
-			any_state = {
-				OR = {
-					is_core_of = VIN
-					is_core_of = CAM
-					is_core_of = LAO
-				}
-				is_owned_or_subject_trigger = yes
+			OR = {
+				# VIN cores
+				286 = { is_owned_or_subject_trigger = yes }
+				671 = { is_owned_or_subject_trigger = yes }
+				1071 = { is_owned_or_subject_trigger = yes }
+				1066 = { is_owned_or_subject_trigger = yes }
+				# CAM cores
+				741 = { is_owned_or_subject_trigger = yes }
+				1067 = { is_owned_or_subject_trigger = yes }
+				# LAO cores
+				670 = { is_owned_or_subject_trigger = yes }
+				1068 = { is_owned_or_subject_trigger = yes }
+				1069 = { is_owned_or_subject_trigger = yes }
 			}
 		}
 		
@@ -593,45 +599,6 @@
 				add_extra_state_shared_building_slots = 2
 				set_state_flag = FRA_colonial_industry_target
 			}
-			IF = {
-				limit = {
-					VIN = {
-						is_subject_of = ROOT
-					}
-				}
-				VIN = {
-					add_autonomy_score = { 
-						value = -150
-						localization = FRA_invest_in_indochina
-					}	
-				}
-			}
-			IF = {
-				limit = {
-					CAM = {
-						is_subject_of = ROOT
-					}
-				}
-				CAM = {
-					add_autonomy_score = { 
-						value = -150
-						localization = FRA_invest_in_indochina
-					}	
-				}
-			}
-			IF = {
-				limit = {
-					LAO = {
-						is_subject_of = ROOT
-					}
-				}
-				LAO = {
-					add_autonomy_score = { 
-						value = -150
-						localization = FRA_invest_in_indochina
-					}	
-				}
-			}
 		}
 	}
 	focus = {
@@ -650,12 +617,14 @@
 		}
 
 		available = {
-			any_state = {
-				OR = {
-					is_core_of = SYR
-					is_core_of = LEB
-				}
-				is_owned_or_subject_trigger = yes
+			OR = {
+				# SYR cores
+				554 = { is_owned_or_subject_trigger = yes }
+				677 = { is_owned_or_subject_trigger = yes }
+				680 = { is_owned_or_subject_trigger = yes }
+				799 = { is_owned_or_subject_trigger = yes }
+				# LEB cores
+				553 = { is_owned_or_subject_trigger = yes }
 			}
 		}
 		
@@ -684,32 +653,6 @@
 				}
 				add_extra_state_shared_building_slots = 2
 				set_state_flag = FRA_colonial_industry_target
-			}
-			IF = {
-				limit = {
-					SYR = {
-						is_subject_of = ROOT
-					}
-				}
-				SYR = {
-					add_autonomy_score = { 
-						value = -150
-						localization = FRA_invest_in_syria
-					}	
-				}
-			}
-			IF = {
-				limit = {
-					LEB = {
-						is_subject_of = ROOT
-					}
-				}
-				LEB = {
-					add_autonomy_score = { 
-						value = -150
-						localization = FRA_invest_in_syria
-					}	
-				}
 			}
 		}
 	}

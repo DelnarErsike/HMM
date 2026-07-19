@@ -4543,59 +4543,6 @@ country_event = {
 	}
 }
 
-#RAJ asks to annex MAL - Event for MAL's overlord (usually ENG)
-country_event = {
-	id = GOE_RAJ_loyalist.08
-	title = GOE_RAJ_loyalist.07.t #Intended
-	desc = GOE_RAJ_loyalist.08.desc
-	picture = GFX_report_event_indian_parade
-	is_triggered_only = yes
-
-	option = { #Nope! -> So default option is NOT to hand over MAL
-		name = GOE_RAJ_loyalist.08.a
-
-		ai_chance = {
-			base = 1
-			modifier = {
-				factor = 0.5
-				FROM = { is_ai = no }
-			}
-		}
-
-		hidden_effect = {
-			FROM = { country_event = { id = GOE_RAJ_loyalist.09 hours = 8 random_hours = 2 } }
-		}
-	}
-
-	option = { #Alright sure!
-		name = GOE_RAJ_loyalist.08.b
-
-		ai_chance = {
-			base = 100
-			modifier = { #Do not annoy enemy players if RAJ is AI
-				factor = 0
-				any_enemy_country = {
-					is_ai = no
-				}
-				FROM = { is_ai = yes }
-			}
-		}
-
-		effect_tooltip = {
-			FROM = {
-				annex_country = {
-					target = MAL
-					transfer_troops = yes
-				}
-			}
-		}
-
-		hidden_effect = {
-			FROM = { country_event = { id = GOE_RAJ_loyalist.10 hours = 8 random_hours = 2 } }
-		}
-	}
-}
-
 #RAJ asks to annex BRM - Event for independent BRM
 country_event = {
 	id = GOE_RAJ_loyalist.77
@@ -4687,15 +4634,6 @@ country_event = {
 			}
 		}
 
-		effect_tooltip = {
-			FROM = {
-				annex_country = {
-					target = BRM
-					transfer_troops = yes
-				}
-			}
-		}
-
 		hidden_effect = {
 			FROM = { country_event = { id = GOE_RAJ_loyalist.10 hours = 8 random_hours = 2 } }
 		}
@@ -4714,37 +4652,6 @@ country_event = {
 		name = GOE_RAJ_loyalist.09.a
 
 		
-	}
-}
-
-#Accepted MAL annexation - Event for RAJ (coming from independent MAL or MAL's Overlord)
-country_event = {
-	id = GOE_RAJ_loyalist.10
-	title = GOE_RAJ_loyalist.10.t
-	desc = GOE_RAJ_loyalist.10.desc
-	picture = GFX_report_event_indian_parade
-	is_triggered_only = yes
-
-	option = { #Good stuff
-		name = GOE_RAJ_loyalist.10.a
-
-		if = {
-			limit = {
-				event_target:RAJ_annexing_country_target = {
-					tag = BRM
-				}
-			}
-			annex_country = {
-				target = BRM
-				transfer_troops = yes
-			}
-		}
-		else = {
-			annex_country = {
-				target = MAL
-				transfer_troops = yes
-			}
-		}
 	}
 }
 

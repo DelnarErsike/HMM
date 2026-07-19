@@ -289,7 +289,6 @@ faction_goal_the_arteries_of_trade = {
 				tag = ENG
 				tag = CAN
 				tag = RAJ
-				tag = MAL
 				tag = USA
 			}
 		}
@@ -355,10 +354,8 @@ faction_goal_imperial_glory = {
 				original_tag = RAJ
 				original_tag = AST
 				original_tag = NZL
-				original_tag = MAL
 				original_tag = FRA
 				original_tag = HOL
-				original_tag = INS
 			}
 		}
 	}
@@ -422,10 +419,8 @@ faction_goal_imperial_glory = {
 				original_tag = RAJ
 				original_tag = AST
 				original_tag = NZL
-				original_tag = MAL
 				original_tag = FRA
 				original_tag = HOL
-				original_tag = INS
 			}
 			is_historical_focus_on = yes
 		}
@@ -3289,12 +3284,7 @@ faction_goal_control_malayan_riches = {
 		
 	}
 	visible = {
-		FROM = {
-			NOT = {
-				original_tag = MAL
-				is_in_faction_with = MAL
-			}
-		}
+		allies = no
 		any_collection_element = {
 			collection = {
 				 input = game:scope
@@ -3469,12 +3459,7 @@ faction_goal_control_indonesian_riches = {
 		
 	}
 	visible = {
-		FROM = {
-			NOT = {
-				original_tag = INS
-				is_in_faction_with = INS
-			}
-		}
+		allies = no
 		any_collection_element = {
 			collection = {
 				 input = game:scope

@@ -265,20 +265,6 @@ country_event = {
 
 	immediate = {
 		set_global_flag = achievement_france_surrender
-		hidden_effect = {
-			every_subject_country = {
-				limit = {
-					OR = {
-						original_tag = SYR
-						original_tag = LEB
-					}
-				}
-				country_event = {
-					id = GOE_generic_events.1
-					hours = 4
-				}
-			}
-		}
 	}
 	
 	option = { # Become Vichy
@@ -1212,19 +1198,26 @@ country_event = {
 						is_owned_by = FRA
 						OR = {
 							is_on_continent = africa
-							is_core_of = VIN
-							is_core_of = CAM
-							is_core_of = LAO
-							is_core_of = LEB
-							is_core_of = SYR
+							is_core_of = WSF
+							is_core_of = WSA
+							is_core_of = WST
 						}
 						# Keep French Indochina out of Vichy while Siam's limited war over it is ongoing
 						NOT = {
 							AND = {
 								OR = {
-									is_core_of = VIN
-									is_core_of = CAM
-									is_core_of = LAO
+									# VIN cores
+									state = 286
+									state = 671
+									state = 1071
+									state = 1066
+									# CAM cores
+									state = 741
+									state = 1067
+									# LAO cores
+									state = 670
+									state = 1068
+									state = 1069
 								}
 								SIA = {
 									has_active_mission = SIA_limited_war_indochina

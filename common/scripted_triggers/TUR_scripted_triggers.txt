@@ -17,16 +17,6 @@ TUR_is_historical_ai = {
 	always = yes
 }
 
-TUR_cannot_form_kurdish_collaboration_government = {
-	custom_trigger_tooltip = {
-		tooltip = TUR_cannot_form_kurdish_collaboration_government_tt
-		AND = {
-			FROM = { original_tag = KUR }
-			original_tag = TUR
-		}
-	}
-}
-
 TUR_has_a_prime_minister = {
 	custom_trigger_tooltip = {
 		tooltip = TUR_has_a_prime_minister_tt

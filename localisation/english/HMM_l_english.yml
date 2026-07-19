@@ -129,6 +129,7 @@
  HMM_axis_only: "Axis Only"
  HMM_allies_only: "Allies Only"
  HMM_spa_only_volunteers_to_ger_ita_bul: "Spain can only send volunteers to Germany, Italy, or Bulgaria."
+ RULE_NO_RELEASING_WASTELAND_COUNTRIES: "Wasteland (placeholder) nations cannot be released."
 
  # Custom Ideas
  HMM_innovative_weapons_designer:0 "Innovative Weapons Designer"

@@ -294,10 +294,7 @@ characters = {
 			slot = army_chief
 			idea_token = MAN_yu_zishan
 			allowed = {
-				OR = {
 					original_tag = MAN
-					original_tag = XIC
-				}
 			}
 			traits = {
 				army_chief_defensive_2
@@ -420,7 +417,6 @@ characters = {
 			legacy_id = -1
 			visible = {
 				OR = {
-					original_tag = XIC
 					has_government = democratic
 					has_government = communism
 				}

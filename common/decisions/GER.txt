@@ -6375,27 +6375,9 @@ GER_invite_to_faction_cat = {
 			}
 		}
 
-		targets = { SWE NOR FIN DEN EST LAT LIT SMI ICE KAR PER IRQ SYR SAU EGY JOR LEB OMA YEM PAL KUW QAT UAE KUR SLV CRO MAC MNT BOS HRZ SER ALB YUG GRE ROM MLD BUL KOS TRA }
+		targets = { EST LAT LIT ALB YUG GRE ROM BUL }
 
 		target_trigger = {
-			if = {
-				limit = {
-					FROM = {
-						OR = {
-							original_tag = SWE
-							original_tag = NOR
-							original_tag = FIN
-							original_tag = DEN
-							original_tag = SMI
-							original_tag = ICE
-							original_tag = KAR
-						}
-					}
-				}
-				ROOT = {
-					has_completed_focus = GER_utilize_the_nordliche_gesellschaft
-				}
-			}
 			if = {
 				limit = {
 					FROM = {
@@ -6428,49 +6410,11 @@ GER_invite_to_faction_cat = {
 				limit = {
 					FROM = {
 						OR = {
-							original_tag = PER
-							original_tag = IRQ
-							original_tag = SYR
-							original_tag = SAU
-							original_tag = EGY
-							original_tag = JOR
-							original_tag = LEB
-							original_tag = OMA
-							original_tag = YEM
-							original_tag = PAL
-							original_tag = KUW 
-							original_tag = QAT 
-							original_tag = UAE
-							original_tag = KUR
-						}
-					}
-				}
-				ROOT = {
-					OR = {
-						has_completed_focus = GER_influence_the_middle_east
-						has_completed_focus = GER_german_hegemony_in_the_middle_east
-					}
-				}
-			}
-			if = {
-				limit = {
-					FROM = {
-						OR = {
-							original_tag = SLV
-							original_tag = CRO
-							original_tag = MAC
-							original_tag = MNT
-							original_tag = BOS
-							original_tag = HRZ
-							original_tag = SER
 							original_tag = ALB
 							original_tag = YUG
 							original_tag = GRE
 							original_tag = ROM
-							original_tag = MLD
 							original_tag = BUL
-							original_tag = KOS
-							original_tag = TRA
 						}
 					}
 				}
@@ -13225,66 +13169,6 @@ GER_the_fading_eagle_category = {
 
 			hidden_effect = {
 				set_country_flag = GER_demanded_montenegrin_subjugation_flag 
-			}
-		}
-	
-	}
-
-	# Occupy Croatia
-	GER_occupy_croatia_decision = {
-	
-		priority = 52
-	
-		icon = GFX_decision_generic_operation
-	
-		ai_will_do = {
-			base = 100
-		}
-	
-		allowed = {  
-			original_tag = GER
-		}
-	
-		visible = { 
-			any_country_with_original_tag = {
-				original_tag_to_check = ITA
-				is_subject_of = ROOT
-			}
-			CRO = {
-				is_in_faction_with = ROOT
-				is_subject = no
-			}
-			NOT = { has_country_flag = GER_demanded_croatian_subjugation_flag }
-		} 
-	
-		available = {
-			has_government = fascism
-			CRO = {
-				is_in_faction_with = ROOT
-				is_subject = no
-				all_owned_state = {
-					is_controlled_by = CRO
-				}
-			}
-		}
-	
-		cost = 50
-
-		complete_effect = {
-
-			CRO = {
-				country_event = {
-					id = GOT_GER_fading_eagle.01
-					hours = 6
-				}		
-			}
-			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-				puppet = CRO
-			}
-
-			hidden_effect = {
-				set_country_flag = GER_demanded_croatian_subjugation_flag 
 			}
 		}
 	

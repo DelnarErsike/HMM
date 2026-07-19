@@ -712,133 +712,6 @@ country_event = {
 	}
 }
 
-##fascist uprising - neutral bloc forms
-country_event = {
-	id = mtg_usa_civil_war_fascists.22
-	title = mtg_usa_civil_war_fascists.22.t
-	desc = mtg_usa_civil_war_fascists.22.desc
-	picture = GFX_report_event_generic_rally_3
-
-	is_triggered_only = yes
-	immediate = {
-		hidden_effect = {
-			every_owned_state = {
-				limit = {
-					OR = {
-						state = 393
-						state = 396
-						state = 394
-						state = 392
-						state = 395
-						state = 391
-					}
-				}
-				USB = {
-					transfer_state = PREV
-					add_state_core = PREV
-				}
-				CSA = {
-					add_state_core = PREV
-				}
-				USA = {
-					USA_congress_remove_state = yes
-					
-				}
-			}		
-		}
-		hidden_effect = {
-			USB = {
-				set_stability = 1.0
-				set_war_support = 1.0
-				load_oob = "USB_defense_force"
-				country_event = { id = mtg_usa_civil_war_fascists.230 days = 5 }
-				
-			}
-		}
-	}
-	option = {
-		name = mtg_usa_civil_war_fascists.22.a #can't even deal with this right now
-		ai_chance = {
-			factor = 1
-		}
-		USA = {
-			give_guarantee = USB
-		}
-		CSA = {
-			give_guarantee = USB
-		}
-	}
-	option = {
-		name = mtg_usa_civil_war_fascists.22.b #traitors all
-		ai_chance = {
-			factor = 0
-		}
-		add_stability = -0.1
-		add_war_support = -0.1
-		every_owned_state = {
-			limit = {
-				OR = {
-					state = 369 # two more states join CSA because you are a meanie!
-					state = 373
-				}
-			}
-			CSA = {
-				transfer_state = PREV
-				add_state_core = PREV
-			}
-			USA = {
-				USA_congress_remove_state = yes
-			}
-		}
-		hidden_effect = {
-			CSA = {
-				annex_country = { target = USB transfer_troops = yes }
-				add_offsite_building = { type = arms_factory level = 3 }
-				add_manpower = 80000
-			}
-		}
-	}
-}
-# neutrals rejoin after war is over
-country_event = {
-	id = mtg_usa_civil_war_fascists.23
-	title = mtg_usa_civil_war_fascists.23.t
-	desc = mtg_usa_civil_war_fascists.23.desc
-	picture = GFX_report_event_pla_in_beijing
-
-	fire_only_once = yes
-	trigger = {
-		original_tag = USA
-		OR = {
-			AND = {
-				country_exists = USB
-				not = {
-					country_exists = CSA
-				}
-				not = {
-					has_war_with = USB
-				}
-			}
-			is_in_faction_with = USB
-		}
-	}
-
-	option = {
-		name = mtg_usa_civil_war_fascists.23.a 
-		annex_country = { target = USB } #all your peripherals are belong to us
-		every_owned_state = {
-			limit = {
-				is_core_of = USB
-			}
-			remove_core_of = USB
-			USA = {
-				add_state_core = PREV
-				USA_congress_add_state = yes
-			}
-		}
-	}
-}
-
 #hidden trigger event that moves the civil war along if communist support over 30%
 country_event = {
 	id = mtg_usa_civil_war_fascists.32
@@ -3370,114 +3243,6 @@ country_event = {
 	}
 }
 
-##transfer demand for DEI
-##intial event for DEI
-country_event = {
-	id = mtg_usa_secure_asia.4
-	title = mtg_usa_secure_asia.4.t
-	desc = mtg_usa_secure_asia.4.desc
-	picture = GFX_report_event_generic_read_write
-
-	is_triggered_only = yes
-	option = { #agree
-		name = mtg_usa_secure_asia.4.a
-		ai_chance = {
-			factor = 30
-			modifier = {
-				is_in_faction = no
-				not = { has_global_flag = mtg_usa_north_american_dominion_refused_faction }
-				factor = 3
-			}
-		}
-		add_stability = -0.05
-		FROM = {
-			country_event = mtg_usa_secure_asia.5
-		}
-		effect_tooltip = {
-			FROM = {
-				puppet = INS
-			}
-		}
-	}
-	option = { #refuse
-		name = mtg_usa_secure_asia.4.b
-		ai_chance = {
-			factor = 70
-		}
-		add_war_support = 0.05
-		set_country_flag = north_american_dominion_refused
-		if = {
-			limit = {
-				not = { has_global_flag = mtg_usa_north_american_dominion_refused_faction }
-				is_in_faction = no
-			}
-			unlock_decision_tooltip = { decision = USA_form_defensive_alliance_north_american_dominion show_effect_tooltip = yes}
-		}
-		else_if = {
-			limit = {
-				is_in_faction = no
-			}
-			unlock_decision_tooltip = { decision = USA_join_defensive_alliance_north_american_dominion show_effect_tooltip = yes}	
-		}
-		FROM = {
-			country_event = mtg_usa_secure_asia.6
-		}
-		effect_tooltip = {
-			FROM = {
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = INS
-				}
-			}
-		}
-	}
-}
-
-##DEI agrees!
-country_event = {
-	id = mtg_usa_secure_asia.5
-	title = mtg_usa_secure_asia.5.t
-	desc = mtg_usa_secure_asia.5.desc
-	picture = GFX_report_event_indonesia_handover
-
-	is_triggered_only = yes
-	option = { #agree
-		name = mtg_usa_secure_asia.5.a
-		puppet = INS
-	}
-}
-
-##DEI refuses
-country_event = {
-	id = mtg_usa_secure_asia.6
-	title = mtg_usa_secure_asia.6.t
-	desc = mtg_usa_secure_asia.6.desc
-	picture = GFX_report_event_dutch_soldiers_indonesia
-
-	is_triggered_only = yes
-	option = { #war!
-		name = mtg_usa_secure_asia.6.a
-		ai_chance = {
-			factor = 90
-			modifier = {
-				has_war = yes
-				factor = 0
-			}
-		}
-		create_wargoal = {
-			type = puppet_wargoal_focus
-			target = INS
-		}
-	}
-	option = { #no war!
-		name = mtg_usa_secure_asia.6.b
-		ai_chance = {
-			factor = 10
-		}
-		add_war_support = -0.1
-	}
-}
-
 ##transfer demand for French indochina
 ##intial event for France
 country_event = {
@@ -4326,32 +4091,24 @@ country_event = {
  					OR = {
 						is_controlled_by = JAP
 						is_controlled_by = MAN
-						is_controlled_by = MEN
-						is_controlled_by = RNG
 					}
 			 	} 
 				614 = { #Hebei
 					OR = {
 						is_controlled_by = JAP
 						is_controlled_by = MAN
-						is_controlled_by = MEN
-						is_controlled_by = RNG
 					}
 			 	} 
 				597 = { #Shandong
 					OR = {
 						is_controlled_by = JAP
 						is_controlled_by = MAN
-						is_controlled_by = MEN
-						is_controlled_by = RNG
 					}
 				} 
 				598 = { #Jiangsu
 					OR = {
 						is_controlled_by = JAP
 						is_controlled_by = MAN
-						is_controlled_by = MEN
-						is_controlled_by = RNG
 					}
 				}
 			}
@@ -4360,16 +4117,12 @@ country_event = {
 					OR = {
 						is_controlled_by = JAP
 						is_controlled_by = MAN
-						is_controlled_by = MEN
-						is_controlled_by = RNG
 					}
 				}
 				592 = {  #Guangzhou
 					OR = {
 						is_controlled_by = JAP
 						is_controlled_by = MAN
-						is_controlled_by = MEN
-						is_controlled_by = RNG
 					}
 			 	}
 			}

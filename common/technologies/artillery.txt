@@ -690,16 +690,7 @@ technologies = {
 
 			modifier = {
 				factor = 0.5
-
-				OR = {
 					tag = CHI
-					tag = PRC
-					tag = XSM
-					tag = SIK
-					tag = GXC
-					tag = SHX
-					tag = YUN
-				}
 			}
 			modifier = {
 				factor = 2
@@ -1072,16 +1063,7 @@ technologies = {
 
 			modifier = {
 				factor = 0.2
-
-				OR = {
 					tag = CHI
-					tag = PRC
-					tag = XSM
-					tag = SIK
-					tag = GXC
-					tag = SHX
-					tag = YUN
-				}
 			}
 			modifier = {
 				tag = JAP

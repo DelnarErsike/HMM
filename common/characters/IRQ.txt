@@ -654,10 +654,7 @@ characters = {
 			}
 			allowed = {
 				has_dlc = "Graveyard of Empires"
-				OR = {
 					original_tag = IRQ
-					original_tag = PAL
-				}
 			}
 			available = {
 				has_completed_focus = IRQ_refuge_for_the_grand_mufti

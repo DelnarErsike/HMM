@@ -3126,218 +3126,6 @@ country_event = {
 	}
 }
 
-# We have been assigned a new monarch - event for CRO
-country_event = {
-	id = WW_hungary.65
-	title = WW_hungary.65.t 
-	desc = WW_hungary.65.desc
-	picture = GFX_report_event_military_planning
-	
-	is_triggered_only = yes
-
-	# oki
-	option = { 
-		name = WW_hungary.65.a
-
-		set_politics = {
-			ruling_party = neutrality
-			elections_allowed = no
-			name = CRO_house_of_habsburg
-			long_name = CRO_house_of_habsburg
-		}	
-
-		add_country_leader_role = {
-		    character = CRO_joseph_francis
-		    promote_leader = yes
-		    country_leader = {
-		        ideology = despotism
-		        expire = "1965.1.1.1"
-		        traits = { ban_of_croatia_slavonia }
-		    }
-		}
-
-	}
-}
-
-# Hungary Demands we restore Habsburg Rule - event for CRO
-country_event = {
-	id = WW_hungary.66
-	title = WW_hungary.66.t
-	desc = WW_hungary.66.desc
-	picture = GFX_report_event_royal_visit
-	
-	is_triggered_only = yes
-
-	fire_only_once = yes
-	
-	# It is our duty
-	option = { 
-		name = WW_hungary.66.a
-		ai_chance = {
-			factor = 80
-			modifier = {
-				has_war_support < 0.5
-				factor = 2
-			}
-			modifier = {
-				strength_ratio = { tag = HUN ratio < 0.8 }
-				factor = 2
-			}
-			modifier = {
-				is_in_faction = no
-				HUN = { is_in_faction = yes }
-				factor = 2
-			}
-		}
-
-		FROM = {
-			country_event = {
-				# FROM accepts our demands
-				id = WW_hungary.67
-				days = 2
-				random_days = 3
-			}
-		}
-
-	}
-
-	# Death to monarchs!
-	option = { 
-		name = WW_hungary.66.b
-		ai_chance = {
-			factor = 25
-			modifier = {
-				has_war_support > 0.5
-				factor = 1.5
-			}
-			modifier = {
-				strength_ratio = { tag = HUN ratio > 1.5 }
-				factor = 2
-			}
-			modifier = {
-				has_stability < 0.5
-				factor = 0.5
-			}
-		}
-
-		FROM = {
-			country_event = {
-				# FROM rejects our demands
-				id = WW_hungary.68
-				days = 2
-				random_days = 3
-			}
-		}
-
-	}
-}
-
-# Croatia Accepts a Habsburg Monarch - event for HUN
-country_event = {
-	id = WW_hungary.67
-	title = WW_hungary.67.t
-	desc = WW_hungary.67.desc
-	picture = GFX_report_event_royal_visit
-	
-	is_triggered_only = yes
-
-	fire_only_once = yes
-	
-	# They made the right choice
-	option = { 
-		name = WW_hungary.67.a
-		ai_chance = {
-			factor = 100
-		}
-
-		every_state = {
-			limit = {
-				OR  = {
-					state = 104
-					state = 804
-				}
-				NOT = {
-					is_core_of = CRO
-				}
-			}
-			add_core_of = CRO
-		}
-
-		every_state = {
-			limit = {
-				OR = {
-					is_controlled_by = ROOT
-					any_country = {
-						is_subject_of = ROOT
-						controls_state = PREV
-					}
-				}
-				NOT = {
-					is_core_of = ROOT
-				}
-				is_core_of = CRO
-				NOT = {
-					is_owned_and_controlled_by = CRO
-				}
-			}
-			transfer_state_to = CRO
-		} 
-
-		CRO = {
-			drop_cosmetic_tag = yes
-			set_cosmetic_tag = CRO_croatia_slavonia_kingdom
-			country_event = {
-				id = WW_hungary.65
-				hours = 0
-			}	
-		}
-
-		IF = {
-			limit = {
-				CRO = {
-					NOT = {
-						is_subject_of = ROOT
-					}
-				}
-			}
-			puppet = CRO 
-		}
-
-		hidden_effect = {
-			set_country_flag = HUN_created_croatian_habsburg_monarchy 
-		}
-
-	}
-}
-
-# Croatia Rejects a Habsburg Monarch - event for HUN
-country_event = {
-	id = WW_hungary.68
-	title = WW_hungary.68.t
-	desc = WW_hungary.68.desc
-	picture = GFX_report_event_royal_visit
-	
-	is_triggered_only = yes
-
-	fire_only_once = yes
-	
-	# They made the incorrect choice
-	option = { 
-		name = WW_hungary.68.a
-		ai_chance = {
-			factor = 100
-		}
-
-		create_wargoal = {
-			type = puppet_wargoal_focus
-			target = FROM
-		}
-
-		unlock_decision_tooltip = HUN_place_a_habsburg_on_the_croatian_throne 
-
-	}
-}
-
 # Hungary Demands we restore Habsburg Rule - event for LBV
 country_event = {
 	id = WW_hungary.69
@@ -3675,14 +3463,6 @@ country_event = {
 		ai_chance = {
 			factor = 60
 			modifier = {
-				factor = 0.3
-				original_tag = PAL
-			}
-			modifier = {
-				factor = 0.2
-				original_tag = ISR
-			}
-			modifier = {
 				strength_ratio = { tag = HUN ratio < 1 }
 				factor = 2
 			}
@@ -3704,14 +3484,6 @@ country_event = {
 		name = WW_hungary.75.b
 		ai_chance = {
 			factor = 40
-			modifier = {
-				factor = 1.5
-				original_tag = PAL
-			}
-			modifier = {
-				factor = 1.5
-				original_tag = ISR
-			}
 			modifier = {
 				strength_ratio = { tag = HUN ratio > 1 }
 				factor = 2
@@ -4130,19 +3902,6 @@ country_event = {
 			}
 			FROM = {
 				MNT_blazo_dukanovic = {
-					set_nationality = ROOT
-				}
-			}
-		}
-
-		IF = {
-			limit = {
-				FROM = {
-					has_character = CRO_duro_jakcin
-				}
-			}
-			FROM = {
-				CRO_duro_jakcin = {
 					set_nationality = ROOT
 				}
 			}
@@ -5462,10 +5221,6 @@ country_event = {
 		ai_chance = {
 			factor = 60
 			modifier = {
-				factor = 0.5
-				original_tag = CRO
-			}
-			modifier = {
 				strength_ratio = { tag = HUN ratio < 1 }
 				factor = 2
 			}
@@ -5491,10 +5246,6 @@ country_event = {
 		name = WW_hungary.104.b
 		ai_chance = {
 			factor = 40
-			modifier = {
-				factor = 1.5
-				original_tag = CRO
-			}
 			modifier = {
 				strength_ratio = { tag = HUN ratio > 1 }
 				factor = 2
@@ -5547,35 +5298,6 @@ country_event = {
 				is_owned_and_controlled_by = FROM
 			}
 			transfer_state_to = ROOT
-		}
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		IF = {
-			limit = {
-				OR = {
-					FROM = {
-						original_tag = CRO
-					}
-					CRO = {
-						exists = no
-					}
-				}
-			}
-
-			every_possible_country = {
-
-				limit = {
-					has_character = CRO_duro_jakcin
-				}
-
-				set_nationality = {
-				    target_country = ROOT
-				    character = CRO_duro_jakcin
-				}	
-
-			}
-
 		}
 
 	}

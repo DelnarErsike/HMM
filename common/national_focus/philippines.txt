@@ -768,95 +768,18 @@ initial_show_position = {
 		cost = 10
 
 		available = {
-			OR = {
-				#SIA = {
-				#	exists = yes
-				#}
-				INS = {
-					exists = yes
-				}
-				MAL = {
-						exists = yes
-				}
-			}
+			always = yes
 		}
 
 		bypass = {
 			# HMM: we want to keep this focus and insta-bypass it instead of removing it to make the focuses below this one still consider it
-			AND = {
-				#SIA = {
-				#	exists = no
-				#}
-				INS = {
-					exists = no
-				}
-				MAL = {
-					exists = no
-				}
-			}
+			always = yes
 		}
 
 		available_if_capitulated = no
 	
 		completion_reward = {
-			if = {
-				limit = {
-					# HMM: Siam would/should reject because no cross-faction trade
-					always = no
-					SIA = {
-						exists = yes
-					}
-				}
-				SIA = {
-					country_event = {
-						id = SEA_PHI_political_events.3
-						hours = 3 
-						random_hours = 6
-					}
-				}	
-				custom_effect_tooltip = if_they_accept_tt
-				effect_tooltip = {
-					add_ideas = PHI_asian_trade_connections_siam
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt		
-			}
-			if = {
-				limit = {
-					INS = {
-						exists = yes
-					}
-				}
-				INS = {
-					country_event = {
-						id = SEA_PHI_political_events.3
-						hours = 3 
-						random_hours = 6
-					}
-				}
-				custom_effect_tooltip = if_they_accept_tt
-				effect_tooltip = {
-					add_ideas = PHI_asian_trade_connections_dutch_east_india
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}
-			if = {
-				limit = {
-					MAL = {
-						exists = yes
-					}
-				}
-				MAL = {
-					country_event = {
-						id = SEA_PHI_political_events.3
-						hours = 3 
-						random_hours = 6
-					}
-				}
-				custom_effect_tooltip = if_they_accept_tt
-				effect_tooltip = {
-					add_ideas = PHI_asian_trade_connections_malaya
-				}
-			}
+			# HMM: Siam would/should reject because no cross-faction trade
 			hidden_effect = {
 				PHI_central_focuses_done_T1 = yes
 			}
