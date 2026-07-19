@@ -64,7 +64,6 @@ focus_tree = {
 	focus = {
 		id = ROM_preserve_greater_romania
 		icon = GFX_focus_rom_preserve_romania
-		mutually_exclusive = { focus = ROM_balkans_dominance }
 		x = 3
 		y = 0
 
@@ -160,84 +159,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = ROM_a_deal_with_the_devil_2
-		}
-	}
-
-	focus = {
-		id = ROM_romanian_volunteer_brigades
-		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = ROM_basing_rights_for_soviet_union }
-		x = -1
-		y = 3
-		relative_position_id = ROM_a_deal_with_the_devil
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-
-		completion_reward = {
-			add_ideas = ROM_romanian_volunteer_brigades
-		}
-	}
-
-	focus = {
-		id = ROM_join_comintern
-		icon = GFX_focus_generic_join_comintern
-		prerequisite = { focus = ROM_basing_rights_for_soviet_union }
-		x = 0
-		y = 4
-		relative_position_id = ROM_a_deal_with_the_devil
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				SOV = {
-					has_capitulated = yes
-				}
-			}
-		}
-
-		available = {
-			SOV_comintern_joinable = yes 
-			is_in_faction = no
-			is_subject = no
-			NOT = {
-				any_other_country = {
-					is_in_faction_with = SOV
-					has_war_with = ROM
-				}
-			}
-		}
-
-		bypass = {
-			is_in_faction_with = SOV
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-
-		completion_reward = {
-			SOV = { country_event = generic.2 }
 		}
 	}
 
@@ -521,98 +442,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ROM_national_defense_industry
-		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = ROM_balkans_dominance }
-		x = 2
-		y = 0
-		relative_position_id = ROM_civil_works
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 20
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = ROM_national_defense_industry_AF1
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_state = {
-				limit = {
-					has_state_flag = ROM_national_defense_industry_AF2
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 79 81 }
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = ROM_national_defense_industry_AF1
-			}
-			random_owned_controlled_state = {
-				prioritize = { 79 81 }
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = ROM_national_defense_industry_AF2
-			}
-		}
-	}
-
-	focus = {
 		id = ROM_agrarian_reform
 		icon = GFX_goal_generic_consumer_goods
-		prerequisite = { focus = ROM_civil_works focus = ROM_national_defense_industry }
+		prerequisite = { focus = ROM_civil_works }
 		x = 0
 		y = 1
 		relative_position_id = ROM_civil_works
@@ -1322,7 +1154,6 @@ focus_tree = {
 		id = ROM_flexible_foreign_policy
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = ROM_revise_the_constitution }
-		mutually_exclusive = { focus = ROM_his_majestys_loyal_government }
 		x = 0
 		y = 2
 		relative_position_id = ROM_institute_royal_dictatorship
@@ -1663,8 +1494,7 @@ focus_tree = {
 	focus = {
 		id = ROM_force_abdication
 		icon = GFX_focus_rom_abdicate
-		prerequisite = { focus = ROM_iron_guard focus = ROM_securitate focus = ROM_national_christian_party }
-		mutually_exclusive = { focus = ROM_handle_the_king }
+		prerequisite = { focus = ROM_iron_guard focus = ROM_national_christian_party }
 		x = 1				
 		y = 1
 		relative_position_id = ROM_iron_guard

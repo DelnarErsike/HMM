@@ -672,11 +672,6 @@ set_variable = { AST_strength_in_numbers_non_core_manpower = 0 }
 set_variable = { AST_eminent_successors_political_advisor_cost_factor = 0 }
 set_variable = { AST_eminent_successors_army_chief_cost_factor = 0 }
 
-# Australia First
-set_variable = { AST_australia_first_fascism_drift = 0 }
-set_variable = { AST_australia_first_war_support_factor = 0 }
-set_variable = { AST_australia_first_operative_slot = 0 }
-
 # Imperial Pressure
 set_variable = { AST_imperial_pressure_democratic_drift = 0 }
 set_variable = { AST_imperial_pressure_stability_factor = 0 }

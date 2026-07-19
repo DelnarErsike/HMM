@@ -670,9 +670,6 @@ DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {
 			has_dlc = "La Resistance"
 			original_tag = SPR
 			has_completed_focus = SPR_masters_of_our_own_fate
-			NOT = {
-				has_completed_focus = SPR_the_anti_fascist_workers_revolution
-			}
 		}
 		custom_trigger_tooltip = {
 			tooltip = RULE_ALLOW_RELEASE_NATIONS_ANARCHIST_SPAIN_TOOLTIP
@@ -1818,47 +1815,6 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 								NOT = { has_government = democratic }
 							}
 						}
-					}
-				}
-			}
-		}
-		else_if = { #Soviet volunteers to Spain (Commie) (supporting POUM -> POUM split happened -> Stalin in charge) (with No Step Back)
-			limit = {
-				has_dlc = "No Step Back"
-				has_dlc = "La Resistance"
-				original_tag = SOV
-				has_government = communism
-				FROM = { original_tag = SPR }
-				has_completed_focus = SOV_covert_support_for_spanish_poum
-				NOT = { has_completed_focus = SOV_coup_detat }
-				has_global_flag = SPR_anarchist_uprising_flag
-				SPC = { has_completed_focus = SPR_the_anti_fascist_workers_revolution }
-			}
-			custom_trigger_tooltip = {
-				tooltip = RULE_VOLUNTEERS_SOVIET_SCW_COVERT_POUM_TT
-				NOT = {
-					FROM = { NOT = { tag = SPD } }
-				}
-			}
-		}
-		else_if = { #Soviet volunteers to Spain (Commie) (supporting POUM -> POUM split happened -> Right Oppo in charge) (with No Step Back)
-			limit = {
-				has_dlc = "No Step Back"
-				has_dlc = "La Resistance"
-				original_tag = SOV
-				has_government = communism
-				FROM = { original_tag = SPR }
-				has_completed_focus = SOV_covert_support_for_spanish_poum
-				has_completed_focus = SOV_coup_detat
-				has_global_flag = SPR_anarchist_uprising_flag
-				SPC = { has_completed_focus = SPR_the_anti_fascist_workers_revolution }
-			}
-			custom_trigger_tooltip = {
-				tooltip = RULE_VOLUNTEERS_SOVIET_SCW_POUM_TT
-				NOT = {
-					AND = {
-						country_exists = SPC
-						FROM = { NOT = { tag = SPC } }
 					}
 				}
 			}

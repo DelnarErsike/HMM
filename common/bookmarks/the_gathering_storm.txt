@@ -33,7 +33,7 @@ bookmarks = {
 			focuses = {
 				FRA_form_the_popular_front
 				FRA_revive_the_national_bloc
-				FRA_france_leads
+				FRA_buy_time
 			}
 		}
 		"FRA"={

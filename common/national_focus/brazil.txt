@@ -44,7 +44,6 @@ focus_tree = {
 		x = 0
 		y = 0
 		#relative_position_id =
-		mutually_exclusive = { focus = BRA_end_the_state_of_emergency focus = BRA_prepare_for_second_intentona }
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -185,7 +184,7 @@ focus_tree = {
 	focus = {
 		id = BRA_cohen_plan
 		icon = GFX_focus_BRA_cohen_plan 
-		prerequisite = { focus = BRA_ensure_continued_military_support focus = BRA_work_with_the_integralists }
+		prerequisite = { focus = BRA_ensure_continued_military_support }
 		x = 0
 		y = 2
 		relative_position_id = BRA_tribunal_de_seguranca_nacional
@@ -641,8 +640,7 @@ focus_tree = {
 	focus = {
 		id = BRA_secure_our_borders
 		icon = GFX_focus_BRA_secure_our_borders
-		prerequisite = { focus = BRA_reward_army_loyalty focus = BRA_restoration_of_honor }
-		#mutually_exclusive = { focus = BRA_the_international_crisis }
+		prerequisite = { focus = BRA_reward_army_loyalty }
 		x = 0
 		y = 1
 		relative_position_id = BRA_reward_army_loyalty
@@ -1658,10 +1656,8 @@ focus_tree = {
 	focus = {
 		id = BRA_cooperation_in_the_americas
 		icon = GFX_focus_BRA_good_neighbor_policy
-		mutually_exclusive = { focus = BRA_domination_of_the_americas }
 		prerequisite = { 
-			focus = BRA_secure_our_borders 
-			focus = BRA_the_international_crisis
+			focus = BRA_secure_our_borders
 		}
 		x = 0
 		y = 1
@@ -2222,7 +2218,6 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRA_potenji_river_conference
-		mutually_exclusive = { focus = BRA_south_american_research_cooperation }
 		cost = 5
 		ai_will_do = {
 			factor = 10

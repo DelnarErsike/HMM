@@ -2307,19 +2307,6 @@ characters={
 			traits = { army_chief_offensive_2 }
 			cost = 100
 		}
-		field_marshal={
-			traits={ trickster }
-			skill=2
-			attack_skill=2
-			defense_skill=1
-			planning_skill=2
-			logistics_skill=2
-			legacy_id= -1
-			visible = {
-				has_completed_focus = SPR_international_brigades
-				has_completed_focus = SPR_the_anti_fascist_workers_revolution
-			}
-		}
 	}
 
 	SPR_defensive_military_council = { # Anarchist
@@ -3230,10 +3217,7 @@ characters={
 				}
 			}
 			available = {
-				OR = {
-					has_completed_focus = SPR_the_stalinist_doctrine
 					has_completed_focus = SPR_communists_in_the_government
-				}
 				custom_trigger_tooltip = {
 					tooltip = SPR_not_nationalist_spain_tt
 					NOT = { tag = SPA }
@@ -3576,10 +3560,7 @@ characters={
 					base = 1.000
 					modifier = {
 						factor = 0.000
-						OR = {
 							has_completed_focus = SPA_a_great_spain 
-							has_completed_focus = SPR_hinder_nkvd_interference 
-						}
 					}
 				}
 			}
@@ -3658,10 +3639,7 @@ characters={
 					base = 1.000
 					modifier = {
 						factor = 0.000
-						OR = {
 							has_completed_focus = SPA_a_great_spain 
-							has_completed_focus = SPR_hinder_nkvd_interference 
-						}
 					}
 				}
 			}
@@ -3753,10 +3731,6 @@ characters={
 				}
 				ai_will_do = {
 					base = 1.000
-					modifier = {
-						factor = 0.000
-						has_completed_focus = SPR_the_stalinist_doctrine 
-					}
 				}
 			}
 		}
@@ -3843,7 +3817,6 @@ characters={
 					OR = {
 						has_completed_focus = SPA_a_great_spain 
 						has_completed_focus = SPR_regional_defense_council_of_aragon 
-						has_completed_focus = SPR_the_anti_fascist_workers_revolution 
 					}
 				}
 				modifier = {
@@ -3894,7 +3867,6 @@ characters={
 					factor = 0.000
 					OR = {
 						has_completed_focus = SPA_a_great_spain 
-						has_completed_focus = SPR_the_stalinist_doctrine 
 						has_completed_focus = SPR_maintain_the_second_republic 
 					}
 				}
@@ -3942,7 +3914,6 @@ characters={
 					factor = 0.000
 					OR = {
 						has_completed_focus = SPA_a_great_spain 
-						has_completed_focus = SPR_the_stalinist_doctrine 
 						has_completed_focus = SPR_maintain_the_second_republic 
 					}
 				}
@@ -3994,10 +3965,7 @@ characters={
 					base = 1.000
 					modifier = {
 						factor = 0.000
-						OR = {
 							has_completed_focus = SPA_a_great_spain 
-							has_completed_focus = SPR_hinder_nkvd_interference 
-						}
 					}
 				}
 			}
@@ -4081,7 +4049,6 @@ characters={
 					factor = 0.000
 					OR = {
 						has_completed_focus = SPA_a_great_spain 
-						has_completed_focus = SPR_the_stalinist_doctrine 
 						has_completed_focus = SPR_maintain_the_second_republic 
 					}
 				}
@@ -4138,7 +4105,6 @@ characters={
 					factor = 0.000
 					OR = {
 						has_completed_focus = SPA_a_great_spain 
-						has_completed_focus = SPR_the_stalinist_doctrine 
 						has_completed_focus = SPR_maintain_the_second_republic 
 					}
 				}
@@ -4188,7 +4154,6 @@ characters={
 					factor = 0.000
 					OR = {
 						has_completed_focus = SPA_a_great_spain 
-						has_completed_focus = SPR_the_stalinist_doctrine 
 						has_completed_focus = SPR_maintain_the_second_republic 
 					}
 				}
@@ -4238,10 +4203,7 @@ characters={
 				factor = 1.000
 				modifier = {
 					factor = 0.000
-					OR = {
 						has_completed_focus = SPA_a_great_spain 
-						has_completed_focus = SPR_the_anti_fascist_workers_revolution 
-					}
 				}
 			}
 		}	
@@ -4270,7 +4232,6 @@ characters={
 			available = {
 				NOT = {
 					has_completed_focus = SPR_masters_of_our_own_fate 
-					has_completed_focus = SPR_hinder_nkvd_interference 
 				}
 				custom_trigger_tooltip = {
 					tooltip = SPR_not_nationalist_spain_tt
@@ -4288,14 +4249,7 @@ characters={
 					factor = 0.000
 					OR = {
 						has_completed_focus = SPA_a_great_spain 
-						has_completed_focus = SPR_hinder_nkvd_interference 
 						has_completed_focus = SPR_oppose_the_communists 
-					}
-				}
-				modifier = {
-					factor = 5.000
-					OR = {
-						has_completed_focus = SPR_the_stalinist_doctrine 
 					}
 				}
 			}
@@ -4344,7 +4298,6 @@ characters={
 					OR = {
 						has_completed_focus = SPA_a_great_spain 
 						has_completed_focus = SPR_regional_defense_council_of_aragon 
-						has_completed_focus = SPR_the_anti_fascist_workers_revolution 
 					}
 				}
 			}
@@ -4611,10 +4564,8 @@ characters={
 			}
 			available = {
 				NOT = {
-					has_completed_focus = SPA_the_phalanx_ascendant
 					has_completed_focus = SPA_supremacy_of_the_communion
 					has_completed_focus = SPR_regional_defense_council_of_aragon
-					has_completed_focus = SPR_the_anti_fascist_workers_revolution
 				}
 			}
 			traits = {

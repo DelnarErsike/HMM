@@ -1091,7 +1091,7 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		prerequisite = { focus = SPA_the_national_syndicalist_state focus = SPA_fuse_the_parties }
+		prerequisite = { focus = SPA_fuse_the_parties }
 		
 		icon = GFX_goal_generic_consumer_goods
 		x = -1
@@ -1136,7 +1136,6 @@ focus_tree = {
 		bypass = {
 		}
 		prerequisite = { focus = SPA_national_recovery }
-		mutually_exclusive = { focus = SPA_fascist_economic_aid }
 		
 		icon = GFX_goal_generic_oil_refinery
 		x = 0
@@ -1344,7 +1343,7 @@ focus_tree = {
 			}
 		}
 		prerequisite = { focus = SPA_con_paquito }
-		mutually_exclusive = { focus = SPA_the_phalanx_ascendant focus = SPA_supremacy_of_the_communion }
+		mutually_exclusive = { focus = SPA_supremacy_of_the_communion }
 		
 		icon = GFX_focus_spa_unify_the_nationalist_front
 		x = 0
@@ -1964,7 +1963,7 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		prerequisite = { focus = SPA_expand_spanish_bases focus = SPA_dictator_for_life focus = SPA_restore_the_monarchy }
+		prerequisite = { focus = SPA_dictator_for_life focus = SPA_restore_the_monarchy }
 		
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		x = -2
@@ -2417,7 +2416,7 @@ focus_tree = {
 			has_global_flag = spanish_civil_war
 		}
 		prerequisite = { focus = SPA_negotiate_carlist_support }
-		mutually_exclusive = { focus = SPA_the_phalanx_ascendant focus = SPA_unify_the_nationalist_front }
+		mutually_exclusive = { focus = SPA_unify_the_nationalist_front }
 		
 		icon = GFX_focus_spa_supremacy_of_the_communion
 		x = 9
@@ -3963,7 +3962,7 @@ focus_tree = {
 		bypass = {
 		}
 		prerequisite = { focus = SPR_disband_the_army }
-		mutually_exclusive = { focus = SPR_the_anti_fascist_workers_revolution focus = SPR_maintain_the_second_republic }
+		mutually_exclusive = { focus = SPR_maintain_the_second_republic }
 		
 		icon = GFX_focus_spr_regional_defense_council_of_aragon
 		x = -7
@@ -4581,7 +4580,7 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		prerequisite = { focus = SPR_arm_the_people focus = SPR_arm_the_workers_militias }
+		prerequisite = { focus = SPR_arm_the_people }
 		
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 4
@@ -4592,31 +4591,6 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_MANPOWER}
 		completion_reward = {
-			if = {
-				limit = {
-					has_completed_focus = SPR_the_anti_fascist_workers_revolution
-					has_character = SPR_mate_zalka
-				}
-				custom_effect_tooltip = SPR_international_brigades_tt
-			}
-			else_if = {
-				limit = {
-					has_completed_focus = SPR_the_anti_fascist_workers_revolution
-					NOT = {
-						has_character = SPR_mate_zalka
-					}
-				}
-				create_field_marshal = {
-					name = "Máté Zalka"
-					gfx = "GFX_portrait_SPR_mate_zalka"
-					traits = {  }
-					skill = 2
-				    attack_skill = 2
-				    defense_skill = 1
-				    planning_skill = 2
-				    logistics_skill = 2
-				}
-			}
 			add_ideas = SPR_international_brigades
 			custom_effect_tooltip = SPR_seize_public_transport_tt
 		}
@@ -4633,7 +4607,7 @@ focus_tree = {
 				has_global_flag = SPR_gold_reserves_flag
 			}
 		}
-		prerequisite = { focus = SPR_the_maximum_concession focus = SPR_hinder_nkvd_interference }
+		prerequisite = { focus = SPR_the_maximum_concession }
 		
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		x = 5
@@ -4742,75 +4716,6 @@ focus_tree = {
 				}
 				if = {
 					limit = {
-						has_completed_focus = SPR_the_anti_fascist_workers_revolution
-					}
-					set_politics = {
-						ruling_party = communism
-					}
-					set_party_name = { ideology = communism long_name = SPR_communism_independent_party_long name = SPR_communism_independent_party }
-					create_country_leader = {
-						name = "Julián Gorkin"
-						desc = "POLITICS_JULIAN_GORKIN_DESC"
-						picture = "GFX_portrait_SPR_julian_gorkin"
-						expire = "1965.1.1"
-						ideology = anarchist_communism
-						traits = {
-							militant_socialist
-						}
-					}
-					create_field_marshal = {
-						name = "José Rovira"
-						portrait_path = GFX_portrait_Jose_Rovira
-						traits = { infantry_officer politically_connected }
-						skill = 3
-					    attack_skill = 2
-					    defense_skill = 2
-					    planning_skill = 2
-					    logistics_skill = 3
-					}
-					create_corps_commander = {
-						name = "Carmel Rosa Baserba"
-						portrait_path = GFX_portrait_Carmel_Rosa_Baserba
-						traits = { trait_cautious infantry_officer }
-						skill = 3
-					    attack_skill = 2
-					    defense_skill = 2
-					    planning_skill = 2
-					    logistics_skill = 2
-					}
-					create_corps_commander = {
-						name = "Luis Rastrollo"
-						portrait_path = GFX_portrait_Luis_Rastrollo
-						traits = { politically_connected }
-						skill = 1
-					    attack_skill = 1
-					    defense_skill = 2
-					    planning_skill = 1
-					    logistics_skill = 1
-					}
-					custom_effect_tooltip = SPR_masters_of_our_own_fate_tt_4
-					add_popularity = {
-					    ideology = fascism
-					    popularity = -1
-					}
-					add_popularity = {
-					    ideology = communism
-					    popularity = -0.05
-					}
-					if = {
-						limit = {
-							democratic > 0.01
-						}
-						set_political_party = {
-						    ideology = democratic
-						    popularity = 1
-						}
-					}
-					drop_cosmetic_tag = yes
-					set_cosmetic_tag = SPC_poum
-				}
-				if = {
-					limit = {
 						has_completed_focus = SPR_regional_defense_council_of_aragon
 					}
 					remove_ideas = SPR_the_maximum_concession
@@ -4831,12 +4736,6 @@ focus_tree = {
 					has_completed_focus = SPR_regional_defense_council_of_aragon
 				}
 				custom_effect_tooltip = SPR_masters_of_our_own_fate_tt_2
-			}
-			if = {
-				limit = {
-					has_completed_focus = SPR_the_anti_fascist_workers_revolution
-				}
-				custom_effect_tooltip = SPR_masters_of_our_own_fate_tt_3
 			}
 			custom_effect_tooltip = SPR_masters_of_our_own_fate_tt
 			if = {
@@ -5921,7 +5820,7 @@ focus_tree = {
 				has_global_flag = scw_over
 			}
 		}
-		prerequisite = { focus = SPR_the_stalinist_doctrine focus = SPR_the_future_of_the_republic }
+		prerequisite = { focus = SPR_the_future_of_the_republic }
 		
 		icon = GFX_goal_generic_propaganda
 		x = -3
@@ -6155,12 +6054,6 @@ focus_tree = {
 			NOT = { has_war_with = SOV }
 			NOT = { has_global_flag = scw_over }
 			SOV = { has_government = communism }
-		}
-		bypass = {
-			AND = {
-				has_completed_focus = SPR_the_stalinist_doctrine
-				has_global_flag = scw_over
-			}
 		}
 		prerequisite = { focus = SPR_relocate_the_gold_reserves }
 		prerequisite = { focus = SPR_crush_the_revolution }
@@ -6990,7 +6883,7 @@ focus_tree = {
 		bypass = {
 		}
 		prerequisite = { focus = SPR_disband_the_army }
-		mutually_exclusive = { focus = SPR_regional_defense_council_of_aragon focus = SPR_the_anti_fascist_workers_revolution }
+		mutually_exclusive = { focus = SPR_regional_defense_council_of_aragon }
 		
 		icon = GFX_focus_spr_maintain_the_republic
 		x = 7
@@ -7496,12 +7389,12 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		prerequisite = { focus = SPR_fortify_the_central_government focus = SPR_communists_in_the_government }
+		prerequisite = { focus = SPR_communists_in_the_government }
 
 		icon = GFX_focus_research2
-		x = 3
+		x = 1
 		y = 1
-		relative_position_id = SPR_fortify_the_central_government
+		relative_position_id = SPR_communists_in_the_government
 		cost = 10
 
 		available_if_capitulated = yes
@@ -8068,7 +7961,6 @@ focus_tree = {
 		bypass = {
 		}
 		prerequisite = { focus = SPR_prepare_for_the_next_war }
-		mutually_exclusive = { focus = SPR_enemies_of_our_enemy }
 
 		icon = GFX_focus_generic_anti_fascist_diplomacy
 		x = 0

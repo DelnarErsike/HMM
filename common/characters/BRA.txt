@@ -706,26 +706,6 @@ characters={
 					large="GFX_portrait_BRA_washington_luis"
 				}
 			}
-			advisor={
-				slot = political_advisor
-				idea_token = BRA_washington_luis_pereira
-				allowed  = {
-					original_tag  = BRA
-				}
-				available = {
-					has_completed_focus = BRA_end_the_state_of_emergency
-					NOT = {
-						OR = { 
-							has_government = fascism
-							has_government = communism
-						}
-					}
-					is_country_leader = no
-				}
-				traits  = {
-					BRA_deposed_former_president
-				}
-			}	
 			name=BRA_washington_luis_pereira
 		}
 	}
@@ -1170,10 +1150,6 @@ characters={
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 10
-					has_completed_focus	= BRA_prepare_for_second_intentona
-				}
 			}
 		}		
 	}
@@ -1425,10 +1401,6 @@ characters={
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 10
-					has_completed_focus	= BRA_work_with_the_integralists
-				}
 			}
 		}		
 	}

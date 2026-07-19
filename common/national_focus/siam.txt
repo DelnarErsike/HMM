@@ -975,163 +975,6 @@
 	}
 
 	focus = {
-		id = SIA_southeast_asia_joint_command
-		icon = GFX_focus_PRC_army_command
-		x = -3
-		y = 1
-		relative_position_id = SIA_asian_democratic_compact
-		prerequisite = { focus = SIA_asian_democratic_compact }
-		#mutually_exclusive = { focus = }
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			is_faction_leader = yes
-		}
-		#allow_branch = {
-		#}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-
-			custom_effect_tooltip = SIA_asian_democratic_compact_modify
-			custom_effect_tooltip = SIA_southeast_asia_joint_command_tt
-			SIA_update_adc = yes
-		}
-	}
-
-	focus = {
-		id = SIA_pan_asian_weapon_standardization 
-		icon = GFX_focus_JAP_army_weapons_administration_hq
-		x = 2
-		y = 0
-		relative_position_id = SIA_southeast_asia_joint_command
-		prerequisite = { focus = SIA_asian_democratic_compact }
-		#mutually_exclusive = { focus = }
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			is_faction_leader = yes
-		}
-		#allow_branch = {
-		#}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			custom_effect_tooltip = SIA_asian_democratic_compact_modify
-			custom_effect_tooltip = SIA_pan_asian_weapon_standardization_tt
-			SIA_update_adc = yes
-		}
-	}
-
-	focus = {
-		id = SIA_united_against_aggression
-		icon = GFX_focus_SIA_united_against_aggresion
-		x = 2
-		y = 0
-		relative_position_id = SIA_pan_asian_weapon_standardization
-		prerequisite = { focus = SIA_asian_democratic_compact }
-		#mutually_exclusive = { focus = }
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			is_faction_leader = yes
-		}
-		#allow_branch = {
-		#}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-
-		completion_reward = {
-			custom_effect_tooltip = SIA_asian_democratic_compact_modify
-			custom_effect_tooltip = SIA_united_against_aggression_tt
-			SIA_update_adc = yes
-		}
-	}
-
-	focus = {
-		id = SIA_the_hammers_that_strike
-		icon = GFX_focus_SIA_the_hammers_that_strike
-		x = 2
-		y = 0
-		relative_position_id = SIA_united_against_aggression
-		prerequisite = { focus = SIA_asian_democratic_compact }
-		#mutually_exclusive = { focus = }
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			is_faction_leader = yes
-		}
-		#allow_branch = {
-		#}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-
-		completion_reward = {
-			custom_effect_tooltip = SIA_asian_democratic_compact_modify
-			custom_effect_tooltip = SIA_the_hammers_that_strike_tt
-			SIA_update_adc = yes
-		}
-	}
-
-	focus = {
-		id = SIA_stronger_together 
-		icon = GFX_goal_generic_major_alliance
-		x = 3
-		y = 1
-		relative_position_id = SIA_southeast_asia_joint_command
-		prerequisite = { focus = SIA_southeast_asia_joint_command focus = SIA_pan_asian_weapon_standardization focus = SIA_united_against_aggression focus = SIA_the_hammers_that_strike }
-		#mutually_exclusive = { focus = }
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			is_faction_leader = yes
-		}
-		#allow_branch = {
-		#}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			every_other_country = {
-				limit = {
-					capital_scope = {
-						OR = {
-							is_on_continent = asia
-							is_on_continent = australia
-							is_on_continent = middle_east
-						}
-					}
-					is_faction_leader = yes
-					NOT = { has_war_with = ROOT }
-					NOT = {
-						any_enemy_country = {
-							OR = {
-								tag = CHI
-								is_in_faction_with = CHI
-							}
-						}
-					}
-				}
-
-
-				country_event = {
-					id = siam.45
-					hours = 2 # optional - can take hours/days/months
-					random_hours = 4 # optional - can take hours/days/months
-				}
-			}
-
-		}
-	}
-
-	focus = {
 		id = SIA_siamese_youth_movement
 		icon = GFX_focus_RAJ_military_into_the_workforce 
 		x = 6
@@ -2757,6 +2600,91 @@
 	}
 
 	focus = {
+		id = SIA_thai_rice_company
+		icon = GFX_focus_SIA_thai_rice_company
+		x = 0
+		y = 3
+		relative_position_id = SIA_revision_of_unequal_treaties
+		prerequisite = { focus = SIA_asian_financial_compact focus = SIA_revision_of_unequal_treaties }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = idea_SIA_thai_rice_company
+
+
+			if = {
+				limit = {
+					has_dynamic_modifier = { modifier = idea_SIA_printing_money }
+				}
+				divide_variable = {
+					var = idea_SIA_printing_money_monthly_change
+					value = 2
+				}
+				custom_effect_tooltip = SIA_printing_money_monthly_increase_halve
+			}
+
+			set_variable = { SIA_aep_research_speed_factor = 0 }
+			set_variable = { SIA_aep_production_factory_max_efficiency_factor = 0 }
+			set_variable = { SIA_aep_industrial_capacity_factory = 0 }
+			set_variable = { SIA_aep_industrial_capacity_dockyard = 0 }
+			set_variable = { SIA_aep_extraction = 0 }
+			set_variable = { SIA_aep_factory_energy_consumption = 0 }
+			set_variable = { SIA_aep_production_speed_arms_factory_factor = 0 }
+			set_variable = { SIA_aep_surrender_limit = 0 }
+			set_variable = { SIA_aep_production_lack_of_resource_penalty_factor = 0 }
+
+
+			set_variable = { SIA_aep_convoy_retreat_speed = 0 }
+			set_variable = { SIA_aep_weekly_convoys_war_support = 0 }
+			set_variable = { SIA_aep_resource_trade_cost_bonus_per_factory = 0 }
+			set_variable = { SIA_aep_production_speed_arms_factory_factor = 0.05 }
+			
+			#Flame
+			set_variable = { SIA_aep_recruitable_population_factor = 0 }
+			set_variable = { SIA_aep_static_anti_air_hit_chance_factor = 0 }
+			set_variable = { SIA_aep_supply_consumption_factor = 0 }
+			set_variable = { SIA_aep_production_speed_bunker_factor = 0 }
+			set_variable = { SIA_aep_production_speed_coastal_bunker_factor = 0 }
+
+			add_dynamic_modifier = {
+				modifier = idea_SIA_agrarian_economical_policy
+			}
+
+
+			random_core_state = {
+				limit = {
+					is_controlled_by = ROOT
+					infrastructure < 5
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			random_core_state = {
+				limit = {
+					is_controlled_by = ROOT
+					infrastructure < 5
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
 		id = SIA_boon_rawd_brewery
 		icon = GFX_focus_SIA_boon_rawd_brewery
 		x = -4
@@ -3338,7 +3266,7 @@
 		x = -2
 		y = 1
 		relative_position_id = SIA_prepare_for_the_next_blockade	
-		prerequisite = { focus = SIA_railway_and_port_extensions focus = SIA_prepare_for_the_next_blockade }
+		prerequisite = { focus = SIA_prepare_for_the_next_blockade }
 		#mutually_exclusive = { focus =  }
 		cost = 5
 		ai_will_do = {

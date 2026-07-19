@@ -2542,10 +2542,7 @@ ITA_balance_of_power_category = {
 				character = ITA_benito_mussolini
 				ruling_only = yes
 			}
-			OR = {
-				has_completed_focus = ITA_conspiracies_in_the_shadows
 				has_completed_focus = ITA_triumph_in_africa_bba
-			}
 		}
 
 		available = {}
@@ -2610,10 +2607,7 @@ ITA_balance_of_power_category = {
 				character = ITA_benito_mussolini
 				ruling_only = yes
 			}
-			OR = {
-				has_completed_focus = ITA_conspiracies_in_the_shadows
 				has_completed_focus = ITA_triumph_in_africa_bba
-			}
 		}
 
 		available = {}
@@ -2678,10 +2672,7 @@ ITA_balance_of_power_category = {
 				character = ITA_benito_mussolini
 				ruling_only = yes
 			}
-			OR = {
-				has_completed_focus = ITA_conspiracies_in_the_shadows
 				has_completed_focus = ITA_triumph_in_africa_bba
-			}
 		}
 
 		available = {}

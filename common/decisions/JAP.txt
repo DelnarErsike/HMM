@@ -3342,11 +3342,7 @@ operations = {
 		}
 
 		available = {
-			OR = {
 				has_completed_focus = JAP_sea_purge_the_kodoha_faction
-				has_completed_focus = JAP_support_the_kodoha_faction
-				has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
-			}
 			NOT = {
 				has_war_with = SOV
 				is_in_faction_with = SOV
@@ -6653,7 +6649,6 @@ JAP_imperial_influence_decision_cat = {
 			}
 			NOT = {
 				has_completed_focus = JAP_the_harakiri_debate
-				has_completed_focus = JAP_reprimand_hamada_kunimatsu
 			}
 		}
 	

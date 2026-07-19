@@ -255,18 +255,10 @@ country_event = {
 			AND = { 
 				tag = GRE 
 				#has_dlc = "Battle for the Bosporus"
-			} 
-			AND = { 
-				tag = CHL 
-				has_dlc = "Trial of Allegiance"
-			} 
+			}
 			AND = {
 				has_dlc = "Trial of Allegiance"
 				tag = BRA
-			}
-			AND = {
-				has_dlc = "Thunder at Our Gates"
-				tag = INS
 			}
 		}
 		DEN_aat = no #Denmark has custom election events
@@ -646,10 +638,6 @@ country_event = {
 			AND = {
 				original_tag = TUR
 				has_dlc = "Battle for the Bosporus"
-			}
-			AND = {
-				original_tag = SWI
-				has_dlc = "By Blood Alone"
 			}
 			AND = {
 				has_dlc = "Trial of Allegiance"

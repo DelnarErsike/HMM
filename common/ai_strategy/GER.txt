@@ -602,30 +602,6 @@ GER_war_with_soviets = {
 	}
 }
 
-GER_soviet_ally = {
-	allowed = {
-		original_tag = GER
-	}
-	enable = {
-		has_completed_focus = GER_alliance_with_the_ussr
-		country_exists = SOV
-	}
-	abort = {
-		NOT = { country_exists = SOV }
-	}
-
-	ai_strategy = {
-		type = befriend
-		id = SOV
-		value = 200
-	}
-	ai_strategy = {
-		type = alliance
-		id = SOV
-		value = 200
-	}
-}
-
 GER_italy_ally = {
 	allowed = {
 		original_tag = GER
@@ -738,30 +714,6 @@ GER_japan_ally = {
 	ai_strategy = {
 		type = alliance
 		id = JAP
-		value = 200
-	}
-}
-
-GER_china_ally = {
-	allowed = {
-		original_tag = GER
-	}
-	enable = {
-		has_completed_focus = GER_befriend_china
-		country_exists = CHI
-	}
-	abort = {
-		NOT = { country_exists = CHI }
-	}
-
-	ai_strategy = {
-		type = befriend
-		id = CHI
-		value = 200
-	}
-	ai_strategy = {
-		type = alliance
-		id = CHI
 		value = 200
 	}
 }
@@ -3845,7 +3797,6 @@ GER_dont_DOW_benelux = { #Don't try to bypass Around the Maginot!
 	abort = {
 		OR = {
 			has_completed_focus = GER_around_maginot
-			has_completed_focus = GER_oppose_hitler_ww
 			has_war_with = HOL
 			has_war_with = BEL
 			has_war_with = LUX

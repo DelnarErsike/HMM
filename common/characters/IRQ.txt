@@ -679,31 +679,6 @@ characters = {
 				small = GFX_portrait_IRQ_muhammad_amin_zaki_small
 			}
 		}
-		advisor = {
-			slot = political_advisor
-			idea_token = IRQ_muhammad_amin_zaki
-			traits = {
-				IRQ_kurdish_politician
-			}
-			allowed = {
-				has_dlc = "Graveyard of Empires"
-				OR = {
-					original_tag = IRQ
-					original_tag = KUR
-				}
-			}
-			available = {
-				OR = {
-					has_completed_focus = IRQ_kurdish_outreach
-					has_completed_focus = IRQ_promote_kurdish_culture
-					has_completed_focus = IRQ_encourage_federalism
-				}
-			}
-			cost = 150
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 	}
 
 	IRQ_ali_mahmud_al_shaykh = { #Advisor instead, foreign affairs or justice
@@ -1329,7 +1304,7 @@ characters = {
 				has_dlc = "Graveyard of Empires" 
 			} 
 			visible = {
-				NOT = {has_completed_focus = IRQ_promote_kurdish_culture }
+				always = yes
 			}
 			slot = high_command
 			idea_token = IRQ_werner_junck
@@ -1958,10 +1933,7 @@ characters = {
 				visible = {
 					has_completed_focus = IRQ_bakr_sidqi_coup
 					NOT = {
-						OR = {
 							has_completed_focus = IRQ_assasination_of_sidqi
-							has_completed_focus = IRQ_curtail_arabism
-						}
 					}
 				}
 				available = {

@@ -3922,7 +3922,6 @@ focus_tree = {
 		id = IRQ_ensure_sunni_dominance 
 		icon = GFX_focus_IRQ_arab_dominance
 		#prerequisite = { focus = }
-		mutually_exclusive = { focus = IRQ_promote_kurdish_culture }
 		x = 34
 		y = 0
 		#relative_position_id = IRQ_ensure_sunni_dominance
@@ -5691,7 +5690,6 @@ focus_tree = {
 		id = IRQ_al_muthanna_club
 		icon = GFX_focus_ITA_generic_fascist_workers
 		prerequisite = { focus = IRQ_bakr_sidqi_coup }
-		#mutually_exclusive = { focus = IRQ_curtail_arabism }
 		x = 0
 		y = 1
 		relative_position_id = IRQ_bakr_sidqi_coup
@@ -5848,8 +5846,7 @@ focus_tree = {
 	focus = {
 		id = IRQ_iraqi_al_futuwwa
 		icon = GFX_focus_generic_fascist_troops
-		prerequisite = { focus = IRQ_strengthen_the_golden_square focus = IRQ_curtail_arabism }
-		#mutually_exclusive = { focus = IRQ_curtail_arabism }
+		prerequisite = { focus = IRQ_strengthen_the_golden_square }
 		x = 4
 		y = 1
 		relative_position_id = IRQ_strengthen_the_golden_square
@@ -5875,18 +5872,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
-			IF = {
-				limit = {
-					has_completed_focus = IRQ_curtail_arabism
-				}
-				add_ideas = IRQ_iraqi_al_futuwwa_no_fascism_idea
-			}
-			ELSE = {
 				add_ideas = IRQ_iraqi_al_futuwwa_idea
-			}
-			
-
 		}
 	}
 

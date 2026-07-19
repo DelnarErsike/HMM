@@ -84,8 +84,7 @@ initial_show_position = {
 
 		prerequisite = { focus = PHI_commonwealth_of_the_philippines }								
 
-		relative_position_id = PHI_commonwealth_of_the_philippines		
-		mutually_exclusive = { focus = PHI_align_with_japan }					
+		relative_position_id = PHI_commonwealth_of_the_philippines			
 			
 		x = 0
 		y = 1
@@ -136,7 +135,7 @@ initial_show_position = {
 		icon = GFX_focus_PHI_uncouple_the_peso_and_dollar
 		overlay = GFX_focus_fast_overlay_america 
 
-		prerequisite = { focus = PHI_align_with_the_usa focus = PHI_align_with_japan }								
+		prerequisite = { focus = PHI_align_with_the_usa }								
 
 		relative_position_id = PHI_align_with_the_usa		
 		mutually_exclusive = { focus = PHI_leverage_the_peso }								
@@ -183,9 +182,9 @@ initial_show_position = {
 		icon = GFX_focus_PHI_leverage_the_peso
 		overlay = GFX_focus_fast_overlay_japan  
 
-		prerequisite = { focus = PHI_align_with_japan focus = PHI_align_with_the_usa }								
+		prerequisite = { focus = PHI_align_with_the_usa }								
 
-		relative_position_id = PHI_align_with_japan		
+		relative_position_id = PHI_align_with_the_usa		
 		mutually_exclusive = { focus = PHI_peg_the_peso_to_the_dollar }									
 			
 		x = 4
@@ -1426,31 +1425,6 @@ initial_show_position = {
 					days = 180
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
-				effect_tooltip = {
-					if = {
-						limit = {
-							has_dlc = "Arms Against Tyranny"
-							has_completed_focus = PHI_align_with_japan
-							NOT = {
-								has_completed_focus = PHI_declare_military_emergency
-							}
-						}
-						every_military_industrial_organization = {
-							limit = {
-								OR = {
-									is_military_industrial_organization = JAP_mitsubishi_heavy_industries_organization
-									is_military_industrial_organization = JAP_mitsubishi_kobe_shipyard_organization
-									is_military_industrial_organization = JAP_yokosuka_naval_arsenal_organization
-									is_military_industrial_organization = JAP_mitsubishi_organization
-									is_military_industrial_organization = JAP_kokura_arsenal_organization
-									is_military_industrial_organization = JAP_nissan_organization
-									is_military_industrial_organization = JAP_tokyo_automobile_industries_organization
-								}
-							}
-							add_mio_size = 1
-						}
-					}
-				}
 			}
 			else = {
 				add_timed_idea = {
@@ -1458,29 +1432,6 @@ initial_show_position = {
 					days = 180
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
-				if = {
-					limit = {
-						has_dlc = "Arms Against Tyranny"
-						has_completed_focus = PHI_align_with_japan
-						NOT = {
-							has_completed_focus = PHI_declare_military_emergency
-						}
-					}
-					every_military_industrial_organization = {
-						limit = {
-							OR = {
-								is_military_industrial_organization = JAP_mitsubishi_heavy_industries_organization
-								is_military_industrial_organization = JAP_mitsubishi_kobe_shipyard_organization
-								is_military_industrial_organization = JAP_yokosuka_naval_arsenal_organization
-								is_military_industrial_organization = JAP_mitsubishi_organization
-								is_military_industrial_organization = JAP_kokura_arsenal_organization
-								is_military_industrial_organization = JAP_nissan_organization
-								is_military_industrial_organization = JAP_tokyo_automobile_industries_organization
-							}
-						}
-						add_mio_size = 1
-					}
-				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MILITARY_CHARACTER }
@@ -2378,29 +2329,6 @@ initial_show_position = {
 						days = 180
 					}
 					custom_effect_tooltip = generic_skip_one_line_tt
-					if = {
-						limit = {
-							has_dlc = "Arms Against Tyranny"
-							has_completed_focus = PHI_align_with_japan
-							NOT = {
-								has_completed_focus = PHI_declare_military_emergency
-							}
-						}
-						every_military_industrial_organization = {
-							limit = {
-								OR = {
-									is_military_industrial_organization = JAP_mitsubishi_heavy_industries_organization
-									is_military_industrial_organization = JAP_mitsubishi_kobe_shipyard_organization
-									is_military_industrial_organization = JAP_yokosuka_naval_arsenal_organization
-									is_military_industrial_organization = JAP_mitsubishi_organization
-									is_military_industrial_organization = JAP_kokura_arsenal_organization
-									is_military_industrial_organization = JAP_nissan_organization
-									is_military_industrial_organization = JAP_tokyo_automobile_industries_organization
-								}
-							}
-							add_mio_size = 1
-						}
-					}
 				}
 			}
 			else = {
@@ -2409,29 +2337,6 @@ initial_show_position = {
 					days = 180
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
-				if = {
-					limit = {
-						has_dlc = "Arms Against Tyranny"
-						has_completed_focus = PHI_align_with_japan
-						NOT = {
-							has_completed_focus = PHI_declare_military_emergency
-						}
-					}
-					every_military_industrial_organization = {
-						limit = {
-							OR = {
-								is_military_industrial_organization = JAP_mitsubishi_heavy_industries_organization
-								is_military_industrial_organization = JAP_mitsubishi_kobe_shipyard_organization
-								is_military_industrial_organization = JAP_yokosuka_naval_arsenal_organization
-								is_military_industrial_organization = JAP_mitsubishi_organization
-								is_military_industrial_organization = JAP_kokura_arsenal_organization
-								is_military_industrial_organization = JAP_nissan_organization
-								is_military_industrial_organization = JAP_tokyo_automobile_industries_organization
-							}
-						}
-						add_mio_size = 1
-					}
-				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MILITARY_CHARACTER }
@@ -5035,7 +4940,6 @@ initial_show_position = {
 		icon = GFX_goal_generic_construct_naval_dockyard
 
 		prerequisite = { focus = PHI_war_for_the_oceans }
-		mutually_exclusive = { focus = PHI_assume_the_naval_burden }	
 		relative_position_id = PHI_war_for_the_oceans	
 
 		x = 0
@@ -5943,39 +5847,6 @@ focus = {
 	}
 
 
-focus = {
-		id = PHI_army_of_the_philippines
-		icon = GFX_focus_PHI_army_of_the_philippines
-
-		prerequisite = { focus = PHI_battalion_combat_teams }	
-		prerequisite = { focus = PHI_mandatory_conscription }	
-		prerequisite = { focus = PHI_self_reliance_defense }	
-
-		relative_position_id = PHI_mandatory_conscription
-
-
-		x = 0
-		y = 1
-	
-		cost = 10
-
-		available = {
-		}
-
-		bypass = {
-		}
-
-		available_if_capitulated = no
-	
-		completion_reward = {
-			custom_effect_tooltip = PHI_philippine_army_dynamic_modifier_tt
-			add_to_variable = { PHI_philippine_army_industrial_capacity_factory = 0.10 tooltip = industrial_capacity_factory_tt }
-			add_to_variable = { PHI_philippine_army_conscription_factor = 0.10 tooltip = conscription_factor_tt }
-		}
-		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
-	}
-
-
 
 
 ##############################
@@ -6219,20 +6090,6 @@ focus = {
 					has_dlc = "Arms Against Tyranny"
 				}
 				if = {
-					limit = {
-						has_completed_focus = PHI_align_with_japan
-						NOT = {
-							has_completed_focus = PHI_declare_military_emergency
-						}
-					}
-					every_military_industrial_organization = {
-						limit = {
-							is_military_industrial_organization = JAP_mitsubishi_organization
-						}
-						add_mio_size = 1
-					}
-				}
-				else_if = {
 					limit = {
 						OR = {
 							has_completed_focus = PHI_align_with_the_usa

@@ -1335,26 +1335,6 @@ characters={
 				small="GFX_idea_rene_massigli"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = rene_massigli
-			allowed  = {
-				original_tag  = FRA
-			}
-			available  = {
-				has_completed_focus  = FRA_confirm_eastern_commitments 
-				has_government  = democratic 
-			}
-			cost  = 75.000
-			traits  = {
-				hawk 
-			}
-			do_effect  = {
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
-		}
 	}
 
 	FRA_georges_bonnet={

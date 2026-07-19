@@ -9286,8 +9286,7 @@ focus_tree = {
 	focus = {
 		id = ITA_towards_a_greater_italy
 		icon = GFX_focus_ITA_greater_italy
-		prerequisite = { focus = ITA_strengthen_the_regime focus = ITA_blackshirt_loyalty focus = ITA_setting_course }
-		mutually_exclusive = { focus = ITA_mare_nostrum_bba }
+		prerequisite = { focus = ITA_strengthen_the_regime }
 
 		x = 0
 		y = 1
@@ -10201,7 +10200,7 @@ focus_tree = {
 	focus = {
 		id = ITA_foreign_affairs
 		icon = GFX_goal_generic_dangerous_deal
-		prerequisite = { focus = ITA_triumph_in_africa_bba focus = ITA_conspiracies_in_the_shadows }
+		prerequisite = { focus = ITA_triumph_in_africa_bba }
 
 		x = 18
 		y = 1

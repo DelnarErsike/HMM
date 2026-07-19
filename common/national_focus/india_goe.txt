@@ -154,10 +154,9 @@ focus_tree = {
         id = RAJ_provincial_autonomy
         icon = GFX_focus_RAJ_provincial_autonomy
         #prerequisite = { focus = }
-        mutually_exclusive = { focus = RAJ_great_depression_price_controls focus = RAJ_his_majestys_loyal_government }
+        mutually_exclusive = { focus = RAJ_his_majestys_loyal_government }
         x = 29
         y = 0
-        relative_position_id = RAJ_great_depression_price_controls 
 
         cost = 5
 
@@ -436,7 +435,7 @@ focus_tree = {
     focus = {
         id = RAJ_trade_port
         icon = GFX_focus_POL_develop_polish_shipbuilding
-        prerequisite = { focus = RAJ_great_depression_price_controls focus = RAJ_provincial_autonomy }
+        prerequisite = { focus = RAJ_provincial_autonomy }
         x = -47
         y = 1
 
@@ -643,7 +642,6 @@ focus_tree = {
         x = -6
         y = 8
         relative_position_id = RAJ_purna_swaraj
-        mutually_exclusive = { focus = RAJ_league_against_gandhism }
         cost = 10
 
         ai_will_do = {
@@ -713,7 +711,6 @@ focus_tree = {
         x = 3
         y = 1
         relative_position_id = RAJ_purna_swaraj
-        #mutually_exclusive = { focus = RAJ_league_against_gandhism }
         cost = 5
 
         ai_will_do = {
@@ -1370,74 +1367,6 @@ focus_tree = {
     }
 
     focus = {
-        id = RAJ_all_india_kisan_sabha
-        icon = GFX_focus_ARG_no_gods_no_masters
-        prerequisite = { focus = RAJ_league_against_gandhism }
-        x = 12
-        y = 1
-        relative_position_id = RAJ_league_against_gandhism
-        
-        cost = 5
-
-        ai_will_do = {
-            factor = 1
-        }
-
-        available = {
-
-        }
-        
-        bypass = {
-
-        }
-
-        offset = {
-            x = -13
-            y = 0
-            trigger = {
-                has_game_rule = {
-                    rule = obsolete_focus_branches_visibility
-                    option = HIDE
-                }
-                has_completed_focus = RAJ_red_in_the_shadows
-            }
-        }
-
-        offset = {
-            x = -10
-            y = 0
-            trigger = {
-                has_game_rule = {
-                    rule = obsolete_focus_branches_visibility
-                    option = HIDE
-                }
-                has_completed_focus = RAJ_forward_bloc
-            }
-        }
-
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
-
-        search_filters = {FOCUS_FILTER_POLITICAL}
-        search_filters = {FOCUS_FILTER_WAR_SUPPORT}
-
-        completion_reward = {
-            add_popularity = {
-                ideology = communism
-                popularity = 0.05
-            }
-
-            add_popularity = {
-                ideology = fascism
-                popularity = 0.05
-            }
-
-            add_political_power = 60
-        }
-    }
-
-    focus = {
         id = RAJ_cottage_industries
         icon = GFX_focus_CHL_enlarge_the_textile_industries
         prerequisite = { focus = RAJ_tenancy_reforms }
@@ -1912,9 +1841,8 @@ focus_tree = {
         icon = GFX_focus_RAJ_two_nation_theory
         prerequisite = { focus = RAJ_a_congress_resurgent }
         x = 0
-        y = 0
-        relative_position_id = RAJ_india_united
-        mutually_exclusive = { focus = RAJ_india_united }
+        y = 1
+        relative_position_id = RAJ_a_congress_resurgent
         cost = 10
 
         ai_will_do = {
@@ -2114,147 +2042,6 @@ focus_tree = {
         }
     }
 
-    focus = {
-        id = RAJ_power_sharing_agreement
-        icon = GFX_focus_generic_treaty
-        prerequisite = { focus =  RAJ_india_united }
-        x = 0
-        y = 1
-        relative_position_id = RAJ_india_united
-        
-        cost = 5
-
-        ai_will_do = {
-            factor = 1 
-        }
-
-        available = {
- 
-        }
-        
-        bypass = {
-
-        }
-
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
-
-        search_filters = {FOCUS_FILTER_POLITICAL}
-
-        complete_tooltip = {
-
-        }
-
-        completion_reward = {
-            add_timed_idea = {
-                idea = idea_RAJ_power_sharing_agreement
-                days = 1460
-            } 
-            every_controlled_state = {
-                limit = {
-                    is_in_array = {
-                        array = RAJ.owned_states_at_game_start
-                        value = THIS
-                    }
-                    has_resistance = yes
-
-                }
-
-                add_compliance = -50
-                add_resistance = -30
-            }
-        }
-    }
-
-    focus = {
-        id = RAJ_a_permanent_muslim_governmental_seat
-        icon = GFX_focus_TUR_turanist_ambition
-        prerequisite = { focus = RAJ_power_sharing_agreement }
-        x = 2
-        y = 1
-        relative_position_id = RAJ_power_sharing_agreement
-        
-        cost = 10
-
-        ai_will_do = {
-            factor = 1
-        }
-
-        available = {
-
-        }
-        
-        bypass = {
-
-        }
-
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
-
-        search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_TFV_AUTONOMY}
-
-        complete_tooltip = {
-
-        }
-
-        completion_reward = {
-            if = {
-                limit = {
-                    has_idea = RAJ_marginalized_muslim_community_angry
-                }
-                swap_ideas = {
-                    add_idea = RAJ_marginalized_muslim_community_happy_alt
-                    remove_idea = RAJ_marginalized_muslim_community_angry
-                }
-            }
-            else = {
-                swap_ideas = {
-                    add_idea = RAJ_marginalized_muslim_community_happy_alt
-                    remove_idea = RAJ_marginalized_muslim_community
-                }
-            }
-        }
-    }
-
-    focus = {
-        id = RAJ_cabinet_mission_plan
-        icon = GFX_focus_ARG_cut_ties_with_britain
-        prerequisite = { focus = RAJ_power_sharing_agreement }
-        x = 0
-        y = 1
-        relative_position_id = RAJ_power_sharing_agreement
-        
-        cost = 5
-
-        ai_will_do = {
-            factor = 1
-        }
-
-        available = {
-
-        }
-        
-        bypass = {
-
-        }
-
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
-
-        search_filters = {FOCUS_FILTER_POLITICAL}
-
-        complete_tooltip = {
-
-        }
-
-        completion_reward = {
-            add_ideas = idea_RAJ_guided_by_britain
-        }
-    }
-
 #    focus = {
 #        id = RAJ_post_war_independence
 #        #icon = GFX_
@@ -2404,7 +2191,7 @@ focus = {
 	y = 0
 	cost = 5
 
-	mutually_exclusive = { focus = RAJ_great_depression_price_controls focus = RAJ_provincial_autonomy }
+	mutually_exclusive = { focus = RAJ_provincial_autonomy }
 
 
 	available = {
@@ -9769,153 +9556,6 @@ focus = {
 
         completion_reward = {
             add_ideas = RAJ_modernized_navy_spirit
-        }
-    }
-
-
-    focus = {
-        id = RAJ_red_punjab_operation
-        icon = GFX_goal_generic_attack_allies
-        prerequisite = { focus = RAJ_the_red_curtain_falls_over_asia }
-        x = 3
-        y = 1
-        relative_position_id = RAJ_the_red_curtain_falls_over_asia
-
-        cost = 5
-
-        ai_will_do = {
-            factor = 1
-        }
-
-        available = {
-            NOT = { has_war_with = PAK }
-        }
-        
-        bypass = {
-            OR = {
-                PAK = {
-                    OR = {
-                        exists = no
-                        is_subject_of = ROOT
-                    }
-                }
-
-                has_war_with = PAK
-                controls_state = 986
-            }
-
-        }
-
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
-
-        search_filters = {FOCUS_FILTER_ANNEXATION}
-
-        completion_reward = {
-            unlock_decision_tooltip = {
-                decision = RAJ_red_punjab_operation_decision
-                show_effect_tooltip = yes # default is no
-                show_modifiers = yes # default is no
-            }
-        }
-    }
-
-    focus = {
-        id = RAJ_secure_rajahsthan
-        icon = GFX_goal_generic_position_armies
-        prerequisite = { focus = RAJ_the_red_curtain_falls_over_asia }
-        x = 2
-        y = 0
-        relative_position_id = RAJ_red_punjab_operation
-
-        cost = 5
-
-        ai_will_do = {
-            factor = 1
-        }
-
-        available = {
-            NOT = { has_war_with = PAK }
-            controls_state = 437
-            controls_state = 991
-        }
-        
-        bypass = {
-            OR = {
-                PAK = {
-                    OR = {
-                        exists = no
-                        is_subject_of = ROOT
-                    }
-                }
-
-                has_war_with = PAK
-                controls_state = 433
-            }
-
-        }
-
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
-
-        search_filters = {FOCUS_FILTER_ANNEXATION}
-
-        completion_reward = {
-            unlock_decision_tooltip = {
-                decision = RAJ_secure_rajahsthan_decision
-                show_effect_tooltip = yes # default is no
-                show_modifiers = yes # default is no
-            }
-        }
-    }
-
-    focus = {
-        id = RAJ_strike_eastern_pakistan
-        icon = GFX_focus_generic_provoke_border_clashes
-        prerequisite = { focus = RAJ_the_red_curtain_falls_over_asia }
-        x = 4
-        y = 0
-        relative_position_id = RAJ_red_punjab_operation
-
-        cost = 5
-
-        ai_will_do = {
-            factor = 1
-        }
-
-        available = {
-            NOT = { has_war_with = PAK }
-        }
-        
-        bypass = {
-            OR = {
-                PAK = {
-                    OR = {
-                        exists = no
-                        is_subject_of = ROOT
-                    }
-                }
-
-                has_war_with = PAK
-                controls_state = 431
-            }
-
-        }
-
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
-
-        search_filters = {FOCUS_FILTER_ANNEXATION}
-
-        completion_reward = {
-            unlock_decision_tooltip = {
-                decision = RAJ_secure_west_bengal_decision
-                show_effect_tooltip = yes # default is no
-                show_modifiers = yes # default is no
-            }
         }
     }
 

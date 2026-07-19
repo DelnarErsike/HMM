@@ -53,9 +53,6 @@ focus_tree = {
 
 		x = 7
 		y = 0
-
-
-		mutually_exclusive = { focus = FIN_right_wing_policies focus = FIN_suomalainen_sosialismi }
 		
 		cost = 5
 
@@ -222,7 +219,7 @@ focus_tree = {
 	focus = {
 		id = FIN_align_the_agrarian_league
 		icon = GFX_focus_generic_workers
-		prerequisite = { focus = FIN_political_unity focus = FIN_social_democracy }
+		prerequisite = { focus = FIN_political_unity }
 
 		x = -3
 		y = 1
@@ -251,7 +248,7 @@ focus_tree = {
 	focus = {
 		id = FIN_the_finnish_swedish_peoples_party
 		icon = GFX_focus_generic_industrialists
-		prerequisite = { focus = FIN_social_democracy focus = FIN_political_unity }
+		prerequisite = { focus = FIN_political_unity }
 
 		x = 2
 		y = 0
@@ -1018,8 +1015,6 @@ focus_tree = {
 		icon = GFX_focus_FIN_a_cry_for_help
 		prerequisite = { focus = FIN_national_unity }
 
-		mutually_exclusive = { focus = FIN_seek_german_protection }
-
 		x = 2
 		y = 2
 		relative_position_id = FIN_national_unity
@@ -1077,7 +1072,7 @@ focus_tree = {
 	focus = {
 		id = FIN_greater_finland
 		icon = GFX_focus_FIN_greater_finland
-		prerequisite = { focus = FIN_finnish_march_of_conquest focus = FIN_militarized_society focus = FIN_keepers_of_the_north }
+		prerequisite = { focus = FIN_militarized_society }
 
 		x = 0
 		y = 1

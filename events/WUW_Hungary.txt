@@ -1469,8 +1469,6 @@ country_event = {
 					original_tag = YUG
 					original_tag = CZE
 					original_tag = SLO
-					original_tag = TRA
-					original_tag = SER
 				}
 			}
 			create_wargoal = {

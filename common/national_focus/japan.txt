@@ -319,7 +319,6 @@ focus_tree = {
 	focus = {
 		id = JAP_the_harakiri_debate
 		icon = GFX_focus_JAP_the_harakiri_debate
-		mutually_exclusive = { focus = JAP_reprimand_hamada_kunimatsu }
 		x = 0
 		y = 1
 		relative_position_id = JAP_promulgate_the_military_ministers_system
@@ -385,7 +384,6 @@ focus_tree = {
 	focus = {
 		id = JAP_konoes_first_cabinet
 		icon = GFX_focus_JAP_konoes_first_cabinet
-		#mutually_exclusive = { focus = JAP_reprimand_hamada_kunimatsu }
 		x = 0
 		y = 1
 		relative_position_id = JAP_the_harakiri_debate
@@ -442,7 +440,6 @@ focus_tree = {
 	focus = {
 		id = JAP_new_order_in_east_asia
 		icon = GFX_focus_JAP_new_order_in_east_asia
-		#mutually_exclusive = { focus = JAP_reprimand_hamada_kunimatsu }
 		x = 3
 		y = 1
 		relative_position_id = JAP_konoes_first_cabinet
@@ -523,7 +520,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_konoes_first_cabinet
 
-		prerequisite = { focus = JAP_reiterate_the_three_principles_of_hirota focus = JAP_konoes_first_cabinet }
+		prerequisite = { focus = JAP_konoes_first_cabinet }
 
 		cost = 5
 
@@ -3469,7 +3466,7 @@ focus_tree = {
 
 
 
-		prerequisite = { focus = JAP_sea_purge_the_kodoha_faction focus = JAP_revere_the_emperor_destroy_the_traitors }
+		prerequisite = { focus = JAP_sea_purge_the_kodoha_faction }
 
 		cost = 3
 

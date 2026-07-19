@@ -40,24 +40,6 @@ focus_tree = {
 	
 	#Focus Path shortcuts	
 	shortcut = {
-		name = GER_oppose_hitler_shortcut
-		target = GER_oppose_hitler_ww 
-		scroll_wheel_factor = 0.485
-		trigger = {
-			has_dlc = "Gotterdammerung"
-		}
-	}
-
-	shortcut = {
-		name = GER_oppose_hitler_shortcut
-		target = GER_oppose_hitler
-		scroll_wheel_factor = 0.55
-		trigger = {
-			NOT = { has_dlc = "Gotterdammerung" }
-		}
-	}
-
-	shortcut = {
 		name = GER_historical_path_shortcut
 		target = GER_remilitarize_the_rhineland
 		scroll_wheel_factor = 0.469 #Optional parameter, if left unset will use existing zoomlevel. Warning: there's no good way for this to respect client resolution.
@@ -8090,8 +8072,6 @@ focus_tree = {
 		icon = GFX_focus_GER_remilitarize_the_rhineland
 		alternate_icon = GFX_focus_GER_remilitarize_the_rhineland_historical
 
-		mutually_exclusive = { focus = GER_oppose_hitler_ww focus = GER_oppose_hitler }
-
 		x = 33
 		y = 0
 		relative_position_id = GER_prioritize_economic_growth
@@ -8158,7 +8138,7 @@ focus_tree = {
 	focus = {
 		id = GER_legion_condor
 		icon = GFX_focus_intervention_spain_nationalists
-		prerequisite = { focus = GER_remilitarize_the_rhineland focus = GER_oppose_hitler_ww focus = GER_oppose_hitler }
+		prerequisite = { focus = GER_remilitarize_the_rhineland }
 
 
 		x = 3
@@ -8212,7 +8192,7 @@ focus_tree = {
 		icon = GFX_focus_GER_anschluss
 		alternate_icon = GFX_focus_GER_anschluss_historical
 
-		prerequisite = { focus = GER_reorganize_the_wehrmacht focus = GER_heed_von_neuraths_concerns }
+		prerequisite = { focus = GER_reorganize_the_wehrmacht }
 
 		x = -8
 		y = 1
@@ -8920,8 +8900,6 @@ focus_tree = {
 
 		prerequisite = { focus = GER_anschluss }
 
-		mutually_exclusive = { focus = GER_befriend_czechoslovakia }
-
 		x = -2
 		y = 1
 		relative_position_id = GER_anschluss
@@ -9084,7 +9062,6 @@ focus_tree = {
 				else_if = { #THIS IS THE HISTORICAL OUTCOME THAT SHOULD HAPPEN ON HISTORICAL - HISTORICAL HERE!! 
 					limit = {
 						ENG = {
-							NOT = { has_completed_focus = ENG_a_change_in_course }
 							exists = yes
 							is_subject = no
 						}
@@ -9149,7 +9126,6 @@ focus_tree = {
 									ENG = {
 										exists = yes
 										is_subject = no
-										NOT = { has_completed_focus = ENG_a_change_in_course }
 									}
 								}
 								NOT = {
@@ -9480,7 +9456,7 @@ focus_tree = {
 	focus = { #All related content and local will be in Czech related files and local locations
 		id = GER_integrate_czech_manufacturers
 		icon = GFX_focus_PER_czech_tanks
-		prerequisite = { focus = GER_integrate_czechoslovakia  focus = GER_fate_of_czechoslovakia }
+		prerequisite = { focus = GER_fate_of_czechoslovakia }
 
 		x = 0
 		y = 1
@@ -10132,7 +10108,6 @@ focus_tree = {
 		prerequisite = { focus = GER_reassert_eastern_claims }
 		# HMM: make sure Molotov-Ribbentrop is done before Danzig
 		prerequisite = { focus = GER_molotov_ribbentrop_pact }
-		mutually_exclusive = { focus = GER_danzig_for_slovakia }
 		x = 0
 		y = 2
 		relative_position_id = GER_reassert_eastern_claims
@@ -10297,7 +10272,7 @@ focus_tree = {
 	focus = {
 		id = GER_subjugate_romanian_economy
 		icon = GFX_focus_GER_subjugate_romanian_economy
-		prerequisite = { focus = GER_danzig_for_slovakia focus = GER_danzig_or_war }
+		prerequisite = { focus = GER_danzig_or_war }
 
 		x = 0
 		y = 1
@@ -10951,7 +10926,7 @@ focus_tree = {
 	focus = {
 		id = GER_operation_sea_lion
 		icon = GFX_focus_generic_naval_invasion
-		prerequisite = { focus = GER_war_with_france focus = GER_invade_italy }
+		prerequisite = { focus = GER_war_with_france }
 
 		x = -1
 		y = 1
@@ -11586,7 +11561,6 @@ focus_tree = {
 		id = GER_second_ljubljana_award
 		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = GER_fate_of_yugoslavia }
-		mutually_exclusive = { focus = GER_war_with_greece }
 		x = 0
 		y = 1
 		relative_position_id = GER_fate_of_yugoslavia
@@ -11953,7 +11927,6 @@ focus_tree = {
 		alternate_icon = GFX_focus_GER_reorganize_the_wehrmacht_historical
 
 		prerequisite = { focus = GER_remilitarize_the_rhineland }
-		mutually_exclusive = { focus = GER_heed_von_neuraths_concerns }
 		x = 0
 		y = 1
 		relative_position_id = GER_remilitarize_the_rhineland
@@ -12130,7 +12103,6 @@ focus_tree = {
 		alternate_icon = GFX_focus_GER_war_with_the_ussr
 
 		prerequisite = { focus = GER_anti_comintern_pact }
-		mutually_exclusive = { focus = GER_alliance_with_the_ussr }
 		x = 0
 		y = 1
 		relative_position_id = GER_anti_comintern_pact
@@ -12264,7 +12236,6 @@ focus_tree = {
 		alternate_icon = GFX_focus_GER_molotov_ribbentrop_pact
 
 		prerequisite = { focus = GER_reorganize_the_wehrmacht }
-		mutually_exclusive = { focus = GER_anti_soviet_pact }
 		x = 4
 		y = 1
 		relative_position_id = GER_reorganize_the_wehrmacht
@@ -12430,7 +12401,6 @@ focus_tree = {
 
 		available = {
 			NOT = { has_war_with = SOV } # HMM: just in case
-			NOT = { has_completed_focus = GER_anti_soviet_pact }
 			OR = {
 				NOT = { has_completed_focus = GER_bulwark_against_bolshevism }
 				NOT = { has_completed_focus = GER_the_great_red_menace }
@@ -12736,7 +12706,7 @@ focus_tree = {
 	focus = {
 		id = GER_reclaim_former_african_colonies
 		icon = GFX_focus_GER_reclaim_former_african_colonies
-		prerequisite = { focus = GER_befriend_china focus = GER_befriend_japan }
+		prerequisite = { focus = GER_befriend_japan }
 
 		x = 0
 		y = 1
@@ -16504,7 +16474,6 @@ focus_tree = {
 		id = GER_loyalty_to_the_fuhrer
 		icon = GFX_focus_GER_loyalty_to_the_fuhrer
 		prerequisite = { focus = GER_hegemony_of_the_ss focus = GER_wunderwaffe focus = GER_integration_of_puppet_economies focus = GER_propaganda_master focus = GER_total_control_over_domestic_affairs }
-		mutually_exclusive = { focus = GER_a_strong_successor }
 		x = 0
 		y = 5
 		relative_position_id = GER_fuhrerprinzip

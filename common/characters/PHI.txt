@@ -432,28 +432,6 @@ characters={
 	}
 
 	PHI_benigno_ramos = {
-		advisor = {
-			slot = political_advisor
-			allowed  = {
-				has_dlc = "No Compromise, No Surrender"
-			}
-			available = {
-				has_completed_focus = PHI_align_with_japan
-			}
-			idea_token = PHI_benigno_ramos
-
-			ai_will_do = {
-				base = 1
-				modifier = {
-					factor = 5
-					has_completed_focus = PHI_rebuild_sakdalistas 
-				}
-			}
-
-			traits  = {
-				PHI_sakdalista_editor
-			}
-		}
 		name = PHI_benigno_ramos
 		portraits = {
 			civilian = {

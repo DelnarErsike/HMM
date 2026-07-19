@@ -1942,7 +1942,6 @@ RAJ_GOE_partition_cat = {
 			has_global_flag = RAJ_GOE_partition_has_happened
 			NOT = { has_global_flag =  RAJ_GOE_partition_is_over }
 			NOT = {  FROM.owner = { is_guaranteed_by = ROOT } }
-			NOT = { has_completed_focus = RAJ_india_united }
 		}
 		
 		available = {
@@ -1993,7 +1992,6 @@ RAJ_GOE_partition_cat = {
 			has_global_flag = RAJ_GOE_partition_has_happened
 			NOT = { has_global_flag =  RAJ_GOE_partition_is_over }
 			is_raj_or_raj_inheritor = yes
-			NOT = { has_completed_focus = RAJ_india_united }
 	    }
 	    available = {
 	    	hidden_trigger = {
@@ -2224,8 +2222,6 @@ RAJ_GOE_partition_cat = {
 	    	
 	    }
 	    visible = {
-	    	
-	    	NOT = { has_completed_focus = RAJ_india_united }
 	    	NOT = { has_global_flag = RAJ_GOE_partition_is_over }
 	    }
 
@@ -2267,7 +2263,6 @@ RAJ_GOE_partition_cat = {
 		visible = { 
 			has_global_flag = RAJ_GOE_partition_has_happened
 			NOT = { has_global_flag =  RAJ_GOE_partition_is_over }
-			NOT = { has_completed_focus = RAJ_india_united }
 		}
 		
 		available = {

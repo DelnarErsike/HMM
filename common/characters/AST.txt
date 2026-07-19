@@ -245,21 +245,6 @@ characters={
 					small="GFX_idea_AST_ben_chifley" #small="GFX_idea_generic_political_advisor_europe_3"
 				}
 			}
-			advisor={
-				slot = political_advisor
-				idea_token = AST_ben_chifley
-				allowed = {
-					original_tag = AST
-					has_dlc = "Together for Victory"
-				}
-				cost = 100.000
-				traits = {
-					smooth_talking_charmer 
-				}
-				available = {
-					has_completed_focus = AST_never_another_gallipoli 
-				}
-			}
 		}	
 	}
 
@@ -2516,11 +2501,7 @@ characters={
 				}
 			}
 			ai_will_do = {
-				factor = 1
-				modifier = {
-					NOT = { has_completed_focus = AST_against_war_and_fascism }
-					factor = 0
-				}
+				factor = 0
 			}
 		}
 	}
@@ -2625,19 +2606,11 @@ characters={
 				allowed  = {
 					original_tag  = AST
 				}
-				available = {
-					NOT = { has_completed_focus = AST_australia_first }
-				}
 				traits  = {
 					AST_revolutionary_equalist
 				}
 				ai_will_do = {
-					factor = 1
-					modifier = {
-						NOT = { has_completed_focus = AST_against_war_and_fascism }
-						factor = 0
-
-					}
+					factor = 0
 				}
 			}
 		}
@@ -2833,28 +2806,6 @@ characters={
 					small=GFX_portrait_AST_lance_sharkey_small
 				}
 			}
-			advisor={
-				slot = political_advisor
-				idea_token = AST_lance_sharkey
-				allowed = {
-					original_tag = AST
-				}
-				available = {
-					has_completed_focus = AST_against_war_and_fascism
-				}
-				traits = {
-					AST_orthodox_stalinist
-				}
-				ai_will_do = {
-
-					factor = 1
-					modifier = {
-						NOT = { has_completed_focus = AST_against_war_and_fascism }
-						factor = 0
-
-					}
-				}
-			}	
 		}
 		instance = {
 			allowed = {

@@ -3223,12 +3223,6 @@ country_event = { #Canberra Air Crash
 	            activate_mission = AST_castle_crumbling_mission
 	            set_country_flag = AST_canberra_air_disaster_flag
 	        }
-	        IF = {
-	        	limit = {
-	        		has_completed_focus = AST_australia_first
-	        	}
-				set_country_flag = AST_a_convenient_disaster_flag
-	        }
 	    }
 	}
 
@@ -3317,93 +3311,8 @@ country_event = { #Government goes
 
 		#Switch party
 
-		IF = {
+		IF = { # CURRENT UAP, SWITCHING TO ALP
 			limit = {
-				has_completed_focus = AST_australia_first
-			}
-
-			IF = {
-				limit = {
-					OR = {
-						AND = {
-							AST_percy_stephensen = { 
-								is_hired_as_advisor = yes
-								has_character_flag = AST_fascist_leader
-							}	
-						}
-						AND = {
-							AST_adela_walsh = { 
-								is_hired_as_advisor = yes
-								has_character_flag = AST_fascist_leader
-							}
-						}
-					}
-				}
-				add_political_power = 135
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}
-
-			set_politics = {
-				ruling_party = fascism
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					is_subject_of = ENG
-					NOT = {
-						has_dynamic_modifier = {
-							modifier = AST_imperial_pressure_spirit
-						}		
-					}
-				}
-				hidden_effect = {
-					country_event = { id = AST_political_events.7 days = 1 }
-				}
-			}
-
-			ELSE_IF = {
-				limit = {
-					has_dynamic_modifier = {
-						modifier = AST_imperial_pressure_spirit
-					}
-				}
-				custom_effect_tooltip = AST_imperial_pressure_spirit_tt
-				add_to_variable = { AST_imperial_pressure_democratic_drift = 0.02 tooltip = democratic_drift_tt }
-				add_to_variable = { AST_imperial_pressure_stability_factor = -0.05 tooltip = stability_factor_tt }
-			}
-
-			IF = {
-				limit = {
-					AST_percy_stephensen = {
-						has_character_flag = AST_fascist_leader
-					}
-				}
-				effect_tooltip = {
-					set_cosmetic_tag = AST_percy_fascism
-				}
-				hidden_effect = {
-					set_cosmetic_tag = AST_percy
-				}
-			}
-
-			IF = {
-				limit = {
-					AST_adela_walsh = {
-						has_character_flag = AST_fascist_leader
-					}
-				}
-				hidden_effect = {
-					set_cosmetic_tag = AST_adela_imperial
-				}
-			}
-		}
-
-		ELSE_IF = { # CURRENT UAP, SWITCHING TO ALP
-			limit = {
-				NOT = {
-					has_completed_focus = AST_australia_first
-				}
 				check_variable = {
 					var = AST_ruling_party
 					value = 0
@@ -3496,9 +3405,6 @@ country_event = { #Government goes
 
 		ELSE_IF = { # CURRENT ALP, SWITCHING TO UAP
 			limit = {
-				NOT = {
-					has_completed_focus = AST_australia_first
-				}
 				check_variable = {
 					var = AST_ruling_party
 					value = 1

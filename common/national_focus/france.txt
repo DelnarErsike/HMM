@@ -2375,7 +2375,6 @@
 		prerequisite = {
 			focus = FRA_review_foreign_policy
 		}
-		mutually_exclusive = { focus = FRA_confirm_eastern_commitments }
 		relative_position_id = FRA_review_foreign_policy
 		cost = 10
 
@@ -2446,7 +2445,6 @@
 		available = {
 		}
 	 	prerequisite = {
-	 		focus = FRA_strengthen_the_little_entente
 	 		focus = FRA_buy_time
 	 	}
 		x = -2
@@ -2511,12 +2509,8 @@
 		}
 		bypass = {
 			is_in_faction_with = ENG
-			NOT = {
-				has_completed_focus = FRA_strengthen_the_little_entente
-			}
 		}
 	 	prerequisite = { focus = FRA_buy_time }
-	 	mutually_exclusive = { focus = FRA_france_leads }
 		x = 0
 		y = 1
 		relative_position_id = FRA_buy_time

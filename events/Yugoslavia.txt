@@ -189,14 +189,6 @@ country_event = {
 					hostility_reason = asked_to_join
 				}
 			}
-			if = {
-				limit = {
-					PREV = {
-						has_cosmetic_tag = SER
-					}
-				}
-				set_cosmetic_tag = SER
-			}
 			retire_country_leader = yes
 			set_popularities = {
 				democratic = 50

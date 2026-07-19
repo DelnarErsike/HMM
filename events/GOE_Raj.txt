@@ -38,205 +38,6 @@ add_namespace = GOE_RAJ_news
 #	}
 #}
 
-#RAJ asks the overlord to invade Bhutan
-country_event = {
-	id = GOE_RAJ.1
-	title = GOE_RAJ.1.t	
-	desc = GOE_RAJ.1.desc	
-	picture = GFX_report_event_generic_sign_treaty2
-	
-	is_triggered_only = yes
-
-
-	#yes
-	option = { 
-		name = GOE_RAJ.1.a
-		ai_chance = {
-			base = 1
-			modifier = {
-				FROM = { is_ai = yes }
-				is_historical_focus_on = yes
-				factor = 0
-			}
-		}
-
-		RAJ = {
-			country_event = { id = GOE_RAJ.2 hours = 2 random_hours = 3 }
-			event_option_tooltip = GOE_RAJ.2.a
-		}
-	}
-
-	#No
-	option = { 
-		name = GOE_RAJ.1.b
-		ai_chance = {
-			base = 0
-			modifier = {
-				FROM = { is_ai = yes }
-				is_historical_focus_on = yes
-				add = 1
-			}
-		}
-
-		RAJ = {
-			country_event = { id = GOE_RAJ.3 hours = 2 random_hours = 3 }
-		}
-	}
-}
-
-#UK Accepts that RAJ invades Bhutan
-country_event = {
-	id = GOE_RAJ.2
-	title = GOE_RAJ.2.t	
-	desc = GOE_RAJ.2.desc	
-	picture = GFX_report_event_japan_army_mountainside
-	
-	is_triggered_only = yes
-
-
-	option = { 
-		name = GOE_RAJ.2.a
-		ai_chance = {
-			base = 1
-		}
-
-		declare_war_on = {
-			target = BHU
-			type = annex_everything
-		}
-	}
-}
-
-#UK Rejects that RAJ invades Bhutan
-country_event = {
-	id = GOE_RAJ.3
-	title = GOE_RAJ.3.t	
-	desc = GOE_RAJ.3.desc	
-	picture = GFX_report_event_generic_sign_treaty2
-	
-	is_triggered_only = yes
-
-
-	option = { 
-		name = GOE_RAJ.3.a
-		ai_chance = {
-			base = 1
-		}
-	}
-}
-
-
-#RAJ demands Bhutan become a subject
-country_event = {
-	id = GOE_RAJ.4
-	title = GOE_RAJ.4.t	
-	desc = GOE_RAJ.4.desc	
-	picture = GFX_report_event_indian_soldiers
-	
-	is_triggered_only = yes
-
-	#Refuse
-	option = { 
-		name = GOE_RAJ.4.a
-		ai_chance = {
-			base = 1
-		}
-
-		FROM = {
-			if = {
-				limit = {
-					is_subject = yes
-				}
-				OVERLORD = {
-					country_event = { id = GOE_RAJ.1 hours = 2 random_hours = 3 }
-				}
-			}
-			else = {
-				event_option_tooltip = GOE_RAJ.5.a
-				country_event = { id = GOE_RAJ.5 hours = 2 random_hours = 3 }
-			}
-		}
-	}
-
-	#Accept
-	option = { 
-		name = GOE_RAJ.4.b
-		ai_chance = {
-			base = 1
-			modifier = {
-				has_opinion = {
-					target = FROM
-					value > 79  # Use < or >
-				}
-				add = 1
-			}
-
-			modifier = {
-				strength_ratio = {
-					tag = FROM
-					ratio > 3
-				}
-				add = 1.5
-			}
-		}
-
-
-		FROM = {
-			event_option_tooltip = GOE_RAJ.6.a
-			country_event = { id = GOE_RAJ.6 hours = 2 random_hours = 3 }
-		}
-
-	}
-}
-
-#BHU Rejects being puppeted
-country_event = {
-	id = GOE_RAJ.5
-	title = GOE_RAJ.5.t	
-	desc = GOE_RAJ.5.desc	
-	picture = GFX_report_event_chinese_soldiers_running
-	
-	is_triggered_only = yes
-
-
-	option = { 
-		name = GOE_RAJ.5.a
-		ai_chance = {
-			base = 1
-		}
-		create_wargoal = {
-			type = puppet_wargoal_focus
-			target = FROM
-		}
-	}
-}
-
-#BHU Accepts being puppeted
-country_event = {
-	id = GOE_RAJ.6
-	title = GOE_RAJ.6.t	
-	desc = GOE_RAJ.6.desc	
-	picture = GFX_report_event_generic_sign_treaty2
-	
-	is_triggered_only = yes
-
-
-	option = { 
-		name = GOE_RAJ.6.a
-		ai_chance = {
-			base = 1
-		}
-
-		set_autonomy = {
-			target = FROM
-			autonomy_state = autonomy_dominion
-			freedom_level = 1 
-			end_wars  = yes 
-			end_civil_wars = yes #
-		}
-	}
-}
-
 ###AZAD HIND EVENTS
 
 #RAJ asks for aid in war to Jap
@@ -1298,19 +1099,6 @@ country_event = {
 			days = 365
 		}
 
-		if = {
-			limit = {
-				FROM = { has_completed_focus = RAJ_great_depression_price_controls }
-			}
-			FROM = {	
-				uncomplete_national_focus = {
-					focus = RAJ_great_depression_price_controls
-					uncomplete_children = yes
-					refund_political_power = yes
-				}
-			}
-		}
-
 		FROM = { set_country_flag = ENG_rejected_eic } #activate the other AI strat
 
 
@@ -2307,17 +2095,6 @@ country_event = {
 			check_painful_memory = yes
 		}
 		custom_effect_tooltip = GOE_RAJ_partition_become_free_to_stop_the_chaos_tt
-		if = {
-			limit = { has_completed_focus = RAJ_league_against_gandhism }
-			hidden_effect = {
-				if = {
-					limit = { check_variable = { RAJ_war_support_increased < 51 } }
-				}
-				add_war_support = 0.05
-				add_to_variable = { var = RAJ_war_support_increased value = 5}
-				custom_effect_tooltip = RAJ_league_against_gandhism_tt_event
-			}
-		}
 	}
 
 	option = {
@@ -2382,13 +2159,6 @@ country_event = {
 			check_painful_memory = yes
 		}
 
-		if = {
-			limit = { has_completed_focus = RAJ_league_against_gandhism }
-			hidden_effect = {
-				add_war_support = 0.05
-			}
-			custom_effect_tooltip = RAJ_league_against_gandhism_tt_event
-		}
 		custom_effect_tooltip = GOE_RAJ_partition_become_free_to_stop_the_chaos_tt
 		
 	}
@@ -2453,13 +2223,6 @@ country_event = {
 			check_painful_memory = yes
 		}
 
-		if = {
-			limit = { has_completed_focus = RAJ_league_against_gandhism }
-			hidden_effect = {
-				add_war_support = 0.05
-			}
-			custom_effect_tooltip = RAJ_league_against_gandhism_tt_event
-		}
 		custom_effect_tooltip = GOE_RAJ_partition_become_free_to_stop_the_chaos_tt
 	}
 }
@@ -2488,13 +2251,6 @@ country_event = {
 			check_painful_memory = yes
 		}
 
-		if = {
-			limit = { has_completed_focus = RAJ_league_against_gandhism }
-			hidden_effect = {
-				add_war_support = 0.05
-			}
-			custom_effect_tooltip = RAJ_league_against_gandhism_tt_event
-		}
 		custom_effect_tooltip = GOE_RAJ_partition_become_free_to_stop_the_chaos_tt
 	}
 
@@ -2562,13 +2318,6 @@ country_event = {
 			check_painful_memory = yes
 		}
 
-		if = {
-			limit = { has_completed_focus = RAJ_league_against_gandhism }
-			hidden_effect = {
-				add_war_support = 0.05
-			}
-			custom_effect_tooltip = RAJ_league_against_gandhism_tt_event
-		}
 		custom_effect_tooltip = GOE_RAJ_partition_become_free_to_stop_the_chaos_tt
 
 	}
@@ -2598,27 +2347,11 @@ country_event = {
 			add_resistance = 5
 			
 		}
-
-		if = {
-			limit = { has_completed_focus = RAJ_league_against_gandhism }
-			hidden_effect = {
-				add_war_support = 0.05
-			}
-			custom_effect_tooltip = RAJ_league_against_gandhism_tt_event
-		}
 	}
 
 	option = { #intervene
 		name =  GOE_RAJ_partition.5.b
 		add_political_power = -40
-
-		if = {
-			limit = { has_completed_focus = RAJ_league_against_gandhism }
-			hidden_effect = {
-				add_war_support = 0.05
-			}
-			custom_effect_tooltip = RAJ_league_against_gandhism_tt_event
-		}
 	}
 	
 }
@@ -3157,9 +2890,6 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		trigger = {
-			NOT = { has_completed_focus = RAJ_india_united }
-		}
 		name =  GOE_RAJ_partition.6.a
 		if = {
 			limit = {
@@ -4059,24 +3789,6 @@ country_event = {
 					}
 				}
 			}
-		}
-	}
-
-	option = {
-		trigger = {
-			 has_completed_focus = RAJ_india_united
-		}
-		name =  GOE_RAJ_partition.6.a
-		RAJ = {
-			add_ideas = idea_RAJ_remaining_paramilitary_organizations
-		}
-		add_timed_idea = {
-			idea = idea_RAJ_partition_india_united
-			days = 1080
-		}
-		country_event = {
-			id = GOE_RAJ_partition.7
-			hours = 4
 		}
 	}
 }

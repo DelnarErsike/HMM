@@ -1647,8 +1647,6 @@
 				limit = {
 					original_tag = AST
 					has_dlc = "Thunder at Our Gates"
-					NOT = { has_completed_focus = AST_australia_first }
-        			NOT = { has_completed_focus = AST_against_war_and_fascism }
 					has_government = democratic
 				}
 				AST = {
@@ -2031,19 +2029,6 @@
 	#FROM is the faction Leader, ROOT is the country leaving the faction 
 	on_leave_faction  = {
 		effect = {
-			if = {
-				limit = {
-					FROM = {
-						original_tag = SIA
-						has_completed_focus = SIA_asian_democratic_compact
-					}
-				}
-				
-				FROM = { SIA_update_adc = yes }
-			}
-		}
-
-		effect = {
 			IF = { #Downgrade AST Training Initiative spirit if <5 faction members
 				limit = {
 					OR = {
@@ -2076,18 +2061,6 @@
 	}
 
 	on_offer_join_faction = {
-		effect = {
-			if = {
-				limit = {
-					ROOT = {
-						original_tag = SIA
-						has_completed_focus = SIA_asian_democratic_compact
-					}
-				}
-				
-				ROOT = { SIA_update_adc = yes }
-			}
-		}
 		# Late ABDACOM invite: covers add_to_faction and accepted offers
 		effect = {
 			if = {
@@ -2256,21 +2229,6 @@
 					set_variable = { global.ABDA_experience_gain_navy_unit_factor_snapshot = ABDA_experience_gain_navy_unit_factor }
 					PREV = { country_event = { id = ABDA_events.5 days = 1 } }
 				}
-			}
-		}
-
-		effect = {
-
-			if = {
-				limit = {
-					FROM = {
-						original_tag = SIA
-						has_completed_focus = SIA_asian_democratic_compact
-					}
-				}
-
-				
-				FROM = { SIA_update_adc = yes }
 			}
 		}
 

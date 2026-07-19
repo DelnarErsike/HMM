@@ -6341,8 +6341,6 @@ focus_tree = {
 		relative_position_id = SOV_the_path_of_marxism_leninism
 		cost = 5
 
-		mutually_exclusive = { focus = SOV_the_right_opposition focus = SOV_the_left_opposition }
-
 		available = {
 
 		}
@@ -8336,11 +8334,7 @@ focus_tree = {
 		
 		available = {
 			has_civil_war = no
-			OR = {
 				has_completed_focus = SOV_the_centre
-				has_completed_focus = SOV_the_left_opposition
-				has_completed_focus = SOV_the_right_opposition
-			}
 			NOT = { has_global_flag = scw_over }
 			has_government = communism
 			is_subject = no
@@ -8352,20 +8346,6 @@ focus_tree = {
 			add_timed_idea = { idea = SOV_military_advisors_in_spain days = 1095 }
 			
 			if = {
-				limit = {
-					has_dlc = "La Resistance"
-					has_completed_focus = SOV_covert_support_for_spanish_poum
-					has_completed_focus = SOV_coup_detat
-					has_global_flag = SPR_anarchist_uprising_flag
-					country_exists = SPC
-					SPC = { has_completed_focus = SPR_the_anti_fascist_workers_revolution }
-				}
-				SPC = {
-					hidden_effect = { country_event = { id = NSB_soviet_foreign_politics_events.20 hours = 2 random_hours = 1 } }
-					effect_tooltip = { add_timed_idea = {idea = SOV_soviet_advisors_spr days = 1095 } }
-				}
-			}
-			else_if = {
 				limit = {
 					has_dlc = "La Resistance"
 					country_exists = SPD
@@ -8631,8 +8611,6 @@ focus_tree = {
 			}	
 		}
 
-		mutually_exclusive = { focus = SOV_respect_baltic_self_determination }
-
 		available = {
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
 			is_subject = no
@@ -8701,7 +8679,7 @@ focus_tree = {
 	focus = {
 		id = SOV_secure_leningrad
 		icon = GFX_focus_generic_attack_finland
-		prerequisite = { focus = SOV_respect_baltic_self_determination focus = SOV_claims_in_baltic }
+		prerequisite = { focus = SOV_claims_in_baltic }
 		x = -1
 		y = 1
 		relative_position_id = SOV_claims_in_baltic
@@ -8762,7 +8740,7 @@ focus_tree = {
 	focus = {
 		id = SOV_claims_on_poland
 		icon = GFX_SOV_claims_on_poland_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_respect_baltic_self_determination focus = SOV_claims_in_baltic }
+		prerequisite = { focus = SOV_claims_in_baltic }
 		x = 1
 		y = 1
 		relative_position_id = SOV_claims_in_baltic

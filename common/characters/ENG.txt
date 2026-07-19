@@ -1694,14 +1694,6 @@ characters={
 						has_dlc = "Man the Guns"
 					}
 					NOT = {
-						has_completed_focus  = ENG_a_change_in_course 
-					}
-				}
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
 						has_autonomy_state  = autonomy_supervised_state
 					}
 				}

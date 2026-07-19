@@ -396,9 +396,6 @@ country_event = {
 			if = {
 				limit = {
 					RAJ = { has_country_flag = ENG_abdication_crisis_dominion_will_leave }
-					NOT ={
-						has_completed_focus = RAJ_great_depression_price_controls
-					}
 				}
 
 				RAJ = {
@@ -4727,22 +4724,6 @@ country_event = {
 			}
 			NOT = {
 				AND = {
-					original_tag = AST
-					has_dlc = "Thunder at Our Gates"
-					OR = {
-						AND = {
-							has_completed_focus = AST_australia_first
-							ENG = { has_government = fascism }
-						}
-						AND = {
-							has_completed_focus = AST_against_war_and_fascism
-							ENG = { has_government = communism }
-						}
-					}
-				}
-			}
-			NOT = {
-				AND = {
 					original_tag = NZL
 					OR = {
 						AND = {
@@ -4766,21 +4747,6 @@ country_event = {
 						}
 						AND = {
 							has_completed_focus = CAN_burn_the_royal_portraits
-							ENG = { has_government = communism }
-						}
-					}
-				}
-			}
-			NOT = {
-				AND = {
-					original_tag = SAF
-					OR = {
-						AND = {
-							has_completed_focus = SAF_support_the_afrikaner_broederbond
-							ENG = { has_government = fascism }
-						}
-						AND = {
-							has_completed_focus = SAF_empower_the_workers
 							ENG = { has_government = communism }
 						}
 					}
@@ -4814,22 +4780,6 @@ country_event = {
 			}
 			NOT = {
 				AND = {
-					original_tag = AST
-					has_dlc = "Thunder at Our Gates"
-					OR = {
-						AND = {
-							has_completed_focus = AST_australia_first
-							ENG = { has_government = fascism }
-						}
-						AND = {
-							has_completed_focus = AST_against_war_and_fascism
-							ENG = { has_government = communism }
-						}
-					}
-				}
-			}
-			NOT = {
-				AND = {
 					original_tag = NZL
 					OR = {
 						AND = {
@@ -4853,21 +4803,6 @@ country_event = {
 						}
 						AND = {
 							has_completed_focus = CAN_burn_the_royal_portraits
-							ENG = { has_government = communism }
-						}
-					}
-				}
-			}
-			NOT = {
-				AND = {
-					original_tag = SAF
-					OR = {
-						AND = {
-							has_completed_focus = SAF_support_the_afrikaner_broederbond
-							ENG = { has_government = fascism }
-						}
-						AND = {
-							has_completed_focus = SAF_empower_the_workers
 							ENG = { has_government = communism }
 						}
 					}
@@ -4988,20 +4923,6 @@ country_event = {
 					}
 				}
 				AND = {
-					original_tag = AST
-					has_dlc = "Thunder at Our Gates"
-					OR = {
-						AND = {
-							has_completed_focus = AST_australia_first
-							ENG = { has_government = fascism }
-						}
-						AND = {
-							has_completed_focus = AST_against_war_and_fascism
-							ENG = { has_government = communism }
-						}
-					}
-				}
-				AND = {
 					original_tag = NZL
 					OR = {
 						AND = {
@@ -5023,19 +4944,6 @@ country_event = {
 						}
 						AND = {
 							has_completed_focus = CAN_burn_the_royal_portraits
-							ENG = { has_government = communism }
-						}
-					}
-				}
-				AND = {
-					original_tag = SAF
-					OR = {
-						AND = {
-							has_completed_focus = SAF_support_the_afrikaner_broederbond
-							ENG = { has_government = fascism }
-						}
-						AND = {
-							has_completed_focus = SAF_empower_the_workers
 							ENG = { has_government = communism }
 						}
 					}
@@ -6198,26 +6106,6 @@ country_event = {
 						has_completed_focus = SOV_the_southern_thrust
 					}
 					has_war_with = SOV
-				}
-			}
-		}
-		effect_tooltip = {
-			if = {
-				limit = {
-					tag = PER
-				}
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = PER
-				}
-			}
-			if = {
-				limit = {
-					tag = AFG
-				}
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = AFG
 				}
 			}
 		}

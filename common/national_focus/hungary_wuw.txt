@@ -35,7 +35,6 @@ focus_tree = {
 		id = wuw_HUN_continue_the_regency
 		icon = GFX_focus_rom_handle_king
 		#prerequisite = { focus = }
-		mutually_exclusive = { focus = wuw_HUN_end_the_regency focus = wuw_HUN_end_the_white_terror }
 		x = 5
 		y = 0
 		#relative_position_id = wuw_HUN_end_the_regency
@@ -92,7 +91,6 @@ focus_tree = {
 		id = wuw_HUN_strengthen_horthys_reign
 		icon = GFX_focus_HUN_strengthen_horthys_reign
 		prerequisite = { focus = wuw_HUN_continue_the_regency }
-		mutually_exclusive = { focus = wuw_HUN_undermine_the_admiral }
 		x = 0
 		y = 1
 		relative_position_id = wuw_HUN_continue_the_regency
@@ -164,8 +162,7 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_reestablish_the_rongyos_garda
 		icon = GFX_focus_HUN_reestablish_the_rongyos_garda
-		prerequisite = { focus = wuw_HUN_strengthen_horthys_reign focus = wuw_HUN_undermine_the_admiral }
-		#mutually_exclusive = { focus = wuw_HUN_undermine_the_admiral }
+		prerequisite = { focus = wuw_HUN_strengthen_horthys_reign }
 		x = 2
 		y = 2
 		relative_position_id = wuw_HUN_strengthen_horthys_reign
@@ -279,7 +276,6 @@ focus_tree = {
 		id = wuw_HUN_strenghten_the_order_of_vitez
 		icon = GFX_focus_HUN_strenghten_the_order_of_vitez
 		prerequisite = { focus = wuw_HUN_strengthen_horthys_reign }
-		#mutually_exclusive = { focus = wuw_HUN_undermine_the_admiral }
 		x = 1
 		y = 1
 		relative_position_id = wuw_HUN_strengthen_horthys_reign
@@ -325,7 +321,6 @@ focus_tree = {
 		id = wuw_HUN_pass_statute_xix
 		icon = GFX_focus_generic_military_dictatorship
 		prerequisite = { focus = wuw_HUN_strengthen_horthys_reign }
-		#mutually_exclusive = { focus = wuw_HUN_undermine_the_admiral }
 		x = -1
 		y = 1
 		relative_position_id = wuw_HUN_strengthen_horthys_reign
@@ -371,7 +366,6 @@ focus_tree = {
 		id = wuw_HUN_restrict_voting_rights
 		icon = GFX_focus_usa_voter_registration_act
 		prerequisite = { focus = wuw_HUN_pass_statute_xix }
-		#mutually_exclusive = { focus = wuw_HUN_undermine_the_admiral }
 		x = 1
 		y = 1
 		relative_position_id = wuw_HUN_pass_statute_xix
@@ -422,7 +416,6 @@ focus_tree = {
 		id = wuw_HUN_absolute_rule_of_the_national_unity_party
 		icon = GFX_focus_generic_self_management
 		prerequisite = { focus = wuw_HUN_restrict_voting_rights }
-		#mutually_exclusive = { focus = wuw_HUN_undermine_the_admiral }
 		x = 0
 		y = 1
 		relative_position_id = wuw_HUN_restrict_voting_rights
@@ -472,7 +465,6 @@ focus_tree = {
 		id = wuw_HUN_outlaw_the_party_of_national_will
 		icon = GFX_focus_HUN_outlaw_the_party_of_national_will
 		prerequisite = { focus = wuw_HUN_pass_statute_xix }
-		#mutually_exclusive = { focus = wuw_HUN_undermine_the_admiral }
 		x = -1
 		y = 1
 		relative_position_id = wuw_HUN_pass_statute_xix
@@ -523,7 +515,6 @@ focus_tree = {
 		id = wuw_HUN_spur_on_the_trianon_trauma
 		icon = GFX_focus_ETH_freedom_at_gunpoint
 		prerequisite = { focus = wuw_HUN_outlaw_the_party_of_national_will }
-		#mutually_exclusive = { focus = wuw_HUN_undermine_the_admiral }
 		x = 0
 		y = 1
 		relative_position_id = wuw_HUN_outlaw_the_party_of_national_will
@@ -576,8 +567,7 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_renounce_the_treaty_of_trianon
 		icon = GFX_focus_renounce_the_treaty_of_trianon
-		prerequisite = { focus = wuw_HUN_spur_on_the_trianon_trauma focus = wuw_HUN_elect_a_fascist_king }
-		#mutually_exclusive = { focus = wuw_HUN_undermine_the_admiral }
+		prerequisite = { focus = wuw_HUN_spur_on_the_trianon_trauma }
 		x = 0
 		y = 1
 		relative_position_id = wuw_HUN_spur_on_the_trianon_trauma
@@ -611,53 +601,22 @@ focus_tree = {
 
 			add_threat = 1
 
-			IF = {
-				limit = {
-					FRA = {
-						has_completed_focus = FRA_strengthen_the_little_entente
-						exists = yes
-						is_subject = no
-					}
-				}
-				FRA = {
-					country_event = {
-						id = DOD_hungary.40
-						days = 1
-					}
-				}
-			}
-
-			IF = {
-				limit = {
-					OR = {
-						NOT = {
-							FRA = {
-								has_completed_focus = FRA_strengthen_the_little_entente
-							}
-						}
-						FRA = {
-							exists = no
-						}
-						FRA = {
-							is_subject = yes
-						}
-						ROM = {
-							exists = yes
-						}
-					}
-				}
 				#Romania gets the event if France not engaged in Balkans
-				ROM = {
-					country_event = {
-						id = DOD_hungary.40
-						days = 1
+				if = {
+					limit = {
+						ROM = { exists = yes }
+					}
+					ROM = {
+						country_event = {
+							id = DOD_hungary.40
+							days = 1
+						}
 					}
 				}
 				ELSE = {
 					HUN_remove_trianon_effect = yes
 					news_event = { id = news.298 days = 1 }
 				}
-			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -679,8 +638,7 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_the_hungarian_life_and_renewal_party
 		icon = GFX_focus_HUN_the_hungarian_life_and_renewal_party
-		prerequisite = { focus = wuw_HUN_absolute_rule_of_the_national_unity_party focus = wuw_HUN_elect_a_fascist_king }
-		#mutually_exclusive = { focus = wuw_HUN_undermine_the_admiral }
+		prerequisite = { focus = wuw_HUN_absolute_rule_of_the_national_unity_party }
 		x = 0
 		y = 1
 		relative_position_id = wuw_HUN_absolute_rule_of_the_national_unity_party
@@ -734,7 +692,6 @@ focus_tree = {
 		#prerequisite = { focus = wuw_HUN_the_hungarian_renewal_party }
 		prerequisite = { focus = wuw_HUN_renounce_the_treaty_of_trianon }
 		prerequisite = { focus = wuw_HUN_the_hungarian_life_and_renewal_party }
-		#mutually_exclusive = { focus = wuw_HUN_undermine_the_admiral }
 		x = 0
 		y = 1
 		relative_position_id = wuw_HUN_the_hungarian_life_and_renewal_party
@@ -1979,7 +1936,7 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_seek_german_contracts
 		icon = GFX_focus_generic_german_trade
-		prerequisite = { focus = wuw_HUN_act_of_defense focus = wuw_HUN_wherever_the_cross_points }
+		prerequisite = { focus = wuw_HUN_act_of_defense }
 		#mutually_exclusive = { focus = wuw_HUN_claim_overlordship_over_slovakia }
 		x = -2
 		y = 1
@@ -2119,7 +2076,7 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_license_fiat_tankettes
 		icon = GFX_focus_generic_fiat
-		prerequisite = { focus = wuw_HUN_act_of_defense focus = wuw_HUN_wherever_the_cross_points }
+		prerequisite = { focus = wuw_HUN_act_of_defense }
 		#mutually_exclusive = { focus = wuw_HUN_claim_overlordship_over_slovakia }
 		x = 0
 		y = 1
@@ -2415,7 +2372,6 @@ focus_tree = {
 		id = wuw_HUN_avoid_interventionalist_destablilization
 		icon = GFX_goal_generic_consumer_goods
 		#prerequisite = { focus = wuw_HUN_a_revolutionary_greater_hungary }
-		mutually_exclusive = { focus = wuw_HUN_economic_intervention }
 		x = 9
 		y = 0
 		relative_position_id = wuw_HUN_continue_the_regency
@@ -2518,54 +2474,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = wuw_HUN_forcefully_revitalize_the_industries
-		icon = GFX_goal_generic_forceful_treaty
-		prerequisite = { focus = wuw_HUN_economic_intervention }
-		#mutually_exclusive = { focus = wuw_HUN_avoid_interventionalist_destablilization }
-		x = 1
-		y = 1
-		relative_position_id = wuw_HUN_economic_intervention
-
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 2
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-
-			add_timed_idea = {
-				idea = HUN_forceful_industrial_revitalization
-				days = 365
-			}
-
-			add_tech_bonus = {
-				name = HUN_industrial_revitalization
-				bonus = 0.75
-				uses = 1
-				category = industry
-			}
-		}
-	}
-
-	focus = {
 		id = wuw_HUN_reintigrate_the_imperial_railroads
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = wuw_HUN_economic_intervention focus = wuw_HUN_avoid_interventionalist_destablilization }
+		prerequisite = { focus = wuw_HUN_avoid_interventionalist_destablilization }
 		#mutually_exclusive = { focus = wuw_HUN_avoid_interventionalist_destablilization }
 		x = 0
 		y = 1
@@ -3430,21 +3341,12 @@ focus_tree = {
 			OR = {
 				wuw_HUN_does_not_have_trianon = yes
 				has_idea = HUN_bled_agreement_wuw
-				AND = {
 					ROM = {
 						OR = {
 							exists = no
 							is_puppet = yes
 						}
 					}
-					FRA = {
-						OR = {
-							exists = no
-							is_puppet = yes
-							NOT = { has_completed_focus = FRA_strengthen_the_little_entente }
-						}
-					}
-				}
 			}
 		}
 
@@ -3457,18 +3359,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
-				limit = {
-					FRA = { has_completed_focus = FRA_strengthen_the_little_entente }
-				}
-				FRA = { country_event = DOD_hungary.140 }
-			}
-			IF = {
-				limit = {
-					NOT = { FRA = { has_completed_focus = FRA_strengthen_the_little_entente } }
-				}
 				ROM = { country_event = DOD_hungary.140 }
-			}
 
 			custom_effect_tooltip = HUN_bled_agreement_custom_effect_tooltip
 

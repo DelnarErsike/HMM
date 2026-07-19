@@ -119,17 +119,6 @@ political_actions = {
 				NOT = { has_completed_focus = ICE_break_with_the_crown }
 			}
 			modifier = {
-				factor = 0 
-				tag = GER
-				has_completed_focus = GER_oppose_hitler_ww
-				NOT = { 
-					OR = {
-						has_completed_focus = GER_the_peoples_victory 
-						has_completed_focus = GER_monarchist_sentiment 
-					}
-				}
-			}
-			modifier = {
 				add = 1000
 				has_stability < 0.76
 				original_tag = SWE

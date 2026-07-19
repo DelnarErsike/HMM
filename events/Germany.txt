@@ -2691,16 +2691,7 @@ country_event = {
 		}
 
 		#PP and notify CZE (they are happy with us)
-		if = {
-			limit = {
-				is_in_faction_with = CZE
-				has_completed_focus = FRA_strengthen_the_little_entente
-			}
-			add_political_power = -100
-		}
-		else = {
 			add_political_power = -200
-		}
 
 		CZE = {
 			country_event = {
@@ -2843,11 +2834,7 @@ country_event = {
 				}
 			}
 		}
-		
-		if = {
-			limit = { NOT = { has_completed_focus = FRA_strengthen_the_little_entente } }
 			add_stability = 0.05
-		}
 	}
 }
 
@@ -2895,19 +2882,6 @@ country_event = {
 				type = alliance
 				id = ENG
 				value = 200
-			}
-		}
-		else_if = { #If Little Entente already formed, just pull ENG and puppets to it, no questions asked (so rude)
-			limit = {
-				is_in_faction_with = CZE
-				is_faction_leader = yes
-				has_completed_focus = FRA_strengthen_the_little_entente
-				NOT = { is_in_faction_with = ENG }
-			}
-			add_to_faction = ENG #Britain joins the little entente
-			every_other_country = {
-				limit = { is_subject_of = ENG }
-				ROOT = { add_to_faction = PREV }
 			}
 		}
 
@@ -4303,7 +4277,6 @@ country_event = {
 							OR = {
 								has_government = democratic
 								has_completed_focus = FRA_buy_time
-								has_completed_focus = FRA_confirm_eastern_commitments
 								has_completed_focus = FRA_anti_fascist_coalition
 							}
 							NOT = {
@@ -4837,7 +4810,6 @@ country_event = {
 							OR = {
 								has_government = democratic
 								has_completed_focus = FRA_buy_time
-								has_completed_focus = FRA_confirm_eastern_commitments
 								has_completed_focus = FRA_anti_fascist_coalition
 							}
 							NOT = {
@@ -5127,7 +5099,6 @@ country_event = {
 							OR = {
 								has_government = democratic
 								has_completed_focus = FRA_buy_time
-								has_completed_focus = FRA_confirm_eastern_commitments
 								has_completed_focus = FRA_anti_fascist_coalition
 							}
 							NOT = {
@@ -5477,7 +5448,6 @@ country_event = {
 							OR = {
 								has_government = democratic
 								has_completed_focus = FRA_buy_time
-								has_completed_focus = FRA_confirm_eastern_commitments
 								has_completed_focus = FRA_anti_fascist_coalition
 							}
 							NOT = {
@@ -5628,7 +5598,6 @@ country_event = {
 							OR = {
 								has_government = democratic
 								has_completed_focus = FRA_buy_time
-								has_completed_focus = FRA_confirm_eastern_commitments
 								has_completed_focus = FRA_anti_fascist_coalition
 							}
 							NOT = {
@@ -6115,9 +6084,6 @@ country_event = {
 
 	option = { # Support France
 		name = germany.61.b
-		trigger = {
-			NOT = { has_completed_focus = ENG_a_change_in_course }
-		}
 		ai_chance = {
 			base = 10
 			modifier = {
@@ -6182,9 +6148,6 @@ country_event = {
 
 	option = {
 		name = germany.62.a
-		trigger = {
-			NOT = { has_completed_focus = ENG_a_change_in_course }
-		}
 
 		hidden_effect = {
 			news_event = { hours = 6 id = news.25 }
@@ -6194,17 +6157,6 @@ country_event = {
 			add_war_support = 0.1
 		}
 
-	}
-
-	option = {
-		name = germany.62.b
-		trigger = {
-			has_completed_focus = ENG_a_change_in_course
-		}
-
-		hidden_effect = {
-			news_event = { hours = 6 id = news.25 }
-		}
 	}
 
 }
@@ -11047,10 +10999,6 @@ country_event = {
 			modifier = {
 				factor = 0.8
 				is_in_faction = yes
-			}
-			modifier = {
-				factor = 0
-				FRA = { has_completed_focus = FRA_strengthen_the_little_entente }
 			}
 			modifier = {
 				factor = 0

@@ -1001,7 +1001,6 @@ country_event = {
 		trigger = {
 			FRA = {
 				NOT = { has_war_with = HUN }
-				NOT = { has_completed_focus = FRA_strengthen_the_little_entente } #would be super awkward
 				has_government = democratic
 			}
 		}
@@ -1623,10 +1622,6 @@ country_event = {
 		HUN = { country_event = { id = DOD_hungary.54 hours = 24 } }
 		ai_chance = {
 			base = 35
-			modifier = {
-				has_completed_focus = ROM_balkans_dominance
-				factor = 10 #NO DEALS WITH THE HUNGARIAN SCUM
-			}
 			modifier = { 
 				ROM_is_on_historical_plan_trigger = yes 
 				factor = 0
@@ -2329,15 +2324,6 @@ country_event = {
 				is_in_faction_with = ROM
 				factor = 100
 			}
-			modifier = {
-				tag = GER
-				OR = {
-					has_completed_focus = GER_oppose_hitler
-					has_completed_focus = GER_oppose_hitler_ww
-				}
-				HUN = { has_completed_focus = HUN_invite_the_habsburg_prince }
-				factor = 0
-			}
 		}
 		add_threat = 1
 		give_guarantee = ROM
@@ -2404,10 +2390,6 @@ country_event = {
 		name = DOD_hungary.61.b
 		ai_chance = {
 			base = 35
-			modifier = {
-				has_completed_focus = ROM_balkans_dominance
-				factor = 2 #come and have a go
-			}
 		}
 	}
 
@@ -2612,10 +2594,6 @@ country_event = {
 		name = DOD_hungary.64.a
 		ai_chance = {
 			base = 80
-			modifier = {
-				has_completed_focus = ROM_balkans_dominance
-				factor = 0.2
-			}
 		}
 		HUN = {
 			country_event = { 
@@ -9461,21 +9439,12 @@ country_event = {
 			has_idea = HUN_treaty_of_triannon_aat
 			has_idea = HUN_treaty_of_triannon_2
 		}
-		AND = {
 			ROM = {
 				OR = {
 					exists = no
 					is_puppet = yes
 				}
 			}
-			FRA = {
-				OR = {
-					exists = no
-					is_puppet = yes
-					NOT = { has_completed_focus = FRA_strengthen_the_little_entente }
-				}
-			}
-		}
 	}
 
 	option = {# Great

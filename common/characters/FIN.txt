@@ -520,7 +520,6 @@ characters = {
 			legacy_id = -1
 			visible = {
 				OR = {
-					has_completed_focus = FIN_social_democracy
 					has_completed_focus = FIN_political_unity
 					has_completed_focus = FIN_cooperate_with_social_democrats
 				}
@@ -1359,7 +1358,6 @@ characters = {
 					NOT = {
 						has_government = communism
 						has_government = democratic
-						has_completed_focus = FIN_suomalainen_sosialismi
 					}
 				}
 				else = {
@@ -1725,33 +1723,6 @@ characters = {
 					NOT = { has_government = communism }
 				}
 			}
-			advisor = {
-				slot = political_advisor
-				idea_token = FIN_paavo_susitaival
-				allowed = {
-					original_tag = FIN
-				}
-				available = {
-					has_completed_focus = FIN_right_wing_policies
-					NOT = { has_government = communism }
-				}
-				cost = 100
-				traits = {
-					fascist_demagogue 
-				}
-				ai_will_do = {
-					base = 1
-					modifier = {
-						factor = 200
-						FIN_is_fascist_ai = yes
-						NOT = { has_completed_focus = FIN_a_fascist_regime }
-					}
-					modifier = {
-						factor = 0
-						FIN_is_historical_ai = yes
-					}
-				}
-			}
 		}
 		instance = {
 			allowed = {
@@ -1938,7 +1909,6 @@ characters = {
 				available = {
 					is_country_leader = no
 					OR = {
-						has_completed_focus = FIN_social_democracy
 						has_completed_focus = FIN_cooperate_with_social_democrats
 						has_completed_focus = FIN_collaboration_with_the_left
 					}
@@ -2002,7 +1972,6 @@ characters = {
 				}
 				available = {
 					OR = {
-						has_completed_focus = FIN_social_democracy
 						has_completed_focus = FIN_cooperate_with_social_democrats
 						has_completed_focus = FIN_collaboration_with_the_left
 					}
@@ -2062,31 +2031,6 @@ characters = {
 			portraits = {
 				civilian = {
 					small = GFX_portrait_FIN_karl_august_fagerholm_small
-				}
-			}
-			advisor = {
-				slot = political_advisor #SDP
-				idea_token = FIN_karl_august_fagerholm
-				allowed = {
-					original_tag = FIN
-				}
-				available = {
-					has_completed_focus = FIN_suomalainen_sosialismi
-				}
-				cost = 100
-				traits = {
-					FIN_democratic_reformer_fagerholm 
-				}
-				ai_will_do = {
-					base = 0.01
-					modifier = {
-						add = 10
-						FIN_is_democratic_ai = yes
-					}
-					modifier = {
-						factor = 0
-						FIN_is_communist_ai = yes
-					}
 				}
 			}
 		}
@@ -2273,27 +2217,6 @@ characters = {
 				expire = "1965.1.1.1"
 				id = -1
 				traits = { veteran_communist personal_agenda_leino }
-			}
-			advisor = {
-				slot = political_advisor #SKP
-				idea_token = FIN_yrjo_leino
-				allowed = {
-					original_tag = FIN
-				}
-				available = {
-					has_completed_focus = FIN_suomalainen_sosialismi
-				}
-				cost = 100
-				traits = {
-					FIN_communist_revolutionary_leino
-				}
-				ai_will_do = {
-					base = 0
-					modifier = {
-						add = 100
-						FIN_is_communist_ai = yes
-					}
-				}
 			}
 		}
 		instance = {
