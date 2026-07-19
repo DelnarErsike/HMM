@@ -5875,10 +5875,6 @@ focus_tree = {
 								MON = { is_in_faction_with = SOV }
 							}
 							AND = {
-								is_controlled_by = SIK
-								SIK = { is_in_faction_with = SOV }
-							}
-							AND = {
 								is_controlled_by = TAN
 								TAN = { is_in_faction_with = SOV }
 							}

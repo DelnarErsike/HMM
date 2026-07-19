@@ -2216,43 +2216,6 @@ country_event = {
 
 }
 
-# Additional [SOV.GetAdjective] Supplies Arrive Through Irkeshtam Pass - event for SIK 
-country_event = {
-	id = SEA_warlords.63
-	title = SEA_warlords.63.t
-	desc = SEA_warlords.63.desc
-	picture = GFX_report_event_chinese_officers
-
-	is_triggered_only = yes
-
-	fire_only_once = yes
-	
-	# We thank our Comrades for their generosity 
-	option = {
-		name = SEA_warlords.63.a
-		
-		add_timed_idea = {
-			idea = SIK_influx_of_soviet_supplies
-			days = 210 
-		}	
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		add_equipment_to_stockpile = {
-			type = infantry_equipment
-			amount = 150
-			producer = SOV
-		}
-		add_equipment_to_stockpile = {
-			type = artillery_equipment
-			amount = 25
-			producer = SOV
-		}
-
-	}
-
-}
-
 # $KHM_ma_hushan$ Arrives with [KHM.GetAdjective] Gold - event for RAJ 
 country_event = {
 	id = SEA_warlords.64

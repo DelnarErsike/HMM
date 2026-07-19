@@ -316,10 +316,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			OR = {
 				has_idea = RAJ_marginalized_muslim_community_happy
-				PAK = { exists = yes }
-			}
 		}
 
 		cancel_if_invalid = yes

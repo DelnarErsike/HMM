@@ -1210,29 +1210,6 @@ characters={
 			}
 		}
 
-		advisor={
-			slot = army_chief
-			ledger = army
-			idea_token = RAJ_GOE_muhammad_ayub_khan
-			allowed = {
-				OR = {
-					original_tag = PAK
-					original_tag = AFG
-					AND = {
-						original_tag = RAJ
-						has_completed_focus = RAJ_the_mughal_uprising
-					}
-				}
-			}
-			traits = {
-				army_chief_reform_1
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-
 		corps_commander={
 			traits={ politically_connected loyalty_to_pakistan}
 			skill=1
@@ -1241,9 +1218,7 @@ characters={
 			planning_skill=1
 			logistics_skill=1
 			visible = {
-				NOT = {
-					has_completed_focus = RAJ_royal_indian_navy_mutiny
-				}
+				always = yes
 			}
 		}
 	}
@@ -1259,29 +1234,6 @@ characters={
 			}
 		}
 
-		advisor={
-			slot = army_chief
-			ledger = army
-			idea_token = RAJ_GOE_yahya_khan
-			allowed = {
-				OR = {
-					original_tag = PAK
-					original_tag = AFG
-					AND = {
-						original_tag = RAJ
-						has_completed_focus = RAJ_the_mughal_uprising
-					}
-				}
-			}
-			traits = {
-				army_chief_offensive_1
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-
 		corps_commander={
 			traits={ politically_connected harsh_leader loyalty_to_pakistan }
 			skill=1
@@ -1290,9 +1242,7 @@ characters={
 			planning_skill=1
 			logistics_skill=1
 			visible = {
-				NOT = {
-					has_completed_focus = RAJ_royal_indian_navy_mutiny
-				}
+				always = yes
 			}
 		}
 	}
@@ -1311,11 +1261,7 @@ characters={
 			ledger = army
 			idea_token = RAJ_GOE_muhammad_musa
 			allowed = {
-				OR = {
-					original_tag = PAK
-					original_tag = AFG
 					original_tag = RAJ
-				}
 			}
 			traits = {
 				army_chief_organizational_1
@@ -1978,14 +1924,10 @@ characters={
 				original_tag = RAJ
 			}
 			available = {
-				PAK = {
-					exists = no
-				}
+				always = yes
 			}
 			visible = {
-				PAK = {
-					exists = no
-				}
+				always = yes
 			}
 			traits = {
 				muslim_scholar 
@@ -2026,14 +1968,10 @@ characters={
 				original_tag = RAJ
 			}
 			available = {
-				PAK = {
-					exists = no
-				}
+				always = yes
 			}
 			visible = {
-				PAK = {
-					exists = no
-				}
+				always = yes
 			}
 			traits = {
 				well_mannered_iman 
@@ -2292,19 +2230,10 @@ characters={
 				logistics_skill = 1
 				
 				visible = {
-					OR = {
-						AND = {
-							original_tag = BAN
-							has_country_leader = {
-								ruling_only = yes
-								character = RAJ_huseyn_shaheed_suhrawardy
-							}
-						}
 						AND = {
 							original_tag = RAJ
 							has_completed_focus = RAJ_mughal_court
 						}
-					}
 				}
 			}
 			advisor={

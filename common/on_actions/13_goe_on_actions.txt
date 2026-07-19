@@ -242,29 +242,6 @@ on_actions = {
 				clear_variable = v_copy
 			}
 
-			if = {
-				limit = {
-					has_completed_focus = RAJ_the_pakistan_movement
-					NOT = {
-						has_completed_focus = RAJ_hedgemony_of_the_subcontinent
-					}
-					is_subject = no
-					PAK = {
-						exists = yes
-					}
-				}
-
-                set_variable = { pak_factories =  PAK.num_of_factories }
-                multiply_variable = { pak_factories = 2.5 }
-                round_variable = pak_factories
-                                
-                set_variable = { pak_researched_techs = PAK.researched_techs }
-                multiply_variable = { pak_researched_techs = 1.3 }
-                round_variable = pak_researched_techs
-                                   
-                                      
-			}
-
 		}
 	}
 	on_monthly_RAJ = {
@@ -592,19 +569,11 @@ on_actions = {
 					NOT = { has_global_flag = RAJ_GOE_partition_is_over }
 					has_global_flag = RAJ_GOE_partition_has_happened
 					ROOT = {
-						OR = {
 							original_tag = RAJ
-							original_tag = BAN
-							original_tag = PAK
-						}
 					}
 
 					FROM = {
-						OR = {
 							original_tag = RAJ
-							original_tag = BAN
-							original_tag = PAK
-						}
 					}
 
 					ENG = {

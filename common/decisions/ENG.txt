@@ -7963,15 +7963,10 @@ ENG_move_to_secure_the_dominions = {
 		}
 
 		available = {
-			if = {
-				limit = {
-					NOT = { country_exists = PAK }
-				}
 				NOT = { army_manpower_in_state = { state = 442 amount < 9600 } }
 				NOT = { army_manpower_in_state = { state = 443 amount < 9600 } }
 				NOT = { army_manpower_in_state = { state = 440 amount < 9600 } }
 				NOT = { army_manpower_in_state = { state = 441 amount < 9600 } }
-			}
 			NOT = { army_manpower_in_state = { state = 433 amount < 9600 } }
 			NOT = { army_manpower_in_state = { state = 428 amount < 9600 } }
 			NOT = { army_manpower_in_state = { state = 438 amount < 9600 } }
@@ -7985,12 +7980,7 @@ ENG_move_to_secure_the_dominions = {
 			NOT = { army_manpower_in_state = { state = 426 amount < 9600 } }
 			NOT = { army_manpower_in_state = { state = 435 amount < 9600 } }
 			NOT = { army_manpower_in_state = { state = 431 amount < 9600 } }
-			if = {
-				limit = {
-					NOT = { country_exists = BAN }
-				}
 				NOT = { army_manpower_in_state = { state = 430 amount < 9600 } }
-			}
 			NOT = { army_manpower_in_state = { state = 432 amount < 9600 } }
 			NOT = { army_manpower_in_state = { state = 434 amount < 9600 } }
 				NOT = { army_manpower_in_state = { state = 640 amount < 9600 } }
@@ -8073,15 +8063,10 @@ ENG_move_to_secure_the_dominions = {
 		}
 
 		available = {
-			if = {
-				limit = {
-					NOT = { country_exists = PAK }
-				}
 				NOT = { army_manpower_in_state = { state = 442 amount < 9600 } }
 				NOT = { army_manpower_in_state = { state = 443 amount < 9600 } }
 				NOT = { army_manpower_in_state = { state = 440 amount < 9600 } }
 				NOT = { army_manpower_in_state = { state = 441 amount < 9600 } }
-			}
 			NOT = { army_manpower_in_state = { state = 433 amount < 9600 } }
 			NOT = { army_manpower_in_state = { state = 428 amount < 9600 } }
 			NOT = { army_manpower_in_state = { state = 438 amount < 9600 } }
@@ -8095,12 +8080,7 @@ ENG_move_to_secure_the_dominions = {
 			NOT = { army_manpower_in_state = { state = 426 amount < 9600 } }
 			NOT = { army_manpower_in_state = { state = 435 amount < 9600 } }
 			NOT = { army_manpower_in_state = { state = 431 amount < 9600 } }
-			if = {
-				limit = {
-					NOT = { country_exists = BAN }
-				}
 				NOT = { army_manpower_in_state = { state = 430 amount < 9600 } }
-			}
 			NOT = { army_manpower_in_state = { state = 432 amount < 9600 } }
 			NOT = { army_manpower_in_state = { state = 434 amount < 9600 } }
 				NOT = { army_manpower_in_state = { state = 640 amount < 9600 } }
@@ -8176,15 +8156,10 @@ ENG_move_to_secure_the_dominions = {
 		}
 
 		available = {
-			if = {
-				limit = {
-					NOT = { country_exists = PAK }
-				}
 				NOT = { army_manpower_in_state = { state = 442 amount < 9600 } }
 				NOT = { army_manpower_in_state = { state = 443 amount < 9600 } }
 				NOT = { army_manpower_in_state = { state = 440 amount < 9600 } }
 				NOT = { army_manpower_in_state = { state = 441 amount < 9600 } }
-			}
 			NOT = { army_manpower_in_state = { state = 433 amount < 9600 } }
 			NOT = { army_manpower_in_state = { state = 428 amount < 9600 } }
 			NOT = { army_manpower_in_state = { state = 438 amount < 9600 } }
@@ -8198,12 +8173,7 @@ ENG_move_to_secure_the_dominions = {
 			NOT = { army_manpower_in_state = { state = 426 amount < 9600 } }
 			NOT = { army_manpower_in_state = { state = 435 amount < 9600 } }
 			NOT = { army_manpower_in_state = { state = 431 amount < 9600 } }
-			if = {
-				limit = {
-					NOT = { country_exists = BAN }
-				}
 				NOT = { army_manpower_in_state = { state = 430 amount < 9600 } }
-			}
 			NOT = { army_manpower_in_state = { state = 432 amount < 9600 } }
 			NOT = { army_manpower_in_state = { state = 434 amount < 9600 } }
 				NOT = { army_manpower_in_state = { state = 640 amount < 9600 } }
@@ -8265,15 +8235,10 @@ ENG_move_to_secure_the_dominions = {
 		}
 
 		available = {
-			if = {
-				limit = {
-					NOT = { country_exists = PAK }
-				}
 				NOT = { army_manpower_in_state = { state = 442 amount < 9600 } }
 				NOT = { army_manpower_in_state = { state = 443 amount < 9600 } }
 				NOT = { army_manpower_in_state = { state = 440 amount < 9600 } }
 				NOT = { army_manpower_in_state = { state = 441 amount < 9600 } }
-			}
 			NOT = { army_manpower_in_state = { state = 433 amount < 9600 } }
 			NOT = { army_manpower_in_state = { state = 428 amount < 9600 } }
 			NOT = { army_manpower_in_state = { state = 438 amount < 9600 } }
@@ -8287,12 +8252,7 @@ ENG_move_to_secure_the_dominions = {
 			NOT = { army_manpower_in_state = { state = 426 amount < 9600 } }
 			NOT = { army_manpower_in_state = { state = 435 amount < 9600 } }
 			NOT = { army_manpower_in_state = { state = 431 amount < 9600 } }
-			if = {
-				limit = {
-					NOT = { country_exists = BAN }
-				}
 				NOT = { army_manpower_in_state = { state = 430 amount < 9600 } }
-			}
 			NOT = { army_manpower_in_state = { state = 432 amount < 9600 } }
 			NOT = { army_manpower_in_state = { state = 434 amount < 9600 } }
 				NOT = { army_manpower_in_state = { state = 640 amount < 9600 } }
