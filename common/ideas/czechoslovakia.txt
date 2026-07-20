@@ -4456,10 +4456,7 @@ ideas = {
 			picture = generic_tank_manufacturer_1
 
 			allowed = {
-				OR = {
 					original_tag = CZE
-					tag = RKH
-				}
 			}
 
 			visible = {
@@ -4508,10 +4505,7 @@ ideas = {
 
 
 			allowed = {
-				OR = {
 					original_tag = CZE
-					tag = RKH
-				}
 			}
 
 			visible = {
@@ -4754,10 +4748,7 @@ ideas = {
 			picture = generic_naval_manufacturer_3
 
 			allowed = {
-				OR = {
 					original_tag = CZE
-					tag = RKH
-				}
 			}
 
 			research_bonus = {
@@ -4807,10 +4798,7 @@ ideas = {
 			picture = CZE_avia
 
 			allowed = {
-				OR = {
 					original_tag = CZE
-					tag = RKH
-				}
 			}
 
 			visible = {
@@ -4869,7 +4857,6 @@ ideas = {
 				OR = {
 					original_tag = CZE
 					original_tag = SLO
-					tag = RKH
 				}
 			}
 
@@ -4894,7 +4881,6 @@ ideas = {
 				OR = {
 					original_tag = CZE
 					original_tag = SLO
-					original_tag = RKH
 				}
 				
 			}
@@ -5120,7 +5106,6 @@ ideas = {
 			allowed = {
 				OR = {
 					original_tag = CZE
-					tag = RKH
 					AND = {
 						has_dlc = "Peace For Our Time"
 						original_tag = ETH
@@ -5171,7 +5156,6 @@ ideas = {
 				OR = {
 					original_tag = CZE
 					original_tag = SLO
-					tag = RKH
 				}
 			}
 
@@ -5229,10 +5213,7 @@ ideas = {
 			picture = CZE_praga
 
 			allowed = {
-				OR = {
 					original_tag = CZE
-					tag = RKH
-				}
 			}
 
 			visible = {
@@ -5283,10 +5264,7 @@ ideas = {
 			picture = CZE_tatra
 			
 			allowed = {
-				OR = {
 					original_tag = CZE
-					tag = RKH
-				}
 			}
 
 			cost = 150
@@ -5313,7 +5291,6 @@ ideas = {
 				OR = {
 					original_tag = CZE
 					original_tag = POL
-					tag = RKH
 				}
 				has_dlc = "Peace For Our Time"
 			}
@@ -5373,7 +5350,6 @@ ideas = {
 					original_tag = CZE
 					original_tag = GER
 					original_tag = POL
-					tag = RKH
 				}
 				has_dlc = "Peace For Our Time"
 			}
@@ -5583,7 +5559,6 @@ ideas = {
 				OR = {
 					original_tag = CZE
 					original_tag = SLO
-					tag = RKH
 				}
 			}
 
@@ -5662,7 +5637,6 @@ ideas = {
 				OR = {
 					original_tag = CZE
 					original_tag = SLO
-					tag = RKH
 				}
 			}
 			
@@ -5729,7 +5703,6 @@ ideas = {
 					original_tag = CZE
 					original_tag = SLO
 					original_tag = POL
-					tag = RKH
 				}
 			}
 

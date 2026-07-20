@@ -810,7 +810,14 @@ country_event = {
 			}
 			effect_tooltip = {
 				every_owned_state = {
-					limit = { is_core_of = SYR }
+					limit = {
+						OR = {
+							state = 554
+							state = 677
+							state = 680
+							state = 799
+						}
+					}
 					transfer_state_to = FROM
 				}
 			}

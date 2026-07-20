@@ -1468,16 +1468,6 @@ jap_early_part_beware_allies = {
 		id = RAJ
 		value = 100
 	}
-	ai_strategy = {
-		type = prepare_for_war
-		id = BRM
-		value = 100
-	}
-	ai_strategy = {
-		type = prepare_for_war
-		id = MAL
-		value = 50
-	}
 }
 
 JAP_area_priority = {
@@ -1795,7 +1785,7 @@ JAP_get_the_rubber_islands = {
 
 	ai_strategy = {
 		type = invade
-		id = MAL
+		id = HOL
 		value = 500
 	}
 

@@ -783,23 +783,11 @@ ideas = {
 			picture = ast_volunteer_defence_corps
 
 			cancel = {
-
-				OR = {
-		            BRM = {
-		                NOT = { is_in_faction_with = RAJ }
+		            ENG = {
 		                NOT = { controls_state = 995 }
 		                NOT = { controls_state = 640 }
 		                NOT = { controls_state = 998 }
 		            }
-
-		            any_enemy_country = {
-		            	OR = {
-		            		original_tag = BRM
-		            		is_in_faction_with = BRM	
-		            	}
-		            }
-	            }
-
 			}
 
 			removal_cost = -1

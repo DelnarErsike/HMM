@@ -612,10 +612,7 @@ ideas = {
 
 		KUR_rejected_ankara_treaty = {
 			allowed = {
-				OR = {
 					original_tag = IRQ
-					original_tag = KUR
-				}
 			}
 			removal_cost = -1
 			picture = HUN_treaty_of_triannon
@@ -628,10 +625,7 @@ ideas = {
 
 		KUR_united_idea = {
 			allowed = {
-				OR = {
 					original_tag = IRQ
-					original_tag = KUR
-				}
 			}
 			removal_cost = -1
 			picture = KUR_united_idea
@@ -779,41 +773,6 @@ ideas = {
 
 			modifier = {
 				consumer_goods_factor = -0.1
-			}
-		}
-
-		SAU_refining_the_national_identity_idea = {
-			picture = PER_islamic_traditions_ns
-
-			allowed = {
-				original_tag = SAU 
-			}
-
-			visible = {
-
-			}
-
-			modifier = {
-				political_power_factor = 0.05
-				conscription_factor = 0.05
-				army_core_defence_factor = 0.05
-			}
-		}
-
-		OMA_modernization_initiatives_idea = {
-			picture = PER_metropolitan_iran_idea
-
-			allowed = {
-				original_tag = OMA  
-			}
-
-			visible = {
-
-			}
-
-			modifier = {
-				production_speed_buildings_factor = 0.1
-				research_speed_factor = 0.05
 			}
 		}
 

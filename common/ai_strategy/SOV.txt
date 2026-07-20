@@ -1780,7 +1780,6 @@ SOV_molotov_active_hostile_others = {
 			original_tag = USA
 			original_tag = POL
 			original_tag = FIN
-			original_tag = SAU #Khakimov incident
 		}
 	}
 
@@ -1881,7 +1880,6 @@ SOV_litvinov_active_friendly_others = {
 			original_tag = USA
 			original_tag = POL
 			original_tag = FIN
-			original_tag = SAU #Khakimov incident
 		}
 	}
 

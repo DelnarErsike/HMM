@@ -1508,11 +1508,7 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					OR = {
-						original_tag = DDR
-						original_tag = WGR
 						original_tag = GER
-					}
 					has_government = communism
 					OR = {
 						has_country_leader = { name = "Wilhelm Pieck" }
@@ -1546,11 +1542,7 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					OR = {
-						original_tag = DDR
-						original_tag = WGR
 						original_tag = GER
-					}
 					has_government = communism
 					OR = {
 						has_country_leader = { name = "Wilhelm Pieck" }

@@ -892,10 +892,7 @@ ideas = {
 		
 		idea_SIA_death_defiant = {
 			allowed = {
-				OR = {
 					original_tag = SIA
-					original_tag = INS
-				}
 			}
 			picture = generic_morale_bonus
 			allowed_civil_war = {
@@ -1430,25 +1427,6 @@ ideas = {
 			modifier = {
 				experience_gain_army_factor = 0.15
 				democratic_drift = 0.1
-			}
-		}
-
-		idea_SIA_secure_rubber_islands = {
-			allowed = {
-				has_dlc = "Thunder at Our Gates"
-				original_tag = SIA
-			}
-
-			picture = generic_exploit_mines
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = MAL
-				attack_bonus_against = 0.15
 			}
 		}
 

@@ -15,7 +15,6 @@ CZE_ckd_organization = {
 	allowed = {	
 		OR = {
 			tag = CZE
-			tag = RKH
 			AND = {
 				tag = ETH 
 				has_dlc = "By Blood Alone"
@@ -126,7 +125,6 @@ CZE_tatra_organization = {
 	allowed = {
 		OR = {
 			tag = CZE
-			tag = RKH
 			tag = POL
 		}
 	}
@@ -557,10 +555,7 @@ CZE_skoda_shipyards_organization = {
 	include = generic_escort_ship_organization
 	icon = GFX_idea_CZE_skoda_shipyards
 	allowed = { 
-		OR = {
 			tag = CZE
-			tag = RKH
-		}
 	}
 
 	equipment_type = {
@@ -871,10 +866,7 @@ CZE_aero_organization = {
 	icon = GFX_idea_CZE_aero
 
 	allowed = {
-		OR = {
 			original_tag = CZE
-			tag = RKH
-		}
 	}
 
 	equipment_type = {
@@ -974,7 +966,6 @@ CZE_letov_organization = {
 		OR = {
 			tag = CZE
 			tag = SLO
-			tag = RKH
 		}
 	}
 
@@ -1062,10 +1053,7 @@ CZE_benees_mraz_organization = {
 	icon = GFX_idea_CZE_benes_mraz
 	allowed = {
 		has_dlc = "Peace For Our Time"
-		OR = {
 			tag = CZE
-			tag = RKH
-		}
 	}
 
 	add_trait = {
@@ -1242,10 +1230,7 @@ CZE_avia_german_organization = {
 
 	allowed = {
 		has_dlc = "Peace For Our Time"
-		OR = {
 			original_tag = GER
-			tag = RKH
-		}
 	}
 
 	available = {
@@ -1400,7 +1385,6 @@ CZE_zbrojovka_brno_organization = {
 	allowed = {
 		OR = {
 			tag = CZE
-			tag = RKH
 			AND = {
 				has_dlc = "Peace For Our Time"
 				tag = ETH
@@ -1521,7 +1505,6 @@ CZE_ceska_zbrojovka_uhersky_brod_organization = {
 			tag = CZE
 			tag = SLO
 			tag = GER
-			tag = RKH
 			tag = POL
 		}
 	}
@@ -1724,7 +1707,6 @@ CZE_skoda_artillery_organization = {
 		OR = {
 			tag = CZE 
 			tag = SLO
-			tag = RKH
 			AND = {
 				tag = ETH
 				has_dlc = "By Blood Alone"
@@ -1873,10 +1855,7 @@ CZE_praga_organization = {
 	include = generic_motorized_mechanized_organization
 	icon = GFX_idea_CZE_praga
 	allowed = {
-		OR = {
 			tag = CZE
-			tag = RKH
-		}
 	}
 
 	add_trait = {
@@ -1954,10 +1933,7 @@ CZE_ringhoffer_tatra_organization = {
 	include = generic_armored_car_organization
 	icon = GFX_idea_CZE_tatra
 	allowed = {	
-		OR = {
 			tag = CZE
-			tag = RKH
-		}
 	}
 
 	add_trait = {
@@ -2037,7 +2013,6 @@ CZE_zbrojovka_vsetin_organization = {
 		OR = {
 			tag = CZE
 			tag = POL
-			tag = RKH
 		}
 	}
 

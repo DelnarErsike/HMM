@@ -286,11 +286,7 @@ SIA_save_for_partial = {
 SIA_prep_uk_for_limited_war = {
 	allowed = {
 		has_dlc = "Thunder at Our Gates"
-		OR = {
-			original_tag = MAL
 			original_tag = ENG
-			original_tag = BRM
-		}
 	}
 	enable = {
 		SIA = {
@@ -404,19 +400,6 @@ FRA_dont_get_involved_in_limited_war = {
 	ai_strategy = {
 		  type = dont_join_wars_with
 		  id = ENG
-		  value = 500 #a weak score so that players can still find a way around it if they want
-	  	target_country = SIA
-	}
-	ai_strategy = {
-		  type = dont_join_wars_with
-		  id = BRM
-		  value = 500 #a weak score so that players can still find a way around it if they want
-	  	target_country = SIA
-	}
-
-	ai_strategy = {
-		  type = dont_join_wars_with
-		  id = MAL
 		  value = 500 #a weak score so that players can still find a way around it if they want
 	  	target_country = SIA
 	}

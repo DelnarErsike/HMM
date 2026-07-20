@@ -1116,36 +1116,6 @@ on_actions = {
 
 			}
 		}
-
-		effect = {
-			IF = {
-				limit = {
-					ROOT = {
-						original_tag = TRA
-					}
-
-					AUS = {
-						OR = {
-							has_completed_focus = AUS_demand_romanian_lands
-							has_completed_focus = AUS_subjugate_lands_of_old
-						}
-					}
-				}
-
-				TRA = {
-					capital_scope = {
-						add_to_array = {
-							array = AUS.expansion_targets
-							value = THIS
-						}
-
-						log = "[THIS.GetName] was added to array"
-					}
-				}
-				
-			}
-		}
-
 	}
 
 	on_release_as_free = { #ROOT is free nation FROM is releaser.
@@ -1174,36 +1144,6 @@ on_actions = {
 				101 = {
 					set_state_controller_to = GRN 
 				}
-			}
-		}
-
-		effect = {
-			IF = {
-				limit = {
-					ROOT = {
-						original_tag = TRA
-					}
-
-					AUS = {
-						OR = {
-							has_completed_focus = AUS_demand_romanian_lands
-							has_completed_focus = AUS_subjugate_lands_of_old
-						}
-						
-					}
-				}
-
-				TRA = {
-					capital_scope = {
-						add_to_array = {
-							array = AUS.expansion_targets
-							value = THIS
-						}
-
-						log = "[THIS.GetName] was added to array"
-					}
-				}
-				
 			}
 		}
 	}

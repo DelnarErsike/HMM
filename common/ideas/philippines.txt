@@ -747,42 +747,6 @@ ideas = {
 	   			}	
 			}
 
-			PHI_asian_trade_connections_malaya = {
-				picture = PLACEHOLDER_idea_icon #Hidden
-				allowed = {
-					always = no
-				}
-
-				allowed_civil_war = {
-					always = no
-				}
-
-				removal_cost = -1
-
-				targeted_modifier = {
-	   				tag = MAL
-	  				trade_cost_for_target_factor = -0.15
-	   			}	
-			}
-
-			PHI_asian_trade_connections_dutch_east_india = {
-				picture = PLACEHOLDER_idea_icon #Hidden
-				allowed = {
-					always = no
-				}
-
-				allowed_civil_war = {
-					always = no
-				}
-
-				removal_cost = -1
-
-				targeted_modifier = {
-	   				tag = INS
-	   				trade_cost_for_target_factor = -0.15
-	   			}	   				
-			}
-
 			PHI_asian_trade_connections_philippines = {
 				picture = PLACEHOLDER_idea_icon #Hidden
 				allowed = {

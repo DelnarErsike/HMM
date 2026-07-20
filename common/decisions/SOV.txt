@@ -5024,7 +5024,7 @@ SOV_diplomacy_nordic_decision_category = {
 			}
 		}
 
-		targets = { FIN SWE NOR DEN KAR } #All Continental Nordic Countries
+		targets = { FIN SWE NOR DEN } #All Continental Nordic Countries
 
 		target_trigger = {
 			SOV_basic_pressure_government_triggers = yes
@@ -5100,7 +5100,7 @@ SOV_diplomacy_nordic_decision_category = {
 			}
 		}
 
-		targets = { FIN SWE NOR DEN KAR } #All Continental Nordic Countries
+		targets = { FIN SWE NOR DEN } #All Continental Nordic Countries
 
 		target_trigger = {
 			SOV_basic_promote_rallies_triggers = yes
@@ -5265,7 +5265,7 @@ SOV_diplomacy_balkan_decision_category = {
 			}
 		}
 
-		targets = { BUL GRE YUG ALB ROM TUR SLV BOS HRZ MAC SER CRO KOS MNT TRA } #These are all tags included in scripted trigger "BUL_is_balkan_nation = yes"
+		targets = { BUL GRE YUG ALB ROM } #These are all tags included in scripted trigger "BUL_is_balkan_nation = yes"
 
 		target_trigger = {
 			SOV_basic_pressure_government_triggers = yes
@@ -5334,7 +5334,7 @@ SOV_diplomacy_balkan_decision_category = {
 			}
 		}
 
-		targets = { BUL GRE YUG ALB ROM TUR SLV BOS HRZ MAC SER CRO KOS MNT TRA } #These are all tags included in scripted trigger "BUL_is_balkan_nation = yes"
+		targets = { BUL GRE YUG ALB ROM } #These are all tags included in scripted trigger "BUL_is_balkan_nation = yes"
 
 		target_trigger = {
 			SOV_basic_promote_rallies_triggers = yes
@@ -5401,7 +5401,7 @@ SOV_diplomacy_balkan_decision_category = {
 			}
 		}
 
-		targets = { BUL GRE YUG ALB ROM TUR SLV BOS HRZ MAC SER CRO KOS MNT TRA } #These are all tags included in scripted trigger "BUL_is_balkan_nation = yes"
+		targets = { BUL GRE YUG ALB ROM } #These are all tags included in scripted trigger "BUL_is_balkan_nation = yes"
 
 		target_trigger = {
 			SOV_basic_ultimatum_triggers = yes
@@ -5472,7 +5472,7 @@ SOV_diplomacy_balkan_decision_category = {
 			}
 		}
 
-		targets = { BUL GRE YUG ALB ROM TUR SLV BOS HRZ MAC SER CRO KOS MNT TRA } #These are all tags included in scripted trigger "BUL_is_balkan_nation = yes"
+		targets = { BUL GRE YUG ALB ROM } #These are all tags included in scripted trigger "BUL_is_balkan_nation = yes"
 
 		target_trigger = {
 			SOV_basic_fight_alongside_comrades_triggers = yes
@@ -5537,66 +5537,6 @@ SOV_diplomacy_balkan_decision_category = {
 ###################
 
 SOV_diplomacy_middle_east_decision_category = {
-	SOV_send_ultimatum_to_country_middle_east = {
-		priority = 50
-
-		icon = hol_attract_foreign_investors
-
-		ai_will_do = {
-			base = 20
-			modifier = {
-				factor = 10
-				has_political_power > 160
-			}
-			modifier = {
-				factor = 10
-				date > 1940.6.1
-			}
-			modifier = {
-				factor = 0
-				is_in_faction_with = FROM
-			}
-		}
-
-		targets = { PER }
-
-		target_trigger = {
-			SOV_basic_ultimatum_triggers = yes
-		}
-
-		target_root_trigger = {
-			has_completed_focus = SOV_preemptive_invasion_of_iran
-			is_Subject = no
-		}
-
-		allowed = {
-			original_tag = SOV
-		}
-
-		available = {
-			FROM = {
-				NOT = { has_war_with = ROOT }
-				is_subject = no
-			}
-		}
-
-		visible = {
-		}
-
-		days_remove = SOV_ultimatum_days
-
-		cost = SOV_send_ultimatum_to_country_cost
-
-		remove_effect = {
-			FROM = {
-				set_country_flag = SOV_ultimatum_sent_flag
-				country_event = { id = NSB_soviet_foreign_politics_events.210 hours = 16 random_hours = 8 }
-			}
-			custom_effect_tooltip = SOV_ultimatum_generic_effects_tt
-			custom_effect_tooltip = SOV_decision_will_be_locked_tt
-		}
-	}
-
 	SOV_fight_alongside_country_comrades_middle_east = {
 		priority = 100
 
@@ -5629,7 +5569,7 @@ SOV_diplomacy_middle_east_decision_category = {
 			}
 		}
 
-		targets = { IRQ PER AFG SAU }
+		targets = { IRQ }
 
 		target_trigger = {
 			SOV_basic_fight_alongside_comrades_triggers = yes
@@ -5713,7 +5653,7 @@ SOV_diplomacy_asia_decision_category = {
 			}
 		}
 
-		targets = { PRC CHI }
+		targets = { CHI }
 
 		target_trigger = {
 

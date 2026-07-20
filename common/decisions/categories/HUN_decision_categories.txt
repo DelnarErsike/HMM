@@ -84,39 +84,3 @@ HUN_fascist_movements_category = {
 		has_dlc = "Gotterdammerung"
 	}
 }
-
-HUN_the_danubian_federation_category = {
-	priority = 80
-	icon = GFX_decision_generic_political_address 
-	picture = GFX_decision_cat_picture_danubian_federation
-
-	visible_when_empty = no
-
-	allowed = {
-		original_tag = HUN
-		has_dlc = "Gotterdammerung"
-	}
-
-	visible = {
-		has_completed_focus = wuw_HUN_a_danubian_federation
-	}
-}
-
-HUN_balkan_union_category = {
-
-	icon = generic_formable_nations
-	priority = 30
-	#picture = GFX_decision_cat_picture_greater_hungary
-	visible_when_empty = no	
-	allowed = {
-		original_tag = HUN
-	}
-
-	visible = {
-		has_dlc = "Gotterdammerung"
-		has_completed_focus = HUN_balkan_ambitions
-	}
-}
-
-
-

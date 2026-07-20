@@ -23,7 +23,6 @@ on_actions = {
 				limit = {
 					OR = {
 						ai_annex = yes
-						ai_rk = yes
 						ai_manpower = yes
 						ai_black = yes
 						tag = SWE

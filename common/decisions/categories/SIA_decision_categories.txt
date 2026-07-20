@@ -117,24 +117,6 @@ SIA_army_navy_reform_cat = {
 	}
 }
 
-#Asian democratic compact
-SIA_asian_democratic_compact_cat = {
-	allowed = {
-		original_tag = SIA
-	}
-
-	icon = GFX_decision_category_generic_propaganda
-	picture = GFX_decision_cat_picture_NOR_building_fascist_support
-	visible_when_empty = no
-	priority = 50
-	visible = {
-		has_completed_focus = SIA_asian_democratic_compact
-		has_capitulated = no
-		exists = yes
-
-	}
-}
-
 SIA_khana_ratsadon_cat = {
 	allowed = {
 		original_tag = SIA

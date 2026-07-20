@@ -4085,10 +4085,7 @@ country_event = {
 			every_core_state = {
 				limit = {
 					NOT = { is_core_of = SLO }
-					OR = {
 						is_controlled_by = ROOT
-						is_controlled_by = RKH
-					}
 				}
 				add_claim_by = GER
 				set_compliance = 55
@@ -4157,7 +4154,6 @@ country_event = {
 								original_tag = CZE
 								original_tag = GER
 								original_tag = SLO
-								tag = RKH
 							}
 						}
 					}
@@ -4190,7 +4186,6 @@ country_event = {
 									original_tag = CZE
 									original_tag = GER
 									original_tag = SLO
-									tag = RKH
 								}
 							}
 						}
@@ -4692,7 +4687,6 @@ country_event = {
 								original_tag = CZE
 								original_tag = GER
 								original_tag = SLO
-								tag = RKH
 							}
 						}
 					}
@@ -4724,7 +4718,6 @@ country_event = {
 									original_tag = CZE
 									original_tag = GER
 									original_tag = SLO
-									tag = RKH
 								}
 							}
 						}
@@ -4995,7 +4988,6 @@ country_event = {
 								original_tag = CZE
 								original_tag = GER
 								original_tag = SLO
-								tag = RKH
 							}
 						}
 					}
@@ -5027,7 +5019,6 @@ country_event = {
 									original_tag = CZE
 									original_tag = GER
 									original_tag = SLO
-									tag = RKH
 								}
 							}
 						}
@@ -5344,7 +5335,6 @@ country_event = {
 								original_tag = CZE
 								original_tag = GER
 								original_tag = SLO
-								tag = RKH
 							}
 						}
 					}
@@ -5376,7 +5366,6 @@ country_event = {
 									original_tag = CZE
 									original_tag = GER
 									original_tag = SLO
-									tag = RKH
 								}
 							}
 						}
@@ -10265,30 +10254,6 @@ country_event = {
 			news_event = { days = 1 id = news.236 }
 		}
 		set_global_flag = yalta_agreed_flag 
-	}
-
-	option = {
-		name = germany.119.b
-		ai_chance = {
-			base = 0
-		}
-		hidden_effect = {
-			create_wargoal = {
-				type = liberate_wargoal
-				target = DDR
-			}
-		}
-		event_target:yalta_origin = {
-			country_event = {
-				id = germany.120
-			}
-			hidden_effect = {
-				create_wargoal = {
-					type = liberate_wargoal
-					target = WGR
-				}
-			}
-		}
 	}
 }
 

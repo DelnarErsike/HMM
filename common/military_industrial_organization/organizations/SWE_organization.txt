@@ -328,29 +328,10 @@ SWE_bofors_organization = {
 	icon = GFX_idea_SWE_bofors
 	
 	allowed = { 
-		OR = {
 			tag = SWE 
-			AND = {
-				tag = ETH
-				has_dlc = "By Blood Alone"
-			}
-			AND = {
-				tag = PER
-				has_dlc = "Graveyard of Empires"
-				has_dlc = "Arms Against Tyranny"
-			}
-		}
 	}
 
 	visible = {
-		IF = {
-			limit = { FROM = { original_tag = ETH } }
-			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
-		}
-		IF = {
-			limit = { FROM = { original_tag = PER } }
-			FROM = { has_completed_focus = PER_swedish_artillery }
-		}
 	}
 
 	available = {
@@ -372,10 +353,6 @@ SWE_bofors_organization = {
 					has_country_flag = has_invited_SWE_bofors_organization_flag
 				}
 			}
-		}
-		IF = {
-			limit = { FROM = { original_tag = PER } }
-			FROM = { has_completed_focus = PER_swedish_artillery }
 		}
 	}
 

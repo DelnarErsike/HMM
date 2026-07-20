@@ -94,13 +94,6 @@ political_actions = {
 	visible = {
 		if = {
 			limit = {
-				has_dlc = "By Blood Alone"
-			}
-			NOT = { original_tag = SWI }
-			NOT = { has_country_flag = SWI_can_use_political_actions }
-		}
-		if = {
-			limit = {
 				has_dlc = "Arms Against Tyranny"
 			}
 			NOT = {
