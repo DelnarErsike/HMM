@@ -1734,7 +1734,7 @@ country_event = {
 				}
 			}
 			OR = {
-				war = no
+				has_war = no
 				has_game_rule = {
 					rule = allow_release_nations
 					option = FREE
