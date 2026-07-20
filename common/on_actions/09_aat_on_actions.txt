@@ -1564,46 +1564,6 @@ on_actions = {
 			}
 		}
 
-		# FINNISH CONFEDERATED FINNO-RUSSIAN REPUBLICS
-		effect = { #	ROOT is new controller, FROM is old controller, FROM.FROM is state ID.
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}	
-				if = {
-					limit = {
-						FROM.FROM = {
-							has_dynamic_modifier = { modifier = FIN_confederation_of_finno_russian_republics_dm }
-						}
-						ROOT = {
-							NOT = {
-								original_Tag = FIN
-								has_completed_focus = FIN_confederated_finno_russian_republics
-							}
-						}
-					}
-					FROM.FROM = {
-						remove_dynamic_modifier = { modifier = FIN_confederation_of_finno_russian_republics_dm }
-					}
-				}
-				else_if = {
-					limit = {
-						ROOT = {
-							original_tag = FIN
-							has_completed_focus = FIN_confederated_finno_russian_republics
-						}
-						FROM.FROM = {
-							is_core_of = SOV
-							NOT = { has_dynamic_modifier = { modifier = FIN_confederation_of_finno_russian_republics_dm } }
-						}
-					}
-					FROM.FROM = {
-						add_dynamic_modifier = { modifier = FIN_confederation_of_finno_russian_republics_dm }
-					}
-				}
-			}
-		}
-
 		effect = {
 			if = {
 				limit = {

@@ -4380,25 +4380,6 @@ focus_tree = {
 					expire = 0
 				}	
 			}
-			IF = {
-				limit = {
-					PNG = {
-						exists = yes
-						NOT = {	
-							is_ally_with = ROOT
-						}
-						NOT = {
-							has_war_with = ROOT
-						}
-					}
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				create_wargoal = {
-					type = annex_everything
-					target = PNG
-					expire = 0
-				}	
-			}
 			
 		}
 	}
@@ -8144,19 +8125,6 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
-				limit = {
-					has_subject = FOR
-				}
-				FOR = {				
-					add_stability = 0.1
-					add_war_support = 0.1
-					add_political_power = 100
-					add_ideas = MAN_hydroelectric_power
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}
-
 			524 = {
 				add_building_construction = {
 					type = dam
@@ -8271,18 +8239,6 @@ focus_tree = {
 					has_state_category = small_island
 				}
 				add_dynamic_modifier = { modifier = JAP_regional_development }
-			}
-
-			IF = {
-				limit = {
-					has_subject = PLU
-				}
-				PLU = {				
-					add_stability = 0.1
-					add_war_support = 0.1
-					add_political_power = 100
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
 			if = {

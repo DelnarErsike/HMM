@@ -5385,7 +5385,7 @@ ITA_diplomacy_balkan_decision_category = {
 				}
 			}
 			OR = {
-				war = no
+				has_war = no
 				has_game_rule = {
 					rule = allow_release_nations
 					option = FREE
@@ -5428,7 +5428,7 @@ ITA_diplomacy_balkan_decision_category = {
 				}
 			}
 			OR = {
-				war = no
+				has_war = no
 				has_game_rule = {
 					rule = allow_release_nations
 					option = FREE
@@ -5516,151 +5516,6 @@ ITA_diplomacy_balkan_decision_category = {
 			}
 			hidden_effect = {
 				set_country_flag = ITA_established_albania
-			}
-		}
-	}
-
-
-	ITA_establish_the_governato_del_montenegro = {
-		priority = 39
-
-		icon = GFX_decision_eng_trade_unions_support
-
-		ai_will_do = {
-			base = 1 #Peviously 10
-			modifier = { #ITA struggles to garrison puppets that can be naval invaded
-				factor = 0.2
-				ITA_is_historical_ai = yes
-			}
-			modifier = {
-				factor = 0
-				ITA_is_monarchist_ai = yes
-			}
-		}
-
-		allowed = {
-			original_tag = ITA
-			NOT = { # HMM: MNT is technically a released nation, so subject it to the releasing nations rule
-				has_game_rule = {
-					rule = allow_release_nations
-					option = BLOCKED
-				}
-			}
-			OR = {
-				war = no
-				has_game_rule = {
-					rule = allow_release_nations
-					option = FREE
-				}
-			}
-		}
-
-		available = {
-			MNT = {
-				exists = no
-			}
-			105 = {
-				is_controlled_by = ITA
-			}
-		}
-
-		visible = {
-			ITA = {
-				OR = {
-					has_government = neutrality
-					has_government = fascism
-				}
-			}
-			105 = {
-				is_controlled_by = ITA
-			}
-			NOT = {
-				has_country_flag = ITA_established_montenegro
-			}
-			NOT = { # HMM: MNT is technically a released nation, so subject it to the releasing nations rule
-				has_game_rule = {
-					rule = allow_release_nations
-					option = BLOCKED
-				}
-			}
-			OR = {
-				war = no
-				has_game_rule = {
-					rule = allow_release_nations
-					option = FREE
-				}
-			}
-		}
-
-		cost = 50
-
-		complete_effect = {
-			MNT = {
-				transfer_state = 105
-			}
-			IF = {
-				limit = {
-					has_dlc = "Together for Victory"
-				}
-				ITA = {
-					set_autonomy = {
-					    target = MNT
-					    autonomy_state = autonomy_reichskommissariat
-					    end_wars = no
-					    end_civil_wars = no
-					}
-				}
-			}
-			IF = {
-				limit = {
-					NOT = {
-						has_dlc = "Together for Victory"
-					}
-				}
-				ITA = {
-					puppet = MNT
-				}
-			}
-			MNT = {
-				division_template = {
-				    name = "Montenegrin Chetniks"
-				    is_locked = yes
-				    division_names_group = ITA_INF_01
-				    regiments = {
-				        mountaineers = { x = 0 y = 0 }
-				        mountaineers = { x = 0 y = 1 }
-				        mountaineers = { x = 0 y = 2 }
-				        mountaineers = { x = 1 y = 0 }
-				        mountaineers = { x = 1 y = 1 }
-				        mountaineers = { x = 1 y = 2 }
-				    }
-				}
-			}
-			105 = {
-				create_unit = {
-				    division = "name = \"First Montenegrin Chetnik Brigade\" division_template = \"Montenegrin Chetniks\" start_experience_factor = 0.5 start_equipment_factor = 1.0 start_manpower_factor = 1.0"
-				    owner = MNT
-				}
-
-				create_unit = {
-				    division = "name = \"Second Montenegrin Chetnik Brigade\" division_template = \"Montenegrin Chetniks\" start_experience_factor = 0.5 start_equipment_factor = 1.0 start_manpower_factor = 1.0"
-				    owner = MNT
-				}
-
-				create_unit = {
-				    division = "name = \"Third Montenegrin Chetnik Brigade\" division_template = \"Montenegrin Chetniks\" start_experience_factor = 0.5 start_equipment_factor = 1.0 start_manpower_factor = 1.0"
-				    owner = MNT
-				}
-			}
-
-			hidden_effect = {
-				set_country_flag = ITA_established_montenegro
-				MNT = {
-					country_event = {
-					    id = BBA_italy_interaction_events.7
-					    days = 0
-					}
-				}
 			}
 		}
 	}
@@ -5827,10 +5682,6 @@ ITA_diplomacy_balkan_decision_category = {
 			NOT = {
 				105 = {
 					is_controlled_by = ITA
-				}
-				any_subject_country = {
-					original_tag = MNT
-					controls_state = 105
 				}
 				any_country = {
 					is_subject_of = ITA

@@ -379,13 +379,6 @@ country_event = {
 				}
 			}
 			transfer_state = 992
-			659 = { # Now all of Aden encompasses the Federation of South Arabia
-				add_core_of = FSA
-			}
-			1016 = {
-				add_core_of = FSA
-				add_claim_by = YEM
-			}
 		}
 	}
 
@@ -424,8 +417,6 @@ country_event = {
 			}
 			
 		}
-
-		give_guarantee = TIB 
 	}
 
 	option = {
@@ -1195,13 +1186,6 @@ country_event = {
             
             ENG = {
                 transfer_state = 992
-                659 = { # Now all of Aden encompasses the Federation of South Arabia
-                    add_core_of = FSA
-                }
-                1016 = {
-                    add_core_of = FSA
-                    add_claim_by = YEM
-                }
             }
         }
 	}
@@ -2762,90 +2746,6 @@ country_event = {
 			}
 		}
 		clear_variable = RAJ_crown_commodities_civ_built_flag
-	}
-}
-
-
-#RAJ proposes to invade Iran preemptively - Event for UK (as overlord)
-country_event = {
-	id = GOE_RAJ_loyalist.03
-	title = GOE_RAJ_loyalist.03.t
-	desc = GOE_RAJ_loyalist.03.desc
-	picture = GFX_report_event_PER_iran_invasion
-	is_triggered_only = yes
-
-	option = { #Yes go ahead
-		name = GOE_RAJ_loyalist.03.a
-
-		ai_chance = {
-			base = 10
-			modifier = {
-				factor = 0.5
-				is_historical_focus_on = yes
-			}
-		}
-
-		effect_tooltip = {
-			FROM = {
-				declare_war_on = {
-					target = PER
-					type = annex_everything
-				}
-			}
-		}
-
-		hidden_effect = {
-			FROM = { country_event = { id = GOE_RAJ_loyalist.04 hours = 8 random_hours = 2 } }
-		}
-	}
-
-	option = { #No way
-		name = GOE_RAJ_loyalist.03.b
-
-		ai_chance = {
-			base = 10
-			modifier = { #Say yes to player always
-				factor = 0
-				FROM = { is_ai = no }
-			}
-		}
-
-		hidden_effect = {
-			FROM = { country_event = { id = GOE_RAJ_loyalist.05 hours = 8 random_hours = 2 } }
-		}
-	}
-}
-
-#RAJ proposes to invade Iran preemptively - UK accepts - Event for RAJ
-country_event = {
-	id = GOE_RAJ_loyalist.04
-	title = GOE_RAJ_loyalist.04.t
-	desc = GOE_RAJ_loyalist.04.desc
-	picture = GFX_report_event_PER_iran_invasion
-	is_triggered_only = yes
-
-	option = { #Yes go ahead
-		name = GOE_RAJ_loyalist.04.a
-
-		declare_war_on = {
-			target = PER
-			type = annex_everything
-		}
-	}
-}
-
-#RAJ proposes to invade Iran preemptively - UK refuses - Event for RAJ
-country_event = {
-	id = GOE_RAJ_loyalist.05
-	title = GOE_RAJ_loyalist.05.t
-	desc = GOE_RAJ_loyalist.05.desc
-	picture = GFX_report_event_generic_sign_treaty1
-	is_triggered_only = yes
-
-	option = { #Yes go ahead
-		name = GOE_RAJ_loyalist.05.a
-
-		
 	}
 }
 

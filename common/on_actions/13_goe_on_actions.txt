@@ -81,7 +81,6 @@ on_actions = {
 					if = {
 						limit = {
 							NOT = { THIS = { original_tag = RAJ } }	
-							NOT = { THIS = { original_tag = YEM } } #not u
 							NOT = { 
 								is_in_array = {
 								 	array = RAJ.raj_releasables
@@ -737,81 +736,6 @@ on_actions = {
 					set_variable = {
 						var = RAJ_war_taxes_mil
 						value = 0
-					}
-				}
-			}
-		}
-	}
-
-	#FROM is war target
-	#ROOT is country declaring war
-	on_declare_war = {
-		effect = {
-			IF = {
-				limit = {
-					has_dlc = "Graveyard of Empires"
-					AND = {
-						OR = {
-							FROM = {
-								original_tag = AFG
-								has_country_flag = AFG_signed_oil_deal_flag
-							}
-							ROOT = {
-								original_tag = AFG
-								has_country_flag = AFG_signed_oil_deal_flag
-							}
-						}
-						OR = {
-							FROM = {
-								has_country_flag = made_oil_deal_with_afg_flag
-							}
-							ROOT = {
-								has_country_flag = made_oil_deal_with_afg_flag
-							}
-						}
-					}	
-				}
-				IF = {
-					limit = {
-						FROM = {
-							has_country_flag = made_oil_deal_with_afg_flag
-						}
-					}
-					FROM = {
-						country_event = {
-							id = AFG_industrial_events.16
-							hours = 1
-						}
-						remove_resource_rights = 267
-					}
-				}
-				ELSE = {
-					ROOT = {
-						country_event = {
-							id = AFG_industrial_events.16
-							hours = 1
-						}
-						remove_resource_rights = 267
-					}
-				}
-			}
-			#Picking out who is the leader in a war when invading Iran
-			IF = {
-				limit = {
-					FROM = { 
-						original_tag = PER 
-						NOT = {
-							has_country_flag = PER_has_been_invaded
-						}
-					}
-					has_dlc = "Graveyard of Empires"
-				}
-				ROOT = {
-					set_country_flag = PER_invading_country_flag
-				}
-				FROM = {
-					hidden_effect = {
-						set_country_flag = PER_has_been_invaded
 					}
 				}
 			}

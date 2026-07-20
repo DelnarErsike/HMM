@@ -1285,15 +1285,6 @@ country_event = {
 		
 		IF = {
 			limit = {
-				original_tag = TIB
-			}
-			add_timed_idea = {
-				idea = JAP_japanese_influence_growing_tibet_2
-				days = 176
-			}	
-		}
-		ELSE_IF = {
-			limit = {
 				original_tag = MON
 			}
 			add_timed_idea = {
@@ -12648,15 +12639,9 @@ news_event = {
 				}
 			}
 		}
-		OR = {
 			995 = {
 				is_owned_by = ENG
 			}
-			BRM = {
-				is_subject_of = ENG
-				owns_state = 995
-			}
-		}
 		JAP = { has_war_with = ENG }
 		NOT = { has_global_flag = fall_of_rangoon }
 	}

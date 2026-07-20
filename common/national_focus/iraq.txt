@@ -4551,27 +4551,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			IF = {
-				limit = {
-					KUW = { 
-						exists = yes
-						is_subject = yes
-					}
-				}
-				KUW = {
-					OVERLORD = {
-						country_event = {
-							id = IRQ_political_events.50
-							hours = 1
-						}
-					}
-				}
-				custom_effect_tooltip = if_they_accept_tt
-				effect_tooltip = {
-					puppet = KUW
-				}
-			}
-			ELSE = {
 				656 = {
 					OWNER = {
 						country_event = {
@@ -4588,8 +4567,7 @@ focus_tree = {
 						}
 						transfer_state_to = ROOT
 					}
-				}
-			}			
+				}	
 		}
 	}
 
@@ -5229,30 +5207,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			IF = {
-				limit = {
-					SYR = { 
-						exists = yes
-						is_subject = yes
-					}
-				}
-				SYR = {
-					OVERLORD = {
-						country_event = {
-							id = IRQ_political_events.40
-							hours = 1
-						}
-					}
-				}
-				custom_effect_tooltip = if_they_accept_tt
-				effect_tooltip = {
-					annex_country = {
-						target = SYR 
-						transfer_troops = yes
-					}	
-				}
-			}
-			ELSE = {
 				554 = {
 					OWNER = {
 						country_event = {
@@ -5271,7 +5225,6 @@ focus_tree = {
 					}
 				}
 			}			
-		}
 	}
 	focus = {
 		id = IRQ_hashemite_arab_federation

@@ -1029,26 +1029,6 @@ country_event = {
 				has_war_with = FROM
 			}
 		}
-		IF = {
-			limit = {
-				KUW = {
-					exists = yes
-					is_subject_of = ROOT
-				}
-			}
-			KUW = {
-				country_event = {
-					id = IRQ_political_events.51
-					hours = 1
-				}
-			}
-			effect_tooltip = {
-				FROM = {
-					puppet = KUW
-				}
-			}
-		}
-		ELSE = {
 			FROM = {
 				country_event = {
 					id = IRQ_political_events.53
@@ -1061,7 +1041,6 @@ country_event = {
 					transfer_state_to = FROM
 				}
 			}
-		}
 	}
 	# No
 	option = {

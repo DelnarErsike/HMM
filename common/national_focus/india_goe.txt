@@ -8030,7 +8030,7 @@ focus = {
         }
 
         available = {
-            BRM = {
+            ENG = {
                 is_in_faction_with = ROOT
                 controls_state = 995
                 controls_state = 640

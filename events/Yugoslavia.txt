@@ -153,20 +153,6 @@ country_event = {
 				has_government = democratic
 			}
 			add_ideas = { king_peter_1 }
-			if = {
-				limit = {
-					PREV = { has_completed_focus = YUG_dissolve_serbia }
-				}
-				puppet = KOS
-				puppet = MNT
-				puppet = MAC
-			}
-			if = {
-				limit = {
-					PREV = { has_completed_focus = YUG_divide_bosnia }
-				}
-				puppet = HRZ
-			}
 			every_other_country = {
 				limit = {
 					is_subject_of = PREV

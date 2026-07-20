@@ -572,7 +572,6 @@ characters={
 							has_global_flag = spanish_civil_war
 							has_global_flag = SPR_sin_paquito
 						}
-						original_tag = CHL
 					}
 				}
 			}
@@ -798,7 +797,6 @@ characters={
 					has_dlc = "La Resistance"
 					OR = {
 						original_tag = SPR
-						original_tag = CHL
 					}
 				}
 				visible = {
@@ -933,7 +931,6 @@ characters={
 					has_dlc = "La Resistance"
 					OR = {
 						original_tag = SPR
-						original_tag = CHL
 					}
 				}
 				visible = {
@@ -1023,7 +1020,6 @@ characters={
 					has_dlc = "La Resistance"
 					OR = {
 						original_tag = SPR
-						original_tag = CHL
 					}
 				}
 				visible = {
@@ -1418,7 +1414,6 @@ characters={
 				has_dlc = "La Resistance"
 				OR = {
 					original_tag = SPR
-					original_tag = CHL
 				}
 			}
 			visible = {
@@ -1471,7 +1466,6 @@ characters={
 				has_dlc = "La Resistance"
 				OR = {
 					original_tag = SPR
-					original_tag = CHL
 				}
 			}
 
@@ -4422,7 +4416,6 @@ characters={
 				has_dlc = "La Resistance"
 				OR = {
 					original_tag = SPR
-					original_tag = CHL
 				}
 			}
 
@@ -4504,7 +4497,6 @@ characters={
 				has_dlc = "La Resistance"
 				OR = {
 					original_tag = SPR
-					original_tag = CHL
 				}
 			}
 			visible = {
@@ -4662,7 +4654,6 @@ characters={
 				has_dlc = "La Resistance"
 				OR = {
 					original_tag = SPR
-					original_tag = CHL
 				}
 			}
 
@@ -4674,10 +4665,7 @@ characters={
 			}
 
 			available = {
-				OR = {
 					has_completed_focus = SPA_supremacy_of_the_communion
-					original_tag = CHL
-				}
 				custom_trigger_tooltip = {
 					tooltip = SPA_not_republican_spain_tt
 					NOT = { tag = SPD }

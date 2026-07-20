@@ -1,0 +1,111 @@
+form_mutapa_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_mutapa
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+form_roman_empire_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_roman_empire
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+form_rattanakosin_kingdom_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_rattanakosin_kingdom
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+form_greater_german_reich_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_picture_greater_german_reich
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+form_polynesia_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_picture_generic_polynesia
+}
+
+form_turkestan_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_picture_form_turan
+}
+
+greater_italy_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_picture_greater_italy
+	
+	allowed = {
+		
+	}
+}
+
+greater_mongolia_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_picture_form_greater_mongolia
+	
+	allowed = {
+			original_tag = MON # Mongolia
+	}
+}
+
+raj_formable_cat = {
+	icon = generic_formable_nations
+
+	#picture = GFX_decision_cat_picture_neo_assyrian_empire
+	
+	allowed = {
+		original_tag = RAJ # India 
+	}
+}
+
+form_maphilindo_category = {
+
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_form_maphilindo
+
+	allowed = {
+		original_tag = PHI # Philippines 
+		has_dlc = "No Compromise, No Surrender"
+	}
+}
+
+AST_australia_formables_category = {
+	icon = generic_formable_nations
+
+	visible_when_empty = no
+
+	allowed = {
+		original_tag = AST
+		has_dlc = "Thunder at Our Gates"
+	}
+}

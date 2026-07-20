@@ -8889,12 +8889,7 @@ prospect_for_resources = {
 			base = 0.5
 			modifier = {
 				factor = 20 
-				OR = {
-					original_tag = PAR
-					original_tag = BOL
-					original_tag = ARG
 					original_tag = BRA
-				}
 			}
 			modifier = {  # Too low PP
 				factor = 0.5

@@ -68,7 +68,6 @@ country_event = {
 			RAJ = { country_event = { id = mtg_britain.15 } }
 			AST = { country_event = { id = mtg_britain.15 } }
 			NZL = { country_event = { id = mtg_britain.15 } }
-			BRM = { country_event = { id = mtg_britain.15 } }
 
 		}
 	}
@@ -106,7 +105,6 @@ country_event = {
 			RAJ = { country_event = { id = mtg_britain.15 } }
 			AST = { country_event = { id = mtg_britain.15 } }
 			NZL = { country_event = { id = mtg_britain.15 } }
-			BRM = { country_event = { id = mtg_britain.15 } }
 		}
 	}
 }
@@ -212,7 +210,6 @@ country_event = {
 				RAJ = { has_country_flag = ENG_abdication_crisis_dominion_will_leave }
 				AST = { has_country_flag = ENG_abdication_crisis_dominion_will_leave }
 				NZL = { has_country_flag = ENG_abdication_crisis_dominion_will_leave }
-				BRM = { has_country_flag = ENG_abdication_crisis_dominion_will_leave }
 			}
 			dismantle_faction = yes
 		}
@@ -425,20 +422,6 @@ country_event = {
 					NZL = { has_country_flag = ENG_abdication_crisis_dominion_will_leave }
 				}
 				NZL = {
-					country_event = { id = mtg_britain.16 }
-					add_ai_strategy = {
-						type = alliance
-						id = ENG
-						value = -200
-					}
-				}
-			}
-
-			if = {
-				limit = {
-					BRM = { has_country_flag = ENG_abdication_crisis_dominion_will_leave }
-				}
-				BRM = {
 					country_event = { id = mtg_britain.16 }
 					add_ai_strategy = {
 						type = alliance
@@ -5897,55 +5880,6 @@ country_event = {
 			type = puppet_wargoal_focus
 			expire = 0
 		}
-	}
-}
-
-# UK becomes just England
-country_event = {
-	id = mtg_britain.110
-	
-	trigger = {
-		tag = ENG
-		country_exists = NIR
-		country_exists = WLS
-		country_exists = SCO
-		NOT = { has_global_flag = ENG_became_england }
-	}
-
-	mean_time_to_happen = { days = 2 }
-
-	hidden = yes
-
-	immediate = {
-		set_cosmetic_tag = ENG_england
-		set_global_flag = ENG_became_england
-	}
-}
-
-# UK becomes UK again
-country_event = {
-	id = mtg_britain.111
-	
-	trigger = {
-		tag = ENG
-		NOT = { country_exists = NIR }
-		NOT = { country_exists = WLS }
-		NOT = { country_exists = SCO }
-		owns_state = 120
-		owns_state = 119
-		owns_state = 136
-		owns_state = 133
-		owns_state = 121
-		has_global_flag = ENG_became_england
-	}
-
-	mean_time_to_happen = { days = 2 }
-
-	hidden = yes
-
-	immediate = {
-		drop_cosmetic_tag = yes
-		clr_global_flag = ENG_became_england
 	}
 }
 
