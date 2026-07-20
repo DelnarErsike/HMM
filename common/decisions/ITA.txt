@@ -4614,7 +4614,7 @@ ITA_colonial_management_dec_cat = {
 				}
 			}
 			OR = {
-				war = no
+				has_war = no
 				has_game_rule = {
 					rule = allow_release_nations
 					option = FREE
@@ -4772,7 +4772,7 @@ ITA_colonial_management_dec_cat = {
 				}
 			}
 			OR = {
-				war = no
+				has_war = no
 				has_game_rule = {
 					rule = allow_release_nations
 					option = FREE
@@ -6190,7 +6190,7 @@ ITA_diplomacy_balkan_decision_category = {
 				}
 			}
 			OR = {
-				war = no
+				has_war = no
 				has_game_rule = {
 					rule = allow_release_nations
 					option = FREE
@@ -6233,7 +6233,7 @@ ITA_diplomacy_balkan_decision_category = {
 				}
 			}
 			OR = {
-				war = no
+				has_war = no
 				has_game_rule = {
 					rule = allow_release_nations
 					option = FREE
@@ -6352,7 +6352,7 @@ ITA_diplomacy_balkan_decision_category = {
 				}
 			}
 			OR = {
-				war = no
+				has_war = no
 				has_game_rule = {
 					rule = allow_release_nations
 					option = FREE
@@ -6389,7 +6389,7 @@ ITA_diplomacy_balkan_decision_category = {
 				}
 			}
 			OR = {
-				war = no
+				has_war = no
 				has_game_rule = {
 					rule = allow_release_nations
 					option = FREE
