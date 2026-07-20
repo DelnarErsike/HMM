@@ -2999,46 +2999,6 @@ ideas = {
 			traits = { turkish_public_debt_administration }
 		}
 
-		koc_ticaret_as_monopoly = {
-			
-			picture = tur_koc_ticaret_as
-
-			
-			allowed = {
-				original_tag = TUR
-				has_dlc = "Battle for the Bosporus"
-			}
-
-			available = {
-				TUR_debt_council_has_no_sway = yes
-				IF = {
-					limit = {
-						has_dlc = "Arms Against Tyranny"
-					}
-					mio:TUR_ticaret_organization = {
-						has_mio_size >4
-					}
-					mio:TUR_koc_ticaret_as_shipyard_organization = {
-						has_mio_size >4
-					}
-					mio:TUR_koc_ticaret_as_defense_industry_organization = {
-						has_mio_size >4
-					}
-				}
-				ELSE = {
-					TUR_a_monopoly_has_been_formed = yes
-				}
-			}
-			
-			research_bonus = {
-				industry = 0.2
-			}
-
-			cost = 250
-			
-			traits = { industrial_monopoly }
-		}
-
 		tcdd = {
 				
 			picture = tur_tcdd

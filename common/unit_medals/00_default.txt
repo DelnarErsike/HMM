@@ -1335,33 +1335,6 @@ unit_medals = {
 		
 	}
 
-	### CHL ###
-
-	chilean_medal_of_valor = {
-		
-		available = {
-			should_have_chilean_medals_trigger = yes
-			
-		}
-		frame = 1
-		icon = "GFX_medal_icon_chl"
-		
-		cost = @cost
-		
-		unit_modifiers = {
-			army_morale_factor = 0.1
-			experience_loss_factor = -0.05
-		}
-
-
-		ship_modifiers = {
-			naval_morale_factor = 0.1
-			experience_gain_navy_unit_factor = 0.05
-		}
-
-		officer_xp = 100
-	}
-
 	### AUSTRIA ###
 
 	AUS_medal_1= {
