@@ -29,8 +29,6 @@ focus_tree = {
 		focus = industrial_effort
 	}
 
-	#shared_focus = HABSBURG_part_of_something_bigger
-
 	focus = {
 		id = army_effort
 		icon = GFX_goal_generic_allies_build_infantry

@@ -7,10 +7,10 @@ PHI_historical_plan = {
 	}
 
 	enable = {
-		is_historical_focus_on = yes 
+		always = yes
 	}
-
 	abort = {
+		always = no
 	}
 
 	ai_national_focuses = {

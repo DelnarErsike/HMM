@@ -609,37 +609,6 @@ on_actions = {
 					}
 				}
 			}
-
-			if = {
-				limit = {
-					OR = {
-						FROM = { original_tag = DIP }
-						PREV = { original_tag = DIP }
-					}
-				}
-
-				DIP = {
-					set_rule = { can_join_factions = no }
-					set_popularities = {
-						democratic= 0
-						neutrality = 100
-						fascism = 0
-						communism = 0
-					}
-					set_politics = {
-						ruling_party = neutrality
-						elections_allowed = yes
-						last_election = 1935.1.1
-
-
-					}
-					set_party_name = {
-						ideology = neutrality
-						long_name = "Anarchism"
-						name = "Anarchism"
-					}
-				}
-			}
 			# Will tidy this up with scripted effects someday (TM)
 			#It was in fact, not tidied up
 			IF = {

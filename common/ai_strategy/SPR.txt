@@ -575,37 +575,11 @@ nationalist_spain_allies_nobody_on_historical = {
 	}
 	enable = {
 		has_global_flag = scw_over
-		OR = {
-			AND = {
-				is_historical_focus_on = yes
-				has_game_rule = {
-					rule = SPR_ai_behavior
-					option = DEFAULT
-				}
-			}
-			has_country_flag = SPR_AI_RANDOM_NATIONALIST_HISTORICAL
-			has_game_rule = {
-				rule = SPR_ai_behavior
-				option = NATIONALIST_HISTORICAL
-			}
-		}
 	}
 	abort = {
 		OR = {
-			GER = {
-				AND = {
-					is_historical_focus_on = yes
-					date > 1944.1.1
-					OR = { 
-						NOT = { has_war_with = SOV } 
-						SOV = { has_capitulated = yes }
-					}
-				}
-			}
 			SPR = { has_war = yes }
 			SPR = { is_in_faction = yes }
-			GER = { NOT = { has_government = fascism } }
-			ENG = { NOT = { has_government = democratic } }
 		}
 	}
 

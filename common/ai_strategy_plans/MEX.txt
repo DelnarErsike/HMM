@@ -11,11 +11,7 @@ mexico_historical = {
 		always = yes
 	}
 	abort = {
-		OR = {
-			has_war_with = USA
-			has_government = fascism
-			has_government = communism
-		}
+		always = no
 	}
 
 	ai_national_focuses = {

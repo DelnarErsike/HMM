@@ -6,38 +6,10 @@ SOV_historical_plan = {
 		original_tag = SOV
 	}
 	enable = {
-		OR = {
-			AND = {
-				is_historical_focus_on = yes
-				has_game_rule = {
-					rule = SOV_ai_behavior
-					option = DEFAULT
-				}
-			}
-			has_country_flag = SOV_AI_RANDOM_COMMUNIST_HISTORICAL
-			has_game_rule = {
-				rule = SOV_ai_behavior
-				option = HISTORICAL
-			}
-		}
+		always = yes
 	}
 	abort = {
-		OR = {
-			is_subject = yes
-			# They will switch to a plan that excludes the trade treaty if Germany goes against Ribbentrop
-			AND = {
-				GER = {
-					OR = {
-						has_completed_focus = GER_heed_von_neuraths_concerns
-						has_completed_focus = GER_monarchist_sentiment
-					}
-				}
-				has_game_rule = {
-					rule = SOV_ai_behavior
-					option = DEFAULT
-				}
-			}
-		}
+		always = no
 	}
 
 	ai_national_focuses = {

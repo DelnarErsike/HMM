@@ -180,6 +180,38 @@ ai_black = {
 	}
 }
 
+is_SOM_core_state = {
+	OR = {
+		state = 268
+		state = 269
+		state = 559
+		state = 835
+		state = 836
+		state = 844
+		state = 903
+		state = 906
+	}
+}
+
+is_LBA_core_state = {
+	OR = {
+		state = 273
+		state = 448
+		state = 449
+		state = 450
+		state = 451
+		state = 661
+		state = 662
+		state = 663
+	}
+}
+
+is_ERI_core_state = {
+	OR = {
+		state = 550
+	}
+}
+
 DIPLOMACY_PEACE_PROPOSAL_ENABLE_TRIGGER = {
 	always = no
 }

@@ -7,10 +7,10 @@ SIA_historical = {
 		has_dlc = "Thunder at Our Gates"
 	}
 	enable = {
-		is_historical_focus_on = yes
+		always = yes
 	}
 	abort = {
-		
+		always = no
 	}
 
 	ai_national_focuses = {

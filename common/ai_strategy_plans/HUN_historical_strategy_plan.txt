@@ -10,23 +10,10 @@ HUN_historical = {
 		}
 	}
 	enable = {
-		OR = {
-			AND = {
-				is_historical_focus_on = yes
-				has_game_rule = {
-					rule = HUN_ai_behavior
-					option = DEFAULT
-				}
-			}
-			has_country_flag = HUN_AI_RANDOM_FASCIST_HISTORICAL
-			has_game_rule = {
-				rule = HUN_ai_behavior
-				option = FASCIST_HISTORICAL
-			}
-		}
+		always = yes
 	}
 	abort = {
-		
+		always = no
 	}
 
 	ai_national_focuses = {

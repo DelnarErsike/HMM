@@ -4,20 +4,10 @@ FIN_historical_plan = {
 		original_tag = FIN
 	}
 	enable = {
-		OR = {
-			AND = {
-				is_historical_focus_on = yes
-				has_game_rule = {
-					rule = FIN_ai_behavior
-					option = DEFAULT
-				}
-			}
-			has_country_flag = FIN_AI_RANDOM_HISTORICAL
-			has_game_rule = {
-				rule = FIN_ai_behavior
-				option = HISTORICAL
-			}
-		}
+		always = yes
+	}
+	abort = {
+		always = no
 	}
 
 	ai_national_focuses = {

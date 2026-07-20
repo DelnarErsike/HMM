@@ -1143,10 +1143,8 @@ ITA_abbandon_eth = {
 		state_trigger = {
 			controller = {
 				OR = {
-					tag = AOI 
 					tag = FRA
 					tag = ENG
-					has_war_with = AOI
 				}
 			}
 			OR = {

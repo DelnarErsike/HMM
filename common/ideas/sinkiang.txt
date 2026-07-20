@@ -1,0 +1,23 @@
+ideas = {
+
+	country = {
+
+		KHM_confiscated_gold = {
+
+			allowed = {
+				original_tag = RAJ
+			}
+
+			picture = SPR_seize_the_gold_reserves
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.075
+			}
+
+		}
+
+	}
+
+}

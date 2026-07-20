@@ -72,6 +72,25 @@
 					CZE_2nd_prezident CZE_diplomatic_workhorse de_facto_leader
 				}
 			}
+			advisor={
+				slot = political_advisor
+				idea_token = CZE_edvard_benesh_idea
+				can_be_fired = no
+				allowed  = {
+					original_tag  = CZE
+				}
+				available = {
+					has_government = democratic
+					is_country_leader = no
+				}
+				visible = {
+					is_country_leader = no
+					has_government = democratic
+				}
+				traits  = {
+					CZE_diplomatic_workhorse CZE_2nd_prezident
+				}
+			}
 		}
 	}
 
@@ -363,27 +382,6 @@
 								custom_effect_tooltip = generic_can_only_happen_once_tt
 							}
 						}
-						if = {
-							limit = {
-								has_power_balance = {
-									id = CZE_bop_army_readiness
-								}
-							}
-							CZE_bop_very_low_increase_effect = yes
-							custom_effect_tooltip = generic_skip_one_line_tt
-						}
-					}
-				}
-				on_remove = {
-					owner = {
-						if = {
-							limit = {
-								has_power_balance = {
-									id = CZE_bop_army_readiness
-								}
-							}
-							CZE_bop_very_low_decrease_effect = yes
-						}
 					}
 				}
 				ai_will_do = {
@@ -429,15 +427,6 @@
 				}
 				on_add = {
 				owner = {
-						if = {
-							limit = {
-								has_power_balance = {
-									id = CZE_bop_army_readiness
-								}
-							}
-							CZE_bop_very_low_increase_effect = yes
-							custom_effect_tooltip = generic_skip_one_line_tt
-						}
 						if = {
 							limit = {
 								original_tag = ENG
@@ -494,18 +483,6 @@
 									set_country_flag = ENG_CZE_frantisek_moravec_on_add_effect_already_happened
 								}
 							}
-						}
-					}
-				}
-				on_remove = {
-					owner = {
-						if = {
-							limit = {
-								has_power_balance = {
-									id = CZE_bop_army_readiness
-								}
-							}
-							CZE_bop_very_low_decrease_effect = yes
 						}
 					}
 				}
@@ -687,31 +664,6 @@
 						has_war_with = CZE
 					}
 			}
-			on_add = {
-				owner = {
-					if = {
-						limit = {
-							has_power_balance = {
-								id = CZE_bop_army_readiness
-							}
-						}
-						CZE_bop_very_low_increase_effect = yes
-						custom_effect_tooltip = generic_skip_one_line_tt
-					}
-				}
-			}
-			on_remove = {
-				owner = {
-					if = {
-						limit = {
-							has_power_balance = {
-								id = CZE_bop_army_readiness
-							}
-						}
-						CZE_bop_very_low_decrease_effect = yes
-					}
-				}
-			}
 		}
 	}
 
@@ -749,31 +701,6 @@
 			cost = 50
 			ai_will_do = {
 				factor = 0
-			}
-			on_add = {
-				owner = {
-					if = {
-						limit = {
-							has_power_balance = {
-								id = CZE_bop_army_readiness
-							}
-						}
-						CZE_bop_very_low_increase_effect = yes
-						custom_effect_tooltip = generic_skip_one_line_tt
-					}
-				}
-			}
-			on_remove = {
-				owner = {
-					if = {
-						limit = {
-							has_power_balance = {
-								id = CZE_bop_army_readiness
-							}
-						}
-						CZE_bop_very_low_decrease_effect = yes
-					}
-				}
 			}
 		}
 	}

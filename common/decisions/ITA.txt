@@ -3937,13 +3937,13 @@ ITA_colonial_management_dec_cat = {
 			if = {
 				limit = {
 					any_owned_state = {
-						is_core_of = ERI
+						is_ERI_core_state = yes
 						is_fully_controlled_by = ROOT
 					}
 				}
 				random_owned_controlled_state = {
 					limit = {
-						is_core_of = ERI
+						is_ERI_core_state = yes
 						is_fully_controlled_by = ROOT
 					}
 					prioritize = { 550 } # ERITREA (In case at some point this gets split or tag gets more cores)
@@ -3986,36 +3986,6 @@ ITA_colonial_management_dec_cat = {
 						}
 						create_unit = {
 							division = "division_template = \"Truppe Irregolari di Cammelli\" start_experience_factor = 0.15 start_equipment_factor = 1.0"
-							owner = ROOT
-							count = 1
-						}
-					}
-				}
-			}
-
-			#SOMALIA
-			if = {
-				limit = {
-					any_owned_state = {
-						is_core_of = SOM
-						is_fully_controlled_by = ROOT
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						is_core_of = SOM
-						is_fully_controlled_by = ROOT
-					}
-					prioritize = { 559 } # SOMALILAND (In case at some point this gets split or tag gets more cores)
-					custom_effect_tooltip = ITA_train_irregulars_somalia_tt
-					hidden_effect = {
-						create_unit = {
-							division = "division_template = \"Banda Irregolare Somala\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
-							owner = ROOT
-							count = 2
-						}
-						create_unit = {
-							division = "division_template = \"Truppe Irregolari a Cavallo\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
 							owner = ROOT
 							count = 1
 						}

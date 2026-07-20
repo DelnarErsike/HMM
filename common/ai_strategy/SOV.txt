@@ -1062,16 +1062,6 @@ SOV_dont_send_volunteers_that_early_to_china = {
 		OR = {
 			#Soviet focus plans are set so that they support a Chinese tag in 39-40
 			AND = {
-				has_completed_focus = SOV_the_gobi_gambit
-				country_exists = SIK
-				SIK = { has_war_with = JAP }
-			}
-			AND = {
-				has_completed_focus = SOV_two_red_flags
-				country_exists = PRC
-				PRC = { has_war_with = JAP }
-			}
-			AND = {
 				has_completed_focus = SOV_support_the_kuomintang
 				country_exists = CHI
 				CHI = { has_war_with = JAP }
@@ -1083,38 +1073,6 @@ SOV_dont_send_volunteers_that_early_to_china = {
 		type = send_volunteers_desire
 		id = "CHI"
 		value = -800
-	}
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = "GXC"
-		value = -800
-	}
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = "PRC"
-		value = -800
-	}
-}
-
-SOV_send_volunteers_to_sinkiang = {
-	allowed = {
-		original_tag = SOV
-	}
-	enable = {
-		SIK = { has_war_with = KHM }
-		country_exists = SIK
-	}
-
-	abort = {
-		NOT = {
-			SIK = { has_war_with = KHM }
-		}
-	}
-
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = "SIK"
-		value = 999
 	}
 }
 
@@ -1146,17 +1104,7 @@ SOV_dont_send_volunteers_to_japan = {
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
-		id = "MEN"
-		value = -800
-	}
-	ai_strategy = {
-		type = send_volunteers_desire
 		id = "KOR"
-		value = -800
-	}
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = "RNG"
 		value = -800
 	}
 }

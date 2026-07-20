@@ -23,8 +23,6 @@ focus_tree = {
 
 	continuous_focus_position = { x = 50 y = 1750 }
 
-	#shared_focus = SSB_the_saadabad_pact
-
 	initial_show_position = {
 	    focus = IRQ_ensure_sunni_dominance
 	}

@@ -1817,7 +1817,7 @@ JAP_invade_burma = {
 
 	ai_strategy = {
 		type = invade
-		id = BRM
+		id = ENG
 		value = 500
 	}
 

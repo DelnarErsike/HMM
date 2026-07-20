@@ -1572,7 +1572,6 @@ on_actions = {
 					OR = {
 						FROM = {
 							original_tag = YUG
-							original_tag = SER
 						}
 					}
 					107 = {
@@ -1604,7 +1603,6 @@ on_actions = {
 					ROOT = {
 						OR = {
 							original_tag = YUG
-							original_tag = SER
 						}
 					}
 					107 = {
@@ -1978,24 +1976,6 @@ on_actions = {
 
 	on_subject_free = {
 
-		# Sends Raoul van Overstraeten back to Belgium
-		effect = {
-			IF = {
-				limit = {
-					ROOT = {
-						original_tag = COG
-						has_character = BEL_raoul_van_overstraeten
-					}
-				}
-				ROOT = {
-					country_event = {
-						id = ww_congo.4
-						hours = 2
-					}	
-				}
-			}
-		}
-
 		# If the Belgian Congo is freed, they are no longer Belgian
 		effect = {
 			IF = {
@@ -2107,9 +2087,6 @@ on_actions = {
 						is_subject = no
 						owns_state = 769
 						has_war = no
-					}
-					BRD = {
-						exists = no
 					}
 					769 = {
 						NOT = {

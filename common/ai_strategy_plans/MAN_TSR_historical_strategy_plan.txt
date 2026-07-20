@@ -11,13 +11,7 @@ MAN_TSR_historical_plan = {
 		always = yes
 	}
 	abort = {
-		JAP = {
-			OR = {
-				has_completed_focus = JAP_strengthen_civilian_government
-				has_completed_focus = JAP_the_unthinkable_option
-				has_completed_focus = JAP_okadas_military_purge_speech
-			}
-		}
+		always = no
 	}
 
 	ai_national_focuses = {

@@ -2676,21 +2676,7 @@ form_polynesia_category = {
 					NOT = { tag = ROOT }
 					is_in_faction_with = ROOT
 					NOT = {
-						OR = {
-							original_tag = HAW # Hawaii 
-							original_tag = TAH # Tahiti
-							original_tag = GUM # Mariana Federation 
-							original_tag = FSM # Micronesia 
-							original_tag = SAM # Samoa 
-							original_tag = SOL # Solomon Islands 
-							original_tag = FIJ # Melanesia 
 							original_tag = NZL # New Zeeland 
-							original_tag = RAP # Rapa Nui 
-							original_tag = PLU # Palau 
-							original_tag = VAN # Vanuatu 
-							original_tag = BOU # Bougainville 
-							original_tag = MAD # Madagascar 
-						}
 					}
 					OR = {
 						controls_state = 284
@@ -2739,21 +2725,7 @@ form_polynesia_category = {
 					NOT = { tag = ROOT }
 					is_in_faction_with = ROOT
 					NOT = {
-						OR = {
-							original_tag = HAW # Hawaii 
-							original_tag = TAH # Tahiti
-							original_tag = GUM # Mariana Federation 
-							original_tag = FSM # Micronesia 
-							original_tag = SAM # Samoa 
-							original_tag = SOL # Solomon Islands 
-							original_tag = FIJ # Melanesia 
 							original_tag = NZL # New Zeeland 
-							original_tag = RAP # Rapa Nui 
-							original_tag = PLU # Palau 
-							original_tag = VAN # Vanuatu 
-							original_tag = BOU # Bougainville 
-							original_tag = MAD # Madagascar 
-						}
 					}
 					OR = {
 						controls_state = 284
@@ -2798,21 +2770,7 @@ form_polynesia_category = {
 					NOT = { tag = ROOT }
 					is_in_faction_with = ROOT
 					NOT = {
-						OR = {
-							original_tag = HAW # Hawaii 
-							original_tag = TAH # Tahiti
-							original_tag = GUM # Mariana Federation 
-							original_tag = FSM # Micronesia 
-							original_tag = SAM # Samoa 
-							original_tag = SOL # Solomon Islands 
-							original_tag = FIJ # Melanesia 
 							original_tag = NZL # New Zeeland 
-							original_tag = RAP # Rapa Nui 
-							original_tag = PLU # Palau 
-							original_tag = VAN # Vanuatu 
-							original_tag = BOU # Bougainville 
-							original_tag = MAD # Madagascar 
-						}
 					}
 					OR = {
 						controls_state = 284

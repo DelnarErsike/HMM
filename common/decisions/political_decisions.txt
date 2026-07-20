@@ -2066,18 +2066,6 @@ political_actions = {
 				has_completed_focus = liberty_ethos
 			}
 			modifier = {
-				add = 50
-				tag = AUS
-				has_dlc = "Gotterdammerung"
-				OR = {
-					has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
-					has_game_rule = {
-						rule = AUS_AI_BEHAVIOR
-						option = AUS_ANTI_ANSCLUSS_STRESS
-					}
-				}
-			}
-			modifier = {
 				factor = 0
 				original_tag = SPR
 				NOT = { has_global_flag = spanish_civil_war }
@@ -2245,17 +2233,6 @@ political_actions = {
 		
 		ai_will_do = {
 			base = 0
-			modifier = { # If they have nothing else big to spend pp on, and this is avaiable, Monarchist Germany should start work on removing communist support. 
-				add = 10
-				original_tag = GER
-				OR = {
-					has_country_flag = GER_AI_RANDOM_KAISER
-					has_game_rule = {
-						rule = GER_ai_behavior
-						option = KAISER
-					}
-				}
-			}
 			modifier = { 
 				add = 5
 				has_dlc = "No Compromise, No Surrender"
@@ -2435,18 +2412,6 @@ political_actions = {
 
 		ai_will_do = {
 			factor = 0
-			modifier = {
-				add = 50
-				tag = AUS
-				has_dlc = "Gotterdammerung"
-				OR = {
-					has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
-					has_game_rule = {
-						rule = AUS_AI_BEHAVIOR
-						option = AUS_ANTI_ANSCLUSS_STRESS
-					}
-				}
-			}
 		}
 	}
 

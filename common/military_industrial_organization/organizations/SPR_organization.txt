@@ -94,10 +94,6 @@ SPR_hispano_aviacion_organization = {
 				has_dlc = "La Resistance"
 				tag = SPR
 			}					
-			AND = {
-				has_dlc = "By Blood Alone"
-				tag = SWI
-			}
 		}
 	}
 
@@ -197,10 +193,6 @@ SPR_hispano_suiza_organization = {
 				has_dlc = "La Resistance"
 				tag = SPR
 			}					
-			AND = {
-				has_dlc = "By Blood Alone"
-				tag = SWI
-			}
 		}
 	}
 

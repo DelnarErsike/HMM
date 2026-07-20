@@ -42,7 +42,7 @@ commonwealth_let_raj_defend_itself = {
 	}
 	ai_strategy = {
 		type = dont_defend_ally_borders
-		id = BRM
+		id = ENG
 		value = 300
 	}
 

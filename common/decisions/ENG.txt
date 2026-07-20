@@ -9864,7 +9864,6 @@ operations = {
 			tag = ENG
 			has_government = democratic
 			has_war_with = GER
-			ICE = { exists = yes }
 			IF = {
 				limit = {
 					NOR = { has_government = democratic }
@@ -9885,35 +9884,23 @@ operations = {
 		fire_only_once = yes
 
 		ai_will_do = {
-			base = 1
-			modifier = {
-				factor = 200 
-				ICE = {
-					has_completed_focus = ICE_declare_absolute_neutrality
-				}	
-			}
+			base = 200
 		}
 		
 		visible = {
 			tag = ENG
 			has_war_with = GER
-			ICE = { exists = yes }
+			100 = {
+				is_controlled_by_ROOT_or_ally = no
+				controller = { NOT = { has_war_with = ENG } }
+			}
 		}
 		
 		complete_effect = {
-               ENG = {
-                    annex_country = {
-                        target = ICE
-                        transfer_troops = no
-                    }
-                }
-                every_state = {
-                    limit = {
-                        is_core_of = ICE
-                        is_controlled_by = ENG
-                    }
-                    add_compliance = 100
-                }
+			100 = {
+				transfer_state_to = ENG
+				add_compliance = 100
+			}
 		}
 	}
 
@@ -9951,13 +9938,6 @@ operations = {
 				factor = 2 	
 				GER = {
 					has_government = fascism
-				}
-			}
-			modifier = {
-				# Iceland has gone their own path, so we can consolidate the North Sea
-				factor = 2 	
-				ICE = {
-					has_completed_focus = ICE_declare_absolute_neutrality
 				}
 			}
 			modifier = {

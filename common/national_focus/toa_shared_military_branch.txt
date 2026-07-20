@@ -240,55 +240,6 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = SMB_support_company
-	icon = GFX_focus_generic_land_reclamation
-	relative_position_id = SMB_logistics_department
-	prerequisite = { focus = SMB_logistics_department }
-	allow_branch = {
-			TAG = URG
-	}
-	x = 0
-	y = 1
-
-	cost = 5
-
-	available = {
-
-	}
-
-	bypass = {
-		
-	}
-
-	ai_will_do = {
-			factor = 20
-		}
-
-	completion_reward = {
-		#IF = {
-		#	limit = {
-		#		original_tag = BRA
-		#	}
-		#	add_tech_bonus = {
-		#		name = JUNO_support_company_initiative
-		#		bonus = 0.25
-		#		uses = 1
-		#		category = support_tech
-		#	}
-		#	set_technology = { TOA_jungle_pioneers_support_tech = 1 }
-		#}
-		#ELSE = {
-			add_tech_bonus = {
-				name = JUNO_support_company_initiative
-				bonus = 0.25
-				uses = 2
-				category = support_tech
-			}
-		#}
-	}
-}
-
-shared_focus = {
 	id = SMB_department_of_military_intelligence
 	icon = GFX_goal_generic_intelligence_exchange
 	relative_position_id = SMB_department_of_propaganda
@@ -2376,16 +2327,6 @@ shared_focus = {
 
 	available = {
 
-	}
-
-	bypass = {
-		NOT = {
-			has_idea = SMB_MTG_naval_arms_race_legacy
-		}
-		OR = {
-			original_tag = URG
-			original_tag = PAR
-		}
 	}
 
 	completion_reward = {

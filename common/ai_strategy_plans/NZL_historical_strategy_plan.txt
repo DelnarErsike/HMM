@@ -11,7 +11,7 @@ NZL_historical = {
 		always = yes
 	}
 	abort = {
-		is_subject = no
+		always = no
 	}
 
 	ai_national_focuses = {

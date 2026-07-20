@@ -6,55 +6,10 @@ USA_historical_plan = {
 		original_tag = USA
 	}
 	enable = {
-		OR = {
-			AND = {
-				is_historical_focus_on = yes
-				OR = {
-					not = { has_dlc = "Man the Guns" }
-					has_game_rule = {
-						rule = USA_ai_behavior
-						option = DEFAULT
-					}
-				}
-			}
-			has_country_flag = USA_AI_DEMOCRATIC_HISTORICAL
-			has_country_flag = democratic_usa_won_civil_war
-			has_game_rule = {
-				rule = USA_ai_behavior
-				option = DEMOCRATIC_HISTORICAL
-			}
-		}
+		always = yes
 	}
 	abort = {
-		OR = {
-			AND = {
-				has_game_rule = {
-					rule = USA_ai_behavior
-					option = DEFAULT
-				}
-				OR = {	
-					GER = {
-						OR = {
-							has_completed_focus = GER_oppose_hitler_ww
-							has_completed_focus = GER_oppose_hitler
-						}
-					}
-					ENG = {
-						not = { has_government = democratic }
-					}
-					has_war_with = CAN
-					has_war_with = MEX
-					JAP = {
-						not = {
-							OR = {
-								has_government = fascism
-								has_government = neutrality
-							}
-						}
-					}
-				}
-			}
-		}
+		always = no
 	}
 
 	ai_national_focuses = {

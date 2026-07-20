@@ -7,24 +7,10 @@ IRQ_historical_plan = {
 		has_dlc = "Graveyard of Empires"
 	}
 	enable = {
-		OR = {
-			AND = {
-				is_historical_focus_on = yes 
-				has_game_rule = {
-					rule = IRQ_AI_BEHAVIOR
-					option = DEFAULT
-				}
-			}
-			has_country_flag = IRQ_AI_RANDOM_HISTORICAL
-			has_game_rule = {
-				rule = IRQ_ai_behavior
-				option = HISTORICAL
-			}
-		}	
+		always = yes
 	}
 	abort = {
-		is_subject = yes 
-		has_war = no 
+		always = no
 	}
 
 	ai_national_focuses = {

@@ -290,4 +290,131 @@ characters={
 			id=-1
 		}
 	}
+
+	NOR_birger_ljungberg={
+		instance = { # AAT version (Theorist)
+			allowed = { 
+				has_aat = yes 
+			}
+			name=NOR_birger_ljungberg
+			advisor={
+				slot = theorist
+				idea_token = NOR_birger_ljungberg
+				ledger = army
+					allowed = {
+						original_tag = NOR
+					}
+					available = {
+						has_government = democratic
+						has_war = no  
+					}
+					traits = {
+						NOR_clueless_defense_minister
+					}
+					cost = 100
+					ai_will_do = {
+						factor = 1.000
+					}
+					removal_cost = 150
+					can_be_fired = no
+			}
+			portraits={
+				army={
+					small="GFX_portrait_NOR_birger_ljungberg_small"
+				}
+			}
+		}
+		instance = {
+			allowed = {
+				has_aat = no
+			}
+			name=NOR_birger_ljungberg
+			advisor={
+				slot = high_command
+				idea_token = NOR_birger_ljungberg
+				ledger = army
+					allowed = {
+						original_tag = NOR
+					}
+					traits = {
+						army_commando_2
+					}
+					cost = 100
+					ai_will_do = {
+						factor = 1.000
+					}
+			}
+			portraits={
+				army={
+					small="GFX_idea_generic_army_europe_1"
+				}
+			}
+		}
+	}
+	
+	NOR_kristian_laake={ 
+		instance = { # AAT Version
+			allowed = {
+				has_aat = yes 
+			}
+			name=NOR_kristian_laake
+			
+			allowed_civil_war = {
+				NOR_char_cw_loyalist = yes 
+			}					
+			
+			advisor={
+				slot = army_chief
+				idea_token = NOR_kristian_laake
+				allowed = {
+					original_tag = NOR
+				}
+				traits = {
+					NOR_defeatist_commander_in_chief
+				}
+				
+				cost = 50
+
+				ai_will_do = {
+					factor = 1.000
+				}
+				can_be_fired = no
+			}
+			name=NOR_kristian_laake
+			portraits={
+				army={
+					large="GFX_portrait_NOR_kristian_laake"
+					small="GFX_portrait_NOR_kristian_laake_small"
+				}
+			}
+		}
+		instance = { # Non-AAT
+			allowed = {
+				has_aat = no
+			}
+			name=NOR_kristian_laake
+			advisor={
+				slot = army_chief
+				idea_token = NOR_kristian_laake
+				allowed = {
+					original_tag = NOR
+				}
+				traits = {
+					army_chief_drill_1
+				}
+				
+				cost = 50
+
+				ai_will_do = {
+					factor = 1.000
+				}
+			}
+			portraits={
+				army={
+					large="GFX_portrait_NOR_kristian_laake"
+					small="GFX_portrait_NOR_kristian_laake_small"
+				}
+			}
+		}
+	}
 }

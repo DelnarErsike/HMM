@@ -444,6 +444,44 @@ characters = {
 	########################
 	#######ADVISORS#########
 	########################
+
+	AUS_lothar_rendulic = {
+		instance = {
+			allowed = {
+				has_dlc = "Gotterdammerung"
+			}
+
+			corps_commander = {
+				traits = { infantry_officer infantry_leader }
+				skill = 3
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 2
+				legacy_id = -1
+			}
+			name = AUS_lothar_rendulic
+			portraits = { #add new art here
+				army = {
+					large = "GFX_portrait_AUS_lothar_rendulic"
+					small = "GFX_portrait_AUS_lothar_rendulic_small"
+				}
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Gotterdammerung" }
+			}
+
+			name = AUS_lothar_rendulic
+			portraits = { 
+				army = {
+					small = "GFX_idea_generic_army_europe_1"
+				}
+			}
+		}
+
+	}
 	
 	AUS_eugen_beyer = {
 		instance = {
@@ -487,6 +525,78 @@ characters = {
 							original_tag = GER
 							has_country_flag = AUS_annexed 
 				}
+			}
+		}
+	}
+
+	AUS_franz_bohme = {
+		instance = {
+			allowed = {
+				has_dlc = "Gotterdammerung"
+			}
+
+			name = AUS_franz_bohme
+			portraits = {
+				army = {
+					large = "GFX_portrait_AUS_franz_bohme"
+					small = "GFX_portrait_AUS_franz_bohme_small"
+				}
+			}
+	
+			field_marshal = {
+				traits = { brilliant_strategist harsh_leader offensive_doctrine }
+				skill = 2
+				attack_skill = 3
+				defense_skill = 1
+				planning_skill = 3
+				logistics_skill = 2
+				legacy_id = -1
+				visible = {
+						AND = {
+							original_tag = GER
+							has_country_flag = AUS_annexed
+						}
+				}
+			}
+		}
+
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Gotterdammerung" }
+			}
+			
+			name = AUS_franz_bohme
+			portraits = {
+				army = {
+					small = "GFX_idea_generic_army_europe_1"
+				}
+			}
+		}
+	}
+
+	#######################
+	#######GENERALS########
+	#######################
+
+	AUS_karl_eglseer = {
+		name = AUS_karl_eglseer
+		portraits = {
+			army = {
+				large = "GFX_portrait_AUS_karl_eglseer"
+				small = "GFX_portrait_AUS_karl_eglseer_small"
+				
+			}
+		}
+		corps_commander = {
+			traits = { trickster trait_mountaineer }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id = -1
+			visible = {
+				
 			}
 		}
 	}

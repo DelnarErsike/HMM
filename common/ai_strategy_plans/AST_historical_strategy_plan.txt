@@ -7,23 +7,10 @@ AST_historical_taog = {
 		has_dlc = "Thunder at Our Gates"
 	}
 	enable = {
-		OR = {
-			AND = {
-				is_historical_focus_on = yes
-				has_game_rule = {
-					rule = AST_AI_BEHAVIOR
-					option = DEFAULT
-				}
-			}
-			has_country_flag = AST_AI_RANDOM_TAOG_HISTORICAL
-			has_game_rule = {
-				rule = AST_AI_BEHAVIOR
-				option = HISTORICAL
-			}
-		}
+		always = yes
 	}
 	abort = {
-		
+		always = no
 	}
 
 	ai_national_focuses = {

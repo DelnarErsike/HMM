@@ -588,7 +588,6 @@ if = {
 	limit = {
 		has_dlc = "Gotterdammerung"
 	}
-	recruit_character = GER_jurgen_von_blumenthal
 	recruit_character = GER_hans_vogel
 	recruit_character = GER_adolf_friedrich_von_mecklenburg
 	recruit_character = GER_wilhelm_von_gayl

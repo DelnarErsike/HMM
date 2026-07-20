@@ -134,10 +134,7 @@ fascism_on_the_rise = {
 			}
 			AND = {
 				has_dlc = "By Blood Alone"
-				OR = {
-					original_tag = SWI
 					original_tag = ITA
-				}
 			}
 
 			AND = {
@@ -154,13 +151,6 @@ fascism_on_the_rise = {
 					original_tag = AUS
 					original_tag = BEL
 					original_tag = HUN
-				}
-			}
-			AND = {
-				has_dlc = "Graveyard of Empires"
-				OR = {
-					original_tag = PER
-					original_tag = AFG
 				}
 			}
 			AND = {
@@ -213,10 +203,7 @@ democratic_on_the_rise = {
 
 			AND = {
 				has_dlc = "By Blood Alone"
-				OR = {
-					original_tag = SWI
 					original_tag = ITA
-				}
 			}
 
 			AND = {
@@ -234,13 +221,6 @@ democratic_on_the_rise = {
 					original_tag = BEL
 					original_tag = HUN
 					original_tag = GER
-				}
-			}
-			AND = {
-				has_dlc = "Graveyard of Empires"
-				OR = {
-					original_tag = PER
-					original_tag = AFG
 				}
 			}
 		}
@@ -592,7 +572,6 @@ generic_refit_civilian_ships_category = {
 				OR = {
 					original_tag = DEN
 					original_tag = FIN
-					original_tag = ICE
 				}
 				has_dlc = "Arms Against Tyranny"
 			}

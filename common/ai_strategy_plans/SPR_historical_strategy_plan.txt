@@ -10,31 +10,12 @@ SPR_historical_plan = {
 			tag = SPR
 			tag = SPA
 		}
-		OR = {
-			AND = {
-				is_historical_focus_on = yes
-				has_game_rule = {
-					rule = SPR_ai_behavior 
-					option = DEFAULT
-				}
-			}
-			has_country_flag = SPR_AI_RANDOM_NATIONALIST_HISTORICAL
-			has_game_rule = {
-				rule = SPR_ai_behavior 
-				option = NATIONALIST_HISTORICAL
-			}
-		}
 	}
 	abort = {
 		OR = {
 			tag = SPD
 			tag = SPC
-			OR = {
-				has_war_with = ENG
-				has_war_with = GER
-			}
 		}
-		
 	}
 
 	ai_national_focuses = {
@@ -118,20 +99,6 @@ SPR_historical_plan_war_with_allies = {
 			tag = SPA
 		}
 		OR = {
-			AND = {
-				is_historical_focus_on = yes
-				has_game_rule = {
-					rule = SPR_ai_behavior 
-					option = DEFAULT
-				}
-			}
-			has_country_flag = SPR_AI_RANDOM_NATIONALIST_HISTORICAL
-			has_game_rule = {
-				rule = SPR_ai_behavior 
-				option = NATIONALIST_HISTORICAL
-			}
-		}
-		OR = {
 			has_war_with = ENG
 			has_war_with = USA
 		}
@@ -142,13 +109,6 @@ SPR_historical_plan_war_with_allies = {
 			AND = {
 				NOT = { tag = SPR }
 				NOT = { tag = SPA }
-			}
-			AND = {
-				is_historical_focus_on = yes
-				has_game_rule = {
-					rule = SPR_ai_behavior 
-					option = DEFAULT
-				}
 			}
 			has_war_with = GER
 		}
@@ -239,20 +199,6 @@ SPR_historical_plan_war_with_axis = {
 			tag = SPA
 		}
 		OR = {
-			AND = {
-				is_historical_focus_on = yes
-				has_game_rule = {
-					rule = SPR_ai_behavior 
-					option = DEFAULT
-				}
-			}
-			has_country_flag = SPR_AI_RANDOM_NATIONALIST_HISTORICAL
-			has_game_rule = {
-				rule = SPR_ai_behavior 
-				option = NATIONALIST_HISTORICAL
-			}
-		}
-		OR = {
 			has_war_with = GER
 			has_war_with = ITA
 		}
@@ -266,13 +212,6 @@ SPR_historical_plan_war_with_axis = {
 			AND = {
 				NOT = { tag = SPR }
 				NOT = { tag = SPA }
-			}
-			AND = {
-				is_historical_focus_on = yes
-				has_game_rule = {
-					rule = SPR_ai_behavior 
-					option = DEFAULT
-				}
 			}
 			OR = {
 				has_war_with = ENG

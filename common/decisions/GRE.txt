@@ -843,10 +843,6 @@ GRE_investment_decisions_category = {
 				is_puppet_of = ENG
 				is_in_faction_with = ENG
 				has_completed_focus = GRE_british_docking_rights
-				has_country_leader = {
-    				character = GRE_eleftherios_venizelos
-    				ruling_only = yes
-				}
 			}
 		}
 
@@ -1143,10 +1139,6 @@ GRE_investment_decisions_category = {
 			NOT = {
 				is_puppet_of = FRA
 				is_in_faction_with = FRA
-				has_country_leader = {
-    				character = GRE_eleftherios_venizelos
-    				ruling_only = yes
-				}
 			}
 		}
 

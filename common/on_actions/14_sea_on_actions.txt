@@ -2748,6 +2748,25 @@ on_actions = {
 
 	on_capitulation = { # ROOT is capitulated country, FROM is winner
 
+		# Ma Hushan flees with gold to India 
+		effect = {
+
+			IF = {
+				limit = {
+					ROOT = { original_tag = CHI } # Trigger this when China caps instead, don't deal with SIK and the like
+					RAJ = {
+						exists = yes
+					}
+				}
+				RAJ = {
+					country_event = {
+						id = SEA_warlords.64
+						hours = 12
+					}
+				}
+			}
+		}
+
 		effect = {
 			if = {
 				limit = {

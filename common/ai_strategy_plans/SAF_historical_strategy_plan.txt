@@ -10,7 +10,7 @@ SAF_historical = {
 		always = yes
 	}
 	abort = {
-		
+		always = no
 	}
 
 	ai_national_focuses = {

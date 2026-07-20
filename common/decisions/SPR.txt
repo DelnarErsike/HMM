@@ -9219,20 +9219,6 @@ SPR_civil_war_offensives = {
 				NOT = {
 					controls_state = 790
 				}
-				OR = {
-					AND = {
-						is_historical_focus_on = yes
-						has_game_rule = {
-							rule = SPR_ai_behavior 
-							option = DEFAULT
-						}
-					}
-					has_country_flag = SPR_AI_RANDOM_NATIONALIST_HISTORICAL
-					has_game_rule = {
-						rule = SPR_ai_behavior 
-						option = NATIONALIST_HISTORICAL
-					}
-				}
 			}
 		}
 	}
@@ -9603,20 +9589,6 @@ SPR_civil_war_offensives = {
 				NOT = {
 					controls_state = 176
 				}
-				OR = {
-					AND = {
-						is_historical_focus_on = yes
-						has_game_rule = {
-							rule = SPR_ai_behavior 
-							option = DEFAULT
-						}
-					}
-					has_country_flag = SPR_AI_RANDOM_NATIONALIST_HISTORICAL
-					has_game_rule = {
-						rule = SPR_ai_behavior 
-						option = NATIONALIST_HISTORICAL
-					}
-				}
 			}
 		}
 	}
@@ -9750,20 +9722,6 @@ SPR_civil_war_offensives = {
 				NOT = {
 					controls_state = 792
 				}
-				OR = {
-					AND = {
-						is_historical_focus_on = yes
-						has_game_rule = {
-							rule = SPR_ai_behavior 
-							option = DEFAULT
-						}
-					}
-					has_country_flag = SPR_AI_RANDOM_NATIONALIST_HISTORICAL
-					has_game_rule = {
-						rule = SPR_ai_behavior 
-						option = NATIONALIST_HISTORICAL
-					}
-				}
 			}
 		}
 	}
@@ -9891,20 +9849,6 @@ SPR_civil_war_offensives = {
 				tag = SPA
 				NOT = {
 					controls_state = 172
-				}
-				OR = {
-					AND = {
-						is_historical_focus_on = yes
-						has_game_rule = {
-							rule = SPR_ai_behavior 
-							option = DEFAULT
-						}
-					}
-					has_country_flag = SPR_AI_RANDOM_NATIONALIST_HISTORICAL
-					has_game_rule = {
-						rule = SPR_ai_behavior 
-						option = NATIONALIST_HISTORICAL
-					}
 				}
 			}
 		}
@@ -10039,20 +9983,6 @@ SPR_civil_war_offensives = {
 				tag = SPA
 				NOT = {
 					controls_state = 166
-				}
-				OR = {
-					AND = {
-						is_historical_focus_on = yes
-						has_game_rule = {
-							rule = SPR_ai_behavior 
-							option = DEFAULT
-						}
-					}
-					has_country_flag = SPR_AI_RANDOM_NATIONALIST_HISTORICAL
-					has_game_rule = {
-						rule = SPR_ai_behavior 
-						option = NATIONALIST_HISTORICAL
-					}
 				}
 			}
 		}

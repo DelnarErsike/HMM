@@ -8,24 +8,10 @@ HUN_ww_historical = {
 	}
 
 	enable = {
-		OR = {
-			AND = {
-				is_historical_focus_on = yes
-				has_game_rule = {
-					rule = HUN_ai_behavior
-					option = DEFAULT
-				}
-			}
-			has_country_flag = HUN_AI_RANDOM_FASCIST_HISTORICAL
-			has_game_rule = {
-				rule = HUN_ai_behavior
-				option = FASCIST_HISTORICAL
-			}
-		}
+		always = yes
 	}
-
 	abort = {
-		is_subject = yes
+		always = no
 	}
 
 	# On average = five 70 days focuses per year
