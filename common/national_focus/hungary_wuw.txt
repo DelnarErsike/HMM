@@ -10236,7 +10236,7 @@ focus_tree = {
 						option = FREE
 					}
 				}
-				war = no
+				has_war = no
 			}
 		}
 
