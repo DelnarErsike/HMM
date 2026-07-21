@@ -15834,6 +15834,7 @@ focus_tree = {
 				controls_state = 894
 			}
 		}
+		allow_branch = { always = no }
 
 		search_filters = {}
 
@@ -16455,7 +16456,6 @@ focus_tree = {
 				is_on_continent = africa
 			}
 		}
-		allow_branch = { always = no }
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
@@ -17547,7 +17547,7 @@ focus_tree = {
 		icon = GFX_focus_GER_japanese_naval_cooperation
 		prerequisite = { focus = GER_befriend_japan }
 
-		x = 2
+		x = 0
 		y = 1
 		relative_position_id = GER_befriend_japan
 		cost = 10
