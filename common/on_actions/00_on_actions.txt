@@ -78,7 +78,6 @@ on_actions = {
 				}
 				# HMM: we cannot remove this to save on save file sizes and processing, so just only look at countries on the map at the start of the game instead of every possible tag
 				every_country = {
-				#every_possible_country = {
 					limit = {
 						any_core_state = {
 							OR = {

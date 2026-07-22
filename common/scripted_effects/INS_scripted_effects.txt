@@ -58,17 +58,9 @@ indonesia_transfer_POK = {
 		}
 	}
 	else = {
-		every_possible_country = {
-			limit = {
-				has_character = INS_syarif_muhammad_alkadrie
-			}
-			random_character = {
-				limit = {
-					is_character = INS_syarif_muhammad_alkadrie
-				}
+		INS_syarif_muhammad_alkadrie = {
 				set_nationality = INS
 				save_global_event_target_as = INS_syarif_muhammad_alkadrie
-			}
 		}
 	}
 }
@@ -89,17 +81,9 @@ indonesia_transfer_TNE = {
 		}
 	}
 	else = {
-		every_possible_country = {
-			limit = {
-				has_character = INS_iskandar_sjah
-			}
-			random_character = {
-				limit = {
-					is_character = INS_iskandar_sjah
-				}
+		INS_iskandar_sjah = {
 				set_nationality = INS
 				save_global_event_target_as = INS_iskandar_sjah
-			}
 		}
 	}
 }
@@ -120,17 +104,9 @@ indonesia_transfer_GOW = {
 		}
 	}
 	else = {
-		every_possible_country = {
-			limit = {
-				has_character = INS_sultan_muhibuddin
-			}
-			random_character = {
-				limit = {
-					is_character = INS_sultan_muhibuddin
-				}
+		INS_sultan_muhibuddin = {
 				set_nationality = INS
 				save_global_event_target_as = INS_sultan_muhibuddin
-			}
 		}
 	}
 }
@@ -151,17 +127,9 @@ indonesia_transfer_SSI = {
 		}
 	}
 	else = {
-		every_possible_country = {
-			limit = {
-				has_character = INS_syarif_kasim
-			}
-			random_character = {
-				limit = {
-					is_character = INS_syarif_kasim
-				}
+		INS_syarif_kasim = {
 				set_nationality = INS
 				save_global_event_target_as = INS_syarif_kasim
-			}
 		}
 	}
 }
@@ -182,17 +150,9 @@ indonesia_transfer_BLI = {
 		}
 	}
 	else = {
-		every_possible_country = {
-			limit = {
-				has_character = INS_dewa_geg
-			}
-			random_character = {
-				limit = {
-					is_character = INS_dewa_geg
-				}
+		INS_dewa_geg = {
 				set_nationality = INS
 				save_global_event_target_as = INS_dewa_geg
-			}
 		}
 	}
 }
@@ -213,17 +173,9 @@ indonesia_transfer_ATJ = {
 		}
 	}
 	else = {
-		every_possible_country = {
-			limit = {
-				has_character = INS_alauddin_syah
-			}
-			random_character = {
-				limit = {
-					is_character = INS_alauddin_syah
-				}
+		INS_alauddin_syah = {
 				set_nationality = INS
 				save_global_event_target_as = INS_alauddin_syah
-			}
 		}
 	}
 }
