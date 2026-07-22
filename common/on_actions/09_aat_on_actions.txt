@@ -18,30 +18,6 @@ on_actions = {
 
 	#Not run on a specific country.
 	on_startup = {
-		effect= {
-			if = {
-				limit = { 
-					is_historical_focus_on = yes
-				}
-
-				every_possible_country = {
-
-					SWE = {
-						add_ai_strategy = {
-							type = protect
-							id = PREV
-							value = -1000
-						}
-
-						add_ai_strategy = {
-							type = alliance
-							id = PREV
-							value = -50
-						}	
-					}
-				}
-			}
-		}
 		#SET UP MIO SIZE IN 1939 BOOKMARK
 		effect = {
 			if = {

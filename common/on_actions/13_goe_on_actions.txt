@@ -55,44 +55,20 @@ on_actions = {
 				limit = {
 					has_dlc = "Graveyard of Empires"
 				}
-				if = { #Fix for OOS
-					limit = { is_historical_focus_on = no }
-					RAJ = {
-						random_owned_state = {
-							set_variable = { global.famine_state = THIS }	
-							
-						}
-					}
-				}
-				else = {
+				#if = { #Fix for OOS
+				#	limit = { is_historical_focus_on = no }
+				#	RAJ = {
+				#		random_owned_state = {
+				#			set_variable = { global.famine_state = THIS }	
+				#			
+				#		}
+				#	}
+				#}
+				#else = {
 					430 = {
 						set_variable = { global.famine_state = THIS }
 					}
-				}
-			}
-			every_state = {
-				limit = {
-					is_owned_by = RAJ
-					check_variable = { core_countries^num > 0 }
-				}
-				
-				for_each_scope_loop = {
-					array = core_countries
-					if = {
-						limit = {
-							NOT = { THIS = { original_tag = RAJ } }	
-							NOT = { THIS = { original_tag = YEM } } #not u
-							NOT = { 
-								is_in_array = {
-								 	array = RAJ.raj_releasables
-								 	value = THIS
-								 } 
-							}
-						}
-						add_to_array = { RAJ.raj_releasables = THIS }
-					}
-					
-				}
+				#}
 			}
 			RAJ = {
 				set_occupation_law_where_available = foreign_civilian_oversight
@@ -391,10 +367,7 @@ on_actions = {
 			#block raj releasables from insta joining facftions if they spawn
 			if = {
 				limit = {
-					is_in_array = {
-						array = RAJ.raj_releasables
-						value = FROM
-					}
+					is_raj_releasable = yes
 					FROM = { 
 						is_ai = yes 
 						NOT = { original_tag = RAJ }
@@ -409,10 +382,7 @@ on_actions = {
 
 			if = {
 				limit = {
-					is_in_array = {
-						array = RAJ.raj_releasables
-						value = ROOT
-					}
+					is_raj_releasable = yes
 					ROOT = { 
 						is_ai = yes 
 						NOT = { original_tag = RAJ }
@@ -451,10 +421,7 @@ on_actions = {
 
 				every_possible_country = {
 					limit = {
-						is_in_array = {
-							array = RAJ.raj_releasables
-							value = THIS
-						}
+						is_raj_releasable = yes
 						any_core_state = {
 							is_controlled_by = event_target:UK_INDIA
 							controller = { 
@@ -1266,10 +1233,7 @@ on_actions = {
 				limit = {
 					FROM = { original_tag = RAJ }
 					ROOT = {
-						is_in_array = {
-							array = RAJ.raj_releasables
-							value = THIS
-						}
+						is_raj_releasable = yes
 					}
 				}
 				RAJ = {
@@ -1299,10 +1263,7 @@ on_actions = {
 			IF = {
 				limit = {
 					ROOT = {
-						is_in_array = {
-							array = RAJ.raj_releasables
-							value = THIS
-						}
+						is_raj_releasable = yes
 					}
 					RAJ = { check_variable = { RAJ_hindu_mahasabha_released > 0.03 } }
 				}
@@ -1332,10 +1293,7 @@ on_actions = {
 				limit = {
 					FROM = { original_tag = RAJ }
 					ROOT = {
-						is_in_array = {
-							array = RAJ.raj_releasables
-							value = THIS
-						}
+						is_raj_releasable = yes
 					}
 					RAJ = { check_variable = { RAJ_hindu_mahasabha_released > 0.03 } }
 				}
@@ -1365,10 +1323,7 @@ on_actions = {
 				limit = {
 					FROM = { original_tag = RAJ }
 					ROOT = {
-						is_in_array = {
-							array = RAJ.raj_releasables
-							value = THIS
-						}
+						is_raj_releasable = yes
 					}
 					RAJ = { check_variable = { RAJ_hindu_mahasabha_released > 0.03 } }
 				}

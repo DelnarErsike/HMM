@@ -3817,15 +3817,11 @@ country_event = {
 				add_ideas = neutrality_idea
 			}
 		}
-		for_each_scope_loop = {
-			array = RAJ.raj_releasables
-		
-			if = {
-				limit = {
-					THIS = { exists = yes }
-					NOT = { original_tag = PAK }
-				}
-
+		every_country = {
+			limit = {
+				is_raj_releasable = yes
+				NOT = { original_tag = PAK }
+			}
 				set_rule = { can_declare_war_on_same_ideology = yes }
 				set_rule = { can_only_justify_war_on_threat_country = no }
 				set_rule = { can_join_factions = no }
@@ -3834,7 +3830,6 @@ country_event = {
 					leave_faction = yes
 				}
 				add_ideas = neutrality_idea
-			}
 		}
 
 		if = {
@@ -5366,12 +5361,7 @@ country_event = {
 			controller = {
 				has_war_with = RAJ
 				NOT = { original_tag = RAJ }
-				NOT = {
-					is_in_array = {
-						array = RAJ.raj_releasables
-						value = THIS
-					}	
-				}
+				is_raj_releasable = no
 				NOT = { is_subject_of = RAJ }
 			}
 			NOT = { has_state_flag = RAJ_time_to_retake_state_famine }
