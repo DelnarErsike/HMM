@@ -237,12 +237,7 @@ country_event = {
 				SPD = { # Remove Carlist/Falangist country leaders for new SPD tag
 					retire_ideology_leader = fascism
 					retire_ideology_leader = neutrality
-					every_possible_country = {
-						limit = {
-							has_character = SPR_manuel_azana	
-						}
-						SPR_manuel_azana = { set_nationality = SPD }
-					}
+					SPR_manuel_azana = { set_nationality = SPD }
 					IF = {
 						limit = {
 							NOT = {
@@ -8229,12 +8224,7 @@ country_event = {
 				}
 			}
 			SPD = {
-				every_possible_country = {
-					limit = {
-						has_character = SPR_manuel_azana	
-					}
-					SPR_manuel_azana = { set_nationality = SPD }
-				}
+				SPR_manuel_azana = { set_nationality = SPD }
 				IF = {
 					limit = {
 						NOT = {

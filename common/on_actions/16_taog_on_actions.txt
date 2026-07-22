@@ -97,20 +97,14 @@
 	 			}
 				every_owned_state = {
 					limit = {
-						is_in_array = {
-							array = INS.owned_states_at_game_start
-							value = THIS
-						}
+						has_state_flag = INS_owned_states_at_game_start
 					}
 					transfer_state_to = INS
 				}
 				event_target:INS_dutch_indonesia = {
 					every_owned_state = {
 						limit = {
-							is_in_array = {
-								array = INS.owned_states_at_game_start
-								value = THIS
-							}
+							has_state_flag = INS_owned_states_at_game_start
 						}
 						transfer_state_to = INS
 					}
@@ -163,9 +157,6 @@
 					}
 				}
 			}
-			
-
-			SIA = { SIA_refresh_indochina_controllers = yes }
 
 			if = {
 				limit = {
@@ -690,13 +681,6 @@
 	#Fra can cap etc
 	on_capitulation = {
 		effect = {
-			if = {
-				limit = {
-					is_in_array = { array = SIA.indochina_controllers value = ROOT }
-				}
-
-				SIA = { SIA_refresh_indochina_controllers = yes }
-			}
 			if = {
 				limit = {
 					FROM = {
@@ -1933,23 +1917,6 @@
 		effect = {
 			if = {
 				limit = {
-					has_dlc = "Thunder at Our Gates"
-					is_in_array = {
-						array = SIA.indochina_states
-						value = FROM.FROM.FROM
-					}
-					NOT = {
-						ROOT = {
-							original_tag = SIA
-						}
-					}
-				}
-				SIA = { SIA_refresh_indochina_controllers = yes }
-			}
-		}
-		effect = {
-			if = {
-				limit = {
 					FROM = {
 						original_tag = INS
 						has_completed_focus = INS_the_jewel_in_the_crown
@@ -1959,10 +1926,7 @@
 						}
 					}
 					FROM.FROM = {
-						is_in_array = {
-							array = INS.owned_states_at_game_start
-							value = THIS
-						}
+						has_state_flag = INS_owned_states_at_game_start
 					}
 					ROOT = {
 						is_major = yes

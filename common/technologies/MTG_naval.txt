@@ -1722,11 +1722,11 @@ early_ship_hull_carrier = {
 
 		allow = {
 			NOT = {
-			has_game_rule = {
-				rule = max_submarine_tech
-				option = sub2
+				has_game_rule = {
+					rule = max_submarine_tech
+					option = sub2
+				}
 			}
-		}
 		}
 
 		enable_equipments = {
@@ -1832,6 +1832,13 @@ early_ship_hull_carrier = {
 	}
 
 	basic_submarine_snorkel = {
+
+		allow = {
+			has_game_rule = {
+				rule = max_submarine_tech
+				option = sub4
+			}
+		}
 
 		enable_equipment_modules = {
 			ship_sub_snorkel_1

@@ -1982,10 +1982,7 @@ focus_tree = {
 			}
 			modifier = {
 				factor = 0.05
-				is_in_array = {
-					array = RAJ.raj_releasables
-					value = THIS
-				}
+				is_raj_releasable = yes
 				is_subject_of = RAJ
 			}
 			modifier = {

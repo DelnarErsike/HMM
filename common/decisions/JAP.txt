@@ -10480,10 +10480,7 @@ JAP_the_co_prosperity_sphere_decisions = {
 					}
 					every_state = {
 						limit = {
-							is_in_array = {
-							    array = RAJ.owned_states_at_game_start
-							    value = THIS
-							}
+							has_state_flag = RAJ_owned_states_at_game_start
 							controller = {
 								OR = {
 									original_tag = ROOT

@@ -878,10 +878,7 @@ focus_tree = {
                     every_state = {
                         limit = {
                             OR = {
-                                is_in_array = {
-                                    array = RAJ.owned_states_at_game_start
-                                    value = THIS
-                                }
+                                has_state_flag = RAJ_owned_states_at_game_start
                                 AND = {
                                     state = 992
                                     OR = {
@@ -1135,10 +1132,7 @@ focus_tree = {
 
                 every_controlled_state = {
                     limit = {
-                        is_in_array = {
-                            array = RAJ.owned_states_at_game_start
-                            value = THIS
-                        }
+                        has_state_flag = RAJ_owned_states_at_game_start
                     }
                     add_core_of = ROOT
                 }
@@ -1964,9 +1958,11 @@ focus_tree = {
         }
         
         bypass = {
-            all_of_scopes = {
-                array = RAJ.owned_states_at_game_start
-                is_controlled_by = ROOT
+            NOT = {
+                any_state = {
+                    has_state_flag = RAJ_owned_states_at_game_start
+                    NOT = { is_controlled_by = ROOT }
+                }
             }
         }
 
@@ -2028,10 +2024,7 @@ focus_tree = {
                 }
                 every_state = {
                     limit = {
-                        is_in_array = {
-                            array = RAJ.owned_states_at_game_start
-                            value = THIS
-                        }
+                        has_state_flag = RAJ_owned_states_at_game_start
                         if = {
                             limit = { ROOT = { has_completed_focus = RAJ_the_silk_road } }
                             NOT = {
@@ -3463,10 +3456,7 @@ focus_tree = {
                     reserve_dynamic_country = yes
                     every_state = {
                         limit = {
-                            is_in_array = {
-                                array = RAJ.owned_states_at_game_start
-                                value = THIS
-                            }
+                            has_state_flag = RAJ_owned_states_at_game_start
                             NOT = {
                                 state = 428
                                 state = 429
@@ -3515,10 +3505,7 @@ focus_tree = {
             }
                 #every_controlled_state = {
                 #    limit = {
-                #        is_in_array = {
-                #            array = RAJ.owned_states_at_game_start
-                #            value = THIS
-                #        }
+                #        has_state_flag = RAJ_owned_states_at_game_start
                 #    }
                 #    add_core_of = ROOT
                 #}
@@ -4014,136 +4001,12 @@ focus_tree = {
             }
 
 
-            if = {
+            every_country = {
                 limit = {
-                    MPU = { is_subject_of = ROOT } 
+                    is_subject_of = ROOT
+                    is_raj_releasable = yes
                 }
-                MPU = { add_ideas = idea_RAJ_princely_autonomy }
-            }
-
-            if = {
-                limit = {
-                    KAS = { is_subject_of = ROOT } 
-                }
-                KAS = { add_ideas = idea_RAJ_princely_autonomy }
-            }
-
-            if = {
-                limit = {
-                    HYD = { is_subject_of = ROOT } 
-                }
-                HYD = { add_ideas = idea_RAJ_princely_autonomy }
-            }
-
-            if = {
-                limit = {
-                    MYS = { is_subject_of = ROOT } 
-                }
-                MYS = { add_ideas = idea_RAJ_princely_autonomy }
-            }
-
-            if = {
-                limit = {
-                    NWF = { is_subject_of = ROOT } 
-                }
-                NWF = { add_ideas = idea_RAJ_princely_autonomy }
-            }
-
-            if = {
-                limit = {
-                    RJP = { is_subject_of = ROOT } 
-                }
-                RJP = { add_ideas = idea_RAJ_princely_autonomy }
-            }
-
-            if = {
-                limit = {
-                    KOL = { is_subject_of = ROOT } 
-                }
-                KOL = { add_ideas = idea_RAJ_princely_autonomy }
-            }
-
-            if = {
-                limit = {
-                    WIS = { is_subject_of = ROOT } 
-                }
-                WIS = { add_ideas = idea_RAJ_princely_autonomy }
-            }
-
-            if = {
-                limit = {
-                    CIP = { is_subject_of = ROOT } 
-                }
-                CIP = { add_ideas = idea_RAJ_princely_autonomy }
-            }
-
-            if = {
-                limit = {
-                    RAS = { is_subject_of = ROOT } 
-                }
-                RAS = { add_ideas = idea_RAJ_princely_autonomy }
-            }
-
-            if = {
-                limit = {
-                    SKK = { is_subject_of = ROOT } 
-                }
-                SKK = { add_ideas = idea_RAJ_princely_autonomy }
-            }
-
-            if = {
-                limit = {
-                    KLT = { is_subject_of = ROOT } 
-                }
-                KLT = { add_ideas = idea_RAJ_princely_autonomy }
-            }
-
-            if = {
-                limit = {
-                    KHL = { is_subject_of = ROOT } 
-                }
-                KHL = { add_ideas = idea_RAJ_princely_autonomy }
-            }
-
-            if = {
-                limit = {
-                    SIN = { is_subject_of = ROOT } 
-                }
-                SIN = { add_ideas = idea_RAJ_princely_autonomy }
-            }
-
-            if = {
-                limit = {
-                    PAK = { is_subject_of = ROOT } 
-                }
-                PAK = { add_ideas = idea_RAJ_princely_autonomy }
-            }
-
-            if = {
-                limit = {
-                    BLC = { is_subject_of = ROOT } 
-                }
-                BLC = { add_ideas = idea_RAJ_princely_autonomy }
-            }
-
-            if = {
-                limit = {
-                    SKK = { is_subject_of = ROOT } 
-                }
-                SKK = { add_ideas = idea_RAJ_princely_autonomy }
-            }
-
-            for_each_scope_loop = { #just as failsafe
-                array = RAJ.raj_releasables
-                if = {
-                    limit = {
-                        is_subject_of = RAJ
-                        exists = yes
-                        NOT = { has_idea = idea_RAJ_princely_autonomy }
-                    }
-
-                    add_ideas = idea_RAJ_princely_autonomy
-                }
+                add_ideas = idea_RAJ_princely_autonomy
             }
 
             custom_effect_tooltip = RAJ_release_subjects_hint_tt
@@ -6984,13 +6847,10 @@ focus_tree = {
 
         completion_reward = {
 
-             every_state = {
+             every_controlled_state = {
                 random_select_amount = 4
                 limit = {
-                    is_in_array = {
-                        array = ROOT.owned_states_at_game_start
-                        value = THIS
-                    }
+                    has_state_flag = RAJ_owned_states_at_game_start
                     is_controlled_by = ROOT
                 }
                 add_extra_state_shared_building_slots = 1   
@@ -8302,10 +8162,7 @@ focus_tree = {
                 random_select_amount = 3
                 limit = {
                     has_resistance = yes
-                    is_in_array = {
-                        array = ROOT.owned_states_at_game_start
-                        value = THIS
-                    }
+                    has_state_flag = RAJ_owned_states_at_game_start
                 }
                 add_resistance = 15
                 add_extra_state_shared_building_slots = 1
@@ -11892,10 +11749,7 @@ focus_tree = {
         available = {
             any_controlled_state = {
                 resistance > 65
-                is_in_array = {
-                    array = RAJ.owned_states_at_game_start
-                    value = THIS
-                }
+                has_state_flag = RAJ_owned_states_at_game_start
                 NOT = {
                     state = 992 #Aden
                 }
@@ -12083,8 +11937,8 @@ focus_tree = {
                # bose_civil_war_capital_check = yes
                clr_country_flag = bose_opponent_has_valid_capital
                 ### Restore cores and spawn divisions ####
-                for_each_scope_loop = {
-                    array =  RAJ.owned_states_at_game_start 
+                every_state = {
+                    limit = { has_state_flag = RAJ_owned_states_at_game_start }
 
                     if = {
                         limit = {
@@ -12136,7 +11990,6 @@ focus_tree = {
                         limit = { 
                             has_resistance = yes
                             resistance > 65 
-                            resistance < 85
                         }
 
                         ROOT = { 
@@ -12219,10 +12072,7 @@ focus_tree = {
                 random_state = {
                    limit = {
                         NOT = { state = 439 }
-                        is_in_array = {
-                            array = RAJ.owned_states_at_game_start
-                            value = THIS
-                        }
+                        has_state_flag = RAJ_owned_states_at_game_start
                         is_controlled_by = ROOT
                    }
                    RAJ = {
@@ -12267,10 +12117,7 @@ focus_tree = {
 
                         every_neighbor_state = {
                             limit = {
-                                is_in_array = {
-                                    array = RAJ.owned_states_at_game_start
-                                    value = THIS
-                                }
+                                has_state_flag = RAJ_owned_states_at_game_start
                                 is_controlled_by = RAJ.revolter_tag
                             }
 
@@ -12288,23 +12135,22 @@ focus_tree = {
                 }
             }
             else = { #If not a random indian state becomes the capital to avoid edge cases where you dont white peace out the other raj
-                random_scope_in_array = {
-                    array = RAJ.owned_states_at_game_start 
+                ROOT = {
+                random_controlled_state = {
                     limit = { 
-                        is_controlled_by = ROOT 
+                        has_state_flag = RAJ_owned_states_at_game_start
                         NOT = { state = 992 }
                     } 
                     
 
-                    for_each_scope_loop = {
-                        array = RAJ.owned_states_at_game_start 
+                    every_state = {
+                        limit = {
+                            has_state_flag = RAJ_owned_states_at_game_start
+                            NOT = { state = PREV }
+                        }
                         add_to_array = { RAJ.owned_states_copy = THIS }
                     }
 
-                    remove_from_array = {
-                        array = RAJ.owned_states_copy
-                        value = THIS 
-                    }
                     var:RAJ.revolter_tag = { transfer_state = PREV }
                     THIS = {
                         teleport_armies = { 
@@ -12326,6 +12172,7 @@ focus_tree = {
                         type = annex_everything
                     }
                 }
+            }
             }
 
             var:RAJ.revolter_tag = {
@@ -15091,10 +14938,7 @@ focus_tree = {
             } 
             every_controlled_state = {
                 limit = {
-                    is_in_array = {
-                        array = RAJ.owned_states_at_game_start
-                        value = THIS
-                    }
+                    has_state_flag = RAJ_owned_states_at_game_start
                     has_resistance = yes
 
                 }
@@ -15498,9 +15342,11 @@ focus_tree = {
                 }
                 custom_trigger_tooltip = {
                     tooltip = RAJ_hedgemony_of_the_subcontinent_tt
-                    all_of_scopes = {
-                      array = RAJ.owned_states_at_game_start
-                      is_owned_by = ROOT 
+                    NOT = {
+                        any_state = {
+                            has_state_flag = RAJ_owned_states_at_game_start
+                            NOT = { is_owned_by = ROOT }
+                        }
                     }
                 }
             }
@@ -17030,18 +16876,14 @@ focus = {
 		hidden_effect = {
 			set_temp_variable = { RAJ_pp_bonus_based_on_compliance = 0 }
 			
-			for_each_scope_loop = {
-				array = ROOT.owned_states_at_game_start			
-				
-				if = {
+			every_controlled_state = {
 					limit = {
-						is_controlled_by = ROOT
+						has_state_flag = RAJ_owned_states_at_game_start
 						has_resistance = yes
 						compliance > 74 #Doesn't accept vars :') WARNING! If changing this value then update the tooltip RAJ_the_government_of_india_act_pp_bonus_tt
 					}
 					add_to_temp_variable = { ROOT.RAJ_pp_bonus_based_on_compliance = 1 }
 					#log = "[THIS.GetName] grants bonus"
-				}
 			}
 			log = "Total states granting bonus = [?ROOT.RAJ_pp_bonus_based_on_compliance]"
 
@@ -17053,9 +16895,8 @@ focus = {
 		if = {
 			limit = {
 				NOT = { has_completed_focus = RAJ_the_government_of_india_act } #Stop showing dynamic list of states after completed
-				any_state_in = {
-					array = ROOT.owned_states_at_game_start
-
+				any_controlled_state = {
+                    has_state_flag = RAJ_owned_states_at_game_start
 					has_resistance = yes
 					compliance > 74 #Doesn't accept vars :') WARNING! If changing this value then update the tooltip RAJ_the_government_of_india_act_pp_bonus_tt
 				}
@@ -17063,10 +16904,7 @@ focus = {
 			custom_effect_tooltip = current_states_granting_bonus_tt
 			every_controlled_state = { #For tooltip purposes
 				limit = {
-					is_in_array = {
-						array = ROOT.owned_states_at_game_start
-						value = THIS
-					}
+					has_state_flag = RAJ_owned_states_at_game_start
 					has_resistance = yes
 					compliance > 74 #Doesn't accept vars :') WARNING! If changing this value then update the tooltip RAJ_the_government_of_india_act_pp_bonus_tt
 				}
@@ -17290,10 +17128,7 @@ focus = {
 		every_core_state = {
 			limit = {
 				is_controlled_by = ROOT
-				is_in_array = {
-					array = ROOT.owned_states_at_game_start
-					value = THIS
-				}
+				has_state_flag = RAJ_owned_states_at_game_start
 				has_resistance = yes #To target princely states
 				free_building_slots = {
 					building = arms_factory
@@ -17972,7 +17807,7 @@ focus = {
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 
 	completion_reward = {
-		random_owned_state = {
+		random_owned_controlled_state = {
 			limit = {
 				is_fully_controlled_by = ROOT
 				free_building_slots = {
@@ -17980,10 +17815,7 @@ focus = {
 					size > 0
 					include_locked = yes
 				}
-				is_in_array = {
-					array = ROOT.owned_states_at_game_start
-					value = THIS
-				}
+				has_state_flag = RAJ_owned_states_at_game_start
 			}
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
@@ -18033,10 +17865,7 @@ focus = {
 					resource = oil
 					amount > 0
 				}
-				is_in_array = {
-					array = ROOT.owned_states_at_game_start
-					value = THIS
-				}
+				has_state_flag = RAJ_owned_states_at_game_start
 			}
 			hidden_effect = {
 				if = {
@@ -18088,10 +17917,7 @@ focus = {
                         amount > 19
                     }
 				}
-				is_in_array = {
-					array = ROOT.owned_states_at_game_start
-					value = THIS
-				}
+				has_state_flag = RAJ_owned_states_at_game_start
 			}
 			hidden_effect = {
 				if = {
@@ -18443,10 +18269,7 @@ focus = {
 					size > 1
 					include_locked = yes
 				}
-				is_in_array = {
-					array = ROOT.owned_states_at_game_start
-					value = THIS
-				}
+				has_state_flag = RAJ_owned_states_at_game_start
 			}
 			random_select_amount = 2
 			add_extra_state_shared_building_slots = 2
@@ -18677,10 +18500,7 @@ focus = {
 					size > 1
 					include_locked = yes
 				}
-				is_in_array = {
-					array = ROOT.owned_states_at_game_start
-					value = THIS
-				}
+				has_state_flag = RAJ_owned_states_at_game_start
 			}
 			random_select_amount = 2
 			add_extra_state_shared_building_slots = 2
@@ -19252,7 +19072,7 @@ focus = {
 		}
 
 		custom_effect_tooltip = generic_skip_one_line_tt
-		random_owned_state = {
+		random_owned_controlled_state = {
 			limit = {
 				is_coastal = yes
 				is_fully_controlled_by = ROOT
@@ -19262,10 +19082,7 @@ focus = {
 					size > 0
 					include_locked = yes
 				}
-				is_in_array = {
-					array = ROOT.owned_states_at_game_start
-					value = THIS
-				}
+				has_state_flag = RAJ_owned_states_at_game_start
 			}
 			prioritize = { 431 } #Calcutta
 
@@ -19287,7 +19104,7 @@ focus = {
 			}
 		}
 
-		random_owned_state = {
+		random_owned_controlled_state = {
 			limit = {
 				is_coastal = yes
 				is_fully_controlled_by = ROOT
@@ -19297,10 +19114,7 @@ focus = {
 					size > 0
 					include_locked = yes
 				}
-				is_in_array = {
-					array = ROOT.owned_states_at_game_start
-					value = THIS
-				}
+				has_state_flag = RAJ_owned_states_at_game_start
 			}
 			prioritize = { 430 } #Bangladesh
 
@@ -19322,7 +19136,7 @@ focus = {
 			}
 		}
 
-		random_owned_state = {
+		random_owned_controlled_state = {
 			limit = {
 				is_coastal = yes
 				is_fully_controlled_by = ROOT
@@ -19332,10 +19146,7 @@ focus = {
 					size > 0
 					include_locked = yes
 				}
-				is_in_array = {
-					array = ROOT.owned_states_at_game_start
-					value = THIS
-				}
+				has_state_flag = RAJ_owned_states_at_game_start
 			}
 			prioritize = { 429 } #Bombay
 
@@ -19420,10 +19231,7 @@ focus = {
 					size > 0
 					include_locked = yes
 				}
-				is_in_array = {
-					array = ROOT.owned_states_at_game_start
-					value = THIS
-				}
+				has_state_flag = RAJ_owned_states_at_game_start
 			}
 			random_select_amount = 3
 			add_extra_state_shared_building_slots = 1
@@ -22491,10 +22299,7 @@ focus = {
             every_controlled_state = {
                 random_select_amount = 2
                 limit = {
-                    is_in_array = {
-                        array = ROOT.owned_states_at_game_start
-                        value = THIS
-                    }
+                    has_state_flag = RAJ_owned_states_at_game_start
 
                     has_resistance = yes
                 }

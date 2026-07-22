@@ -394,13 +394,36 @@ on_actions = {
 				}
 			}
 			if = {
-				limit = {
-					has_country_flag = no_spain
-                	has_country_flag = no_finland
+				limit = { date > 1939.2.28 }
+				if = {
+					limit = {
+						FIN = { is_ai = yes }
+						OR = {
+							has_game_rule = {
+								rule = finland_simulator
+								option = on
+							}
+							has_game_rule = {
+								rule = finland_simulator
+								option = on_cp_only
+							}
+						}
+					}
+					BUL = { add_country_leader_trait = bul_sotamarsalkka }
 				}
-				BUL = {
-					remove_country_leader_trait = bul_caudillo
-					add_country_leader_trait = bul_caudillo_2
+				else = {
+					BUL = { remove_country_leader_trait = bul_sotamarsalkka }
+				}
+				if = {
+					limit = {
+						has_global_flag = spain_simulator_enabled
+						NOT = { SPA = { is_ai = no } }
+						NOT = { SPR = { is_ai = no } }
+					}
+					BUL = { add_country_leader_trait = bul_caudillo }
+				}
+				else = {
+					BUL = { remove_country_leader_trait = bul_caudillo }
 				}
 			}
 			if = {

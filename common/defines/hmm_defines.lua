@@ -230,6 +230,7 @@ NDefines.NAI.STRIKE_FORCE_TARGET_RECALC_DAYS = 9999 -- vanilla: 5
 NDefines.NAI.AI_OBJECTIVE_DEFAULT_TARGET_RECALC_DAYS = 9999 -- vanilla: 5
 NDefines.NAI.AI_PREFERRED_TACTIC_WEEKLY_CHANGE_CHANCE = 0 -- vanilla: 0.05
 NDefines.NAI.HOURS_BETWEEN_ENCIRCLEMENT_DISCOVERY = 99999	-- vanilla: 72
+NDefines.NAI.MAX_STATE_TARGETS_TO_EVALUATE_PER_HOUR = 12 -- vanilla: 50
 
 -- Disabling the AI Force Concentration mechanic speeds up the game (specifically, reduces CPU overhead), but makes the AI behave in non-vanilla ways
 NDefines.NAI.AIFC_UPDATE_FREQUENCY_DAYS = 9999
@@ -304,6 +305,8 @@ NDefines.NAir.AA_INDUSTRY_AIR_DAMAGE_FACTOR = 0 --Vanilla -0.12
 NDefines_Graphics.NAirGfx.MAX_PATROL_SCENARIOS = 0
 NDefines_Graphics.NAirGfx.MAX_DOGFIGHTS_SCENARIOS = 0
 NDefines_Graphics.NAirGfx.MAX_TRANSPORT_SCENARIOS = 0
+NDefines_Graphics.NAirGfx.MAX_TRAINING_SCENARIOS = 0
+NDefines_Graphics.NAirGfx.MAX_SCOUT_SCENARIOS = 0
 NDefines_Graphics.NGraphics.CAMERA_ZOOM_SPEED_DISTANCE_MULT = 20
 NDefines_Graphics.NGraphics.MAPICON_GROUP_STRATEGIC_SIZE = 1000
 NDefines_Graphics.NGraphics.MAP_ICONS_STATE_HUGE = 100

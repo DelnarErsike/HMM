@@ -892,17 +892,15 @@ country_event = {
 			656 = { set_state_flag = azad_hind_move_to_raj }
 		}
 
-		for_each_scope_loop = {
-			array = RAJ.owned_states_at_game_start
-			if = {
+		every_state = {
 				limit = {
+					has_state_flag = RAJ_owned_states_at_game_start
 					owner = {
 						is_subject_of = ENG
 						has_war_with = RAJ
 					}
 				}
 				set_state_flag = azad_hind_move_to_raj
-			}
 		}
 
 		white_peace = {
@@ -983,17 +981,15 @@ country_event = {
 
 			}
 
-			for_each_scope_loop = {
-				array = RAJ.owned_states_at_game_start
-				if = {
+			every_state = {
 					limit = {
+						has_state_flag = RAJ_owned_states_at_game_start
 						has_state_flag = azad_hind_move_to_raj
 						owner = {
 							NOT = { tag = ROOT }
 						}
 					}
 					ROOT = { transfer_state = PREV }
-				}
 			}
 		}
 
@@ -1471,10 +1467,7 @@ country_event = {
 		#hidden_effect = {
 		#	every_state = {
 		#		limit = {
-		#			is_in_array = {
-		#				array = RAJ.owned_states_at_game_start
-		#				value = THIS
-		#			}
+		#			has_state_flag = RAJ_owned_states_at_game_start
 		#			is_controlled_by = RAJ
 		#		}
 #
@@ -2074,19 +2067,17 @@ country_event = {
 			}
 			if = {
 				limit = {
-					any_of_scopes = {
-						array =  RAJ.owned_states_at_game_start 
-						is_controlled_by = ROOT 
+					any_controlled_state = {
+						has_state_flag = RAJ_owned_states_at_game_start 
 						has_resistance = yes
 						# This option ensures that we can still get the first event in the list
 						resistance < maximum_resistance
 					}
 				}
-				for_each_scope_loop = {
-					array = RAJ.owned_states_at_game_start
+				every_controlled_state = {
 					if = {
 						limit = {
-							is_controlled_by = ROOT 
+							has_state_flag = RAJ_owned_states_at_game_start
 							has_resistance = yes
 							# This option ensures that we can still get the first event in the list
 							resistance < maximum_resistance
@@ -2586,10 +2577,7 @@ country_event = {
 		name =  GOE_RAJ_partition.5.a
 		every_controlled_state = {
 			limit = {
-				is_in_array = {
-					array = RAJ.owned_states_at_game_start
-					value = THIS
-				}
+				has_state_flag = RAJ_owned_states_at_game_start
 
 				has_resistance = yes
 			}
@@ -3817,15 +3805,11 @@ country_event = {
 				add_ideas = neutrality_idea
 			}
 		}
-		for_each_scope_loop = {
-			array = RAJ.raj_releasables
-		
-			if = {
-				limit = {
-					THIS = { exists = yes }
-					NOT = { original_tag = PAK }
-				}
-
+		every_country = {
+			limit = {
+				is_raj_releasable = yes
+				NOT = { original_tag = PAK }
+			}
 				set_rule = { can_declare_war_on_same_ideology = yes }
 				set_rule = { can_only_justify_war_on_threat_country = no }
 				set_rule = { can_join_factions = no }
@@ -3834,7 +3818,6 @@ country_event = {
 					leave_faction = yes
 				}
 				add_ideas = neutrality_idea
-			}
 		}
 
 		if = {
@@ -5361,17 +5344,12 @@ country_event = {
 		has_dlc = "Graveyard of Empires"
 		has_idea = RAJ_risk_of_famine
 		original_tag = RAJ
-		any_of_scopes = {
-			array =  RAJ.owned_states_at_game_start 
+		any_state = {
+			has_state_flag = RAJ_owned_states_at_game_start
 			controller = {
 				has_war_with = RAJ
 				NOT = { original_tag = RAJ }
-				NOT = {
-					is_in_array = {
-						array = RAJ.raj_releasables
-						value = THIS
-					}	
-				}
+				is_raj_releasable = no
 				NOT = { is_subject_of = RAJ }
 			}
 			NOT = { has_state_flag = RAJ_time_to_retake_state_famine }
@@ -5569,11 +5547,10 @@ country_event = {
 				}
 			}
 
-			random_scope_in_array = {
-				array = RAJ.owned_states_at_game_start
+			random_controlled_state = {
 				limit = { 
-					is_controlled_by = ROOT 
 					is_core_of = ROOT
+					has_state_flag = RAJ_owned_states_at_game_start
 				}
 				set_variable = { global.famine_state = THIS }
 			}
@@ -5676,7 +5653,7 @@ country_event = {
 							 	}
 							}
 							if = {
-								limit = { is_in_array = { RAJ.owned_states_at_game_start = THIS } }
+								limit = { has_state_flag = RAJ_owned_states_at_game_start }
 								add_dynamic_modifier = { modifier = idea_RAJ_famine_state }
 
 								ROOT = {  
@@ -6226,10 +6203,7 @@ country_event = {
 			limit = {
 				has_event_target = RAJ_i_want_to_buy_this_land
 				event_target:RAJ_i_want_to_buy_this_land = {
-					is_in_array = {
-						array = RAJ.owned_states_at_game_start
-						value = THIS
-					}
+					has_state_flag = RAJ_owned_states_at_game_start
 				}
 			}
 

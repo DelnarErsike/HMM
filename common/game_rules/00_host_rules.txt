@@ -105,12 +105,12 @@ Australia_AC_rule = {
 	icon = "GFX_decision_generic_air"
 	option = {
 		name = Australia_AC
-		text = "Yes"
+		text = "GYes"
 		desc = "Australia can do its more powerful air focuses"
 	} 
 	default = {
 		name = Australia_no_AC
-		text = "No"
+		text = "RNo"
 		desc = "Australia cannot do its more powerful air focuses"
 	}
 }
@@ -120,12 +120,12 @@ Brasil_AC_rule = {
 	icon = "GFX_decision_generic_air"
 	option = {
 		name = Brasil_AC
-		text = "Yes"
+		text = "GYes"
 		desc = "Brazil can do its air focuses"
 	} 
 	default = {
 		name = Brasil_no_AC
-		text = "No"
+		text = "RNo"
 		desc = "Brazil cannot do its air focuses"
 	}
 
@@ -136,12 +136,12 @@ Finland_AC_rule = {
 	icon = "GFX_decision_generic_air"
 	option = {
 		name = Finland_AC
-		text = "Yes"
+		text = "GYes"
 		desc = "Finland can do its air focuses"
 	} 
 	default = {
 		name = Finland_no_AC
-		text = "No"
+		text = "RNo"
 		desc = "Finland cannot do its air focuses"
 	}
 }
@@ -151,12 +151,12 @@ Iraq_AC_rule = {
 	icon = "GFX_decision_generic_air"
 	option = {
 		name = Iraq_AC
-		text = "Yes"
+		text = "GYes"
 		desc = "Iraq's air focuses can give their more powerful bonuses"
 	} 
 	default = {
 		name = Iraq_no_AC
-		text = "No"
+		text = "RNo"
 		desc = "Iraq's air focuses cannot give their more powerful bonuses"
 	}
 }
@@ -166,141 +166,141 @@ Philippines_AC_rule = {
 	icon = "GFX_decision_generic_air"
 	option = {
 		name = Philippines_AC
-		text = "Yes"
+		text = "GYes"
 		desc = "The Philippines can do their more powerful air focuses"
 	} 
 	default = {
 		name = Philippines_no_AC
-		text = "No"
+		text = "RNo"
 		desc = "The Philippines cannot do their more powerful air focuses"
 	}
 }
 Germany_Wirtschaftswunder = {
-	name = "Select if Germany is allowed to complete Prioritize Economic Growth "
+	name = "Can Germany complete Prioritize Economic Growth (Left Side Eco)?"
 	group = "HMM Rules"
 	icon = "GFX_volunteers"
 	default = {
 		name = Germany_no_wirtschaftswunder
-		text = "Germany can't do the Left Side Economy Tree"
-		desc = ""
+		text = "RNo"
+		desc = "Germany cannot do any focuses on the left side of its economy tree."
 	}
 	option = {
 		name = Germany_wirtschaftswunder
-		text = "Germany can do the Left Side Economy Tree"
-		desc = ""
+		text = "GYes"
+		desc = "Germany can opt to do focuses on the left side of its economy tree."
 	}
 
 }
 Germany_Cancel_Mefo= {
-	name = "Select if Germany is allowed to cancel MEFO Bills"
+	name = "Can Germany cancel MEFO Bills prematurely?"
 	group = "HMM Rules"
 	icon = "GFX_volunteers"
 	default = {
 		name = Germany_no_cancel_MEFO_Bills
-		text = "Germany can't cancel MEFO Bills"
-		desc = ""
+		text = "RNo"
+		desc = "Germany cannot cancel MEFO Bills and is forced onto Economy of Conquest."
 	}
 	option = {
 		name = Germany_cancel_MEFO_Bills
-		text = "Germany can cancel MEFO Bills"
-		desc = ""
+		text = "GYes"
+		desc = "Germany can cancel MEFO Bills."
 	}
 
 }
 Germany_Fate_of_yugo= {
-	name = "Select if Germany is allowed to annex Yugoslavia"
+	name = "Can Germany annex Yugoslavia through focuses?"
 	group = "HMM Rules"
 	icon = "GFX_volunteers"
 	default = {
 		name = Germany_no_fate_of_yugo
-		text = "Germany can't annex Yugoslavia"
-		desc = ""
+		text = "RNo"
+		desc = "Germany cannot annex Yugoslavia through its focuses."
 	}
 	option = {
 		name = Germany_fate_of_yugo
-		text = "Germany can annex Yugoslavia"
-		desc = ""
+		text = "GYes"
+		desc = "Germany can annex Yugoslavia through its focuses."
 	}
 
 }
 urban_assault_vechile= {
-	name = "Select if Urban Assault Vehicle is allowed or not "
+	name = "Status of Assault Engineer Support Companies"
 	group = "HMM Rules"
 	icon = "GFX_decision_generic_tank"
 	default = {
 		name = off
-		text = "You CANNOT research armoured engineer company."
-		desc = "You also don't get the urban assault vehicle."
+		text = "RBanned"
+		desc = "Assault engineer support companies are not unlocked after finishing the Military Engineering Vehicles special project."
 	}
 	option = {
 		name = on
-		text = "You CAN research armoured engineer company"
-		desc = "You also get the urban assault vehicle."
+		text = "GAllowed"
+		desc = "Assault engineer support companies are unlocked as normal after finishing the Military Engineering Vehicles special project."
 	}
 }
 railway_gun= {
-	name = "Select if Railway Gun is allowed or not "
+	name = "Status of Railway Guns"
 	group = "HMM Rules"
 	icon = "GFX_decision_generic_ignite_civil_war"
 	default = {
 		name = off
-		text = "You CANNOT research Railway Battery."
-		desc = "###."
+		text = "RBanned"
+		desc = "Railway guns cannot be researched, and focuses, decisions, or events that would unlock them and/or spawn them in do not do that."
 	}
 	option = {
 		name = on
-		text = "You CAN research Railway Battery."
-		desc = "###"
+		text = "GAllowed"
+		desc = "Railway guns can be researched and built, and focuses, decisions, and events that unlock and/or spawn in railway guns are unaffected."
 	}
 }
 super_heavy_railway_gun= {
-	name = "Select if Super Heavy Railway Battery is allowed or not "
+	name = "Status of Super-Heavy Railway Guns"
 	group = "HMM Rules"
 	icon = "GFX_decision_generic_ignite_civil_war"
 	default = {
 		name = off
-		text = "You CANNOT research Super Heavy Railway Battery."
-		desc = "###."
+		text = "RBanned"
+		desc = "Super-heavy railway guns cannot be researched."
 	}
 	option = {
 		name = on
-		text = "You CAN research Super Heavy Railway Battery."
-		desc = "###"
+		text = "GAllowed"
+		desc = "Super-heavy railway guns can be researched and built, assuming ordinary railway guns can also be researched."
 	}
 }
 multi_charge_large_caliber_gun= {
-	name = "Select if Multi Charge LCG is allowed or not "
+	name = "Status of Multi-Charge Large Caliber Guns"
 	group = "HMM Rules"
 	icon = "GFX_decision_generic_ignite_civil_war"
 	default = {
 		name = off
-		text = "You CANNOT research Multi Charge LCG."
-		desc = "###."
+		text = "RBanned"
+		desc = "Multi-charge large caliber guns cannot be researched."
 	}
 	option = {
 		name = on
-		text = "You CAN research Multi Charge LCG."
-		desc = "###"
+		text = "GAllowed"
+		desc = "Multi-charge large caliber guns can be researched and built."
 	}
 }
 max_submarine_tech= {
-	name = "Select if Submarine 3 and 4 are allowed. "
+	name = "Maximum Submarine Tech Level"
 	group = "HMM Rules"
 	icon = "GFX_decision_generic_ignite_civil_war"
 	default = {
 		name = sub2
-		text = "You CANNOT research Submarine 3 or 4."
-		desc = "###."
+		text = "R1936"
+		desc = "1939 submarine hulls, 1943 submarine hulls, and all snorkel techs are banned, and fleet submarines are indirectly banned."
 	}
 	option = {
 		name = sub3
-		text = "You CAN research Submarine 3 and Snorkel 1."
-		desc = "###"
+		text = "Y1939"
+		desc = "1943 submarine hulls and Improved Snorkel technologies are banned."
 	}
 	option = {
 		name = sub4
-		text = "You CAN research Submarine 4 and Snorkel 2."
-		desc = "###"
+		text = "G1943"
+		desc = "All submarine technologies are allowed."
 	}
 }
 sov_boost = {
@@ -314,12 +314,12 @@ sov_boost = {
 	}
 	option = {
 		name = sov4
-		text = "ROn-4"
+		text = "YOn-4"
 		desc = "Soviets receives 4 Civilian factories"
 	}
 	option = {
 		name = sov8
-		text = "ROn-8"
+		text = "OOn-8"
 		desc = "Soviets receives 8 Civilian factories"
 	}
 	option = {
@@ -340,12 +340,12 @@ ger_boost = {
 	}
 	option = {
 		name = ger4
-		text = "ROn-4"
+		text = "YOn-4"
 		desc = "Germany get 4 Civilian factories (Not Recommmended)"
 	}
 	option = {
 		name = ger8
-		text = "ROn-8"
+		text = "OOn-8"
 		desc = "Germany get 8 Civilian factories (Not Recommmended)"
 	}
 	option = {
@@ -365,12 +365,12 @@ jap_boost = {
 	}
 	option = {
 		name = jap4
-		text = "ROn-4"
+		text = "YOn-4"
 		desc = "Japan receives 4 Civilian factories"
 	}
 	option = {
 		name = jap8
-		text = "ROn-8"
+		text = "OOn-8"
 		desc = "Japan receives 8 Civilian factories)"
 	}
 	option = {
@@ -390,12 +390,12 @@ eng_boost = {
 	}
 	option = {
 		name = eng4
-		text = "ROn-4"
+		text = "YOn-4"
 		desc = "Britain receives 4 Civilian factories"
 	}
 	option = {
 		name = eng8
-		text = "ROn-8"
+		text = "OOn-8"
 		desc = "Britain receives 8 Civilian factories"
 	}
 	option = {
@@ -415,12 +415,12 @@ ita_boost = {
 	}
 	option = {
 		name = ita4
-		text = "ROn-4"
+		text = "YOn-4"
 		desc = "Italy receives 4 Civilian factories"
 	}
 	option = {
 		name = ita8
-		text = "ROn-8"
+		text = "OOn-8"
 		desc = "Italy receives 8 Civilian factories"
 	}
 	option = {
@@ -440,12 +440,12 @@ fra_boost = {
 	}
 	option = {
 		name = fra4
-		text = "ROn-4"
+		text = "YOn-4"
 		desc = "France receives 4 Civilian factories"
 	}
 	option = {
 		name = fra8
-		text = "ROn-8"
+		text = "OOn-8"
 		desc = "France receives 8 Civilian factories"
 	}
 	option = {
@@ -465,12 +465,12 @@ usa_boost = {
 	}
 	option = {
 		name = usa4
-		text = "ROn-4"
+		text = "YOn-4"
 		desc = "USA receives 4 Civilian factories"
 	}
 	option = {
 		name = usa8
-		text = "ROn-8"
+		text = "OOn-8"
 		desc = "USA receives 8 Civilian factories"
 	}
 }
@@ -480,17 +480,17 @@ playable_iraq = {
 	icon = "GFX_decision_category_usa_intervention_mandate"
 	default = {
 		name = annexed
-		text = "Annexed into UK"
+		text = "YAnnexed into UK"
 		desc = "Iraq is instantly annexed into the UK at the start of the game"
 	}
 	option = {
 		name = axis
-		text = "Axis"
+		text = "RAxis"
 		desc = "Iraq is playable and on the Axis"
 	}
 	option = {
 		name = allies
-		text = "Allies"
+		text = "4Allies"
 		desc = "Iraq is playable and on the Allies"
 	}
 }
@@ -539,19 +539,29 @@ spanish_production = {
 		desc = "No DDAY wall"
 	}
 }
-finish_production = {
-	name = "Finnish Production"
+finland_simulator = {
+	name = "Finland Simulator"
 	group = "HMM Rules"
 	icon = "GFX_decision_generic_industry"
 	option = {
-		name = ger_gun
-		text = "GGerman Lend Lease for Guns"
-		desc = "The gun amount progressively increases as time passes"
+		name = on
+		text = "GOn"
+		desc = "Germany gets a decision after 1st March 1939 that is enabled if there is no player on Finland. After taking the decision, Germany and Italy will get Swedish infantry equipment spawned in every month, simulating Finnish lend-lease. After 1st March 1939, Bulgaria will also get a special trait increasing their command power cap to simulate being able to send expeditionary forces to Finland. Both of these effects are (temporarily) disabled if/when Finland becomes player-controlled."
+	}
+	option = {
+		name = on_ll_only
+		text = "YOn (Lend-Lease Only)"
+		desc = "Germany gets a decision after 1st March 1939 that is enabled if there is no player on Finland. After taking the decision, Germany and Italy will get Swedish infantry equipment spawned in every month, simulating Finnish lend-lease. This effect is (temporarily) disabled if/when Finland becomes player-controlled."
+	}
+	option = {
+		name = on_cp_only
+		text = "OOn (Command Power Only)"
+		desc = "After 1st March 1939, Bulgaria will get a special trait increasing their command power cap to simulate being able to send expeditionary forces to Finland. This effect is (temporarily) disabled if/when Finland becomes player-controlled."
 	}
 	default = {
 		name = off
-		text = "RNo German Lend Lease for Guns"
-		desc = "Use if Finland has a player on it"
+		text = "ROff"
+		desc = "Axis does not get free infantry equipment simulating lend-lease from Finland or free command power simulating the ability to expeditionary units to Finland."
 	}
 }
 axis_fuel_spirit = {
@@ -565,13 +575,38 @@ axis_fuel_spirit = {
 	}
 	option = {
 		name = on_ita
-		text = "GOn (Italy)"
+		text = "4On (Italy)"
 		desc = "Romanian and Hungarian oil decisions and focuses are replaced with a spirit on Italy that gives fuel."
 	}
 	option = {
 		name = off
 		text = "ROff"
 		desc = "Romanian and Hungarian oil decisions and focuses are kept as they are in the base game."
+	}
+}
+who_gets_saf_annex = {
+	name = "Who Gets the Annex South Africa Decision If It Is Not Player-Controlled?"
+	group = "HMM Rules"
+	icon = "GFX_volunteers"
+	option = {
+		name = fra
+		text = "4France"
+		desc = "France will get the decision to annex South Africa if there is no player on it."
+	}
+	option = {
+		name = ast
+		text = "GAustralia"
+		desc = "Australia will get the decision to annex South Africa if there is no player on it."
+	}
+	default = {
+		name = raj
+		text = "OBritish Raj"
+		desc = "British Raj will get the decision to annex South Africa if there is no player on it."
+	}
+	option = {
+		name = eng
+		text = "RUnited Kingdom"
+		desc = "The United Kingdom will get the decision to annex South Africa if there is no player on it."
 	}
 }
 battlefield_support_status = {
@@ -585,12 +620,12 @@ battlefield_support_status = {
 	}
 	option = {
 		name = axis
-		text = "YAxis Only"
+		text = "OAxis Only"
 		desc = "Battlefield Support is only allowed for Axis countries."
 	}
 	option = {
 		name = allies
-		text = "YAllies Only"
+		text = "4Allies Only"
 		desc = "Battlefield Support is only allowed for Allied countries."
 	}
 	option = {
@@ -603,19 +638,19 @@ pinpoint_strikes_status = {
 	name = "The Pinpoint Strikes subdoctrine is..."
 	group = "HMM Rules"
 	icon = "GFX_decision_generic_air"
-	default = {
+	option = {
 		name = banned
 		text = "RFully Banned"
 		desc = "Pinpoint Strikes cannot be taken by anyone."
 	}
 	option = {
 		name = axis
-		text = "YAxis Only"
+		text = "OAxis Only"
 		desc = "Pinpoint Strikes is only allowed for Axis countries."
 	}
-	option = {
+	default = {
 		name = allies
-		text = "YAllies Only"
+		text = "4Allies Only"
 		desc = "Pinpoint Strikes is only allowed for Allied countries."
 	}
 	option = {
@@ -628,19 +663,19 @@ ground_support_subdoctrines_status = {
 	name = "Ground Support-giving subdoctrines are..."
 	group = "HMM Rules"
 	icon = "GFX_decision_generic_air"
-	default = {
+	option = {
 		name = banned
 		text = "RFully Banned"
 		desc = "Air subdoctrines that provide ground support bonuses cannot be taken by anyone."
 	}
 	option = {
 		name = axis
-		text = "YAxis Only"
+		text = "OAxis Only"
 		desc = "Air subdoctrines that provide ground support bonuses are only allowed for Axis countries."
 	}
-	option = {
+	default = {
 		name = allies
-		text = "YAllies Only"
+		text = "4Allies Only"
 		desc = "Air subdoctrines that provide ground support bonuses are only allowed for Allied countries."
 	}
 	option = {

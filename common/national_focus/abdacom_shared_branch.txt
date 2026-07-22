@@ -328,10 +328,7 @@ joint_focus = {
 		}
 		every_state = {
 			limit = {
-				is_in_array = {
-					array = INS.owned_states_at_game_start
-					value = THIS
-				}
+				has_state_flag = INS_owned_states_at_game_start
 				OR = {
 					is_controlled_by = INS
 					is_controlled_by = HOL

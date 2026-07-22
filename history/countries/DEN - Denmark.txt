@@ -335,25 +335,17 @@ if = {
 	set_variable = { DEN_very_long_reset_time = 545 }
 
 	#Initializing Development Array
-	add_to_array = {
-	    array = DEN_original_core_states_array
-	    value = 101 #GREENLAND
-	    index = 0
-	}
 	#States to add to the Development Array
-	add_to_array = { DEN_original_core_states_array = 37 } #Sjaelland
-	add_to_array = { DEN_original_core_states_array = 911 } #Fyn
-	add_to_array = { DEN_original_core_states_array = 99 } #Norrejylland
-	add_to_array = { DEN_original_core_states_array = 912 } #Sonderjylland
-	add_to_array = { DEN_original_core_states_array = 910 } #Bornholm
-	add_to_array = { DEN_original_core_states_array = 337 } #Faroes
-	add_to_array = { DEN_original_core_states_array = 124 } #Gotland
-	add_to_array = { DEN_original_core_states_array = 100 } #Iceland
 	#Set up variable in each state
-	for_each_scope_loop = {
-	    array = DEN_original_core_states_array
-	    set_variable = { DEN_develop_state_cost = 25 }
-	}
+	101 = { set_variable = { DEN_develop_state_cost = 25 } } # Greenland
+	37 = { set_variable = { DEN_develop_state_cost = 25 } } #Sjaelland
+	911 = { set_variable = { DEN_develop_state_cost = 25 } } #Fyn
+	99 = { set_variable = { DEN_develop_state_cost = 25 } } #Norrejylland
+	912 = { set_variable = { DEN_develop_state_cost = 25 } } #Sonderjylland
+	910 = { set_variable = { DEN_develop_state_cost = 25 } } #Bornholm
+	337 = { set_variable = { DEN_develop_state_cost = 25 } } #Faroes
+	124 = { set_variable = { DEN_develop_state_cost = 25 } } #Gotland
+	100 = { set_variable = { DEN_develop_state_cost = 25 } } #Iceland
 
 	#set_variable = { DEN_unruly_subject_modifier = -10 } #Modifying Opinions this way doesn't work yet
 }
@@ -403,8 +395,6 @@ if = {
 		communism = DEN_communism_popularity
 		neutrality = DEN_neutrality_popularity
 	}
-
-	store_core_states_on_game_start = yes
 }
 if = {
 	limit = {

@@ -206,6 +206,57 @@ ai_black = {
 		tag = SWE
 	}
 }
+# Better to have these statically set than saved dynamically in an array
+malaya_states = {
+	OR = {
+		state = 1060
+		state = 1063
+		state = 336
+		state = 1064
+		state = 1065
+		state = 1062
+		state = 1064
+		state = 1061
+		state = 1021 #Singapore
+	}
+}
+indochina_states = {
+	OR = {
+		state = 1069
+		state = 670
+		state = 671
+		state = 1017
+		state = 1068
+		state = 286
+		state = 1067
+		state = 741
+		state = 1066
+	}
+}
+malaysia_burma_states = {
+	OR = {
+		state = 994
+		state = 999
+		state = 993
+		state = 1061
+		state = 1065
+		state = 1062
+		state = 1064
+	}
+}
+INS_releasables = {
+	OR = {
+		original_tag = ATJ
+		original_tag = BLI
+		original_tag = SSI
+		original_tag = TNE
+		original_tag = GOW
+		original_tag = POK
+		original_tag = TML
+		original_tag = PNG
+		original_tag = WPG
+	}
+}
 
 DIPLOMACY_PEACE_PROPOSAL_ENABLE_TRIGGER = {
 	always = no
