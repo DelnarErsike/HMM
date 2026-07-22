@@ -236,6 +236,9 @@ country_event = {
 	}
 	option = {
 		name = mexico.2.b
+		trigger = {
+			NOT = { MEX = { has_idea = MEX_cedillo_tension_3 } } # HMM: Prevent accidental civil wars (embargo would increase tension by 1 step)
+		}
 		
 		add_opinion_modifier = {
 			target = FROM
@@ -1015,7 +1018,10 @@ country_event = {
 	
 	option = {
 		name = mexico.16.a # Support the strikers
-		trigger = { is_ai = no }
+		trigger = {
+			is_ai = no # HMM: Prevent AI civil wars
+			NOT = { has_idea = MEX_cedillo_tension_3 } # HMM: Prevent accidental civil war (we can't check for mission timeout, so just lock us out if we're in Tensions High)
+		}
 		if = {
 			limit = {
 				OR = {
