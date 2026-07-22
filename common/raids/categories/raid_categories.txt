@@ -1,4 +1,30 @@
 categories = {
+
+	air_raids = {
+	    visible = { has_dlc = "Gotterdammerung" }
+	    intel_source = air
+	    faction_influence_score_on_success = 200
+		visible = {
+			always = no
+		}
+		available = {
+			always = no
+		}
+	}
+	
+
+	paratrooper_raids = {
+	    intel_source = air
+	    visible = { has_dlc = "Gotterdammerung" }
+	    faction_influence_score_on_success = 100
+		visible = {
+			always = no
+		}
+		available = {
+			always = no
+		}
+	}
+
 	
 	nuclear_raids = {
 	    intel_source = air
@@ -22,6 +48,17 @@ categories = {
 
 		available = {
 			has_any_captured_general = yes
+		}
+	}
+
+	naval_commando_raids = {
+		intel_source = naval
+		faction_influence_score_on_success = 50
+		visible = {
+			always = no
+		}
+		available = {
+			always = no
 		}
 	}
 
