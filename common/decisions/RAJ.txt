@@ -107,10 +107,11 @@ RAJ_population_decisions = {
 
 		state_target = yes
 
-		target_array = ROOT.owned_states_at_game_start
+		target_array = controlled_states
 		
 		target_trigger = {			
 			FROM = {
+				has_state_flag = RAJ_owned_states_at_game_start
 				is_fully_controlled_by = ROOT
 				NOT = {
 					state = 439

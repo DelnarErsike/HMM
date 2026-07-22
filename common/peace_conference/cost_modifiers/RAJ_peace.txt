@@ -22,11 +22,9 @@ peace_action_modifiers = {
 
         enable = {
             FROM = { tag = RAJ }
-
-            is_in_array = {
-                array = RAJ.owned_states_at_game_start
-                value = FROM.FROM.FROM
-            }   
+            FROM.FROM.FROM = {
+                has_state_flag = RAJ_owned_states_at_game_start
+            }
         }
 
         cost_multiplier = 0.05

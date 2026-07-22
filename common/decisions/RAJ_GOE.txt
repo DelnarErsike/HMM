@@ -30,7 +30,7 @@ RAJ_GOE_independence_movement = {
 			FROM = {
 				has_resistance = yes
 				resistance > 0
-				is_in_array = { RAJ.owned_states_at_game_start = THIS }
+				has_state_flag = RAJ_owned_states_at_game_start
 				is_controlled_by = RAJ
 			}
 		}
@@ -79,11 +79,11 @@ RAJ_GOE_independence_movement = {
 			original_tag = RAJ
 			has_completed_focus = RAJ_promote_violence_against_the_british	
 		}
-		target_array = RAJ.owned_states_at_game_start
+		target_array = controlled_states
 		target_trigger = {			
 			FROM = {
 				has_resistance = yes
-				is_controlled_by = ROOT
+				has_state_flag = RAJ_owned_states_at_game_start
 			}
 		}
 		on_map_mode = map_only
@@ -170,12 +170,11 @@ RAJ_GOE_independence_movement = {
 			has_completed_focus = RAJ_protest_against_the_howell_monument	
 		}
 
-		target_array = RAJ.owned_states_at_game_start
+		target_array = owned_controlled_states
 
 		target_trigger = {			
 			FROM = {
-				is_core_of = ROOT
-				is_controlled_by = ROOT
+				has_state_flag = RAJ_owned_states_at_game_start
 			}
 		}
 		
@@ -440,7 +439,7 @@ RAJ_GOE_india_indivisible_cat = {
 		target_trigger = {			
 			FROM = { 
 				NOT = { is_core_of = ROOT }  
-			 	is_in_array = { array = RAJ.owned_states_at_game_start value = THIS } 
+			 	has_state_flag = RAJ_owned_states_at_game_start
 			 	is_controlled_by = ROOT
 			 }
 		}
@@ -486,7 +485,7 @@ RAJ_GOE_india_indivisible_cat = {
 			FROM = {  
 				is_owned_and_controlled_by = ROOT 
 				NOT = { is_core_of = ROOT }  
-			 	NOT = { is_in_array = { array = RAJ.owned_states_at_game_start value = THIS } }
+			 	NOT = { has_state_flag = RAJ_owned_states_at_game_start }
 			 }
 		}
 		remove_effect = {
@@ -1357,10 +1356,8 @@ RAJ_akhand_bharat_cat = {
 			is_raj_or_raj_inheritor = yes
 		}
 		available = {
-			RAJ = {
-				all_of_scopes = {
-					array = RAJ.owned_states_at_game_start
-
+				every_state = {
+					has_state_flag = RAJ_owned_states_at_game_start
 					if = {
 						limit = {
 							NOT = {
@@ -1378,12 +1375,12 @@ RAJ_akhand_bharat_cat = {
 					}
 					tooltip = RAJ_akhand_bharat_availability_tt 
 				}
-			}
 		}
 
 		visible = {
-			any_of_scopes = {
-				array = RAJ.owned_states_at_game_start
+			any_state_in = {
+				ai_area = raj_starting_regions
+				has_state_flag = RAJ_owned_states_at_game_start
 				NOT = { is_core_of = RAJ }
 				NOT = {
 					is_core_of = PAK
@@ -1400,7 +1397,7 @@ RAJ_akhand_bharat_cat = {
 		highlight_states = {
 			highlight_states_trigger = {
 				AND = {
-					is_in_array = { array = RAJ.owned_states_at_game_start value = THIS } 
+					has_state_flag = RAJ_owned_states_at_game_start
 					NOT = { is_core_of = ROOT }
 				}
 			}
@@ -1408,7 +1405,7 @@ RAJ_akhand_bharat_cat = {
 		complete_effect = {
 			every_state = {
 				limit = {
-					is_in_array = { array = RAJ.owned_states_at_game_start value = THIS }
+					has_state_flag = RAJ_owned_states_at_game_start
 					NOT = {
 						is_core_of = PAK
 						is_core_of = BAN
@@ -1428,7 +1425,7 @@ RAJ_akhand_bharat_cat = {
 				array = claimed_by_akhand_bharat
 				if = {
 					limit = { 
-						is_in_array = { array = RAJ.owned_states_at_game_start value = THIS }
+						has_state_flag = RAJ_owned_states_at_game_start
 						NOT = {
 							is_core_of = PAK
 							is_core_of = BAN
@@ -1791,10 +1788,15 @@ RAJ_akhand_bharat_cat = {
 				}
 			}
 
-			all_of_scopes = {
-				array = RAJ.owned_states_at_game_start
-				is_fully_controlled_by = ROOT
-				is_core_of = ROOT
+			NOT = {
+				any_state_in = {
+					ai_area = raj_starting_regions
+					has_state_flag = RAJ_owned_states_at_game_start
+					OR = {
+						NOT = { is_fully_controlled_by = ROOT }
+						NOT = { is_core_of = ROOT }
+					}
+				}
 			}
 
 		}
@@ -1833,7 +1835,7 @@ RAJ_akhand_bharat_cat = {
 	
 }
 
-RAJ_military_matters = { #removed
+#RAJ_military_matters = { #removed
 	#	RAJ_establish_local_recruitment_offices = {
 	#		icon = decision_generic_political_discourse
 	#		allowed = { 
@@ -1882,7 +1884,7 @@ RAJ_military_matters = { #removed
 	#		}
 	#	}
 	#}
-}
+#}
 
 propaganda_efforts = {
 RAJ_GOE_campaign_against_agrarian_societys = {
@@ -2777,18 +2779,12 @@ RAJ_GOE_eic_hostile_takeover_cat = {
 					is_ai = yes
 					NOT = { has_completed_focus = RAJ_deathknell_to_the_raj }
 				}
-				is_in_array = {
-					array = RAJ.owned_states_at_game_start
-					value = FROM
-				}
+				FROM = { has_state_flag = RAJ_owned_states_at_game_start }
 			}
 
 			if = {
 				limit = {
-					is_in_array = {
-						array = RAJ.owned_states_at_game_start
-						value = FROM
-					}
+					FROM = { has_state_flag = RAJ_owned_states_at_game_start }
 				}
 				check_variable = { actually_controlled_civs > 1 tooltip = RAJ_hostile_takeover_cost_rebate }
 			}
@@ -2880,10 +2876,7 @@ RAJ_GOE_eic_hostile_takeover_cat = {
 
 			modifier = {
 
-				is_in_array = {
-					array = RAJ.owned_states_at_game_start
-					value = FROM
-				}
+				FROM = { has_state_flag = RAJ_owned_states_at_game_start }
 				num_of_controlled_factories > 9
 				num_of_controlled_states < 6
 			
@@ -2892,10 +2885,7 @@ RAJ_GOE_eic_hostile_takeover_cat = {
 			}
 			modifier = {
 
-				is_in_array = {
-					array = RAJ.owned_states_at_game_start
-					value = FROM
-				}
+				FROM = { has_state_flag = RAJ_owned_states_at_game_start }
 				num_of_controlled_factories > 17
 				num_of_controlled_states > 5
 
@@ -2905,10 +2895,7 @@ RAJ_GOE_eic_hostile_takeover_cat = {
 			modifier = {
 
 				NOT = {
-					is_in_array = {
-						array = RAJ.owned_states_at_game_start
-						value = FROM
-					}
+					FROM = { has_state_flag = RAJ_owned_states_at_game_start }
 				}
 				has_completed_focus = RAJ_deathknell_to_the_raj
 				num_of_owned_factories > 30
@@ -2974,10 +2961,7 @@ RAJ_GOE_eic_hostile_takeover_cat = {
 				effect_tooltip = {
 					if = {
 						limit = {
-							is_in_array = {
-								array = RAJ.owned_states_at_game_start
-								value = FROM
-							}
+							FROM = { has_state_flag = RAJ_owned_states_at_game_start }
 						}
 						FROM.owner = { 
 							add_offsite_building = {
@@ -5913,21 +5897,15 @@ RAJ_work_with_local_leaders_cat = {
 							limit = {
 								any_owned_state = {
 									is_fully_controlled_by = ROOT
-									is_in_array = {
-										array = ROOT.owned_states_at_game_start
-										value = THIS
-									}
+									has_state_flag = RAJ_owned_states_at_game_start
 									infrastructure < 5
 								}
 							}
 							log = "IF"
-							random_owned_state = {
+							random_owned_controlled_state = {
 								limit = {
 									is_fully_controlled_by = ROOT
-									is_in_array = {
-										array = ROOT.owned_states_at_game_start
-										value = THIS
-									}
+									has_state_flag = RAJ_owned_states_at_game_start
 									infrastructure < 5
 								}
 								add_building_construction = {
@@ -5952,10 +5930,7 @@ RAJ_work_with_local_leaders_cat = {
 							limit = {
 								any_owned_state = {
 									is_fully_controlled_by = ROOT
-									is_in_array = {
-										array = ROOT.owned_states_at_game_start
-										value = THIS
-									}
+									has_state_flag = RAJ_owned_states_at_game_start
 									free_building_slots = {
 										building = industrial_complex
 										size > 0
@@ -5964,13 +5939,10 @@ RAJ_work_with_local_leaders_cat = {
 								}
 							}
 							log = "ELSE IF"
-							random_owned_state = {
+							random_owned_controlled_state = {
 								limit = {
 									is_fully_controlled_by = ROOT
-									is_in_array = {
-										array = ROOT.owned_states_at_game_start
-										value = THIS
-									}
+									has_state_flag = RAJ_owned_states_at_game_start
 									free_building_slots = {
 										building = industrial_complex
 										size > 0
@@ -6017,10 +5989,7 @@ RAJ_work_with_local_leaders_cat = {
 							limit = {
 								any_owned_state = {
 									is_fully_controlled_by = ROOT
-									is_in_array = {
-										array = ROOT.owned_states_at_game_start
-										value = THIS
-									}
+									has_state_flag = RAJ_owned_states_at_game_start
 									free_building_slots = {
 										building = industrial_complex
 										size > 0
@@ -6029,13 +5998,10 @@ RAJ_work_with_local_leaders_cat = {
 									infrastructure < 5
 								}
 							}
-							random_owned_state = {
+							random_owned_controlled_state = {
 								limit = {
 									is_fully_controlled_by = ROOT
-									is_in_array = {
-										array = ROOT.owned_states_at_game_start
-										value = THIS
-									}
+									has_state_flag = RAJ_owned_states_at_game_start
 									free_building_slots = {
 										building = industrial_complex
 										size > 1
@@ -6060,10 +6026,7 @@ RAJ_work_with_local_leaders_cat = {
 							limit = {
 								any_owned_state = {
 									is_fully_controlled_by = ROOT
-									is_in_array = {
-										array = ROOT.owned_states_at_game_start
-										value = THIS
-									}
+									has_state_flag = RAJ_owned_states_at_game_start
 									free_building_slots = {
 										building = industrial_complex
 										size > 1
@@ -6071,13 +6034,10 @@ RAJ_work_with_local_leaders_cat = {
 									}
 								}
 							}
-							random_owned_state = {
+							random_owned_controlled_state = {
 								limit = {
 									is_fully_controlled_by = ROOT
-									is_in_array = {
-										array = ROOT.owned_states_at_game_start
-										value = THIS
-									}
+									has_state_flag = RAJ_owned_states_at_game_start
 									free_building_slots = {
 										building = industrial_complex
 										size > 1
@@ -6161,10 +6121,7 @@ RAJ_work_with_local_leaders_cat = {
 							limit = {
 								any_owned_state = {
 									is_fully_controlled_by = ROOT
-									is_in_array = {
-										array = ROOT.owned_states_at_game_start
-										value = THIS
-									}
+									has_state_flag = RAJ_owned_states_at_game_start
 									free_building_slots = {
 										building = arms_factory
 										size > 0
@@ -6173,13 +6130,10 @@ RAJ_work_with_local_leaders_cat = {
 									infrastructure < 5
 								}
 							}
-							random_owned_state = {
+							random_owned_controlled_state = {
 								limit = {
 									is_fully_controlled_by = ROOT
-									is_in_array = {
-										array = ROOT.owned_states_at_game_start
-										value = THIS
-									}
+									has_state_flag = RAJ_owned_states_at_game_start
 									free_building_slots = {
 										building = arms_factory
 										size > 1
@@ -6204,10 +6158,7 @@ RAJ_work_with_local_leaders_cat = {
 							limit = {
 								any_owned_state = {
 									is_fully_controlled_by = ROOT
-									is_in_array = {
-										array = ROOT.owned_states_at_game_start
-										value = THIS
-									}
+									has_state_flag = RAJ_owned_states_at_game_start
 									free_building_slots = {
 										building = arms_factory
 										size > 1
@@ -6215,13 +6166,10 @@ RAJ_work_with_local_leaders_cat = {
 									}
 								}
 							}
-							random_owned_state = {
+							random_owned_controlled_state = {
 								limit = {
 									is_fully_controlled_by = ROOT
-									is_in_array = {
-										array = ROOT.owned_states_at_game_start
-										value = THIS
-									}
+									has_state_flag = RAJ_owned_states_at_game_start
 									free_building_slots = {
 										building = arms_factory
 										size > 1
@@ -6300,23 +6248,17 @@ RAJ_work_with_local_leaders_cat = {
 							limit = {
 								any_owned_state = {
 									is_fully_controlled_by = ROOT
-									is_in_array = {
-										array = ROOT.owned_states_at_game_start
-										value = THIS
-									}
+									has_state_flag = RAJ_owned_states_at_game_start
 									free_building_slots = { #AA is not granted and you can have 1 supply Hub per province so this is the only reliable limiting factor
 										building = air_base
 										size > 0
 									}
 								}
 							}
-							random_owned_state = {
+							random_owned_controlled_state = {
 								limit = {	
 									is_fully_controlled_by = ROOT
-									is_in_array = {
-										array = ROOT.owned_states_at_game_start
-										value = THIS
-									}
+									has_state_flag = RAJ_owned_states_at_game_start
 									free_building_slots = { #AA is not granted and you can have 1 supply Hub per province so this is the only reliable limiting factor
 										building = air_base
 										size > 0

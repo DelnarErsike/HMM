@@ -9,7 +9,7 @@ peace_ai_desires = {
         enable = {
             FROM.FROM.FROM = {
                OR = {
-                   is_in_array = { RAJ.owned_states_at_game_start = THIS }
+                   has_state_flag = RAJ_owned_states_at_game_start
                    is_core_of = RAJ # Indian Core Territory
                }
             }
@@ -25,7 +25,7 @@ peace_ai_desires = {
             original_tag = RAJ  # Negotiatior is India
             FROM.FROM.FROM = { 
                 OR = {
-                    is_in_array = { RAJ.owned_states_at_game_start = THIS }
+                    has_state_flag = RAJ_owned_states_at_game_start
                     is_core_of = RAJ # Indian Core Territory
                 }
             }  

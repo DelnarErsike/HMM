@@ -1,0 +1,19 @@
+# We don't really use these for the AI, but instead as a way to statically cache and handle specific regions that have code executed on them later
+areas = {
+    raj_starting_regions = {
+        strategic_regions = {
+            31
+            141
+            146
+            153
+            190
+            230
+            231
+            251
+            254
+            290
+            291
+            296
+        }
+    }
+}

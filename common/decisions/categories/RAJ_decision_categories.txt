@@ -32,6 +32,7 @@ RAJ_population_decisions = {
 		target_array = RAJ.owned_states_at_game_start
 		target_trigger = {
 			FROM = { 
+				has_state_flag = RAJ_owned_states_at_game_start
 				NOT = { has_state_flag = RAJ_industrialized_this_state }
 			}
 		}

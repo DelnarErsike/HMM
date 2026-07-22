@@ -509,36 +509,27 @@ check_painful_memory = {
             has_dlc = "Graveyard of Empires"
         }
 
-        for_each_scope_loop = {
-            array = RAJ.owned_states_at_game_start
+        every_state = {
+            limit = {
+                has_state_flag = RAJ_owned_states_at_game_start
+                NOT = { 
+                    has_state_flag = {
+                        flag = painful_memory_cooldown
+                        value = 0
+                    }
+                }
+                resistance > 59
+            }
             if = {
                 limit = {
-                    resistance > 59
-                    resistance < 85
-                    NOT = { 
-                        has_state_flag = {
-                            flag = painful_memory_cooldown
-                            value = 0
-                        }
-                    }
-                }
-                add_to_variable = { painful_memory = 1 }
-                set_state_flag = { flag =  painful_memory_cooldown days = 20 } #cooldown so that it cant happen again within 20 days if its called from an event nd on ation
-
-            }
-            else_if = {
-                limit = {
                     resistance > 85
-                    NOT = { 
-                        has_state_flag = {
-                            flag = painful_memory_cooldown
-                            value = 0
-                        }
-                    }
                 }
                 add_to_variable = { painful_memory = 2 }
-                set_state_flag = { flag =  painful_memory_cooldown days = 20 }
             }
+            else = {
+                add_to_variable = { painful_memory = 1 }
+            }
+            set_state_flag = { flag =  painful_memory_cooldown days = 20 } #cooldown so that it cant happen again within 20 days if its called from an event nd on ation
         }
     }
 }
@@ -933,20 +924,13 @@ increase_taxes_threshold_by_4 = {
 
 bose_civil_war_capital_check = {
     RAJ = { clr_country_flag = bose_opponent_has_valid_capital } 
-    for_each_scope_loop = {
-        array = RAJ.owned_states_at_game_start
-        break = exit_bose
-        if = {
-            limit = {  NOT = { state = 992 } } #Aden
-            if = {
-                limit = {
-                    resistance < 65
-                }
-                set_variable = { exit_bose = 1 }
-                RAJ = { set_country_flag = bose_opponent_has_valid_capital }
-            }
+    random_state = {
+        limit = {
+            has_state_flag = RAJ_owned_states_at_game_start
+            NOT = { state = 992 } #Aden
+            resistance < 65
         }
-        
+        RAJ = { set_country_flag = bose_opponent_has_valid_capital }
     }
 }
 
