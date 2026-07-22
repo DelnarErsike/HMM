@@ -2,9 +2,7 @@
 
 oob = "PAR_1936"
 every_core_state = {
-	ROOT = {
-		add_to_array = { cores_at_game_start = PREV }
-	}
+	set_state_flag = PAR_cores_at_game_start
 }
 IF = {
 	limit = { has_dlc = "By Blood Alone" }

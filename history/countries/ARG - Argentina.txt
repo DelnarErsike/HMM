@@ -28,9 +28,7 @@ IF = {
 }
 
 every_core_state = {
-	ROOT = {
-		add_to_array = { cores_at_game_start = PREV }
-	}
+	set_state_flag = ARG_cores_at_game_start
 }
 
 # Corruption Modifier

@@ -1902,26 +1902,41 @@
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GUAY_the_stuff_of_legends_cores_tt_bra
-				all_of_scopes = {
-					array = BRA.cores_at_game_start
+				NOT = {
+					any_state_in = {
+						continent = south_america
+						has_state_flag = BRA_cores_at_game_start
+						NOT = {
 					is_controlled_by = ROOT
+						}
+					}
 				}
 			}
 			
 
 			custom_trigger_tooltip = {
 				tooltip = GUAY_the_stuff_of_legends_cores_tt_arg
-				all_of_scopes = {
-					array = ARG.cores_at_game_start
+				NOT = {
+					any_state_in = {
+						continent = south_america
+						has_state_flag = ARG_cores_at_game_start
+						NOT = {
 					is_controlled_by = ROOT
+						}
+					}
 				}
 			}
 			
 			custom_trigger_tooltip = {
 				tooltip = GUAY_the_stuff_of_legends_cores_tt_bol
-				all_of_scopes = {
-					array = BOL.cores_at_game_start
+				NOT = {
+					any_state_in = {
+						continent = south_america
+						has_state_flag = BOL_cores_at_game_start
+						NOT = {
 					is_controlled_by = ROOT
+						}
+					}
 				}
 			}
 
@@ -1933,18 +1948,28 @@
 				}
 				custom_trigger_tooltip = {
 					tooltip = GUAY_the_stuff_of_legends_cores_tt_urg
-					all_of_scopes = {
-						array = URG.cores_at_game_start
+					NOT = {
+						any_state_in = {
+							continent = south_america
+							has_state_flag = URG_cores_at_game_start
+							NOT = {
 						is_controlled_by = ROOT
+							}
+						}
 					}
 				}
 			}
 			else = {
 				custom_trigger_tooltip = {
 					tooltip = GUAY_the_stuff_of_legends_cores_tt_par
-					all_of_scopes = {
-						array = PAR.cores_at_game_start
+					NOT = {
+						any_state_in = {
+							continent = south_america
+							has_state_flag = PAR_cores_at_game_start
+							NOT = {
 						is_controlled_by = ROOT
+							}
+						}
 					}
 				}
 			}

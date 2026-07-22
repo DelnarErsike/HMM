@@ -1358,10 +1358,10 @@ on_actions = {
 					original_tag = GER
 					has_country_flag = AUS_annexed
 				}
-				for_each_scope_loop = {
-					array = AUS.AUS_initial_states
+				every_core_state = {
 					if = {
 						limit = {
+							has_state_flag = AUS_initial_states
 							is_core_of = GER
 						}
 						remove_core_of = GER
