@@ -8557,10 +8557,6 @@
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = MAL
-			}
 			add_tech_bonus = {
 				bonus = 0.25
 				uses = 2

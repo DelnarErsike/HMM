@@ -229,9 +229,9 @@ NDefines.NAI.CONVOY_RAIDING_TARGET_RECALC_DAYS = 9999 -- vanilla: 15
 NDefines.NAI.STRIKE_FORCE_TARGET_RECALC_DAYS = 9999 -- vanilla: 5
 NDefines.NAI.AI_OBJECTIVE_DEFAULT_TARGET_RECALC_DAYS = 9999 -- vanilla: 5
 NDefines.NAI.AI_PREFERRED_TACTIC_WEEKLY_CHANGE_CHANCE = 0 -- vanilla: 0.05
-NDefines.NAI.HOURS_BETWEEN_ENCIRCLEMENT_DISCOVERY = 700000	-- vanilla: 72
+NDefines.NAI.HOURS_BETWEEN_ENCIRCLEMENT_DISCOVERY = 99999	-- vanilla: 72
 
--- EXPERIMENTAL: Disabling the AI Force Concentration mechanic speeds up the game (specifically, reduces CPU overhead), but makes the AI behave in non-vanilla ways
+-- Disabling the AI Force Concentration mechanic speeds up the game (specifically, reduces CPU overhead), but makes the AI behave in non-vanilla ways
 NDefines.NAI.AIFC_UPDATE_FREQUENCY_DAYS = 9999
 NDefines.NAI.AIFC_UNIT_NUDGE_FREQUENCY_DAYS = 9999
 NDefines.NAI.AIFC_PATH_MAX_COST = 0.0

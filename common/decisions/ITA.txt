@@ -7505,6 +7505,7 @@ operations = {
 
 		visible = {
 			has_completed_focus = ITA_decima_flottiglia_mas
+			always = no
 		}
 
 		available = {
