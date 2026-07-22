@@ -189,8 +189,6 @@ on_actions = {
 							id = 9848
 						}
 					}
-					add_to_array = { global.great_wall_state = THIS }
-					set_state_flag = CHI_great_wall_raidable
 				}
 				716 = { # Liaoning
 					add_province_modifier = {
@@ -205,8 +203,6 @@ on_actions = {
 							id = 11815
 						}
 					}
-					add_to_array = { global.great_wall_state = THIS }
-					set_state_flag = CHI_great_wall_raidable
 				}
 				715 = { # Liaobei
 					add_province_modifier = {
@@ -215,8 +211,6 @@ on_actions = {
 							id = 916
 						}
 					}
-					add_to_array = { global.great_wall_state = THIS }
-					set_state_flag = CHI_great_wall_raidable
 				}
 				609 = { # East Hebei
 					add_province_modifier = {
@@ -229,8 +223,6 @@ on_actions = {
 							id = 11822
 						}
 					}
-					add_to_array = { global.great_wall_state = THIS }
-					set_state_flag = CHI_great_wall_raidable
 				}
 				610 = { # Jehol
 					add_province_modifier = {
@@ -245,8 +237,6 @@ on_actions = {
 							id = 3955
 						}
 					}
-					add_to_array = { global.great_wall_state = THIS }
-					set_state_flag = CHI_great_wall_raidable
 				}
 				1039 = { # Hebei-Chahar
 					add_province_modifier = {
@@ -257,8 +247,6 @@ on_actions = {
 							id = 1590
 						}
 					}
-					add_to_array = { global.great_wall_state = THIS }
-					set_state_flag = CHI_great_wall_raidable
 				}
 				621 = { # Suiyuan
 					add_province_modifier = {
@@ -267,8 +255,6 @@ on_actions = {
 							id = 7158
 						}
 					}
-					add_to_array = { global.great_wall_state = THIS }
-					set_state_flag = CHI_great_wall_raidable
 				}
 				615 = { # Shanxi
 					add_province_modifier = {
@@ -282,8 +268,6 @@ on_actions = {
 							id = 12300
 						}
 					}
-					add_to_array = { global.great_wall_state = THIS }
-					set_state_flag = CHI_great_wall_raidable
 				}
 				1046 = { # Yulin
 					add_province_modifier = {
@@ -293,8 +277,6 @@ on_actions = {
 							id = 7314
 						}
 					}
-					add_to_array = { global.great_wall_state = THIS }
-					set_state_flag = CHI_great_wall_raidable
 				}
 				608 = { # Beijing
 					add_province_modifier = {
@@ -305,8 +287,6 @@ on_actions = {
 							id = 9843
 						}
 					}
-					add_to_array = { global.great_wall_state = THIS }
-					set_state_flag = CHI_great_wall_raidable
 				}
 				614 = { # Hebei
 					add_province_modifier = {
@@ -320,8 +300,6 @@ on_actions = {
 							id = 12062
 						}
 					}
-					add_to_array = { global.great_wall_state = THIS }
-					set_state_flag = CHI_great_wall_raidable
 				}
 				607 = { # Henan
 					add_province_modifier = {
@@ -330,8 +308,6 @@ on_actions = {
 							id = 4058
 						}
 					}
-					add_to_array = { global.great_wall_state = THIS }
-					set_state_flag = CHI_great_wall_raidable
 				}
 				622 = { # Shaanbei
 					add_province_modifier = {
@@ -340,8 +316,6 @@ on_actions = {
 							id = 10880
 						}
 					}
-					add_to_array = { global.great_wall_state = THIS }
-					set_state_flag = CHI_great_wall_raidable
 				}
 				616 = { # Ningxia
 					add_province_modifier = {
@@ -352,8 +326,6 @@ on_actions = {
 							id = 8127
 						}
 					}
-					add_to_array = { global.great_wall_state = THIS }
-					set_state_flag = CHI_great_wall_raidable
 				}
 				1044 = { # Wuwei
 					add_province_modifier = {
@@ -364,8 +336,6 @@ on_actions = {
 							id = 5100
 						}
 					}
-					add_to_array = { global.great_wall_state = THIS }
-					set_state_flag = CHI_great_wall_raidable
 				}
 				756 = { # Jiuquan
 					add_province_modifier = {
@@ -375,27 +345,6 @@ on_actions = {
 							id = 7971
 						}
 					}
-					add_to_array = { global.great_wall_state = THIS }
-					set_state_flag = CHI_great_wall_raidable
-				}
-			}
-		}
-
-		effect = {
-			PRC = {
-				every_core_state = {
-					add_to_array = { global.PRC_starting_PRC_core_states = THIS }
-				}
-			}
-		}
-
-		effect = {
-			SPR = {
-				every_core_state = {
-					limit = {
-						is_on_continent = europe
-					}
-					add_to_array = { global.starting_SPR_european_core_states = THIS }
 				}
 			}
 		}

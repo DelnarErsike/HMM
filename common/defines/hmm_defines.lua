@@ -213,24 +213,25 @@ NDefines.NAI.EQUIPMENT_MARKET_UPDATE_FREQUENCY_DAYS = 9999
 NDefines.NAI.EQUIPMENT_MARKET_MAX_CIVS_FOR_PURCHASES_RATIO = 0.0
 NDefines.NAI.EQUIPMENT_MARKET_BASE_MARKET_RATIO = 0.0
 
--- Removed unnecessary AI calculations and extended time between updates (don't disable completely in case it screws with test builds)
-NDefines.NAI.AI_UPDATE_ROLES_FREQUENCY_HOURS = 672 -- vanilla: 48
-NDefines.NAI.AI_NAVAL_GOALS_UPDATE_FREQUENCY_DAYS = 28 -- vanilla: 7
-NDefines.NAI.UPDATE_SUPPLY_BOTTLENECKS_FREQUENCY_HOURS = 672 -- vanilla: 168
-NDefines.NAI.UPDATE_SUPPLY_MOTORIZATION_FREQUENCY_HOURS = 168 -- vanilla: 52
+-- Removed unnecessary AI calculations and extended time between updates (RIP test builds)
+NDefines.NAI.AI_UPDATE_ROLES_FREQUENCY_HOURS = 99999 -- vanilla: 48
+NDefines.NAI.AI_NAVAL_GOALS_UPDATE_FREQUENCY_DAYS = 9999 -- vanilla: 7
+NDefines.NAI.UPDATE_SUPPLY_BOTTLENECKS_FREQUENCY_HOURS = 99999 -- vanilla: 168
+NDefines.NAI.UPDATE_SUPPLY_MOTORIZATION_FREQUENCY_HOURS = 99999 -- vanilla: 52
 NDefines.NAI.RAIDS_ENABLE_AI = false -- vanilla: true
 NDefines.NAI.RAIDS_CREATE_FREQUENCY_DAYS = 9999 -- vanilla: 7
 NDefines.NAI.RESEARCH_DAYS_BETWEEN_WEIGHT_UPDATE = 28 -- vanilla: 7
-NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_DOCTRINE = 365 -- vanilla: 30
-NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_TEMPLATE = 28 -- vanilla: 7
-NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_EQUIPMENT = 28 -- vanilla: 7
-NDefines.NAI.DAYS_BETWEEN_AIR_PRIORITIES_UPDATE = 28 -- vanilla: 4
-NDefines.NAI.CONVOY_RAIDING_TARGET_RECALC_DAYS = 180 -- vanilla: 15
-NDefines.NAI.STRIKE_FORCE_TARGET_RECALC_DAYS = 28 -- vanilla: 5
-NDefines.NAI.AI_OBJECTIVE_DEFAULT_TARGET_RECALC_DAYS = 28 -- vanilla: 5
+NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_DOCTRINE = 9999 -- vanilla: 30
+NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_TEMPLATE = 9999 -- vanilla: 7
+NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_EQUIPMENT = 9999 -- vanilla: 7
+NDefines.NAI.DAYS_BETWEEN_AIR_PRIORITIES_UPDATE = 9999 -- vanilla: 4
+NDefines.NAI.CONVOY_RAIDING_TARGET_RECALC_DAYS = 9999 -- vanilla: 15
+NDefines.NAI.STRIKE_FORCE_TARGET_RECALC_DAYS = 9999 -- vanilla: 5
+NDefines.NAI.AI_OBJECTIVE_DEFAULT_TARGET_RECALC_DAYS = 9999 -- vanilla: 5
 NDefines.NAI.AI_PREFERRED_TACTIC_WEEKLY_CHANGE_CHANCE = 0 -- vanilla: 0.05
+NDefines.NAI.HOURS_BETWEEN_ENCIRCLEMENT_DISCOVERY = 99999	-- vanilla: 72
 
--- EXPERIMENTAL: Disabling the AI Force Concentration mechanic speeds up the game (specifically, reduces CPU overhead), but makes the AI behave in non-vanilla ways
+-- Disabling the AI Force Concentration mechanic speeds up the game (specifically, reduces CPU overhead), but makes the AI behave in non-vanilla ways
 NDefines.NAI.AIFC_UPDATE_FREQUENCY_DAYS = 9999
 NDefines.NAI.AIFC_UNIT_NUDGE_FREQUENCY_DAYS = 9999
 NDefines.NAI.AIFC_PATH_MAX_COST = 0.0
@@ -248,6 +249,10 @@ NDefines.NAI.IRRATIONALITY_LAMBDA = 0
 NDefines.NAI.NUM_FACTORIES_IN_STATE_TO_WANT_ENERGY_REDUCTION = 9999
 -- Less garbage building, but be pickier about where we'd build it
 NDefines.NAI.TOTAL_STATE_EXTRACTED_RESOURCES_FOR_BUILDING_RESOURCE_CAP_BUILDING = 100
+-- AI should not build fuel silos
+NDefines.NAI.NUM_SILOS_PER_CIVILIAN_FACTORIES = 0
+NDefines.NAI.NUM_SILOS_PER_MILITARY_FACTORIES = 0
+NDefines.NAI.NUM_SILOS_PER_DOCKYARDS = 0	
 
 -- AI only builds convoys (helpful for performance and annex builds)
 NDefines.NAI.CONVOY_NEED_SAFETY_BUFFER = 9999
@@ -255,6 +260,10 @@ NDefines.NAI.CONVOY_NEED_SAFETY_BUFFER = 9999
 -- Avoid building in non-cores and especially occupied territory (helps with annex builds especially)
 NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_OCCUPIED_TERRITORY = 0.01
 NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_OWNED_NONCORE = 0.10
+
+-- Why are these even true in the first place?
+NDefines.NMilitary.GENERATE_AI_DIV_COMMAND_HISTORY_ENTRIES = false	--Should we generate history entries for the AI (may cause savegame bloat)
+NDefines.NMilitary.HISTORICAL_ORDER_NAME_EXHAUSTION = false	-- Do historically chosen order instances exhaust their case names? If false ie, Operation Barbarossa will appear for any orders fulfilling the conditions for Germany
 
 --THANKS THRASHY
 NDefines.NAir.ACE_WING_SIZE_MAX_BONUS = 1                       -- biggest bonus we can get from having a small wing with an ace on

@@ -4607,19 +4607,6 @@ ITA_colonial_management_dec_cat = {
 
 		allowed = {
 			original_tag = ITA # Italy
-			NOT = { # HMM: AOI is technically a released nation, so subject it to the releasing nations rule
-				has_game_rule = {
-					rule = allow_release_nations
-					option = BLOCKED
-				}
-			}
-			OR = {
-				has_war = no
-				has_game_rule = {
-					rule = allow_release_nations
-					option = FREE
-				}
-			}
 		}
 
 		fire_only_once = yes
@@ -4758,7 +4745,6 @@ ITA_colonial_management_dec_cat = {
 					owns_state = 844 # Jubaland
 				}
 			}
-
 		}
 
 		visible = {
@@ -6183,19 +6169,6 @@ ITA_diplomacy_balkan_decision_category = {
 
 		allowed = {
 			original_tag = ITA
-			NOT = { # HMM: ALB is technically a released nation, so subject it to the releasing nations rule
-				has_game_rule = {
-					rule = allow_release_nations
-					option = BLOCKED
-				}
-			}
-			OR = {
-				has_war = no
-				has_game_rule = {
-					rule = allow_release_nations
-					option = FREE
-				}
-			}
 		}
 
 		available = {
@@ -6345,19 +6318,6 @@ ITA_diplomacy_balkan_decision_category = {
 
 		allowed = {
 			original_tag = ITA
-			NOT = { # HMM: MNT is technically a released nation, so subject it to the releasing nations rule
-				has_game_rule = {
-					rule = allow_release_nations
-					option = BLOCKED
-				}
-			}
-			OR = {
-				has_war = no
-				has_game_rule = {
-					rule = allow_release_nations
-					option = FREE
-				}
-			}
 		}
 
 		available = {
@@ -7545,6 +7505,7 @@ operations = {
 
 		visible = {
 			has_completed_focus = ITA_decima_flottiglia_mas
+			always = no
 		}
 
 		available = {

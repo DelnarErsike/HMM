@@ -2,7 +2,7 @@
 # Political Actions Category
 political_actions = {
 
-	# Embrace Authenticité
+	# Embrace Authenticitï¿½
 	COG_embrace_autentiite_decision  = {
 
 		priority = 100
@@ -146,7 +146,7 @@ political_actions = {
 
 	}
 
-	# Recall Armand Huyghé to Active Service
+	# Recall Armand Huyghï¿½ to Active Service
 	COG_recall_armand_huyghe_to_active_service  = {
 
 		priority = 40
@@ -329,7 +329,7 @@ political_actions = {
 
 	}
 
-	# Recall Léopold De Koninck to Active Service
+	# Recall Lï¿½opold De Koninck to Active Service
 	COG_recall_leopold_de_koninck_to_active_service  = {
 
 		priority = 37
@@ -2035,7 +2035,7 @@ COG_ruanda_urundi_decisions = {
 COG_the_empain_group_decisions = {
 	
 	
-	# Invest in the Compagnie du chemin de fer du Congo supérieur aux Grands Lacs africains
+	# Invest in the Compagnie du chemin de fer du Congo supï¿½rieur aux Grands Lacs africains
 	COG_invest_in_cfl  = {
 
 		priority = 15
@@ -2187,7 +2187,7 @@ COG_the_empain_group_decisions = {
 
 	}
 
-	# Invest in the Compagnie Minière au RuandaUrundi
+	# Invest in the Compagnie Miniï¿½re au RuandaUrundi
 	COG_invest_in_mirundi  = {
 
 		priority = 10
@@ -2289,7 +2289,7 @@ COG_the_empain_group_decisions = {
 
 	}
 
-	# Found Compagnie Minière du Nord de l'Ituri
+	# Found Compagnie Miniï¿½re du Nord de l'Ituri
 	COG_found_cominor  = {
 
 		priority = 11
@@ -2368,7 +2368,7 @@ COG_the_empain_group_decisions = {
 
 	}
 
-	# Invest in the Société Minière du Lualaba
+	# Invest in the Sociï¿½tï¿½ Miniï¿½re du Lualaba
 	COG_invest_in_miluba  = {
 
 		priority = 12
@@ -2461,7 +2461,7 @@ COG_the_empain_group_decisions = {
 
 	}
 
-	# Invest in the Compagnie Minière de l'Urega
+	# Invest in the Compagnie Miniï¿½re de l'Urega
 	COG_invest_in_minerga  = {
 
 		priority = 9
@@ -2743,71 +2743,6 @@ COG_anti_colonialism_category = {
 			}
 			modifier = {
 				factor = 2
-				has_government = communism
-			}
-		}
-	}
-
-	COG_anti_colonialism_decision = {
-		icon = GFX_decision_eng_propaganda_campaigns
-		target_trigger = {
-			FROM = {
-				NOT = { capital_scope = { is_on_continent = africa } }
-				any_owned_state = {
-					is_on_continent = africa
-					NOT = { is_core_of = PREV }
-					is_in_array = {
-						array = COG.african_colonial_states_array 
-						value = THIS  
-					}
-					has_active_resistance = yes
-				}
-			}
-		}
-		
-		target_array = global.colonial_powers
-
-		target_root_trigger = { original_tag = COG } 
-		# on_map_mode = map_only
-		fire_only_once = yes  
-		available = {
-			NOT = { has_country_flag = COG_independence_support_progress_flag }
-			NOT = { is_in_faction_with = FROM }
-		}
-		visible = {
-			always = no
-		}
-		days_remove = 30
-		cost = 15
-		modifier = {
-			political_power_factor = -0.25
-		}
-		complete_effect = {
-			set_country_flag = COG_independence_support_progress_flag
-					
-		}
-		remove_effect = {
-			clr_country_flag = COG_independence_support_progress_flag
-			FROM = {
-				every_owned_state = {
-					limit = {
-						is_on_continent = africa
-						is_controlled_by = PREV
-						has_active_resistance = yes
-					}
-					add_compliance = -20
-					add_resistance = 5
-				}
-			}
-		}
-		ai_will_do = {
-			base = 0
-			modifier = {
-				add = 100
-				has_war = no
-			}
-			modifier = {
-				add = 100
 				has_government = communism
 			}
 		}
