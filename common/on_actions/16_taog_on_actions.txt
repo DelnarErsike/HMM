@@ -97,20 +97,14 @@
 	 			}
 				every_owned_state = {
 					limit = {
-						is_in_array = {
-							array = INS.owned_states_at_game_start
-							value = THIS
-						}
+						has_state_flag = INS_owned_states_at_game_start
 					}
 					transfer_state_to = INS
 				}
 				event_target:INS_dutch_indonesia = {
 					every_owned_state = {
 						limit = {
-							is_in_array = {
-								array = INS.owned_states_at_game_start
-								value = THIS
-							}
+							has_state_flag = INS_owned_states_at_game_start
 						}
 						transfer_state_to = INS
 					}
@@ -1959,10 +1953,7 @@
 						}
 					}
 					FROM.FROM = {
-						is_in_array = {
-							array = INS.owned_states_at_game_start
-							value = THIS
-						}
+						has_state_flag = INS_owned_states_at_game_start
 					}
 					ROOT = {
 						is_major = yes

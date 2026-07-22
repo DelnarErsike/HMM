@@ -207,13 +207,9 @@ INS_national_revolution_cat = {
 	scripted_gui = INS_revolution_scripted_gui
 
 	on_map_area = {
-		target_array = INS.owned_states_at_game_start
 		target_trigger = {
 			FROM = {
-				is_in_array = {
-					array = INS.owned_states_at_game_start
-					value = THIS
-				}
+				has_state_flag = INS_owned_states_at_game_start
 				OWNER = {
 					OR = {
 						tag = HOL
@@ -266,10 +262,10 @@ INS_national_revolution_dutch_cat = {
 
 
 	on_map_area = {
-		target_array = INS.owned_states_at_game_start
+		target_array = owned_controlled_states
 		target_trigger = {
 			FROM = {
-				is_controlled_by = INS
+				has_state_flag = INS_owned_states_at_game_start
 			}
 		}
 		name = INS_national_revolution_dutch_cat_map

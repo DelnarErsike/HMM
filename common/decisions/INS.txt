@@ -459,10 +459,7 @@ INS_economic_cat = {
 	    
 	    target_trigger = {
 	        FROM = {
-				is_in_array = {
-					array = INS.owned_states_at_game_start
-					value = THIS
-				}
+				has_state_flag = INS_owned_states_at_game_start
 	        	is_owned_and_controlled_by = ROOT
 	        	infrastructure > 3 # It needs to be 4 or higher 
 	        	has_state_flag = INS_can_upgrade_this_states_level_flag
@@ -513,13 +510,15 @@ INS_economic_cat = {
 					resource = rubber
 					amount > 15
 				}
-				is_owned_and_controlled_by = ROOT
 			}
 		}
 
 		on_map_mode = map_only
 		state_target = yes
-		target_array = INS.owned_states_at_game_start
+		target_array = owned_controlled_states
+		target_trigger = {
+			has_state_flag = INS_owned_states_at_game_start
+		}
 
 		ai_will_do = {
 			base = 0
@@ -2020,7 +2019,7 @@ INS_unity_in_diversity_cat = {
 		target_trigger = {
 			FROM = {
 				OR = {
-					is_in_array = { array = INS.owned_states_at_game_start value = THIS }
+					has_state_flag = INS_owned_states_at_game_start
 					state = 721 #East Timor
 				}
 				is_controlled_by = ROOT
@@ -2224,9 +2223,9 @@ INS_revolution_planning_cat = {
 
 		on_map_mode = map_only
 		state_target = yes
-		target_array = INS.owned_states_at_game_start
 		target_trigger = {
 			FROM = {
+				has_state_flag = INS_owned_states_at_game_start
 				NOT = {
 					state = 1058
 					state = 1051
@@ -3308,8 +3307,9 @@ INS_national_revolution_cat = {
 			}
 
 			any_state_in = {
-				array = INS.owned_states_at_game_start
+				ai_area = east_indies
 				tooltip = INS_owned_states_at_game_start_tt
+				has_state_flag = INS_owned_states_at_game_start
 				OR = {
 					is_owned_by = HOL
 					is_owned_by = event_target:INS_dutch_indonesia
@@ -3320,8 +3320,9 @@ INS_national_revolution_cat = {
 		available = {
 			NOT = {
 				any_state_in = {
-					array = INS.owned_states_at_game_start
+					ai_area = east_indies
 					tooltip = INS_owned_states_at_game_start_tt
+					has_state_flag = INS_owned_states_at_game_start
 					OR = {
 						is_owned_by = HOL
 						is_owned_by = event_target:INS_dutch_indonesia
@@ -3374,9 +3375,9 @@ INS_national_revolution_cat = {
 			}
 			NOT = {
 				any_state_in = {
-					array = INS.owned_states_at_game_start
+					ai_area = east_indies
 					tooltip = INS_owned_states_at_game_start_tt
-
+					has_state_flag = INS_owned_states_at_game_start
 					impassable = no
 					OR = {
 						is_owned_by = HOL
@@ -3569,10 +3570,7 @@ INS_national_revolution_cat = {
 		target_trigger = {
 			FROM = {
 				is_owned_by = ROOT
-				is_in_array = {
-					array = INS.owned_states_at_game_start
-					value = THIS
-				}
+				has_state_flag = INS_owned_states_at_game_start
 				NOT = {
 					has_dynamic_modifier = {
 						modifier = INS_state_revolution_hq
@@ -3631,10 +3629,7 @@ INS_national_revolution_cat = {
 		state_target = yes
 		target_trigger = {
 			FROM = {
-				is_in_array = {
-					array = INS.owned_states_at_game_start
-					value = THIS
-				}
+				has_state_flag = INS_owned_states_at_game_start
 				OWNER = {
 					OR = {
 						tag = HOL
@@ -4581,10 +4576,7 @@ INS_national_revolution_dutch_cat = {
 		state_target = yes
 		target_trigger = {
 			FROM = {
-				is_in_array = {
-					array = INS.owned_states_at_game_start
-					value = THIS
-				}
+				has_state_flag = INS_owned_states_at_game_start
 				OWNER = {
 					OR = {
 						tag = HOL
@@ -5140,7 +5132,6 @@ INS_limited_wars_cat = {
 	    target_root_trigger = {
 	       original_tag = INS
 	    }
-	    target_array = ROOT.malaya_controllers
 	    target_trigger = {
     		NOT = {
     			is_in_array = {
@@ -5148,15 +5139,13 @@ INS_limited_wars_cat = {
     			}
     		}
 
-    		is_in_array = {
-    			array = ROOT.malaya_controllers
-    			value = FROM
-    		}
-
-			any_of_scopes = {
-				array = ROOT.malaya_states
-				is_controlled_by = FROM
+			FROM = {
+				any_controlled_state = {
+					malaya_states = yes
+				}
 			}
+
+			malaya_states = yes
 	    }
 	    visible = {
 	    	has_completed_focus = INS_destroy_pacific_colonialism
@@ -5177,10 +5166,7 @@ INS_limited_wars_cat = {
 
 	    highlight_states = {
 	        highlight_states_trigger = {
-		    	is_in_array = {
-		    		array = ROOT.malaya_states
-		    		value = THIS
-		    	}
+		    	malaya_states = yes
 		    	is_controlled_by = FROM
 
 	        }
@@ -5214,14 +5200,12 @@ INS_limited_wars_cat = {
 	    	clear_array = limited_war_target_allies
 
 	    	#Save all states that is included in the limited war
-	    	for_each_scope_loop = {
-	    		array = malaya_states
-	    		if = {
-	    			limit = { is_controlled_by = FROM }
-	
-	    			add_to_array = { array = ROOT.limited_war_states value = THIS }
-	    		}
-	    	}
+			FROM = {
+				every_controlled_state = {
+					limit = { malaya_states = yes }
+					add_to_array = { array = ROOT.limited_war_states value = THIS }
+				}
+			}
 
 	    	
 	    	set_variable = { limited_war_target = FROM } #is_target_of_limited_war

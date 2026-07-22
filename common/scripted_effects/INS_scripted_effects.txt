@@ -1696,9 +1696,8 @@ indonesia_white_peace_HOL_effect = {
 
 indonesia_save_borders_effect = {
 	# Start variables based on exactly who owns states currently
-	for_each_scope_loop = {
-		array = INS.owned_states_at_game_start
-
+	every_state = {
+		limit = { has_state_flag = INS_owned_states_at_game_start }
 		if = {
 			limit = {
 				is_controlled_by = INS
@@ -1844,8 +1843,8 @@ indonesia_save_borders_effect = {
 	}
 
 	## Set state owners according to variables
-	for_each_scope_loop = {
-		array = INS.owned_states_at_game_start
+	every_state = {
+		limit = { has_state_flag = INS_owned_states_at_game_start }
 
 		if = {
 			limit = {
@@ -1940,10 +1939,7 @@ indonesia_HOL_sign_accord_effect = {
 		else = {
 			random_owned_controlled_state = {
 				limit = {
-					is_in_array = {
-						array = INS.owned_states_at_game_start
-						value = THIS
-					}
+					has_state_flag = INS_owned_states_at_game_start
 				}
 				create_unit = {
 					division = "name = \"British Division\" division_template = \"British Division\" start_experience_factor = 0.3 start_equipment_factor = 1 start_manpower_factor = 1"
@@ -2035,10 +2031,7 @@ indonesia_HOL_sign_accord_FRA_effect = {
 		else = {
 			random_owned_controlled_state = {
 				limit = {
-					is_in_array = {
-						array = INS.owned_states_at_game_start
-						value = THIS
-					}
+					has_state_flag = INS_owned_states_at_game_start
 				}
 				create_unit = {
 					division = "name = \"French Division\" division_template = \"French Division\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
@@ -2397,27 +2390,6 @@ indonesia_phillipines_unite_effect = {
 	1027 = { add_core_of = INS }
 }
 
-INS_refresh_malaya_controllers = {
-	clear_array = INS.malaya_controllers
-	
-	for_each_scope_loop = {
-		array = INS.malaya_states
-		if = {
-			limit = {
-				NOT = {
-					controller = {
-						is_in_array = { array = INS.malaya_controllers value = THIS }
-					}
-				}
-			}
-
-			controller = {
-				add_to_array = { array = INS.malaya_controllers value = THIS }
-			}
-		}
-	}
-}
-
 #Reset all variables related to limited wars
 INS_clear_limited_war_variables = {
 	hidden_effect = {
@@ -2426,7 +2398,6 @@ INS_clear_limited_war_variables = {
 		clear_array = INS.limited_war_target_allies
 		clear_variable = INS.pre_limited_war_faction_leader 
 		clear_variable = INS.limited_war_target
-		INS_refresh_malaya_controllers = yes
 		set_rule = { can_join_factions = yes }
 	}
 }

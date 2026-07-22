@@ -230,10 +230,7 @@ focus_tree = {
 			add_war_support = 0.05
 			every_owned_state = {
 				limit = {
-					is_in_array = {
-						array = INS.owned_states_at_game_start
-						value = THIS
-					}
+					has_state_flag = INS_owned_states_at_game_start
 					impassable = no
 				}
 				construct_building_in_random_province = {
@@ -2447,10 +2444,7 @@ focus_tree = {
 			any_owned_state = {
 				custom_trigger_tooltip = {
 					tooltip = INS_is_noncore_but_indonesian_trigger_tt
-					is_in_array = {
-						array = INS.default_noncore_states
-						value = THIS
-					}
+					has_state_flag = INS_default_noncore_states
 				}
 			}
 		}
@@ -2461,10 +2455,7 @@ focus_tree = {
 				any_owned_state = {
 					custom_trigger_tooltip = {
 						tooltip = INS_is_noncore_but_indonesian_trigger_tt
-						is_in_array = {
-							array = INS.default_noncore_states
-							value = THIS
-						}
+						has_state_flag = INS_default_noncore_states
 					}
 				}
 			}
@@ -2480,10 +2471,7 @@ focus_tree = {
 		completion_reward = {
 			every_owned_state = {
 				limit = {
-					is_in_array = {
-						array = INS.default_noncore_states
-						value = THIS
-					}
+					has_state_flag = INS_default_noncore_states
 				}
 				add_compliance = 30
 				add_resistance = -60
@@ -2520,10 +2508,7 @@ focus_tree = {
 
 		available = {
 			any_owned_state = {
-				is_in_array = {
-					array = INS.owned_states_at_game_start
-					value = THIS
-				}
+				has_state_flag = INS_owned_states_at_game_start
 			}
 		}
 		prerequisite = { focus = INS_local_cooperatives }
@@ -2541,10 +2526,7 @@ focus_tree = {
 			every_owned_state = {
 				limit = {
 					impassable = no
-					is_in_array = {
-						array = INS.owned_states_at_game_start
-						value = THIS
-					}
+					has_state_flag = INS_owned_states_at_game_start
 				}
 				add_extra_state_shared_building_slots = 1
 			}
@@ -3349,9 +3331,6 @@ focus_tree = {
 		search_filters = {  }
 		completion_reward = {
 			custom_effect_tooltip = INS_retake_lost_british_states_tt
-			hidden_effect = {
-				INS_refresh_malaya_controllers = yes
-			}
 		}
 	}
 
@@ -3690,10 +3669,7 @@ focus_tree = {
 			every_owned_state = {
 				limit = {
 					is_fully_controlled_by = PREV
-					is_in_array = {
-						array = INS.owned_states_at_game_start
-						value = THIS
-					}
+					has_state_flag = INS_owned_states_at_game_start
 					OR = {
 						has_state_category = rural
 						has_state_category = small_island
@@ -6671,10 +6647,7 @@ focus_tree = {
 		completion_reward = {
 			every_owned_state = {
 				limit = {
-					is_in_array = {
-						array = INS.owned_states_at_game_start
-						value = THIS
-					}
+					has_state_flag = INS_owned_states_at_game_start
 				}
 				add_dynamic_modifier = {
 					modifier = INS_local_resistance_state
@@ -6696,10 +6669,7 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = INS_stronghold_java_tt
 				any_owned_state = {
-					is_in_array = {
-						array = INS.owned_states_at_game_start
-						value = THIS
-					}
+					has_state_flag = INS_owned_states_at_game_start
 					NOT = {
 						is_controlled_by = ROOT
 					}
@@ -6745,10 +6715,7 @@ focus_tree = {
 			custom_effect_tooltip = newline_tt
 			every_owned_state = {
 				limit = {
-					is_in_array = {
-						array = INS.owned_states_at_game_start
-						value = THIS
-					}
+					has_state_flag = INS_owned_states_at_game_start
 					NOT = {
 						state = 1058 #Batavia
 						state = 335 #West Java
@@ -6819,10 +6786,7 @@ focus_tree = {
 				puppet = ROOT
 				every_controlled_state = {
 					limit = {
-						is_in_array = {
-							array = INS.owned_states_at_game_start
-							value = THIS
-						}
+						has_state_flag = INS_owned_states_at_game_start
 					}
 					set_state_controller_to = ROOT
 				}

@@ -245,59 +245,19 @@ set_variable = { var = INS_volksraad_counter value = 0 }
 
 # Arrays
 every_owned_state = {
-	ROOT = {
-		add_to_array = { array = owned_states_at_game_start value = PREV }
+	set_state_flag = INS_owned_states_at_game_start
+	if = {
+		limit = { is_core_of = ROOT }
+		set_state_flag = INS_default_core_states
 	}
-}
-
-every_core_state = {
-	ROOT = {
-		add_to_array = { array = default_core_states value = PREV }
-	}
-}
-
-every_owned_state = {
-	limit = { NOT = { is_core_of = ROOT } }
-	ROOT = {
-		add_to_array = { array = default_noncore_states value = PREV }
+	else = {
+		set_state_flag = INS_default_noncore_states
 	}
 }
 
 every_owned_state = {
 	set_variable = { INS_infrastructure_pre_investment = building_level@infrastructure }
 	set_variable = { INS_civs_pre_investment = building_level@industrial_complex }
-}
-
-add_to_array = { INS_releasables = ATJ }
-add_to_array = { INS_releasables = BLI }
-add_to_array = { INS_releasables = SSI }
-add_to_array = { INS_releasables = TNE }
-add_to_array = { INS_releasables = GOW }
-add_to_array = { INS_releasables = POK }
-add_to_array = { INS_releasables = TML }
-add_to_array = { INS_releasables = PNG }
-add_to_array = { INS_releasables = WPG }
-
-# Limited Wars
-every_state = {
-	limit = {
-		OR = {
-			state = 1060
-			state = 1063
-			state = 336
-			state = 1064
-			state = 1065
-			state = 1062
-			state = 1064
-			state = 1061
-			state = 1021 #Singapore
-		}
-	}
-
-	add_to_array = {
-		array = ROOT.malaya_states
-		value = THIS
-	}
 }
 
 set_country_flag = {
