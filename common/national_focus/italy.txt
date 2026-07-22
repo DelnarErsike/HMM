@@ -8859,7 +8859,7 @@ focus_tree = {
 				tooltip = ITA_all_eth_initial_states_controlled_tt
 				NOT = {
 					any_state_in = {
-						ai_area = initial_ethiopian_state_regions
+						continent = africa
 						is_initial_ethiopian_state = yes
 						is_controlled_by_ROOT_or_subject = no
 					}

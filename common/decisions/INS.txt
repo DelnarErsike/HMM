@@ -517,7 +517,7 @@ INS_economic_cat = {
 		state_target = yes
 		target_array = owned_controlled_states
 		target_trigger = {
-			has_state_flag = INS_owned_states_at_game_start
+			FROM = { has_state_flag = INS_owned_states_at_game_start }
 		}
 
 		ai_will_do = {
@@ -3307,7 +3307,7 @@ INS_national_revolution_cat = {
 			}
 
 			any_state_in = {
-				ai_area = east_indies
+				continent = asia
 				tooltip = INS_owned_states_at_game_start_tt
 				has_state_flag = INS_owned_states_at_game_start
 				OR = {
@@ -3320,7 +3320,7 @@ INS_national_revolution_cat = {
 		available = {
 			NOT = {
 				any_state_in = {
-					ai_area = east_indies
+					continent = asia
 					tooltip = INS_owned_states_at_game_start_tt
 					has_state_flag = INS_owned_states_at_game_start
 					OR = {
@@ -3375,7 +3375,7 @@ INS_national_revolution_cat = {
 			}
 			NOT = {
 				any_state_in = {
-					ai_area = east_indies
+					continent = asia
 					tooltip = INS_owned_states_at_game_start_tt
 					has_state_flag = INS_owned_states_at_game_start
 					impassable = no
@@ -5139,7 +5139,11 @@ INS_limited_wars_cat = {
     			}
     		}
 
-			malaya_states = yes
+			FROM = {
+				any_controlled_state = {
+					malaya_states = yes
+				}
+			}
 	    }
 	    visible = {
 	    	has_completed_focus = INS_destroy_pacific_colonialism

@@ -1356,9 +1356,10 @@ RAJ_akhand_bharat_cat = {
 			is_raj_or_raj_inheritor = yes
 		}
 		available = {
-				every_state = {
-					has_state_flag = RAJ_owned_states_at_game_start
-					if = {
+				all_state = {
+					OR = {
+						NOT = { has_state_flag = RAJ_owned_states_at_game_start }
+						if = {
 						limit = {
 							NOT = {
 								is_core_of = PAK
@@ -1373,13 +1374,13 @@ RAJ_akhand_bharat_cat = {
 						}
 						
 					}
+					}
 					tooltip = RAJ_akhand_bharat_availability_tt 
 				}
 		}
 
 		visible = {
-			any_state_in = {
-				ai_area = raj_starting_regions
+			any_state = {
 				has_state_flag = RAJ_owned_states_at_game_start
 				NOT = { is_core_of = RAJ }
 				NOT = {
@@ -1789,8 +1790,7 @@ RAJ_akhand_bharat_cat = {
 			}
 
 			NOT = {
-				any_state_in = {
-					ai_area = raj_starting_regions
+				any_state = {
 					has_state_flag = RAJ_owned_states_at_game_start
 					OR = {
 						NOT = { is_fully_controlled_by = ROOT }

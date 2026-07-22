@@ -619,7 +619,7 @@ DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {
 			NOT = { FROM = { tag = QEM } }
 			NOT = {
 				any_state_in = {
-					ai_area = initial_ethiopian_state_regions
+					continent = africa
 					is_initial_ethiopian_state = yes
 					NOT = { compliance > 70 }
 				}

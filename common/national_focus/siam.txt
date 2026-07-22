@@ -4941,7 +4941,7 @@
 		}
 		available = {
 			any_state_in = {
-				ai_area = burma_regions
+				continent = asia
 				malaysia_burma_states = yes
 				NOT = { is_controlled_by = ROOT }
 			}
@@ -4950,7 +4950,7 @@
 		bypass = {
 			NOT = {
 				any_state_in = {
-					ai_area = burma_regions
+					continent = asia
 					malaysia_burma_states = yes
 					NOT = { is_controlled_by = ROOT }
 				}
@@ -4982,7 +4982,7 @@
 		}
 		available = {
 			any_state_in = {
-				ai_area = indochina_regions
+				continent = asia
 				indochina_states = yes
 				NOT = { is_controlled_by = ROOT }
 			}
@@ -4993,7 +4993,7 @@
 		bypass = {
 			NOT = {
 				any_state_in = {
-					ai_area = indochina_regions
+					continent = asia
 					indochina_states = yes
 					NOT = { is_controlled_by = ROOT }
 				}
@@ -5160,7 +5160,7 @@
 				tooltip = SIA_the_greater_thai_empire_available_trigger
 				NOT = {
 					any_state_in = {
-						ai_area = indochina_regions
+						continent = asia
 						indochina_states = yes
 						OR = {
 							NOT = { is_controlled_by = ROOT }
@@ -5399,7 +5399,7 @@
 			custom_trigger_tooltip = {
 				tooltip = SIA_new_territories_administration_available_trigger
 				any_state_in = {
-					ai_area = indochina_regions
+					continent = asia
 					indochina_states = yes
 					is_controlled_by = ROOT
 				}

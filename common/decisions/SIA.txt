@@ -727,10 +727,10 @@ SIA_limited_war_cat = {
     			}
     		}
 
-			any_state_in = {
-				ai_area = indochina_regions
-				indochina_states = yes
-				is_controlled_by = FROM
+			FROM = {
+				any_controlled_state = {
+					indochina_states = yes
+				}
 			}
 	    }
 
@@ -935,10 +935,10 @@ SIA_limited_war_cat = {
     			}
     		}
 
-			any_state_in = {
-				ai_area = burma_regions
-				malaysia_burma_states = yes
-				is_controlled_by = FROM
+			FROM = {
+				any_controlled_state = {
+					malaysia_burma_states = yes
+				}
 			}
 	    }
 	    visible = {
