@@ -539,19 +539,29 @@ spanish_production = {
 		desc = "No DDAY wall"
 	}
 }
-finish_production = {
-	name = "Finnish Production"
+finland_simulator = {
+	name = "Finland Simulator"
 	group = "HMM Rules"
 	icon = "GFX_decision_generic_industry"
 	option = {
-		name = ger_gun
-		text = "GGerman Lend Lease for Guns"
-		desc = "The gun amount progressively increases as time passes"
+		name = on
+		text = "GOn, Full"
+		desc = "Germany gets a decision after 1st March 1939 that is enabled if there is no player on Finland. After taking the decision, Germany and Italy will get Swedish infantry equipment spawned in every month, simulating Finnish lend-lease. After 1st March 1939, Bulgaria will also get a special trait increasing their command power cap to simulate being able to send expeditionary forces to Finland. Both of these effects are (temporarily) disabled if/when Finland becomes player-controlled."
+	}
+	option = {
+		name = on_ll_only
+		text = "YOn, Lend-Lease Only"
+		desc = "Germany gets a decision after 1st March 1939 that is enabled if there is no player on Finland. After taking the decision, Germany and Italy will get Swedish infantry equipment spawned in every month, simulating Finnish lend-lease. This effect is (temporarily) disabled if/when Finland becomes player-controlled."
+	}
+	option = {
+		name = on_cp_only
+		text = "YOn, Command Power Only"
+		desc = "After 1st March 1939, Bulgaria will get a special trait increasing their command power cap to simulate being able to send expeditionary forces to Finland. This effect is (temporarily) disabled if/when Finland becomes player-controlled."
 	}
 	default = {
 		name = off
-		text = "RNo German Lend Lease for Guns"
-		desc = "Use if Finland has a player on it"
+		text = "ROff"
+		desc = "Axis does not get free infantry equipment simulating lend-lease from Finland or free command power simulating the ability to expeditionary units to Finland."
 	}
 }
 axis_fuel_spirit = {

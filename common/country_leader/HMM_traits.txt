@@ -17,9 +17,9 @@ leader_traits = {
 		max_command_power = 300
 		command_power_gain_mult = 1.5
 	}
-	bul_caudillo_2 = {
+    bul_sotamarsalkka = {
 		random = no
-		max_command_power = 600
-		command_power_gain_mult = 2.0
+		max_command_power = 300
+		command_power_gain_mult = 1.5
 	}
 }
