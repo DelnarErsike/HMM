@@ -1928,10 +1928,42 @@ focus_tree = {
 					}
 					OR = {
 						any_owned_state = {
-							is_in_array = { HRE_states = THIS }
+							OR = {
+								region = 5		#Benelux
+								region = 21		#Alps
+								region = 7		#West Germany
+								region = 6		#North-West Germany
+								region = 8		#East Germany
+								state = 161		#Emilia Romagna
+								state = 162		#Toscana
+								state = 28		#Alsace
+								state = 735		#Savoy
+								state = 58		#Holstein
+								state = 909		#Schleswig
+								state = 102		#North Slovenia
+								state = 853		#Ljubljana
+								state = 736		#Litorale
+								state = 852		#Istria
+							}
 						}
 						any_controlled_state = {
-							is_in_array = { HRE_states = THIS }
+							OR = {
+								region = 5		#Benelux
+								region = 21		#Alps
+								region = 7		#West Germany
+								region = 6		#North-West Germany
+								region = 8		#East Germany
+								state = 161		#Emilia Romagna
+								state = 162		#Toscana
+								state = 28		#Alsace
+								state = 735		#Savoy
+								state = 58		#Holstein
+								state = 909		#Schleswig
+								state = 102		#North Slovenia
+								state = 853		#Ljubljana
+								state = 736		#Litorale
+								state = 852		#Istria
+							}
 						}
 					}
 				}
@@ -1939,9 +1971,22 @@ focus_tree = {
 					clear_temp_array = temp_states
 					every_owned_state = {
 						limit = {
-							is_in_array = { HRE_states = THIS }
-							NOT = {
-								is_in_array = { temp_states = THIS }
+							OR = {
+								region = 5		#Benelux
+								region = 21		#Alps
+								region = 7		#West Germany
+								region = 6		#North-West Germany
+								region = 8		#East Germany
+								state = 161		#Emilia Romagna
+								state = 162		#Toscana
+								state = 28		#Alsace
+								state = 735		#Savoy
+								state = 58		#Holstein
+								state = 909		#Schleswig
+								state = 102		#North Slovenia
+								state = 853		#Ljubljana
+								state = 736		#Litorale
+								state = 852		#Istria
 							}
 						}
 						add_to_temp_array = {
@@ -1950,7 +1995,23 @@ focus_tree = {
 					}
 					every_controlled_state = {
 						limit = {
-							is_in_array = { HRE_states = THIS }
+							OR = {
+								region = 5		#Benelux
+								region = 21		#Alps
+								region = 7		#West Germany
+								region = 6		#North-West Germany
+								region = 8		#East Germany
+								state = 161		#Emilia Romagna
+								state = 162		#Toscana
+								state = 28		#Alsace
+								state = 735		#Savoy
+								state = 58		#Holstein
+								state = 909		#Schleswig
+								state = 102		#North Slovenia
+								state = 853		#Ljubljana
+								state = 736		#Litorale
+								state = 852		#Istria
+							}
 							NOT = {
 								is_in_array = { temp_states = THIS }
 							}
