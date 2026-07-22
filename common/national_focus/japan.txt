@@ -12625,9 +12625,9 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
-			custom_effect_tooltip = JAP_unlocks_pearl_harbor_raid
+			#custom_effect_tooltip = JAP_unlocks_pearl_harbor_raid
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			#custom_effect_tooltip = generic_skip_one_line_tt
 
 			JAP_small_naval_faction_gain = yes
 
@@ -30331,9 +30331,9 @@ focus_tree = {
 				limit = {
 					has_dlc = "Gotterdammerung"
 				}
-				custom_effect_tooltip = GER_unlocks_statue_of_liberty_raid_tt
+				#custom_effect_tooltip = GER_unlocks_statue_of_liberty_raid_tt
 
-				custom_effect_tooltip = generic_skip_one_line_tt
+				#custom_effect_tooltip = generic_skip_one_line_tt
 				
 				JAP_add_or_modify_advanced_weapon_projects = yes
 				IF = {

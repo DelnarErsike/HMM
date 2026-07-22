@@ -1,0 +1,28 @@
+categories = {
+	
+	nuclear_raids = {
+	    intel_source = air
+	    free_targeting = yes
+	    faction_influence_score_on_success = -100
+	    available = {
+			OR = {
+				is_special_project_completed = sp:sp_nuclear_bomb
+				num_of_nukes > 0	#To fix the nuke from the project option "we can use this against or enemies", not actually being usable
+			}
+	    }
+	}
+
+	land_infiltration_raids = {
+	    intel_source = army
+	    faction_influence_score_on_success = 50
+		# HMM: all land infiltration raids besides rescuing generals are disabled
+	    visible = {
+			has_dlc = "Thunder at Our Gates"
+		}
+
+		available = {
+			has_any_captured_general = yes
+		}
+	}
+
+}

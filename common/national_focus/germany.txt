@@ -4822,26 +4822,26 @@ focus_tree = {
 			
 			
 			
-			IF = {
-				limit = { has_dlc = "Gotterdammerung" }
-				custom_effect_tooltip = generic_skip_one_line_tt
-				custom_effect_tooltip = GER_unlocks_eben_emael_raid_tt
-				if = {
-					limit = {
-						NOT = {
-							has_dlc = "Peace For Our Time"
-						}
-					}
-					custom_effect_tooltip = generic_skip_one_line_tt
-				}
-			}
-			if = {
-				limit = {
-					has_dlc = "Peace For Our Time"
-				}
-				custom_effect_tooltip = CZE_unlocks_sokolov_raid_pfot_tt
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}
+			#IF = {
+			#	limit = { has_dlc = "Gotterdammerung" }
+			#	custom_effect_tooltip = generic_skip_one_line_tt
+			#	custom_effect_tooltip = GER_unlocks_eben_emael_raid_tt
+			#	if = {
+			#		limit = {
+			#			NOT = {
+			#				has_dlc = "Peace For Our Time"
+			#			}
+			#		}
+			#		custom_effect_tooltip = generic_skip_one_line_tt
+			#	}
+			#}
+			#if = {
+			#	limit = {
+			#		has_dlc = "Peace For Our Time"
+			#	}
+			#	custom_effect_tooltip = CZE_unlocks_sokolov_raid_pfot_tt
+			#	custom_effect_tooltip = generic_skip_one_line_tt
+			#}
 
 			custom_effect_tooltip = available_chief_of_airforce
 			show_ideas_tooltip = ritter_von_greim
@@ -6297,9 +6297,9 @@ focus_tree = {
 				limit = {
 					has_dlc = "Gotterdammerung"
 				}
-				custom_effect_tooltip = GER_unlocks_statue_of_liberty_raid_tt
+				#custom_effect_tooltip = GER_unlocks_statue_of_liberty_raid_tt
 
-				custom_effect_tooltip = generic_skip_one_line_tt
+				#custom_effect_tooltip = generic_skip_one_line_tt
 
 				GER_add_or_modify_wunderwaffen = yes
 				if = {
@@ -32102,13 +32102,13 @@ focus_tree = {
 				expire = 0
 			} 
 
-			if = {
-				limit = {
-					has_dlc = "Gotterdammerung"
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				custom_effect_tooltip = GER_unlocks_kremlin_raid_tt
-			}
+			#if = {
+			#	limit = {
+			#		has_dlc = "Gotterdammerung"
+			#	}
+			#	custom_effect_tooltip = generic_skip_one_line_tt
+			#	custom_effect_tooltip = GER_unlocks_kremlin_raid_tt
+			#}
 
 			add_ai_strategy = { 
 				type = conquer	
