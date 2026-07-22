@@ -1137,7 +1137,10 @@ Technologies = {
 		available = {
 			original_tag = GER
 			SPR = { is_ai = yes }
-			date > 1939.01.01
+            if = {
+                limit = { is_debug = no }
+                date > 1939.1.1
+            }
             NOT = {
                 OR = {
                     has_country_flag = annexed_SPR
@@ -1211,7 +1214,10 @@ Technologies = {
 		available = {
 			original_tag = GER
 			SPR = { is_ai = yes }
-			date > 1939.01.01
+			if = {
+                limit = { is_debug = no }
+                date > 1939.1.1
+            }
             NOT = {
                 OR = {
                     has_country_flag = annexed_SPR
@@ -1572,7 +1578,10 @@ Technologies = {
 		available = {
 			original_tag = GER
 			FIN = { is_ai = yes }
-			date > 1939.3.01
+			if = {
+                limit = { is_debug = no }
+                date > 1939.3.01
+            }
             NOT = {
                 OR = {
                     has_country_flag = GER_started_ll_gun
