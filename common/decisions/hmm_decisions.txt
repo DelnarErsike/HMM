@@ -17,82 +17,42 @@ operations = {
         visible = {
             if = {
                 limit = {
-                    OR = {
-                        has_game_rule = {
-                            rule = who_gets_saf_annex
-                            option = fra
-                        }
-                        AND = {
-                            AST = { is_ai = yes }
-                            RAJ = { is_ai = yes }
-                            OR = {
-                                has_game_rule = {
-                                    rule = who_gets_saf_annex
-                                    option = ast
-                                }
-                                has_game_rule = {
-                                    rule = who_gets_saf_annex
-                                    option = raj
-                                }
-                            }
-                        }
+                    has_game_rule = {
+                        rule = who_gets_saf_annex
+                        option = fra
                     }
                 }
                 original_tag = FRA
             }
             else_if = {
                 limit = {
-                    OR = {
-                        has_game_rule = {
-                            rule = who_gets_saf_annex
-                            option = ast
-                        }
-                        AND = {
-                            has_game_rule = {
-                                rule = who_gets_saf_annex
-                                option = raj
-                            }
-                            RAJ = { is_ai = yes }
-                        }
+                    has_game_rule = {
+                        rule = who_gets_saf_annex
+                        option = ast
                     }
-                    AST = { is_ai = no }
                 }
                 original_tag = AST
             }
             else_if = {
                 limit = {
-                    OR = {
-                        has_game_rule = {
-                            rule = who_gets_saf_annex
-                            option = raj
-                        }
-                        AND = {
-                            has_game_rule = {
-                                rule = who_gets_saf_annex
-                                option = ast
-                            }
-                            AST = { is_ai = yes }
-                        }
+                    has_game_rule = {
+                        rule = who_gets_saf_annex
+                        option = raj
                     }
-                    RAJ = { is_ai = no }
                 }
                 original_tag = RAJ
             }
             else_if = {
                 limit = {
-                    OR = {
-                        has_game_rule = {
-                            rule = who_gets_saf_annex
-                            option = eng
-                        }
-                        AND = {
-                            AST = { is_ai = yes }
-                            RAJ = { is_ai = yes }
-                            FRA = { is_ai = yes }
-                        }
+                    has_game_rule = {
+                        rule = who_gets_saf_annex
+                        option = eng
                     }
                 }
                 original_tag = ENG
+            }
+            else = {
+                always = no
             }
         }
         available = {
@@ -102,6 +62,48 @@ operations = {
             ENG = {
                 has_completed_focus = uk_south_africa_focus
             }
+            custom_trigger_tooltip = {
+                tooltip = HMM_we_are_selected_for_SAF_annex
+                if = {
+                    limit = {
+                        has_game_rule = {
+                            rule = who_gets_saf_annex
+                            option = fra
+                        }
+                    }
+                    original_tag = FRA
+                }
+                else_if = {
+                    limit = {
+                        has_game_rule = {
+                            rule = who_gets_saf_annex
+                            option = ast
+                        }
+                    }
+                    original_tag = AST
+                }
+                else_if = {
+                    limit = {
+                        has_game_rule = {
+                            rule = who_gets_saf_annex
+                            option = raj
+                        }
+                    }
+                    original_tag = RAJ
+                }
+                else_if = {
+                    limit = {
+                        has_game_rule = {
+                            rule = who_gets_saf_annex
+                            option = eng
+                        }
+                    }
+                    original_tag = ENG
+                }
+                else = {
+                    always = no
+                }
+            }
         }
         targets = {
             SAF
@@ -109,7 +111,7 @@ operations = {
         complete_effect = {
             SAF = {
                 transfer_units_fraction = {
-                    target = FRA
+                    target = ROOT
                     size = 1
                     stockpile_ratio = 1
                     army_ratio = 1

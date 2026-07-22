@@ -131,6 +131,7 @@
  HMM_axis_only: "Axis Only"
  HMM_allies_only: "Allies Only"
  HMM_spa_only_volunteers_to_ger_ita_bul: "Spain can only send volunteers to Germany, Italy, or Bulgaria."
+ HMM_we_are_selected_for_SAF_annex: "We have been selected by the game rules as the one who can annex South Africa."
 
  # Custom Ideas
  HMM_innovative_weapons_designer:0 "Innovative Weapons Designer"
