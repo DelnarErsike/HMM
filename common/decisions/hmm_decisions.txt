@@ -1172,13 +1172,8 @@ Technologies = {
             }
 		}
 		complete_effect = {
-            every_possible_country = {
-                limit = {
-                    has_character = SPR_mohamed_meziane
-                }
-                SPR_mohamed_meziane = {
-                    set_nationality = BUL
-                }
+            SPR_mohamed_meziane = {
+                set_nationality = BUL
             }
             BUL = {
                 activate_mission = GER_recieving_ll_mech_bul_1a

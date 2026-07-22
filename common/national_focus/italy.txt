@@ -20766,13 +20766,9 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			hidden_effect = {	#Fix character being on the civil war side that lost
-                every_possible_country = {
-                    limit = { has_character = ITA_enrico_fermi }
-                    random_character = {
-                        limit = { is_character = ITA_enrico_fermi }
-                        set_nationality = ROOT
-                    }
-                }
+				ITA_enrico_fermi = {
+					set_nationality = ROOT
+				}
             }
 
 			custom_effect_tooltip = {

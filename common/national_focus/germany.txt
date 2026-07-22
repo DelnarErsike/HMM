@@ -30739,31 +30739,15 @@ focus_tree = {
 				}
 				custom_effect_tooltip = GER_andrey_shckuro_and_pyotr_krasnov_join_tt
 				hidden_effect = {
-					every_possible_country = {
-						limit = {
-							has_character = SOV_andrey_shkuro
-						}
-						SOV_andrey_shkuro = {
-							clr_character_flag = SOV_exiled_flag
-							clr_character_flag = SOV_exiled_army_leader
-						}
-						set_nationality = {
-						    target_country = ROOT
-						    character = SOV_andrey_shkuro
-						}
+					SOV_andrey_shkuro = {
+						clr_character_flag = SOV_exiled_flag
+						clr_character_flag = SOV_exiled_army_leader
+						set_nationality = ROOT
 					}
-					every_possible_country = {
-						limit = {
-							has_character = SOV_pyotr_krasnov
-						}
-						SOV_pyotr_krasnov = {
-							clr_character_flag = SOV_exiled_flag
-							clr_character_flag = SOV_exiled_army_leader
-						}
-						set_nationality = {
-						    target_country = ROOT
-						    character = SOV_pyotr_krasnov
-						}
+					SOV_pyotr_krasnov = {
+						clr_character_flag = SOV_exiled_flag
+						clr_character_flag = SOV_exiled_army_leader
+						set_nationality = ROOT
 					}
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt

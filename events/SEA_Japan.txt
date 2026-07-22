@@ -3322,15 +3322,7 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		every_possible_country = {
-			limit = {
-				has_character = MEN_jodbajab
-			}
-			set_nationality = {
-			    target_country = ROOT
-			    character = MEN_jodbajab
-			}
-		}
+		MEN_jodbajab = { set_nationality = ROOT }
 
 		set_country_flag = MON_jodbajab_arrived_in_the_country_flag
 
@@ -3362,15 +3354,7 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		every_possible_country = {
-			limit = {
-				has_character = MAN_jonjurjab
-			}
-			set_nationality = {
-			    target_country = ROOT
-			    character = MAN_jonjurjab
-			}
-		}
+		MAN_jonjurjab = { set_nationality = ROOT }
 
 		set_country_flag = MON_jonjurjab_arrived_in_the_country_flag
 

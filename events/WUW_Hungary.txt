@@ -5635,18 +5635,7 @@ country_event = {
 				}
 			}
 
-			every_possible_country = {
-
-				limit = {
-					has_character = CRO_duro_jakcin
-				}
-
-				set_nationality = {
-				    target_country = ROOT
-				    character = CRO_duro_jakcin
-				}	
-
-			}
+			CRO_duro_jakcin = { set_nationality = ROOT }
 
 		}
 

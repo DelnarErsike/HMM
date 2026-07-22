@@ -10624,15 +10624,7 @@ country_event = {
 						}
 					}
 				}
-				every_possible_country = {
-					limit = {
-						has_character = SPA_emilio_mola
-					}
-					set_nationality = {
-					    target_country = RKI
-					    character = SPA_emilio_mola
-					}
-				}
+				SPA_emilio_mola = { set_nationality = RKI }
 			}
 		}
 	}
@@ -13955,24 +13947,8 @@ country_event = {
 		
 		custom_effect_tooltip = GER_shalva_maglakelidze_and_giorgi_kvinitadze_join
 		hidden_effect = {
-			every_possible_country = {
-				limit = {
-					has_character = GEO_giorgi_kvinitadze
-				}
-				set_nationality = {
-				    target_country = ROOT
-				    character = GEO_giorgi_kvinitadze
-				}
-			}
-			every_possible_country = {
-				limit = {
-					has_character = GEO_shalva_maglakelidze
-				}
-				set_nationality = {
-				    target_country = ROOT
-				    character = GEO_shalva_maglakelidze
-				}
-			}
+			GEO_giorgi_kvinitadze = { set_nationality = ROOT }
+			GEO_shalva_maglakelidze = { set_nationality = ROOT }
 		}
 
 		add_manpower = 5000
@@ -14520,31 +14496,15 @@ country_event = {
 		
 		custom_effect_tooltip = GER_andrey_shckuro_and_pyotr_krasnov_join_tt
 		hidden_effect = {
-			every_possible_country = {
-				limit = {
-					has_character = SOV_andrey_shkuro
-				}
-				SOV_andrey_shkuro = {
-					clr_character_flag = SOV_exiled_flag
-					clr_character_flag = SOV_exiled_army_leader
-				}
-				set_nationality = {
-				    target_country = ROOT
-				    character = SOV_andrey_shkuro
-				}
+			SOV_andrey_shkuro = {
+				clr_character_flag = SOV_exiled_flag
+				clr_character_flag = SOV_exiled_army_leader
+				set_nationality = ROOT
 			}
-			every_possible_country = {
-				limit = {
-					has_character = SOV_pyotr_krasnov
-				}
-				SOV_pyotr_krasnov = {
-					clr_character_flag = SOV_exiled_flag
-					clr_character_flag = SOV_exiled_army_leader
-				}
-				set_nationality = {
-				    target_country = ROOT
-				    character = SOV_pyotr_krasnov
-				}
+			SOV_pyotr_krasnov = {
+				clr_character_flag = SOV_exiled_flag
+				clr_character_flag = SOV_exiled_army_leader
+				set_nationality = ROOT
 			}
 		}
 		custom_effect_tooltip = generic_skip_one_line_tt
