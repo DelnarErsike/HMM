@@ -6222,9 +6222,10 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = AST_gain_claims_on_japan_tt
 			hidden_effect = {
-				for_each_scope_loop = {
-					array = JAP.core_states_at_game_start
-					add_claim_by = PREV
+				JAP = {
+					every_core_state = {
+						add_claim_by = ROOT
+					}
 				}
 			}
 		}

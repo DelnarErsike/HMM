@@ -395,8 +395,6 @@ if = {
 		communism = DEN_communism_popularity
 		neutrality = DEN_neutrality_popularity
 	}
-
-	store_core_states_on_game_start = yes
 }
 if = {
 	limit = {

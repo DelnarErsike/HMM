@@ -1508,18 +1508,6 @@ on_actions = {
 
 	#	ROOT is new controller, FROM is old controller, FROM.FROM is state ID.
 	on_state_control_changed = {
-		effect = {
-			if = {
-				limit = {
-					is_in_array = {
-						array = FIN.core_states_at_game_start
-						value = FROM.FROM
-					}
-				}
-
-				set_global_flag = achievement_fin_has_lost_one_starting_core
-			}
-		}
 		# FINNISH MOTTI - Remove Motti Tactics state modifier if Finland loses a state
 		effect = {
 			if = {

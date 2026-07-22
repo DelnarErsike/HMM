@@ -80,7 +80,6 @@ IF = {
 	limit = {
 		has_dlc = "Arms Against Tyranny"
 	}
-	store_core_states_on_game_start = yes
 	set_variable = { ICE_economy_research_speed_factor = -0.1 }
 	set_variable = { ICE_economy_production_factory_max_efficiency_factor = -0.1 }
 	set_variable = { ICE_economy_production_speed_buildings_factor = -0.1 }

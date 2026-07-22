@@ -6607,12 +6607,8 @@
 			}
 
 			#only for show
-			every_state = {
+			every_core_state = {
 				limit = {
-					is_in_array = {
-						array = ROOT.core_states_at_game_start
-						value = THIS
-					}
 					NOT = {
 						state = 1076
 					}

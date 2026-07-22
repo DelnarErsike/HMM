@@ -515,13 +515,6 @@ every_state = {
 	}
 }
 
-
-every_core_state = {
-	add_to_array = {
-		array = ROOT.core_states_at_game_start
-	}
-}
-
 set_variable = { foreign_diplomatic_relationships_political_advisor_cost_factor = 0 }
 set_variable = { foreign_diplomatic_relationships_research_speed_factor = 0 }
 set_variable = { foreign_diplomatic_relationships_experience_gain_army = 0 }

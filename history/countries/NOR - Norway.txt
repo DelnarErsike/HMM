@@ -154,7 +154,6 @@ if = {
 		NOR_birger_ljungberg
 		NOR_kristian_laake
 	} 
-	store_core_states_on_game_start = yes
 	# Setting Independent Norway Dmod variables 
 	set_variable = { NOR.NOR_independent_norway_dmod_consumer_goods_factor = 0 } 
 	set_variable = { NOR.NOR_independent_norway_dmod_production_speed_industrial_complex_factor = 0 } 

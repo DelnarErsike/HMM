@@ -901,8 +901,7 @@ SWE_politics = {
 
 		remove_effect = {
 			FIN = {
-				for_each_scope_loop = {
-					array = core_states_at_game_start
+				every_core_state = {
 					add_core_of = ROOT
 				}
 			}
@@ -968,8 +967,7 @@ SWE_politics = {
 
 		remove_effect = {
 			NOR = {
-				for_each_scope_loop = {
-					array = core_states_at_game_start
+				every_core_state = {
 					add_core_of = ROOT
 				}
 			}
@@ -1033,8 +1031,7 @@ SWE_politics = {
 
 		remove_effect = {
 			DEN = {
-				for_each_scope_loop = {
-					array = core_states_at_game_start
+				every_core_state = {
 					add_core_of = ROOT
 				}
 			}
@@ -1097,8 +1094,7 @@ SWE_politics = {
 
 		remove_effect = {
 			ICE = {
-				for_each_scope_loop = {
-					array = core_states_at_game_start
+				every_core_state = {
 					add_core_of = ROOT
 				}
 			}
@@ -1130,9 +1126,7 @@ SWE_politics = {
 				tooltip = SWE_proclaim_eternal_sweden_tt
 				DEN = {
 					hidden_trigger = {
-						all_of_scopes = {
-
-						 	array = core_states_at_game_start
+						all_core_state = {
 						 	is_fully_controlled_by = ROOT
 						 
 						 } 
@@ -1141,9 +1135,7 @@ SWE_politics = {
 
 				ICE = {
 					hidden_trigger = {
-						all_of_scopes = {
-
-						 	array = core_states_at_game_start
+						all_core_state = {
 						 	is_fully_controlled_by = ROOT
 						 
 						 } 
@@ -1152,9 +1144,7 @@ SWE_politics = {
 
 				NOR = {
 					hidden_trigger = {
-						all_of_scopes = {
-
-						 	array = core_states_at_game_start
+						all_core_state = {
 						 	is_fully_controlled_by = ROOT
 						 
 						 } 
@@ -1163,8 +1153,7 @@ SWE_politics = {
 
 				FIN = {
 					hidden_trigger = {
-						all_of_scopes = {
-						 	array = core_states_at_game_start
+						all_core_state = {
 						 	is_fully_controlled_by = ROOT
 						 
 						 } 
@@ -1172,8 +1161,7 @@ SWE_politics = {
 				}
 
 				EST = {
-					all_of_scopes = {
-					 	array = core_states_at_game_start
+					all_core_state = {
 					 	is_fully_controlled_by = ROOT
 					 
 					 }
@@ -1182,8 +1170,7 @@ SWE_politics = {
 
 				LAT = {
 					hidden_trigger = {
-						all_of_scopes = {
-						 	array = core_states_at_game_start
+						all_core_state = {
 						 	is_fully_controlled_by = ROOT
 						 
 						 } 
@@ -1300,9 +1287,7 @@ SWE_politics = {
 				 	tooltip = SWE_proclaim_big_power_sweden_tt
 				}
 				hidden_trigger = {
-					all_of_scopes = {
-
-					 	array = core_states_at_game_start
+					all_core_state = {
 					 	is_fully_controlled_by = ROOT
 					 
 					 } 
@@ -1314,9 +1299,7 @@ SWE_politics = {
 				 	tooltip = SWE_proclaim_big_power_sweden_tt
 				}
 				hidden_trigger = {
-					all_of_scopes = {
-
-					 	array = core_states_at_game_start
+					all_core_state = {
 					 	is_fully_controlled_by = ROOT
 					 
 					 } 
@@ -1328,9 +1311,7 @@ SWE_politics = {
 				 	tooltip = SWE_proclaim_big_power_sweden_tt
 				}
 				hidden_trigger = {
-					all_of_scopes = {
-
-					 	array = core_states_at_game_start
+					all_core_state = {
 					 	is_fully_controlled_by = ROOT
 					 
 					 } 
@@ -1342,8 +1323,7 @@ SWE_politics = {
 				 	tooltip = SWE_proclaim_big_power_sweden_tt
 				}
 				hidden_trigger = {
-					all_of_scopes = {
-					 	array = core_states_at_game_start
+					all_core_state = {
 					 	is_fully_controlled_by = ROOT
 					 
 					 } 
@@ -1354,8 +1334,7 @@ SWE_politics = {
 				custom_trigger_tooltip = {
 				 	tooltip = SWE_proclaim_big_power_sweden_tt
 				}
-				all_of_scopes = {
-				 	array = core_states_at_game_start
+				all_core_state = {
 				 	is_fully_controlled_by = ROOT
 				 
 				 }
@@ -1367,8 +1346,7 @@ SWE_politics = {
 				 	tooltip = SWE_proclaim_big_power_sweden_tt
 				}
 				hidden_trigger = {
-					all_of_scopes = {
-					 	array = core_states_at_game_start
+					all_core_state = {
 					 	is_fully_controlled_by = ROOT
 					 
 					 } 
@@ -1418,16 +1396,14 @@ SWE_politics = {
 				}
 
 				EST = {
-					for_each_scope_loop = {
-					 	array = core_states_at_game_start
+					every_core_state = {
 					 	add_compliance = 70
 					 
 					}
 				}
 
 				LAT = {
-					for_each_scope_loop = {
-					 	array = core_states_at_game_start
+					every_core_state = {
 					 	add_compliance = 70
 					 
 					 }
