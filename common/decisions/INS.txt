@@ -5139,12 +5139,6 @@ INS_limited_wars_cat = {
     			}
     		}
 
-			FROM = {
-				any_controlled_state = {
-					malaya_states = yes
-				}
-			}
-
 			malaya_states = yes
 	    }
 	    visible = {
@@ -5168,7 +5162,6 @@ INS_limited_wars_cat = {
 	        highlight_states_trigger = {
 		    	malaya_states = yes
 		    	is_controlled_by = FROM
-
 	        }
 	    }
 

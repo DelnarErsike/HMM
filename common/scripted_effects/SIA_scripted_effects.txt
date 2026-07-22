@@ -677,48 +677,6 @@ SIA_add_cultural_mandate_modifier_if_i_dont_have_it = {
 
 ### Limited War
 
-SIA_refresh_indochina_controllers = {
-	clear_array = SIA.indochina_controllers
-	
-	for_each_scope_loop = {
-		array = SIA.indochina_states
-		if = {
-			limit = {
-				NOT = {
-					controller = {
-						is_in_array = { array = SIA.indochina_controllers value = THIS }
-					}
-				}
-			}
-
-			controller = {
-				add_to_array = { array = SIA.indochina_controllers value = THIS }
-			}
-		}
-	}
-}
-
-SIA_refresh_malaysia_burma_controllers = {
-	clear_array = SIA.malaysia_burma_controllers
-	
-	for_each_scope_loop = {
-		array = SIA.malaysia_burma_states
-		if = {
-			limit = {
-				NOT = {
-					controller = {
-						is_in_array = { array = SIA.malaysia_burma_controllers value = THIS }
-					}
-				}
-			}
-
-			controller = {
-				add_to_array = { array = SIA.malaysia_burma_controllers value = THIS }
-			}
-		}
-	}
-}
-
 #Reset all variables related to limited wars
 SIA_clear_limited_war_variables = {
 	hidden_effect = {
@@ -727,8 +685,6 @@ SIA_clear_limited_war_variables = {
 		clear_array = SIA.limited_war_target_allies
 		clear_variable = SIA.pre_limited_war_faction_leader 
 		clear_variable = SIA.limited_war_target
-		SIA_refresh_indochina_controllers = yes
-		SIA_refresh_malaysia_burma_controllers = yes
 		set_rule = { can_join_factions = yes }
 	}
 }

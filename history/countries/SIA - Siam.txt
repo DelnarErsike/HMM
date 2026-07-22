@@ -475,46 +475,6 @@ set_variable = { SIA_aep_min_export = -0.05 }
 
 set_variable = { SIA_contingency_funds_cg = 0.08 }
 
-every_state = {
-	limit = {
-		OR = {
-			state = 1069
-			state = 670
-			state = 671
-			state = 1017
-			state = 1068
-			state = 286
-			state = 1067
-			state = 741
-			state = 1066
-		}
-	}
-
-	add_to_array = {
-		array = ROOT.indochina_states
-		value = THIS
-	}
-}
-
-every_state = {
-	limit = {
-		OR = {
-			state = 994
-			state = 999
-			state = 993
-			state = 1061
-			state = 1065
-			state = 1062
-			state = 1064
-		}
-	}
-
-	add_to_array = {
-		array = ROOT.malaysia_burma_states
-		value = THIS
-	}
-}
-
 set_variable = { foreign_diplomatic_relationships_political_advisor_cost_factor = 0 }
 set_variable = { foreign_diplomatic_relationships_research_speed_factor = 0 }
 set_variable = { foreign_diplomatic_relationships_experience_gain_army = 0 }

@@ -717,9 +717,9 @@ SIA_limited_war_cat = {
 	       original_tag = SIA
 	    }
 	    visible = {
+			always = no
 	    	has_completed_focus = SIA_recover_indochina
 	    }
-	    target_array = ROOT.indochina_controllers
 	    target_trigger = {
     		NOT = {
     			is_in_array = {
@@ -727,13 +727,9 @@ SIA_limited_war_cat = {
     			}
     		}
 
-    		is_in_array = {
-    			array = ROOT.indochina_controllers
-    			value = FROM
-    		}
-
-			any_of_scopes = {
-				array = ROOT.indochina_states
+			any_state_in = {
+				ai_area = indochina_regions
+				indochina_states = yes
 				is_controlled_by = FROM
 			}
 	    }
@@ -754,10 +750,7 @@ SIA_limited_war_cat = {
 
 	    highlight_states = {
 	        highlight_states_trigger = {
-		    	is_in_array = {
-		    		array = ROOT.indochina_states
-		    		value = THIS
-		    	}
+		    	indochina_states = yes
 		    	is_controlled_by = FROM
 
 	        }
@@ -791,14 +784,12 @@ SIA_limited_war_cat = {
 	    	clear_array = limited_war_target_allies
 
 	    	#Save all states that is included in the limited war
-	    	for_each_scope_loop = {
-	    		array = indochina_states
-	    		if = {
-	    			limit = { is_controlled_by = FROM }
-	
-	    			add_to_array = { array = ROOT.limited_war_states value = THIS }
-	    		}
-	    	}
+			FROM = {
+				every_controlled_state = {
+					limit = { indochina_states = yes }
+					add_to_array = { array = ROOT.limited_war_states value = THIS }
+				}
+			}
 
 	    	set_variable = { limited_war_target = FROM } #is_target_of_limited_war
 
@@ -885,15 +876,13 @@ SIA_limited_war_cat = {
 	    	}
 
 	    	modifier = {
-	    		VIC = { exists = yes }
-	    		any_of_scopes = {
-	    			array = indochina_controllers 
-	    			tag = VIC
-	    		}
-	    		FROM = {
-	    			tag = VIC
-	    			is_in_faction = no
-	    		}
+	    		VIC = {
+					tag = FROM
+					is_in_faction = no
+					any_controlled_state = {
+						indochina_states = yes
+					}
+				}
 
 	    		add = 100
 	    	}
@@ -939,7 +928,6 @@ SIA_limited_war_cat = {
 	    target_root_trigger = {
 	       original_tag = SIA
 	    }
-	    target_array = ROOT.malaysia_burma_controllers
 	    target_trigger = {
     		NOT = {
     			is_in_array = {
@@ -947,17 +935,14 @@ SIA_limited_war_cat = {
     			}
     		}
 
-    		is_in_array = {
-    			array = ROOT.malaysia_burma_controllers
-    			value = FROM
-    		}
-
-			any_of_scopes = {
-				array = ROOT.malaysia_burma_states
+			any_state_in = {
+				ai_area = burma_regions
+				malaysia_burma_states = yes
 				is_controlled_by = FROM
 			}
 	    }
 	    visible = {
+			always = no
 	    	has_completed_focus = SIA_retake_lost_british_states
 	    }
 	    available = {
@@ -980,10 +965,7 @@ SIA_limited_war_cat = {
 
 	    highlight_states = {
 	        highlight_states_trigger = {
-		    	is_in_array = {
-		    		array = ROOT.malaysia_burma_states
-		    		value = THIS
-		    	}
+		    	malaysia_burma_states = yes
 		    	is_controlled_by = FROM
 
 	        }
@@ -1017,14 +999,12 @@ SIA_limited_war_cat = {
 	    	clear_array = limited_war_target_allies
 
 	    	#Save all states that is included in the limited war
-	    	for_each_scope_loop = {
-	    		array = malaysia_burma_states
-	    		if = {
-	    			limit = { is_controlled_by = FROM }
-	
-	    			add_to_array = { array = ROOT.limited_war_states value = THIS }
-	    		}
-	    	}
+			FROM = {
+				every_controlled_state = {
+					limit = { malaysia_burma_states = yes }
+					add_to_array = { array = ROOT.limited_war_states value = THIS }
+				}
+			}
 
 	    	
 	    	set_variable = { limited_war_target = FROM } #is_target_of_limited_war

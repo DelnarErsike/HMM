@@ -157,9 +157,6 @@
 					}
 				}
 			}
-			
-
-			SIA = { SIA_refresh_indochina_controllers = yes }
 
 			if = {
 				limit = {
@@ -684,13 +681,6 @@
 	#Fra can cap etc
 	on_capitulation = {
 		effect = {
-			if = {
-				limit = {
-					is_in_array = { array = SIA.indochina_controllers value = ROOT }
-				}
-
-				SIA = { SIA_refresh_indochina_controllers = yes }
-			}
 			if = {
 				limit = {
 					FROM = {
@@ -1924,23 +1914,6 @@
 
 	#ROOT is new controller, FROM is old controller, FROM.FROM is state ID
 	on_state_control_changed = {
-		effect = {
-			if = {
-				limit = {
-					has_dlc = "Thunder at Our Gates"
-					is_in_array = {
-						array = SIA.indochina_states
-						value = FROM.FROM.FROM
-					}
-					NOT = {
-						ROOT = {
-							original_tag = SIA
-						}
-					}
-				}
-				SIA = { SIA_refresh_indochina_controllers = yes }
-			}
-		}
 		effect = {
 			if = {
 				limit = {

@@ -4940,12 +4940,20 @@
 			factor = 15
 		}
 		available = {
+			any_state_in = {
+				ai_area = burma_regions
+				malaysia_burma_states = yes
+				NOT = { is_controlled_by = ROOT }
+			}
 		}
 
 		bypass = {
-			all_of_scopes = {
-				array = ROOT.malaysia_burma_states
-				is_controlled_by = ROOT
+			NOT = {
+				any_state_in = {
+					ai_area = burma_regions
+					malaysia_burma_states = yes
+					NOT = { is_controlled_by = ROOT }
+				}
 			}
 		}
 
@@ -4958,9 +4966,6 @@
 
 		completion_reward = {
 			#custom_effect_tooltip = SIA_retake_lost_british_states_tt
-			#hidden_effect = {
-			#	SIA_refresh_malaysia_burma_controllers = yes
-			#}
 		}
 	}
 
@@ -4976,8 +4981,9 @@
 			factor = 15
 		}
 		available = {
-			any_of_scopes = {
-				array = ROOT.indochina_states
+			any_state_in = {
+				ai_area = indochina_regions
+				indochina_states = yes
 				NOT = { is_controlled_by = ROOT }
 			}
 		}
@@ -4985,9 +4991,12 @@
 		#}
 
 		bypass = {
-			all_of_scopes = {
-				array = ROOT.indochina_states
-				is_controlled_by = ROOT
+			NOT = {
+				any_state_in = {
+					ai_area = indochina_regions
+					indochina_states = yes
+					NOT = { is_controlled_by = ROOT }
+				}
 			}
 		}
 
@@ -4996,9 +5005,6 @@
 		will_lead_to_war_with = VIC
 
 		completion_reward = {
-			#hidden_effect = {
-			#	SIA_refresh_indochina_controllers = yes
-			#}
 			#custom_effect_tooltip = SIA_recover_indochina_tt
 		}
 	}
@@ -5152,10 +5158,15 @@
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = SIA_the_greater_thai_empire_available_trigger
-				all_of_scopes = {
-					array = indochina_states
-					is_controlled_by = ROOT
-					compliance > var:ROOT.SIA_greater_thai_empire_compliance_requirement
+				NOT = {
+					any_state_in = {
+						ai_area = indochina_regions
+						indochina_states = yes
+						OR = {
+							NOT = { is_controlled_by = ROOT }
+							NOT = { compliance > var:ROOT.SIA_greater_thai_empire_compliance_requirement }
+						}
+					}
 				}
 			}
 			
@@ -5203,11 +5214,11 @@
 			drop_cosmetic_tag = yes
 			set_cosmetic_tag = SIA_great_thai_empire
 
-			every_state = {
+			every_controlled_state = {
 				limit = {
 					OR = {
-						is_in_array = { array = ROOT.indochina_states value = THIS }
-						is_in_array = { array = ROOT.malaysia_burma_states value = THIS }
+						indochina_states = yes
+						malaysia_burma_states = yes
 					}
 				}
 
@@ -5387,8 +5398,9 @@
 			
 			custom_trigger_tooltip = {
 				tooltip = SIA_new_territories_administration_available_trigger
-				any_of_scopes = {
-					array = indochina_states
+				any_state_in = {
+					ai_area = indochina_regions
+					indochina_states = yes
 					is_controlled_by = ROOT
 				}
 			}

@@ -24,4 +24,26 @@ areas = {
             274
         }
     }
+
+    indochina_regions = {
+        strategic_regions = {
+            142
+            228
+        }
+    }
+
+    malaya_regions = {
+        strategic_regions = {
+            188
+        }
+    }
+
+    burma_regions = {
+        strategic_regions = {
+            292
+            293
+            294
+            295
+        }
+    }
 }
