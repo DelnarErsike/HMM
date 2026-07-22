@@ -584,6 +584,31 @@ axis_fuel_spirit = {
 		desc = "Romanian and Hungarian oil decisions and focuses are kept as they are in the base game."
 	}
 }
+who_gets_saf_annex = {
+	name = "Who Gets the Annex South Africa Decision If It Is Not Player-Controlled?"
+	group = "HMM Rules"
+	icon = "GFX_volunteers"
+	option = {
+		name = fra
+		text = "BFrance"
+		desc = "France will get the decision to annex South Africa if there is no player on it."
+	}
+	option = {
+		name = ast
+		text = "GAustralia"
+		desc = "Australia will get the decision to annex South Africa if there is no player on it (British Raj is the fallback option if Raj is also AI-controlled)."
+	}
+	default = {
+		name = raj
+		text = "OBritish Raj"
+		desc = "British Raj will get the decision to annex South Africa if there is no player on it (Australia is the fallback option if Raj is also AI-controlled)."
+	}
+	option = {
+		name = eng
+		text = "RUnited Kingdom"
+		desc = "The United Kingdom will get the decision to annex South Africa if there is no player on it."
+	}
+}
 battlefield_support_status = {
 	name = "The Battlefield Support grand doctrine is..."
 	group = "HMM Rules"
