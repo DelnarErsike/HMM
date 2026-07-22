@@ -465,12 +465,12 @@ usa_boost = {
 	}
 	option = {
 		name = usa4
-		text = "ROn-4"
+		text = "YOn-4"
 		desc = "USA receives 4 Civilian factories"
 	}
 	option = {
 		name = usa8
-		text = "ROn-8"
+		text = "OOn-8"
 		desc = "USA receives 8 Civilian factories"
 	}
 }
@@ -490,7 +490,7 @@ playable_iraq = {
 	}
 	option = {
 		name = allies
-		text = "BAllies"
+		text = "4Allies"
 		desc = "Iraq is playable and on the Allies"
 	}
 }
@@ -545,17 +545,17 @@ finland_simulator = {
 	icon = "GFX_decision_generic_industry"
 	option = {
 		name = on
-		text = "GOn, Full"
+		text = "GOn"
 		desc = "Germany gets a decision after 1st March 1939 that is enabled if there is no player on Finland. After taking the decision, Germany and Italy will get Swedish infantry equipment spawned in every month, simulating Finnish lend-lease. After 1st March 1939, Bulgaria will also get a special trait increasing their command power cap to simulate being able to send expeditionary forces to Finland. Both of these effects are (temporarily) disabled if/when Finland becomes player-controlled."
 	}
 	option = {
 		name = on_ll_only
-		text = "YOn, Lend-Lease Only"
+		text = "YOn (Lend-Lease Only)"
 		desc = "Germany gets a decision after 1st March 1939 that is enabled if there is no player on Finland. After taking the decision, Germany and Italy will get Swedish infantry equipment spawned in every month, simulating Finnish lend-lease. This effect is (temporarily) disabled if/when Finland becomes player-controlled."
 	}
 	option = {
 		name = on_cp_only
-		text = "YOn, Command Power Only"
+		text = "OOn (Command Power Only)"
 		desc = "After 1st March 1939, Bulgaria will get a special trait increasing their command power cap to simulate being able to send expeditionary forces to Finland. This effect is (temporarily) disabled if/when Finland becomes player-controlled."
 	}
 	default = {
@@ -575,7 +575,7 @@ axis_fuel_spirit = {
 	}
 	option = {
 		name = on_ita
-		text = "GOn (Italy)"
+		text = "4On (Italy)"
 		desc = "Romanian and Hungarian oil decisions and focuses are replaced with a spirit on Italy that gives fuel."
 	}
 	option = {
@@ -590,18 +590,18 @@ who_gets_saf_annex = {
 	icon = "GFX_volunteers"
 	option = {
 		name = fra
-		text = "BFrance"
+		text = "4France"
 		desc = "France will get the decision to annex South Africa if there is no player on it."
 	}
 	option = {
 		name = ast
 		text = "GAustralia"
-		desc = "Australia will get the decision to annex South Africa if there is no player on it (British Raj is the fallback option if Raj is also AI-controlled)."
+		desc = "Australia will get the decision to annex South Africa if there is no player on it."
 	}
 	default = {
 		name = raj
 		text = "OBritish Raj"
-		desc = "British Raj will get the decision to annex South Africa if there is no player on it (Australia is the fallback option if Raj is also AI-controlled)."
+		desc = "British Raj will get the decision to annex South Africa if there is no player on it."
 	}
 	option = {
 		name = eng
@@ -620,12 +620,12 @@ battlefield_support_status = {
 	}
 	option = {
 		name = axis
-		text = "YAxis Only"
+		text = "OAxis Only"
 		desc = "Battlefield Support is only allowed for Axis countries."
 	}
 	option = {
 		name = allies
-		text = "YAllies Only"
+		text = "4Allies Only"
 		desc = "Battlefield Support is only allowed for Allied countries."
 	}
 	option = {
@@ -645,12 +645,12 @@ pinpoint_strikes_status = {
 	}
 	option = {
 		name = axis
-		text = "YAxis Only"
+		text = "OAxis Only"
 		desc = "Pinpoint Strikes is only allowed for Axis countries."
 	}
 	default = {
 		name = allies
-		text = "YAllies Only"
+		text = "4Allies Only"
 		desc = "Pinpoint Strikes is only allowed for Allied countries."
 	}
 	option = {
@@ -670,12 +670,12 @@ ground_support_subdoctrines_status = {
 	}
 	option = {
 		name = axis
-		text = "YAxis Only"
+		text = "OAxis Only"
 		desc = "Air subdoctrines that provide ground support bonuses are only allowed for Axis countries."
 	}
 	default = {
 		name = allies
-		text = "YAllies Only"
+		text = "4Allies Only"
 		desc = "Air subdoctrines that provide ground support bonuses are only allowed for Allied countries."
 	}
 	option = {
