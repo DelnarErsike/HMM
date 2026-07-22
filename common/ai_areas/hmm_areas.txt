@@ -16,4 +16,12 @@ areas = {
             296
         }
     }
+
+    initial_ethiopian_state_regions = {
+        strategic_regions = {
+            17
+            273
+            274
+        }
+    }
 }
