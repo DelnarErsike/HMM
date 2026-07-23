@@ -113,11 +113,12 @@ on_actions = {
 
 	on_weekly_RAJ = {
 		effect = {
+			if = {
+				limit = { has_completed_focus = RAJ_seek_intial_funding } # HMM:these calculations are useless if we aren't doing EIC branch Raj
 			controlled_civilian_factories_excluding_trade = yes
-		}
-		effect = {
 			if = {
 				limit = {
+					has_completed_focus = RAJ_headhunt_army_personell # HMM: Prerequisite to focus that starts PMC mechanic
 					check_variable = { pmc_timer^num > 0 }
 				}
 
@@ -152,16 +153,17 @@ on_actions = {
 
 				clear_variable = v_copy
 			}
+			}
 
 			if = {
 				limit = {
-					has_completed_focus = RAJ_the_pakistan_movement
-					NOT = {
-						has_completed_focus = RAJ_hedgemony_of_the_subcontinent
-					}
 					is_subject = no
 					PAK = {
 						exists = yes
+					}
+					has_completed_focus = RAJ_the_pakistan_movement
+					NOT = {
+						has_completed_focus = RAJ_hedgemony_of_the_subcontinent
 					}
 				}
 
