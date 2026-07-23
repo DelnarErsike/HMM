@@ -2181,8 +2181,8 @@ RAJ_GOE_partition_cat = {
     			BAN = { set_rule = { can_join_factions = yes } }
     		}
 
-    		for_each_scope_loop = {
-    			array = RAJ.raj_releasables
+    		every_country = {
+    			limit = { is_raj_releasable = yes }
     			
     			if = {
     				limit = {
@@ -2241,14 +2241,9 @@ RAJ_GOE_partition_cat = {
 	    cost = 0
 
 	    complete_effect = {
-	    	every_other_country = {
+	    	every_enemy_country = {
 	    		limit = {
-		    		is_in_array = {
-		    			array = RAJ.raj_releasables
-		    			value = THIS
-		    		}
-
-		    		has_war_with = ROOT
+		    		is_raj_releasable = yes
 	    		}
 
 	    		white_peace = {
