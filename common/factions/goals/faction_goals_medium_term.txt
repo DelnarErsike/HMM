@@ -1211,11 +1211,10 @@ faction_goal_marine_corps = {
 				}
 				IF = {
 					limit = { NOT = { has_completed_goal = faction_goal_marine_corps } }
-					random_character = {
+					random_army_leader = {
 						tooltip = ONE_GENERAL
 						visible_when_empty = yes
 						limit = {
-							is_army_leader = yes
 							is_field_marshal = no
 							NOT = { has_trait = cavalry_officer }
 							NOT = { has_trait = panzer_leader }
@@ -1230,11 +1229,10 @@ faction_goal_marine_corps = {
 		}
 		custom_effect_tooltip = ALL_FACTION_MEMBERS_WITH_AMPHIBIOUS_TECH
 		effect_tooltip = {
-			random_character = {
+			random_army_leader = {
 				tooltip = ONE_GENERAL
 				visible_when_empty = yes
 				limit = {
-					is_army_leader = yes
 					is_field_marshal = no
 					NOT = { has_trait = cavalry_officer }
 					NOT = { has_trait = panzer_leader }
@@ -1320,11 +1318,10 @@ faction_goal_airborne_corps = {
 				}
 				IF = {
 					limit = { NOT = { has_completed_goal = faction_goal_airborne_corps } }
-					random_character = {
+					random_army_leader = {
 						tooltip = ONE_GENERAL
 						visible_when_empty = yes
 						limit = {
-							is_army_leader = yes
 							is_field_marshal = no
 							NOT = { has_trait = cavalry_officer }
 							NOT = { has_trait = panzer_leader }
@@ -1339,11 +1336,10 @@ faction_goal_airborne_corps = {
 		}
 		custom_effect_tooltip = ALL_FACTION_MEMBERS_WITH_PARATROOPERS_TECH
 		effect_tooltip = {
-			random_character = {
+			random_army_leader = {
 				tooltip = ONE_GENERAL
 				visible_when_empty = yes
 				limit = {
-					is_army_leader = yes
 					is_field_marshal = no
 					NOT = { has_trait = cavalry_officer }
 					NOT = { has_trait = panzer_leader }
@@ -1421,11 +1417,10 @@ faction_goal_mountaineer_corps = {
 				}
 				IF = {
 					limit = { NOT = { has_completed_goal = faction_goal_mountaineer_corps } }
-					random_character = {
+					random_army_leader = {
 						tooltip = ONE_GENERAL
 						visible_when_empty = yes
 						limit = {
-							is_army_leader = yes
 							is_field_marshal = no
 							NOT = { has_trait = cavalry_officer }
 							NOT = { has_trait = panzer_leader }
@@ -1440,11 +1435,10 @@ faction_goal_mountaineer_corps = {
 		}
 		custom_effect_tooltip = ALL_FACTION_MEMBERS_WITH_MOUNTAINEERS_TECH
 		effect_tooltip = {
-			random_character = {
+			random_army_leader = {
 				tooltip = ONE_GENERAL
 				visible_when_empty = yes
 				limit = {
-					is_army_leader = yes
 					is_field_marshal = no
 					NOT = { has_trait = cavalry_officer }
 					NOT = { has_trait = panzer_leader }
@@ -1522,11 +1516,10 @@ faction_goal_submarine_force = {
 			}
 			IF = {
 				limit = { NOT = { has_completed_goal = faction_goal_submarine_force } }
-				random_character = {
+				random_navy_leader = {
 					tooltip = ONE_ADMIRAL
 					visible_when_empty = yes
 					limit = {
-						is_navy_leader = yes
 						NOT = { has_trait = seawolf }
 						NOT = { has_trait = ironside }
 						NOT = { has_trait = battleship_adherent }
@@ -1616,11 +1609,10 @@ faction_goal_convoy_escort_force = {
 			}
 			IF = {
 				limit = { NOT = { has_completed_goal = faction_goal_convoy_escort_force } }
-				random_character = {
+				random_navy_leader = {
 					tooltip = ONE_ADMIRAL
 					visible_when_empty = yes
 					limit = {
-						is_navy_leader = yes
 						NOT = { has_trait = fleet_protector }
 						NOT = { has_trait = seawolf }
 						NOT = { has_trait = ironside }

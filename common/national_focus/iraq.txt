@@ -5636,9 +5636,8 @@ focus_tree = {
 			677 = { add_core_of = ROOT }
 			554 = { add_core_of = ROOT }
 			799 = { add_core_of = ROOT }
-			every_other_country = {
+			every_subject_country = {
 				limit = {
-					is_subject_of = ROOT
 					is_ai = yes
 					OR = {
 						original_tag = SAU
@@ -5809,9 +5808,8 @@ focus_tree = {
 			set_cosmetic_tag = IRQ_hashemite_caliphate
 			add_country_leader_trait = IRQ_hashemite_caliph
 			add_political_power = 100
-			every_other_country = {
+			every_subject_country = {
 				limit = {
-					is_subject_of = ROOT
 					is_ai = yes
 					OR = {
 						original_tag = SAU
@@ -6985,7 +6983,7 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			
-			every_character = {
+			every_unit_leader = {
 				limit = {
 					has_character_flag = IRQ_golden_square_char
 					is_corps_commander = yes

@@ -11010,9 +11010,8 @@ focus_tree = {
 
 		completion_reward = {
 			hidden_effect = {
-				every_other_country = {
+				every_neighbor_country = {
 					limit = {
-						is_neighbor_of = ROOT
 						NOT = { is_in_faction_with = ROOT }
 						NOT = { is_guaranteed_by = ROOT }
 						NOT = { has_non_aggression_pact_with = ROOT }
@@ -11027,9 +11026,8 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = ITA_spreading_the_eagles_wings_tt
-			every_other_country = {
+			every_neighbor_country = {
 				limit = {
-					is_neighbor_of = ROOT
 					NOT = { is_in_faction_with = ROOT }
 					NOT = { is_guaranteed_by = ROOT }
 					NOT = { has_non_aggression_pact_with = ROOT }	
@@ -11069,10 +11067,7 @@ focus_tree = {
 				limit = {
 						num_subjects > 0
 				}
-				every_other_country = {
-					limit = {
-						is_subject_of = ROOT
-					}
+				every_subject_country = {
 					add_ideas = ITA_italian_hegemony_subjects
 					add_to_tech_sharing_group = ITA_italian_hegemony_program
 				}
@@ -19650,9 +19645,8 @@ focus_tree = {
 							skill > 3
 						}
 					}
-					random_character = {
+					random_army_leader = {
 						limit = {
-							is_army_leader = yes
 							NOT = { has_trait = war_hero }
 							is_leading_army = yes
 							skill > 3
@@ -19661,9 +19655,8 @@ focus_tree = {
 					}
 				}
 				else = {
-					random_character = {
+					random_army_leader = {
 						limit = {
-							is_army_leader = yes
 							NOT = { has_trait = war_hero }
 						}
 						add_unit_leader_trait = war_hero
@@ -19679,9 +19672,8 @@ focus_tree = {
 							skill > 3
 						}
 					}
-					random_character = {
+					random_army_leader = {
 						limit = {
-							is_army_leader = yes
 							NOT = { has_trait = war_hero }
 							is_leading_army = yes
 							skill > 3
@@ -19690,9 +19682,8 @@ focus_tree = {
 					}
 				}
 				else = {
-					random_character = {
+					random_army_leader = {
 						limit = {
-							is_army_leader = yes
 							NOT = { has_trait = war_hero }
 						}
 						add_unit_leader_trait = war_hero
@@ -19708,9 +19699,8 @@ focus_tree = {
 							skill > 3
 						}
 					}
-					random_character = {
+					random_army_leader = {
 						limit = {
-							is_army_leader = yes
 							NOT = { has_trait = war_hero }
 							is_leading_army = yes
 							skill > 3
@@ -19719,9 +19709,8 @@ focus_tree = {
 					}
 				}
 				else = {
-					random_character = {
+					random_army_leader = {
 						limit = {
-							is_army_leader = yes
 							NOT = { has_trait = war_hero }
 						}
 						add_unit_leader_trait = war_hero

@@ -10726,8 +10726,8 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					any_country = {
-						original_tag = SOV
+					any_country_with_original_tag = {
+						original_tag_to_check = SOV
 						has_government = communism
 						NOT = { has_completed_focus = SOV_the_right_opposition }
 					}

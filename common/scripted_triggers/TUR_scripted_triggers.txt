@@ -680,7 +680,7 @@ TUR_is_friend_for_bosphorus = { #Scripted Trigger for handling the Bosphorus acc
 				controller = {
 					OR = {
 						is_in_faction_with = ROOT 
-						ROOT = { has_military_access_to = PREV }
+						gives_military_access_to = ROOT
 					}
 				}
 			}
@@ -716,7 +716,7 @@ TUR_is_friend_for_dardanelles = { #Scripted Trigger for handling the Dardanelles
 				controller = { 
 					OR = {
 						is_in_faction_with = ROOT 
-						ROOT = { has_military_access_to = PREV }
+						gives_military_access_to = ROOT
 					}
 				}
 			}

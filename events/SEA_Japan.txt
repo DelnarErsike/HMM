@@ -5802,9 +5802,8 @@ country_event = {
 					}
 					OR = {
 						is_owned_by = ROOT
-						any_country = {
+						owner = {
 							is_subject_of = ROOT
-							owns_state = PREV
 						}
 					}
 				}
@@ -5914,9 +5913,8 @@ country_event = {
 				}
 				OR = {
 					is_owned_by = FROM
-					any_country = {
+					owner = {
 						is_subject_of = FROM
-						owns_state = PREV
 					}
 				}
 			}
@@ -5925,9 +5923,8 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		every_other_country = {
+		every_enemy_country = {
 			limit = {
-				has_war_with = ROOT
 				OR = {
 					original_tag = FROM
 					is_ally_with = FROM
@@ -5987,10 +5984,7 @@ country_event = {
 			SOV = {
 				remove_from_faction = ROOT
 			}
-			every_other_country = {
-				limit = {
-					has_war_with = ROOT
-				}
+			every_enemy_country = {
 				white_peace = {
 					tag = ROOT
 				}
@@ -12008,44 +12002,28 @@ country_event = {
 			1036 = {
 				OR = {
 					is_controlled_by = JAP
-					JAP = {
-						any_subject_country = {
-							controls_state = PREV
-						}
-					}
+					controller = { is_subject_of = JAP }
 				}
 			}
 			# Hanoi
 			671 = {
 				OR = {
 					is_controlled_by = JAP
-					JAP = {
-						any_subject_country = {
-							controls_state = PREV
-						}
-					}
+					controller = { is_subject_of = JAP }
 				}
 			}
 			# Changde 
 			750 = {
 				OR = {
 					is_controlled_by = JAP
-					JAP = {
-						any_subject_country = {
-							controls_state = PREV
-						}
-					}
+					controller = { is_subject_of = JAP }
 				}
 			}
 			# Yanan
 			1032 = {
 				OR = {
 					is_controlled_by = JAP
-					JAP = {
-						any_subject_country = {
-							controls_state = PREV
-						}
-					}
+					controller = { is_subject_of = JAP }
 				}
 			}
 		}

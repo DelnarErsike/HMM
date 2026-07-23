@@ -2984,10 +2984,7 @@ focus_tree = {
 					has_character = GER_oswald_lutz
 					NOT = { has_completed_focus = GER_reorganize_the_wehrmacht }
 				}
-				every_unit_leader = {
-					limit = {
-						is_character = GER_oswald_lutz
-					}
+				GER_oswald_lutz = {
 					add_skill_level = 1
 					add_attack = 1
 					add_planning = 1
@@ -18237,7 +18234,7 @@ focus_tree = {
 					is_ai = yes
 				}
 				hidden_trigger = {
-					NOT = { has_country_flag = GER_todt_was_ascended_flag } #Flag to prevent AI from taking the focus again after advisor has been replaced}
+					NOT = { has_country_flag = GER_todt_was_ascended_flag } #Flag to prevent AI from taking the focus again after advisor has been replaced
 				}
 			}
 
@@ -18585,7 +18582,7 @@ focus_tree = {
 					is_ai = yes
 				}
 				hidden_trigger = {
-					NOT = { has_country_flag = GER_speer_was_ascended_flag } #Flag to prevent AI from taking the focus again after advisor has been replaced}
+					NOT = { has_country_flag = GER_speer_was_ascended_flag } #Flag to prevent AI from taking the focus again after advisor has been replaced
 				}
 			}
 
@@ -19081,7 +19078,7 @@ focus_tree = {
 					is_ai = yes
 				}
 				hidden_trigger = {
-					NOT = { has_country_flag = GER_goring_was_ascended_flag } #Flag to prevent AI from taking the focus again after advisor has been replaced}
+					NOT = { has_country_flag = GER_goring_was_ascended_flag } #Flag to prevent AI from taking the focus again after advisor has been replaced
 				}
 			}
 
@@ -19486,7 +19483,7 @@ focus_tree = {
 					is_ai = yes
 				}
 				hidden_trigger = {
-					NOT = { has_country_flag = GER_himmler_was_ascended_flag } #Flag to prevent AI from taking the focus again after advisor has been replaced}
+					NOT = { has_country_flag = GER_himmler_was_ascended_flag } #Flag to prevent AI from taking the focus again after advisor has been replaced
 				}
 			}
 
@@ -20237,7 +20234,7 @@ focus_tree = {
 					is_ai = yes
 				}
 				hidden_trigger = {
-					NOT = { has_country_flag = GER_goebbels_was_ascended_flag } #Flag to prevent AI from taking the focus again after advisor has been replaced}
+					NOT = { has_country_flag = GER_goebbels_was_ascended_flag } #Flag to prevent AI from taking the focus again after advisor has been replaced
 				}
 			}
 			
@@ -20561,7 +20558,7 @@ focus_tree = {
 					is_ai = yes
 				}
 				hidden_trigger = {
-					NOT = { has_country_flag = GER_hess_was_ascended_flag } #Flag to prevent AI from taking the focus again after advisor has been replaced}
+					NOT = { has_country_flag = GER_hess_was_ascended_flag } #Flag to prevent AI from taking the focus again after advisor has been replaced
 				}
 			}
 			
@@ -20706,7 +20703,7 @@ focus_tree = {
 					is_ai = yes
 				}
 				hidden_trigger = {
-					NOT = { has_country_flag = GER_bormann_was_ascended_flag } #Flag to prevent AI from taking the focus again after advisor has been replaced}
+					NOT = { has_country_flag = GER_bormann_was_ascended_flag } #Flag to prevent AI from taking the focus again after advisor has been replaced
 				}
 			}
 			
@@ -29178,10 +29175,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			add_to_tech_sharing_group = ger_mitteleuropa_research
-			every_other_country = {
-				limit = { 
-					is_ally_with = ROOT
-				}
+			every_allied_country = {
 				add_to_tech_sharing_group = ger_mitteleuropa_research 
 			}
 		}
@@ -30457,20 +30451,13 @@ focus_tree = {
 					limit = {
 						OR = {
 							is_owned_and_controlled_by = ROOT
-							any_country = {
+							controller = {
+								OR = {
 								is_guaranteed_by = ROOT
-								owns_state = PREV
-								controls_state = PREV
-							}
-							any_country = {
 								is_in_faction_with = ROOT
-								owns_state = PREV
-								controls_state = PREV
-							}
-							any_country = {
 								is_subject_of = ROOT
+								}
 								owns_state = PREV
-								controls_state = PREV
 							}
 						}
 					}

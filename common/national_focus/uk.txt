@@ -2349,10 +2349,8 @@ focus_tree = {
 				limit = {
 					has_government = democratic
 				}
-				every_other_country = {
-					limit = {
-						original_tag = SPR
-					}
+				every_country_with_original_tag = {
+					original_tag_to_check = SPR
 					add_opinion_modifier = { target = ENG modifier = democratic_leanings_good }
 					add_timed_idea = { idea = democratic_influence days = 1095 }
 					country_event = { id = generic.1 }
@@ -2369,10 +2367,8 @@ focus_tree = {
 				limit = {
 					has_government = fascism
 				}
-				every_other_country = {
-					limit = {
-						original_tag = SPR
-					}
+				every_country_with_original_tag = {
+					original_tag_to_check = SPR
 					add_opinion_modifier = { target = ENG modifier = fascism_leanings_good }
 					add_timed_idea = { idea = fascist_influence days = 1095 }
 					country_event = { id = generic.1 }
@@ -2392,10 +2388,8 @@ focus_tree = {
 						has_completed_focus = SPR_regional_defense_council_of_aragon
 					}
 				}
-				every_other_country = {
-					limit = {
-						original_tag = SPR
-					}
+				every_country_with_original_tag = {
+					original_tag_to_check = SPR
 					add_opinion_modifier = { target = ENG modifier = neutrality_leanings_good }
 					add_timed_idea = { idea = neutrality_influence days = 1095 }
 					country_event = { id = generic.1 }
@@ -3378,13 +3372,12 @@ focus_tree = {
 									communism =  2
 									neutrality = 23
 								}
-								every_other_country = {
-									limit = {
-										has_war_with = ENG
-									}
+								ENG = {
+								every_enemy_country = {
 									BAN = {
 										add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 									}
+								}
 								}
 							}
 						}
@@ -3405,13 +3398,12 @@ focus_tree = {
 									communism = 1
 									neutrality = 80
 								}
-								every_other_country = {
-									limit = {
-										has_war_with = ENG
-									}
+								ENG = {
+								every_enemy_country = {
 									PAK = {
 										add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 									}
+								}
 								}
 							}
 						}
@@ -3816,11 +3808,8 @@ focus_tree = {
 						limit = {
 							NOT = { has_global_flag = scw_over }
 						}
-						every_other_country = {
-							limit = {
-								original_tag = SPR
-								exists = yes
-							}
+						every_country_with_original_tag = {
+							original_tag_to_check = SPR
 							118 = { add_core_of = PREV }
 						}
 					}
@@ -3881,10 +3870,7 @@ focus_tree = {
 					puppet = MLT
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						MLT = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -3909,10 +3895,7 @@ focus_tree = {
 					puppet = CYP
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						CYP = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -4030,10 +4013,7 @@ focus_tree = {
 					puppet = SUD
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						SUD = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -4075,10 +4055,7 @@ focus_tree = {
 					puppet = KEN
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						KEN = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -4108,10 +4085,7 @@ focus_tree = {
 					}
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						SOM = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -4136,10 +4110,7 @@ focus_tree = {
 					puppet = UGA
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						UGA = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -4164,10 +4135,7 @@ focus_tree = {
 					puppet = TZN
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						TZN = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -4193,10 +4161,7 @@ focus_tree = {
 					puppet = ZAM
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						ZAM = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -4221,10 +4186,7 @@ focus_tree = {
 					puppet = MLW
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						MLW = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -4249,10 +4211,7 @@ focus_tree = {
 					puppet = ZIM
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						ZIM = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -4277,10 +4236,7 @@ focus_tree = {
 					puppet = BOT
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						BOT = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -4308,10 +4264,7 @@ focus_tree = {
 					puppet = NGA
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						NGA = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -4336,10 +4289,7 @@ focus_tree = {
 					puppet = GHA
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						GHA = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -4364,10 +4314,7 @@ focus_tree = {
 					puppet = SIE
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						SIE = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -4392,10 +4339,7 @@ focus_tree = {
 					puppet = GAM
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						GAM = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -4481,10 +4425,7 @@ focus_tree = {
 					puppet = PAL
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						PAL = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -4510,10 +4451,7 @@ focus_tree = {
 					puppet = ISR
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						ISR = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -4574,10 +4512,7 @@ focus_tree = {
 					puppet = JOR
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						JOR = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -4607,10 +4542,7 @@ focus_tree = {
 					puppet = EGY
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						EGY = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -4635,10 +4567,7 @@ focus_tree = {
 					puppet = KUW
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						KUW = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -4663,10 +4592,7 @@ focus_tree = {
 					puppet = QAT
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						QAT = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -4691,10 +4617,7 @@ focus_tree = {
 					puppet = BHR
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						BHR = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -4719,10 +4642,7 @@ focus_tree = {
 					puppet = UAE
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						UAE = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -4795,10 +4715,7 @@ focus_tree = {
 					puppet = BLZ
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						BLZ = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -4824,10 +4741,7 @@ focus_tree = {
 					puppet = BAH
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						BAH = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -4852,10 +4766,7 @@ focus_tree = {
 					puppet = JAM
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						JAM = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -4880,10 +4791,7 @@ focus_tree = {
 					puppet = TRI
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						TRI = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -4909,10 +4817,7 @@ focus_tree = {
 					puppet = BAS
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						BAS = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -4937,10 +4842,7 @@ focus_tree = {
 					puppet = GYA
 				}
 				hidden_effect = {
-					every_other_country = {
-						limit = {
-							has_war_with = ENG
-						}
+					every_enemy_country = {
 						GYA = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
@@ -5048,7 +4950,7 @@ focus_tree = {
 					puppet = SRL
 				}
 				hidden_effect = {
-					every_other_country = {
+					every_enemy_country = {
 						limit = {
 							has_war_with = ENG
 						}
@@ -5076,7 +4978,7 @@ focus_tree = {
 					puppet = MLD
 				}
 				hidden_effect = {
-					every_other_country = {
+					every_enemy_country = {
 						limit = {
 							has_war_with = ENG
 						}
@@ -5109,7 +5011,7 @@ focus_tree = {
 					puppet = FIJ
 				}
 				hidden_effect = {
-					every_other_country = {
+					every_enemy_country = {
 						limit = {
 							has_war_with = ENG
 						}
@@ -5140,7 +5042,7 @@ focus_tree = {
 					puppet = SOL
 				}
 				hidden_effect = {
-					every_other_country = {
+					every_enemy_country = {
 						limit = {
 							has_war_with = ENG
 						}
@@ -5172,7 +5074,7 @@ focus_tree = {
 					puppet = BRM
 				}
 				hidden_effect = {
-					every_other_country = {
+					every_enemy_country = {
 						limit = {
 							has_war_with = ENG
 						}
@@ -5259,9 +5161,8 @@ focus_tree = {
 			add_popularity = { ideology = communism popularity = 0.05 }
 			add_political_power = 100
 			add_manpower = 100000
-			every_other_country = {
+			every_subject_country = {
 				limit = {
-					is_subject_of = ENG
 					has_idea = ENG_guided_by_britain_2
 				}
 				remove_ideas = ENG_guided_by_britain_2
@@ -5321,9 +5222,8 @@ focus_tree = {
 					}
 				}
 			}
-			every_other_country = {
+			every_subject_country = {
 				limit = {
-					is_subject_of = ENG
 					has_idea = ENG_guided_by_britain_raj_2
 				}
 				remove_ideas = ENG_guided_by_britain_raj_2
@@ -5391,9 +5291,8 @@ focus_tree = {
 					}
 				}
 			}
-			every_other_country = {
+			every_subject_country = {
 				limit = {
-					is_subject_of = ENG
 					NOT = {
 						OR = {
 							tag = CAN
@@ -5451,9 +5350,8 @@ focus_tree = {
 					}
 				}
 			}
-			every_other_country = {
+			every_subject_country = {
 				limit = {
-					is_subject_of = ENG
 					NOT = {
 						OR = {
 							tag = CAN
@@ -13089,12 +12987,8 @@ focus_tree = {
 							owns_state = 686
 							has_full_control_of_state = 686
 						}
-						PUE = {
-							is_subject_of = PREV
-						}
-						"PHI" = {
-							is_subject_of = PREV
-						}
+						has_subject = PUE
+						has_subject = PHI
 						AND = {
 							NOT = { original_tag = GDL }
 							owns_state = 694
@@ -13253,81 +13147,31 @@ focus_tree = {
 							owns_state = 310
 							has_full_control_of_state = 310
 						}
-						GDL = {
-							is_subject_of = PREV
-						}
-						SYR = {
-							is_subject_of = PREV
-						}
-						LEB = {
-							is_subject_of = PREV
-						}
-						LAO = {
-							is_subject_of = PREV
-						}
-						CAM = {
-							is_subject_of = PREV
-						}
-						VIN = {
-							is_subject_of = PREV
-						}
-						MAD = {
-							is_subject_of = PREV
-						}
-						MOR = {
-							is_subject_of = PREV
-						}
-						ALG = {
-							is_subject_of = PREV
-						}
-						TUN = {
-							is_subject_of = PREV
-						}
-						DJI = {
-							is_subject_of = PREV
-						}
-						RCG = {
-							is_subject_of = PREV
-						}
-						GAB = {
-							is_subject_of = PREV
-						}
-						CMR = {
-							is_subject_of = PREV
-						}
-						CAR = {
-							is_subject_of = PREV
-						}
-						CHA = {
-							is_subject_of = PREV
-						}
-						NGR = {
-							is_subject_of = PREV
-						}
-						DAH = {
-							is_subject_of = PREV
-						}
-						TOG = {
-							is_subject_of = PREV
-						}
-						VOL = {
-							is_subject_of = PREV
-						}
-						IVO = {
-							is_subject_of = PREV
-						}
-						GNA = {
-							is_subject_of = PREV
-						}
-						MLI = {
-							is_subject_of = PREV
-						}
-						SEN = {
-							is_subject_of = PREV
-						}
-						CAY = {
-							is_subject_of = PREV
-						}
+						has_subject = GDL
+						has_subject = SYR
+						has_subject = LEB
+						has_subject = LAO
+						has_subject = CAM
+						has_subject = VIN
+						has_subject = MAD
+						has_subject = MOR
+						has_subject = ALG
+						has_subject = TUN
+						has_subject = DJI
+						has_subject = RCG
+						has_subject = GAB
+						has_subject = CMR
+						has_subject = CAR
+						has_subject = CHA
+						has_subject = NGR
+						has_subject = DAH
+						has_subject = TOG
+						has_subject = VOL
+						has_subject = IVO
+						has_subject = GNA
+						has_subject = MLI
+						has_subject = SEN
+						has_subject = CAY
 						AND = {
 							NOT = { original_tag = LBA }
 							owns_state = 448
@@ -13362,18 +13206,10 @@ focus_tree = {
 							owns_state = 559
 							has_full_control_of_state = 559
 						}
-						LBA = {
-							is_subject_of = PREV
-						}
-						ETH = {
-							is_subject_of = PREV
-						}
-						ERI = {
-							is_subject_of = PREV
-						}
-						SOM = {
-							is_subject_of = PREV
-						}
+						has_subject = LBA
+						has_subject = ETH
+						has_subject = ERI
+						has_subject = SOM
 						AND = {
 							NOT = { original_tag = KOR }
 							owns_state = 527
@@ -13396,15 +13232,9 @@ focus_tree = {
 							owns_state = 524
 							has_full_control_of_state = 524
 						}
-						MAN = {
-							is_subject_of = PREV
-						}
-						MEN = {
-							is_subject_of = PREV
-						}
-						KOR = {
-							is_subject_of = PREV
-						}
+						has_subject = MAN
+						has_subject = MEN
+						has_subject = KOR
 						AND = {
 							NOT = { original_tag = ANG }
 							owns_state = 540
@@ -13434,15 +13264,9 @@ focus_tree = {
 							owns_state = 296
 							has_full_control_of_state = 296
 						}
-						ANG = {
-							is_subject_of = PREV
-						}
-						MZB = {
-							is_subject_of = PREV
-						}
-						GNB = {
-							is_subject_of = PREV
-						}
+						has_subject = ANG
+						has_subject = MZB
+						has_subject = GNB
 						AND = {
 							NOT = { original_tag = EQG }
 							owns_state = 297
@@ -13463,12 +13287,8 @@ focus_tree = {
 							owns_state = 290
 							has_full_control_of_state = 290
 						}
-						EQG = {
-							is_subject_of = PREV
-						}
-						WES = {
-							is_subject_of = PREV
-						}
+						has_subject = EQG
+						has_subject = WES
 						AND = {
 							NOT = { original_tag = CRC }
 							owns_state = 695
@@ -13479,15 +13299,9 @@ focus_tree = {
 							owns_state = 309
 							has_full_control_of_state = 309
 						}
-						CRC = {
-							is_subject_of = PREV
-						}
-						SUR = {
-							is_subject_of = PREV
-						}
-						INS = {
-							is_subject_of = PREV
-						}
+						has_subject = CRC
+						has_subject = SUR
+						has_subject = INS
 						AND = {
 							NOT = { original_tag = INS }
 							owns_state = 335
@@ -13524,9 +13338,7 @@ focus_tree = {
 							owns_state = 890
 							has_full_control_of_state = 890
 						}
-						COG = {
-							is_subject_of = PREV
-						}
+						has_subject = COG
 					}
 				}
 				country_event = { id = mtg_britain.46 hours = 6 }

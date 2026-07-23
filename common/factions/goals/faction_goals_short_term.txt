@@ -1106,14 +1106,13 @@ faction_goal_ensure_military_r_d = {
 						is_active_scientist = yes
 					}
 				}
-				every_scientist = {
+				every_active_scientist = {
 					visible_when_empty = yes
 					limit = {
 						has_scientist_level = {
 							level > 0
 							specialization = specialization_land
 						}
-						is_active_scientist = yes
 					}
 					add_scientist_xp = {
 						experience = constant:sp_scientist_xp_gain.very_high
@@ -1131,14 +1130,13 @@ faction_goal_ensure_military_r_d = {
 						is_active_scientist = yes
 					}
 				}
-				every_scientist = {
+				every_active_scientist = {
 					visible_when_empty = yes
 					limit = {
 						has_scientist_level = {
 							level > 0
 							specialization = specialization_naval
 						}
-						is_active_scientist = yes
 					}
 					add_scientist_xp = {
 						experience = constant:sp_scientist_xp_gain.very_high
@@ -1156,14 +1154,13 @@ faction_goal_ensure_military_r_d = {
 						is_active_scientist = yes
 					}
 				}
-				every_scientist = {
+				every_active_scientist = {
 					visible_when_empty = yes
 					limit = {
 						has_scientist_level = {
 							level > 0
 							specialization = specialization_air
 						}
-						is_active_scientist = yes
 					}
 					add_scientist_xp = {
 						experience = constant:sp_scientist_xp_gain.very_high
@@ -1506,11 +1503,10 @@ faction_goal_an_armored_fist = {
 			IF = {
 				limit = { NOT = { has_completed_goal = faction_goal_an_armored_fist } }
 				army_experience = 50
-				random_character = {
+				random_unit_leader = {
 					tooltip = ONE_PANZER_GENERAL
 					visible_when_empty = yes
 					limit = {
-						is_unit_leader = yes
 						OR = {
 							has_trait = armor_officer
 							has_trait = panzer_leader
@@ -1557,11 +1553,10 @@ faction_goal_an_infantry_army = {
 			IF = {
 				limit = { NOT = { has_completed_goal = faction_goal_an_infantry_army } }
 				army_experience = 50
-				random_character = {
+				random_unit_leader = {
 					tooltip = ONE_INFANTRY_GENERAL
 					visible_when_empty = yes
 					limit = {
-						is_unit_leader = yes
 						OR = {
 							has_trait = infantry_officer
 							has_trait = infantry_leader

@@ -2246,17 +2246,10 @@ country_event = {
 		}
 		
 		hidden_effect = { # This looks odd in the tooltip
-			every_other_country = {
-				limit = {
-					is_subject_of = ENG
-				}
-				every_owned_state = {
-					limit = {
-						is_core_of = FRA
-					}
-					FRA = {
-						transfer_state = PREV
-					}
+			FRA = {
+				every_core_state = {
+					limit = { owner = { is_subject_of = ENG } }
+					transfer_state_to = FRA
 				}
 			}
 		}

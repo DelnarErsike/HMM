@@ -3933,10 +3933,7 @@ country_event = { #CZE asks to enter exile
 					fascism = 1
 					communism = 34
 				}
-				random_character = {	#avoid Hodza
-					limit = {
-						is_character = CZE_edvard_benesh
-					}
+				CZE_edvard_benesh = {	#avoid Hodza
 					promote_character = yes
 				}
 			}

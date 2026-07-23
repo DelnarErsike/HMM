@@ -2079,7 +2079,7 @@
         search_filters = { FOCUS_FILTER_INDUSTRY}
 
 		complete_tooltip = {
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = SAF_expand_the_mining_industry_IC
 				}
@@ -2277,7 +2277,7 @@
         search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		complete_tooltip = {
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = SAF_armament_effort_AF
 				}
@@ -2376,7 +2376,7 @@
         search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		complete_tooltip = {
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = SAF_pretoria_arms_AF
 				}
@@ -3018,7 +3018,7 @@
 
 		complete_tooltip = {
 			air_experience = 25
-			random_state = {				
+			random_owned_controlled_state = {				
 				limit = {
 					has_state_flag = SAF_commit_to_the_five_year_plan_AB
 				}
@@ -3322,7 +3322,7 @@
 
 		complete_tooltip = {
 			navy_experience = 25
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = SAF_seaward_defence_force_DY
 				}
@@ -3474,7 +3474,7 @@
 		available_if_capitulated = no
 
 		complete_tooltip = {
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = SAF_expand_the_simons_town_base_DY
 				}
@@ -3485,7 +3485,7 @@
 					instant_build = yes
 				}
 			}
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = SAF_expand_the_simons_town_base_NB
 				}

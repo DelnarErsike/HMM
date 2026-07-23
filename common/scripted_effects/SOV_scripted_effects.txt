@@ -8972,6 +8972,7 @@ SOV_popular_uprising_units = {
 		}
 		is_locked = yes
 	}
+	SOS = {
 	set_temp_variable = { temp_partisan_units_index = 0 }
 	set_temp_variable = { temp_partisan_units_number = SOV_opposition_popular_support }
 	divide_temp_variable = { temp_partisan_units_number = 5 }
@@ -8996,9 +8997,8 @@ SOV_popular_uprising_units = {
 
 	while_loop_effect = {
 		limit = { check_variable = { temp_partisan_units_index < temp_partisan_units_number }}
-		random_state = {
+		random_owned_state = {
 			limit = {
-				is_owned_by = SOS
 				NOT = { region = 132 } # Leningrad
 				NOT  = { region = 133 } # Central Russia
 				NOT  = { region = 131 } # Western Russia
@@ -9013,6 +9013,7 @@ SOV_popular_uprising_units = {
 			add_to_temp_variable = { temp_partisan_units_index = 1 }
 			set_state_flag = SOV_opposition_partisans_flag
 		}
+	}
 	}
 }
 
@@ -9828,12 +9829,13 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 					is_in_home_area = yes
 					is_capital = no
 					NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
-					any_state = {
-						is_controlled_by = ROOT
+					ROOT = {
+					any_controlled_state = {
 						distance_to = {
-							target = PREV
+							target = PREV.PREV
 							value < 750
 						}
+					}
 					}
 				}
 			}
@@ -9845,12 +9847,13 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 					is_in_home_area = yes
 					is_capital = no
 					NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
-					any_state = {
-						is_controlled_by = ROOT
+					ROOT = {
+					any_controlled_state = {
 						distance_to = {
-							target = PREV
+							target = PREV.PREV
 							value < 750
 						}
+					}
 					}
 				}
 				set_state_flag = SOV_permanent_revolution_uprising_flag
@@ -9879,30 +9882,33 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 					is_in_home_area = yes
 					is_capital = no
 					NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
-					any_state = {
-						is_controlled_by = ROOT
+					ROOT = {
+					any_controlled_state = {
 						distance_to = {
-							target = PREV
+							target = PREV.PREV
 							value < 1500
 						}
 					}
-				}
-			}
-		}
-		random_state = {
-			limit = {
-				is_controlled_by = FROM
-				is_in_home_area = yes
-				is_capital = no
-				NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
-				any_state = {
-					is_controlled_by = ROOT
-					distance_to = {
-						target = PREV
-						value < 1500
 					}
 				}
 			}
+		}
+		FROM = {
+		random_controlled_state = {
+			limit = {
+				is_controlled_by = FROM
+				is_in_home_area = yes
+				is_capital = no
+				NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
+				ROOT = {
+				any_controlled_state = {
+					distance_to = {
+						target = PREV.PREV
+						value < 1500
+					}
+				}
+				}
+			}
 			set_state_flag = SOV_permanent_revolution_uprising_flag
 			create_unit = {
 				division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
@@ -9920,11 +9926,12 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 				allow_spawning_on_enemy_provs = yes
 			}
 		}
+		}
 	}
 	else = {
-		random_state = {
+		FROM = {
+		random_controlled_state = {
 			limit = {
-				is_controlled_by = FROM
 				is_in_home_area = yes
 				is_capital = no
 				NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
@@ -9945,6 +9952,7 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 				owner = ROOT
 				allow_spawning_on_enemy_provs = yes
 			}
+		}
 		}
 	}
 
@@ -9962,28 +9970,30 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 						is_in_home_area = yes
 						is_capital = no
 						NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
-						any_state = {
-							is_controlled_by = ROOT
+						ROOT = {
+						any_controlled_state = {
 							distance_to = {
-								target = PREV
+								target = PREV.PREV
 								value < 750
 							}
+						}
 						}
 					}
 				}
 			}
-			random_state = {
+			FROM = {
+			random_controlled_state = {
 				limit = {
-					is_controlled_by = FROM
 					is_in_home_area = yes
 					is_capital = no
 					NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
-					any_state = {
-						is_controlled_by = ROOT
+					ROOT = {
+					any_controlled_state = {
 						distance_to = {
-							target = PREV
+							target = PREV.PREV
 							value < 750
 						}
+					}
 					}
 				}
 				set_state_flag = SOV_permanent_revolution_uprising_flag
@@ -10002,6 +10012,7 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 					owner = ROOT
 					allow_spawning_on_enemy_provs = yes
 				}
+			}
 			}
 		}
 		else_if = {
@@ -10011,30 +10022,33 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 						is_in_home_area = yes
 						is_capital = no
 						NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
-						any_state = {
-							is_controlled_by = ROOT
+						ROOT = {
+						any_controlled_state = {
 							distance_to = {
-								target = PREV
+								target = PREV.PREV
 								value < 1500
 							}
 						}
-					}
-				}
-			}
-			random_state = {
-				limit = {
-					is_controlled_by = FROM
-					is_in_home_area = yes
-					is_capital = no
-					NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
-					any_state = {
-						is_controlled_by = ROOT
-						distance_to = {
-							target = PREV
-							value < 1500
 						}
 					}
 				}
+			}
+			FROM = {
+			random_controlled_state = {
+				limit = {
+					is_controlled_by = FROM
+					is_in_home_area = yes
+					is_capital = no
+					NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
+					ROOT = {
+					any_controlled_state = {
+						distance_to = {
+							target = PREV.PREV
+							value < 1500
+						}
+					}
+					}
+				}
 				set_state_flag = SOV_permanent_revolution_uprising_flag
 				create_unit = {
 					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
@@ -10052,11 +10066,12 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 					allow_spawning_on_enemy_provs = yes
 				}
 			}
+			}
 		}
 		else = {
-			random_state = {
+			FROM = {
+			random_controlled_state = {
 				limit = {
-					is_controlled_by = FROM
 					is_in_home_area = yes
 					is_capital = no
 					NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
@@ -10077,6 +10092,7 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 					owner = ROOT
 					allow_spawning_on_enemy_provs = yes
 				}
+			}
 			}
 		}
 	}
@@ -10094,29 +10110,32 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 						is_in_home_area = yes
 						is_capital = no
 						NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
-						any_state = {
-							is_controlled_by = ROOT
+						ROOT = {
+						any_controlled_state = {
 							NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
 							distance_to = {
-								target = PREV
+								target = PREV.PREV
 								value < 750
 							}
+						}
 						}
 					}
 				}
 			}
-			random_state = {
+			FROM = {
+			random_controlled_state = {
 				limit = {
 					is_controlled_by = FROM
 					is_in_home_area = yes
 					is_capital = no
 					NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
-					any_state = {
-						is_controlled_by = ROOT
+					ROOT = {
+					any_controlled_state = {
 						distance_to = {
-							target = PREV
+							target = PREV.PREV
 							value < 750
 						}
+					}
 					}
 				}
 				set_state_flag = SOV_permanent_revolution_uprising_flag
@@ -10135,6 +10154,7 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 					owner = ROOT
 					allow_spawning_on_enemy_provs = yes
 				}
+			}
 			}
 		}
 		else_if = {
@@ -10144,31 +10164,33 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 						is_in_home_area = yes
 						is_capital = no
 						NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
-						any_state = {
-							is_controlled_by = ROOT
+						ROOT = {
+						any_controlled_state = {
 							NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
 							distance_to = {
-								target = PREV
+								target = PREV.PREV
 								value < 1500
 							}
 						}
-					}
-				}
-			}
-			random_state = {
-				limit = {
-					is_controlled_by = FROM
-					is_in_home_area = yes
-					is_capital = no
-					NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
-					any_state = {
-						is_controlled_by = ROOT
-						distance_to = {
-							target = PREV
-							value < 1500
 						}
 					}
 				}
+			}
+			FROM = {
+			random_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+					is_capital = no
+					NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
+					ROOT = {
+					any_controlled_state = {
+						distance_to = {
+							target = PREV.PREV
+							value < 1500
+						}
+					}
+					}
+				}
 				set_state_flag = SOV_permanent_revolution_uprising_flag
 				create_unit = {
 					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
@@ -10186,11 +10208,12 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 					allow_spawning_on_enemy_provs = yes
 				}
 			}
+			}
 		}
 		else = {
-			random_state = {
+			FROM = {
+			random_controlled_state = {
 				limit = {
-					is_controlled_by = FROM
 					is_in_home_area = yes
 					is_capital = no
 					NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
@@ -10211,6 +10234,7 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 					owner = ROOT
 					allow_spawning_on_enemy_provs = yes
 				}
+			}
 			}
 		}
 	}
@@ -10228,28 +10252,30 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 						is_in_home_area = yes
 						is_capital = no
 						NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
-						any_state = {
-							is_controlled_by = ROOT
+						ROOT = {
+						any_controlled_state = {
 							distance_to = {
-								target = PREV
+								target = PREV.PREV
 								value < 750
 							}
 						}
+						}
 					}
 				}
 			}
-			random_state = {
+			FROM = {
+			random_controlled_state = {
 				limit = {
-					is_controlled_by = FROM
 					is_in_home_area = yes
 					is_capital = no
 					NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
-					any_state = {
-						is_controlled_by = ROOT
+					ROOT = {
+					any_controlled_state = {
 						distance_to = {
-							target = PREV
+							target = PREV.PREV
 							value < 750
 						}
+					}
 					}
 				}
 				set_state_flag = SOV_permanent_revolution_uprising_flag
@@ -10269,18 +10295,18 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 					allow_spawning_on_enemy_provs = yes
 				}
 			}
-			random_state = {
+			random_controlled_state = {
 				limit = {
-					is_controlled_by = FROM
 					is_in_home_area = yes
 					is_capital = no
 					NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
-					any_state = {
-						is_controlled_by = ROOT
+					ROOT = {
+					any_controlled_state = {
 						distance_to = {
-							target = PREV
+							target = PREV.PREV
 							value < 750
 						}
+					}
 					}
 				}
 				set_state_flag = SOV_permanent_revolution_uprising_flag
@@ -10299,6 +10325,7 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 					owner = ROOT
 					allow_spawning_on_enemy_provs = yes
 				}
+			}
 			}
 		}
 		else_if = {
@@ -10308,28 +10335,30 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 						is_in_home_area = yes
 						is_capital = no
 						NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
-						any_state = {
-							is_controlled_by = ROOT
+						ROOT = {
+						any_controlled_state = {
 							distance_to = {
-								target = PREV
+								target = PREV.PREV
 								value < 1500
 							}
 						}
+						}
 					}
 				}
 			}
-			random_state = {
+			FROM = {
+			random_controlled_state = {
 				limit = {
-					is_controlled_by = FROM
 					is_in_home_area = yes
 					is_capital = no
 					NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
-					any_state = {
-						is_controlled_by = ROOT
+					ROOT = {
+					any_controlled_state = {
 						distance_to = {
-							target = PREV
+							target = PREV.PREV
 							value < 1500
 						}
+					}
 					}
 				}
 				set_state_flag = SOV_permanent_revolution_uprising_flag
@@ -10349,18 +10378,18 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 					allow_spawning_on_enemy_provs = yes
 				}
 			}
-			random_state = {
+			random_controlled_state = {
 				limit = {
-					is_controlled_by = FROM
 					is_in_home_area = yes
 					is_capital = no
 					NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
-					any_state = {
-						is_controlled_by = ROOT
+					ROOT = {
+					any_controlled_state = {
 						distance_to = {
-							target = PREV
+							target = PREV.PREV
 							value < 1500
 						}
+					}
 					}
 				}
 				set_state_flag = SOV_permanent_revolution_uprising_flag
@@ -10379,12 +10408,13 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 					owner = ROOT
 					allow_spawning_on_enemy_provs = yes
 				}
+			}
 			}
 		}
 		else = {
-			random_state = {
+			FROM = {
+			random_controlled_state = {
 				limit = {
-					is_controlled_by = FROM
 					is_in_home_area = yes
 					is_capital = no
 					NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
@@ -10406,9 +10436,8 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 					allow_spawning_on_enemy_provs = yes
 				}
 			}
-			random_state = {
+			random_controlled_state = {
 				limit = {
-					is_controlled_by = FROM
 					is_in_home_area = yes
 					is_capital = no
 					NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
@@ -10429,6 +10458,7 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 					owner = ROOT
 					allow_spawning_on_enemy_provs = yes
 				}
+			}
 			}
 		}
 	}
@@ -10446,28 +10476,30 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 						is_in_home_area = yes
 						is_capital = no
 						NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
-						any_state = {
-							is_controlled_by = ROOT
+						ROOT = {
+						any_controlled_state = {
 							distance_to = {
-								target = PREV
+								target = PREV.PREV
 								value < 750
 							}
 						}
+						}
 					}
 				}
 			}
-			random_state = {
+			FROM = {
+			random_controlled_state = {
 				limit = {
-					is_controlled_by = FROM
 					is_in_home_area = yes
 					is_capital = no
 					NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
-					any_state = {
-						is_controlled_by = ROOT
+					ROOT = {
+					any_controlled_state = {
 						distance_to = {
-							target = PREV
+							target = PREV.PREV
 							value < 750
 						}
+					}
 					}
 				}
 				set_state_flag = SOV_permanent_revolution_uprising_flag
@@ -10487,18 +10519,18 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 					allow_spawning_on_enemy_provs = yes
 				}
 			}
-			random_state = {
+			random_controlled_state = {
 				limit = {
-					is_controlled_by = FROM
 					is_in_home_area = yes
 					is_capital = no
 					NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
-					any_state = {
-						is_controlled_by = ROOT
+					ROOT = {
+					any_controlled_state = {
 						distance_to = {
-							target = PREV
+							target = PREV.PREV
 							value < 750
 						}
+					}
 					}
 				}
 				set_state_flag = SOV_permanent_revolution_uprising_flag
@@ -10517,6 +10549,7 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 					owner = ROOT
 					allow_spawning_on_enemy_provs = yes
 				}
+			}
 			}
 		}
 		else_if = {
@@ -10526,28 +10559,30 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 						is_in_home_area = yes
 						is_capital = no
 						NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
-						any_state = {
-							is_controlled_by = ROOT
+						ROOT = {
+						any_controlled_state = {
 							distance_to = {
-								target = PREV
+								target = PREV.PREV
 								value < 1500
 							}
 						}
+						}
 					}
 				}
 			}
-			random_state = {
+			FROM = {
+			random_controlled_state = {
 				limit = {
-					is_controlled_by = FROM
 					is_in_home_area = yes
 					is_capital = no
 					NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
-					any_state = {
-						is_controlled_by = ROOT
+					ROOT = {
+					any_controlled_state = {
 						distance_to = {
-							target = PREV
+							target = PREV.PREV
 							value < 1500
 						}
+					}
 					}
 				}
 				set_state_flag = SOV_permanent_revolution_uprising_flag
@@ -10567,18 +10602,18 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 					allow_spawning_on_enemy_provs = yes
 				}
 			}
-			random_state = {
+			random_controlled_state = {
 				limit = {
-					is_controlled_by = FROM
 					is_in_home_area = yes
 					is_capital = no
 					NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
-					any_state = {
-						is_controlled_by = ROOT
+					ROOT = {
+					any_controlled_state = {
 						distance_to = {
-							target = PREV
+							target = PREV.PREV
 							value < 1500
 						}
+					}
 					}
 				}
 				set_state_flag = SOV_permanent_revolution_uprising_flag
@@ -10597,12 +10632,13 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 					owner = ROOT
 					allow_spawning_on_enemy_provs = yes
 				}
+			}
 			}
 		}
 		else = {
-			random_state = {
+			FROM = {
+			random_controlled_state = {
 				limit = {
-					is_controlled_by = FROM
 					is_in_home_area = yes
 					is_capital = no
 					NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
@@ -10624,9 +10660,8 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 					allow_spawning_on_enemy_provs = yes
 				}
 			}
-			random_state = {
+			random_controlled_state = {
 				limit = {
-					is_controlled_by = FROM
 					is_in_home_area = yes
 					is_capital = no
 					NOT = { has_state_flag = SOV_permanent_revolution_uprising_flag }
@@ -10647,6 +10682,7 @@ SOV_permanent_revolution_spawn_fifth_columnists_effect = {
 					owner = ROOT
 					allow_spawning_on_enemy_provs = yes
 				}
+			}
 			}
 		}
 	}

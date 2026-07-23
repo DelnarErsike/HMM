@@ -443,7 +443,7 @@
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = MAN_expand_the_textile_industry_IC
 				}
@@ -2430,7 +2430,7 @@
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = { is_fully_controlled_by = ROOT }
 					prioritize = { 328 }
 					create_unit = {
 						division = "name = \"1. Imperial Guards Division\" division_template = \"Imperial Guards Division\" start_experience_factor = 1.0" 
@@ -2748,7 +2748,7 @@
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = { is_fully_controlled_by = ROOT }
 					prioritize = { 328 }
 					create_unit = {
 						division = "name = \"People's Volunteers Division\" division_template = \"People's Volunteers Division\" start_experience_factor = 1.0" 
@@ -2946,7 +2946,7 @@
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = { is_fully_controlled_by = ROOT }
 					prioritize = { 328 }
 					create_unit = {
 						division = "name = \"Northeast Counter-Japanese Division\" division_template = \"Northeast Counter-Japanese Division\" start_experience_factor = 0.6" 

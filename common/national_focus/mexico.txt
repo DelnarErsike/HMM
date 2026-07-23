@@ -3396,7 +3396,7 @@ focus_tree = {
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = { is_fully_controlled_by = ROOT }
 					prioritize = { 277 }
 					create_unit = {
 						division = "division_template = \"Guardia Cristera\" start_experience_factor = 0.1"
@@ -3404,7 +3404,7 @@ focus_tree = {
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = { is_fully_controlled_by = ROOT }
 					prioritize = { 483 }
 					create_unit = {
 						division = "division_template = \"Guardia Cristera\" start_experience_factor = 0.1"
@@ -3412,7 +3412,7 @@ focus_tree = {
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = { is_fully_controlled_by = ROOT }
 					prioritize = { 478 }
 					create_unit = {
 						division = "division_template = \"Guardia Cristera\" start_experience_factor = 0.1"
@@ -3420,7 +3420,7 @@ focus_tree = {
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = { is_fully_controlled_by = ROOT }
 					prioritize = { 481 }
 					create_unit = {
 						division = "division_template = \"Guardia Cristera\" start_experience_factor = 0.1"
@@ -3428,7 +3428,7 @@ focus_tree = {
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = { is_fully_controlled_by = ROOT }
 					prioritize = { 475 }
 					create_unit = {
 						division = "division_template = \"Guardia Cristera\" start_experience_factor = 0.1"
@@ -3436,7 +3436,7 @@ focus_tree = {
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = { is_fully_controlled_by = ROOT }
 					prioritize = { 476 }
 					create_unit = {
 						division = "division_template = \"Guardia Cristera\" start_experience_factor = 0.1"
@@ -3444,7 +3444,7 @@ focus_tree = {
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = { is_fully_controlled_by = ROOT }
 					prioritize = { 477 }
 					create_unit = {
 						division = "division_template = \"Guardia Cristera\" start_experience_factor = 0.1"
@@ -3452,7 +3452,7 @@ focus_tree = {
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = { is_fully_controlled_by = ROOT }
 					prioritize = { 485 }
 					create_unit = {
 						division = "division_template = \"Guardia Cristera\" start_experience_factor = 0.1"
@@ -4968,12 +4968,8 @@ focus_tree = {
 							owns_state = 310
 							has_full_control_of_state = 310
 						}
-						CAY = {
-							is_subject_of = PREV
-						}
-						GDL = {
-							is_subject_of = PREV
-						}
+						has_subject = CAY
+						has_subject = GDL
 					}
 				}
 				country_event = { id = mexico.54 hours = 6 }
@@ -4986,9 +4982,7 @@ focus_tree = {
 							owns_state = 686
 							has_full_control_of_state = 686
 						}
-						PUE = {
-							is_subject_of = PREV
-						}
+						has_subject = PUE
 					}
 				}
 				country_event = { id = mexico.54 hours = 6 }
@@ -5005,12 +4999,8 @@ focus_tree = {
 							owns_state = 695 #Curacao 
 							has_full_control_of_state = 695
 						}
-						SUR = {
-							is_subject_of = PREV
-						}
-						CRC = {
-							is_subject_of = PREV
-						}
+						has_subject = SUR
+						has_subject = CRC
 					}
 				}
 				country_event = { id = mexico.54 hours = 6 }
@@ -5047,24 +5037,12 @@ focus_tree = {
 							owns_state = 311 #belize
 							has_full_control_of_state = 311
 						}																		
-						BLZ = {
-							is_subject_of = PREV
-						}
-						GYA = {
-							is_subject_of = PREV
-						}
-						TRI = {
-							is_subject_of = PREV
-						}
-						BAS = {
-							is_subject_of = PREV
-						}
-						BAH = {
-							is_subject_of = PREV
-						}
-						JAM = {
-							is_subject_of = PREV
-						}																								
+						has_subject = BLZ
+						has_subject = GYA
+						has_subject = TRI
+						has_subject = BAS
+						has_subject = BAH
+						has_subject = JAM																					
 					}
 				}
 				country_event = { id = mexico.54 hours = 6 }

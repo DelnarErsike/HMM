@@ -3422,9 +3422,8 @@ country_event = {
 				limit = {
 					OR = {
 						is_controlled_by = ROOT
-						any_country = {
+						controller = {
 							is_subject_of = ROOT
-							controls_state = PREV
 						}
 					}
 					NOT = {

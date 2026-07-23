@@ -7135,7 +7135,7 @@ BUL_foreign_agreements = {
 
 			random_owned_controlled_state = {
 				limit = {
-					ROOT = { has_full_control_of_state = PREV }
+					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = industrial_complex
 						size > 1
@@ -7266,7 +7266,7 @@ BUL_foreign_agreements = {
 
 			random_owned_controlled_state = {
 				limit = {
-					ROOT = { has_full_control_of_state = PREV }
+					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = industrial_complex
 						size > 1
@@ -7397,7 +7397,7 @@ BUL_foreign_agreements = {
 
 			random_owned_controlled_state = {
 				limit = {
-					ROOT = { has_full_control_of_state = PREV }
+					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = industrial_complex
 						size > 1
@@ -8019,9 +8019,9 @@ BUL_negotiate_claims_in_the_balkans = {
 				BUL_is_balkan_state = yes
 				NOT = { is_controlled_by = BUL }
 				controller = {
+					has_full_control_of_state = FROM
 					PREV = {
 						NOT = { is_core_of = PREV }
-						is_fully_controlled_by = PREV
 					}
 					is_in_faction_with = ROOT
 				}
@@ -8074,9 +8074,9 @@ BUL_negotiate_claims_in_the_balkans = {
 					is_fully_controlled_by = BUL
 				}
 				controller = {
+					has_full_control_of_state = FROM
 					PREV = {
 						NOT = { is_core_of = PREV }
-						is_fully_controlled_by = PREV
 					}
 					is_in_faction_with = ROOT
 				}

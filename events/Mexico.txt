@@ -2509,18 +2509,17 @@ country_event = {
 					original_tag = MEX
 					has_war_with = ROOT
 				}
-				ROOT = {
-					every_character = {
-						limit = {
-							OR = {
-								is_character = MEX_jesus_degollado_guizar
-								is_character = MEX_alberto_gorostieta_vega
-								is_character = MEX_dionisio_navarro_anguiano
-								is_character = MEX_luis_maria_martinez
-							}
-						}
-						set_nationality = PREV.PREV
-					}
+				MEX_jesus_degollado_guizar = {
+					set_nationality = PREV
+				}
+				MEX_alberto_gorostieta_vega = {
+					set_nationality = PREV
+				}
+				MEX_dionisio_navarro_anguiano = {
+					set_nationality = PREV
+				}
+				MEX_luis_maria_martinez = {
+					set_nationality = PREV
 				}
 				MEX_remove_church_power = yes
 				set_cosmetic_tag = MEX_cristero

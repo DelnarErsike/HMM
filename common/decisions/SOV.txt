@@ -6487,18 +6487,12 @@ SOV_diplomacy_middle_east_decision_category = {
 				array = SOV_iranian_initial_states
 				OR = {
 					is_controlled_by = SOV
-					any_allied_country = {
-						controls_state = PREV
-					}
+					controller = { is_ally_with = ROOT }
 					AND = {
 						has_global_flag = SOV_agreed_anglo_soviet_invasion_of_iran_flag
 						OR = {
 							is_controlled_by = ENG
-							ENG = {
-								any_allied_country = {
-									controls_state = PREV
-								}
-							}
+							controller = { is_ally_with = ENG }
 						}
 					}
 				}
@@ -11585,10 +11579,7 @@ SOV_comecon_dec_cat = {
 				}
 
 				custom_effect_tooltip = SOV_found_the_comecon_subjects_tt
-				every_other_country = {
-					limit = {
-						is_subject_of = ROOT
-					}
+				every_subject_country = {
 					swap_ideas = {
 						remove_idea = SOV_comecon_puppet_military
 						add_idea = SOV_comecon_puppet_default
@@ -11606,10 +11597,7 @@ SOV_comecon_dec_cat = {
 				}
 
 				custom_effect_tooltip = SOV_found_the_comecon_subjects_tt
-				every_other_country = {
-					limit = {
-						is_subject_of = ROOT
-					}
+				every_subject_country = {
 					country_event = { id = NSB_soviet_comecon.2 hours = 1 }
 					swap_ideas = {
 						remove_idea = SOV_comecon_puppet_default
@@ -11628,10 +11616,7 @@ SOV_comecon_dec_cat = {
 				}
 
 				custom_effect_tooltip = SOV_found_the_comecon_subjects_tt
-				every_other_country = {
-					limit = {
-						is_subject_of = ROOT
-					}
+				every_subject_country = {
 					swap_ideas = {
 						remove_idea = SOV_comecon_puppet_military
 						add_idea = SOV_comecon_puppet_default
@@ -13006,7 +12991,8 @@ SOV_great_patriotic_war = {
 				type = support_equipment_1
 				amount = -50
 			}
-			every_state = {
+			SOV = {
+			every_controlled_state = {
 				limit = {
 					OR = {
 						state = 220
@@ -13018,12 +13004,12 @@ SOV_great_patriotic_war = {
 						state = 246
 						state = 219
 					}
-					is_controlled_by = SOV
 				}
 				damage_building = {
 						type = infrastructure
 						damage = 3
 					}
+			}
 			}
 
 		}

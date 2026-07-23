@@ -1146,10 +1146,7 @@ focus_tree = {
 				}
 				add_ideas = SOV_comecon_sov_default
 				custom_effect_tooltip = SOV_found_the_comecon_subjects_tt
-				every_other_country = {
-					limit = {
-						is_subject_of = ROOT
-					}
+				every_subject_country = {
 					add_ideas = SOV_comecon_puppet_default
 				}
 
@@ -1208,10 +1205,7 @@ focus_tree = {
 				}
 				add_ideas = SOV_common_economic_space_sov_default
 				custom_effect_tooltip = SOV_found_the_comecon_subjects_tt
-				every_other_country = {
-					limit = {
-						is_subject_of = ROOT
-					}
+				every_subject_country = {
 					add_ideas = SOV_common_economic_space_puppet_default
 				}
 
@@ -10794,9 +10788,8 @@ focus_tree = {
 
 		completion_reward = {
 
-			every_other_country = {
+			every_neighbor_country = {
 				limit = {
-					is_neighbor_of = ROOT 
 					OR = {
 						has_government = fascism
 						has_government = neutrality

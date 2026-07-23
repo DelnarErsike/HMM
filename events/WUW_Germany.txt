@@ -9935,9 +9935,8 @@ country_event = {
 					}
 					OR = {
 						is_owned_by = ROOT
-						any_country = {
+						owner = {
 							is_subject_of = ROOT
-							owns_state = PREV
 						}
 					}
 				}
@@ -9953,9 +9952,8 @@ country_event = {
 					NOT = {
 						OR = {
 							is_owned_by = ROOT
-							any_country = {
+							owner = {
 								is_subject_of = ROOT
-								owns_state = PREV
 							}
 						}
 					}
@@ -10051,9 +10049,8 @@ country_event = {
 					GER_is_RK_south_urals_state = yes
 					OR = {
 						is_owned_by = ROOT
-						any_country = {
+						owner = {
 							is_subject_of = ROOT
-							owns_state = PREV
 						}
 					}
 				}
@@ -10065,9 +10062,8 @@ country_event = {
 					NOT = {
 						OR = {
 							is_owned_by = ROOT
-							any_country = {
+							owner = {
 								is_subject_of = ROOT
-								owns_state = PREV
 							}
 						}
 					}
@@ -10132,9 +10128,8 @@ country_event = {
 					GER_is_RK_south_urals_state = yes
 					OR = {
 						is_owned_by = ROOT
-						any_country = {
+						owner = {
 							is_subject_of = ROOT
-							owns_state = PREV
 						}
 					}
 				}
@@ -10146,9 +10141,8 @@ country_event = {
 					NOT = {
 						OR = {
 							is_owned_by = ROOT
-							any_country = {
+							owner = {
 								is_subject_of = ROOT
-								owns_state = PREV
 							}
 						}
 					}
@@ -10242,13 +10236,11 @@ country_event = {
 					}
 					OR = {
 						is_owned_by = ROOT
-						any_country = {
+						owner = {
 							is_subject_of = ROOT
-							owns_state = PREV
 						}
-						any_country = {
+						controller = {
 							is_subject_of = ROOT
-							controls_state = PREV
 						}
 						is_controlled_by = ROOT
 						is_controlled_by = FIN
@@ -10282,9 +10274,8 @@ country_event = {
 					}
 					OR = {
 						is_owned_by = ROOT
-						any_country = {
+						owner = {
 							is_subject_of = ROOT
-							owns_state = PREV
 						}
 					}
 				}
@@ -10299,17 +10290,15 @@ country_event = {
 					NOT = {
 						OR = {
 							is_owned_by = ROOT
-							any_country = {
+							owner = {
 								is_subject_of = ROOT
-								owns_state = PREV
 							}
 						}
 					}
 					OR = {
 						is_controlled_by = ROOT
-						any_country = {
+						controller = {
 							is_subject_of = ROOT
-							controls_state = PREV
 						}
 					}
 				}
@@ -11122,13 +11111,11 @@ country_event = {
 					GER_is_far_north_RKC_state = yes
 					OR = {
 						is_owned_by = ROOT
-						any_country = {
+						owner = {
 							is_subject_of = ROOT
-							owns_state = PREV
 						}
-						any_country = {
+						controller = {
 							is_subject_of = ROOT
-							controls_state = PREV
 						}
 						is_controlled_by = ROOT
 						is_controlled_by = HUN
@@ -11160,9 +11147,8 @@ country_event = {
 					GER_is_far_north_RKC_state = yes
 					OR = {
 						is_owned_by = ROOT
-						any_country = {
+						owner = {
 							is_subject_of = ROOT
-							owns_state = PREV
 						}
 					}
 				}
@@ -11174,17 +11160,15 @@ country_event = {
 					NOT = {
 						OR = {
 							is_owned_by = ROOT
-							any_country = {
+							owner = {
 								is_subject_of = ROOT
-								owns_state = PREV
 							}
 						}
 					}
 					OR = {
 						is_controlled_by = ROOT
-						any_country = {
+						controller = {
 							is_subject_of = ROOT
-							controls_state = PREV
 						}
 					}
 				}
@@ -11220,9 +11204,8 @@ country_event = {
 					GER_is_far_north_RKC_state = yes
 					OR = {
 						is_owned_by = ROOT
-						any_country = {
+						owner = {
 							is_subject_of = ROOT
-							owns_state = PREV
 						}
 					}
 				}
@@ -11234,17 +11217,15 @@ country_event = {
 					NOT = {
 						OR = {
 							is_owned_by = ROOT
-							any_country = {
+							owner = {
 								is_subject_of = ROOT
-								owns_state = PREV
 							}
 						}
 					}
 					OR = {
 						is_controlled_by = ROOT
-						any_country = {
+						controller = {
 							is_subject_of = ROOT
-							controls_state = PREV
 						}
 					}
 				}
@@ -11294,9 +11275,8 @@ country_event = {
 					GER_is_far_north_RKC_state = yes
 					OR = {
 						is_owned_by = ROOT
-						any_country = {
+						owner = {
 							is_subject_of = ROOT
-							owns_state = PREV
 						}
 					}
 				}
@@ -12212,13 +12192,11 @@ country_event = {
 					GER_is_west_coast_north_america_state = yes
 					OR = {
 						is_owned_by = ROOT
-						any_country = {
+						owner = {
 							is_subject_of = ROOT
-							owns_state = PREV
 						}
-						any_country = {
+						controller = {
 							is_subject_of = ROOT
-							controls_state = PREV
 						}
 						is_controlled_by = ROOT
 						is_controlled_by = JAP
@@ -12249,9 +12227,8 @@ country_event = {
 					GER_is_west_coast_north_america_state = yes
 					OR = {
 						is_owned_by = ROOT
-						any_country = {
+						owner = {
 							is_subject_of = ROOT
-							owns_state = PREV
 						}
 					}
 				}
@@ -12263,17 +12240,15 @@ country_event = {
 					NOT = {
 						OR = {
 							is_owned_by = ROOT
-							any_country = {
+							owner = {
 								is_subject_of = ROOT
-								owns_state = PREV
 							}
 						}
 					}
 					OR = {
 						is_controlled_by = ROOT
-						any_country = {
+						controller = {
 							is_subject_of = ROOT
-							controls_state = PREV
 						}
 					}
 				}
@@ -12304,9 +12279,8 @@ country_event = {
 					GER_is_west_coast_north_america_state = yes
 					OR = {
 						is_owned_by = ROOT
-						any_country = {
+						owner = {
 							is_subject_of = ROOT
-							owns_state = PREV
 						}
 					}
 				}
@@ -12318,17 +12292,15 @@ country_event = {
 					NOT = {
 						OR = {
 							is_owned_by = ROOT
-							any_country = {
+							owner = {
 								is_subject_of = ROOT
-								owns_state = PREV
 							}
 						}
 					}
 					OR = {
 						is_controlled_by = ROOT
-						any_country = {
+						controller = {
 							is_subject_of = ROOT
-							controls_state = PREV
 						}
 					}
 				}
@@ -14197,9 +14169,8 @@ country_event = {
 				limit = {
 					OR = {
 						is_controlled_by = GER
-						any_country = {
+						controller = {
 							is_subject_of = GER
-							controls_state = PREV
 						}
 					}
 					OR = {
@@ -14279,9 +14250,8 @@ country_event = {
 				limit = {
 					OR = {
 						is_controlled_by = GER
-						any_country = {
+						controller = {
 							is_subject_of = GER
-							controls_state = PREV
 						}
 					}
 					OR = {

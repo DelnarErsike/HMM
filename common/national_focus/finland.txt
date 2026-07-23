@@ -15417,11 +15417,7 @@ focus_tree = {
 				}
 			}
 
-			every_character = {
-				limit = {
-					is_navy_leader = yes
-					
-				}
+			every_navy_leader = {
 				random_select_amount = 2
 				add_skill_level = 1
 			}

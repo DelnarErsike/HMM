@@ -814,11 +814,10 @@ faction_goal_rule_the_waves = {
 		every_faction_member = {
 			IF = {
 				limit = { NOT = { has_completed_goal = faction_goal_rule_the_waves } }
-				random_character = {
+				random_navy_leader = {
 					tooltip = ONE_ADMIRAL
 					visible_when_empty = yes
 					limit = {
-						is_navy_leader = yes
 						NOT = { has_trait = seawolf }
 						NOT = { has_trait = battleship_adherent }
 					}

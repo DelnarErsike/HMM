@@ -3680,9 +3680,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -3843,9 +3842,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -4012,9 +4010,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -4262,9 +4259,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -4483,9 +4479,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -4608,9 +4603,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -4716,9 +4710,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -4892,9 +4885,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -5123,9 +5115,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -5418,9 +5409,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -5621,15 +5611,14 @@ GER_reichskommissariats = {
 				RKO = {
 					add_manpower = 2500
 					army_experience = 15
-				}
-				every_state = {
+				every_controlled_state = {
 					limit = {
-						is_controlled_by = RKO
 						NOT = {
 							is_core_of = RKO
 						}
 					}
 					add_resistance = -3
+				}
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
@@ -5643,15 +5632,14 @@ GER_reichskommissariats = {
 				RKU = {
 					add_manpower = 2500
 					army_experience = 15
-				}
-				every_state = {
+				every_controlled_state = {
 					limit = {
-						is_controlled_by = RKU
 						NOT = {
 							is_core_of = RKU
 						}
 					}
 					add_resistance = -3
+				}
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
@@ -5665,15 +5653,14 @@ GER_reichskommissariats = {
 				RKT = {
 					add_manpower = 2500
 					army_experience = 15
-				}
-				every_state = {
+				every_controlled_state = {
 					limit = {
-						is_controlled_by = RKT
 						NOT = {
 							is_core_of = RKT
 						}
 					}
 					add_resistance = -3
+				}
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
@@ -5687,15 +5674,14 @@ GER_reichskommissariats = {
 				RKK = {
 					add_manpower = 2500
 					army_experience = 15
-				}
-				every_state = {
+				every_controlled_state = {
 					limit = {
-						is_controlled_by = RKK
 						NOT = {
 							is_core_of = RKK
 						}
 					}
 					add_resistance = -3
+				}
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
@@ -5709,15 +5695,14 @@ GER_reichskommissariats = {
 				RKL = {
 					add_manpower = 2500
 					army_experience = 15
-				}
-				every_state = {
+				every_controlled_state = {
 					limit = {
-						is_controlled_by = RKL
 						NOT = {
 							is_core_of = RKL
 						}
 					}
 					add_resistance = -3
+				}
 				}
 			}
 			
@@ -5928,9 +5913,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -6066,9 +6050,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -6300,9 +6283,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -6421,9 +6403,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -6560,9 +6541,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -6814,9 +6794,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -7095,9 +7074,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -7212,9 +7190,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -7410,9 +7387,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -7551,9 +7527,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -7688,9 +7663,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -7930,9 +7904,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -8204,9 +8177,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -8626,9 +8598,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -8746,9 +8717,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -9047,9 +9017,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -9321,9 +9290,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -9647,9 +9615,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -9981,9 +9948,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -10109,9 +10075,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -10424,9 +10389,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -10554,9 +10518,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -10817,9 +10780,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -11002,10 +10964,7 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
-									is_subject_of = ROOT
-									owns_state = PREV
-								}
+								owner = { is_subject_of = ROOT }
 							}
 						}
 					}
@@ -11164,10 +11123,7 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
-									is_subject_of = ROOT
-									owns_state = PREV
-								}
+								owner = { is_subject_of = ROOT }
 							}
 						}
 					}
@@ -11539,10 +11495,7 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
-									is_subject_of = ROOT
-									owns_state = PREV
-								}
+								owner = { is_subject_of = ROOT }
 							}
 						}
 					}
@@ -12205,10 +12158,7 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
-									is_subject_of = ROOT
-									owns_state = PREV
-								}
+								owner = { is_subject_of = ROOT }
 							}
 						}
 					}
@@ -12582,10 +12532,7 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
-									is_subject_of = ROOT
-									owns_state = PREV
-								}
+								owner = { is_subject_of = ROOT }
 							}
 						}
 					}

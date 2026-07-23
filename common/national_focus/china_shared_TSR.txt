@@ -561,7 +561,7 @@ shared_focus = {
 	available_if_capitulated = no
 
 	complete_tooltip = {
-		random_state = {
+		random_owned_controlled_state = {
 			limit = {
 				has_state_flag = CHI_tank_plant_AF
 			}
@@ -4235,7 +4235,7 @@ shared_focus = {
 
 	complete_tooltip = {
 		navy_experience = 25
-		random_state = {
+		random_owned_controlled_state = {
 			limit = {
 				has_state_flag = CHI_investment_into_shipbuilding_DY
 			}

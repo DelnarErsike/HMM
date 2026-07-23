@@ -1961,9 +1961,8 @@ focus_tree = {
 					limit = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
+							controller = {
 								is_subject_of = ROOT
-								controls_state = PREV
 							}
 						}
 						NOT = {
@@ -2103,9 +2102,8 @@ focus_tree = {
 					limit = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
+							controller = {
 								is_subject_of = ROOT
-								controls_state = PREV
 							}
 						}
 						NOT = {
@@ -2263,9 +2261,8 @@ focus_tree = {
 						limit = {
 							OR = {
 								is_controlled_by = ROOT
-								any_country = {
+								controller = {
 									is_subject_of = ROOT
-									controls_state = PREV
 								}
 							}
 							NOT = {
@@ -2650,9 +2647,8 @@ focus_tree = {
 					limit = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
+							controller = {
 								is_subject_of = ROOT
-								controls_state = PREV
 							}
 						}
 						NOT = {
@@ -2800,9 +2796,8 @@ focus_tree = {
 				limit = {
 					OR = {
 						is_controlled_by = ROOT
-						any_country = {
+						controller = {
 							is_subject_of = ROOT
-							controls_state = PREV
 						}
 					}
 					NOT = {
@@ -3026,9 +3021,8 @@ focus_tree = {
 					NOT = {
 						is_owned_by = ROOT
 					}
-					any_country = {
+					owner = {
 						is_subject_of = ROOT
-						owns_state = PREV
 					}
 					OR = {
 						state = 664
@@ -3414,9 +3408,8 @@ focus_tree = {
 					limit = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
+							controller = {
 								is_subject_of = ROOT
-								controls_state = PREV
 							}
 						}
 						NOT = {
@@ -3488,9 +3481,8 @@ focus_tree = {
 						limit = {
 							OR = {
 								is_controlled_by = ROOT
-								any_country = {
+								controller = {
 									is_subject_of = ROOT
-									controls_state = PREV
 								}
 							}
 							NOT = {
@@ -3714,9 +3706,8 @@ focus_tree = {
 						limit = {
 							OR = {
 								is_controlled_by = ROOT
-								any_country = {
+								controller = {
 									is_subject_of = ROOT
-									controls_state = PREV
 								}
 							}
 							NOT = {
@@ -3791,9 +3782,8 @@ focus_tree = {
 							limit = {
 								OR = {
 									is_controlled_by = ROOT
-									any_country = {
+									controller = {
 										is_subject_of = ROOT
-										controls_state = PREV
 									}
 								}
 								NOT = {
@@ -6094,7 +6084,7 @@ focus_tree = {
 				}
 			}
 			random_owned_controlled_state = {
-				limit = { ROOT = { has_full_control_of_state = PREV } }
+				limit = { is_fully_controlled_by = ROOT }
 				prioritize = { 43 }
 				create_unit = {
 					division = "name = \"1 Magyar Királyi Huszárok\" division_template = \"Magyar Királyi Huszárok\" start_experience_factor = 1.0"
@@ -6980,11 +6970,8 @@ focus_tree = {
 							is_claimed_by = ROOT
 							is_core_of = ROOT
 							is_owned_by = ROOT
-							any_other_country = {
-								AND = {
+							owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
-								}
 							}
 						}
 					}
@@ -11595,17 +11582,13 @@ focus_tree = {
 				        		        militia = { x = 1 y = 3 }
 				        		    }
 				        		}
-				        		random_state = {
-				        			limit = {
-				        				OR = {
-				        					state = 43
-				        					state = 154
-				        				}
-				        			}
+				        		43 = {
 				        			create_unit = {
 				        			    division = "name = \"Erste Volksbundmiliz\" division_template = \"Volksbund Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.7"
 				        			    owner = PREV
 				        			}
+				        		}
+								154 = {
 				        			create_unit = {
 				        			    division = "name = \"Zweite Volksbundmiliz\" division_template = \"Volksbund Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.7"
 				        			    owner = PREV
@@ -18155,7 +18138,7 @@ focus_tree = {
 				}
 				random_owned_controlled_state = {
 					prioritize = { 43 }
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = { is_fully_controlled_by = ROOT }
 					create_unit = {
 						division = "name = \"1. Light Division\" division_template = \"Light Division\" start_experience_factor = 1.0"
 						owner = HUN

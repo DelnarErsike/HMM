@@ -10373,7 +10373,7 @@ CHI_the_lingguang_incident_cat = {
 			}
 			}
 			random_owned_controlled_state = {
-				limit = { ROOT = { has_full_control_of_state = PREV } }
+				limit = { is_fully_controlled_by = ROOT }
 				prioritize = { 594 }
 				create_unit = {
 					division = "name = \"1. Border Militia\" division_template = \"Border Militia\" start_experience_factor = 0.5" 
@@ -11521,7 +11521,7 @@ CHI_x_y_force_cat = {
 					limit = {
 						435 = {
 							controller = {
-								NOT = { ROOT = { has_military_access_to = PREV } }
+								NOT = { gives_military_access_to = ROOT }
 							}
 						}
 					}
@@ -11570,7 +11570,7 @@ CHI_x_y_force_cat = {
 							controller = {
 								NOT = { has_war_with = ROOT }
 								surrender_progress < 0.9
-								ROOT = { has_military_access_to = PREV }
+								gives_military_access_to = ROOT
 							}
 						}
 					}

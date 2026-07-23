@@ -167,10 +167,7 @@ country_event = {
 				}
 				puppet = HRZ
 			}
-			every_other_country = {
-				limit = {
-					is_subject_of = PREV
-				}
+			every_subject_country = {
 				set_country_flag = yugoslav_puppet_flag
 				add_to_war = { 
 					targeted_alliance = PREV 

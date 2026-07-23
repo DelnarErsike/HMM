@@ -8468,7 +8468,7 @@
 
 			random_owned_controlled_state = {
 				limit = {
-					ROOT = { has_full_control_of_state = PREV }
+					is_fully_controlled_by = ROOT
 						free_building_slots = {
 							building = dockyard
 							size > 0
@@ -8490,7 +8490,7 @@
 
 			random_owned_controlled_state = {
 				limit = {
-					ROOT = { has_full_control_of_state = PREV }
+					is_fully_controlled_by = ROOT
 						free_building_slots = {
 							building = dockyard
 							size > 0
