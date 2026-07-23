@@ -1,11 +1,13 @@
 # Default Army HQ templates, gated on TAOG DLC.
 # To add a country-specific HQ template, add a new `if` block below and add the tag to the generic fallback's NOT list.
-every_possible_country = {
-	limit = { has_dlc = "Thunder at Our Gates" }
+if = {
+	limit = {
+		has_dlc = "Thunder at Our Gates"
+		always = no # HMM: we've disabled HQs, so don't generate any HQ templates
+	}
 
 	# USA
-	if = {
-		limit = { tag = USA }
+	USA = {
 		division_template = {
 			name = "Field Army Headquarters"
 			template_counter = 121
@@ -27,8 +29,7 @@ every_possible_country = {
 	}
 
 	# SOV
-	if = {
-		limit = { tag = SOV }
+	SOV = {
 		division_template = {
 			name = "Shtab Armii"
 			template_counter = 121
@@ -49,8 +50,7 @@ every_possible_country = {
 	}
 
 	# GER
-	if = {
-		limit = { tag = GER }
+	GER = {
 		division_template = {
 			name = "AOK"
 			template_counter = 121
@@ -70,8 +70,7 @@ every_possible_country = {
 	}
 
 	# ENG
-	if = {
-		limit = { tag = ENG }
+	ENG = {
 		division_template = {
 			name = "Army Headquarters"
 			template_counter = 121
@@ -93,8 +92,7 @@ every_possible_country = {
 	}
 
 	# FRA
-	if = {
-		limit = { tag = FRA }
+	FRA = {
 		division_template = {
 			name = "Quartier General d'Armee"
 			template_counter = 121
@@ -115,8 +113,7 @@ every_possible_country = {
 	}
 
 	# JAP
-	if = {
-		limit = { tag = JAP }
+	JAP = {
 		division_template = {
 			name = "Gun Shireibu"
 			template_counter = 121
@@ -137,7 +134,7 @@ every_possible_country = {
 	}
 
 	# Generic fallback for every other TAOG country
-	if = {
+	every_country = {
 		limit = {
 			NOT = { tag = USA }
 			NOT = { tag = SOV }

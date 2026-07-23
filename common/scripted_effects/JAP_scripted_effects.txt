@@ -2306,15 +2306,10 @@ JAP_trigger_communist_civil_war = {
     	    }
     	    
     	    # Transfers the Democratic Leader to the Democratic Side 
-    		every_possible_country = { 
-    			limit = {
-    				has_character = JAP_machida_chuuji
-    			}
     			JAP_machida_chuuji = { # Character
-    			    set_nationality = PREV.PREV
+    			    set_nationality = PREV
     			    # Transfers to democratic breakaway
     			}
-    		}
 
     		IF = {
     			limit = {

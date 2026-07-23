@@ -120,14 +120,8 @@ country_event = {
 			base = 100
 		}
 
-		every_possible_country = {
-			limit = {
-				has_character = BEL_raoul_van_overstraeten
-			}
-			set_nationality = {
-			    target_country = BEL
-			    character = BEL_raoul_van_overstraeten
-			}	
+		BEL_raoul_van_overstraeten = {
+			set_nationality = BEL
 		}		
 
 	}
@@ -1663,16 +1657,8 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			every_possible_country = {
-
-				limit = {
-					has_character = GHA_kwame_nkrumah
-				}
-
-				set_nationality = {
-				    target_country = ROOT
-				    character = GHA_kwame_nkrumah
-				}	
+			GHA_kwame_nkrumah = {
+				set_nationality = ROOT
 
 			}
 		}
@@ -2494,16 +2480,8 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			every_possible_country = {
-
-				limit = {
-					has_character = BRD_mwambutsa_iv
-				}
-
-				set_nationality = {
-				    target_country = ROOT
-				    character = BRD_mwambutsa_iv
-				}	
+			BRD_mwambutsa_iv = {
+				set_nationality = ROOT
 
 			}
 		}
@@ -2592,16 +2570,8 @@ country_event = {
 		}
 
 		hidden_effect = {
-			every_possible_country = {
-
-				limit = {
-					has_character = BRD_mwambutsa_iv
-				}
-
-				set_nationality = {
-				    target_country = BRD
-				    character = BRD_mwambutsa_iv
-				}	
+			BRD_mwambutsa_iv = {
+				set_nationality = BRD
 
 			}
 		}
@@ -2619,16 +2589,9 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			every_possible_country = {
+			RWA_mutara_rudahigwa = {
 
-				limit = {
-					has_character = RWA_mutara_rudahigwa
-				}
-
-				set_nationality = {
-				    target_country = ROOT
-				    character = RWA_mutara_rudahigwa
-				}	
+				set_nationality = ROOT
 
 			}
 		}
@@ -2717,16 +2680,8 @@ country_event = {
 		}
 
 		hidden_effect = {
-			every_possible_country = {
-
-				limit = {
-					has_character = RWA_mutara_rudahigwa
-				}
-
-				set_nationality = {
-				    target_country = RWA
-				    character = RWA_mutara_rudahigwa
-				}	
+			RWA_mutara_rudahigwa = {
+				set_nationality = RWA
 
 			}
 		}
@@ -2744,16 +2699,8 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			every_possible_country = {
-
-				limit = {
-					has_character = RWA_mutara_rudahigwa
-				}
-
-				set_nationality = {
-				    target_country = ROOT
-				    character = RWA_mutara_rudahigwa
-				}	
+			RWA_mutara_rudahigwa = {
+				set_nationality = ROOT
 
 			}
 		}
@@ -3364,14 +3311,8 @@ country_event = {
 			base = 100
 		}
 
-		every_possible_country = {
-			limit = {
-				has_character = BEL_raoul_van_overstraeten
-			}
-			set_nationality = {
-			    target_country = BEL
-			    character = BEL_raoul_van_overstraeten
-			}	
+		BEL_raoul_van_overstraeten = {
+			set_nationality = BEL
 		}		
 
 	}
