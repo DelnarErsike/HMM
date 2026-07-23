@@ -1106,14 +1106,13 @@ faction_goal_ensure_military_r_d = {
 						is_active_scientist = yes
 					}
 				}
-				every_scientist = {
+				every_active_scientist = {
 					visible_when_empty = yes
 					limit = {
 						has_scientist_level = {
 							level > 0
 							specialization = specialization_land
 						}
-						is_active_scientist = yes
 					}
 					add_scientist_xp = {
 						experience = constant:sp_scientist_xp_gain.very_high
@@ -1131,14 +1130,13 @@ faction_goal_ensure_military_r_d = {
 						is_active_scientist = yes
 					}
 				}
-				every_scientist = {
+				every_active_scientist = {
 					visible_when_empty = yes
 					limit = {
 						has_scientist_level = {
 							level > 0
 							specialization = specialization_naval
 						}
-						is_active_scientist = yes
 					}
 					add_scientist_xp = {
 						experience = constant:sp_scientist_xp_gain.very_high
@@ -1156,14 +1154,13 @@ faction_goal_ensure_military_r_d = {
 						is_active_scientist = yes
 					}
 				}
-				every_scientist = {
+				every_active_scientist = {
 					visible_when_empty = yes
 					limit = {
 						has_scientist_level = {
 							level > 0
 							specialization = specialization_air
 						}
-						is_active_scientist = yes
 					}
 					add_scientist_xp = {
 						experience = constant:sp_scientist_xp_gain.very_high
@@ -1506,11 +1503,10 @@ faction_goal_an_armored_fist = {
 			IF = {
 				limit = { NOT = { has_completed_goal = faction_goal_an_armored_fist } }
 				army_experience = 50
-				random_character = {
+				random_unit_leader = {
 					tooltip = ONE_PANZER_GENERAL
 					visible_when_empty = yes
 					limit = {
-						is_unit_leader = yes
 						OR = {
 							has_trait = armor_officer
 							has_trait = panzer_leader
@@ -1557,11 +1553,10 @@ faction_goal_an_infantry_army = {
 			IF = {
 				limit = { NOT = { has_completed_goal = faction_goal_an_infantry_army } }
 				army_experience = 50
-				random_character = {
+				random_unit_leader = {
 					tooltip = ONE_INFANTRY_GENERAL
 					visible_when_empty = yes
 					limit = {
-						is_unit_leader = yes
 						OR = {
 							has_trait = infantry_officer
 							has_trait = infantry_leader
@@ -1630,15 +1625,25 @@ faction_goal_develop_mexican_oil = {
 		add_faction_power_projection = 100
 		if = {
 			limit = { NOT = { has_completed_goal = faction_goal_develop_mexican_oil } }
-			every_state = {
-				limit = {
-					OR = {
-						state = 480
-						state = 479
-						state = 477
-						state = 476
-					}
+			480 = {
+				add_resource = {
+				    type = oil
+				    amount = 4
 				}
+			}
+			479 = {
+				add_resource = {
+				    type = oil
+				    amount = 4
+				}
+			}
+			477 = {
+				add_resource = {
+				    type = oil
+				    amount = 4
+				}
+			}
+			476 = {
 				add_resource = {
 				    type = oil
 				    amount = 4
@@ -1773,13 +1778,13 @@ faction_goal_develop_venezuelan_oil = {
 		add_faction_power_projection = 100
 		if = {
 			limit = { NOT = { has_completed_goal = faction_goal_develop_venezuelan_oil } }
-			every_state = {
-				limit = {
-					OR = {
-						state = 489
-						state = 307
-					}
+			489 = {
+				add_resource = {
+				    type = oil
+				    amount = 8
 				}
+			}
+			307 = {
 				add_resource = {
 				    type = oil
 				    amount = 8
@@ -2214,13 +2219,13 @@ faction_goal_develop_baku_oil_fields = {
 		add_faction_power_projection = 100
 		if = {
 			limit = { NOT = { has_completed_goal = faction_goal_develop_baku_oil_fields } }
-			every_state = {
-				limit = {
-					OR = {
-						state = 232
-						state = 821
-					}
+			232 = {
+				add_resource = {
+				    type = oil
+				    amount = 4
 				}
+			}
+			821 = {
 				add_resource = {
 				    type = oil
 				    amount = 4
@@ -3339,24 +3344,28 @@ faction_goal_expand_bahamas_bases = {
 		693 = { is_controlled_by_ROOT_or_ally = yes }
 	}
 	completed = {
-		any_state = {
-			OR = {
-				state = 690
-				state = 693
-			}
-			air_base > 1
+		OR = {
+			690 = { air_base > 1 }
+			693 = { air_base > 1 }
 		}
-		any_state = {
-			OR = {
-				state = 690
-				state = 693
-			}
-			any_province_building_level = {
-				province = {
-					all_provinces = yes
+		OR = {
+			690 = {
+				any_province_building_level = {
+					province = {
+						all_provinces = yes
+					}
+					building = naval_base
+					level > 2
 				}
-				building = naval_base
-				level > 2
+			}
+			693 = {
+				any_province_building_level = {
+					province = {
+						all_provinces = yes
+					}
+					building = naval_base
+					level > 2
+				}
 			}
 		}
 	}

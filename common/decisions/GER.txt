@@ -688,9 +688,9 @@ GER_operational_planning_category = {
 						has_completed_focus = GER_panzergrenadier
 					}
 					hidden_effect= {
-						every_state = {
+						FROM = {
+						every_controlled_state = {
 							limit = {
-								is_controlled_by = FROM
 								is_on_continent = europe
 							}
 							add_dynamic_modifier = {
@@ -699,6 +699,7 @@ GER_operational_planning_category = {
 								days = 45
 							}
 						}
+						}
 					}
 				}
 				if = { #Add basic Blitzkrieg modifier
@@ -706,9 +707,9 @@ GER_operational_planning_category = {
 						has_completed_focus = GER_adopt_new_panzer_doctrine
 						NOT = { has_completed_focus = GER_advanced_panzer_research }
 					}
-					every_state = {
+					FROM = {
+					every_controlled_state = {
 						limit = {
-							is_controlled_by = FROM
 							is_on_continent = europe
 						}
 						add_dynamic_modifier = {
@@ -717,15 +718,16 @@ GER_operational_planning_category = {
 							days = 45
 						}
 					}
+					}
 				}
 				else_if = { #Add Blitzkrieg Level 2
 					limit = {
 						has_completed_focus = GER_advanced_panzer_research
 						NOT = { has_completed_focus = GER_expand_kummersdorfs_capacity }
 					}
-					every_state = {
+					FROM = {
+					every_controlled_state = {
 						limit = {
-							is_controlled_by = FROM
 							is_on_continent = europe
 						}
 						add_dynamic_modifier = {
@@ -734,14 +736,15 @@ GER_operational_planning_category = {
 							days = 45
 						}
 					}
+					}
 				}
 				else_if = { #Add Blitzkrieg Level 3
 					limit = {
 						has_completed_focus = GER_expand_kummersdorfs_capacity
 					}
-					every_state = {
+					FROM = {
+					every_controlled_state = {
 						limit = {
-							is_controlled_by = FROM
 							is_on_continent = europe
 						}
 						add_dynamic_modifier = {
@@ -749,6 +752,7 @@ GER_operational_planning_category = {
 							scope = GER
 							days = 45
 						}
+					}
 					}
 				}
 				hidden_effect = { #This removes the GER_operational_planning_flag, enabling Germany to do the decision again. remove_effect won't work if the country in question capitulates
@@ -765,9 +769,9 @@ GER_operational_planning_category = {
 						has_completed_focus = GER_panzergrenadier
 					}
 					hidden_effect= {
-						every_state = {
+						FROM = {
+						every_controlled_state = {
 							limit = {
-								is_controlled_by = FROM
 								is_on_continent = europe
 							}
 							add_dynamic_modifier = {
@@ -776,6 +780,7 @@ GER_operational_planning_category = {
 								days = 90
 							}
 						}
+						}
 					}
 				}
 				if = { #Add basic bewegungskrieg modifier
@@ -783,9 +788,9 @@ GER_operational_planning_category = {
 						has_completed_focus = GER_the_prussian_legacy
 						NOT = { has_completed_focus = GER_lessons_of_the_great_war }
 					}
-					every_state = {
+					FROM = {
+					every_controlled_state = {
 						limit = {
-							is_controlled_by = FROM
 							is_on_continent = europe
 						}
 						add_dynamic_modifier = {
@@ -794,15 +799,16 @@ GER_operational_planning_category = {
 							days = 90
 						}
 					}
+					}
 				}
 				else_if = { #Add bewegungskrieg Level 2
 					limit = {
 						has_completed_focus = GER_lessons_of_the_great_war
 						NOT = { has_completed_focus = GER_artillery_bombardment }
 					}
-					every_state = {
+					FROM = {
+					every_controlled_state = {
 						limit = {
-							is_controlled_by = FROM
 							is_on_continent = europe
 						}
 						add_dynamic_modifier = {
@@ -811,15 +817,16 @@ GER_operational_planning_category = {
 							days = 90
 						}
 					}
+					}
 				}
 				else_if = { #Add bewegungskrieg Level 3
 					limit = {
 						has_completed_focus = GER_artillery_bombardment
 						NOT = { has_completed_focus = GER_stormtroopers }
 					}
-					every_state = {
+					FROM = {
+					every_controlled_state = {
 						limit = {
-							is_controlled_by = FROM
 							is_on_continent = europe
 						}
 						add_dynamic_modifier = {
@@ -828,14 +835,15 @@ GER_operational_planning_category = {
 							days = 90
 						}
 					}
+					}
 				}
 				else_if = { #Add bewegungskrieg Level 4
 					limit = {
 						has_completed_focus = GER_stormtroopers
 					}
-					every_state = {
+					FROM = {
+					every_controlled_state = {
 						limit = {
-							is_controlled_by = FROM
 							is_on_continent = europe
 						}
 						add_dynamic_modifier = {
@@ -843,6 +851,7 @@ GER_operational_planning_category = {
 							scope = GER
 							days = 90
 						}
+					}
 					}
 				}				
 				hidden_effect = { #This removes the GER_operational_planning_flag, enabling Germany to do the decision again. remove_effect won't work if the country in question capitulates
@@ -929,9 +938,9 @@ GER_operational_planning_category = {
 						has_completed_focus = GER_panzergrenadier
 					}
 					hidden_effect= {
-						every_state = {
+						FROM = {
+						every_controlled_state = {
 							limit = {
-								is_controlled_by = FROM
 								is_on_continent = africa
 							}
 							add_dynamic_modifier = {
@@ -940,6 +949,7 @@ GER_operational_planning_category = {
 								days = 45
 							}
 						}
+						}
 					}
 				}
 				if = { #Add basic Blitzkrieg modifier
@@ -947,9 +957,9 @@ GER_operational_planning_category = {
 						has_completed_focus = GER_adopt_new_panzer_doctrine
 						NOT = { has_completed_focus = GER_advanced_panzer_research }
 					}
-					every_state = {
+					FROM = {
+					every_controlled_state = {
 						limit = {
-							is_controlled_by = FROM
 							is_on_continent = africa
 						}
 						add_dynamic_modifier = {
@@ -958,15 +968,16 @@ GER_operational_planning_category = {
 							days = 45
 						}
 					}
+					}
 				}
 				else_if = { #Add Blitzkrieg Level 2
 					limit = {
 						has_completed_focus = GER_advanced_panzer_research
 						NOT = { has_completed_focus = GER_expand_kummersdorfs_capacity }
 					}
-					every_state = {
+					FROM = {
+					every_controlled_state = {
 						limit = {
-							is_controlled_by = FROM
 							is_on_continent = africa
 						}
 						add_dynamic_modifier = {
@@ -975,14 +986,15 @@ GER_operational_planning_category = {
 							days = 45
 						}
 					}
+					}
 				}
 				else_if = { #Add Blitzkrieg Level 3
 					limit = {
 						has_completed_focus = GER_expand_kummersdorfs_capacity
 					}
-					every_state = {
+					FROM = {
+					every_controlled_state = {
 						limit = {
-							is_controlled_by = FROM
 							is_on_continent = africa
 						}
 						add_dynamic_modifier = {
@@ -990,6 +1002,7 @@ GER_operational_planning_category = {
 							scope = GER
 							days = 45
 						}
+					}
 					}
 				}
 				hidden_effect = { #This removes the GER_operational_planning_flag, enabling Germany to do the decision again. remove_effect won't work if the country in question capitulates
@@ -1006,9 +1019,9 @@ GER_operational_planning_category = {
 						has_completed_focus = GER_panzergrenadier
 					}
 					hidden_effect= {
-						every_state = {
+						FROM = {
+						every_controlled_state = {
 							limit = {
-								is_controlled_by = FROM
 								is_on_continent = africa
 							}
 							add_dynamic_modifier = {
@@ -1017,6 +1030,7 @@ GER_operational_planning_category = {
 								days = 90
 							}
 						}
+						}
 					}
 				}
 				if = { #Add basic bewegungskrieg modifier
@@ -1024,9 +1038,9 @@ GER_operational_planning_category = {
 						has_completed_focus = GER_the_prussian_legacy
 						NOT = { has_completed_focus = GER_lessons_of_the_great_war }
 					}
-					every_state = {
+					FROM = {
+					every_controlled_state = {
 						limit = {
-							is_controlled_by = FROM
 							is_on_continent = africa
 						}
 						add_dynamic_modifier = {
@@ -1035,15 +1049,16 @@ GER_operational_planning_category = {
 							days = 90
 						}
 					}
+					}
 				}
 				else_if = { #Add bewegungskrieg Level 2
 					limit = {
 						has_completed_focus = GER_lessons_of_the_great_war
 						NOT = { has_completed_focus = GER_artillery_bombardment }
 					}
-					every_state = {
+					FROM = {
+					every_controlled_state = {
 						limit = {
-							is_controlled_by = FROM
 							is_on_continent = africa
 						}
 						add_dynamic_modifier = {
@@ -1052,15 +1067,16 @@ GER_operational_planning_category = {
 							days = 90
 						}
 					}
+					}
 				}
 				else_if = { #Add bewegungskrieg Level 3
 					limit = {
 						has_completed_focus = GER_artillery_bombardment
 						NOT = { has_completed_focus = GER_stormtroopers }
 					}
-					every_state = {
+					FROM = {
+					every_controlled_state = {
 						limit = {
-							is_controlled_by = FROM
 							is_on_continent = africa
 						}
 						add_dynamic_modifier = {
@@ -1069,14 +1085,15 @@ GER_operational_planning_category = {
 							days = 90
 						}
 					}
+					}
 				}
 				else_if = { #Add bewegungskrieg Level 4
 					limit = {
 						has_completed_focus = GER_stormtroopers
 					}
-					every_state = {
+					FROM = {
+					every_controlled_state = {
 						limit = {
-							is_controlled_by = FROM
 							is_on_continent = africa
 						}
 						add_dynamic_modifier = {
@@ -1084,6 +1101,7 @@ GER_operational_planning_category = {
 							scope = GER
 							days = 90
 						}
+					}
 					}
 				}				
 				hidden_effect = { #This removes the GER_operational_planning_flag, enabling Germany to do the decision again. remove_effect won't work if the country in question capitulates
@@ -3662,9 +3680,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -3825,9 +3842,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -3994,9 +4010,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -4244,9 +4259,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -4465,9 +4479,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -4590,9 +4603,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -4698,9 +4710,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -4874,9 +4885,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -5105,9 +5115,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -5400,9 +5409,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -5582,15 +5590,14 @@ GER_reichskommissariats = {
 				RKM = {
 					add_manpower = 2500
 					army_experience = 15
-				}
-				every_state = {
-					limit = {
-						is_controlled_by = RKM
-						NOT = {
-							is_core_of = RKM
+					every_controlled_state = {
+						limit = {
+							NOT = {
+								is_core_of = RKM
+							}
 						}
+						add_resistance = -3
 					}
-					add_resistance = -3
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
@@ -5604,15 +5611,14 @@ GER_reichskommissariats = {
 				RKO = {
 					add_manpower = 2500
 					army_experience = 15
-				}
-				every_state = {
+				every_controlled_state = {
 					limit = {
-						is_controlled_by = RKO
 						NOT = {
 							is_core_of = RKO
 						}
 					}
 					add_resistance = -3
+				}
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
@@ -5626,15 +5632,14 @@ GER_reichskommissariats = {
 				RKU = {
 					add_manpower = 2500
 					army_experience = 15
-				}
-				every_state = {
+				every_controlled_state = {
 					limit = {
-						is_controlled_by = RKU
 						NOT = {
 							is_core_of = RKU
 						}
 					}
 					add_resistance = -3
+				}
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
@@ -5648,15 +5653,14 @@ GER_reichskommissariats = {
 				RKT = {
 					add_manpower = 2500
 					army_experience = 15
-				}
-				every_state = {
+				every_controlled_state = {
 					limit = {
-						is_controlled_by = RKT
 						NOT = {
 							is_core_of = RKT
 						}
 					}
 					add_resistance = -3
+				}
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
@@ -5670,15 +5674,14 @@ GER_reichskommissariats = {
 				RKK = {
 					add_manpower = 2500
 					army_experience = 15
-				}
-				every_state = {
+				every_controlled_state = {
 					limit = {
-						is_controlled_by = RKK
 						NOT = {
 							is_core_of = RKK
 						}
 					}
 					add_resistance = -3
+				}
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
@@ -5692,15 +5695,14 @@ GER_reichskommissariats = {
 				RKL = {
 					add_manpower = 2500
 					army_experience = 15
-				}
-				every_state = {
+				every_controlled_state = {
 					limit = {
-						is_controlled_by = RKL
 						NOT = {
 							is_core_of = RKL
 						}
 					}
 					add_resistance = -3
+				}
 				}
 			}
 			
@@ -5911,9 +5913,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -6049,9 +6050,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -6283,9 +6283,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -6404,9 +6403,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -6543,9 +6541,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -6797,9 +6794,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -7078,9 +7074,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -7195,9 +7190,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -7393,9 +7387,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -7534,9 +7527,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -7671,9 +7663,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -7913,9 +7904,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -8187,9 +8177,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -8609,9 +8598,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -8729,9 +8717,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -9030,9 +9017,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -9304,9 +9290,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -9630,9 +9615,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -9964,9 +9948,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -10092,9 +10075,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -10407,9 +10389,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -10537,9 +10518,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -10800,9 +10780,8 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
+								owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
 								}
 							}
 						}
@@ -10985,10 +10964,7 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
-									is_subject_of = ROOT
-									owns_state = PREV
-								}
+								owner = { is_subject_of = ROOT }
 							}
 						}
 					}
@@ -11147,10 +11123,7 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
-									is_subject_of = ROOT
-									owns_state = PREV
-								}
+								owner = { is_subject_of = ROOT }
 							}
 						}
 					}
@@ -11522,10 +11495,7 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
-									is_subject_of = ROOT
-									owns_state = PREV
-								}
+								owner = { is_subject_of = ROOT }
 							}
 						}
 					}
@@ -12188,10 +12158,7 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
-									is_subject_of = ROOT
-									owns_state = PREV
-								}
+								owner = { is_subject_of = ROOT }
 							}
 						}
 					}
@@ -12565,10 +12532,7 @@ GER_reichskommissariats = {
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
-								any_country = {
-									is_subject_of = ROOT
-									owns_state = PREV
-								}
+								owner = { is_subject_of = ROOT }
 							}
 						}
 					}
@@ -12988,10 +12952,9 @@ foreign_politics = {
 				}
 			}
 			custom_effect_tooltip = GER_install_franz_anton_bach_in_hungary_tt
-			every_country = {
+			every_subject_country = {
 				limit = {
 					original_tag = HUN
-					is_subject_of = ROOT
 				}
 				add_stability = -0.05
 				add_political_power = 50

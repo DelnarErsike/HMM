@@ -666,11 +666,10 @@ on_actions = {
 							target = PREV
 							transfer_troops = yes
 						}
-						every_state = {
-							limit = {
-								is_core_of = BLR
-							}
-							add_core_of = PREV
+						BLR = {
+						every_core_state = {
+							add_core_of = PREV.PREV
+						}
 						}
 						if = {
 							limit = {
@@ -705,11 +704,10 @@ on_actions = {
 							transfer_troops = yes
 						}
 					}
-					every_state = {
-						limit = {
-							is_core_of = BLR
-						}
+					BLR = {
+					every_core_state = {
 						add_core_of = SOV
+					}
 					}
 				}
 			}
@@ -1455,10 +1453,10 @@ on_actions = {
 							transfer_state = PREV
 						}
 					}
-					every_country = { #This gives the player playing a baltic country any other baltic country that is AI as long as they're both SOV puppets
+					SOV = {
+					every_subject_country = { #This gives the player playing a baltic country any other baltic country that is AI as long as they're both SOV puppets
 						limit = {
 							is_baltic_country = yes
-							is_subject_of = SOV
 							is_ai = yes
 						}
 						save_global_event_target_as = BALTIC_country_to_transfer
@@ -1470,10 +1468,10 @@ on_actions = {
 							}
 							save_global_event_target_as = BALTIC_loose_territory_country
 						}
-						random_country = {
+						SOV = {
+						random_subject_country = {
 							limit = {
 								is_baltic_country = yes
-								is_subject_of = SOV
 								is_ai = no
 							}
 							country_event = { id = BALTIC_events.19 } #This lets the player know that they were given a baltic state. 
@@ -1483,6 +1481,8 @@ on_actions = {
 							}
 							country_event = { id = baltic.8 } #This lets the player know that they were given a baltic state. 
 						}
+						}
+					}
 					}
 				}
 			}

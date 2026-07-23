@@ -927,13 +927,8 @@ focus_tree = {
                     every_army_leader = {
                         set_nationality = RAJ
                     }
+                    RAJ_freeman_freeman_thomas = { set_nationality = PREV }
                     RAJ = {
-                        random_character = {
-                            limit = {
-                                is_character = RAJ_freeman_freeman_thomas
-                            }
-                            set_nationality = PREV.PREV
-                        }
                         set_politics = {
                             ruling_party = neutrality
                             elections_allowed = no
@@ -2401,7 +2396,7 @@ focus_tree = {
             }
 
             hidden_effect = {
-                every_country = {
+                every_subject_country = {
                     limit = {
                         OR = {
                             tag = PSH
@@ -2422,7 +2417,6 @@ focus_tree = {
                             tag = BLC
                         }
                         exists = yes
-                        is_subject_of = ROOT
                     }
                     add_ideas = idea_RAJ_central_mughal_court
                 }
@@ -2680,7 +2674,7 @@ focus_tree = {
             }
             add_ideas = BRA_road_investment
             add_ideas = BRA_rail_investment
-            random_owned_state = {
+            random_owned_controlled_state = {
                 limit = {
                     is_fully_controlled_by = ROOT
                     free_building_slots = {
@@ -2696,7 +2690,7 @@ focus_tree = {
                     instant_build = yes
                 }
             }
-            random_owned_state = {
+            random_owned_controlled_state = {
                 limit = {
                     is_fully_controlled_by = ROOT
                     free_building_slots = {
@@ -2746,12 +2740,11 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_POLITICAL}
 
         completion_reward = {
-            every_state = {
-                limit = {
-                    is_core_of = AFG
-                }
+            AFG = {
+            every_core_state = {
                 add_core_of = ROOT
             }            
+            }
         }
     }
 
@@ -3482,14 +3475,7 @@ focus_tree = {
                     add_ideas = RAJ_marginalized_muslim_community
                     add_ideas = RAJ_princely_states
                     add_ideas = RAJ_risk_of_famine
-                    RAJ = {
-                        random_character = {
-                            limit = {
-                                is_character = RAJ_freeman_freeman_thomas
-                            }
-                            set_nationality = PREV.PREV
-                        }
-                    }
+                    RAJ_freeman_freeman_thomas = { set_nationality = PREV }
                     promote_character = RAJ_freeman_freeman_thomas
                     set_popularities = {
                         democratic= 28 # 0.0-100
@@ -4001,9 +3987,8 @@ focus_tree = {
             }
 
 
-            every_country = {
+            every_subject_country = {
                 limit = {
-                    is_subject_of = ROOT
                     is_raj_releasable = yes
                 }
                 add_ideas = idea_RAJ_princely_autonomy
@@ -10797,10 +10782,7 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_INDUSTRY}
 
         completion_reward = {
-            random_controlled_state = {
-                limit = {
-                    is_owned_and_controlled_by = RAJ
-                }
+            random_owned_controlled_state = {
                 prioritize = { 427 }
                 add_extra_state_shared_building_slots = 2
                 add_building_construction = {
@@ -11787,9 +11769,8 @@ focus_tree = {
                     }
                 }
                 else = { hidden_effect = { set_country_flag = RAJ_was_not_subject_of_eng } }
-                    every_country = {
+                    every_enemy_country = {
                         limit = {
-                            has_war_with = RAJ
                             NOT = {
                                 RAJ = {
                                     any_owned_state = {
@@ -12055,10 +12036,7 @@ focus_tree = {
 
                 }
 
-                random_state = { #this used to be a part of the for loop by mistake, leading to the funniest bug report i have ever read: "notice there are 34 newly spawned tank divisions" 
-                    limit = {
-                        is_controlled_by = PREV
-                    }
+                random_controlled_state = { #this used to be a part of the for loop by mistake, leading to the funniest bug report i have ever read: "notice there are 34 newly spawned tank divisions" 
                     create_unit = {
                         division = "name = \"Royal Tank Division\" division_template = \"Royal Tank Division\" start_experience_factor = 0.2 start_equipment_factor = 1 start_manpower_factor = 1"
                         owner = var:RAJ.revolter_tag
@@ -12068,12 +12046,11 @@ focus_tree = {
                 }
                 
                 ### Restore cores and spawn divisions ####
-
-                random_state = {
+                ROOT = {
+                random_controlled_state = {
                    limit = {
                         NOT = { state = 439 }
                         has_state_flag = RAJ_owned_states_at_game_start
-                        is_controlled_by = ROOT
                    }
                    RAJ = {
                        set_capital  = {
@@ -12082,6 +12059,7 @@ focus_tree = {
                        }
                    }
                }
+                }
            }
 
             ###### #Call Japan In #######
@@ -12107,10 +12085,10 @@ focus_tree = {
             if = {
                 limit = { RAJ = { has_country_flag = bose_opponent_has_valid_capital } }
 
-                every_other_country = {
-                    limit = {
-                        original_tag = RAJ
-                    }
+                every_country_with_original_tag = {
+                    original_tag_to_check = RAJ
+                    if = {
+                        limit = { NOT = { TAG = PREV } }
                     set_variable = { RAJ.RAJ_capital_fit_count = 0 }
                     every_controlled_state = { #try prevent cheese by the player surrounding the capital pre-cw by only picking high resistance states around the enemy capital by picking a capital that at least has an adjectent controlled state
                         set_variable = { RAJ.RAJ_state_fit_count = 0 }
@@ -12131,6 +12109,7 @@ focus_tree = {
                             set_variable = { RAJ.best_capital_fit =  THIS }
                             
                         }
+                    }
                     }
                 }
             }
@@ -12430,11 +12409,10 @@ focus_tree = {
                 set_cosmetic_tag = RAJ_UK
             }
           
-           every_other_country = {
+           every_enemy_country = {
                 limit = {
                     original_tag = RAJ
                     has_cosmetic_tag = RAJ_UK
-                    has_war_with = ROOT
                 }
                 RAJ = {
                     every_unit_leader = {
@@ -24829,7 +24807,7 @@ focus = {
 
         search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP }
         complete_tooltip = {
-            random_state = {
+            random_owned_controlled_state = {
                 limit = {
                     has_state_flag = RAJ_expand_mazagon_dock_dlc
                 }
@@ -25084,7 +25062,7 @@ focus = {
 
         search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP }
         complete_tooltip = {
-            random_state = {
+            random_owned_controlled_state = {
                 limit = {
                     has_state_flag = RAJ_found_scindia_shipyard_dlc
                 }

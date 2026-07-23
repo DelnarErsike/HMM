@@ -4569,18 +4569,16 @@ BUL_macedonian_revolutionary_organizations = {
 			every_state = {
 				limit = {
 					BUL_is_macedonian_state = yes
-					is_controlled_by = ROOT
 				}
-				add_dynamic_modifier = { modifier = widespread_bulgarian_sentiment_02 }
-			}
-			every_state = {
-				limit = {
-					BUL_is_macedonian_state = yes
-					NOT = { is_controlled_by = ROOT }
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_dynamic_modifier = { modifier = widespread_bulgarian_sentiment_02 }
 				}
-				add_dynamic_modifier = { modifier = widespread_bulgarian_sentiment_01 }
-				hidden_effect = {
-					controller = { country_event = bftb_bulgaria_imro.2 }
+				else = {
+					add_dynamic_modifier = { modifier = widespread_bulgarian_sentiment_01 }
+					hidden_effect = {
+						controller = { country_event = bftb_bulgaria_imro.2 }
+					}
 				}
 			}
 
@@ -4672,7 +4670,7 @@ BUL_macedonian_revolutionary_organizations = {
 						owner = ROOT
 					}
 				}
-				every_state = {
+				every_controlled_state = {
 					limit = {
 						BUL_is_macedonian_state = yes
 						is_fully_controlled_by = BUL
@@ -4685,7 +4683,7 @@ BUL_macedonian_revolutionary_organizations = {
 				}
 			}
 			else = {
-				random_state = {
+				random_controlled_state = {
 					limit = {
 						BUL_is_macedonian_state = yes
 						is_fully_controlled_by = ROOT
@@ -4702,16 +4700,18 @@ BUL_macedonian_revolutionary_organizations = {
 						division = "division_template = \"Makedonska Revolyutsionna Militsiya\" start_experience_factor = 0.4" 
 						owner = ROOT
 					}
-					random_state = {
+					ROOT = {
+					random_controlled_state = {
 						limit = {
 							BUL_is_macedonian_state = yes
 							is_fully_controlled_by = ROOT
-							NOT = { state = PREV }
+							NOT = { state = PREV.PREV }
 						}
 						create_unit = {
 							division = "division_template = \"Makedonska Revolyutsionna Militsiya\" start_experience_factor = 0.4" 
 							owner = ROOT
 						}
+					}
 					}
 				}
 			}
@@ -4767,7 +4767,7 @@ BUL_macedonian_revolutionary_organizations = {
 			hidden_effect = {
 				set_country_flag = { flag = BUL_support_imro_flag value = 4 }
 				set_variable = { BUL_total_mp_from_macedonian_states = 0 }
-				every_state = {
+				every_controlled_state = {
 					limit = {
 						BUL_is_macedonian_state = yes
 						is_fully_controlled_by = ROOT
@@ -7135,7 +7135,7 @@ BUL_foreign_agreements = {
 
 			random_owned_controlled_state = {
 				limit = {
-					ROOT = { has_full_control_of_state = PREV }
+					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = industrial_complex
 						size > 1
@@ -7266,7 +7266,7 @@ BUL_foreign_agreements = {
 
 			random_owned_controlled_state = {
 				limit = {
-					ROOT = { has_full_control_of_state = PREV }
+					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = industrial_complex
 						size > 1
@@ -7397,7 +7397,7 @@ BUL_foreign_agreements = {
 
 			random_owned_controlled_state = {
 				limit = {
-					ROOT = { has_full_control_of_state = PREV }
+					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = industrial_complex
 						size > 1
@@ -8019,9 +8019,9 @@ BUL_negotiate_claims_in_the_balkans = {
 				BUL_is_balkan_state = yes
 				NOT = { is_controlled_by = BUL }
 				controller = {
+					has_full_control_of_state = FROM
 					PREV = {
 						NOT = { is_core_of = PREV }
-						is_fully_controlled_by = PREV
 					}
 					is_in_faction_with = ROOT
 				}
@@ -8074,9 +8074,9 @@ BUL_negotiate_claims_in_the_balkans = {
 					is_fully_controlled_by = BUL
 				}
 				controller = {
+					has_full_control_of_state = FROM
 					PREV = {
 						NOT = { is_core_of = PREV }
-						is_fully_controlled_by = PREV
 					}
 					is_in_faction_with = ROOT
 				}

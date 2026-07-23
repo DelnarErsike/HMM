@@ -1628,7 +1628,7 @@ focus_tree = {
 	   		}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_coastal = yes
 					is_fully_controlled_by = ROOT
@@ -1660,7 +1660,7 @@ focus_tree = {
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_coastal = yes
 					is_fully_controlled_by = ROOT
@@ -1843,7 +1843,7 @@ focus_tree = {
 					}
 				}
 				custom_effect_tooltip = AST_seven_million_britishers_reinforcements_tt
-				random_owned_state = {
+				random_owned_controlled_state = {
 					limit = {
 						is_coastal = yes
 						is_fully_controlled_by = ROOT
@@ -2395,7 +2395,7 @@ focus_tree = {
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
 				}
@@ -2408,7 +2408,7 @@ focus_tree = {
 				}
 			}
 
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
 				}
@@ -2712,7 +2712,7 @@ focus_tree = {
 	
 		completion_reward = {
 
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_coastal = yes
 					is_fully_controlled_by = ROOT
@@ -2731,7 +2731,7 @@ focus_tree = {
 
 			}
 
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_coastal = yes
 					is_fully_controlled_by = ROOT
@@ -2750,7 +2750,7 @@ focus_tree = {
 
 			}
 
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_coastal = yes
 					is_fully_controlled_by = ROOT
@@ -2768,7 +2768,7 @@ focus_tree = {
 				}
 			}
 
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_coastal = yes
 					is_fully_controlled_by = ROOT
@@ -2787,7 +2787,7 @@ focus_tree = {
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
 				}
@@ -2803,7 +2803,7 @@ focus_tree = {
 				}
 			}
 
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
 				}
@@ -3449,12 +3449,11 @@ focus_tree = {
 		available_if_capitulated = no
 	
 		completion_reward = {
-			every_state = {
-	 			limit = {
-  					is_core_of = NZL
-  				}
+			NZL = {
+			every_core_state = {
   				add_core_of = AST
   			}
+			}
   			custom_effect_tooltip = generic_skip_one_line_tt
 
 			NZL = { country_event = { id = AST_diplomatic_events.13 days = 1 } }
@@ -4211,7 +4210,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_coastal = yes
 					is_fully_controlled_by = ROOT
@@ -4234,7 +4233,7 @@ focus_tree = {
 				}
 			}
 
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_coastal = yes
 					is_fully_controlled_by = ROOT
@@ -4257,7 +4256,7 @@ focus_tree = {
 				}
 			}
 
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_coastal = yes
 					is_fully_controlled_by = ROOT
@@ -4280,7 +4279,7 @@ focus_tree = {
 				}
 			}
 
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_coastal = yes
 					is_fully_controlled_by = ROOT
@@ -4818,9 +4817,10 @@ focus_tree = {
 
 			custom_trigger_tooltip = {
 				tooltip = vichy_in_africa_trigger
-				any_state = {
-					is_controlled_by = VIC
+				VIC = {
+				any_controlled_state = {
 					is_on_continent = africa
+				}
 				}
 			}
 		}
@@ -5002,16 +5002,14 @@ focus_tree = {
 						}
 					}
 					NOT = {
-			            any_state = {
+						ENG = {
+			            any_owned_state = {
+							OR = {
 			                is_core_of = BRM
-			                is_owned_by = ENG
-			            }
-			        }
-			        NOT = {
-			            any_state = {
 			                is_core_of = MAL
-			                is_owned_by = ENG
+							}
 			            }
+						}
 			        }
 				}
 				AST_hand_in_glove_deny_effect = yes
@@ -5150,12 +5148,13 @@ focus_tree = {
 				limit = {
 					has_country_flag = AST_vichy_africa_claim_flag
 				}
-				every_state = {
+				VIC = {
+				every_controlled_state = {
 					limit = {
-						is_controlled_by = VIC
 						is_on_continent = africa
 					}
 					add_claim_by = AST
+				}
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -5462,11 +5461,10 @@ focus_tree = {
 		available_if_capitulated = no
 	
 		completion_reward = {
-			every_state = {
-				limit = {
-					is_owned_by = INS
-				}
+			INS = {
+			every_owned_state = {
 				add_claim_by = AST
+			}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			create_wargoal = {

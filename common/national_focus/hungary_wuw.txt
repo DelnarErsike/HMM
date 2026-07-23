@@ -1152,9 +1152,8 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
-					is_owned_and_controlled_by = ROOT
 					is_core_of = ROOT
 					free_building_slots = {
 						building = industrial_complex
@@ -1512,9 +1511,9 @@ focus_tree = {
 					}
 				}
 				add_war_support = 0.05
-				every_state = {
+				CZE = {
+				every_core_state = {
 					limit = {
-						is_core_of = CZE
 						NOT = {
 							OR = {
 								is_owned_by = ROOT
@@ -1523,6 +1522,7 @@ focus_tree = {
 						}
 					}
 					add_claim_by = ROOT
+				}
 				}
 			}
 
@@ -1818,9 +1818,8 @@ focus_tree = {
 					add_core_of = ALB
 				}
 
-				every_state = {
+				every_controlled_state = {
 					limit = {
-						is_controlled_by = ROOT
 						NOT = {
 							is_core_of = ROOT
 						}
@@ -1962,9 +1961,8 @@ focus_tree = {
 					limit = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
+							controller = {
 								is_subject_of = ROOT
-								controls_state = PREV
 							}
 						}
 						NOT = {
@@ -2104,9 +2102,8 @@ focus_tree = {
 					limit = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
+							controller = {
 								is_subject_of = ROOT
-								controls_state = PREV
 							}
 						}
 						NOT = {
@@ -2264,9 +2261,8 @@ focus_tree = {
 						limit = {
 							OR = {
 								is_controlled_by = ROOT
-								any_country = {
+								controller = {
 									is_subject_of = ROOT
-									controls_state = PREV
 								}
 							}
 							NOT = {
@@ -2371,9 +2367,8 @@ focus_tree = {
 					}
 				}
 
-				random_owned_state = {
+				random_owned_controlled_state = {
 					limit = {
-						is_controlled_by = ROOT
 						is_core_of = ROOT
 					}
 					create_unit = {
@@ -2652,9 +2647,8 @@ focus_tree = {
 					limit = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
+							controller = {
 								is_subject_of = ROOT
-								controls_state = PREV
 							}
 						}
 						NOT = {
@@ -2802,9 +2796,8 @@ focus_tree = {
 				limit = {
 					OR = {
 						is_controlled_by = ROOT
-						any_country = {
+						controller = {
 							is_subject_of = ROOT
-							controls_state = PREV
 						}
 					}
 					NOT = {
@@ -3028,9 +3021,8 @@ focus_tree = {
 					NOT = {
 						is_owned_by = ROOT
 					}
-					any_country = {
+					owner = {
 						is_subject_of = ROOT
-						owns_state = PREV
 					}
 					OR = {
 						state = 664
@@ -3131,9 +3123,9 @@ focus_tree = {
 						is_subject_of = ROOT
 					}
 				}
-				every_state = {
+				SIL = {
+				every_core_state = {
 					limit = {
-						is_core_of = SIL
 						NOT = {
 							OR = {
 								is_claimed_by = CZE
@@ -3144,10 +3136,11 @@ focus_tree = {
 					}
 					add_core_of = CZE
 				}
+				}
 				ELSE = {
-					every_state = {
+					SIL = {
+					every_core_state = {
 						limit = {
-							is_core_of = SIL
 							NOT = {
 								OR = {
 									is_claimed_by = ROOT
@@ -3157,6 +3150,7 @@ focus_tree = {
 							}
 						}
 						add_claim_by = ROOT
+					}
 					}
 				}
 			}
@@ -3409,24 +3403,24 @@ focus_tree = {
 
 				custom_effect_tooltip = generic_skip_one_line_tt
 
-				every_state = {
+				CRO = {
+				every_core_state = {
 					limit = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
+							controller = {
 								is_subject_of = ROOT
-								controls_state = PREV
 							}
 						}
 						NOT = {
 							is_core_of = ROOT
 						}
-						is_core_of = CRO
 						NOT = {
 							is_owned_and_controlled_by = CRO
 						}
 					}
 					transfer_state_to = CRO
+				}
 				}
 
 				CRO = {
@@ -3487,9 +3481,8 @@ focus_tree = {
 						limit = {
 							OR = {
 								is_controlled_by = ROOT
-								any_country = {
+								controller = {
 									is_subject_of = ROOT
-									controls_state = PREV
 								}
 							}
 							NOT = {
@@ -3708,24 +3701,24 @@ focus_tree = {
 
 					custom_effect_tooltip = generic_skip_one_line_tt
 
-					every_state = {
+					LBV = {
+					every_core_state = {
 						limit = {
 							OR = {
 								is_controlled_by = ROOT
-								any_country = {
+								controller = {
 									is_subject_of = ROOT
-									controls_state = PREV
 								}
 							}
 							NOT = {
 								is_core_of = ROOT
 							}
-							is_core_of = LBV
 							NOT = {
 								is_owned_and_controlled_by = LBV
 							}
 						}
 						transfer_state_to = LBV
+					}
 					}
 
 					LBV = {
@@ -3789,9 +3782,8 @@ focus_tree = {
 							limit = {
 								OR = {
 									is_controlled_by = ROOT
-									any_country = {
+									controller = {
 										is_subject_of = ROOT
-										controls_state = PREV
 									}
 								}
 								NOT = {
@@ -3932,11 +3924,10 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			any_state = {
-				is_core_of = ITA
-				is_controlled_by_ROOT_or_subject = yes
-			}
 			ITA = {
+				any_core_state = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
 				OR = {
 					exists = no
 					has_capitulated = yes
@@ -4012,11 +4003,10 @@ focus_tree = {
 							}
 						}
 
-						random_state = {
+						random_core_state = {
 							limit = {
 								is_fully_controlled_by = PREV
 								is_owned_by = PREV
-								is_core_of = PREV
 							}
 							create_unit = {
 							    division = "name = \"Primo Battaglione delle Guardie Reali'\" division_template = \"Battaglione delle Guardie Reali\" start_experience_factor = 0.4 start_equipment_factor = 0.9"
@@ -4123,11 +4113,10 @@ focus_tree = {
 							}
 						}
 
-						random_state = {
+						random_core_state = {
 							limit = {
 								is_fully_controlled_by = PREV
 								is_owned_by = PREV
-								is_core_of = PREV
 							}
 							create_unit = {
 							    division = "name = \"Primo Battaglione delle Guardie Reali'\" division_template = \"Battaglione delle Guardie Reali\" start_experience_factor = 0.4 start_equipment_factor = 0.9"
@@ -4193,11 +4182,10 @@ focus_tree = {
 							}
 						}
 
-						random_state = {
+						random_core_state = {
 							limit = {
 								is_fully_controlled_by = PREV
 								is_owned_by = PREV
-								is_core_of = PREV
 							}
 							create_unit = {
 							    division = "name = \"Primo Battaglione delle Guardie Papa\" division_template = \"Battaglione delle Guardie Reali\" start_experience_factor = 0.4 start_equipment_factor = 0.9"
@@ -4276,11 +4264,10 @@ focus_tree = {
 							}
 						}
 
-						random_state = {
+						random_core_state = {
 							limit = {
 								is_fully_controlled_by = PREV
 								is_owned_by = PREV
-								is_core_of = PREV
 							}
 							create_unit = {
 							    division = "name = \"Primo Battaglione delle Guardie Reali'\" division_template = \"Battaglione delle Guardie Reali\" start_experience_factor = 0.4 start_equipment_factor = 0.9"
@@ -5965,11 +5952,10 @@ focus_tree = {
 					}
 				}
 
-				random_state = {
+				random_core_state = {
 					limit = {
 						is_fully_controlled_by = ROOT
 						is_owned_by = ROOT
-						is_core_of = ROOT
 					}
 					create_unit = {
 					    division = "name = \"Erste Volksbundmiliz\" division_template = \"Volksbundmiliz\" start_experience_factor = 0.4 start_equipment_factor = 0.6"
@@ -6098,7 +6084,7 @@ focus_tree = {
 				}
 			}
 			random_owned_controlled_state = {
-				limit = { ROOT = { has_full_control_of_state = PREV } }
+				limit = { is_fully_controlled_by = ROOT }
 				prioritize = { 43 }
 				create_unit = {
 					division = "name = \"1 Magyar Királyi Huszárok\" division_template = \"Magyar Királyi Huszárok\" start_experience_factor = 1.0"
@@ -6591,10 +6577,7 @@ focus_tree = {
 				}
 			}
 
-			random_state = {
-				limit = {
-					state = 975
-				}
+			975 = {
 				create_unit = {
 				    division = "name = \"Rongyos Gárda 'Lajtabánság'\" division_template = \"Rongyos Gárda\" start_experience_factor = 0.4 start_equipment_factor = 0.6"
 				    owner = ROOT
@@ -6987,11 +6970,8 @@ focus_tree = {
 							is_claimed_by = ROOT
 							is_core_of = ROOT
 							is_owned_by = ROOT
-							any_other_country = {
-								AND = {
+							owner = {
 									is_subject_of = ROOT
-									owns_state = PREV
-								}
 							}
 						}
 					}
@@ -7930,9 +7910,8 @@ focus_tree = {
 					}
 				}
 
-				random_owned_state = {
+				random_owned_controlled_state = {
 					limit = {
-						is_controlled_by = ROOT
 						is_core_of = ROOT
 					}
 					create_unit = {
@@ -10399,14 +10378,13 @@ focus_tree = {
 						is_ai = yes
 					}
 				}
-				every_country = {
-					limit = {
-						has_subject = SLO
-					}
+				SLO = {
+					overlord = {
 					country_event = {
 						id = WW_hungary.96
 						days = 2
 						random_days = 3
+					}
 					}
 				}
 			}
@@ -10890,9 +10868,8 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
-					is_owned_and_controlled_by = ROOT
 					is_core_of = ROOT
 					free_building_slots = {
 						building = arms_factory
@@ -10908,9 +10885,8 @@ focus_tree = {
 				}
 			}
 
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
-					is_owned_and_controlled_by = ROOT
 					is_core_of = ROOT
 					free_building_slots = {
 						building = industrial_complex
@@ -11606,17 +11582,13 @@ focus_tree = {
 				        		        militia = { x = 1 y = 3 }
 				        		    }
 				        		}
-				        		random_state = {
-				        			limit = {
-				        				OR = {
-				        					state = 43
-				        					state = 154
-				        				}
-				        			}
+				        		43 = {
 				        			create_unit = {
 				        			    division = "name = \"Erste Volksbundmiliz\" division_template = \"Volksbund Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.7"
 				        			    owner = PREV
 				        			}
+				        		}
+								154 = {
 				        			create_unit = {
 				        			    division = "name = \"Zweite Volksbundmiliz\" division_template = \"Volksbund Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.7"
 				        			    owner = PREV
@@ -11659,10 +11631,7 @@ focus_tree = {
 				        		    	artillery = { x = 0 y = 1 }
 				        		    }
 				        		}
-				        		random_state = {
-				        			limit = {
-				        				state = 43
-				        			}
+				        		43 = {
 				        			create_unit = {
 				        			    division = "name = \"Horthysta Gyalogdándar\" division_template = \"Horthysta Gyalogdándar\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
 				        			    owner = PREV
@@ -11695,10 +11664,7 @@ focus_tree = {
 				        	        militia = { x = 1 y = 3 }
 				        	    }
 				        	}
-				        	random_state = {
-				        		limit = {
-				        			state = 43
-				        		}
+				        	43 = {
 				        		create_unit = {
 				        		    division = "name = \"Fasiszta Milícia\" division_template = \"Fasiszta Milícia\" start_experience_factor = 0.5 start_equipment_factor = 0.5"
 				        		    owner = PREV
@@ -11727,10 +11693,7 @@ focus_tree = {
 				        	        militia = { x = 1 y = 3 }
 				        	    }
 				        	}
-				        	random_state = {
-				        		limit = {
-				        			state = 43
-				        		}
+				        	43 = {
 				        		create_unit = {
 				        		    division = "name = \"Monarchista Milícia\" division_template = \"Monarchista Milícia\" start_experience_factor = 0.5 start_equipment_factor = 0.5"
 				        		    owner = PREV
@@ -11871,10 +11834,7 @@ focus_tree = {
 					    support = {
 					    }
 					}
-					random_state = {
-						limit = {
-							state = 973
-						}
+					973 = {
 						create_unit = {
 						    division = "name = \"Kommunista Milícia\" division_template = \"Kommunista Milícia\" start_experience_factor = 0.5 start_equipment_factor = 0.6"
 						    owner = PREV
@@ -11902,10 +11862,7 @@ focus_tree = {
 					    support = {
 					    }
 					}
-					random_state = {
-						limit = {
-							state = 155
-						}
+					155 = {
 						create_unit = {
 						    division = "name = \"Szocialista Milícia\" division_template = \"Szocialista Milícia\" start_experience_factor = 0.5 start_equipment_factor = 0.6"
 						    owner = PREV
@@ -12694,14 +12651,13 @@ focus_tree = {
 
 		completion_reward = {
 
-			every_country = {
-				limit = {
-					owns_state = 76
-				}
+			76 = {
+				owner = {
 				country_event = {
 					id = WW_hungary.99
 					days = 1
 					random_days = 2
+				}
 				}
 			}
 
@@ -12842,9 +12798,8 @@ focus_tree = {
 					}
 				}
 
-				random_owned_state = {
+				random_owned_controlled_state = {
 					limit = {
-						is_controlled_by = ROOT
 						is_core_of = ROOT
 					}
 					create_unit = {
@@ -13890,9 +13845,8 @@ focus_tree = {
 					}
 				}
 
-				random_owned_state = {
+				random_owned_controlled_state = {
 					limit = {
-						is_controlled_by = ROOT
 						is_core_of = ROOT
 					}
 					create_unit = {
@@ -17738,9 +17692,8 @@ focus_tree = {
 						}
 					}
 
-					random_owned_state = {
+					random_owned_controlled_state = {
 						limit = {
-							is_controlled_by = ROOT
 							is_core_of = ROOT
 						}
 						create_unit = {
@@ -17797,11 +17750,10 @@ focus_tree = {
 						}
 					}
 
-					random_state = {
+					random_core_state = {
 						limit = {
 							is_fully_controlled_by = ROOT
 							is_owned_by = ROOT
-							is_core_of = ROOT
 						}
 						create_unit = {
 						    division = "name = \"Első Gyorshadtest\" division_template = \"Gyorshadtest\" start_experience_factor = 0.8 start_equipment_factor = 1"
@@ -17866,7 +17818,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
 					is_core_of = ROOT
@@ -18186,7 +18138,7 @@ focus_tree = {
 				}
 				random_owned_controlled_state = {
 					prioritize = { 43 }
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = { is_fully_controlled_by = ROOT }
 					create_unit = {
 						division = "name = \"1. Light Division\" division_template = \"Light Division\" start_experience_factor = 1.0"
 						owner = HUN
@@ -18276,11 +18228,10 @@ focus_tree = {
 					}
 				}
 
-				random_state = {
+				random_core_state = {
 					limit = {
 						is_fully_controlled_by = ROOT
 						is_owned_by = ROOT
-						is_core_of = ROOT
 					}
 					create_unit = {
 					    division = "name = \"Szent László Hadosztály\" division_template = \"Szent László Hadosztály\" start_experience_factor = 0.6 start_equipment_factor = 1"

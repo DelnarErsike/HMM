@@ -743,7 +743,7 @@
 				specialization = specialization_air
 				value = 0.25
 			}
-			random_state = {				
+			random_owned_controlled_state = {				
 				limit = {
 					has_state_flag = AST_expand_the_raaf_AB
 				}
@@ -881,7 +881,7 @@
 
 		complete_tooltip = {
 			air_experience = 25
-			random_state = {				
+			random_owned_controlled_state = {				
 				limit = {
 					has_state_flag = AST_expand_northern_presence_AB
 				}
@@ -1032,7 +1032,7 @@
 				uses = 1
 				category = radar_tech
 			}
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = AST_volunteer_air_observers_corps_radar1
 				}
@@ -1042,7 +1042,7 @@
 					instant_build = yes
 				}
 			}
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = AST_volunteer_air_observers_corps_radar2
 				}
@@ -1052,7 +1052,7 @@
 					instant_build = yes
 				}
 			}
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = AST_volunteer_air_observers_corps_radar3
 				}
@@ -1284,7 +1284,7 @@
 
 		complete_tooltip = {
 			air_experience = 25
-			random_state = {				
+			random_owned_controlled_state = {				
 				limit = {
 					has_state_flag = AST_death_from_down_under_AB
 				}
@@ -1294,7 +1294,7 @@
 					instant_build = yes
 				}
 			}
-			random_state = {				
+			random_owned_controlled_state = {				
 				limit = {
 					has_state_flag = AST_death_from_down_under_AA1
 				}
@@ -1304,7 +1304,7 @@
 					instant_build = yes
 				}
 			}
-			random_state = {				
+			random_owned_controlled_state = {				
 				limit = {
 					has_state_flag = AST_death_from_down_under_AA2
 				}
@@ -1314,7 +1314,7 @@
 					instant_build = yes
 				}
 			}
-			random_state = {				
+			random_owned_controlled_state = {				
 				limit = {
 					has_state_flag = AST_death_from_down_under_AA3
 				}
@@ -1471,7 +1471,7 @@
 
 		complete_tooltip = {
 			air_experience = 25
-			random_state = {				
+			random_owned_controlled_state = {				
 				limit = {
 					has_state_flag = AST_dominate_the_skies_AB
 				}
@@ -1549,7 +1549,7 @@
 
 		complete_tooltip = {
 			navy_experience = 25
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = AST_cockatoo_island_shipyards_DY
 				}
@@ -1620,7 +1620,7 @@
 
 		complete_tooltip = {
 			navy_experience = 25
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = AST_kangaroo_point_shipyards_DY
 				}
@@ -2110,7 +2110,7 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		complete_tooltip = {
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = AST_south_australian_housing_trust_IC
 				}
@@ -2173,7 +2173,7 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		complete_tooltip = {
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = AST_department_of_supply_and_development_AF
 				}
@@ -2236,7 +2236,7 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		complete_tooltip = {
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = AST_expand_lithgow_small_arms_factory_AF
 				}
@@ -2300,7 +2300,7 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		complete_tooltip = {
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = AST_allied_works_council_IC1
 				}
@@ -2311,7 +2311,7 @@
 					instant_build = yes
 				}
 			}
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = AST_allied_works_council_IC2
 				}
@@ -2752,12 +2752,12 @@
 				}
 			}
 			#Requires UK at war in Africa
-			any_country = {
-				has_war_with = ENG
-				any_state = {
-					is_controlled_by = PREV
+			ENG = {
+			any_enemy_country = {
+				any_controlled_state = {
 					is_on_continent = africa
 				}
+			}
 			}
 		}
 		
@@ -3027,14 +3027,14 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		complete_tooltip = {
-			random_state = {
+			random_owned_controlled_state = {
 				limit = { has_state_flag = AST_rationing_and_recycling_alu }
 				add_resource = {
 					type = aluminium
 					amount = 24
 				}
 			}
-			random_state = {
+			random_owned_controlled_state = {
 				limit = { has_state_flag = AST_rationing_and_recycling_oil }
 				add_resource = {
 					type = oil
@@ -4729,12 +4729,12 @@
 				add_timed_idea = { days = 730 idea = AST_indonesian_nationalists } 
 			}
 			hidden_effect = {
-				INS = { country_event = { id = tfv_australia.95 } }
-				every_country = {
-					limit = {
-						has_subject = INS
+				INS = {
+					country_event = { id = tfv_australia.95 }
+					if = {
+						limit = { is_subject = yes }
+						overlord = { country_event = { id = tfv_australia.95 } } 
 					}
-					country_event = { id = tfv_australia.95 } 
 				}
 			}
 		}

@@ -657,10 +657,8 @@ country_event = {
 	
 	option = { #cool
 		name = DOD_romania.61.a
-		every_country = {
-			limit = {
-				is_subject_of = YUG
-			}
+		YUG = {
+		every_subject_country = {
 			every_owned_state = {
 				limit = {
 					OR = {
@@ -707,7 +705,6 @@ country_event = {
 				HUN = { transfer_state = PREV }
 			}
 		}
-		YUG = {
 			every_owned_state = {
 				limit = {
 					OR = {
@@ -3959,17 +3956,18 @@ country_event = {
 		}
 		hidden_effect = {
 			#ensure Germany doesn't get randomly encircled
-			every_state = {
+			FROM = {
+			every_controlled_state = {
 				limit = {
-					controller = { tag = FROM }
 					owner = {
 						has_war_with = event_target:romania_former_ally_target
 						NOT = { has_war_with = event_target:romania_new_ally_target }
 					}
 				}
 				event_target:romania_former_ally_target = {
-					set_state_controller = PREV
+					set_state_controller = ROOT
 				}
+			}
 			}
 			FROM = {
 				# move our armies to back home
@@ -3979,10 +3977,9 @@ country_event = {
 			}
 		}
 		white_peace = FROM
-		every_country = {
+		every_enemy_country = {
 			limit = {
 				is_subject_of = FROM
-				has_war_with = ROOT
 			}
 			white_peace = ROOT
 		}
@@ -4075,14 +4072,13 @@ country_event = {
 						}
 					}
 					white_peace = FROM
-					every_country = {
+				}
+				every_subject_country = {
 						limit = {
-							is_subject_of = FROM
 							has_war_with = ROOT
 						}
 						white_peace = ROOT
 					}
-				}
 			}
 		}
 	}

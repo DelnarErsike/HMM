@@ -9887,12 +9887,11 @@ political_actions = {
 			custom_effect_tooltip = ENG_create_pan_north_american_state_tt
 			event_target:MTG_loyalist_canada = {
 				hidden_effect = {
-					every_state = {
-						limit = {
-							is_core_of = USA
-						}
+					USA = {
+					every_core_state = {
 						event_target:MTG_loyalist_canada = { transfer_state = PREV }
-						add_core_of = PREV
+						add_core_of = event_target:MTG_loyalist_canada
+					}
 					}
 				}
 				if = {
@@ -9966,13 +9965,10 @@ operations = {
                         target = ICE
                         transfer_troops = no
                     }
-                }
-                every_state = {
-                    limit = {
-                        is_core_of = ICE
-                        is_controlled_by = ENG
-                    }
-                    add_compliance = 100
+					every_controlled_state = {
+						limit = { is_core_of = ICE }
+						add_compliance = 100
+					}
                 }
 		}
 	}

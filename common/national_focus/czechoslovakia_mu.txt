@@ -3484,11 +3484,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			every_other_country = {
-				limit = {
-					owns_state = 102
-				}
+			102 = {
+				owner = {
 				country_event = MUN_czech.1005
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -6913,10 +6912,7 @@ focus_tree = {
 
 			unlock_decision_category_tooltip = CZE_central_european_federation
 
-			every_other_country = {
-				limit = {
-					is_subject_of = ROOT
-				}
+			every_subject_country = {
 				
 				add_autonomy_score = {
     				value = -50
@@ -7022,11 +7018,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			every_other_country = {
-				limit = {
-					is_subject_of = ROOT
-					
-				}
+			every_subject_country = {
 				add_autonomy_score = {
     				value = -25
     				localization = CZE_bend_the_bars
@@ -9828,7 +9820,7 @@ focus_tree = {
 			hidden_effect = {
 				#marijn211: if these random_character blocks ever have a bug, they could perhaps be switched to unit_leader scopes, I hadn't been aware those automatically exclude hidden commanders, but I don't want to risk breaking anything by replacing now
 				#WARNING: running a random_list on each commander isn't a good idea because very unlucky players can end up without any commanders
-				random_character = {
+				random_army_leader = {
 					limit = {
 						is_field_marshal = yes
 						NOT = {
@@ -9838,7 +9830,7 @@ focus_tree = {
 					}
 					retire = yes
 				}
-				random_character = {
+				random_unit_leader = {
 					limit = {
 						is_corps_commander = yes
 						NOT = {
@@ -10513,20 +10505,21 @@ focus_tree = {
 							owns_state = 834
 						}
 					}
-					every_state = {
+					ROM = {
+					every_owned_state = {
 						limit = {
 							OR = {
 								state = 78
 								state = 80
 								state = 766
 							}
-							is_owned_by = ROM
 							NOT = {
 								is_claimed_by = SOV
 								is_owned_by = SOV
 							}
 						}
 						transfer_state_to = SOV
+					}
 					}
 				}
 			}
@@ -10544,20 +10537,21 @@ focus_tree = {
 							owns_state = 834
 						}
 					}
-					every_state = {
+					ROM = {
+					every_owned_state = {
 						limit = {
 							OR = {
 								state = 78
 								state = 80
 								state = 766
 							}
-							is_owned_by = ROM
 							NOT = {
 								is_claimed_by = SOV
 								is_owned_by = SOV
 							}
 						}
 						add_claim_by = SOV
+					}
 					}
 				}
 			}
@@ -15788,7 +15782,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			effect_tooltip = {
-				every_state = {
+				every_owned_state = {
 					limit = {
 						is_owned_and_controlled_by = ROOT
 						free_building_slots = {
@@ -15807,7 +15801,7 @@ focus_tree = {
 				}	
 			}
 			hidden_effect = {
-				every_state = {
+				every_owned_state = {
 					limit = {
 						is_owned_and_controlled_by = ROOT
 						free_building_slots = {
@@ -15823,7 +15817,7 @@ focus_tree = {
 					}
 					add_extra_state_shared_building_slots = 1
 				}
-				every_state = {
+				every_owned_state = {
 					limit = {
 						is_owned_and_controlled_by = ROOT
 						free_building_slots = {
@@ -16778,9 +16772,8 @@ focus_tree = {
 
 			}
 			effect_tooltip = { #We do a little tooltip lying, it's true in a majority of contexts
-				every_state = {
+				every_controlled_state = {
 					limit = {
-						is_controlled_by = ROOT
 						OR = {
 							has_state_flag = CZE_had_a_mil_moved
 							AND = {
@@ -16854,9 +16847,8 @@ focus_tree = {
 							}
 						}
 					}
-					every_state = {
+					every_controlled_state = {
 						limit = {
-							is_controlled_by = ROOT
 							OR = {
 								state = 9
 								state = 75
@@ -16888,9 +16880,8 @@ focus_tree = {
 							}
 						}
 					}
-					every_state = {
+					every_controlled_state = {
 						limit = {
-							is_controlled_by = ROOT
 							OR = {
 								state = 9
 								state = 75
@@ -16922,9 +16913,8 @@ focus_tree = {
 							}
 						}
 					}
-					every_state = {
+					every_controlled_state = {
 						limit = {
-							is_controlled_by = ROOT
 							OR = {
 								state = 9
 								state = 75
@@ -16949,9 +16939,8 @@ focus_tree = {
 							}
 						}
 					}
-					every_state = {
+					every_controlled_state = {
 						limit = {
-							is_controlled_by = ROOT
 							state = 9
 						}
 						add_building_construction = {
@@ -16973,9 +16962,8 @@ focus_tree = {
 							}
 						}
 					}
-					every_state = {
+					every_controlled_state = {
 						limit = {
-							is_controlled_by = ROOT
 							state = 9
 						}
 						add_building_construction = {
@@ -16997,9 +16985,8 @@ focus_tree = {
 							}
 						}
 					}
-					every_state = {
+					every_controlled_state = {
 						limit = {
-							is_controlled_by = ROOT
 							state = 9
 						}
 						add_building_construction = {
@@ -20337,7 +20324,7 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
-			every_state = {
+			every_owned_state = {
 				limit = {
 					is_owned_and_controlled_by = ROOT
 					OR = {
@@ -22611,9 +22598,9 @@ focus_tree = {
 							}
 						}
 					}
-					every_state = {
+					GER = {
+					every_controlled_state = {
 						limit = {
-							is_controlled_by = GER
 							OR = {
 								state = 4
 								state = 53
@@ -22631,6 +22618,7 @@ focus_tree = {
 							modifier = CZE_enemy_intelligence_collaborators
 							days = 1095
 						}
+					}
 					}
 				}
 			}
@@ -22650,9 +22638,9 @@ focus_tree = {
 							}
 						}
 					}
-					every_state = {
+					GER = {
+					every_controlled_state = {
 						limit = {
-							is_controlled_by = GER
 							OR = {
 								state = 4
 								state = 53
@@ -22670,6 +22658,7 @@ focus_tree = {
 							modifier = CZE_enemy_intelligence_collaborators_no_lar
 							days = 1095
 						}
+					}
 					}
 				}
 			}
@@ -22860,9 +22849,8 @@ focus_tree = {
 	
 		available = {
 			CZE_has_a_skoda_naval_focus_focus = yes
-			any_state = {
+			any_controlled_state = {
 				is_coastal = yes
-				is_controlled_by = ROOT
 			}
 		}
 	
@@ -22932,9 +22920,8 @@ focus_tree = {
 	
 		available = {
 			#CZE_has_a_skoda_naval_focus_focus = yes
-			any_state = {
+			any_controlled_state = {
 				is_coastal = yes
-				is_controlled_by = ROOT
 			}
 		}
 	
@@ -23003,9 +22990,8 @@ focus_tree = {
 	
 		available = {
 			CZE_has_a_skoda_naval_focus_focus = yes
-			any_state = {
+			any_controlled_state = {
 				is_coastal = yes
-				is_controlled_by = ROOT
 			}
 		}
 	
@@ -23052,9 +23038,8 @@ focus_tree = {
 	
 		available = {
 			CZE_has_a_skoda_naval_focus_focus = yes
-			any_state = {
+			any_controlled_state = {
 				is_coastal = yes
-				is_controlled_by = ROOT
 			}
 		}
 	
@@ -23103,9 +23088,8 @@ focus_tree = {
 		}
 	
 		available = {
-			any_state = {
+			any_controlled_state = {
 				is_coastal = yes
-				is_controlled_by = ROOT
 			}
 		}
 			
@@ -23176,9 +23160,8 @@ focus_tree = {
 	
 		available = {
 			CZE_has_a_skoda_naval_focus_focus = yes
-			any_state = {
+			any_controlled_state = {
 				is_coastal = yes
-				is_controlled_by = ROOT
 			}
 		}
 	
@@ -23297,9 +23280,8 @@ focus_tree = {
 	
 		available = {
 			CZE_has_a_skoda_naval_focus_focus = yes
-			any_state = {
+			any_controlled_state = {
 				is_coastal = yes
-				is_controlled_by = ROOT
 			}
 		}
 	
@@ -23447,9 +23429,8 @@ focus_tree = {
 	
 		available = {
 			CZE_has_a_skoda_naval_focus_focus = yes
-			any_state = {
+			any_controlled_state = {
 				is_coastal = yes
-				is_controlled_by = ROOT
 			}
 		}
 	
@@ -23501,9 +23482,8 @@ focus_tree = {
 	
 		available = {
 			CZE_has_a_skoda_naval_focus_focus = yes
-			any_state = {
+			any_controlled_state = {
 				is_coastal = yes
-				is_controlled_by = ROOT
 			}
 		}
 	

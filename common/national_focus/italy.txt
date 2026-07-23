@@ -11010,9 +11010,8 @@ focus_tree = {
 
 		completion_reward = {
 			hidden_effect = {
-				every_other_country = {
+				every_neighbor_country = {
 					limit = {
-						is_neighbor_of = ROOT
 						NOT = { is_in_faction_with = ROOT }
 						NOT = { is_guaranteed_by = ROOT }
 						NOT = { has_non_aggression_pact_with = ROOT }
@@ -11027,9 +11026,8 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = ITA_spreading_the_eagles_wings_tt
-			every_other_country = {
+			every_neighbor_country = {
 				limit = {
-					is_neighbor_of = ROOT
 					NOT = { is_in_faction_with = ROOT }
 					NOT = { is_guaranteed_by = ROOT }
 					NOT = { has_non_aggression_pact_with = ROOT }	
@@ -11069,10 +11067,7 @@ focus_tree = {
 				limit = {
 						num_subjects > 0
 				}
-				every_other_country = {
-					limit = {
-						is_subject_of = ROOT
-					}
+				every_subject_country = {
 					add_ideas = ITA_italian_hegemony_subjects
 					add_to_tech_sharing_group = ITA_italian_hegemony_program
 				}
@@ -15134,7 +15129,7 @@ focus_tree = {
 				}
 			}
 
-			every_state = {
+			every_controlled_state = {
 				limit = {
 					OR = {
 						is_core_of = ALB
@@ -15639,15 +15634,16 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = ITA_the_eastern_threat_claims_tt
-			every_state = {
+			SOV = {
+			every_owned_state = {
 				limit = {
 					BUL_state_is_in_the_black_sea = yes
-					is_owned_by = SOV
 				}
 				hidden_effect ={
 					ROOT = { add_state_claim = PREV }
 				}
 				custom_effect_tooltip = generic_ROOT_gains_claim_tt
+			}
 			}
 			add_timed_idea = {
 				idea = ITA_the_eastern_threat_ns
@@ -16180,9 +16176,9 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = ITA_war_with_france_claims_tt
-			every_state = {
+			FRA = {
+			every_owned_state = {
 				limit = {
-					is_owned_by = FRA
 					OR = {
 						region = 182 #WESTERN MAGHREB
 						region = 126 #EASTERN MAGHREB
@@ -16205,6 +16201,7 @@ focus_tree = {
 					ROOT = { add_state_claim = PREV }
 				}
 				custom_effect_tooltip = generic_ROOT_gains_claim_tt
+			}
 			}
 
 			create_wargoal = {
@@ -16285,9 +16282,9 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = ITA_war_with_the_uk_claims_tt
-			every_state = {
+			ENG = {
+			every_owned_state = {
 				limit = {
-					is_owned_by = ENG
 					OR = {
 						region = 182 #WESTERN MAGHREB
 						region = 126 #EASTERN MAGHREB
@@ -16311,6 +16308,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = generic_ROOT_gains_claim_tt
 			}
+			}
 
 			create_wargoal = {
 				type = take_state_focus
@@ -16333,8 +16331,8 @@ focus_tree = {
 		select_effect = {
 			every_country = {
 				limit = {
-					NOT = { is_in_faction_with = ROOT }
 					original_tag = GRE
+					NOT = { is_in_faction_with = ROOT }
 				}
 				ROOT = {
 					add_ai_strategy = {
@@ -16974,9 +16972,8 @@ focus_tree = {
 				delete_unit_template_and_units = { division_template = "Camicie Nere" }
 
 				#Resistance in all cores
-				every_state = {
+				every_core_state = {
 					limit = {
-						is_core_of = ROOT
 						controller = {
 							has_war_with = ROOT
 							original_tag = ITA
@@ -17894,7 +17891,7 @@ focus_tree = {
 						is_fully_controlled_by = ROOT
 					}
 				}
-				random_owned_state = {
+				random_owned_controlled_state = {
 					limit = {
 						is_core_of = ROOT
 						is_fully_controlled_by = ROOT
@@ -19648,9 +19645,8 @@ focus_tree = {
 							skill > 3
 						}
 					}
-					random_character = {
+					random_army_leader = {
 						limit = {
-							is_army_leader = yes
 							NOT = { has_trait = war_hero }
 							is_leading_army = yes
 							skill > 3
@@ -19659,9 +19655,8 @@ focus_tree = {
 					}
 				}
 				else = {
-					random_character = {
+					random_army_leader = {
 						limit = {
-							is_army_leader = yes
 							NOT = { has_trait = war_hero }
 						}
 						add_unit_leader_trait = war_hero
@@ -19677,9 +19672,8 @@ focus_tree = {
 							skill > 3
 						}
 					}
-					random_character = {
+					random_army_leader = {
 						limit = {
-							is_army_leader = yes
 							NOT = { has_trait = war_hero }
 							is_leading_army = yes
 							skill > 3
@@ -19688,9 +19682,8 @@ focus_tree = {
 					}
 				}
 				else = {
-					random_character = {
+					random_army_leader = {
 						limit = {
-							is_army_leader = yes
 							NOT = { has_trait = war_hero }
 						}
 						add_unit_leader_trait = war_hero
@@ -19706,9 +19699,8 @@ focus_tree = {
 							skill > 3
 						}
 					}
-					random_character = {
+					random_army_leader = {
 						limit = {
-							is_army_leader = yes
 							NOT = { has_trait = war_hero }
 							is_leading_army = yes
 							skill > 3
@@ -19717,9 +19709,8 @@ focus_tree = {
 					}
 				}
 				else = {
-					random_character = {
+					random_army_leader = {
 						limit = {
-							is_army_leader = yes
 							NOT = { has_trait = war_hero }
 						}
 						add_unit_leader_trait = war_hero

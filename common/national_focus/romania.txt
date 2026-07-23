@@ -499,7 +499,7 @@ focus_tree = {
 			random_owned_controlled_state = {
 				prioritize = { 46 }
 				limit = {
-					ROOT = { has_full_control_of_state = PREV }
+					is_fully_controlled_by = ROOT
 				}
 				add_resource = {
 					type = oil
@@ -509,7 +509,7 @@ focus_tree = {
 			GER = {
 				random_owned_controlled_state = {
 					limit = {
-						GER = { has_full_control_of_state = PREV }
+						is_fully_controlled_by = GER
 					}
 					add_resource = {
 						type = oil
@@ -960,7 +960,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = ROM_national_defense_industry_AF1
 				}
@@ -971,7 +971,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = ROM_national_defense_industry_AF2
 				}
@@ -1081,7 +1081,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = ROM_danubian_transport_network_Inf
 				}
@@ -1091,7 +1091,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = ROM_danubian_transport_network_Inf_2
 				}
@@ -1101,7 +1101,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = ROM_danubian_transport_network_Inf_3
 				}
@@ -1190,7 +1190,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = ROM_malaxa_IC
 				}
@@ -1207,7 +1207,7 @@ focus_tree = {
 			random_owned_controlled_state = {
 				prioritize = { 79 }
 				limit = {
-					ROOT = { has_full_control_of_state = PREV } 
+					is_fully_controlled_by = ROOT 
 					free_building_slots = {
 						building = industrial_complex
 						size > 2
@@ -1285,7 +1285,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = ROM_hunedoara_steel_works_IC
 				}
@@ -1306,7 +1306,7 @@ focus_tree = {
 			random_owned_controlled_state = {
 				prioritize = { 84 }
 				limit = {
-					ROOT = { has_full_control_of_state = PREV } 
+					is_fully_controlled_by = ROOT 
 					free_building_slots = {
 						building = industrial_complex
 						size > 1
@@ -1355,7 +1355,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = ROM_invest_in_the_iar_AF1
 				}
@@ -1372,7 +1372,7 @@ focus_tree = {
 			random_owned_controlled_state = {
 				prioritize = { 81 }
 				limit = {
-					ROOT = { has_full_control_of_state = PREV }
+					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = arms_factory
 						size > 2
@@ -3213,7 +3213,7 @@ focus_tree = {
 
 		complete_tooltip = {
 			air_experience = 25
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = ROM_expand_the_air_force_AB
 				}
@@ -3223,7 +3223,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = ROM_expand_the_air_force_AB_2
 				}
@@ -3240,7 +3240,7 @@ focus_tree = {
 			random_owned_controlled_state = {
 				prioritize = { 46 79 }
 				limit = {
-					ROOT = { has_full_control_of_state = PREV }
+					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = air_base
 						size > 2
@@ -3256,7 +3256,7 @@ focus_tree = {
 			random_owned_controlled_state = {
 				prioritize = { 46 79 }
 				limit = {
-					ROOT = { has_full_control_of_state = PREV }
+					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = air_base
 						size > 2
@@ -4025,7 +4025,7 @@ focus_tree = {
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = { is_fully_controlled_by = ROOT }
 					prioritize = { 46 }
 					create_unit = {
 						division = "name = \"Vanatori de munte\" division_template = \"Vanatori de munte\" start_experience_factor = 1.0" 
@@ -4228,7 +4228,7 @@ focus_tree = {
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = { is_fully_controlled_by = ROOT }
 					prioritize = { 46 }
 					create_unit = {
 						division = "name = \"Royal Guards Division\" division_template = \"Royal Guards Division\" start_experience_factor = 1.0" 
@@ -4427,7 +4427,7 @@ focus_tree = {
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = { is_fully_controlled_by = ROOT }
 					prioritize = { 46 }
 					create_unit = {
 						division = "name = \"Armored Division\" division_template = \"Armored Division\" start_experience_factor = 0.7" 
@@ -4587,7 +4587,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
 			navy_experience = 25
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = ROM_expand_the_galati_shipyards_AB
 				}
@@ -4604,7 +4604,7 @@ focus_tree = {
 			random_owned_controlled_state = {
 				prioritize = { 971 }
 				limit = {
-					ROOT = { has_full_control_of_state = PREV }
+					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = dockyard
 						size > 1

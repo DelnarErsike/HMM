@@ -131,8 +131,8 @@
 
 				if = {
 					limit = { BRA = { has_civil_war = yes } }
-					every_country = {
-						limit = { original_tag = BRA }
+					every_country_with_original_tag = {
+						original_tag_to_check = BRA
 
 						ROOT = {
 							create_wargoal = {
@@ -153,8 +153,8 @@
 
 				if = {
 					limit = { ARG = { has_civil_war = yes } }
-					every_country = {
-						limit = { original_tag = ARG }
+					every_country_with_original_tag = {
+						original_tag_to_check = ARG
 
 						ROOT = {
 							create_wargoal = {
@@ -181,8 +181,8 @@
 
 				if = {
 					limit = { BRA = { has_civil_war = yes } }
-					every_country = {
-						limit = { original_tag = BRA }
+					every_country_with_original_tag = {
+						original_tag_to_check = BRA
 
 						ROOT = {
 							create_wargoal = {
@@ -203,8 +203,8 @@
 
 				if = {
 					limit = { ARG = { has_civil_war = yes } }
-					every_country = {
-						limit = { original_tag = ARG }
+					every_country_with_original_tag = {
+						original_tag_to_check = ARG
 
 						ROOT = {
 							create_wargoal = {

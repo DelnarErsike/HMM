@@ -1055,8 +1055,8 @@ RAJ_akhand_bharat_cat = {
 		}
 
 		complete_effect = {
-			every_state = {
-				limit = { is_core_of = AFG }
+			AFG = {
+			every_core_state = {
 				ROOT = { 
 					add_to_array = {
 						array = claimed_by_akhand_bharat
@@ -1064,6 +1064,7 @@ RAJ_akhand_bharat_cat = {
 					} 
 				}
 				add_core_of = ROOT
+			}
 			}
  			
 			for_each_scope_loop = { #transfer state if already subject since its not a core
@@ -1117,8 +1118,8 @@ RAJ_akhand_bharat_cat = {
 		}
 
 		complete_effect = {
-			every_state = {
-				limit = { is_core_of = BAN }
+			BAN = {
+			every_core_state = {
 				ROOT = { 
 					add_to_array = {
 						array = claimed_by_akhand_bharat
@@ -1126,6 +1127,7 @@ RAJ_akhand_bharat_cat = {
 					} 
 				}
 				add_core_of = ROOT
+			}
 			}
  			
 			for_each_scope_loop = { #transfer state if already subject since its not a core
@@ -1184,8 +1186,8 @@ RAJ_akhand_bharat_cat = {
 		}
 
 		complete_effect = {
-			every_state = {
-				limit = { is_core_of = NEP }
+			NEP = {
+			every_core_state = {
 				ROOT = { 
 					add_to_array = {
 						array = claimed_by_akhand_bharat
@@ -1193,6 +1195,7 @@ RAJ_akhand_bharat_cat = {
 					} 
 				}
 				add_core_of = ROOT
+			}
 			}
  			
 			for_each_scope_loop = { #transfer state if already subject since its not a core
@@ -1254,10 +1257,8 @@ RAJ_akhand_bharat_cat = {
 		}
 
 		complete_effect = {
-			every_state = {
-				limit = { 
-					is_core_of = TIB 
-				}
+			TIB = {
+			every_core_state = {
 				ROOT = { 
 					add_to_array = {
 						array = claimed_by_akhand_bharat
@@ -1265,6 +1266,7 @@ RAJ_akhand_bharat_cat = {
 					} 
 				}
 				add_core_of = ROOT
+			}
 			}
  			
 			for_each_scope_loop = { #transfer state if already subject since its not a core
@@ -1322,8 +1324,8 @@ RAJ_akhand_bharat_cat = {
 			}
 		}
 		complete_effect = {
-			every_state = {
-				limit = { is_core_of = SRL }
+			SRL = {
+			every_core_state = {
 				ROOT = { 
 					add_to_array = {
 						array = claimed_by_akhand_bharat
@@ -1331,6 +1333,7 @@ RAJ_akhand_bharat_cat = {
 					} 
 				}
 				add_core_of = ROOT
+			}
 			}
  			
 
@@ -1481,8 +1484,8 @@ RAJ_akhand_bharat_cat = {
 		}
 
 		complete_effect = {
-			every_state = {
-				limit = { is_core_of = PAK }
+			PAK = {
+			every_core_state = {
 				ROOT = { 
 					add_to_array = {
 						array = claimed_by_akhand_bharat
@@ -1490,6 +1493,7 @@ RAJ_akhand_bharat_cat = {
 					} 
 				}
 				add_core_of = ROOT
+			}
 			}
  			
 			for_each_scope_loop = { #transfer state if already subject since its not a core
@@ -1548,8 +1552,8 @@ RAJ_akhand_bharat_cat = {
 		}
 
 		complete_effect = {
-			every_state = {
-				limit = { is_core_of = BRM }
+			BRM = {
+			every_core_state = {
 				ROOT = { 
 					add_to_array = {
 						array = claimed_by_akhand_bharat
@@ -1557,6 +1561,7 @@ RAJ_akhand_bharat_cat = {
 					} 
 				}
 				add_core_of = ROOT
+			}
 			}
  			
 			for_each_scope_loop = { #transfer state if already subject since its not a core
@@ -1614,8 +1619,8 @@ RAJ_akhand_bharat_cat = {
 		}
 
 		complete_effect = {
-			every_state = {
-				limit = { is_core_of = MLD }
+			MLD = {
+			every_core_state = {
 				ROOT = { 
 					add_to_array = {
 						array = claimed_by_akhand_bharat
@@ -1623,6 +1628,7 @@ RAJ_akhand_bharat_cat = {
 					} 
 				}
 				add_core_of = ROOT
+			}
 			}
  			
 			for_each_scope_loop = { #transfer state if already subject since its not a core
@@ -1680,8 +1686,8 @@ RAJ_akhand_bharat_cat = {
 		}
 
 		complete_effect = {
-			every_state = {
-				limit = { is_core_of = BHU }
+			BHU = {
+			every_core_state = {
 				ROOT = { 
 					add_to_array = {
 						array = claimed_by_akhand_bharat
@@ -1689,6 +1695,7 @@ RAJ_akhand_bharat_cat = {
 					} 
 				}
 				add_core_of = ROOT
+			}
 			}
  			
 			for_each_scope_loop = { #transfer state if already subject since its not a core
@@ -2174,8 +2181,8 @@ RAJ_GOE_partition_cat = {
     			BAN = { set_rule = { can_join_factions = yes } }
     		}
 
-    		for_each_scope_loop = {
-    			array = RAJ.raj_releasables
+    		every_country = {
+    			limit = { is_raj_releasable = yes }
     			
     			if = {
     				limit = {
@@ -2234,14 +2241,9 @@ RAJ_GOE_partition_cat = {
 	    cost = 0
 
 	    complete_effect = {
-	    	every_other_country = {
+	    	every_enemy_country = {
 	    		limit = {
-		    		is_in_array = {
-		    			array = RAJ.raj_releasables
-		    			value = THIS
-		    		}
-
-		    		has_war_with = ROOT
+		    		is_raj_releasable = yes
 	    		}
 
 	    		white_peace = {
@@ -3336,10 +3338,8 @@ RAJ_GOE_mughal_independence_category = {
 			}
 
 			hidden_effect = {
-				every_state = {
-					limit = {
-						owner = { tag = BRM }
-					}
+				BRM = {
+				every_owned_state = {
 					teleport_armies = { 
 						#only define one. if neither is defined will teleport to unit to their capital  
 						to_state = 988
@@ -3348,6 +3348,7 @@ RAJ_GOE_mughal_independence_category = {
 							tag = RAJ
 						}
 					}
+				}
 				}
 			}
 		}
@@ -4639,8 +4640,8 @@ RAJ_peasant_uprisings_cat = {
 		cost = 25
 		fire_only_once = yes
 		complete_effect = {
-			every_country = {
-				limit = { original_tag = NEP }
+			every_country_with_original_tag = {
+				original_tag_to_check = NEP
 				save_global_event_target_as = RAJ_communist_coup_target
 				country_event = { id = GOE_RAJ.48 hours = 2 }
 				event_option_tooltip = GOE_RAJ.48.a
@@ -4697,8 +4698,8 @@ RAJ_peasant_uprisings_cat = {
 		cost = 25
 		fire_only_once = yes
 		complete_effect = {
-			every_country = {
-				limit = { original_tag = TIB }
+			every_country_with_original_tag = {
+				original_tag_to_check = TIB
 				save_global_event_target_as = RAJ_communist_coup_target
 				country_event = { id = GOE_RAJ.48 hours = 2 }
 				event_option_tooltip = GOE_RAJ.48.a
@@ -4755,8 +4756,8 @@ RAJ_peasant_uprisings_cat = {
 		cost = 25
 		fire_only_once = yes
 		complete_effect = {
-			every_country = {
-				limit = { original_tag = BRM }
+			every_country_with_original_tag = {
+				original_tag_to_check = BRM
 				save_global_event_target_as = RAJ_communist_coup_target
 				country_event = { id = GOE_RAJ.48 hours = 2 }
 				event_option_tooltip = GOE_RAJ.48.a
@@ -4813,8 +4814,8 @@ RAJ_peasant_uprisings_cat = {
 		cost = 25
 		fire_only_once = yes
 		complete_effect = {
-			every_country = {
-				limit = { original_tag = AFG }
+			every_country_with_original_tag = {
+				original_tag_to_check = AFG
 				save_global_event_target_as = RAJ_communist_coup_target
 				country_event = { id = GOE_RAJ.48 hours = 2 }
 				event_option_tooltip = GOE_RAJ.48.a
@@ -4871,8 +4872,8 @@ RAJ_peasant_uprisings_cat = {
 		cost = 25
 		fire_only_once = yes
 		complete_effect = {
-			every_country = {
-				limit = { original_tag = PER }
+			every_country_with_original_tag = {
+				original_tag_to_check = PER
 				save_global_event_target_as = RAJ_communist_coup_target
 				country_event = { id = GOE_RAJ.48 hours = 2 }
 				event_option_tooltip = GOE_RAJ.48.a
@@ -4929,8 +4930,8 @@ RAJ_peasant_uprisings_cat = {
 		cost = 25
 		fire_only_once = yes
 		complete_effect = {
-			every_country = {
-				limit = { original_tag = SIA }
+			every_country_with_original_tag = {
+				original_tag_to_check = SIA
 				save_global_event_target_as = RAJ_communist_coup_target
 				country_event = { id = GOE_RAJ.48 hours = 2 }
 				event_option_tooltip = GOE_RAJ.48.a
@@ -4987,8 +4988,8 @@ RAJ_peasant_uprisings_cat = {
 		cost = 25
 		fire_only_once = yes
 		complete_effect = {
-			every_country = {
-				limit = { original_tag = INS }
+			every_country_with_original_tag = {
+				original_tag_to_check = INS
 				save_global_event_target_as = RAJ_communist_coup_target
 				country_event = { id = GOE_RAJ.48 hours = 2 }
 				event_option_tooltip = GOE_RAJ.48.a
@@ -5954,7 +5955,7 @@ RAJ_work_with_local_leaders_cat = {
 						}
 						else = {
 							log = "ELSE"
-							random_owned_state = {
+							random_owned_controlled_state = {
 								limit = {
 									is_fully_controlled_by = ROOT
 									free_building_slots = {
@@ -6063,7 +6064,7 @@ RAJ_work_with_local_leaders_cat = {
 									}
 								}
 							}
-							random_owned_state = {
+							random_owned_controlled_state = {
 								limit = {
 									is_fully_controlled_by = ROOT
 									free_building_slots = {
@@ -6081,7 +6082,7 @@ RAJ_work_with_local_leaders_cat = {
 							}
 						}
 						else = {
-							random_owned_state = {
+							random_owned_controlled_state = {
 								limit = {
 									is_fully_controlled_by = ROOT
 									free_building_slots = {
@@ -6195,7 +6196,7 @@ RAJ_work_with_local_leaders_cat = {
 									}
 								}
 							}
-							random_owned_state = {
+							random_owned_controlled_state = {
 								limit = {
 									is_fully_controlled_by = ROOT
 									free_building_slots = {
@@ -6213,7 +6214,7 @@ RAJ_work_with_local_leaders_cat = {
 							}
 						}
 						else = {
-							random_owned_state = {
+							random_owned_controlled_state = {
 								limit = {
 									is_fully_controlled_by = ROOT
 									free_building_slots = {
@@ -6313,7 +6314,7 @@ RAJ_work_with_local_leaders_cat = {
 							}
 						}
 						else = {
-							random_owned_state = {
+							random_owned_controlled_state = {
 								limit = {	
 									is_fully_controlled_by = ROOT
 									free_building_slots = { #AA is not granted and you can have 1 supply Hub per province so this is the only reliable limiting factor

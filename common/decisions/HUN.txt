@@ -2462,10 +2462,7 @@ HUN_territorial_revision_category = {
 					limit = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
-							}
+							controller = { is_subject_of = ROOT }
 						}
 						NOT = {
 							is_core_of = ROOT
@@ -3207,9 +3204,8 @@ HUN_the_empire_category = {
 
 		complete_effect = {
 
-			every_state = {
+			every_controlled_state = {
 				limit = {
-					is_controlled_by = ROOT
 					NOT = {
 						is_core_of = ROOT
 					}
@@ -3302,9 +3298,8 @@ HUN_the_empire_category = {
 				add_core_of = ALB
 			} 
 
-			every_state = {
+			every_controlled_state = {
 				limit = {
-					is_controlled_by = ROOT
 					NOT = {
 						is_core_of = ROOT
 					}
@@ -3382,10 +3377,7 @@ HUN_the_empire_category = {
 				limit = {
 					OR = {
 						is_controlled_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = PREV
-						}
+						controller = { is_subject_of = ROOT }
 					}
 					NOT = {
 						is_core_of = ROOT
@@ -3477,10 +3469,7 @@ HUN_the_empire_category = {
 				limit = {
 					OR = {
 						is_controlled_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = PREV
-						}
+						controller = { is_subject_of = ROOT }
 					}
 					NOT = {
 						is_core_of = ROOT
@@ -3573,9 +3562,8 @@ HUN_the_empire_category = {
 
 		complete_effect = {
 
-			every_state = {
+			every_controlled_state = {
 				limit = {
-					is_controlled_by = ROOT
 					NOT = {
 						is_core_of = ROOT
 					}
@@ -3662,10 +3650,7 @@ HUN_the_empire_category = {
 				limit = {
 					OR = {
 						is_controlled_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = PREV
-						}
+						controller = { is_subject_of = ROOT }
 					}
 					NOT = {
 						is_core_of = ROOT
@@ -3756,17 +3741,13 @@ HUN_the_empire_category = {
 
 		complete_effect = {
 
-			every_state = {
-				limit = {
-					OR  = {
-						state = 104
-						state = 804
-					}
-					NOT = {
-						is_core_of = CRO
-					}
-				}
-				add_core_of = CRO
+			if = {
+				limit = { 104 = { NOT = { is_core_of = CRO } } }
+				104 = { add_core_of = CRO }
+			}
+			if = {
+				limit = { 804 = { NOT = { is_core_of = CRO } } }
+				804 = { add_core_of = CRO }
 			}
 
 			CRO = {
@@ -3774,10 +3755,7 @@ HUN_the_empire_category = {
 					limit = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
-							}
+							controller = { is_subject_of = ROOT }
 						}
 						NOT = {
 							is_core_of = ROOT
@@ -3930,9 +3908,8 @@ HUN_the_empire_category = {
 					limit = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
+							controller = {
 								is_subject_of = ROOT
-								controls_state = PREV
 							}
 						}
 						NOT = {
@@ -4601,7 +4578,7 @@ HUN_fascist_movements_category = {
 			    			}
 			    		}
 
-			    		random_state = {
+			    		random_controlled_state = {
 			    			limit = {
 			    				is_fully_controlled_by = PREV
 			    			}

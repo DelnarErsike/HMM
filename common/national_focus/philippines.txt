@@ -2066,14 +2066,13 @@ initial_show_position = {
 	
 		completion_reward = {
 
-			every_character = {
-				limit = {
-					OR = {
-						is_character = PHI_juan_samulong
-						is_character = PHI_jose_laurel
-						is_character = PHI_manuel_roxas
-					}
-				}
+			PHI_juan_samulong = {
+				custom_effect_tooltip = PHI_improve_trait_tt
+			}
+			PHI_jose_laurel = {
+				custom_effect_tooltip = PHI_improve_trait_tt
+			}
+			PHI_manuel_roxas = {
 				custom_effect_tooltip = PHI_improve_trait_tt
 			}
 

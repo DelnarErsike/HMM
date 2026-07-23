@@ -671,9 +671,9 @@ country_event = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 
 		hidden_effect = {
-			every_country_with_original_tag = {
-				original_tag_to_check = CZE
+			every_country = {
 				limit = {
+					original_tag = CZE
 					has_idea = CZE_sudeten_german_quandary
 					OR = {
 						controls_state = 69 #North Sudetenland
@@ -683,7 +683,6 @@ country_event = {
 				}
 				country_event = { id = MUN_czech.3 }
 				every_country = {
-					if = {
 						limit = {
 							exists = yes 
 							OR = {
@@ -702,7 +701,6 @@ country_event = {
 							id = MUN_czech.news.1
 							hours = 8
 						}
-					}
 				}
 			}
 		}
@@ -744,9 +742,9 @@ country_event = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 
 		hidden_effect = {
-			every_country_with_original_tag = {
-				original_tag_to_check = CZE
+			every_country = {
 				limit = {
+					original_tag = CZE
 					has_idea = CZE_sudeten_german_quandary
 					OR = {
 						controls_state = 69 #North Sudetenland
@@ -756,7 +754,6 @@ country_event = {
 				}
 				country_event = { id = MUN_czech.3 hours = 2 }
 				every_country = {
-					if = {
 						limit = {
 							exists = yes 
 							OR = {
@@ -773,7 +770,6 @@ country_event = {
 							id = MUN_czech.news.1
 							hours = 6
 						}
-					}
 				}
 			}
 		}
@@ -1999,20 +1995,21 @@ country_event = {	#Czechoslovakia pressures Romania with USSR
 					owns_state = 834
 				}
 			}
-			every_state = {
+			ROM = {
+			every_owned_state = {
 				limit = {
 					OR = {
 						state = 78
 						state = 80
 						state = 766
 					}
-					is_owned_by = ROM
 					NOT = {
 						is_claimed_by = SOV
 						is_owned_by = SOV
 					}
 				}
 				add_claim_by = SOV
+			}
 			}
 		}
 	}
@@ -3879,17 +3876,18 @@ country_event = { #CZE asks to enter exile
 						autonomy_state = autonomy_reichsprotectorate 
 					}
 				}
-				every_state = {	
+				FROM = {
+				every_owned_state = {	
 					limit = {
 						NOT = {
 							state = 7
 						}
-						is_owned_by = FROM
 					}
 					add_contested_owner = RKH
 					set_state_controller_to = RKH
 					add_claim_by = RKH
 					add_compliance = 25
+				}
 				}
 				RKH = {
 					add_manpower = 50000
@@ -3935,10 +3933,7 @@ country_event = { #CZE asks to enter exile
 					fascism = 1
 					communism = 34
 				}
-				random_character = {	#avoid Hodza
-					limit = {
-						is_character = CZE_edvard_benesh
-					}
+				CZE_edvard_benesh = {	#avoid Hodza
 					promote_character = yes
 				}
 			}
@@ -5830,9 +5825,9 @@ country_event = { #Now Ruthenian wants out
 				80 = {
 					add_core_of = RUT
 				}
-				every_state = {
+				UKR = {
+				every_core_state = {
 					limit = {
-						is_core_of = UKR
 						NOT = {
 							OR = {
 								state = 73
@@ -5842,6 +5837,7 @@ country_event = { #Now Ruthenian wants out
 						}
 					}
 					add_claim_by = RUT
+				}
 				}
 			}
 			hidden_effect = {

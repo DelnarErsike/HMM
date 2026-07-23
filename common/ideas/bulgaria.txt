@@ -2046,7 +2046,7 @@ ideas = {
 					limit = {
 						NOT = { has_country_flag = BUL_contract_with_german_tank_designer_flag }
 					}
-					random_owned_state = {
+					random_owned_controlled_state = {
 						limit = {
 							is_fully_controlled_by = ROOT
 							free_building_slots = {
@@ -2117,7 +2117,7 @@ ideas = {
 					limit = {
 						NOT = { has_country_flag = BUL_contract_with_british_tank_designer_flag }
 					}
-					random_owned_state = {
+					random_owned_controlled_state = {
 						limit = {
 							is_fully_controlled_by = ROOT
 							free_building_slots = {
@@ -2188,7 +2188,7 @@ ideas = {
 					limit = {
 						NOT = { has_country_flag = BUL_contract_with_soviet_tank_designer_flag }
 					}
-					random_owned_state = {
+					random_owned_controlled_state = {
 						limit = {
 							is_fully_controlled_by = ROOT
 							free_building_slots = {
@@ -2259,7 +2259,7 @@ ideas = {
 					limit = {
 						NOT = { has_country_flag = BUL_contract_with_italian_tank_designer_flag }
 					}
-					random_owned_state = {
+					random_owned_controlled_state = {
 						limit = {
 							is_fully_controlled_by = ROOT
 							free_building_slots = {
@@ -2390,7 +2390,7 @@ ideas = {
 					limit = {
 						NOT = { has_country_flag = BUL_contract_with_british_naval_designer_flag }
 					}
-					random_owned_state = {
+					random_owned_controlled_state = {
 						limit = {
 							is_fully_controlled_by = ROOT
 							free_building_slots = {
@@ -2457,7 +2457,7 @@ ideas = {
 					limit = {
 						NOT = { has_country_flag = BUL_contract_with_soviet_naval_designer_flag }
 					}
-					random_owned_state = {
+					random_owned_controlled_state = {
 						limit = {
 							is_fully_controlled_by = ROOT
 							free_building_slots = {
@@ -2524,7 +2524,7 @@ ideas = {
 					limit = {
 						NOT = { has_country_flag = BUL_contract_with_italian_naval_designer_flag }
 					}
-					random_owned_state = {
+					random_owned_controlled_state = {
 						limit = {
 							is_fully_controlled_by = ROOT
 							free_building_slots = {
@@ -2717,7 +2717,7 @@ ideas = {
 					limit = {
 						NOT = { has_country_flag = BUL_contract_with_german_aircraft_designer_flag }
 					}
-					random_owned_state = {
+					random_owned_controlled_state = {
 						limit = {
 							is_fully_controlled_by = ROOT
 							free_building_slots = {
@@ -2788,7 +2788,7 @@ ideas = {
 					limit = {
 						NOT = { has_country_flag = BUL_contract_with_british_aircraft_designer_flag }
 					}
-					random_owned_state = {
+					random_owned_controlled_state = {
 						limit = {
 							is_fully_controlled_by = ROOT
 							free_building_slots = {
@@ -2859,7 +2859,7 @@ ideas = {
 					limit = {
 						NOT = { has_country_flag = BUL_contract_with_soviet_aircraft_designer_flag }
 					}
-					random_owned_state = {
+					random_owned_controlled_state = {
 						limit = {
 							is_fully_controlled_by = ROOT
 							free_building_slots = {
@@ -3074,7 +3074,7 @@ ideas = {
 					limit = {
 						NOT = { has_country_flag = BUL_contract_with_german_materiel_designer_flag }
 					}
-					random_owned_state = {
+					random_owned_controlled_state = {
 						limit = {
 							is_fully_controlled_by = ROOT
 							free_building_slots = {
@@ -3141,7 +3141,7 @@ ideas = {
 					limit = {
 						NOT = { has_country_flag = BUL_contract_with_british_materiel_designer_flag }
 					}
-					random_owned_state = {
+					random_owned_controlled_state = {
 						limit = {
 							is_fully_controlled_by = ROOT
 							free_building_slots = {
@@ -3208,7 +3208,7 @@ ideas = {
 					limit = {
 						NOT = { has_country_flag = BUL_contract_with_soviet_materiel_designer_flag }
 					}
-					random_owned_state = {
+					random_owned_controlled_state = {
 						limit = {
 							is_fully_controlled_by = ROOT
 							free_building_slots = {
@@ -3277,7 +3277,7 @@ ideas = {
 					limit = {
 						NOT = { has_country_flag = BUL_contract_with_italian_materiel_designer_flag }
 					}
-					random_owned_state = {
+					random_owned_controlled_state = {
 						limit = {
 							is_fully_controlled_by = ROOT
 							free_building_slots = {

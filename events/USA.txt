@@ -1695,10 +1695,9 @@ country_event = {
 					}
 					factor = 0
 				}
-				random_owned_state = {
+				random_owned_controlled_state = {
 					limit = {
 						is_core_of = ROOT
-						is_controlled_by = ROOT
 						free_building_slots = {
 							building = industrial_complex
 							size > 0
@@ -1729,10 +1728,9 @@ country_event = {
 					has_completed_focus = USA_military_construction
 					factor = 2
 				}
-				random_owned_state = {
+				random_owned_controlled_state = {
 					limit = {
 						is_core_of = ROOT
-						is_controlled_by = ROOT
 						free_building_slots = {
 							building = arms_factory
 							size > 0
@@ -1759,10 +1757,9 @@ country_event = {
 					}
 					factor = 0
 				}
-				random_owned_state = {
+				random_owned_controlled_state = {
 					limit = {
 						is_core_of = ROOT
-						is_controlled_by = ROOT
 						free_building_slots = {
 							building = dockyard
 							size > 0
@@ -1790,10 +1787,9 @@ country_event = {
 					has_completed_focus = USA_USACE_projects
 					factor = 2
 				}
-				random_owned_state = {
+				random_owned_controlled_state = {
 					limit = {
 						is_core_of = ROOT
-						is_controlled_by = ROOT
 						free_building_slots = {
 							building = infrastructure
 							size > 0

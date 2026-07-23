@@ -981,7 +981,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
 
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = JAP_zaibatsus_factories
 				}
@@ -1004,7 +1004,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			random_owned_controlled_state = {
 				limit = {
-					ROOT = { has_full_control_of_state = PREV }
+					is_fully_controlled_by = ROOT
 					is_core_of = ROOT
 					not = {
 						OR = {
@@ -1360,7 +1360,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = JAP_zaibatsus_factories
 				}
@@ -1380,7 +1380,7 @@ focus_tree = {
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
-					ROOT = { has_full_control_of_state = PREV }
+					is_fully_controlled_by = ROOT
 					is_core_of = ROOT
 					not = {
 						OR = {
@@ -1550,7 +1550,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = JAP_imperial_arsenals1
 				}
@@ -1561,7 +1561,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = JAP_imperial_arsenals2
 				}
@@ -2505,7 +2505,8 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			every_state = {
+			SOV = {
+			every_owned_state = {
 				limit = {
 					OR = {
 						state = 408
@@ -2528,13 +2529,13 @@ focus_tree = {
 						state = 822
 						state = 875
 					}
-					is_owned_by = SOV
 					NOT = {
 						is_claimed_by = ROOT
 						is_core_of = ROOT
 					}
 				}
 				add_claim_by = ROOT
+			}
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -2602,7 +2603,7 @@ focus_tree = {
 					limit = { 
 						OR = {
 							is_fully_controlled_by = ROOT 
-							any_country = {
+							controller = {
 								is_subject_of = ROOT
 								has_full_control_of_state = PREV
 							}
@@ -2621,7 +2622,7 @@ focus_tree = {
 					limit = { 
 						OR = {
 							is_fully_controlled_by = ROOT 
-							any_country = {
+							controller = {
 								is_subject_of = ROOT
 								has_full_control_of_state = PREV
 							}
@@ -2640,7 +2641,7 @@ focus_tree = {
 					limit = { 
 						OR = {
 							is_fully_controlled_by = ROOT 
-							any_country = {
+							controller = {
 								is_subject_of = ROOT
 								has_full_control_of_state = PREV
 							}
@@ -2659,7 +2660,7 @@ focus_tree = {
 					limit = { 
 						OR = {
 							is_fully_controlled_by = ROOT 
-							any_country = {
+							controller = {
 								is_subject_of = ROOT
 								has_full_control_of_state = PREV
 							}
@@ -2782,7 +2783,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		complete_tooltip = {
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = JAP_zaibatsus_factories
 				}
@@ -2795,7 +2796,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = JAP_zaibatsus_factories
 				}
@@ -2822,7 +2823,7 @@ focus_tree = {
 
 			random_owned_controlled_state = {
 				limit = {
-					ROOT = { has_full_control_of_state = PREV }
+					is_fully_controlled_by = ROOT
 					is_core_of = ROOT
 					not = {
 						OR = {
@@ -2850,7 +2851,7 @@ focus_tree = {
 
 			random_owned_controlled_state = {
 				limit = {
-					ROOT = { has_full_control_of_state = PREV }
+					is_fully_controlled_by = ROOT
 					NOT = { has_state_flag = JAP_zaibatsus_factories }
 					is_core_of = ROOT
 					not = {
@@ -4828,8 +4829,7 @@ focus_tree = {
 		available = {
 			is_subject = no
 			any_country = {
-				any_state = {
-					is_owned_by = PREV
+				any_owned_state = {
 					is_on_continent = asia
 				}
 				has_government = communism
@@ -9367,9 +9367,8 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
-			every_other_country = {
+			every_allied_country = {
 				limit = {
-					is_ally_with = ROOT
 					NOT = {
 						has_idea = JAP_MAN_joint_economic_block_idea
 						has_idea = JAP_yen_bloc_idea
@@ -9427,10 +9426,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			add_to_tech_sharing_group = jap_geacps_research
-			every_other_country = {
-				limit = { 
-					is_ally_with = ROOT
-				}
+			every_allied_country = {
 				add_to_tech_sharing_group = jap_geacps_research 
 			}
 			
@@ -9532,10 +9528,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			every_other_country = {
-				limit = {
-					is_ally_with = ROOT
-				}
+			every_allied_country = {
 				add_timed_idea = {
 					idea = JAP_industrial_development_support
 					days = 730
@@ -9581,9 +9574,8 @@ focus_tree = {
 
 		completion_reward = {
 
-			every_other_country = {
+			every_allied_country = {
 				limit = {
-					is_ally_with = ROOT
 					NOT = {
 						has_idea = JAP_ministry_of_greater_east_asia_idea
 					}
@@ -13243,7 +13235,7 @@ focus_tree = {
 					limit = { 
 						OR = {
 							is_fully_controlled_by = ROOT 
-							any_country = {
+							controller = {
 								is_subject_of = ROOT
 								has_full_control_of_state = PREV
 							}
@@ -13262,7 +13254,7 @@ focus_tree = {
 					limit = { 
 						OR = {
 							is_fully_controlled_by = ROOT 
-							any_country = {
+							controller = {
 								is_subject_of = ROOT
 								has_full_control_of_state = PREV
 							}
@@ -13281,7 +13273,7 @@ focus_tree = {
 					limit = { 
 						OR = {
 							is_fully_controlled_by = ROOT 
-							any_country = {
+							controller = {
 								is_subject_of = ROOT
 								has_full_control_of_state = PREV
 							}
@@ -13922,12 +13914,13 @@ focus_tree = {
 					SIA = { is_ai = yes }
 				}
 				annex_country = { target = SIA transfer_troops = yes }
-				every_state = {
+				SIA = {
+				every_core_state = {
 					limit = {
-						is_core_of = SIA
 						is_controlled_by = JAP
 					}
 					add_compliance = 100
+				}
 				}
 			}
 			else_if = {
@@ -15527,7 +15520,8 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			every_state = {
+			SOV = {
+			every_owned_state = {
 				limit = {
 					OR = {
 						state = 408
@@ -15550,13 +15544,13 @@ focus_tree = {
 						state = 822
 						state = 875
 					}
-					is_owned_by = SOV
 					NOT = {
 						is_claimed_by = ROOT
 						is_core_of = ROOT
 					}
 				}
 				add_claim_by = ROOT
+			}
 			}
 
 			IF = {
@@ -20165,9 +20159,8 @@ focus_tree = {
 
 		completion_reward = {
 
-			every_other_country = {
+			every_allied_country = {
 				limit = {
-					is_ally_with = ROOT
 					NOT = {
 						has_idea = JAP_yen_bloc_idea
 					}
@@ -20218,9 +20211,8 @@ focus_tree = {
 
 		completion_reward = {
 			
-			every_other_country = {
+			every_allied_country = {
 				limit = {
-					is_ally_with = ROOT
 					NOT = {
 						has_idea = JAP_ministry_of_pan_asian_development_idea
 					}
@@ -20273,10 +20265,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			every_other_country = {
-				limit = {
-					is_ally_with = ROOT
-				}
+			every_allied_country = {
 				add_timed_idea = {
 					idea = JAP_industrial_development_support
 					days = 730
@@ -21041,7 +21030,7 @@ focus_tree = {
 					limit = { 
 						OR = {
 							is_fully_controlled_by = ROOT 
-							any_country = {
+							controller = {
 								is_subject_of = ROOT
 								has_full_control_of_state = PREV
 							}
@@ -21060,7 +21049,7 @@ focus_tree = {
 					limit = { 
 						OR = {
 							is_fully_controlled_by = ROOT 
-							any_country = {
+							controller = {
 								is_subject_of = ROOT
 								has_full_control_of_state = PREV
 							}
@@ -21079,7 +21068,7 @@ focus_tree = {
 					limit = { 
 						OR = {
 							is_fully_controlled_by = ROOT 
-							any_country = {
+							controller = {
 								is_subject_of = ROOT
 								has_full_control_of_state = PREV
 							}
@@ -23684,10 +23673,7 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			ELSE = {
-				every_other_country = {
-					limit = { 
-						is_ally_with = ROOT 
-					}
+				every_allied_country = {
 					set_country_flag = JAP_trade_agreement_event_flag #This flag prevents countries that receive the event below from showing up in the Decision
 					country_event = {
 						id = SEA_japan_foreign_policy.97
@@ -23745,8 +23731,7 @@ focus_tree = {
 			add_ideas = JAP_pacific_customs_union_member
 			custom_effect_tooltip = GER_pool_technical_know_how_tt
 			hidden_effect = {
-				every_other_country = {
-					limit = { is_ally_with = JAP }
+				every_allied_country = {
 					add_ideas = JAP_pacific_customs_union_member
 				}
 			}

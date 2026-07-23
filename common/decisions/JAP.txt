@@ -493,9 +493,8 @@ JAP_intervene_in_china = {
 #
 #		complete_effect = {
 #			JAP_bop_medium_decrease_effect = yes
-#			random_owned_state = {
+#			random_owned_controlled_state = {
 #				limit = {
-#					is_controlled_by = ROOT
 #					is_core_of = ROOT
 #					free_building_slots = {
 #						building = arms_factory
@@ -510,9 +509,8 @@ JAP_intervene_in_china = {
 #					instant_build = yes
 #				}
 #			}
-#			random_owned_state = {
+#			random_owned_controlled_state = {
 #				limit = {
-#					is_controlled_by = ROOT
 #					is_core_of = ROOT
 #					free_building_slots = {
 #						building = arms_factory
@@ -564,9 +562,8 @@ JAP_intervene_in_china = {
 #
 #		complete_effect = {
 #			JAP_bop_medium_increase_effect = yes
-#			random_owned_state = {
+#			random_owned_controlled_state = {
 #				limit = {
-#					is_controlled_by = ROOT
 #					is_core_of = ROOT
 #					free_building_slots = {
 #						building = dockyard
@@ -581,9 +578,8 @@ JAP_intervene_in_china = {
 #					instant_build = yes
 #				}
 #			}
-#			random_owned_state = {
+#			random_owned_controlled_state = {
 #				limit = {
-#					is_controlled_by = ROOT
 #					is_core_of = ROOT
 #					free_building_slots = {
 #						building = dockyard
@@ -9480,9 +9476,9 @@ JAP_the_propaganda_department_decisions = {
 				}
 			}
 
-			every_state = {
+			FROM = {
+			every_owned_state = {
 				limit = { 
-					is_owned_by = FROM 
 					OR = {
 						is_on_continent = asia
 						is_on_continent = middle_east
@@ -9496,6 +9492,7 @@ JAP_the_propaganda_department_decisions = {
 					} 
 				}
 				add_claim_by = ROOT
+			}
 			}
 
 			IF = {
@@ -10225,13 +10222,12 @@ JAP_the_co_prosperity_sphere_decisions = {
 
 		complete_effect = { 
 
-			every_country = {
+			every_subject_country = {
 				limit = {
 					is_literally_china = yes
 					NOT = {
 						original_tag = RNG
 					}
-					is_subject_of = ROOT
 					is_ai = yes
 				}
 				country_event = {
@@ -10242,13 +10238,12 @@ JAP_the_co_prosperity_sphere_decisions = {
 			}
 			custom_effect_tooltip = if_they_accept_tt
 			effect_tooltip = {
-				every_country = {
+				every_subject_country = {
 					limit = {
 						is_literally_china = yes
 						NOT = {
 							original_tag = RNG
 						}
-						is_subject_of = ROOT
 						is_ai = yes
 					}
 					RNG = {
@@ -10257,10 +10252,7 @@ JAP_the_co_prosperity_sphere_decisions = {
 							transfer_troops = yes
 						}	
 					}	
-					every_state = {
-						limit = {
-							is_core_of = PREV
-						}
+					every_core_state = {
 						add_core_of = RNG
 					}
 				}
@@ -10593,25 +10585,23 @@ JAP_the_co_prosperity_sphere_decisions = {
 				}
 			}
 			ELSE = {
-				random_state = {
+				PHI = {
+				random_core_state = {
 					limit = {
-						is_core_of = PHI
 						is_controlled_by = ROOT
 					}
 					transfer_state_to = PSR
 					add_core_of = PSR
 				}
-				PHI = {
 					every_core_state = {
 						add_claim_by = PSR
 					}
-				}
-				every_state = {
-					limit = {
-						is_core_of = PHI
-						is_controlled_by = ROOT
+					every_core_state = {
+						limit = {
+							is_controlled_by = ROOT
+						}
+						set_state_controller_to = PSR
 					}
-					set_state_controller_to = PSR
 				}
 
 				custom_effect_tooltip =  generic_skip_one_line_tt

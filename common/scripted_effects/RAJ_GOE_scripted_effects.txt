@@ -847,13 +847,12 @@ indian_railways_increase_bonus = {
 }
 
 build_civ_in_indian_releasables_once = {
-    for_each_scope_loop = {
-        array = RAJ.raj_releasables
-        if = {
+    RAJ = {
+    every_subject_country = {
             limit = {
                 NOT = { has_country_flag = has_recieved_civ_from_funnel_british_investments }
                 exists = yes
-                is_subject_of = RAJ
+                is_raj_releasable = yes
             }
             random_core_state = {
                 limit = {

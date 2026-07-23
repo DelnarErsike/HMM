@@ -174,7 +174,7 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		complete_tooltip = {
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = NZL_expand_devonport_naval_base_DY
 				}
@@ -601,7 +601,7 @@
 				specialization = specialization_air
 				value = 0.25
 			}
-			random_state = {				
+			random_owned_controlled_state = {				
 				limit = {
 					has_state_flag = NZL_expand_the_nzpaf_AB
 				}
@@ -1253,7 +1253,7 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		complete_tooltip = {
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = NZL_bureau_of_industry_IC1
 				}
@@ -1417,7 +1417,7 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		complete_tooltip = {
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = NZL_national_roads_board_Inf1
 				}
@@ -1428,7 +1428,7 @@
 				}
 			}
 
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = NZL_national_roads_board_Inf2
 				}
@@ -1439,7 +1439,7 @@
 				}
 			}
 
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = NZL_national_roads_board_Inf3
 				}
@@ -1875,7 +1875,7 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		complete_tooltip = {
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = NZL_think_big_IC1
 				}
@@ -1886,7 +1886,7 @@
 					instant_build = yes
 				}
 			}
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = NZL_think_big_AF
 				}
@@ -2248,7 +2248,7 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		complete_tooltip = {
-			random_state = {
+			random_owned_controlled_state = {
 				limit = {
 					has_state_flag = NZL_domestic_arms_industry_AF
 				}

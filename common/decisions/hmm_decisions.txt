@@ -127,13 +127,12 @@ operations = {
                     target = SAF
                     transfer_troops = yes
                 }
-            }
-            every_state = {
-                limit = {
-                    is_core_of = SAF
-                    is_controlled_by = ROOT
+                every_controlled_state = {
+                    limit = {
+                        is_core_of = SAF
+                    }
+                    add_compliance = 100
                 }
-                add_compliance = 100
             }
         }
 
@@ -206,13 +205,12 @@ operations = {
                     target = MEX
                     transfer_troops = yes
                 }
-            }
-            every_state = {
-                limit = {
-                    is_core_of = MEX
-                    is_controlled_by = BRA
+                every_controlled_state = {
+                    limit = {
+                        is_core_of = MEX
+                    }
+                    add_core_of = BRA
                 }
-                add_core_of = BRA
             }
         }
 
@@ -253,15 +251,13 @@ operations = {
                     target = COG
                     transfer_troops = yes
                 }
-            }
-            every_state = {
-                limit = {
-                    is_core_of = COG
-                    is_controlled_by = FRA
+                every_controlled_state = {
+                    limit = {
+                        is_core_of = COG
+                    }
+                    add_compliance = 100
                 }
-                add_compliance = 100
             }
-            
         }
 
     }
@@ -301,13 +297,12 @@ operations = {
                     target = IRE
                     transfer_troops = yes
                 }
-            }
-            every_state = {
-                limit = {
-                    is_core_of = IRE
-                    is_controlled_by = FRA
+                every_controlled_state = {
+                    limit = {
+                        is_core_of = IRE
+                    }
+                    add_compliance = 100
                 }
-                add_compliance = 100
             }
             
         }
@@ -354,14 +349,14 @@ operations = {
                     target = MAN
                     transfer_troops = yes
                 }
-            }
-            every_state = {
-                limit = {
-                    is_core_of = MAN
-                    is_controlled_by = JAP
+                every_controlled_state = {
+                    limit = {
+                        is_core_of = MAN
+                    }
+                    add_compliance = 100
                 }
-                add_compliance = 100
             }
+            
         }
     }
     annex_new_zealand = {
@@ -408,14 +403,14 @@ operations = {
                     target = NZL
                     transfer_troops = yes
                 }
-            }
-            every_state = {
-                limit = {
-                    is_core_of = NZL
-                    is_controlled_by = AST
+                every_controlled_state = {
+                    limit = {
+                        is_core_of = NZL
+                    }
+                    add_core_of = AST
                 }
-                add_core_of = AST
             }
+            
         }
     }
     annex_philippines = {
@@ -455,14 +450,14 @@ operations = {
                     target = PHI
                     transfer_troops = yes
                 }
-            }
-            every_state = {
-                limit = {
-                    is_core_of = PHI 
-                    is_controlled_by = USA
+                every_controlled_state = {
+                    limit = {
+                        is_core_of = PHI
+                    }
+                    add_compliance = 100
                 }
-                add_compliance = 100
             }
+            
         }
     }
     annex_iraq = {
@@ -506,20 +501,19 @@ operations = {
                     target = IRQ
                     transfer_troops = yes
                 }
-            }
-            every_state = {
-                limit = {
-                    is_core_of = IRQ
-                    is_controlled_by = ENG
-                }
-                if = {
+                every_controlled_state = {
                     limit = {
-                        has_dynamic_modifier = { modifier = IRQ_shia_resistance_modifier }
+                        is_core_of = IRQ
                     }
-                    # Modifier should automatically invalidate, but let's manually remove them, just in case.
-                    remove_dynamic_modifier = { modifier = IRQ_shia_resistance_modifier }
+                    if = {
+                        limit = {
+                            has_dynamic_modifier = { modifier = IRQ_shia_resistance_modifier }
+                        }
+                        # Modifier should automatically invalidate, but let's manually remove them, just in case.
+                        remove_dynamic_modifier = { modifier = IRQ_shia_resistance_modifier }
+                    }
+                    set_compliance = 80
                 }
-                set_compliance = 80
             }
         }
     }

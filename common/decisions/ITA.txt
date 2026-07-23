@@ -5102,12 +5102,10 @@ ITA_colonial_management_dec_cat = {
 			AOI = {
 				add_manpower = 10000
 				army_experience = 15
-			}
-			every_state = {
-				limit = {
-					is_owned_and_controlled_by = AOI
+				every_owned_state = {
+					limit = { is_controlled_by = AOI }
+					add_resistance = -5
 				}
-				add_resistance = -5
 			}
 
 			hidden_effect = {
@@ -5171,11 +5169,13 @@ ITA_colonial_management_dec_cat = {
 				}
 			}
 
-			every_state = {
-				limit = {
-					is_owned_and_controlled_by = AOI
+			AOI = {
+				every_owned_state = {
+					limit = {
+						is_controlled_by = AOI
+					}
+					add_resistance = -5
 				}
-				add_resistance = -5
 			}
 
 			hidden_effect = {

@@ -2894,8 +2894,7 @@ CHI_integrate_the_warlords = {
 			}
 
 			FROM = {
-				every_state = {
-					limit = { is_core_of = FROM }
+				every_core_state = {
 					FROM = { remove_state_core = PREV }
 				}
 			}
@@ -6277,7 +6276,7 @@ CHI_lend_lease_missions_cat = {
 
 	}
 
-	# Negotiate Economic Support from §Y[FROM.GetNameWithFlag]§!
+	# Negotiate Economic Support from ï¿½Y[FROM.GetNameWithFlag]ï¿½!
 	CHI_use_expat_community_for_more_cic_decision  = {
 
 		priority = 45
@@ -10374,7 +10373,7 @@ CHI_the_lingguang_incident_cat = {
 			}
 			}
 			random_owned_controlled_state = {
-				limit = { ROOT = { has_full_control_of_state = PREV } }
+				limit = { is_fully_controlled_by = ROOT }
 				prioritize = { 594 }
 				create_unit = {
 					division = "name = \"1. Border Militia\" division_template = \"Border Militia\" start_experience_factor = 0.5" 
@@ -10551,7 +10550,7 @@ CHI_the_lingguang_incident_cat = {
 # The Political Tutelage 
 CHI_the_political_tutelage_cat = {
 	
-	# Expedite the Political Tutelage in §Y[FROM.GetName]§!
+	# Expedite the Political Tutelage in ï¿½Y[FROM.GetName]ï¿½!
 	CHI_accelerate_urban_tutelage_decision = {
 		icon = GFX_decision_generic_political_rally 
 	
@@ -10652,7 +10651,7 @@ CHI_the_political_tutelage_cat = {
 
 	}
 
-	# Expedite the Political Tutelage in §Y[FROM.GetName]§!
+	# Expedite the Political Tutelage in ï¿½Y[FROM.GetName]ï¿½!
 	CHI_accelerate_rural_tutelage_decision = {
 		icon = GFX_decision_generic_political_address
 	
@@ -10859,7 +10858,7 @@ CHI_republican_interests_cat = {
 		}
 	}
 
-	# Stir Republican Sentiments in §Y[FROM.GetNameDef]§!
+	# Stir Republican Sentiments in ï¿½Y[FROM.GetNameDef]ï¿½!
 	CHI_stir_democratic_sentiments_in_asia_decison = {
 		icon = GFX_decision_eng_propaganda_campaigns
 
@@ -11026,7 +11025,7 @@ CHI_republican_interests_cat = {
 # Reunification Intiatives
 CHI_integrate_the_warlords_democratic_sea_cat = {
 
-	# Demand §Y[FROM.GetLeader]§! Submit to the Central Government
+	# Demand ï¿½Y[FROM.GetLeader]ï¿½! Submit to the Central Government
 	CHI_press_warlord_to_become_puppet_democratic = {
 
 		icon = GFX_decision_eng_trade_unions_demand
@@ -11097,7 +11096,7 @@ CHI_integrate_the_warlords_democratic_sea_cat = {
 
 	}
 
-	# §Y[FROM.GetNameWithFlag]§! Integration Efforts
+	# ï¿½Y[FROM.GetNameWithFlag]ï¿½! Integration Efforts
 	CHI_warlord_autonomy_drift_demcoratic_decision = {
 
 		icon = generic_prepare_civil_war
@@ -11172,7 +11171,7 @@ CHI_integrate_the_warlords_democratic_sea_cat = {
 		}
 	}
 
-	# Demand §Y[FROM.GetLeader]§! Apply the Principle of Mínquán
+	# Demand ï¿½Y[FROM.GetLeader]ï¿½! Apply the Principle of Mï¿½nquï¿½n
 	CHI_warlord_democratic_drift_minquan_decision = {
 
 		icon = GFX_decision_SWI_swiss_democratic_tradition_campaign
@@ -11245,7 +11244,7 @@ CHI_integrate_the_warlords_democratic_sea_cat = {
 
 	}
 	
-	# Develop Welfare Systems and Public Works in §Y[FROM.GetNameDef]§!
+	# Develop Welfare Systems and Public Works in ï¿½Y[FROM.GetNameDef]ï¿½!
 	CHI_develop_warlord_industry_decision = {
 
 		priority = 10
@@ -11317,11 +11316,9 @@ CHI_integrate_the_warlords_democratic_sea_cat = {
 						ideology = democratic
 						popularity = 0.1
 					}	
-				}
-				random_state = {
+				random_core_state = {
 					limit = {
 						is_owned_and_controlled_by = FROM
-						is_core_of = FROM
 						free_building_slots = {
 							building = industrial_complex
 							size > 2
@@ -11345,6 +11342,7 @@ CHI_integrate_the_warlords_democratic_sea_cat = {
 						}	
 					}
 				}		 
+				}
 			}
 			
 		}
@@ -11523,7 +11521,7 @@ CHI_x_y_force_cat = {
 					limit = {
 						435 = {
 							controller = {
-								NOT = { ROOT = { has_military_access_to = PREV } }
+								NOT = { gives_military_access_to = ROOT }
 							}
 						}
 					}
@@ -11572,7 +11570,7 @@ CHI_x_y_force_cat = {
 							controller = {
 								NOT = { has_war_with = ROOT }
 								surrender_progress < 0.9
-								ROOT = { has_military_access_to = PREV }
+								gives_military_access_to = ROOT
 							}
 						}
 					}

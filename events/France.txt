@@ -201,14 +201,13 @@ country_event = {
 		has_civil_war = no
 		#Don't fire if France has pushed pretty far into ITA or GER
 		NOT = {
-			any_state = {
+			any_controlled_state = {
 				is_on_continent = europe
 				NOT = { state = 158 }
 				NOT = { state = 114 }
 				NOT = { state = 50 }
 				NOT = { state = 978 } #BADEN
 				NOT = { state = 42 }
-				is_controlled_by = ROOT
 				OR = {
 					is_owned_by = GER
 					AND = {
@@ -226,7 +225,7 @@ country_event = {
 				NOT = { tag = GER }
 				NOT = { is_in_faction_with = GER }
 				has_war_with = ROOT
-				any_state = {
+				any_controlled_state = {
 					is_on_continent = europe
 					NOT = { state = 1 }
 					NOT = { state = 735 }
@@ -234,7 +233,6 @@ country_event = {
 					NOT = { state = 851 }
 					NOT = { state = 31 }
 					is_owned_by = ROOT
-					is_controlled_by = PREV
 				}
 			}
 		}
@@ -380,13 +378,12 @@ country_event = {
 		set_global_flag = fall_of_france
 		set_global_flag = flag_franco_british_union
 		hidden_effect = {
-			every_state = {
-				limit = {
-					is_core_of = FRA
-				}
+			FRA = {
+			every_core_state = {
 				ENG = {
 					add_state_core = PREV
 				}
+			}
 			}
 		}
 		FRA = {
@@ -1206,10 +1203,10 @@ country_event = {
 				original_tag = FRA
 				save_event_target_as = vichy_france
 				set_country_flag = vichy_france
-				every_state = { #transfer French colonial empire
+				FRA = {
+				every_owned_state = { #transfer French colonial empire
 					limit = {
 						is_controlled_by = FRA
-						is_owned_by = FRA
 						OR = {
 							is_on_continent = africa
 							is_core_of = VIN
@@ -1235,6 +1232,7 @@ country_event = {
 						}
 					}
 					event_target:vichy_france = { transfer_state = PREV }
+				}
 				}
 				every_state = {
 					limit = { #set up Vichy continental holdings
@@ -2238,26 +2236,20 @@ country_event = {
 			set_autonomy = { target = FRA autonomy_state = autonomy_free }
 		}
 		
-		every_state = {
+		ENG = {
+		every_core_state = {
 			limit = {
-				is_core_of = ENG
 				is_core_of = FRA
 			}
 			remove_core_of = ENG
 		}
+		}
 		
 		hidden_effect = { # This looks odd in the tooltip
-			every_other_country = {
-				limit = {
-					is_subject_of = ENG
-				}
-				every_owned_state = {
-					limit = {
-						is_core_of = FRA
-					}
-					FRA = {
-						transfer_state = PREV
-					}
+			FRA = {
+				every_core_state = {
+					limit = { owner = { is_subject_of = ENG } }
+					transfer_state_to = FRA
 				}
 			}
 		}
@@ -2302,12 +2294,13 @@ country_event = {
 		add_war_support = -0.1
 		add_stability = -0.2
 		
-		every_state = {
+		ENG = {
+		every_core_state = {
 			limit = {
-				is_core_of = ENG
 				is_core_of = FRA
 			}
 			remove_core_of = ENG
+		}
 		}
 		
 		every_unit_leader = {

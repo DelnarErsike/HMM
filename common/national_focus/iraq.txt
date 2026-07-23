@@ -4856,11 +4856,10 @@ focus_tree = {
 				}
 				custom_effect_tooltip = if_they_accept_tt
 				effect_tooltip = {
-					every_state = {
-						limit = {
-							is_core_of = KUW
-						}
+					KUW = {
+					every_core_state = {
 						transfer_state_to = ROOT
+					}
 					}
 				}
 			}			
@@ -5565,11 +5564,10 @@ focus_tree = {
 				}
 				custom_effect_tooltip = if_they_accept_tt
 				effect_tooltip = {
-					every_state = {
-						limit = {
-							is_core_of = SYR
-						}
+					SYR = {
+					every_core_state = {
 						transfer_state_to = ROOT
+					}
 					}
 				}
 			}			
@@ -5638,9 +5636,8 @@ focus_tree = {
 			677 = { add_core_of = ROOT }
 			554 = { add_core_of = ROOT }
 			799 = { add_core_of = ROOT }
-			every_other_country = {
+			every_subject_country = {
 				limit = {
-					is_subject_of = ROOT
 					is_ai = yes
 					OR = {
 						original_tag = SAU
@@ -5811,9 +5808,8 @@ focus_tree = {
 			set_cosmetic_tag = IRQ_hashemite_caliphate
 			add_country_leader_trait = IRQ_hashemite_caliph
 			add_political_power = 100
-			every_other_country = {
+			every_subject_country = {
 				limit = {
-					is_subject_of = ROOT
 					is_ai = yes
 					OR = {
 						original_tag = SAU
@@ -6987,7 +6983,7 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			
-			every_character = {
+			every_unit_leader = {
 				limit = {
 					has_character_flag = IRQ_golden_square_char
 					is_corps_commander = yes
@@ -7247,11 +7243,10 @@ focus_tree = {
 				}
 				custom_effect_tooltip = if_they_accept_tt
 				effect_tooltip = {
-					every_state = {
-						limit = {
-							is_core_of = SYR
-						}
+					SYR = {
+					every_core_state = {
 						transfer_state_to = ROOT
+					}
 					}
 				}
 			}
@@ -9728,19 +9723,13 @@ focus_tree = {
 			        		    support = {
 			        		    }
 			        		}
-			        		random_state = {
-			        			limit = {
-			        				state = 291
-			        			}
+			        		291 = {
 			        			create_unit = {
 			        			    division = "name = \"1 Firqat Aljaysh Aleiraqii\" division_template = \"Firqat Aljaysh Aleiraqii\" start_experience_factor = 0.5 start_equipment_factor = 0.5"
 			        			    owner = PREV
 			        			}
 			        		}
-			        		random_state = {
-			        			limit = {
-			        				state = 1011
-			        			}
+			        		1011 = {
 			        			create_unit = {
 			        			    division = "name = \"2 Firqat Aljaysh Aleiraqii\" division_template = \"Firqat Aljaysh Aleiraqii\" start_experience_factor = 0.5 start_equipment_factor = 0.5"
 			        			    owner = PREV
@@ -9811,11 +9800,10 @@ focus_tree = {
 			}
 			set_cosmetic_tag = IRQ_kurdistan_tag # was KUR
 			set_country_flag = IRQ_is_kurdistan
-			every_state = {
-				limit = {
-					is_core_of = KUR
-				}
+			KUR = {
+			every_core_state = {
 				add_core_of = ROOT
+			}
 			}
 			hidden_effect = {
 				KUR = {
@@ -9828,11 +9816,10 @@ focus_tree = {
 							exists = no
 						}
 					}
-					every_state = {
-						limit = {
-							is_core_of = KUR
-						}
+					KUR = {
+					every_core_state = {
 						remove_core_of = KUR
+					}
 					}
 					every_state = {
 						limit = {
@@ -9929,7 +9916,7 @@ focus_tree = {
 				    support = {
 				    }
 				}
-				random_state = {
+				random_controlled_state = {
 					limit = {
 						is_fully_controlled_by = ROOT
 					}

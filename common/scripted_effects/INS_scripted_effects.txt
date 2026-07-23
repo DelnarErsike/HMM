@@ -1622,7 +1622,8 @@ indonesia_white_peace_HOL_effect = {
 				limit = {
 					is_in_faction = no
 				}
-                every_country = {
+				INS = {
+                every_enemy_country = {
                     limit = {
                         has_war_with = INS
 #                        NOT = {
@@ -1636,6 +1637,7 @@ indonesia_white_peace_HOL_effect = {
                     }
                     white_peace = INS
                 }
+				}
 			}
 			else = {
 				HOL = {

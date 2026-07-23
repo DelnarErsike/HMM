@@ -3037,7 +3037,7 @@
 					if = {
 						limit = {
 							OR = {
-								ROOT = { controls_state = PREV }
+								is_controlled_by = ROOT
 								AND = {
 									owner = { is_ally_with = ROOT }
 									controller = { is_ally_with = ROOT }

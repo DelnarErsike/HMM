@@ -3034,9 +3034,8 @@ SWE_appeal_for_support_cat = {
 			add_stability = 0.05
 			hidden_effect = {
 				set_country_flag = SWE_implemented_rural_reforms
-				random_owned_state = {
+				random_owned_controlled_state = {
 					limit = {
-						is_controlled_by = ROOT
 						OR = {
 							has_state_category = wasteland
 							has_state_category = pastoral
@@ -3051,9 +3050,8 @@ SWE_appeal_for_support_cat = {
 					}
 					add_extra_state_shared_building_slots = 1
 				}
-				random_owned_state = {
+				random_owned_controlled_state = {
 					limit = {
-						is_controlled_by = ROOT
 						OR = {
 							has_state_category = wasteland
 							has_state_category = pastoral
@@ -3068,9 +3066,8 @@ SWE_appeal_for_support_cat = {
 					}
 					add_extra_state_shared_building_slots = 1
 				}
-				random_owned_state = {
+				random_owned_controlled_state = {
 					limit = {
-						is_controlled_by = ROOT
 						OR = {
 							has_state_category = wasteland
 							has_state_category = pastoral
