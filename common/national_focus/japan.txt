@@ -2505,7 +2505,8 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			every_state = {
+			SOV = {
+			every_owned_state = {
 				limit = {
 					OR = {
 						state = 408
@@ -2528,13 +2529,13 @@ focus_tree = {
 						state = 822
 						state = 875
 					}
-					is_owned_by = SOV
 					NOT = {
 						is_claimed_by = ROOT
 						is_core_of = ROOT
 					}
 				}
 				add_claim_by = ROOT
+			}
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -4828,8 +4829,7 @@ focus_tree = {
 		available = {
 			is_subject = no
 			any_country = {
-				any_state = {
-					is_owned_by = PREV
+				any_owned_state = {
 					is_on_continent = asia
 				}
 				has_government = communism
@@ -13922,12 +13922,13 @@ focus_tree = {
 					SIA = { is_ai = yes }
 				}
 				annex_country = { target = SIA transfer_troops = yes }
-				every_state = {
+				SIA = {
+				every_core_state = {
 					limit = {
-						is_core_of = SIA
 						is_controlled_by = JAP
 					}
 					add_compliance = 100
+				}
 				}
 			}
 			else_if = {
@@ -15527,7 +15528,8 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			every_state = {
+			SOV = {
+			every_owned_state = {
 				limit = {
 					OR = {
 						state = 408
@@ -15550,13 +15552,13 @@ focus_tree = {
 						state = 822
 						state = 875
 					}
-					is_owned_by = SOV
 					NOT = {
 						is_claimed_by = ROOT
 						is_core_of = ROOT
 					}
 				}
 				add_claim_by = ROOT
+			}
 			}
 
 			IF = {

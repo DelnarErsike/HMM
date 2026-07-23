@@ -26,19 +26,16 @@ on_actions = {
 					date > 1939.01.01 #1939 Bookmark
 				}
 				every_country = {
-					limit = {
-						is_major = yes
-					}
+					if = {
+						limit = { is_major = yes }
 					every_military_industrial_organization = {
 						add_mio_size = 4
 					}
-				}
-				every_country = {
-					limit = {
-						is_major = no
 					}
+					else = {
 					every_military_industrial_organization = {
 						add_mio_size = 3
+					}
 					}
 				}
 			}

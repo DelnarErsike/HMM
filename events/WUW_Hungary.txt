@@ -619,12 +619,13 @@ country_event = {
 		add_war_support = 0.01
 		add_stability = 0.01
 
-		every_state = {
+		SLO = {
+		every_core_state = {
 			limit = {
-				is_core_of = SLO
 				is_owned_and_controlled_by = FROM
 			}
 			transfer_state_to = ROOT
+		}
 		}
 
 	}
@@ -1619,9 +1620,8 @@ country_event = {
 			factor = 100
 		}
 
-		every_state = {
+		every_controlled_state = {
 			limit = {
-				is_controlled_by = ROOT
 				NOT = {
 					is_core_of = ROOT
 				}
@@ -2143,9 +2143,8 @@ country_event = {
 			add_core_of = ALB
 		}
 
-		every_state = {
+		every_controlled_state = {
 			limit = {
-				is_controlled_by = ROOT
 				NOT = {
 					is_core_of = ROOT
 				}
@@ -2292,19 +2291,16 @@ country_event = {
 			factor = 100
 		}
 
-		every_state = {
+		POL = {
+		every_core_state = {
 			limit = {
 				OR = {
 					is_controlled_by = ROOT
-					any_country = {
-						is_subject_of = ROOT
-						controls_state = PREV
-					}
+					controller = { is_subject_of = ROOT }
 				}
 				NOT = {
 					is_core_of = ROOT
 				}
-				is_core_of = POL
 				NOT = {
 					is_owned_and_controlled_by = POL
 				}
@@ -2320,6 +2316,7 @@ country_event = {
 				}
 			}
 			transfer_state_to = POL
+		}
 		}
 
 		POL = {
@@ -2512,25 +2509,23 @@ country_event = {
 			factor = 100
 		}
 
-		every_state = {
+		SPR = {
+		every_core_state = {
 			limit = {
 				OR = {
 					is_controlled_by = ROOT
-					any_country = {
-						is_subject_of = ROOT
-						controls_state = PREV
-					}
+					controller = { is_subject_of = ROOT }
 				}
 				NOT = {
 					is_core_of = ROOT
 				}
-				is_core_of = SPR
 				NOT = {
 					is_owned_and_controlled_by = SPR
 				}
 			}
 			transfer_state_to = SPR
 		} 
+		}
 
 		SPR = {
 			drop_cosmetic_tag = yes
@@ -2705,9 +2700,8 @@ country_event = {
 	option = {
 		name = WW_hungary.56.a
 
-		every_state = {
+		every_controlled_state = {
 			limit = {
-				is_controlled_by = ROOT
 				NOT = {
 					is_core_of = ROOT
 				}
@@ -2871,7 +2865,8 @@ country_event = {
 		add_war_support = 0.01
 		add_stability = 0.01
 
-		every_state = {
+		FROM = {
+		every_owned_state = {
 			limit = {
 				OR = {
 					state = 88
@@ -2883,6 +2878,7 @@ country_event = {
 			}
 			transfer_state_to = ROOT
 			add_core_of = ROOT
+		}
 		}
 
 	}
@@ -3059,25 +3055,23 @@ country_event = {
 			factor = 100
 		}
 
-		every_state = {
+		MEX = {
+		every_core_state = {
 			limit = {
 				OR = {
 					is_controlled_by = ROOT
-					any_country = {
-						is_subject_of = ROOT
-						controls_state = PREV
-					}
+					controller = { is_subject_of = ROOT }
 				}
 				NOT = {
 					is_core_of = ROOT
 				}
-				is_core_of = MEX
 				NOT = {
 					is_owned_and_controlled_by = MEX
 				}
 			}
 			transfer_state_to = MEX
 		} 
+		}
 
 		custom_effect_tooltip = HUN_third_mexican_empire_tt
 
@@ -3252,38 +3246,30 @@ country_event = {
 			factor = 100
 		}
 
-		every_state = {
-			limit = {
-				OR  = {
-					state = 104
-					state = 804
-				}
-				NOT = {
-					is_core_of = CRO
-				}
-			}
+		104 = {
+			add_core_of = CRO
+		}
+		804 = {
 			add_core_of = CRO
 		}
 
-		every_state = {
+		CRO = {
+		every_core_state = {
 			limit = {
 				OR = {
 					is_controlled_by = ROOT
-					any_country = {
-						is_subject_of = ROOT
-						controls_state = PREV
-					}
+					controller = { is_subject_of = ROOT }
 				}
 				NOT = {
 					is_core_of = ROOT
 				}
-				is_core_of = CRO
 				NOT = {
 					is_owned_and_controlled_by = CRO
 				}
 			}
 			transfer_state_to = CRO
 		} 
+		}
 
 		CRO = {
 			drop_cosmetic_tag = yes
@@ -3597,20 +3583,22 @@ country_event = {
 					is_subject_of = ROOT
 				}
 			}
-			every_state = {
+			SIL = {
+			every_core_state = {
 				limit = {
-					is_core_of = SIL
 					is_owned_and_controlled_by = FROM
 				}
 				transfer_state_to = CZE
 			}
+			}
 			ELSE = {
-				every_state = {
+				SIL = {
+				every_core_state = {
 					limit = {
-						is_core_of = SIL
 						is_owned_and_controlled_by = FROM
 					}
 					transfer_state_to = ROOT
+				}
 				}
 			}
 		}
@@ -3939,10 +3927,10 @@ country_event = {
 			factor = 100
 		}
 
-		every_state = {
+		FROM = {
+		every_core_state = {
 			limit = {
 				is_owned_by = FROM
-				is_core_of = FROM
 				OR = {
 					state = 102
 					state = 853
@@ -3990,6 +3978,7 @@ country_event = {
 				}
 			}
 			add_core_of = ROOT
+		}
 		}
 
 		custom_effect_tooltip = generic_skip_one_line_tt
@@ -4209,9 +4198,9 @@ country_event = {
 			end_civil_wars = yes # default yes. will not cancel civil wars if set to no
 		}	
 
-		every_state = {
+		FROM = {
+		every_owned_state = {
 			limit = {
-				is_owned_by = FROM
 				NOT = {
 					OR = {
 						is_claimed_by = ROOT
@@ -4252,6 +4241,7 @@ country_event = {
 			}
 			add_claim_by = ROOT
 		}	
+		}
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 		
@@ -4744,11 +4734,10 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		every_state = {
-			limit = {
-				is_core_of = ROM
-			}
+		ROM = {
+		every_core_state = {
 			add_core_of = ROOT
+		}
 		}
 
 		custom_effect_tooltip = generic_skip_one_line_tt
@@ -5146,15 +5135,16 @@ country_event = {
 		add_war_support = 0.01
 		add_stability = 0.01
 
-		every_state = {
+		SLO = {
+		every_core_state = {
 			limit = {
-				is_core_of = SLO
 				OR = {
 					is_owned_and_controlled_by = SLO
 					is_owned_and_controlled_by = FROM
 				}
 			}
 			transfer_state_to = ROOT
+		}
 		}
 
 	}
@@ -5610,7 +5600,8 @@ country_event = {
 		add_war_support = 0.01
 		add_stability = 0.01
 
-		every_state = {
+		FROM = {
+		every_owned_state = {
 			limit = {
 				OR = {
 					state = 109
@@ -5619,6 +5610,7 @@ country_event = {
 				is_owned_and_controlled_by = FROM
 			}
 			transfer_state_to = ROOT
+		}
 		}
 
 		custom_effect_tooltip = generic_skip_one_line_tt

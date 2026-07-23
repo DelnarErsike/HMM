@@ -703,7 +703,7 @@ civil_war_anti_exploiter_punitive_action = {
 				artillery = { x = 0 y = 2 }
 			}
 		}
-		random_state = {
+		random_controlled_state = {
 			limit = {
 				is_capital = yes
 				is_fully_controlled_by = PREV
@@ -725,7 +725,7 @@ civil_war_anti_exploiter_punitive_action = {
 				owner = PREV
 			}
 		}
-		random_state = {
+		random_controlled_state = {
 			limit = {
 				is_in_home_area = yes
 				is_fully_controlled_by = PREV
@@ -747,7 +747,7 @@ civil_war_anti_exploiter_punitive_action = {
 				owner = PREV
 			}
 		}
-		random_state = {
+		random_controlled_state = {
 			limit = {
 				is_in_home_area = yes
 				is_fully_controlled_by = PREV
@@ -769,7 +769,7 @@ civil_war_anti_exploiter_punitive_action = {
 				owner = PREV
 			}
 		}
-		random_state = {
+		random_controlled_state = {
 			limit = {
 				is_in_home_area = yes
 				is_fully_controlled_by = PREV
@@ -791,7 +791,7 @@ civil_war_anti_exploiter_punitive_action = {
 				owner = PREV
 			}
 		}
-		random_state = {
+		random_controlled_state = {
 			limit = {
 				is_in_home_area = yes
 				is_fully_controlled_by = PREV

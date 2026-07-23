@@ -2752,12 +2752,12 @@
 				}
 			}
 			#Requires UK at war in Africa
-			any_country = {
-				has_war_with = ENG
-				any_state = {
-					is_controlled_by = PREV
+			ENG = {
+			any_enemy_country = {
+				any_controlled_state = {
 					is_on_continent = africa
 				}
+			}
 			}
 		}
 		
@@ -4729,12 +4729,12 @@
 				add_timed_idea = { days = 730 idea = AST_indonesian_nationalists } 
 			}
 			hidden_effect = {
-				INS = { country_event = { id = tfv_australia.95 } }
-				every_country = {
-					limit = {
-						has_subject = INS
+				INS = {
+					country_event = { id = tfv_australia.95 }
+					if = {
+						limit = { is_subject = yes }
+						overlord = { country_event = { id = tfv_australia.95 } } 
 					}
-					country_event = { id = tfv_australia.95 } 
 				}
 			}
 		}

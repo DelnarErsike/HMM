@@ -7586,9 +7586,8 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = ENG_british_commonwealth_air_training_plan
 			custom_effect_tooltip = generic_skip_one_line_tt
-			every_country = {
+			every_subject_country = {
 				limit = {
-					is_subject_of = ROOT
 					NOT = { original_tag = SAF }
 				}
 				add_ideas = ENG_british_commonwealth_air_training_plan
@@ -8656,8 +8655,7 @@ focus_tree = {
 						AND = {
 							exists = no
 							NOT = {
-								any_state = {
-									is_core_of = CAN
+								any_core_state = {
 									NOT = { is_owned_by = ROOT }
 								}
 							}
@@ -8676,8 +8674,7 @@ focus_tree = {
 						AND = {
 							exists = no
 							NOT = {
-								any_state = {
-									is_core_of = SAF
+								any_core_state = {
 									NOT = { is_owned_by = ROOT }
 								}
 							}
@@ -8701,8 +8698,7 @@ focus_tree = {
 							AND = {
 								exists = no
 								NOT = {
-									any_state = {
-										is_core_of = RAJ
+									any_core_state = {
 										NOT = { state = 320 }
 										NOT = { state = 321 }
 										NOT = { is_owned_by = ROOT }
@@ -8724,8 +8720,7 @@ focus_tree = {
 						AND = {
 							exists = no
 							NOT = {
-								any_state = {
-									is_core_of = AST
+								any_core_state = {
 									NOT = { is_owned_by = ROOT }
 								}
 							}
@@ -8744,8 +8739,7 @@ focus_tree = {
 						AND = {
 							exists = no
 							NOT = {
-								any_state = {
-									is_core_of = NZL
+								any_core_state = {
 									NOT = { is_owned_by = ROOT }
 								}
 							}
@@ -8767,8 +8761,7 @@ focus_tree = {
 						AND = {
 							exists = no
 							NOT = {
-								any_state = {
-									is_core_of = CAN
+								any_core_state = {
 									NOT = { is_owned_by = ROOT }
 								}
 							}
@@ -8784,8 +8777,7 @@ focus_tree = {
 						AND = {
 							exists = no
 							NOT = {
-								any_state = {
-									is_core_of = SAF
+								any_core_state = {
 									NOT = { is_owned_by = ROOT }
 								}
 							}
@@ -8805,8 +8797,7 @@ focus_tree = {
 							AND = {
 								exists = no
 								NOT = {
-									any_state = {
-										is_core_of = RAJ
+									any_core_state = {
 										NOT = { state = 320 }
 										NOT = { state = 321 }
 										NOT = { is_owned_by = ROOT }
@@ -8825,8 +8816,7 @@ focus_tree = {
 						AND = {
 							exists = no
 							NOT = {
-								any_state = {
-									is_core_of = AST
+								any_core_state = {
 									NOT = { is_owned_by = ROOT }
 								}
 							}
@@ -8842,8 +8832,7 @@ focus_tree = {
 						AND = {
 							exists = no
 							NOT = {
-								any_state = {
-									is_core_of = NZL
+								any_core_state = {
 									NOT = { is_owned_by = ROOT }
 								}
 							}
@@ -8866,8 +8855,7 @@ focus_tree = {
 						AND = {
 							exists = no
 							NOT = {
-								any_state = {
-									is_core_of = CAN
+								any_core_state = {
 									NOT = { is_owned_by = ROOT }
 								}
 							}
@@ -8883,8 +8871,7 @@ focus_tree = {
 						AND = {
 							exists = no
 							NOT = {
-								any_state = {
-									is_core_of = SAF
+								any_core_state = {
 									NOT = { is_owned_by = ROOT }
 								}
 							}
@@ -8904,8 +8891,7 @@ focus_tree = {
 							AND = {
 								exists = no
 								NOT = {
-									any_state = {
-										is_core_of = RAJ
+									any_core_state = {
 										NOT = { state = 320 }
 										NOT = { state = 321 }
 										NOT = { is_owned_by = ROOT }
@@ -8924,8 +8910,7 @@ focus_tree = {
 						AND = {
 							exists = no
 							NOT = {
-								any_state = {
-									is_core_of = AST
+								any_core_state = {
 									NOT = { is_owned_by = ROOT }
 								}
 							}
@@ -8941,8 +8926,7 @@ focus_tree = {
 						AND = {
 							exists = no
 							NOT = {
-								any_state = {
-									is_core_of = NZL
+								any_core_state = {
 									NOT = { is_owned_by = ROOT }
 								}
 							}
@@ -8960,8 +8944,7 @@ focus_tree = {
 						AND = {
 							exists = no
 							NOT = {
-								any_state = {
-									is_core_of = CAN
+								any_core_state = {
 									NOT = { is_owned_by = ROOT }
 								}
 							}
@@ -8977,8 +8960,7 @@ focus_tree = {
 						AND = {
 							exists = no
 							NOT = {
-								any_state = {
-									is_core_of = SAF
+								any_core_state = {
 									NOT = { is_owned_by = ROOT }
 								}
 							}
@@ -8998,8 +8980,7 @@ focus_tree = {
 							AND = {
 								exists = no
 								NOT = {
-									any_state = {
-										is_core_of = RAJ
+									any_core_state = {
 										NOT = { state = 320 }
 										NOT = { state = 321 }
 										NOT = { is_owned_by = ROOT }
@@ -9018,8 +8999,7 @@ focus_tree = {
 						AND = {
 							exists = no
 							NOT = {
-								any_state = {
-									is_core_of = AST
+								any_core_state = {
 									NOT = { is_owned_by = ROOT }
 								}
 							}
@@ -9035,8 +9015,7 @@ focus_tree = {
 						AND = {
 							exists = no
 							NOT = {
-								any_state = {
-									is_core_of = NZL
+								any_core_state = {
 									NOT = { is_owned_by = ROOT }
 								}
 							}
@@ -9099,11 +9078,10 @@ focus_tree = {
 			    target = CAN
 			    transfer_troops = yes
 			}
-			every_state = {
-				limit = {
-					is_core_of = CAN
-				}
+			CAN = {
+			every_core_state = {
 				add_core_of = ENG
+			}
 			}
 			SAF = {
 				every_unit_leader = {
@@ -9118,12 +9096,13 @@ focus_tree = {
 				limit = {
 					SAF = { has_completed_focus = SAF_police_windhoek }
 				}
-				every_state = {
+				SAF = {
+				every_core_state = {
 					limit = {
-						is_core_of = SAF
 						NOT = { state = 275 }
 					}
 					add_core_of = ENG
+				}
 				}
 			}
 			if = {
@@ -9166,11 +9145,10 @@ focus_tree = {
 			    target = AST
 			    transfer_troops = yes
 			}
-			every_state = {
-				limit = {
-					is_core_of = AST
-				}
+			AST = {
+			every_core_state = {
 				add_core_of = ENG
+			}
 			}
 			NZL = {
 				every_unit_leader = {
@@ -9181,11 +9159,10 @@ focus_tree = {
 			    target = NZL
 			    transfer_troops = yes
 			}
-			every_state = {
-				limit = {
-					is_core_of = NZL
-				}
+			NZL = {
+			every_core_state = {
 				add_core_of = ENG
+			}
 			}
 			MAL = {
 				every_unit_leader = {
@@ -12089,10 +12066,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_MANPOWER}	
 		completion_reward = {
 			add_ideas = ENG_imperial_conscription_idea
-			every_country = {
-				limit = {
-					is_subject_of = ENG
-				}
+			every_subject_country = {
 				add_ideas = ENG_imperial_conscription_subject_idea
 			}
 		}
@@ -12135,15 +12109,14 @@ focus_tree = {
 		}	
 		completion_reward = {
 			ENG_mosley_pacifism_level_down = yes
-			every_state = {
+			BRM = {
+			every_core_state = {
 				limit = {
-					OR = {
-						is_core_of = BRM
-					}
 					NOT = { state = 321 }
 					NOT = { state = 320 }
 				}
 				add_claim_by = ENG
+			}
 			}
 			if = {
 				limit = {
@@ -12576,11 +12549,10 @@ focus_tree = {
 					NOT = { is_in_faction_with = CAN }
 					is_ai = no
 				}
-				every_state = {
-					limit = {
-						is_core_of = CAN
-					}
+				CAN = {
+				every_core_state = {
 					add_claim_by = ENG
+				}
 				}
 				create_wargoal = {
 					type = annex_everything
@@ -12593,11 +12565,10 @@ focus_tree = {
 					NOT = { is_in_faction_with = SAF }
 					is_ai = no
 				}
-				every_state = {
-					limit = {
-						is_core_of = SAF
-					}
+				SAF = {
+				every_core_state = {
 					add_claim_by = ENG
+				}
 				}
 				create_wargoal = {
 					type = annex_everything
@@ -12610,11 +12581,10 @@ focus_tree = {
 					NOT = { is_in_faction_with = AST }
 					is_ai = no
 				}
-				every_state = {
-					limit = {
-						is_core_of = AST
-					}
+				AST = {
+				every_core_state = {
 					add_claim_by = ENG
+				}
 				}
 				create_wargoal = {
 					type = annex_everything
@@ -12627,11 +12597,10 @@ focus_tree = {
 					NOT = { is_in_faction_with = NZL }
 					is_ai = no
 				}
-				every_state = {
-					limit = {
-						is_core_of = NZL
-					}
+				NZL = {
+				every_core_state = {
 					add_claim_by = ENG
+				}
 				}
 				create_wargoal = {
 					type = annex_everything

@@ -3207,9 +3207,8 @@ HUN_the_empire_category = {
 
 		complete_effect = {
 
-			every_state = {
+			every_controlled_state = {
 				limit = {
-					is_controlled_by = ROOT
 					NOT = {
 						is_core_of = ROOT
 					}
@@ -3302,9 +3301,8 @@ HUN_the_empire_category = {
 				add_core_of = ALB
 			} 
 
-			every_state = {
+			every_controlled_state = {
 				limit = {
-					is_controlled_by = ROOT
 					NOT = {
 						is_core_of = ROOT
 					}
@@ -3573,9 +3571,8 @@ HUN_the_empire_category = {
 
 		complete_effect = {
 
-			every_state = {
+			every_controlled_state = {
 				limit = {
-					is_controlled_by = ROOT
 					NOT = {
 						is_core_of = ROOT
 					}

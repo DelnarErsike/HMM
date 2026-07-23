@@ -1988,9 +1988,8 @@ country_event = {
 		hidden_effect = {
 			was_uk_dominion_a_subject = yes  
 			add_stability = 30
-			every_state = {
+			every_owned_state = {
 				limit = {
-					is_owned_by = ENG
 					NOT = { has_state_flag = ENG_has_blackshirt_support }
 				}
 				set_state_flag = ENG_has_no_blackshirt_support
@@ -5989,12 +5988,13 @@ country_event = {
 	# Let's make peace
 	option = {
 		name = mtg_britain.74.a
-		every_country = {
+		PAK = {
+		every_enemy_country = {
 			limit = {
 				is_in_faction_with = RAJ
-				has_war_with = PAK
 			}
 			white_peace = PAK
+		}
 		}
 		white_peace = PAK
 		PAK = { country_event = { id = mtg_britain.75 } }
@@ -6029,12 +6029,13 @@ country_event = {
 	option = {
 		name = mtg_britain.75.a
 		effect_tooltip = {
-			every_country = {
+			PAK = {
+			every_enemy_country = {
 				limit = {
 					is_in_faction_with = RAJ
-					has_war_with = PAK
 				}
 				white_peace = PAK
+			}
 			}
 			RAJ = { white_peace = PAK }
 		}

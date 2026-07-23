@@ -155,7 +155,6 @@ on_actions = {
 				# LOG = "dispatcher event for [ROOT.GetName] triggered" 
 				set_global_flag = global_unification_request_sent_flag
 				every_country = {
-
 					limit = {
 						original_tag = ROOT
 						is_subject = no

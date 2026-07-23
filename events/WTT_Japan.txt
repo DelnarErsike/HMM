@@ -1677,7 +1677,7 @@ country_event = {
 						is_faction_leader = yes
 					}
 				}
-				every_country = {
+				every_enemy_country = {
 					limit = {
 						OR = {
 							AND = {
@@ -1686,7 +1686,6 @@ country_event = {
 							}
 							is_literally_china = yes
 						}
-						has_war_with = ROOT
 						is_in_faction_with = event_target:WTT_current_china_leader
 					}
 					every_controlled_state = {
@@ -1947,7 +1946,7 @@ country_event = {
 					is_faction_leader = yes
 				}
 			}
-			every_country = {
+			every_enemy_country = {
 				limit = {
 					OR = {
 						AND = {
@@ -1956,7 +1955,6 @@ country_event = {
 						}
 						is_literally_china = yes
 					}
-					has_war_with = ROOT
 					is_in_faction_with = event_target:WTT_current_china_leader
 				}
 				every_controlled_state = {

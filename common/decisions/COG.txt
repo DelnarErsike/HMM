@@ -1526,14 +1526,13 @@ war_measures = {
 
 			hidden_effect = {
 
-				every_country = {
+				every_enemy_country = {
 					limit = {
 						OR = {
 							original_tag = BEL
 							is_in_faction_with = BEL
 							is_subject_of = BEL
 						}
-						has_war_with = ROOT
 					}
 					ROOT = {
 						white_peace = {

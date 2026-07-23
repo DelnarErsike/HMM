@@ -15134,7 +15134,7 @@ focus_tree = {
 				}
 			}
 
-			every_state = {
+			every_controlled_state = {
 				limit = {
 					OR = {
 						is_core_of = ALB
@@ -15639,15 +15639,16 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = ITA_the_eastern_threat_claims_tt
-			every_state = {
+			SOV = {
+			every_owned_state = {
 				limit = {
 					BUL_state_is_in_the_black_sea = yes
-					is_owned_by = SOV
 				}
 				hidden_effect ={
 					ROOT = { add_state_claim = PREV }
 				}
 				custom_effect_tooltip = generic_ROOT_gains_claim_tt
+			}
 			}
 			add_timed_idea = {
 				idea = ITA_the_eastern_threat_ns
@@ -16180,9 +16181,9 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = ITA_war_with_france_claims_tt
-			every_state = {
+			FRA = {
+			every_owned_state = {
 				limit = {
-					is_owned_by = FRA
 					OR = {
 						region = 182 #WESTERN MAGHREB
 						region = 126 #EASTERN MAGHREB
@@ -16205,6 +16206,7 @@ focus_tree = {
 					ROOT = { add_state_claim = PREV }
 				}
 				custom_effect_tooltip = generic_ROOT_gains_claim_tt
+			}
 			}
 
 			create_wargoal = {
@@ -16285,9 +16287,9 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = ITA_war_with_the_uk_claims_tt
-			every_state = {
+			ENG = {
+			every_owned_state = {
 				limit = {
-					is_owned_by = ENG
 					OR = {
 						region = 182 #WESTERN MAGHREB
 						region = 126 #EASTERN MAGHREB
@@ -16311,6 +16313,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = generic_ROOT_gains_claim_tt
 			}
+			}
 
 			create_wargoal = {
 				type = take_state_focus
@@ -16333,8 +16336,8 @@ focus_tree = {
 		select_effect = {
 			every_country = {
 				limit = {
-					NOT = { is_in_faction_with = ROOT }
 					original_tag = GRE
+					NOT = { is_in_faction_with = ROOT }
 				}
 				ROOT = {
 					add_ai_strategy = {
@@ -16974,9 +16977,8 @@ focus_tree = {
 				delete_unit_template_and_units = { division_template = "Camicie Nere" }
 
 				#Resistance in all cores
-				every_state = {
+				every_core_state = {
 					limit = {
-						is_core_of = ROOT
 						controller = {
 							has_war_with = ROOT
 							original_tag = ITA
@@ -17894,7 +17896,7 @@ focus_tree = {
 						is_fully_controlled_by = ROOT
 					}
 				}
-				random_owned_state = {
+				random_owned_controlled_state = {
 					limit = {
 						is_core_of = ROOT
 						is_fully_controlled_by = ROOT

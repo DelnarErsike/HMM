@@ -837,10 +837,9 @@ on_actions = {
 				}
 				ENG = { 
 					annex_country = { target = IRQ transfer_troops = yes }
-					every_state = {
+					every_controlled_state = {
 						limit = {
 							is_core_of = IRQ
-							is_controlled_by = ENG
 						}
 						if = {
 							limit = {

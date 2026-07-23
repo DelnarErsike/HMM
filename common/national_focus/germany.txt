@@ -1248,9 +1248,8 @@ focus_tree = {
 					}
 				}
 				else = {
-					random_owned_state = {
+					random_owned_controlled_state = {
 						limit = {
-							is_controlled_by = ROOT
 							free_building_slots = {
 								building = arms_factory
 								size > 2
@@ -1288,9 +1287,8 @@ focus_tree = {
 					}
 				}
 				else = {
-					random_owned_state = {
+					random_owned_controlled_state = {
 						limit = {
-							is_controlled_by = ROOT
 							free_building_slots = {
 								building = industrial_complex
 								size > 1
@@ -3397,9 +3395,8 @@ focus_tree = {
 				}
 			}
 			else = {
-				random_owned_state = {
+				random_owned_controlled_state = {
 					limit = {
-						is_controlled_by = ROOT
 						free_building_slots = {
 							building = arms_factory
 							size > 0
@@ -3434,10 +3431,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-				}
+			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
@@ -3954,10 +3948,7 @@ focus_tree = {
 				}
 			}
 			else = {
-				random_owned_state = {
-					limit = {
-						is_controlled_by = ROOT
-					}
+				random_owned_controlled_state = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = arms_factory
@@ -6162,10 +6153,7 @@ focus_tree = {
 				}
 			}
 			else = {
-				random_owned_state = {
-					limit = {
-						is_controlled_by = ROOT
-					}
+				random_owned_controlled_state = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = arms_factory
@@ -8796,7 +8784,8 @@ focus_tree = {
 					}
 
 					custom_effect_tooltip =  generic_skip_one_line_tt
-					every_state = {
+					CZE = {
+					every_owned_state = {
 						limit = {
 							is_owned_and_controlled_by = CZE
 							OR = {
@@ -8805,7 +8794,8 @@ focus_tree = {
 								state = 74
 							}
 						}
-						add_core_of = PREV
+						add_core_of = ROOT
+					}
 					}
 				}
 			}
@@ -14729,8 +14719,8 @@ focus_tree = {
 				}
 			}
 			ELSE = {
-				every_country = {
-					limit = { original_tag = SOV }
+				every_country_with_original_tag = {
+					original_tag_to_check = SOV
 					GER = {
 						create_wargoal = {
 							type = annex_everything
@@ -26520,8 +26510,7 @@ focus_tree = {
 					target = ROOT
 					value > 50
 				}	
-			}
-			any_state = {
+			any_owned_state = {
 				is_owned_and_controlled_by = FRA
 				OR = {
 					state = 777
@@ -26534,6 +26523,7 @@ focus_tree = {
 					state = 769
 					state = 546
 				}
+			}
 			}
 		}
 
@@ -27018,11 +27008,10 @@ focus_tree = {
 					}
 				}
 
-				random_state = { 
+				random_core_state = { 
 					limit = {
 						is_fully_controlled_by = ROOT
 						is_owned_by = ROOT
-						is_core_of = ROOT
 					}
 					create_unit = {
 					    division = "name = \"Freikorps 'München'\" division_template = \"Freikorps\" start_experience_factor = 0.4 start_equipment_factor = 0.6"
@@ -30242,13 +30231,13 @@ focus_tree = {
 					custom_effect_tooltip = generic_skip_one_line_tt
 
 					custom_effect_tooltip = tributes_from_latvia_or_estonia_tt
-					every_country = {
-						limit = {
-							OR = {
-								original_tag = EST
-								original_tag = LAT
-							}
-						}
+					every_country_with_original_tag = {
+						original_tag_to_check = EST
+						add_ideas = GER_paying_tributes_to_germany_idea
+						add_ideas = anti_soviet_pact
+					}
+					every_country_with_original_tag = {
+						original_tag_to_check = LAT
 						add_ideas = GER_paying_tributes_to_germany_idea
 						add_ideas = anti_soviet_pact
 					}
@@ -30812,11 +30801,10 @@ focus_tree = {
 					}
 				}
 
-				random_state = { 
+				random_core_state = { 
 					limit = {
 						is_fully_controlled_by = ROOT
 						is_owned_by = ROOT
-						is_core_of = ROOT
 					}
 					create_unit = {
 					    division = "name = \"Kosaken-Kavallerie-Division 'Don-Wolga'\" division_template = \"Kosaken-Kavallerie-Division\" start_experience_factor = 0.3 start_equipment_factor = 0.7"
@@ -30827,11 +30815,10 @@ focus_tree = {
 					    owner = ROOT
 					}
 				}
-				random_state = { 
+				random_core_state = { 
 					limit = {
 						is_fully_controlled_by = ROOT
 						is_owned_by = ROOT
-						is_core_of = ROOT
 					}
 					create_unit = {
 					    division = "name = \"Russische Befreiungsarmee 'Moskau'\" division_template = \"Russische Befreiungsarmee\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
@@ -31309,10 +31296,8 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			every_country = {
-				limit = {
-					original_tag = SOV
-				}
+			every_country_with_original_tag = {
+				original_tag_to_check = SOV
 				add_opinion_modifier = {
 					target = ROOT
 					modifier = GER_seeks_to_restore_brest_litovsk_worse
@@ -31513,15 +31498,10 @@ focus_tree = {
 
 			if = {
 				limit = {
-					any_state = {
-						OR = {
-							state = 85 #Danzig
-							state = 807 #Gdnyia
-							state = 86 #Poznan
-							state = 762 #Katovice
-						}
-						is_fully_controlled_by = POL
-					}
+					85 = { is_fully_controlled_by = POL }
+					807 = { is_fully_controlled_by = POL }
+					86 = { is_fully_controlled_by = POL }
+					762 = { is_fully_controlled_by = POL }
 				}
 				POL = {
 					country_event = {
@@ -31614,14 +31594,9 @@ focus_tree = {
 			
 			if = {
 				limit = {
-					any_state = {
-						OR = {
-							state = 87 #Lodz
-							state = 98 #Plock
-							state = 97 #Byalistock
-						}
-						is_fully_controlled_by = POL
-					}
+					87 = { is_fully_controlled_by = POL }
+					98 = { is_fully_controlled_by = POL }
+					97 = { is_fully_controlled_by = POL }
 				}
 				POL = {
 					country_event = {
@@ -31872,11 +31847,10 @@ focus_tree = {
 					}
 				}
 
-				random_state = { 
+				random_core_state = { 
 					limit = {
 						is_fully_controlled_by = ROOT
 						is_owned_by = ROOT
-						is_core_of = ROOT
 					}
 					create_unit = {
 					    division = "name = \"Baltische Landeswehr 'Reval'\" division_template = \"Baltische Landeswehr\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
@@ -33318,8 +33292,7 @@ focus_tree = {
 					target = ROOT
 					value > 50
 				}	
-			}
-			any_state = {
+			any_owned_state = {
 				is_owned_and_controlled_by = ENG
 				OR = {
 					state = 773
@@ -33342,6 +33315,7 @@ focus_tree = {
 					state = 726
 					state = 725
 				}
+			}
 			}
 		}
 

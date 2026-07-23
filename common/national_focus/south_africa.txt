@@ -1267,9 +1267,8 @@
 
 		completion_reward = {
 			custom_effect_tooltip = SAF_support_axis_interests_effect_tt
-			every_state = {
+			every_controlled_state = {
 				limit = {
-					is_controlled_by = ROOT
 					OR = {
 						state = 542
 						state = 545

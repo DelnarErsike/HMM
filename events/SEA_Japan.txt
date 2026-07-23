@@ -1060,10 +1060,7 @@ country_event = {
 			}
 		}
 		
-		random_state = {
-			limit = {
-				state = 671
-			}
+		671 = {
 			create_unit = {
 			    division = "name = \"1 Hanoi Minpei\" division_template = \"Hanoi Minpei\" start_experience_factor = 0.5 start_equipment_factor = 0.7"
 			    owner = PREV
@@ -2025,9 +2022,8 @@ country_event = {
 					tag = SHX
 				}
 			}
-			every_country = {
+			every_allied_country = {
 				limit = {
-					is_ally_with = ROOT
 					has_war_with = SHX
 				}
 				white_peace = {
@@ -2141,9 +2137,8 @@ country_event = {
 					tag = SHX
 				}
 			}
-			every_country = {
+			every_allied_country = {
 				limit = {
-					is_ally_with = ROOT
 					has_war_with = SHX
 				}
 				white_peace = {
@@ -3641,10 +3636,10 @@ country_event = {
 	option = { 
 		name = SEA_japan_foreign_policy.58.a
 
-		every_state = {
+		CHI = {
+		every_core_state = {
 			limit = {
 				is_fully_controlled_by = FROM
-				is_core_of = CHI
 				NOT = {
 					is_owned_by = FROM
 					is_owned_by = ROOT
@@ -3668,13 +3663,14 @@ country_event = {
 			set_state_controller_to = ROOT
 			add_claim_by = ROOT
 		}
+		}
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		every_state = {
+		FROM = {
+		every_owned_state = {
 			limit = {
 				is_fully_controlled_by = FROM
-				is_owned_by = FROM
 				is_core_of = CHI
 				NOT = {
 					is_owned_by = ROOT
@@ -3697,6 +3693,7 @@ country_event = {
 			ROOT = {
 				transfer_state = PREV
 			}
+		}
 		}
 		
 
@@ -3776,9 +3773,8 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		every_state = {
+		every_core_state = {
 			limit = {
-				is_core_of = ROOT
 				is_controlled_by = JAP
 			}
 			set_state_controller_to = ROOT
@@ -3895,12 +3891,13 @@ country_event = {
 							}	
 						}
 					}
-					every_state = {
+					BRM = {
+					every_core_state = {
 						limit = {
-							is_core_of = BRM
 							has_state_flag = is_state_that_should_go_to_japanese_burma_flag
 						}
-						set_state_controller_to = PREV
+						set_state_controller_to = PREV.PREV
+					}
 					}
 				}
 				
@@ -3985,12 +3982,13 @@ country_event = {
 							}	
 						}
 					}
-					every_state = {
+					BRM = {
+					every_core_state = {
 						limit = {
-							is_core_of = BRM
 							has_state_flag = is_state_that_should_go_to_japanese_burma_flag
 						}
-						set_state_controller_to = PREV
+						set_state_controller_to = PREV.PREV
+					}
 					}
 				}
 			}
@@ -4071,12 +4069,13 @@ country_event = {
 							}	
 						}
 					}
-					every_state = {
+					BRM = {
+					every_core_state = {
 						limit = {
-							is_core_of = BRM
 							has_state_flag = is_state_that_should_go_to_japanese_burma_flag
 						}
-						set_state_controller_to = PREV
+						set_state_controller_to = PREV.PREV
+					}
 					}
 				}
 			}
@@ -4183,12 +4182,13 @@ country_event = {
 								}	
 							}
 						}
-						every_state = {
+						BRM = {
+						every_core_state = {
 							limit = {
-								is_core_of = BRM
 								has_state_flag = is_state_that_should_go_to_japanese_burma_flag
 							}
-							set_state_controller_to = PREV
+							set_state_controller_to = PREV.PREV
+						}
 						}
 					}
 					
@@ -4273,12 +4273,13 @@ country_event = {
 								}	
 							}
 						}
-						every_state = {
+						BRM = {
+						every_core_state = {
 							limit = {
-								is_core_of = BRM
 								has_state_flag = is_state_that_should_go_to_japanese_burma_flag
 							}
-							set_state_controller_to = PREV
+							set_state_controller_to = PREV.PREV
+						}
 						}
 					}
 				}
@@ -4359,12 +4360,13 @@ country_event = {
 								}	
 							}
 						}
-						every_state = {
+						BRM = {
+						every_core_state = {
 							limit = {
-								is_core_of = BRM
 								has_state_flag = is_state_that_should_go_to_japanese_burma_flag
 							}
-							set_state_controller_to = PREV
+							set_state_controller_to = PREV.PREV
+						}
 						}
 					}
 				}
@@ -4546,10 +4548,7 @@ country_event = {
 					transfer_troops = yes
 				}	
 			}	
-			every_state = {
-				limit = {
-					is_core_of = ROOT
-				}
+			every_core_state = {
 				add_core_of = RNG
 			}
 		}
@@ -4600,11 +4599,10 @@ country_event = {
 			transfer_troops = yes
 		}	
 			
-		every_state = {
-			limit = {
-				is_core_of = FROM
-			}
+		FROM = {
+		every_core_state = {
 			add_core_of = ROOT
+		}
 		}
 
 	}
@@ -5509,12 +5507,14 @@ country_event = {
 						}	
 					}
 				}
-				every_state = {
+				PHI = {
+				every_core_state = {
 					limit = {
 						is_core_of = PHI
 						is_controlled_by = JAP
 					}
-					set_state_controller_to = PREV
+					set_state_controller_to = PREV.PREV
+				}
 				}
 			}
 			
@@ -5593,12 +5593,13 @@ country_event = {
 						}	
 					}
 				}
-				every_state = {
+				PHI = {
+				every_core_state = {
 					limit = {
-						is_core_of = PHI
 						is_controlled_by = JAP
 					}
-					set_state_controller_to = PREV
+					set_state_controller_to = PREV.PREV
+				}
 				}
 			}
 		}
@@ -5673,12 +5674,13 @@ country_event = {
 						}	
 					}
 				}
-				every_state = {
+				PHI = {
+				every_core_state = {
 					limit = {
-						is_core_of = PHI
 						is_controlled_by = JAP
 					}
-					set_state_controller_to = PREV
+					set_state_controller_to = PREV.PREV
+				}
 				}
 			}
 		}
@@ -5811,9 +5813,9 @@ country_event = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			every_country = {
+			FROM = {
+			every_enemy_country = {
 				limit = {
-					has_war_with = FROM
 					OR = {
 						original_tag = ROOT
 						is_in_faction_with = ROOT
@@ -5821,6 +5823,7 @@ country_event = {
 					}
 				}
 				white_peace = FROM
+			}
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -6529,15 +6532,12 @@ country_event = {
 				annex_country = {
 					target = FROM
 					transfer_troops = yes
-				}	
-				every_state = {
-					limit = {
-						is_core_of = ROOT
-					}
+				}
+			}	
+				every_core_state = {
 					add_compliance = 25
 					add_extra_state_shared_building_slots = 1
 				}
-			}
 		}
 		
 	}
@@ -9204,10 +9204,7 @@ country_event = {
 					transfer_troops = yes
 				}	
 			}	
-			every_state = {
-				limit = {
-					is_core_of = ROOT
-				}
+			every_core_state = {
 				add_core_of = MAN
 			}
 		}
@@ -9263,11 +9260,10 @@ country_event = {
 			transfer_troops = yes
 		}	
 			
-		every_state = {
-			limit = {
-				is_core_of = FROM
-			}
+		FROM = {
+		every_core_state = {
 			add_core_of = ROOT
+		}
 		}
 
 		FROM = {
@@ -10816,10 +10812,9 @@ country_event = {
 						original_tag = JAP
 						has_government = fascism
 					}
-					random_state = {
+					random_controlled_state = {
 						limit = {
 							is_core_of = JAP
-							is_controlled_by = PREV
 						}
 						create_unit = {
 						    division = "name = \"14. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
@@ -10839,10 +10834,9 @@ country_event = {
 						}
 					}
 				}
-				random_state = {
+				random_controlled_state = {
 					limit = {
 						is_core_of = JAP
-						is_controlled_by = PREV
 					}
 					create_unit = {
 					    division = "name = \"18. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
@@ -10861,10 +10855,9 @@ country_event = {
 					    owner = PREV
 					}
 				}
-				random_state = {
+				random_controlled_state = {
 					limit = {
 						is_core_of = JAP
-						is_controlled_by = PREV
 					}
 					create_unit = {
 					    division = "name = \"22. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
@@ -11363,10 +11356,9 @@ country_event = {
 						original_tag = JAP
 						has_government = fascism
 					}
-					random_state = {
+					random_controlled_state = {
 						limit = {
 							is_core_of = JAP
-							is_controlled_by = PREV
 						}
 						create_unit = {
 						    division = "name = \"14. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
@@ -11386,10 +11378,9 @@ country_event = {
 						}
 					}
 				}
-				random_state = {
+				random_controlled_state = {
 					limit = {
 						is_core_of = JAP
-						is_controlled_by = PREV
 					}
 					create_unit = {
 					    division = "name = \"18. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
@@ -11408,10 +11399,9 @@ country_event = {
 					    owner = PREV
 					}
 				}
-				random_state = {
+				random_controlled_state = {
 					limit = {
 						is_core_of = JAP
-						is_controlled_by = PREV
 					}
 					create_unit = {
 					    division = "name = \"22. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"

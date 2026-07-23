@@ -1215,11 +1215,10 @@ country_event = {
 
 	option = {
 		name = mtg_usa_civil_war_democrats.11.a
-		random_owned_state = {
+		random_owned_controlled_state = {
 			limit = {
 				not = { is_csa_state = yes }
 				is_core_of = ROOT
-				is_controlled_by = ROOT
 				not = {
 					has_state_flag = citizen_militia
 				}
@@ -1316,10 +1315,9 @@ country_event = {
 
 	option = {
 		name = mtg_usa_civil_war_democrats.15.a
-		random_owned_state = {
+		random_owned_controlled_state = {
 			limit = {
 				not = { is_csa_state = yes }
-				is_controlled_by = ROOT
 				arms_factory > 0
 			}
 			remove_building = {
@@ -1327,10 +1325,9 @@ country_event = {
 				level = 1
 			}
 		}
-		random_owned_state = {
+		random_owned_controlled_state = {
 			limit = {
 				is_csa_state = yes
-				is_controlled_by = ROOT
 				free_building_slots = {
 					building = arms_factory
 					size > 0
@@ -1364,10 +1361,9 @@ country_event = {
 
 	option = {
 		name = mtg_usa_civil_war_democrats.16.a
-		random_owned_state = {
+		random_owned_controlled_state = {
 			limit = {
 				not = { is_csa_state = yes }
-				is_controlled_by = ROOT
 				industrial_complex > 0
 			}
 			remove_building = {
@@ -1375,10 +1371,9 @@ country_event = {
 				level = 1
 			}
 		}
-		random_owned_state = {
+		random_owned_controlled_state = {
 			limit = {
 				is_csa_state = yes
-				is_controlled_by = ROOT
 				free_building_slots = {
 					building = industrial_complex
 					size > 0
@@ -4629,9 +4624,9 @@ country_event = {
 	option = { #British Administration
 		name = mtg_usa_hmm.1.a
 
-			every_state = {
+			CHI = {
+			every_core_state = {
 				limit = {
-					is_core_of = CHI
 					NOT = {
 						state = 326
 						state = 729
@@ -4639,17 +4634,16 @@ country_event = {
 				}
 			transfer_state_to = ENG
 			}
-			every_state = {
-				limit = {
-					is_core_of = KOR
-				}
+			}
+			KOR = {
+			every_core_state = {
 			transfer_state_to = ENG
 			}
-			every_state = {
-				limit = {
-					is_core_of = SIA
-				}
+			}
+			SIA = {
+			every_core_state = {
 			transfer_state_to = ENG
+			}
 			}
 
 		hidden_effect = {
@@ -4661,9 +4655,9 @@ country_event = {
 
 	option = { #French Administration
 		name = mtg_usa_hmm.1.b
-			every_state = {
+		CHI = {
+			every_core_state = {
 				limit = {
-					is_core_of = CHI
 					NOT = {
 						state = 326
 						state = 729
@@ -4671,19 +4665,18 @@ country_event = {
 				}
 			transfer_state_to = FRA
 			}
-			every_state = {
-				limit = {
-					is_core_of = KOR
-				}
+		}
+		KOR = {
+			every_core_state = {
 			transfer_state_to = FRA
 			}
+		}
 
-			every_state = {
-				limit = {
-					is_core_of = SIA
-				}
+		SIA = {
+			every_core_state = {
 			transfer_state_to = FRA	
 			}
+		}
 
 
 		hidden_effect = {
@@ -4717,22 +4710,20 @@ country_event = {
 	option = { #British Administration
 		name = mtg_usa_hmm.2.a
 
-			every_state = {
-				limit = {
-					is_core_of = JAP
-				}
+		JAP = {
+			every_core_state = {
 			transfer_state_to = ENG
 			}			
+		}
 	}
 
 	option = { #French Administration
 		name = mtg_usa_hmm.2.b
-			every_state = {
-				limit = {
-					is_core_of = JAP
-				}
+		JAP = {
+			every_core_state = {
 			transfer_state_to = FRA
 			}	
+		}
 	}
 
 	option = { #American Administration (Status Quo)

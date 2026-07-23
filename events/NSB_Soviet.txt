@@ -11071,10 +11071,8 @@ country_event = {
 	is_triggered_only = yes
 	immediate = {
 		hidden_effect = {
-			every_country = {
-				limit = {
-					original_tag = SOV
-				}
+			every_country_with_original_tag = {
+   				original_tag_to_check = SOV
 				every_owned_state = {
 					limit = { is_core_of = UKR }
 					UKR = { transfer_state = PREV }
@@ -11864,9 +11862,10 @@ country_event = {
 					}
 					modifier = {
 						factor = 0.25
-						any_state = {
-							is_core_of = CRI
+						CRI = {
+						any_core_state = {
 							is_controlled_by = SOV
+						}
 						}
 					}
 					modifier = {
@@ -11887,9 +11886,10 @@ country_event = {
 					}
 					modifier = {
 						factor = 0.25
-						any_state = {
-							is_core_of = KAR
+						KAR = {
+						any_core_state = {
 							is_controlled_by = SOV
+						}
 						}
 					}
 					modifier = {
@@ -12045,9 +12045,10 @@ country_event = {
 					}
 					modifier = {
 						factor = 0.25
-						any_state = {
-							is_core_of = DAG
+						DAG = {
+						any_core_state = {
 							is_controlled_by = SOV
+						}
 						}
 					}
 					modifier = {
@@ -12068,9 +12069,10 @@ country_event = {
 					}
 					modifier = {
 						factor = 0.25
-						any_state = {
-							is_core_of = CIN
+						CIN = {
+						any_core_state = {
 							is_controlled_by = SOV
+						}
 						}
 					}
 					modifier = {
@@ -12091,9 +12093,10 @@ country_event = {
 					}
 					modifier = {
 						factor = 0.25
-						any_state = {
-							is_core_of = ABK
+						ABK = {
+						any_core_state = {
 							is_controlled_by = SOV
+						}
 						}
 					}
 					modifier = {
@@ -12116,9 +12119,10 @@ country_event = {
 					}
 					modifier = {
 						factor = 0.25
-						any_state = {
-							is_core_of = KOM
+						KOM = {
+						any_core_state = {
 							is_controlled_by = SOV
+						}
 						}
 					}
 					modifier = {
@@ -12139,9 +12143,10 @@ country_event = {
 					}
 					modifier = {
 						factor = 0.25
-						any_state = {
-							is_core_of = NEN
+						NEN = {
+						any_core_state = {
 							is_controlled_by = SOV
+						}
 						}
 					}
 					modifier = {
@@ -12164,9 +12169,10 @@ country_event = {
 					}
 					modifier = {
 						factor = 0.25
-						any_state = {
-							is_core_of = KHI
+						KHI = {
+						any_core_state = {
 							is_controlled_by = SOV
+						}
 						}
 					}
 					modifier = {
@@ -12187,9 +12193,10 @@ country_event = {
 					}
 					modifier = {
 						factor = 0.25
-						any_state = {
-							is_core_of = BUK
+						BUK = {
+						any_core_state = {
 							is_controlled_by = SOV
+						}
 						}
 					}
 					modifier = {
@@ -12210,9 +12217,10 @@ country_event = {
 					}
 					modifier = {
 						factor = 0
-						any_state = {
-							is_core_of = KAZ
+						KAZ = {
+						any_core_state = {
 							is_controlled_by = SOV
+						}
 						}
 					}
 					modifier = {
@@ -12233,9 +12241,10 @@ country_event = {
 					}
 					modifier = {
 						factor = 0
-						any_state = {
-							is_core_of = UZB
+						UZB = {
+						any_core_state = {
 							is_controlled_by = SOV
+						}
 						}
 					}
 					modifier = {
@@ -12256,9 +12265,10 @@ country_event = {
 					}
 					modifier = {
 						factor = 0.25
-						any_state = {
-							is_core_of = KKP
+						KKP = {
+						any_core_state = {
 							is_controlled_by = SOV
+						}
 						}
 					}
 					modifier = {
@@ -12279,9 +12289,10 @@ country_event = {
 					}
 					modifier = {
 						factor = 0.25
-						any_state = {
-							is_core_of = TMS
+						TMS = {
+						any_core_state = {
 							is_controlled_by = SOV
+						}
 						}
 					}
 					modifier = {
@@ -12302,9 +12313,10 @@ country_event = {
 					}
 					modifier = {
 						factor = 0.25
-						any_state = {
-							is_core_of = KYR
+						KYR = {
+						any_core_state = {
 							is_controlled_by = SOV
+						}
 						}
 					}
 					modifier = {
@@ -12325,9 +12337,10 @@ country_event = {
 					}
 					modifier = {
 						factor = 0.25
-						any_state = {
-							is_core_of = TAJ
+						TAJ = {
+						any_core_state = {
 							is_controlled_by = SOV
+						}
 						}
 					}
 					modifier = {
@@ -12356,18 +12369,16 @@ country_event = {
 	is_triggered_only = yes
 	immediate = {
 		hidden_effect = {
-			every_country = {
-				limit = {
-					original_tag = SOV
-				}
+			every_country_with_original_tag = {
+   				original_tag_to_check = SOV
 				every_owned_state = {
 					limit = { is_core_of = var:SOV.SOV_nationalist_country }
 					var:SOV.SOV_nationalist_country = { transfer_state = PREV }
 				}
 			}
 			# Capture any Stalinist soldiers in our territory
-			every_state = {
-				limit = { is_owned_by = var:SOV.SOV_nationalist_country}
+			var:SOV.SOV_nationalist_country = {
+			every_owned_state = {
 				SOS = { 
 					delete_unit = { 
 						state = PREV 
@@ -12375,7 +12386,6 @@ country_event = {
 					}
 				}
 			}
-			var:SOV.SOV_nationalist_country  = {
 				division_template = {
 				    name = "Resistance Fighters"
 					is_locked = yes

@@ -1014,11 +1014,10 @@ country_event = {
 				}
 				set_rule = { can_join_factions = yes }
 			}
-			every_country = {
-				limit = {
-					is_subject_of = CHI
-				}
+			CHI = {
+			every_subject_country = {
 				CHI = { add_to_faction = PREV }
+			}
 			}
 		}
 		IF = {
@@ -1492,11 +1491,10 @@ country_event = {
 				}
 				set_rule = { can_join_factions = yes }
 			}
-			every_country = {
-				limit = {
-					is_subject_of = CHI
-				}
+			CHI = {
+			every_subject_country = {
 				CHI = { add_to_faction = PREV }
+			}
 			}
 		}
 		IF = {

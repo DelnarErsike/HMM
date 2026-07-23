@@ -425,9 +425,9 @@ country_event = {
 
 			add_political_power = -75		
 			add_named_threat = { threat = 5 name = GER_fate_of_yugoslavia }
-			every_country = {
+			YUG = {
+			every_subject_country = {
 				limit = {
-					is_subject_of = YUG
 					OR = {
 						original_tag = BOS
 						original_tag = HRZ
@@ -441,6 +441,7 @@ country_event = {
 					}
 				}
 				GER = { annex_country = { target = PREV transfer_troops = no } }
+			}
 			}
 			annex_country = { target = YUG transfer_troops = no }
 

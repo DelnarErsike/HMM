@@ -2401,7 +2401,7 @@ focus_tree = {
             }
 
             hidden_effect = {
-                every_country = {
+                every_subject_country = {
                     limit = {
                         OR = {
                             tag = PSH
@@ -2422,7 +2422,6 @@ focus_tree = {
                             tag = BLC
                         }
                         exists = yes
-                        is_subject_of = ROOT
                     }
                     add_ideas = idea_RAJ_central_mughal_court
                 }
@@ -2680,7 +2679,7 @@ focus_tree = {
             }
             add_ideas = BRA_road_investment
             add_ideas = BRA_rail_investment
-            random_owned_state = {
+            random_owned_controlled_state = {
                 limit = {
                     is_fully_controlled_by = ROOT
                     free_building_slots = {
@@ -2696,7 +2695,7 @@ focus_tree = {
                     instant_build = yes
                 }
             }
-            random_owned_state = {
+            random_owned_controlled_state = {
                 limit = {
                     is_fully_controlled_by = ROOT
                     free_building_slots = {
@@ -2746,12 +2745,11 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_POLITICAL}
 
         completion_reward = {
-            every_state = {
-                limit = {
-                    is_core_of = AFG
-                }
+            AFG = {
+            every_core_state = {
                 add_core_of = ROOT
             }            
+            }
         }
     }
 
@@ -4001,9 +3999,8 @@ focus_tree = {
             }
 
 
-            every_country = {
+            every_subject_country = {
                 limit = {
-                    is_subject_of = ROOT
                     is_raj_releasable = yes
                 }
                 add_ideas = idea_RAJ_princely_autonomy
@@ -11787,9 +11784,8 @@ focus_tree = {
                     }
                 }
                 else = { hidden_effect = { set_country_flag = RAJ_was_not_subject_of_eng } }
-                    every_country = {
+                    every_enemy_country = {
                         limit = {
-                            has_war_with = RAJ
                             NOT = {
                                 RAJ = {
                                     any_owned_state = {
@@ -12055,10 +12051,7 @@ focus_tree = {
 
                 }
 
-                random_state = { #this used to be a part of the for loop by mistake, leading to the funniest bug report i have ever read: "notice there are 34 newly spawned tank divisions" 
-                    limit = {
-                        is_controlled_by = PREV
-                    }
+                random_controlled_state = { #this used to be a part of the for loop by mistake, leading to the funniest bug report i have ever read: "notice there are 34 newly spawned tank divisions" 
                     create_unit = {
                         division = "name = \"Royal Tank Division\" division_template = \"Royal Tank Division\" start_experience_factor = 0.2 start_equipment_factor = 1 start_manpower_factor = 1"
                         owner = var:RAJ.revolter_tag

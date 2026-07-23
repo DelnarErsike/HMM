@@ -3742,10 +3742,7 @@ SOV_propaganda_campaigns = {
 					}
 				}
 				hidden_effect = {
-					every_country = {
-						limit = {
-							is_subject_of = ROOT
-						}
+					every_subject_country = {
 						country_event = NSB_soviet_propaganda_capmaign_events.1
 					}
 				}
@@ -12755,9 +12752,10 @@ SOV_great_patriotic_war = {
 		visible = {
 			has_country_flag = SOV_scorched_earth
 			NOT = { has_country_flag = SOV_order_227_flag }
-			any_of = {
-				array = BLR.core_states
-				var:v = { is_controlled_by = SOV }
+			BLR = {
+				any_core_state = {
+					is_controlled_by = SOV
+				}
 			}
 		}
 
@@ -12766,15 +12764,16 @@ SOV_great_patriotic_war = {
 				type = support_equipment_1
 				amount = -50
 			}
-			every_state = {
+			BLR = {
+			every_core_state = {
 				limit = {
-					is_core_of = BLR
 					is_controlled_by = SOV
 				}
 				damage_building = {
 					type = infrastructure
 					damage = 3
 				}
+			}
 			}
 		}
 
@@ -12803,9 +12802,10 @@ SOV_great_patriotic_war = {
 		fire_only_once = yes
 		visible = {
 			has_country_flag = SOV_scorched_earth
-			any_of = {
-				array = UKR.core_states
-				var:v = { is_controlled_by = SOV }
+			UKR = {
+				any_core_state = {
+					is_controlled_by = SOV
+				}
 			}
 		}
 
@@ -12814,15 +12814,16 @@ SOV_great_patriotic_war = {
 				type = support_equipment_1
 				amount = -75
 			}
-			every_state = {
+			UKR = {
+			every_core_state = {
 				limit = {
-					is_core_of = UKR
 					is_controlled_by = SOV
 				}
 				damage_building = {
 					type = infrastructure
 					damage = 3
 				}
+			}
 			}
 		}
 

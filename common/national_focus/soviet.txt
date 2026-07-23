@@ -1156,10 +1156,7 @@ focus_tree = {
 				custom_effect_tooltip = SOV_found_the_comecon_program_tt
 				hidden_effect = {
 					add_to_tech_sharing_group = SOV_comecon
-					every_country = {
-						limit = {
-							is_subject_of = ROOT
-						}
+					every_subject_country = {
 						add_to_tech_sharing_group = SOV_comecon
 					}
 				}
@@ -1221,10 +1218,7 @@ focus_tree = {
 				custom_effect_tooltip = SOV_found_the_comecon_program_tt
 				hidden_effect = {
 					add_to_tech_sharing_group = SOV_common_economic_space
-					every_country = {
-						limit = {
-							is_subject_of = ROOT
-						}
+					every_subject_country = {
 						add_to_tech_sharing_group = SOV_comecon
 					}
 				}
@@ -4457,7 +4451,7 @@ focus_tree = {
 				}
 			}
 			else = { # If Chelyabinsk not available, then 1 Mil elsewhere
-				random_owned_state = {
+				random_owned_controlled_state = {
 					limit = {
 						is_fully_controlled_by = ROOT
 						arms_factory > 1
@@ -7237,7 +7231,7 @@ focus_tree = {
 						}
 					}
 				}
-				random_owned_state = {
+				random_owned_controlled_state = {
 					limit = {
 						OR = {
 							has_state_category = town #Developed Rural Region
@@ -7276,7 +7270,7 @@ focus_tree = {
 						}
 					}
 				}
-				random_owned_state = {
+				random_owned_controlled_state = {
 					limit = {
 						OR = {
 							has_state_category = town #Developed Rural Region
@@ -7308,7 +7302,7 @@ focus_tree = {
 						}
 					}
 				}
-				random_owned_state = {
+				random_owned_controlled_state = {
 					limit = {
 						is_fully_controlled_by = ROOT
 						free_building_slots = {
@@ -9532,8 +9526,7 @@ focus_tree = {
 			add_to_variable = { SOV_factionalism_overlord_trade_cost_factor = -0.10 } 
 			add_to_variable = { SOV_factionalism_popularity_stability_cost_factor = 0.10 } 
 			custom_effect_tooltip = SOV_international_union_of_soviet_republics_tt 
-			every_country = {
-				limit = { is_subject_of = ROOT }
+			every_subject_country = {
 				add_ideas = { SOV_puppet_international_of_soviet_republics_idea }
 				custom_effect_tooltip = SOV_international_union_of_soviet_republics_puppet_tt
 				hidden_effect = {
@@ -15034,11 +15027,10 @@ ai_will_do = {
 					has_completed_focus = SOV_the_gobi_gambit
 					country_exists = SIK
 				}
-				every_state = { #Set cores for SIK
-					limit = {
-						is_core_of = CHI
-					}
+				CHI = {
+				every_core_state = { #Set cores for SIK
 					add_core_of = SIK
+				}
 				}
 			}
 		}
@@ -15096,7 +15088,6 @@ ai_will_do = {
 				limit = {
 					is_in_faction_with = ROOT
 					SOV_is_chinese_tag = yes
-					is_in_faction_with = ROOT
 				}
 				hidden_effect = {
 					country_event = NSB_soviet_foreign_politics_events.251
@@ -15291,7 +15282,6 @@ ai_will_do = {
 				limit = {
 					is_in_faction_with = ROOT
 					SOV_is_chinese_tag = yes
-					is_in_faction_with = ROOT
 				}
 				hidden_effect = {
 					country_event = NSB_soviet_foreign_politics_events.252

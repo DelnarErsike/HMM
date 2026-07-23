@@ -4345,7 +4345,7 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
 					free_building_slots = {
@@ -6117,7 +6117,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_ideas = export_focus
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
 					NOT = { has_state_flag = BUL_appeal_to_european_capitalists_flag }
@@ -6130,7 +6130,7 @@ focus_tree = {
 				}
 				set_state_flag = BUL_appeal_to_european_capitalists_flag
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
 					NOT = { has_state_flag = BUL_appeal_to_european_capitalists_flag }
@@ -6143,7 +6143,7 @@ focus_tree = {
 				}
 				set_state_flag = BUL_appeal_to_european_capitalists_flag
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
 					NOT = { has_state_flag = BUL_appeal_to_european_capitalists_flag }

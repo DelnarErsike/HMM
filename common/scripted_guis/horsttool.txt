@@ -367,12 +367,9 @@ st_country_powers = {
 			if = { limit = { check_variable = { ROOT.target = ROOT.taker } } }
 			else={
 				var:ROOT.target = {
-					var:ROOT.taker = {
-						#every_state = { limit = { is_core_of = var:ROOT.target} add_core_of = var:ROOT.taker}
-							every_state = { limit = { is_core_of = var:ROOT.target } add_core_of = var:ROOT.taker }
-						}
-					}
+					every_core_state = { add_core_of = var:ROOT.taker }
 				}
+			}
 				
 			ROOT = {
 				for_each_scope_loop = {
@@ -528,9 +525,8 @@ st_country_powers = {
 				var:ROOT.target = {
 					var:ROOT.taker = {
 						annex_country = { target = PREV transfer_troops = yes }
-						every_state = { 
-							limit = { 
-								is_owned_by = var:ROOT.taker 
+						every_owned_state = { 
+							limit = {
 								is_core_of = var:ROOT.target
 							}
 							add_compliance = 80

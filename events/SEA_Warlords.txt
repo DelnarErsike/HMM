@@ -629,11 +629,8 @@ country_event = {
 			}
 		}
 
-		random_owned_state = {
-			limit = {
-				state = 1042
-				is_controlled_by = ROOT
-			}
+		random_owned_controlled_state = {
+			prioritize = { 1042 }
 			create_unit = {
 			    division = "name = \"Kuomintang Volunteer Division\" division_template = \"Kuomintang Volunteers\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
 			    owner = ROOT
@@ -2459,9 +2456,8 @@ country_event = {
 			    tag = GDC
 			}
 		}
-		every_country = {
+		every_allied_country = {
 			limit = {
-				is_ally_with = ROOT
 				has_war_with = GDC
 			}
 			white_peace = {

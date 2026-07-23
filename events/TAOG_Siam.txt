@@ -881,20 +881,20 @@ country_event = {
 					has_variable = SIA_demand_the_return_of_lost_territory_subject #I am an overlord
 				}
 
-				every_state = {
+				var:SIA_demand_the_return_of_lost_territory_subject = {
+				every_controlled_state = {
 					limit = {
 						is_in_array = { array = var:SIA_demand_the_return_of_lost_territory_subject.SIA_demand_the_return_of_lost_territory_states value = THIS }
-						is_controlled_by = var:SIA_demand_the_return_of_lost_territory_subject
 					}
 					transfer_state_to = SIA
+				}
 				}
 				
 			}
 
-			every_state = {
+			every_controlled_state = {
 				limit = {
 					is_in_array = { array = ROOT.SIA_demand_the_return_of_lost_territory_states value = THIS }
-					is_controlled_by = ROOT
 				}
 				transfer_state_to = SIA
 			}
