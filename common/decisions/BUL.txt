@@ -4566,19 +4566,19 @@ BUL_macedonian_revolutionary_organizations = {
 		}
 
 		remove_effect = {
-			every_controlled_state = {
+			every_state = {
 				limit = {
 					BUL_is_macedonian_state = yes
 				}
-				add_dynamic_modifier = { modifier = widespread_bulgarian_sentiment_02 }
-			}
-			every_controlled_state = {
-				limit = {
-					BUL_is_macedonian_state = yes
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_dynamic_modifier = { modifier = widespread_bulgarian_sentiment_02 }
 				}
-				add_dynamic_modifier = { modifier = widespread_bulgarian_sentiment_01 }
-				hidden_effect = {
-					controller = { country_event = bftb_bulgaria_imro.2 }
+				else = {
+					add_dynamic_modifier = { modifier = widespread_bulgarian_sentiment_01 }
+					hidden_effect = {
+						controller = { country_event = bftb_bulgaria_imro.2 }
+					}
 				}
 			}
 
