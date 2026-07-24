@@ -50,7 +50,7 @@ DIPLOMACY_GUARANTEE_ENABLE_TRIGGER = {
 		}
 		always = yes
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_guarantees
@@ -59,7 +59,7 @@ DIPLOMACY_GUARANTEE_ENABLE_TRIGGER = {
 		}
 		always = yes # Handled by game logic.
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_guarantees
@@ -71,7 +71,7 @@ DIPLOMACY_GUARANTEE_ENABLE_TRIGGER = {
 			has_government = FROM
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_guarantees
@@ -973,7 +973,7 @@ DIPLOMACY_MILACC_ENABLE_TRIGGER = {
 		}
 		always = yes
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_access
@@ -985,7 +985,7 @@ DIPLOMACY_MILACC_ENABLE_TRIGGER = {
 			has_government = FROM
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_access
@@ -1008,7 +1008,7 @@ DIPLOMACY_OFFER_MILACC_ENABLE_TRIGGER = {
 		}
 		always = yes
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_access
@@ -1020,7 +1020,7 @@ DIPLOMACY_OFFER_MILACC_ENABLE_TRIGGER = {
 			has_government = FROM
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_access
@@ -1122,7 +1122,7 @@ DIPLOMACY_DOCKING_RIGHTS_ENABLE_TRIGGER = {
 		}
 		always = yes
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_access
@@ -1134,7 +1134,7 @@ DIPLOMACY_DOCKING_RIGHTS_ENABLE_TRIGGER = {
 			has_government = FROM
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_access
@@ -1157,7 +1157,7 @@ DIPLOMACY_OFFER_DOCKING_RIGHTS_ENABLE_TRIGGER = {
 		}
 		always = yes
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_access
@@ -1169,7 +1169,7 @@ DIPLOMACY_OFFER_DOCKING_RIGHTS_ENABLE_TRIGGER = {
 			has_government = FROM
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_access
@@ -1192,7 +1192,7 @@ DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
 		}
 		always = yes
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_lend_lease
@@ -1201,7 +1201,7 @@ DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
 		}
 		always = yes #handled by game logic, see above
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_lend_lease
@@ -1213,7 +1213,7 @@ DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
 			has_government = FROM
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_lend_lease
@@ -1225,7 +1225,7 @@ DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
 			is_in_faction_with = FROM
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_lend_lease
@@ -1248,7 +1248,7 @@ DIPLOMACY_INCOMING_LEND_LEASE_ENABLE_TRIGGER = {
 		}
 		always = yes
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_lend_lease
@@ -1257,7 +1257,7 @@ DIPLOMACY_INCOMING_LEND_LEASE_ENABLE_TRIGGER = {
 		}
 		always = yes #handled by game logic, see above
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_lend_lease
@@ -1269,7 +1269,7 @@ DIPLOMACY_INCOMING_LEND_LEASE_ENABLE_TRIGGER = {
 			has_government = FROM
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_lend_lease
@@ -1281,7 +1281,7 @@ DIPLOMACY_INCOMING_LEND_LEASE_ENABLE_TRIGGER = {
 			is_in_faction_with = FROM
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_lend_lease
@@ -1304,7 +1304,7 @@ DIPLOMACY_REQUEST_LICENSED_PRODUCTION_ENABLE_TRIGGER = {
 		}
 		always = yes
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_licensing
@@ -1316,7 +1316,7 @@ DIPLOMACY_REQUEST_LICENSED_PRODUCTION_ENABLE_TRIGGER = {
 			has_government = FROM
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_licensing
@@ -1328,7 +1328,7 @@ DIPLOMACY_REQUEST_LICENSED_PRODUCTION_ENABLE_TRIGGER = {
 			is_in_faction_with = FROM
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_licensing
@@ -1351,7 +1351,7 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 		}
 		always = yes
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_wargoals
@@ -1360,7 +1360,7 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 		}
 		always = yes
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_wargoals
@@ -1369,7 +1369,7 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 		}
 		threat>0.24
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_wargoals
@@ -1378,7 +1378,7 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 		}
 		threat>0.49
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_wargoals
@@ -1387,7 +1387,7 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 		}
 		threat>0.74
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_wargoals
@@ -1396,7 +1396,7 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 		}
 		threat>0.99
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_wargoals
@@ -1408,7 +1408,7 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 			always = no
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_wargoals
@@ -1420,7 +1420,7 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 			date > 1938.1.1
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_wargoals
@@ -1432,7 +1432,7 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 			date > 1939.1.1
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_wargoals
@@ -1455,7 +1455,7 @@ DIPLOMACY_BOOST_PARTY_POPULARITY_ENABLE_TRIGGER = {
 		}
 		always = yes
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_party_boosting
@@ -1467,7 +1467,7 @@ DIPLOMACY_BOOST_PARTY_POPULARITY_ENABLE_TRIGGER = {
 			FROM = { is_ai = yes }
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_party_boosting
@@ -1479,7 +1479,7 @@ DIPLOMACY_BOOST_PARTY_POPULARITY_ENABLE_TRIGGER = {
 			FROM = { is_ai = no }
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_party_boosting
@@ -1502,7 +1502,7 @@ DIPLOMACY_STAGE_COUP_ENABLE_TRIGGER = {
 		}
 		always = yes
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_coups
@@ -1514,7 +1514,7 @@ DIPLOMACY_STAGE_COUP_ENABLE_TRIGGER = {
 			FROM = { is_ai = yes }
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_coups
@@ -1617,7 +1617,7 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 			always = yes
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_volunteers
@@ -1938,7 +1938,7 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 			always = yes
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_volunteers
@@ -1971,7 +1971,7 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 			}
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_volunteers
