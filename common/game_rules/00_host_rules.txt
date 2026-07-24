@@ -283,6 +283,21 @@ multi_charge_large_caliber_gun= {
 		desc = "Multi-charge large caliber guns can be researched and built."
 	}
 }
+marine_commando_status = {
+	name = "Status of Marine Commandos"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_ignite_civil_war"
+	default = {
+		name = banned
+		text = "RBanned"
+		desc = "Marine Commandos cannot be unlocked."
+	}
+	option = {
+		name = allowed
+		text = "GAllowed"
+		desc = "Marine Commandos can be unlocked as normal."
+	}
+}
 max_submarine_tech= {
 	name = "Maximum Submarine Tech Level"
 	group = "HMM Rules"
