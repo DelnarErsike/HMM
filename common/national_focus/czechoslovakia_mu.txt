@@ -9795,10 +9795,8 @@ focus_tree = {
 			else = {
 				custom_effect_tooltip = CZE_unlock_civil_war_army_generals_tt
 				hidden_effect = {
-					every_possible_country = {
-						limit = {
-							original_tag = CZE
-						}
+					every_country_with_original_tag = {
+						original_tag_to_check = CZE
 						every_character = {
 							limit = {
 								OR = {
@@ -9806,9 +9804,7 @@ focus_tree = {
 									is_field_marshal = yes
 								}
 							}
-							set_nationality = {
-								target_country = ROOT
-							}
+							set_nationality = ROOT
 						}
 					}
 				}

@@ -15185,17 +15185,30 @@ focus_tree = {
 
 			army_experience = 25
 
-			# HMM: no Finnish support companies
-			#custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					OR = {
+						has_game_rule = {
+							rule = winter_logistics_company_status
+							option = allowed
+						}
+						has_game_rule = {
+							rule = winter_logistics_company_status
+							option = jap_only
+						}
+					}
+				}
+			custom_effect_tooltip = generic_skip_one_line_tt
 
-			#custom_effect_tooltip = FIN_winter_warfare_battalion_tt
+			custom_effect_tooltip = FIN_winter_warfare_battalion_tt
 
-			#hidden_effect = {
-			#	set_technology = {
-			#		winter_logistics_support_tech = 1
-			#		popup = no
-			#	}
-			#}
+			hidden_effect = {
+				set_technology = {
+					winter_logistics_support_tech = 1
+					popup = no
+				}
+			}
+			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 

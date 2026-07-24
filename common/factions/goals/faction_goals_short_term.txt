@@ -1098,12 +1098,11 @@ faction_goal_ensure_military_r_d = {
 		every_faction_member = {
 			if = {
 				limit = {
-					any_scientist = {
+					any_active_scientist = {
 						has_scientist_level = {
 							level > 0
 							specialization = specialization_land
 						}
-						is_active_scientist = yes
 					}
 				}
 				every_active_scientist = {
@@ -1122,12 +1121,11 @@ faction_goal_ensure_military_r_d = {
 			}
 			if = {
 				limit = {
-					any_scientist = {
+					any_active_scientist = {
 						has_scientist_level = {
 							level > 0
 							specialization = specialization_naval
 						}
-						is_active_scientist = yes
 					}
 				}
 				every_active_scientist = {
@@ -1146,12 +1144,11 @@ faction_goal_ensure_military_r_d = {
 			}
 			if = {
 				limit = {
-					any_scientist = {
+					any_active_scientist = {
 						has_scientist_level = {
 							level > 0
 							specialization = specialization_air
 						}
-						is_active_scientist = yes
 					}
 				}
 				every_active_scientist = {

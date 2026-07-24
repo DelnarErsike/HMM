@@ -1268,8 +1268,7 @@ faction_goal_marine_corps = {
 		}
 		modifier = {
 			add = 2
-			any_state = {
-				is_controlled_by = ROOT
+			any_controlled_state = {
 				is_coastal = yes
 			}
 		}
