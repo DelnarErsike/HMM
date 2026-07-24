@@ -1185,6 +1185,64 @@ DIPLOMACY_OFFER_DOCKING_RIGHTS_ENABLE_TRIGGER = {
 DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
 	if = {
 		limit = {
+			tag = FIN
+			NOT = {
+				has_game_rule = {
+					rule = finland_lend_lease_status
+					option = allowed
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = finland_lend_lease_status
+					option = banned
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = HMM_banned_by_rules
+				always = no
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					OR = {
+						has_game_rule = {
+							rule = finland_lend_lease_status
+							option = militarized_society
+						}
+						has_game_rule = {
+							rule = finland_lend_lease_status
+							option = mannerheim_militarized_society
+						}
+					}
+				}
+				has_idea = FIN_militarized_society
+			}
+			if = {
+				limit = {
+					OR = {
+						has_game_rule = {
+							rule = finland_lend_lease_status
+							option = mannerheim
+						}
+						has_game_rule = {
+							rule = finland_lend_lease_status
+							option = mannerheim_militarized_society
+						}
+					}
+				}
+				has_country_leader = {
+					ruling_only = yes
+					character = FIN_carl_mannerheim
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
 			has_game_rule = {
 				rule = allow_lend_lease
 				option = FREE

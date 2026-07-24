@@ -139,6 +139,11 @@ Finland_AC_rule = {
 		text = "GYes"
 		desc = "Finland can do its air focuses"
 	} 
+	option = {
+		name = Finland_AC_no_bonuses
+		text = "YYes, But No Air Bonuses"
+		desc = "Finland can do its air focuses, but does not get or improve the spirit from them that provides various air bonuses."
+	} 
 	default = {
 		name = Finland_no_AC
 		text = "RNo"
@@ -617,6 +622,51 @@ winter_logistics_company_status = {
 		name = allowed
 		text = "GAllowed"
 		desc = "Winter Logistics Company can be unlocked as normal."
+	}
+}
+finland_lend_lease_status = {
+	name = "When can Finland send equipment through Lend-Lease?"
+	group = "HMM Rules"
+	icon = "GFX_lend_lease"
+	option = {
+		name = banned
+		text = "RNever"
+		desc = "Finland can never lend-lease equipment to other nations."
+	}
+	option = {
+		name = mannerheim_militarized_society
+		text = "OOnly with Mannerheim & Militarized Society"
+		desc = "Finland can only lend-lease equipment to other nations if it has Mannerheim as its country leader and has the Militarized Society spirit."
+	}
+	option = {
+		name = mannerheim
+		text = "YOnly with Mannerheim"
+		desc = "Finland can only lend-lease equipment to other nations if it has Mannerheim as its country leader."
+	}
+	option = {
+		name = militarized_society
+		text = "4Only with Militarized Society"
+		desc = "Finland can only lend-lease equipment to other nations if it has the Militarized Society spirit."
+	}
+	default = {
+		name = allowed
+		text = "GUnrestricted"
+		desc = "Finland can lend-lease equipment to other nations without any special restrictions."
+	}
+}
+finland_can_kyosti_kallio_resign_early = {
+	name = "Can Kyösti Kallio Resign Early?"
+	group = "HMM Rules"
+	icon = "GFX_volunteers"
+	option = {
+		name = no
+		text = "RNo"
+		desc = "As Finland's leader, Kyösti Kallio cannot resign early to be replaced by Risto Ryti (production cap guy), and can only be replaced by him when he dies from health issues in late 1940."
+	}
+	default = {
+		name = yes
+		text = "GYes"
+		desc = "As Finland's leader, Kyösti Kallio can resign early to let Risto Ryti (production cap guy) take over early."
 	}
 }
 axis_fuel_spirit = {
