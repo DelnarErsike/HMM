@@ -11373,15 +11373,28 @@ focus_tree = {
 			add_to_variable = { FIN_finnish_army_winter_attrition_factor = -0.15 tooltip = winter_attrition_factor_tt }
 			add_to_variable = { FIN_finnish_army_supply_combat_penalties_on_core_factor = -0.15 tooltip = supply_combat_penalties_on_core_factor_tt }
 
-			# HMM: no Finnish support companies
-			#custom_effect_tooltip = FIN_winter_warfare_battalion_tt
+			if = {
+				limit = {
+					OR = {
+						has_game_rule = {
+							rule = winter_logistics_company_status
+							option = allowed
+						}
+						has_game_rule = {
+							rule = winter_logistics_company_status
+							option = fin_only
+						}
+					}
+				}
+			custom_effect_tooltip = FIN_winter_warfare_battalion_tt
 
-			#hidden_effect = {
-			#	set_technology = {
-			#		winter_logistics_support_tech = 1
-			#		popup = no
-			#	}
-			#}
+			hidden_effect = {
+				set_technology = {
+					winter_logistics_support_tech = 1
+					popup = no
+				}
+			}
+			}
 		}
 	}
 	
@@ -11863,15 +11876,22 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			# HMM: no Finnish support companies
-			#custom_effect_tooltip = FIN_long_range_patrols_battalion_tt
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = long_range_patrol_company_status
+						option = allowed
+					}
+				}
+			custom_effect_tooltip = FIN_long_range_patrols_battalion_tt
 
-			#hidden_effect = {
-			#	set_technology = {
-			#		long_range_patrol_support_tech = 1
-			#		popup = no
-			#	}
-			#}
+			hidden_effect = {
+				set_technology = {
+					long_range_patrol_support_tech = 1
+					popup = no
+				}
+			}
+			}
 		}
 	}
 	

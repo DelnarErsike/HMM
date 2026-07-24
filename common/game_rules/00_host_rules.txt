@@ -564,6 +564,46 @@ finland_simulator = {
 		desc = "Axis does not get free infantry equipment simulating lend-lease from Finland or free command power simulating the ability to expeditionary units to Finland."
 	}
 }
+long_range_patrol_company_status = {
+	name = "Status of Long Range Patrol Company"
+	group = "HMM Rules"
+	icon = "GFX_volunteers"
+	default = {
+		name = banned
+		text = "RBanned"
+		desc = "Long Range Patrol Company cannot be unlocked."
+	}
+	option = {
+		name = allowed
+		text = "GAllowed"
+		desc = "Long Range Patrol Company can be unlocked as normal."
+	}
+}
+winter_logistics_company_status = {
+	name = "Status of Winter Logistics Company"
+	group = "HMM Rules"
+	icon = "GFX_volunteers"
+	default = {
+		name = banned
+		text = "RBanned"
+		desc = "Winter Logistics Company cannot be unlocked by any country."
+	}
+	option = {
+		name = jap_only
+		text = "OAllowed (Japan Only)"
+		desc = "Winter Logistics Company can only be unlocked by Japan."
+	}
+	option = {
+		name = fin_only
+		text = "4Allowed (Finland Only)"
+		desc = "Winter Logistics Company can only be unlocked by Finland."
+	}
+	option = {
+		name = allowed
+		text = "GAllowed"
+		desc = "Winter Logistics Company can be unlocked as normal."
+	}
+}
 axis_fuel_spirit = {
 	name = "Axis Fuel Spirit"
 	group = "HMM Rules"
