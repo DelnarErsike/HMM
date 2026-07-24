@@ -13461,14 +13461,29 @@ focus_tree = {
 		}
 
 		bypass = {
-			all_state = {
-				OR = {
-					is_core_of = EST
-					is_core_of = LAT
-					is_core_of = LIT
+			EST = {
+				all_core_state = {
+					OR = {
+						is_controlled_by = ROOT
+						state = 188
+					}
 				}
-				NOT = { state = 188 }
-				is_controlled_by = ROOT
+			}
+			LAT = {
+				all_core_state = {
+					OR = {
+						is_controlled_by = ROOT
+						state = 188
+					}
+				}
+			}
+			LIT = {
+				all_core_state = {
+					OR = {
+						is_controlled_by = ROOT
+						state = 188
+					}
+				}
 			}
 		}
 		

@@ -7704,7 +7704,8 @@ country_event = {
 		}
 		IF = {
 			limit = {
-				any_state = {
+				BEL = {
+				any_owned_state = {
 					OR = {
 						state = 888
 						state = 889
@@ -7715,7 +7716,7 @@ country_event = {
 						state = 768
 						state = 769
 					}
-					is_owned_by = BEL
+				}
 				}
 			}
 			create_wargoal = {

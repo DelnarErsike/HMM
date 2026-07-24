@@ -346,10 +346,8 @@
 		available = {
 			OR = {
 				num_of_factories > 50
-				all_state = {
-					OR = {
-						NOT = { is_core_of = CHI }
-						NOT = { is_core_of = PRC }
+				CHI = {
+					all_core_state = {
 						OR = {
 							is_controlled_by = ROOT
 							CONTROLLER = { is_in_faction_with = ROOT }
@@ -5015,16 +5013,14 @@
 		}
 
 		available = {
-			all_state = { 
+			all_core_state = {
 				OR = {
-					NOT = { is_core_of = ROOT }
 					state = 729
 					state = 326
 					state = 728
 					state = 524
 					is_controlled_by = ROOT
 				}
-				
 			}
 		}
 

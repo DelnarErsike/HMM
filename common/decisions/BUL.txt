@@ -4624,7 +4624,7 @@ BUL_macedonian_revolutionary_organizations = {
 
 		cancel_trigger = {
 			NOT = {
-				any_state = {
+				any_controlled_state = {
 					BUL_is_macedonian_state = yes
 					is_fully_controlled_by = ROOT
 				}
@@ -4718,7 +4718,7 @@ BUL_macedonian_revolutionary_organizations = {
 			if = {
 				limit = {
 					NOT = {
-						any_state = {
+						any_controlled_state = {
 							BUL_is_macedonian_state = yes
 							is_fully_controlled_by = ROOT
 						}
