@@ -47,6 +47,7 @@ NZL_historical = {
 		# HMM: bonus optionals that give us more resources
 		NZL_scrap_metal_recycling
 		NZL_new_zealand_steel
+		NZL_direct_the_coal_industry
 		NZL_taranaki_oil
 		# HMM: political tree stuff for building slots
 		NZL_the_first_labor_government
