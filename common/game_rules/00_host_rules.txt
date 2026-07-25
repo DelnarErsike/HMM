@@ -323,6 +323,21 @@ max_submarine_tech= {
 		desc = "All submarine technologies are allowed."
 	}
 }
+easier_arteries_of_trade_for_allies = {
+	name = "Protect the Arteries of Trade..."
+	group = "HMM Rules"
+	icon = "GFX_volunteers"
+	option = {
+		name = no
+		text = "RShould Be Vanilla"
+		desc = "To complete the Protect the Arteries of Trade faction goal, the Allies will need to establish dominance in 10 of 16 specific sea zones, as per vanilla."
+	}
+	default = {
+		name = yes
+		text = "GShould Be Trivial for the Allies"
+		desc = "To complete the Protect the Arteries of Trade faction goal, the Allies will need to establish dominance in just one of 16 specific sea zones."
+	}
+}
 sov_boost = {
 	name = "Soviet Civ Boost"
 	group = "HMM Rules"
