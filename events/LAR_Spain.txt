@@ -233,10 +233,10 @@ country_event = {
 					retire_ideology_leader = neutrality
 					retire_ideology_leader = communism
 				}
+				SPR_manuel_azana = { set_nationality = SPD }
 				SPD = { # Remove Carlist/Falangist country leaders for new SPD tag
 					retire_ideology_leader = fascism
 					retire_ideology_leader = neutrality
-					SPR_manuel_azana = { set_nationality = SPD }
 					IF = {
 						limit = {
 							NOT = {
