@@ -185,6 +185,7 @@ technologies = {
 					original_tag = AFG
 					has_dlc = "Graveyard of Empires"
 					has_completed_focus = AFG_expand_quami_template
+					has_template = "Pashtun Levy"
 				}
 				add_units_to_division_template = {
 					template_name = "Pashtun Levy" 
@@ -688,6 +689,7 @@ technologies = {
 					has_dlc = "Thunder at Our Gates"
 					tag = ENG
 					is_ai = yes
+					has_template = "Army Headquarters"
 				}
 				add_units_to_division_template = {
 					template_name = "Army Headquarters"
@@ -766,6 +768,7 @@ technologies = {
 					original_tag = AFG
 					has_dlc = "Graveyard of Empires"
 					has_completed_focus = AFG_expand_quami_template
+					has_template = "Pashtun Levy"
 				}
 				add_units_to_division_template = {
 					template_name = "Pashtun Levy" 
@@ -924,6 +927,7 @@ technologies = {
 					has_dlc = "Thunder at Our Gates"
 					tag = FRA
 					is_ai = yes
+					has_template = "Quartier General d'Armee"
 				}
 				add_units_to_division_template = {
 					template_name = "Quartier General d'Armee"
@@ -1206,6 +1210,7 @@ technologies = {
 					original_tag = AFG
 					has_dlc = "Graveyard of Empires"
 					has_completed_focus = AFG_expand_quami_template
+					has_template = "Pashtun Levy"
 				}
 				add_units_to_division_template = {
 					template_name = "Pashtun Levy" 
@@ -1425,6 +1430,7 @@ technologies = {
 					has_dlc = "Thunder at Our Gates"
 					tag = USA
 					is_ai = yes
+					has_template = "Field Army Headquarters"
 				}
 				add_units_to_division_template = {
 					template_name = "Field Army Headquarters"
@@ -1436,6 +1442,7 @@ technologies = {
 					has_dlc = "Thunder at Our Gates"
 					tag = SOV
 					is_ai = yes
+					has_template = "Shtab Armii"
 				}
 				add_units_to_division_template = {
 					template_name = "Shtab Armii"

@@ -2892,16 +2892,9 @@ SOV_propaganda_campaigns = {
 		available = {
 			SOV_propaganda_poster_slot_available = yes
 
-			any_country = {
+			any_country_of = {
+				target = { ENG FRA GER ITA USA JAP }
 				has_government = democratic
-				OR = {
-					tag = ENG
-					tag = FRA
-					tag = GER
-					tag = ITA
-					tag = USA
-					tag = JAP
-				}
 			}
 		}
 
@@ -3148,16 +3141,9 @@ SOV_propaganda_campaigns = {
 		available = {
 			SOV_propaganda_poster_slot_available = yes
 
-			any_country = {
+			any_country_of = {
+				target = { ENG FRA GER ITA USA JAP }
 				has_government = fascism
-				OR = {
-					tag = ENG
-					tag = FRA
-					tag = GER
-					tag = ITA
-					tag = USA
-					tag = JAP
-				}
 			}
 		}
 
@@ -3737,9 +3723,7 @@ SOV_propaganda_campaigns = {
 			custom_effect_tooltip = SOV_propaganda_builders_of_communism_effect_tt
 			if = {
 				limit = {
-					any_country = {
-						is_subject_of = ROOT
-					}
+					num_subjects > 0
 				}
 				hidden_effect = {
 					every_subject_country = {

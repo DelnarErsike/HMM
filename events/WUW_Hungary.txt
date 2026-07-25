@@ -4814,8 +4814,7 @@ country_event = {
 		    	is_subject = no
 		    	AND = {
 		    		is_subject = yes
-		    		any_country = {
-		    			has_subject = ROOT
+		    		overlord = {
 		    			has_government = communism
 		    		}
 		    	}
@@ -4886,8 +4885,7 @@ country_event = {
 		    	is_subject = no
 		    	AND = {
 		    		is_subject = yes
-		    		any_country = {
-		    			has_subject = ROOT
+		    		overlord = {
 		    			has_government = communism
 		    		}
 		    	}
@@ -4941,8 +4939,7 @@ country_event = {
 		    	is_subject = no
 		    	AND = {
 		    		is_subject = yes
-		    		any_country = {
-		    			has_subject = ROOT
+		    		overlord = {
 		    			has_government = democratic
 		    		}
 		    	}

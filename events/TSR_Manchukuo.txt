@@ -640,8 +640,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				any_country = {
-					has_war_with = ROOT
+				any_enemy_country = {
 					is_major = yes
 				}
 			}
@@ -702,8 +701,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				any_country = {
-					has_war_with = ROOT
+				any_enemy_country = {
 					is_major = yes
 				}
 			}

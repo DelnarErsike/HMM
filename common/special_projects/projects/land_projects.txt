@@ -1984,13 +1984,12 @@ sp_land_large_caliber_kinetic_energy_sabot = {
 			factor = 100
 			ROOT = {
 				original_tag = GER
-				any_country = {
+				any_neighbor_country = {
 					OR = {
 						original_tag = CZE
 						original_tag = FRA
 					}
 					has_war_with = ROOT
-					is_neighbor_of = ROOT
 					any_state = {
 						any_province_building_level = {
 							province = {

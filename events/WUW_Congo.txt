@@ -3706,10 +3706,7 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		random_country = {
-			limit = {
-				has_subject = ROOT
-			}
+		overlord = {
 			add_opinion_modifier = {
 				target = ROOT
 				modifier = attempted_diplomacy_opinion_modifier
@@ -3737,10 +3734,7 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		random_country = {
-			limit = {
-				has_subject = ROOT
-			}
+		overlord = {
 			add_opinion_modifier = {
 				target = ROOT
 				modifier = threatened_us_opinion_modifier

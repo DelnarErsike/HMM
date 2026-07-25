@@ -8283,8 +8283,7 @@ BUL_align_bulgaria = {
 				is_justifying_wargoal_against = BUL
 				has_military_access_to = BUL
 			}
-			any_country = {
-				has_war_with = ROOT
+			any_enemy_country = {
 				is_neighbor_of = BUL				
 			}
 			is_subject = no

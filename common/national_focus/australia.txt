@@ -2827,13 +2827,15 @@
 				#Spawn unit in Africa
 				if = {
 					limit = {
-						any_country = {
+						273 = {
+							controller = {
 							is_in_faction_with = AST
-							controls_state = 273
+							}
 						}
-						any_country = {
+						552 = {
+							controller = {
 							is_in_faction_with = AST
-							controls_state = 552
+							}
 						}
 					}
 					load_oob = "AST_TFV_rats_africa"					
@@ -2849,13 +2851,15 @@
 			}
 			if = {
 				limit = {
-					any_country = {
+					273 = {
+						controller = {
 						is_in_faction_with = AST
-						controls_state = 273
+						}
 					}
-					any_country = {
+					552 = {
+						controller = {
 						is_in_faction_with = AST
-						controls_state = 552
+						}
 					}
 				}
 				custom_effect_tooltip = AST_rats_of_tobruk_effect_1
@@ -4512,8 +4516,8 @@
 				USA = { add_to_tech_sharing_group = us_research }
 				else = {
 					AST = { add_to_tech_sharing_group = swpi_research }
-					if = {
-						limit = { all_country = { is_in_faction_with = AST } }
+					every_country = {
+						limit = { is_in_faction_with = AST }
 						add_to_tech_sharing_group = swpi_research 
 						}
 					}

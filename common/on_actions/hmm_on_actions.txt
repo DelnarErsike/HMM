@@ -384,10 +384,14 @@ on_actions = {
 								option = on_cp_only
 							}
 						}
+						NOT = { has_country_leader_with_trait = bul_sotamarsalkka }
 					}
 					add_country_leader_trait = bul_sotamarsalkka
 				}
-				else = {
+				else_if = {
+					limit = {
+						has_country_leader_with_trait = bul_sotamarsalkka
+					}
 					remove_country_leader_trait = bul_sotamarsalkka
 				}
 				if = {
@@ -395,10 +399,14 @@ on_actions = {
 						has_global_flag = spain_simulator_enabled
 						NOT = { SPA = { is_ai = no } }
 						NOT = { SPR = { is_ai = no } }
+						NOT = { has_country_leader_with_trait = bul_caudillo }
 					}
 					add_country_leader_trait = bul_caudillo
 				}
-				else = {
+				else_if = {
+					limit = {
+						has_country_leader_with_trait = bul_caudillo
+					}
 					remove_country_leader_trait = bul_caudillo
 				}
 			}

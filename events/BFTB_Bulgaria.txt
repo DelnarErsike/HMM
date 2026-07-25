@@ -3354,9 +3354,10 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				any_country = {
-					has_war_with = BUL
+				BUL = {
+				any_enemy_country = {
 					is_in_faction_with = ROOT
+				}
 				}
 			}
 			modifier = { #We like that you condemn IMRO

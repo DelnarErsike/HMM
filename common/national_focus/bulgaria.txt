@@ -311,12 +311,8 @@ focus_tree = {
 		available = {
 			NOT = { has_government = democratic }
 			NOT = { has_idea = BUL_second_national_catastrophe }
-			any_country = {
-				OR = {
-					tag = GER
-					tag = ENG
-					tag = SOV
-				}
+			any_country_of = {
+				target = { GER ENG SOV }
 				#BUL_country_can_influence_bulgaria = yes
 				custom_trigger_tooltip = {
 					tooltip = BUL_industrial_investments_in_bulgaria_flag
@@ -2699,8 +2695,8 @@ focus_tree = {
 				}
 			}
 			else = {
-				any_country = {
-					original_tag = SPR
+				any_country_with_original_tag = {
+					original_tag_to_check = SPR
 					has_civil_war = yes
 					NOT = { has_war_with = ROOT }
 					OR = {
@@ -8061,8 +8057,8 @@ focus_tree = {
 				NOT = { has_war_with = SPA }
 			}
 			else = {
-				any_country = {
-					original_tag = SPR
+				any_country_with_original_tag = {
+					original_tag_to_check = SPR
 					has_civil_war = yes
 					NOT = { has_war_with = ROOT }
 					OR = {

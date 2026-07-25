@@ -921,14 +921,14 @@ on_actions = {
 				limit = {
 					NOT = { has_dlc = "Arms Against Tyranny"} # AAT uses separate system
 					original_tag = DEN
-					any_country = {
+					100 = {
 						OR = {
-							tag = ROOT
+							is_controlled_by = ROOT
+							controller = {
 							is_in_faction_with = ROOT
+							}
 						}
-						100 = { is_controlled_by = PREV }
 					}
-
 				}
 				country_event = { id = wtt_denmark.1 days = 1 }
 			}

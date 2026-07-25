@@ -6953,6 +6953,28 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = FIN_militarized_society
 
+			if = {
+				limit = {
+					OR = {
+						has_game_rule = {
+							rule = finland_lend_lease_status
+							option = militarized_society
+						}
+						AND = {
+							has_game_rule = {
+								rule = finland_lend_lease_status
+								option = mannerheim_militarized_society
+							}
+							has_country_leader = {
+								ruling_only = yes
+								character = FIN_carl_mannerheim
+							}
+						}
+					}
+				}
+				custom_effect_tooltip = HMM_rule_can_lend_lease_yes
+			}
+
 			hidden_effect = {
 				if = {
 					limit = {
@@ -12483,11 +12505,19 @@ focus_tree = {
 				}
 			}
 			
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = Finland_AC_rule
+						option = Finland_AC
+					}
+				}
 			effect_tooltip = {
 				add_ideas = FIN_finnish_airforce_fake
 			}
 			hidden_effect = {
 				add_dynamic_modifier = { modifier = FIN_finnish_airforce }
+			}
 			}
 		}
 	}
@@ -13046,10 +13076,18 @@ focus_tree = {
 		completion_reward = {
 			air_experience = 25
 
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = Finland_AC_rule
+						option = Finland_AC
+					}
+				}
 			custom_effect_tooltip = FIN_modify_finnish_airforce_ns_intro
 			add_to_variable = { FIN_finnish_airforce_air_weather_penalty = -0.1 tooltip = air_weather_penalty_tt }
 			add_to_variable = { FIN_finnish_airforce_air_ace_generation_chance_factor = 0.1 tooltip = air_ace_generation_chance_factor_tt }
 			add_to_variable = { FIN_finnish_airforce_air_home_defence_factor = 0.1 tooltip = air_home_defence_factor_tt }
+			}
 
 			add_doctrine_cost_reduction = {
 				name = FIN_pilot_training
@@ -13091,10 +13129,18 @@ focus_tree = {
 		completion_reward = {
 			air_experience = 35
 
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = Finland_AC_rule
+						option = Finland_AC
+					}
+				}
 			custom_effect_tooltip = FIN_modify_finnish_airforce_ns_intro
 			add_to_variable = { FIN_finnish_airforce_air_ace_generation_chance_factor = 0.1 tooltip = air_ace_generation_chance_factor_tt }
 			add_to_variable = { FIN_finnish_airforce_ace_effectiveness_factor = 0.1 tooltip = ace_effectiveness_factor_tt }
 			add_to_variable = { FIN_finnish_airforce_air_mission_efficiency = 0.05 tooltip = air_mission_efficiency_tt }
+			}
 
 			add_doctrine_cost_reduction = {
 				name = FIN_expand_air_force_academy
@@ -13162,12 +13208,20 @@ focus_tree = {
 		search_filters = {  FOCUS_FILTER_AIR_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = Finland_AC_rule
+						option = Finland_AC
+					}
+				}
 			custom_effect_tooltip = FIN_modify_finnish_airforce_ns_intro
 			add_to_variable = { FIN_finnish_airforce_naval_strike_targetting_factor = 0.1 tooltip = naval_strike_targetting_factor_tt }
 			custom_effect_tooltip = FIN_naval_airforce_ns_tt
 
 			hidden_effect = {
 				add_ideas = FIN_hidden_naval_bomber_production_ns
+			}
 			}
 
 			add_tech_bonus = {
@@ -13348,12 +13402,20 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = Finland_AC_rule
+						option = Finland_AC
+					}
+				}
 			custom_effect_tooltip = FIN_modify_finnish_airforce_ns_intro
 			add_to_variable = { FIN_finnish_airforce_air_cas_efficiency = 0.1 tooltip = air_cas_efficiency_tt }
 			custom_effect_tooltip = FIN_support_for_ground_forces_ns_tt
 
 			hidden_effect = {
 				add_ideas = FIN_hidden_cas_production_ns
+			}
 			}
 
 			add_tech_bonus = {
@@ -13488,12 +13550,20 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_AIR_XP FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = Finland_AC_rule
+						option = Finland_AC
+					}
+				}
 			custom_effect_tooltip = FIN_modify_finnish_airforce_ns_intro
 			add_to_variable = { FIN_finnish_airforce_air_superiority_efficiency = 0.1 tooltip = air_superiority_efficiency_tt }
 			custom_effect_tooltip = FIN_dominate_the_skies_ns_tt
 
 			hidden_effect = {
 				add_ideas = FIN_hidden_fighter_production_ns
+			}
 			}
 
 			add_tech_bonus = {
@@ -13647,6 +13717,18 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = FIN_support_for_ground_forces
+		offset = { # HMM: added this offset because modernize production lines is removed if we don't get full benefits from air focuses
+			x = 2
+			y = 0
+			trigger = {
+				NOT = {
+					has_game_rule = {
+						rule = Finland_AC_rule
+						option = Finland_AC
+					}
+				}
+			}
+		}
 		cost = 10
 		available = {
 			has_tech = advanced_machine_tools
@@ -13747,6 +13829,12 @@ focus_tree = {
 		cost = 10
 		available = {
 			has_tech = advanced_machine_tools
+		}
+		allow_branch = { # HMM: this focus only provides buffs related to Finland's air spirit, so lock it off unless we are allowed full access
+			has_game_rule = {
+				rule = Finland_AC_rule
+				option = Finland_AC
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }

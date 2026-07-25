@@ -7753,14 +7753,8 @@ country_event = {
 			limit = {
 				check_variable = { var = ENG_imperial_conference_federation_answers value = ENG_imperial_conference_number_of_subjects compare = equals }
 				NOT = {
-					any_country = {
-						OR = {
-							tag = CAN
-							tag = SAF
-							tag = RAJ
-							tag = AST
-							tag = NZL
-						}
+					any_country_of = {
+						target = { CAN SAF RAJ AST NZL }
 						has_country_flag = ENG_rejected_federation
 					}
 				}
@@ -7775,13 +7769,8 @@ country_event = {
 				}
 				check_variable = { var = ENG_imperial_conference_federation_answers value = ENG_imperial_conference_number_of_subjects compare = equals }
 				NOT = {
-					any_country = {
-						OR = {
-							tag = CAN
-							tag = SAF
-							tag = AST
-							tag = NZL
-						}
+					any_country_of = {
+						target = { CAN SAF AST NZL }
 						has_country_flag = ENG_rejected_federation
 					}
 				}
@@ -7791,13 +7780,8 @@ country_event = {
 		if = {
 			limit = {
 				check_variable = { var = ENG_imperial_conference_federation_answers value = ENG_imperial_conference_number_of_subjects compare = equals }
-				any_country = {
-					OR = {
-						tag = CAN
-						tag = SAF
-						tag = AST
-						tag = NZL
-					}
+				any_country_of = {
+						target = { CAN SAF AST NZL }
 					has_country_flag = ENG_rejected_federation
 				}
 			}
@@ -7846,13 +7830,8 @@ country_event = {
 				}
 				check_variable = { var = ENG_imperial_conference_federation_answers value = ENG_imperial_conference_number_of_subjects compare = equals }
 				NOT = {
-					any_country = {
-						OR = {
-							tag = CAN
-							tag = SAF
-							tag = AST
-							tag = NZL
-						}
+					any_country_of = {
+						target = { CAN SAF AST NZL }
 						has_country_flag = ENG_rejected_federation
 					}
 				}
@@ -7862,13 +7841,8 @@ country_event = {
 		if = {
 			limit = {
 				check_variable = { var = ENG_imperial_conference_federation_answers value = ENG_imperial_conference_number_of_subjects compare = equals }
-				any_country = {
-					OR = {
-						tag = CAN
-						tag = SAF
-						tag = AST
-						tag = NZL
-					}
+				any_country_of = {
+					target = { CAN SAF AST NZL }
 					has_country_flag = ENG_rejected_federation
 				}
 			}
