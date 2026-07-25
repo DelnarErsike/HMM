@@ -7257,44 +7257,44 @@ focus_tree = {
 
 		available = {
 			OR = {
-				any_country = {
-					original_tag = NZL
+				any_country_with_original_tag = {
+					original_tag_to_check = NZL
 					is_in_faction_with = ROOT
 				}
-				any_country = {
-					original_tag = SAF
+				any_country_with_original_tag = {
+					original_tag_to_check = SAF
 					is_in_faction_with = ROOT
 				}
-				any_country = {
-					original_tag = RAJ
+				any_country_with_original_tag = {
+					original_tag_to_check = RAJ
 					is_in_faction_with = ROOT
 				}
-				any_country = {
-					original_tag = AST
+				any_country_with_original_tag = {
+					original_tag_to_check = AST
 					is_in_faction_with = ROOT
 				}
-				any_country = {
-					original_tag = CAN
+				any_country_with_original_tag = {
+					original_tag_to_check = CAN
 					is_in_faction_with = ROOT
 				}
-				any_country = {
-					original_tag = MAL
+				any_country_with_original_tag = {
+					original_tag_to_check = MAL
 					is_in_faction_with = ROOT
 				}
-				any_country = {
-					original_tag = PAL
+				any_country_with_original_tag = {
+					original_tag_to_check = PAL
 					is_in_faction_with = ROOT
 				}
-				any_country = {
-					original_tag = JOR
+				any_country_with_original_tag = {
+					original_tag_to_check = JOR
 					is_in_faction_with = ROOT
 				}
-				any_country = {
-					original_tag = KUW
+				any_country_with_original_tag = {
+					original_tag_to_check = KUW
 					is_in_faction_with = ROOT
 				}
-				any_country = {
-					original_tag = BRM
+				any_country_with_original_tag = {
+					original_tag_to_check = BRM
 					is_in_faction_with = ROOT
 				}
 			}
@@ -7505,8 +7505,8 @@ focus_tree = {
 		id = uk_india_focus 
 		prerequisite = { focus = uk_commonwealth_focus }
 		available = {
-			any_country = {
-				original_tag = RAJ
+			any_country_with_original_tag = {
+				original_tag_to_check = RAJ
 				is_in_faction_with = ROOT
 			}
 		} 
@@ -7682,8 +7682,8 @@ focus_tree = {
 		id = uk_australia_focus 
 		prerequisite = { focus = uk_commonwealth_focus }
 		available = {
-			any_country = {
-				original_tag = AST
+			any_country_with_original_tag = {
+				original_tag_to_check = AST
 				is_in_faction_with = ROOT
 			}
 		}
@@ -7843,8 +7843,8 @@ focus_tree = {
 		id = uk_new_zealand_focus 
 		prerequisite = { focus = uk_australia_focus }
 		available = {
-			any_country = {
-				original_tag = NZL
+			any_country_with_original_tag = {
+				original_tag_to_check = NZL
 				is_in_faction_with = ROOT
 			}
 		}
@@ -8003,8 +8003,8 @@ focus_tree = {
 		id = uk_canada_focus 
 		prerequisite = { focus = uk_commonwealth_focus }
 		available = {
-			any_country = {
-				original_tag = CAN
+			any_country_with_original_tag = {
+				original_tag_to_check = CAN
 				is_in_faction_with = ROOT
 			}
 		}
@@ -8162,8 +8162,8 @@ focus_tree = {
 		id = uk_south_africa_focus
 		prerequisite = { focus = uk_commonwealth_focus }
 		available = {
-			any_country = {
-				original_tag = SAF
+			any_country_with_original_tag = {
+				original_tag_to_check = SAF
 				is_in_faction_with = ROOT
 			}
 		}
@@ -9610,11 +9610,7 @@ focus_tree = {
 			is_subject = no
 		}
 		bypass = {
-			NOT = {
-				any_country = {
-					is_subject_of = ENG
-				}
-			}
+			num_subjects = 0
 			NOT = {
 				focus_progress = {
 					focus = ENG_maintaining_the_balance_of_power
@@ -11547,8 +11543,8 @@ focus_tree = {
 				limit = {
 					NOT = { has_dlc = "La Resistance" }
 				}
-				any_country = {
-					original_tag = SPR
+				any_country_with_original_tag = {
+					original_tag_to_check = SPR
 					has_government = fascism
 					exists = yes
 					NOT = { is_in_faction_with = ENG }
@@ -11604,8 +11600,8 @@ focus_tree = {
 				limit = {
 					NOT = { has_dlc = "La Resistance" }
 				}
-				any_country = {
-					original_tag = SPR
+				any_country_with_original_tag = {
+					original_tag_to_check = SPR
 					has_government = fascism
 					exists = yes
 					NOT = { is_in_faction_with = ENG }
@@ -11630,8 +11626,8 @@ focus_tree = {
 					NOT = { has_dlc = "La Resistance" }
 				}
 				NOT = {
-					any_country = {
-						original_tag = SPR
+					any_country_with_original_tag = {
+						original_tag_to_check = SPR
 						has_government = fascism
 						exists = yes
 					}
@@ -11664,8 +11660,8 @@ focus_tree = {
 					limit = {
 						NOT = { has_dlc = "La Resistance" }
 					}
-					any_country = {
-						original_tag = SPR
+					any_country_with_original_tag = {
+						original_tag_to_check = SPR
 						has_government = fascism
 						exists = yes
 						is_in_faction_with = GER

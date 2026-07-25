@@ -1468,9 +1468,8 @@ war_measures = {
 		}
 	
 		available = {
-			any_country = {
+			any_enemy_country = {
 				is_subject_of = BEL
-				has_war_with = ROOT
 				original_tag = COG
 			}
 			295 = {
@@ -1502,8 +1501,7 @@ war_measures = {
 		visible = { 
 			always = no
 			has_global_flag = CONGO_independence_war_ongoing
-			any_country = {
-				has_war_with = ROOT
+			any_enemy_country = {
 				original_tag = COG
 			}
 			NOT = {
@@ -3027,9 +3025,8 @@ COG_freedom_at_gunpoint_category = {
 
 		visible = {		
 			always = no
-			any_country = {
+			any_enemy_country = {
 				has_subject = FROM
-				has_war_with = ROOT
 			}				
 		}
 

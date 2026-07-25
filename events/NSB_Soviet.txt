@@ -10964,9 +10964,8 @@ country_event = {
 			}
 			modifier = {
 				factor = 3 # Even less interested if already involved in a war with a major country
-				any_country = {
+				any_enemy_country = {
 					is_major = yes
-					has_war_with = ROOT
 				}
 			}
 		}
@@ -11198,9 +11197,8 @@ country_event = {
 			}
 			modifier = {
 				factor = 2 # Even less interested if already involved in a war with a major country
-				any_country = {
+				any_enemy_country = {
 					is_major = yes
-					has_war_with = ROOT
 				}
 			}
 		}

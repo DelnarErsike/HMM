@@ -15621,8 +15621,8 @@ focus_tree = {
 		relative_position_id = ITA_italys_destiny
 		cost = 10
 		available = {
-			any_country = {
-				original_tag = SOV
+			any_country_with_original_tag = {
+				original_tag_to_check = SOV
 				exists = yes
 				NOT = { is_in_faction_with = ROOT }
 				NOT = { has_non_aggression_pact_with = ROOT }
@@ -16553,8 +16553,8 @@ focus_tree = {
 			else = {
 				has_global_flag = spanish_civil_war
 				NOT = {
-					any_country = {
-						original_tag = SPR
+					any_country_with_original_tag = {
+						original_tag_to_check = SPR
 						OR = {
 							has_government = fascism
 							has_civil_war = yes
@@ -16685,8 +16685,8 @@ focus_tree = {
 				}
 			}
 			else = {
-				any_country = {
-					original_tag = SPR
+				any_country_with_original_tag = {
+					original_tag_to_check = SPR
 					OR = {
 						has_government = fascism
 						has_government = neutrality
@@ -16713,8 +16713,8 @@ focus_tree = {
 				}
 			}
 			else = {
-				any_country = {
-					original_tag = SPR
+				any_country_with_original_tag = {
+					original_tag_to_check = SPR
 					OR = {
 						has_government = fascism
 						has_government = neutrality
@@ -21509,8 +21509,8 @@ focus_tree = {
 		relative_position_id = ITA_military_agreements
 		cost = 10
 		available = {
-			any_country = {
-				original_tag = SOV
+			any_country_with_original_tag = {
+				original_tag_to_check = SOV
 				exists = yes
 				NOT = { is_in_faction_with = ROOT }
 				NOT = { has_non_aggression_pact_with = ROOT }

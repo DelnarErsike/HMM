@@ -2942,7 +2942,7 @@ country_event = { #Send platypus to ENG PM
 		name = AST_diplomatic_events.81.a
 
 		every_country_with_original_tag = {
-			originaL_tag_to_check =	ENG
+			original_tag_to_check =	ENG
 			add_opinion_modifier = {
 				target = ROOT
 				modifier = AST_platypus_modifier

@@ -2351,7 +2351,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			every_country_with_original_tag = {
-				originaL_tag_to_check =	ENG
+				original_tag_to_check =	ENG
 				add_opinion_modifier = {
 					target = ROOT
 					modifier = AST_no_foreign_battlefields_modifier
@@ -3714,7 +3714,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			every_country_with_original_tag = {
-				originaL_tag_to_check =	ENG
+				original_tag_to_check =	ENG
 				add_opinion_modifier = {
 					target = ROOT
 					modifier = AST_solidarity_by_the_empire_modifier
@@ -5845,8 +5845,7 @@ focus_tree = {
 
 		    IF = {
 		        limit = {
-		            any_country = {
-		                tag = SPD
+		            SPD = {
 		                exists = yes
 		            }
 		            SPR_scw_in_progress = yes

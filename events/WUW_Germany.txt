@@ -222,8 +222,8 @@ country_event = { #Charlie Brown and Franz Stigler incident (GER)
 		date > 1943.12.20
 		original_tag = GER
 		has_government = fascism
-		any_country = {
-			original_tag = USA
+		any_country_with_original_tag = {
+			original_tag_to_check = USA
 			has_government = democratic
 			has_war_with = ROOT
 			has_deployed_air_force_size = {
@@ -13344,10 +13344,7 @@ country_event = {
 			}
 			IF = {
 				limit = {
-					any_country = {
-						original_tag = GER
-						controls_state = 66
-					}
+					66 = { controller = { original_tag = GER } }
 				}
 				66 = {
 					transfer_state_to = SIL
@@ -13355,10 +13352,7 @@ country_event = {
 			}
 			IF = {
 				limit = {
-					any_country = {
-						original_tag = GER
-						controls_state = 67
-					}
+					67 = { controller = { original_tag = GER } }
 				}
 				67 = {
 					transfer_state_to = SIL
@@ -13366,10 +13360,7 @@ country_event = {
 			}
 			IF = {
 				limit = {
-					any_country = {
-						original_tag = GER
-						controls_state = 762
-					}
+					762 = { controller = { original_tag = GER } }
 				}
 				762 = {
 					transfer_state_to = SIL
@@ -13377,10 +13368,7 @@ country_event = {
 			}
 			IF = {
 				limit = {
-					any_country = {
-						original_tag = GER
-						controls_state = 74
-					}
+					74 = { controller = { original_tag = GER } }
 				}
 				74 = {
 					transfer_state_to = SIL
@@ -20393,14 +20381,13 @@ country_event = {
 					is_core_of = ENG
 				}
 			}
-		}
 		NOT = {
-			any_country = {
-				is_subject_of = GER
+			any_subject_country = {
 				any_controlled_state = {
 					is_core_of = ENG
 				}
 			}
+		}
 		}
 	}
 

@@ -220,11 +220,10 @@ country_event = {
 
 		#Don't fire if any states in France are controlled by a different human player
 		NOT = {
-			any_country = {
+			any_enemy_country = {
 				is_ai = no
 				NOT = { tag = GER }
 				NOT = { is_in_faction_with = GER }
-				has_war_with = ROOT
 				any_controlled_state = {
 					is_on_continent = europe
 					NOT = { state = 1 }

@@ -4426,23 +4426,19 @@
 				is_owned_or_subject_trigger = yes
 			}
 			
-			AND = {
-				OR = {
-					ITA = { 
-						controls_state = 550 
-					}					
-					any_country = {
+			550 = {
+				controller = {
+					OR = {
+						tag = ITA
 						is_subject_of = ITA
-						controls_state = 550 
-						}
+					}
 				}
-				OR = {
-					ITA = { 
-						controls_state = 559 
-					}					
-					any_country = {
+			}
+			559 = {
+				controller = {
+					OR = {
+						tag = ITA
 						is_subject_of = ITA
-						controls_state = 559 
 					}
 				}
 			}
@@ -4499,23 +4495,19 @@
 				exists = yes
 				is_subject = no 
 			}
-			AND = {
-				OR = {
-					ITA = { 
-						controls_state = 550 
-					}					
-					any_country = {
+			550 = {
+				controller = {
+					OR = {
+						tag = ITA
 						is_subject_of = ITA
-						controls_state = 550 
 					}
 				}
-				OR = {
-					ITA = { 
-						controls_state = 559 
-					}					
-					any_country = {
+			}
+			559 = {
+				controller = {
+					OR = {
+						tag = ITA
 						is_subject_of = ITA
-						controls_state = 559 
 					}
 				}
 			}

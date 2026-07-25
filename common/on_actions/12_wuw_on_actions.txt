@@ -1216,8 +1216,7 @@ on_actions = {
 					ROOT = {
 						HABSBURG_is_a_habsburg_viable_nation = yes
 					}
-					any_other_country = {
-						tag = global.AH_originator_country
+					var:global.AH_originator_country = {
 						has_subject = ROOT
 					}
 					ROOT = {

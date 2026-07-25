@@ -12400,13 +12400,8 @@ focus_tree = {
 		
 		available = {
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
-			any_country = {
-				OR = {
-					tag = ENG
-					tag = FRA
-					tag = GER
-					tag = ITA
-				}
+			any_country_of = {
+				target = { ENG FRA GER ITA }
 				has_government = fascism
 				is_major = yes
 			}
@@ -12836,13 +12831,8 @@ focus_tree = {
 		
 		available = {
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
-			any_country = {
-				OR = {
-					tag = ENG
-					tag = FRA
-					tag = GER
-					tag = ITA
-				}
+			any_country_of = {
+				target = { ENG FRA GER ITA }
 				has_government = democratic
 				is_major = yes
 				is_subject = no
@@ -14043,9 +14033,10 @@ focus_tree = {
 		available = {
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
 			is_subject = no
-			any_country = {
-				owns_state = 78
+			78 = {
+				owner = {
 				controls_state = 78
+				}
 			}
 		}
 
@@ -14071,11 +14062,10 @@ focus_tree = {
 						}
 					}
 				}
-				any_country = {
+				any_enemy_country = {
 					owns_state = 78
 					owns_state = 80
 					owns_state = 766
-					has_war_with = ROOT
 				}
 			}
 		}
@@ -14629,9 +14619,10 @@ ai_will_do = {
 		mutually_exclusive = { focus = SOV_reconcile_japan }
 
 		available = {
-			any_country = {
+			JAP = {
+			any_enemy_country = {
 				SOV_is_free_chinese_tag = yes
-				has_war_with = JAP
+			}
 			}
 			is_subject = no
 		}

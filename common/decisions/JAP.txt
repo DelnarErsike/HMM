@@ -10193,12 +10193,11 @@ JAP_the_co_prosperity_sphere_decisions = {
 		visible = { 
 			has_completed_focus = JAP_reorganized_national_government
 			has_subject = RNG
-			any_country = {
+			any_subject_country = {
 				is_literally_china = yes
 				NOT = {
 					original_tag = RNG
 				}
-				is_subject_of = ROOT
 				is_ai = yes
 			}
 		}

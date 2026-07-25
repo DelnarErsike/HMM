@@ -10795,8 +10795,8 @@ country_event = {
 		hidden_effect = {
 			IF = {
 				limit = {
-					any_country = {
-						original_tag = JAP
+					any_country_with_original_tag = {
+						original_tag_to_check = JAP
 						has_government = fascism
 						num_divisions < 20
 					}
@@ -11339,8 +11339,8 @@ country_event = {
 
 			IF = {
 				limit = {
-					any_country = {
-						original_tag = JAP
+					any_country_with_original_tag = {
+						original_tag_to_check = JAP
 						has_government = fascism
 						num_divisions < 20
 					}
@@ -11991,9 +11991,8 @@ country_event = {
 			is_subject = no
 			has_added_tension_amount > 10 
 			has_offensive_war = yes
-			any_country = {
+			any_enemy_country = {
 				is_literally_china = yes
-				has_war_with = PREV
 			}
 		}
 

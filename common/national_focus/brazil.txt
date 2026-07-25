@@ -2372,7 +2372,7 @@ focus_tree = {
 
 		completion_reward = {
 			division_template = {
-				name = "Legião Estrangeira"
+				name = "Legiï¿½o Estrangeira"
 				#division_names_group = BRA_FL_01
 				is_locked = yes
 				force_allow_recruiting = yes
@@ -2396,7 +2396,7 @@ focus_tree = {
 			hidden_effect = {
 				capital_scope = {
 					create_unit = {
-						division = "division_template =\"Legião Estrangeira\" start_experience_factor = 0.2 start_equipment_factor	= 1.0"
+						division = "division_template =\"Legiï¿½o Estrangeira\" start_experience_factor = 0.2 start_equipment_factor	= 1.0"
 						owner = ROOT
 						count = 3
 					} 
@@ -2493,8 +2493,8 @@ focus_tree = {
 		
 		cost = 10
 		available = {
-			any_country = {
-				original_tag = GER
+			any_country_with_original_tag = {
+				original_tag_to_check = GER
 				NOT = {
 					has_government = BRA
 				}
@@ -5630,7 +5630,7 @@ focus_tree = {
 					has_completed_focus = BRA_sway_the_cangaco
 				}
 				division_template = {
-					name = "Cangaço"		
+					name = "Cangaï¿½o"		
 					#division_names_group = SWE_BS_01
 					is_locked = no
 					template_counter = 3
@@ -5695,7 +5695,7 @@ focus_tree = {
 				}
 				499 = {
 					create_unit = {
-						division = "division_template =\"Cangaço\" start_experience_factor = 0.2 start_equipment_factor	= 1.0"
+						division = "division_template =\"Cangaï¿½o\" start_experience_factor = 0.2 start_equipment_factor	= 1.0"
 						owner = ROOT
 						count = 3
 					} 
@@ -7352,7 +7352,7 @@ focus_tree = {
 			custom_effect_tooltip = BRA_penal_battalions_tt
 			hidden_effect = {
 				division_template = {
-					name = "Batalhões de Presos"
+					name = "Batalhï¿½es de Presos"
 					#division_names_group = 
 					is_locked = yes
 					force_allow_recruiting = yes
@@ -7373,27 +7373,27 @@ focus_tree = {
 				}
 				capital_scope = {
 					create_unit = {
-						division = "division_template = \"Batalhões de Presos\" start_experience_factor = 0 start_equipment_factor = 1.0"
+						division = "division_template = \"Batalhï¿½es de Presos\" start_experience_factor = 0 start_equipment_factor = 1.0"
 						OWNER = ROOT
 					}
 					create_unit = {
-						division = "division_template = \"Batalhões de Presos\" start_experience_factor = 0 start_equipment_factor = 1.0"
+						division = "division_template = \"Batalhï¿½es de Presos\" start_experience_factor = 0 start_equipment_factor = 1.0"
 						OWNER = ROOT
 					}
 					create_unit = {
-						division = "division_template = \"Batalhões de Presos\" start_experience_factor = 0 start_equipment_factor = 1.0"
+						division = "division_template = \"Batalhï¿½es de Presos\" start_experience_factor = 0 start_equipment_factor = 1.0"
 						OWNER = ROOT
 					}
 					create_unit = {
-						division = "division_template = \"Batalhões de Presos\" start_experience_factor = 0 start_equipment_factor = 1.0"
+						division = "division_template = \"Batalhï¿½es de Presos\" start_experience_factor = 0 start_equipment_factor = 1.0"
 						OWNER = ROOT
 					}
 					create_unit = {
-						division = "division_template = \"Batalhões de Presos\" start_experience_factor = 0 start_equipment_factor = 1.0"
+						division = "division_template = \"Batalhï¿½es de Presos\" start_experience_factor = 0 start_equipment_factor = 1.0"
 						OWNER = ROOT
 					}
 					create_unit = {
-						division = "division_template = \"Batalhões de Presos\" start_experience_factor = 0 start_equipment_factor = 1.0"
+						division = "division_template = \"Batalhï¿½es de Presos\" start_experience_factor = 0 start_equipment_factor = 1.0"
 						OWNER = ROOT
 					}
 				}
