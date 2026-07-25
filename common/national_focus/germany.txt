@@ -30715,15 +30715,17 @@ focus_tree = {
 				}
 				custom_effect_tooltip = GER_andrey_shckuro_and_pyotr_krasnov_join_tt
 				hidden_effect = {
-					SOV_andrey_shkuro = {
-						clr_character_flag = SOV_exiled_flag
-						clr_character_flag = SOV_exiled_army_leader
-						set_nationality = ROOT
-					}
-					SOV_pyotr_krasnov = {
-						clr_character_flag = SOV_exiled_flag
-						clr_character_flag = SOV_exiled_army_leader
-						set_nationality = ROOT
+					SOV = {
+						SOV_andrey_shkuro = {
+							clr_character_flag = SOV_exiled_flag
+							clr_character_flag = SOV_exiled_army_leader
+							set_nationality = ROOT
+						}
+						SOV_pyotr_krasnov = {
+							clr_character_flag = SOV_exiled_flag
+							clr_character_flag = SOV_exiled_army_leader
+							set_nationality = ROOT
+						}
 					}
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt

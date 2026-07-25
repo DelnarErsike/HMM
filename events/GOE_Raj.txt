@@ -3867,6 +3867,7 @@ country_event = {
 
 			hidden_effect = {
 
+				PAK = {
 				RAJ_GOE_muhammad_ali_jinnah = {
 					add_country_leader_role = {
 						promote_leader = yes
@@ -3877,8 +3878,6 @@ country_event = {
 						}
 					}
 				}
-
-				PAK = {
 
 					set_politics = {
 						ruling_party = democratic

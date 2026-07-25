@@ -1657,9 +1657,11 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
+			GHA = {
 			GHA_kwame_nkrumah = {
 				set_nationality = ROOT
 
+			}
 			}
 		}
 	}
@@ -2480,9 +2482,11 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
+			BRD = {
 			BRD_mwambutsa_iv = {
 				set_nationality = ROOT
 
+			}
 			}
 		}
 	}
@@ -2589,10 +2593,12 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
+			RWA = {
 			RWA_mutara_rudahigwa = {
 
 				set_nationality = ROOT
 
+			}
 			}
 		}
 	}
@@ -2699,9 +2705,11 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
+			RWA = {
 			RWA_mutara_rudahigwa = {
 				set_nationality = ROOT
 
+			}
 			}
 		}
 	}

@@ -43,10 +43,6 @@ indonesia_free_effect_2 = {
 }
 
 indonesia_transfer_POK = {
-	if = {
-		limit = {
-			country_exists = POK
-		}
 		POK = {
 			INS_syarif_muhammad_alkadrie = {
 				set_nationality = INS
@@ -56,20 +52,9 @@ indonesia_transfer_POK = {
 				save_global_event_target_as = INS_syarif_muhammad_alkadrie
 			}
 		}
-	}
-	else = {
-		INS_syarif_muhammad_alkadrie = {
-				set_nationality = INS
-				save_global_event_target_as = INS_syarif_muhammad_alkadrie
-		}
-	}
 }
 
 indonesia_transfer_TNE = {
-	if = {
-		limit = {
-			country_exists = TNE
-		}
 		TNE = {
 			INS_iskandar_sjah = {
 				set_nationality = INS
@@ -79,20 +64,9 @@ indonesia_transfer_TNE = {
 				save_global_event_target_as = INS_iskandar_sjah
 			}
 		}
-	}
-	else = {
-		INS_iskandar_sjah = {
-				set_nationality = INS
-				save_global_event_target_as = INS_iskandar_sjah
-		}
-	}
 }
 
 indonesia_transfer_GOW = {
-	if = {
-		limit = {
-			country_exists = GOW
-		}
 		GOW = {
 			INS_sultan_muhibuddin = {
 				set_nationality = INS
@@ -102,20 +76,9 @@ indonesia_transfer_GOW = {
 				save_global_event_target_as = INS_sultan_muhibuddin
 			}
 		}
-	}
-	else = {
-		INS_sultan_muhibuddin = {
-				set_nationality = INS
-				save_global_event_target_as = INS_sultan_muhibuddin
-		}
-	}
 }
 
 indonesia_transfer_SSI = {
-	if = {
-		limit = {
-			country_exists = SSI
-		}
 		SSI = {
 			INS_syarif_kasim = {
 				set_nationality = INS
@@ -125,20 +88,9 @@ indonesia_transfer_SSI = {
 				save_global_event_target_as = INS_syarif_kasim
 			}
 		}
-	}
-	else = {
-		INS_syarif_kasim = {
-				set_nationality = INS
-				save_global_event_target_as = INS_syarif_kasim
-		}
-	}
 }
 
 indonesia_transfer_BLI = {
-	if = {
-		limit = {
-			country_exists = BLI
-		}
 		BLI = {
 			INS_dewa_geg = {
 				set_nationality = INS
@@ -148,20 +100,9 @@ indonesia_transfer_BLI = {
 				save_global_event_target_as = INS_dewa_geg
 			}
 		}
-	}
-	else = {
-		INS_dewa_geg = {
-				set_nationality = INS
-				save_global_event_target_as = INS_dewa_geg
-		}
-	}
 }
 
 indonesia_transfer_ATJ = {
-	if = {
-		limit = {
-			country_exists = ATJ
-		}
 		ATJ = {
 			INS_alauddin_syah = {
 				set_nationality = INS
@@ -171,13 +112,6 @@ indonesia_transfer_ATJ = {
 				save_global_event_target_as = INS_alauddin_syah
 			}
 		}
-	}
-	else = {
-		INS_alauddin_syah = {
-				set_nationality = INS
-				save_global_event_target_as = INS_alauddin_syah
-		}
-	}
 }
 
 indonesia_princely_advisors_effect = { #WARNING: DO NOT USE THIS FOR TOOLTIPS!! Only ever use this effect when necessary, and do not just make an effect_tooltip to show its effects. This one can get quite laggy as it may need to search through every country many times

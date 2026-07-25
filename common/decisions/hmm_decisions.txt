@@ -1177,8 +1177,11 @@ Technologies = {
             }
 		}
 		complete_effect = {
-            SPR_mohamed_meziane = {
-                set_nationality = BUL
+            SPR = {
+                set_nationality = {
+                    target_country = BUL
+                    character = SPR_mohamed_meziane
+                }
             }
             ITA = { 
                 add_offsite_building = { type = industrial_complex level = 4 } 
@@ -1254,8 +1257,11 @@ Technologies = {
             }
 		}
 		complete_effect = {
-            SPR_mohamed_meziane = {
-                set_nationality = BUL
+            SPR = {
+                set_nationality = {
+                    target_country = BUL
+                    character = SPR_mohamed_meziane
+                }
             }
             BUL = {
                 activate_mission = GER_recieving_ll_mech_bul_1a

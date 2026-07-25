@@ -947,8 +947,11 @@ country_event = {
 			}
 		}
 		effect_tooltip = {
-			JAP_naoki_hoshino = {
-				set_nationality = MAN
+			JAP = {
+				set_nationality = {
+					target_country = MAN
+					character = JAP_naoki_hoshino
+				}
 			}
 		}
 	}
@@ -984,8 +987,9 @@ country_event = {
 			base = 10
 		}
 		JAP = {
-			JAP_naoki_hoshino = {
-			set_nationality = ROOT
+			set_nationality = {
+				target_country = MAN
+				character = JAP_naoki_hoshino
 			}
 		}
 	}

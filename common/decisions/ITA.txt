@@ -6007,8 +6007,9 @@ ITA_diplomacy_balkan_decision_category = {
 			}
 			set_country_flag = ITA_aimones_coronation
 			hidden_effect = {
-				ITA_prince_aimone = {
-					set_nationality = CRO
+				set_nationality = {
+					target_country = CRO
+					character = ITA_prince_aimone
 				}
 			}
 		}

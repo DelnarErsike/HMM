@@ -202,8 +202,9 @@ shared_focus = {
 				}
 			}
 			CHI = {
-				CHI_alexander_von_falkenhausen = {
-					set_nationality = ROOT
+				set_nationality = {
+					target_country = ROOT
+					character = CHI_alexander_von_falkenhausen
 				}
 			}
 			custom_effect_tooltip = available_chief_of_army
@@ -3960,8 +3961,9 @@ shared_focus = {
 				}
 			}
 			CHI = {
-				CHI_claire_lee_chennault = {
-					set_nationality = ROOT
+				set_nationality = {
+					target_country = ROOT
+					character = CHI_claire_lee_chennault
 				}
 			}
 		}

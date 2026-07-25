@@ -6095,8 +6095,16 @@ country_event = { #Exile event for when Czech dies, more sanity checks are on ev
 				limit = {
 					original_tag = SOV
 				}
-				CZE_richard_tesarzhik = { set_nationality = ROOT }
-				CZE_vladimir_prikryl = { set_nationality = ROOT }
+				CZE = {
+					set_nationality = {
+						target_country = ROOT
+						character = CZE_richard_tesarzhik
+					}
+					set_nationality = {
+						target_country = ROOT
+						character = CZE_vladimir_prikryl
+					}
+				}
 				if = {
 					limit = {
 						has_character = CZE_vladimir_prikryl
@@ -6113,12 +6121,20 @@ country_event = { #Exile event for when Czech dies, more sanity checks are on ev
 					}
 				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					original_tag = FRA
 				}
-				CZE_louis_eugene_faucher = { set_nationality = ROOT }
-				CZE_josef_shnejdarek = { set_nationality = ROOT }
+				CZE = {
+					set_nationality = {
+						target_country = ROOT
+						character = CZE_louis_eugene_faucher
+					}
+					set_nationality = {
+						target_country = ROOT
+						character = CZE_josef_shnejdarek
+					}
+				}
 				if = {
 					limit = {
 						SLO = {
@@ -6131,9 +6147,13 @@ country_event = { #Exile event for when Czech dies, more sanity checks are on ev
 							}
 						}
 					}
-					CZE_rudolf_viest = { set_nationality = ROOT }
+					SLO = {
+						set_nationality = {
+							target_country = ROOT
+							character = CZE_rudolf_viest
+						}
+					}
 				}
-				FRA = {
 					if = {
 						limit = {
 							has_character = CZE_josef_shnejdarek
@@ -6158,14 +6178,21 @@ country_event = { #Exile event for when Czech dies, more sanity checks are on ev
 							}
 						}
 					}
-				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					original_tag = ENG
 				}
-				CZE_sergej_ingr = { set_nationality = ROOT }
-				CZE_frantisek_moravec = { set_nationality = ROOT }
+				CZE = {
+					set_nationality = {
+						target_country = ROOT
+						character = CZE_sergej_ingr
+					}
+					set_nationality = {
+						target_country = ROOT
+						character = CZE_frantisek_moravec
+					}
+				}
 				if = { #Sorry he can't keep his CZE base stats on England
 					limit = {
 						has_dlc = "La Resistance"

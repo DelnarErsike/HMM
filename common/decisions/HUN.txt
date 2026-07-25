@@ -2388,8 +2388,9 @@ HUN_territorial_revision_category = {
 
 		complete_effect = {
 
-			ROOT = {
-				HUN_vasyl_vyshyvanyi = { set_nationality = UKR }
+			set_nationality = {
+				target_country = UKR
+				character = HUN_vasyl_vyshyvanyi
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt

@@ -3317,7 +3317,12 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		MEN_jodbajab = { set_nationality = ROOT }
+		MEN = {
+			set_nationality = {
+				target_country = ROOT
+				character = MEN_jodbajab
+			}
+		}
 
 		set_country_flag = MON_jodbajab_arrived_in_the_country_flag
 
@@ -3349,7 +3354,12 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		MAN_jonjurjab = { set_nationality = ROOT }
+		MAN = {
+			set_nationality = {
+				target_country = ROOT
+				character = MAN_jonjurjab
+			}
+		}
 
 		set_country_flag = MON_jonjurjab_arrived_in_the_country_flag
 
@@ -4399,8 +4409,11 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		CHI_wang_jingwei = {
-			set_nationality = RNG
+		CHI = {
+			set_nationality = {
+				target_country = RNG
+				character = CHI_wang_jingwei
+			}
 		}
 		hidden_effect = {
 			RNG = {
@@ -4432,8 +4445,11 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		CHI_wang_jingwei = {
-			set_nationality = RNG
+		CHI = {
+			set_nationality = {
+				target_country = RNG
+				character = CHI_wang_jingwei
+			}
 		}
 		hidden_effect = {
 			RNG = {

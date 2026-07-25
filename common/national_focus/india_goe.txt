@@ -3475,7 +3475,7 @@ focus_tree = {
                     add_ideas = RAJ_marginalized_muslim_community
                     add_ideas = RAJ_princely_states
                     add_ideas = RAJ_risk_of_famine
-                    RAJ_freeman_freeman_thomas = { set_nationality = PREV }
+                    RAJ = { RAJ_freeman_freeman_thomas = { set_nationality = PREV } }
                     promote_character = RAJ_freeman_freeman_thomas
                     set_popularities = {
                         democratic= 28 # 0.0-100
@@ -23332,6 +23332,7 @@ focus = {
                     }
                 }
 
+                ETH = {
                 RAJ_orde_wingate = {
                     hidden_effect = {
                         if = {
@@ -23344,6 +23345,7 @@ focus = {
                         set_character_flag = is_in_raj
                     }
                     set_nationality = RAJ
+                }
                 }
             }
 
