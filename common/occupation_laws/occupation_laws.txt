@@ -153,6 +153,10 @@ foreign_civilian_oversight = {
 			check_variable  = { resistance_target_without_law > 0.05}
 			add = 100
 		}
+		modifier = { # HMM: we want AI Spain to use Civ Oversight to get compliance high to be able to core states and get resources from them
+			original_tag = SPR
+			add = 2000
+		}
 	}
 }
 
@@ -262,7 +266,7 @@ military_governor_occupation = {
 		#}
 		modifier = {
 			check_variable  = { resistance_target_without_law > 0.24}
-			add = 400
+			#add = 400
 		}
 		
 		modifier = {
@@ -275,7 +279,7 @@ military_governor_occupation = {
 			}
 			check_variable = { garrison_min_support_ratio < requirement_limit }
 
-			add = 400
+			#add = 400
 		}
 		
 	}
@@ -310,7 +314,7 @@ martial_law_occupation = {
 			check_variable = { garrison_min_support_ratio > requirement_limit }
 			resistance > resistance_limit
 
-			add = 500
+			#add = 500
 		}
 	}
 }
@@ -473,7 +477,7 @@ brutally_oppressive_occupation = {
 			check_variable = { garrison_min_support_ratio > requirement_limit }
 			resistance > resistance_limit
 
-			add = 1000
+			#add = 1000
 		}
 	}
 }
