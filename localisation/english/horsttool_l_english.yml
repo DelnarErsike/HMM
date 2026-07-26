@@ -165,9 +165,9 @@
 
  hosttool.999.desc:0 "New to this host tool? Almost every button explains what it does in its tooltip if you hover over it with your mouse. Buttons will also sometimes have delayed tooltips with longer explanations. Just read every tooltip under each button (if there is one) and you will get the hang of it!"
 
- hosttool.1000.desc:0 "§MAre you sure you want to move the Host Tool to [?temp_new_host.GetName] ([?temp_new_host.GetTag])?\n\n§MThis will transfer all host privileges to that nation.§!\n\n[?temp_new_host.GetAIStatus]"
+ hosttool.1000.desc:0 "§MAre you sure you want to move the Host Tool to [potential_new_host.GetName] ([potential_new_host.GetTag])?\n\n§MThis will transfer all host privileges to that nation.§!\n\n[potential_new_host.GetAIStatus]"
 
- hosttool.1001.desc:0 "§MThe Host Tool has been transferred to [?global.new_host_country.GetName] ([?global.new_host_country.GetTag]).\n\n§MAll host privileges and controls are now with this nation.§!"
+ hosttool.1001.desc:0 "§MThe Host Tool has been transferred to [new_host.GetName] ([new_host.GetTag]).\n\n§MAll host privileges and controls are now with this nation.§!"
 
  ai_status_human:0 "§MThis nation is controlled by a human player.§!"
  ai_status_ai:0 "§RWARNING: This nation is controlled by AI! Moving the host tool to an AI nation may make it irreversible unless you use console commands!§!"
