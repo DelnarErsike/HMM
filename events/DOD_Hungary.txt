@@ -390,11 +390,7 @@ country_event = {
 			limit = {
 				is_in_faction = yes
 			}
-			random_country = {
-				limit = { 
-					is_in_faction_with = HUN 
-					is_faction_leader = yes
-				}
+			faction_leader = {
 				add_to_faction = CZE
 			}
 		}

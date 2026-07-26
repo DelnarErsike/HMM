@@ -2902,15 +2902,14 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			custom_effect_tooltip = HUN_demands_tt
-			random_country = {
-				limit = {
-					owns_state = 76
-				}
+			76 = {
+			owner = {
 				country_event = {
 					id = WW_hungary.4
 					days = 2
 					random_days = 3
 				}
+			}
 			}
 
 		}
@@ -6507,15 +6506,14 @@ focus_tree = {
 		completion_reward = {
 
 			custom_effect_tooltip = wuw_HUN_stage_an_uprising_in_leitha_tt
-			random_country = {
-				limit = {
-					owns_state = 975
-				}
+			975 = {
+			owner = {
 				country_event = {
 					id = WW_hungary.86
 					days = 2
 					random_days = 3
 				}
+			}
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -9922,15 +9920,14 @@ focus_tree = {
 			}
 
 			ELSE = {
-				random_country = {
-					limit = {
-						owns_state = 76
-					}
+				76 = {
+				owner = {
 					country_event = {
 						id = WW_hungary.4
 						days = 2
 						random_days = 3
 					}
+				}
 				}
 			}
 
@@ -10037,15 +10034,14 @@ focus_tree = {
 						}
 					}
 				}
-				random_country = {
-					limit = {
-						owns_state = 45
-					}
+				45 = {
+				owner = {
 					country_event = {
 						id = WW_hungary.4
 						days = 2
 						random_days = 3
 					}
+				}
 				}
 			}
 
@@ -10123,15 +10119,14 @@ focus_tree = {
 		completion_reward = {
 
 			custom_effect_tooltip = HUN_demands_tt
-			random_country = {
-				limit = {
-					owns_state = 975
-				}
+			975 = {
+			owner = {
 				country_event = {
 					id = WW_hungary.23
 					days = 2
 					random_days = 3
 				}
+			}
 			}
 
 		}
@@ -17470,20 +17465,15 @@ focus_tree = {
 				}
 				custom_effect_tooltip = wuw_HUN_allied_manufacturing_programs_tt
 			}
-
-			random_country = {
-				limit = {
-					is_in_faction_with = ROOT
-					is_faction_leader = yes
-					NOT = {
-						tag = ROOT
-					}
-				}
+			else_if = {
+				limit = { is_faction_leader = no}
+			faction_leader = {
 				country_event = {
 					id = WW_hungary.1
 					days = 3
 					random_days = 4
 				}
+			}
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt

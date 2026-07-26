@@ -17216,11 +17216,8 @@ ai_will_do = {
 
 		completion_reward = {
 
-			random_country = {
-	 		 	limit = {
-	     			 owns_state = 2
-	  				}
-
+			2 = {
+	 		owner = {
 				 SOV = {
 
 					create_wargoal = {
@@ -17230,12 +17227,10 @@ ai_will_do = {
 	  				}
     			}
     		}
+			}
 
-			random_country = {
-	 		 	limit = {
-	     			 owns_state = 454
-	  				}
-
+			454 = {
+			owner = {
 				 SOV = {
 
 					create_wargoal = {
@@ -17245,11 +17240,9 @@ ai_will_do = {
 	  				}
     			}
     		}
- 			random_country = {
-	 		 	limit = {
-	     			 owns_state = 797
-	  				}
-
+			}
+ 			797 = {
+			owner = {
 				 SOV = {
 
 					create_wargoal = {
@@ -17258,7 +17251,8 @@ ai_will_do = {
 					    generator = { 797 }
 	  				}
     			}
-    		}   			
+    		}
+			}
     		add_state_claim = 2
    			add_state_claim = 797
    			add_state_claim = 454

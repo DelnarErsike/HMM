@@ -798,12 +798,10 @@ focus_tree = {
 						has_government = communism
 					}
 				}
-				random_country = {
-					limit = {
-						is_in_faction_with = SOV
-						is_faction_leader = yes
-					}
+				SOV = {
+					faction_leader = {
 					country_event = generic.2
+					}
 				}
 			}
 			else = {
@@ -3192,12 +3190,10 @@ focus_tree = {
 						has_government = democratic
 					}
 				}
-				random_country = {
-					limit = {
-						is_in_faction_with = ENG
-						is_faction_leader = yes
-					}
+				ENG = {
+					faction_leader = {
 					country_event = generic.2
+					}
 				}
 			}
 			else = {
@@ -23525,12 +23521,10 @@ focus_tree = {
 						has_government = democratic
 					}
 				}
-				random_country = {
-					limit = {
-						is_in_faction_with = ENG
-						is_faction_leader = yes
-					}
+				ENG = {
+					faction_leader = {
 					country_event = generic.2
+					}
 				}
 			}
 			ELSE = {

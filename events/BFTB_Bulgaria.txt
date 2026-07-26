@@ -7013,11 +7013,7 @@ country_event = {
 					}
 				}
 			}
-			random_country = {
-				limit = {
-					is_in_faction_with = ROOT
-					is_faction_leader = yes
-				}
+			faction_leader = {
 				add_to_faction = FROM
 			}
 		}

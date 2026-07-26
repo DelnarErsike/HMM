@@ -3412,13 +3412,14 @@
 
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
-			random_country = {
+			if = {
 				limit = {
-					NOT = { ROOT = { is_faction_leader = yes } }
-					is_faction_leader = yes
-					is_in_faction_with = ROOT
+					is_in_faction = yes
+					is_faction_leader = no
 				}
+			faction_leader = {
 				remove_from_faction = ROOT
+			}
 			}
 			remove_ideas = NZL_commonwealth_loyalty
 		}

@@ -5900,13 +5900,12 @@ focus_tree = {
 				}
 			}
 
-			random_country = {
+			random_neighbor_country = {
 				limit = {
 					is_major = yes
 					has_government = fascism
 					capital_scope = { is_on_continent = europe }
 					NOT = { is_in_faction_with = ROOT }
-					is_neighbor_of = ROOT
 				}
 				ROOT = {
 					add_ai_strategy = {
@@ -6251,13 +6250,12 @@ focus_tree = {
 				}
 			}
 
-			random_country = {
+			random_neighbor_country = {
 				limit = {
 					is_major = yes	
 					has_government = communism	
 					NOT = { is_in_faction_with = ROOT }
 					capital_scope = { is_on_continent = europe }
-					is_neighbor_of = ROOT
 				}
 				ROOT = {
 					add_ai_strategy = {
@@ -8948,12 +8946,8 @@ focus_tree = {
 			
 			custom_effect_tooltip = BUL_total_war_join_wars_tt
 			#Join other wars except for the Soviets
-			random_country = {
-				limit = {
-					is_faction_leader = yes
-					is_in_faction_with = BUL
-				}
-				random_enemy_country = {
+			faction_leader = {
+				every_enemy_country = {
 					limit = {
 						NOT = { has_war_with = ROOT }
 						NOT = { tag = SOV }

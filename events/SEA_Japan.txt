@@ -7987,9 +7987,8 @@ country_event = {
 			} 
 		}
 		effect_tooltip = {
-			random_country = {
+			random_subject_country = {
 				limit = {
-					is_subject_of = ROOT
 					has_country_flag = JAP_this_is_the_country_being_negotiated_at_the_moment
 				}
 				FROM = {
