@@ -154,7 +154,7 @@ foreign_civilian_oversight = {
 			add = 100
 		}
 		modifier = { # HMM: we want AI Spain to use Civ Oversight to get compliance high to be able to core states and get resources from them
-			original_tag = SPR
+			FROM = { original_tag = SPR }
 			add = 2000
 		}
 	}
