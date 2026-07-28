@@ -11,14 +11,14 @@
 ## Victory System Localisation
 
  MOD_countdown_to_victory_cat:0 "Victory!"
- MOD_countdown_to_victory_cat_desc:0 "The winner of the game is the team who controls 7 or more of the 10 following Cities for §Y365 days§!:\n\n§YNanjing§! - [GetNanjingOwner]\n§YDehli§! - [GetDehliOwner]\n§YAlexandria§! - [GetAlexandriaOwner]\n§YBenghasi§! - [GetBenghasiOwner]\n§YAmsterdam§! - [GetAmsterdamOwner]\n§YParis§! - [GetParisOwner]\n§YLyon§! - [GetLyonOwner]\n§YBryansk§! - [GetBryanskOwner]\n§YMoscow§! - [GetMoscowOwner]\n§YStalingrad§! - [GetStalingradOwner]\n\n\n§YCurrent Score§!:\n\n[GER.GetFlag] §RAxis§!: [?global.axis_score]/§Y10§!\n\n[ENG.GetFlag] §CAllies§!: [?global.allies_score]/§Y10§!\n"
+ MOD_countdown_to_victory_cat_desc:0 "The winner of the game is the team who controls 7 or more of the 10 following Cities for §Y365 days§!:\n\n§YNanjing§! - [GetNanjingOwner]\n§YDehli§! - [GetDehliOwner]\n§YAlexandria§! - [GetAlexandriaOwner]\n§YBenghasi§! - [GetBenghasiOwner]\n§YAmsterdam§! - [GetAmsterdamOwner]\n§YParis§! - [GetParisOwner]\n§YLyon§! - [GetLyonOwner]\n§YBryansk§! - [GetBryanskOwner]\n§YMoscow§! - [GetMoscowOwner]\n§YStalingrad§! - [GetStalingradOwner]\n\n\n§YCurrent Score§!:\n\n[GER.GetFlag] §OAxis§!: [?global.axis_score]/§Y10§!\n\n[ENG.GetFlag] §CAllies§!: [?global.allies_score]/§Y10§!\n"
 
 
- vp_axis_owns:0 "[GER.GetFlag] §RAxis§!"
+ vp_axis_owns:0 "[GER.GetFlag] §OAxis§!"
  vp_alies_owns:0 "[ENG.GetFlag] §CAllies§!"
 
  MOD_countdown_to_allied_victory_mission:0 "Imminent [ENG.GetFlag] §CAllied§! §YVictory§!"
- MOD_countdown_to_axis_victory_mission:0 "Imminent [GER.GetFlag] §RAxis§! §YVictory§!"
+ MOD_countdown_to_axis_victory_mission:0 "Imminent [GER.GetFlag] §OAxis§! §YVictory§!"
 
  soviet_cap_timer:0 "Time passed since the Soviet Union capitulated"
  hmm.7.t:0 "Axis Win"
