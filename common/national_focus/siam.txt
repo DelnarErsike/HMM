@@ -474,8 +474,14 @@
 				add_attack = 1
 				add_logistics = 1
 				add_defense = 1
+				if = {
+					limit = { NOT = { has_trait = politically_connected } }
 				add_unit_leader_trait = politically_connected
+				}
+				if = {
+					limit = { NOT = { has_trait = skilled_staffer } }
 				add_unit_leader_trait = skilled_staffer
+				}
 			}
 
 			army_experience = 35
@@ -690,7 +696,10 @@
 				}
 
 				SIA_plaek_phibunsongkhram = {
+					if = {
+						limit = { NOT = { has_trait = media_personality } }
 					add_unit_leader_trait = media_personality
+					}
 					add_random_stat_to_general = yes
 				}
 			}
@@ -704,7 +713,10 @@
 
 				random_select_amount = 2
 				add_random_stat_to_general = yes
+				if = {
+					limit = { NOT = { has_trait = media_personality } }
 				add_unit_leader_trait = media_personality
+				}
 			}
 
 			custom_effect_tooltip = newline_tt

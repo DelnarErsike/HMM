@@ -836,6 +836,7 @@ unit_leader_event = {
 					has_character_flag = SOV_purge_accuser_flag
 					has_character_flag = SOV_purge_accused_flag
 				}
+				NOT = { has_trait = trait_SOV_cowed_by_stalin_army }
 			}
 			add_unit_leader_trait = trait_SOV_cowed_by_stalin_army
 		}
@@ -9025,7 +9026,10 @@ country_event = {
 	option = {
 		name = NSB_soviet_communist_civil_war.010.a
 		var:SOS.SOV_general_to_desert = { 
+			if = {
+				limit = { has_trait = trait_SOV_cowed_by_stalin_army }
 			remove_unit_leader_trait = trait_SOV_cowed_by_stalin_army
+			}
 			set_nationality = ROOT 
 		}
 
@@ -10875,6 +10879,7 @@ country_event = {
 		hidden_effect = {
 			random_army_leader = {
 				# limit = { is_high_command = no }
+				limit = { NOT = { has_trait = trait_SOV_foreign_military_advisor } }
 				add_unit_leader_trait = trait_SOV_foreign_military_advisor
 				set_variable = { ROOT.SOV_foreign_military_advisor_1 = THIS }
 			}

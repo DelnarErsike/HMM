@@ -10072,10 +10072,22 @@ focus_tree = {
 			hidden_effect = {
 				ITA_benito_mussolini = {
 					promote_leader = yes
+					if = {
+						limit = { NOT = { has_trait = old_guard } }
 					add_unit_leader_trait = old_guard
+					}
+					if = {
+						limit = { NOT = { has_trait = politically_connected } }
 					add_unit_leader_trait = politically_connected
+					}
+					if = {
+						limit = { NOT = { has_trait = media_personality } }
 					add_unit_leader_trait = media_personality
+					}
+					if = {
+						limit = { NOT = { has_trait = harsh_leader } }
 					add_unit_leader_trait = harsh_leader
+					}
 				}
 			}
 

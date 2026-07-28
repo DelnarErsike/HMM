@@ -2816,6 +2816,7 @@ focus_tree = {
 								has_id = 1208 #Konstantin Lukash
 							}
 							NOT = { has_trait = trait_BUL_zveno_member }
+							NOT = { has_trait = trait_BUL_tsar_loyalist }
 						}
 						add_unit_leader_trait = trait_BUL_tsar_loyalist
 					}
@@ -7905,6 +7906,7 @@ focus_tree = {
 								has_id = 1208 #Konstantin Lukash
 							}
 							NOT = { has_trait = trait_BUL_zveno_member }
+							NOT = { has_trait = trait_BUL_tsar_loyalist }
 						}
 						add_unit_leader_trait = trait_BUL_tsar_loyalist
 					}

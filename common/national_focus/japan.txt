@@ -28201,7 +28201,10 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 				JAP_hisaichi_terauchi = {
 					promote_leader = yes
+					if = {
+						limit = { NOT = { has_trait = offensive_doctrine } }
 					add_unit_leader_trait = offensive_doctrine
+					}
 				}
 			} 
 
@@ -28687,7 +28690,10 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 				JAP_shunroku_hata = {
 					promote_leader = yes
+					if = {
+						limit = { NOT = { has_trait = offensive_doctrine } }
 					add_unit_leader_trait = offensive_doctrine
+					}
 				}
 			} 
 
