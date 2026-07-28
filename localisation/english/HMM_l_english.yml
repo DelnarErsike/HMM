@@ -1,20 +1,12 @@
 ﻿l_english:
  peace_training:0 "Peacetime Training"
+ peace_training_desc:0 "Substitutes for various macro tricks that people would use outside of war."
  no_tradebacks:0 "No Tradebacks"
+ no_tradebacks_desc:0 "This spirit simulates the fact that countries within factions will automatically buy each other's resources."
  no_grind:0 "No Grind"
- no_grind_desc:0 "No Grinding Generals"
- pre_grind:0 "No XP Gain"
- pre_grind_desc:0 "No Grinding Pregrinded Generals"
- tank_pre_grind:0 "Tank Pregrind" 
-
-
-
-
-
-
-
-
-
+ no_grind_desc:0 "Factions' generals should not gain experience by fighting weak units fielded by the AI."
+ pre_grind:0 "Pre-Grind"
+ pre_grind_desc:0 "This general has been assigned levels and traits to simulate the effects of grinding for experience on the AI. They should definitely not be gaining any more levels or traits."
 
 ## Victory System Localisation
 
