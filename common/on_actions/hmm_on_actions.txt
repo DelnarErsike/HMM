@@ -203,6 +203,35 @@ on_actions = {
 			}
 		}
 	}
+
+	on_unit_leader_created = { # More performant than only adding no_grind through monthly checks
+		effect = {
+			if = {
+				limit = {
+					is_army_leader = yes
+					OR = {
+						NOT = { has_global_flag = allies_grind_allowed }
+						NOT = { has_global_flag = axis_grind_allowed }
+					}
+					NOT = { has_trait = no_grind }
+				}
+				if = {
+					limit = { FROM = { allies = yes } }
+					if = {
+						limit = { NOT = { has_global_flag = allies_grind_allowed } }
+						add_unit_leader_trait = no_grind
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = { has_global_flag = axis_grind_allowed }
+						FROM = { axis = yes }
+					}
+					add_unit_leader_trait = no_grind
+				}
+			}
+		}
+	}
 	
 	on_monthly = {
 		effect = {
