@@ -31,9 +31,6 @@ hmm_capitulations_on_actions = {
 			}
 		}
 		
-		GER = {
-			country_event = france.69420
-		}
 		set_global_flag = fall_of_france
 		every_country = {
 			limit = {
@@ -52,9 +49,24 @@ hmm_capitulations_on_actions = {
         		FRA = { has_completed_focus = FRA_the_blum_viollette_proposal }
     		}
     		FRA = {
-        		add_state_core = 459
-        		add_state_core = 460
-        		add_state_core = 513
+				if = {
+					limit = {
+						459 = { is_controlled_by = GER }
+					}
+					set_state_controller = 459
+				}
+				if = {
+					limit = {
+						460 = { is_controlled_by = GER }
+					}
+					set_state_controller = 460
+				}
+				if = {
+					limit = {
+						513 = { is_controlled_by = GER }
+					}
+					set_state_controller = 513
+				}
     		}
 		}
 	}

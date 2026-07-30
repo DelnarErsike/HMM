@@ -3374,12 +3374,9 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {
-			# HMM: instantly coring these messes up French surrender event, so only core them after it has fired
-			effect_tooltip = {
-				add_state_core = 459
-				add_state_core = 460
-				add_state_core = 513
-			}
+			add_state_core = 459
+			add_state_core = 460
+			add_state_core = 513
 			if = {
 				limit = {
 					country_exists = ALG
