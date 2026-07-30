@@ -9,5 +9,11 @@ spriteTypes = {
 		name = "GFX_trait_pre_grind"
 		texturefile = "gfx/interface/traits/trait_pre_grind.dds"
 	}
+
+	spriteType = {
+		name = "GFX_intelligence_agency_logo_rbi"
+		texturefile = "gfx/interface/operatives/agencies/agency_logo_rbi.dds"
+		noOfFrames = 2
+	}
 	
 }
