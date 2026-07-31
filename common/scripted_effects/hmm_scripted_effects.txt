@@ -335,7 +335,10 @@ hmm_capitulations_on_actions = {
 allow_axis_grind = {
 	set_global_flag = axis_grind_allowed
 	every_country = {
-		limit = { axis = yes }
+		limit = {
+			can_grind_generals = yes
+			any_army_leader = { has_trait = no_grind }
+		}
 		every_army_leader = {
 			limit = { has_trait = no_grind }
 			remove_unit_leader_trait = no_grind
@@ -346,7 +349,10 @@ allow_axis_grind = {
 allow_allies_grind = {
 	set_global_flag = allies_grind_allowed
 	every_country = {
-		limit = { allies = yes }
+		limit = {
+			can_grind_generals = yes
+			any_army_leader = { has_trait = no_grind }
+		}
 		every_army_leader = {
 			limit = { has_trait = no_grind }
 			remove_unit_leader_trait = no_grind
