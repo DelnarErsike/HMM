@@ -695,12 +695,14 @@ on_actions = {
 						allies = yes
 						NOT = { tag = SOV }
 						NOT = { is_in_faction_with = SOV }
+						NOT = { is_in_faction_with = ENG }
 					}
 				}
 				ENG = {
 					add_to_faction = FROM
 				}
 			}
+			
 			if = {
                 limit = {
                     FROM = {
