@@ -1,25 +1,31 @@
-NDefines.NMilitary.UNIT_EXP_LEVELS = { 0.1, 0.3 }
-NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.125
+NDefines.NMilitary.UNIT_EXP_LEVELS = { 0.1, 0.3 } -- Removed veterancy levels higher than Trained (they'd cause feedback loops where dealing more damage leads to more XP gain, allowing them to remain veterans forever)
+-- Nuke extra, unwarranted stats on exile divisions 
 NDefines.NCountry.GIE_DIVISION_ATTACK_BONUS_AGAINST_OCCUPIER = 0 -- Attack bonus factor against whoever occupies your core territory.
 NDefines.NCountry.GIE_DIVISION_DEFENSE_BONUS_AGAINST_OCCUPIER = 0 -- Attack bonus factor against whoever occupies your core territory.
 NDefines.NCountry.GIE_DIVISION_ATTACK_BONUS_ON_CORE = 0 -- Attack bonus factor when fighting on cores.
 NDefines.NCountry.GIE_DIVISION_DEFENSE_BONUS_ON_CORE = 0 -- Defense bonus factor when fighting on cores.
+
+-- No spy capturing, but in case we do get captured, just instakill self so that we don't have to manually dismiss and rehire each time anyway
 NDefines.NOperatives.OPERATIVE_CAPTURE_DURATION_IN_DAYS = 1
 NDefines.NOperatives.INTEL_NETWORK_DETECTION_GLOBAL_FACTOR = 0
+
+-- Part of (attempted) CSC removal, note that we have resource costs adjusted on tanks and planes anyway to automatically incorporate its effects
 NDefines.NProduction.MIN_LAND_EQUIPMENT_CONVERSION_RESOURCE_COST_FACTOR = 1	-- Minimum fraction of a land equipment's strategic resource cost that any conversion will cost.
+
+-- AI should not embargo countries unless we tell it to
 NDefines.NDiplomacy.EMBARGO_NEIGHBOUR_AI_WEIGHT = -100
 
 
 -- Army XP and Mastery
 
-NDefines.NMilitary.TRAINING_MAX_DAILY_COUNTRY_EXP = 0
+NDefines.NMilitary.TRAINING_MAX_DAILY_COUNTRY_EXP = 0 -- Replaced with peacetime training spirit
 NDefines.NDoctrines.MASTERY_BANK_CONVERSION_RATE = 1  -- The rate at which mastery gained when a track is finished or empty is "banked"
 NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 999                            -- WAS 500 || XP Cap
 NDefines.NMilitary.MAX_AIR_EXPERIENCE = 999			                    -- WAS 500 || XP Cap
 NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 999		                    -- WAS 500 || XP Cap
 
 
--- HQ Fixes
+-- HQ Fixes (remove proximity bonuses, remove cooldowns for deployment)
 
 NDefines.NMilitary.COMMANDER_ABILITY_BASE_RANGE = 200                  -- Base radius range of commander abilities
 
@@ -54,74 +60,39 @@ NDefines.NAI.MINIMUM_EQUIPMENT_TO_ASK_LEND_LEASE = -100000
 NDefines.NAI.MINIMUM_CONVOY_TO_ASK_LEND_LEASE = 0
 NDefines.NAI.TENSION_MIN_FOR_GUARANTEE_VS_MINOR = 2000
 
---Convoy Prio
-
-NDefines.NNavy.NAVAL_INVASION_PRIORITY = 1								-- Default convoy priority for naval invasions
-NDefines.NNavy.NAVAL_TRANSFER_PRIORITY = 1								-- Default convoy priority for naval transports
-NDefines.NNavy.SUPPLY_PRIORITY = 2								    	-- Default convoy priority for supplying units via sea
+-- Convoy Priorities reshuffled to make it less of a PITA if too many convoys requested for LL (these don't fully work anyway, missing LL convoys will still mess with supply convoys)
+-- Original values: invasion 1, transfer 1, supply 2, LL 3, export 4, origin 5, purchase 6, underway replenishment 7
+-- Lower number = higher priority.
 NDefines.NNavy.RESOURCE_ORIGIN_PRIORITY = 3								-- Default convoy priority for resources shipped internally
-NDefines.NNavy.RESOURCE_EXPORT_PRIORITY = 4								-- Default convoy priority for export trade
 NDefines.NNavy.RESOURCE_LENDLEASE_PRIORITY = 5                          -- Default convoy priority for export lend lease
-NDefines.NCountry.FUEL_LEASE_CONVOY_RATIO = 0.001
-
 
 ---LOGI STRIKE NERFS---
 NDefines.NSupply.BASE_TRUCK_HP = 1000.0
 NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_RAILWAY_DAMAGE_SPILL_FACTOR = 0 -- Portion of train damage to additionally deal to railways
 
--- CHANGES TO HELP STR LOSS IN COMBAT --
-NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.050   -- old vanilla 0.050, -- vanilla 0.060,  -- global damage modifier... but some equipment is returned at end of battles see : EQUIPMENT_COMBAT_LOSS_FACTOR
-NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 15.0 -- vanilla 10 Modifier for army manpower reinforcement delivery speed (travel time)
-
-
---AIR CP COSTS--
-NDefines.NAir.MISSION_COMMAND_POWER_COSTS = {  -- command power cost per plane to create a mission
-		0.0, -- AIR_SUPERIORITY
-		0.0, -- CAS
-		0.0, -- INTERCEPTION
-		0.0, -- STRATEGIC_BOMBER
-		0.0, -- NAVAL_BOMBER
-		0.0, -- DROP_NUKE
-		0.0, -- PARADROP
-		0.0, -- NAVAL_KAMIKAZE
-        0.0, -- PORT_STRIKE
-		0.0, -- ATTACK_LOGISTICS
-		0.02, -- AIR_SUPPLY
-		0.0, -- TRAINING
-		0.0, -- NAVAL_MINES_PLANTING
-		0.0, -- NAVAL_MINES_SWEEPING
-		0.0, -- RECON
-		0.0, -- NAVAL_PATROL
-		0,0, -- BARRAGE
-		0,0, -- SAM
-	}
-
-
--- Faster Naval Dominance Gain
+-- Faster Naval Dominance Gain (QoL for people who forget to put navy out earlier to get dominance)
 NDefines.NNavy.DOMINANCE_DAILY_GAIN_FACTOR = 0.04							-- Daily dominance gain, as a fraction of target value
 
 
--- old Shore Bombardment Values but the max is still 33%
+-- Old Shore Bombardment Values (max is still 33%), mainly helps D-Day not be navy micro hell
 NDefines.NNavy.HEAVY_GUN_ATTACK_TO_SHORE_BOMBARDMENT = 0.1  -- heavy gun attack value is divided by this value * 100 and added to shore bombardment modifier
 NDefines.NNavy.LIGHT_GUN_ATTACK_TO_SHORE_BOMBARDMENT = 0.05 -- light gun attack value is divided by this value * 100 and added to shore bombardment modifier
 
 
--- Naval Invasion Fix
-NDefines.NNavy.NAVAL_INVASION_PREPARE_DAYS = 10            -- base days needed to prepare a naval invasion
+-- Naval Invasion Fix (avoids PITA stuff around D-Day where you'd normally require a bajillion expeds and every country drawing and re-drawing their own naval invasion orders)
+NDefines.NNavy.NAVAL_INVASION_PREPARE_DAYS = 10 -- vanilla: 60. Somewhat controversial because it means island hopping is way faster than it should be in combination with dominance speed increase, but generally considered worth it for D-Day QoL
 NDefines.NNavy.NAVAL_INVASION_PLAN_CAP = 999                    -- base cap of naval invasions can be planned at the same time
 NDefines.NNavy.BASE_NAVAL_INVASION_DIVISION_CAP = 10 -- base cap of divisions that can be assigned in a naval invasion
 
 
 -- QOL
-NDefines.NMilitary.PROMOTE_LEADER_CP_COST = 0.1
-NDefines.NMilitary.BATALION_CHANGED_EXPERIENCE_DROP = 0 -- TFB Style Converts
+NDefines.NMilitary.PROMOTE_LEADER_CP_COST = 0.1 -- QoL for forgetting to promote generals to FMs to spend unused CP during idle times
+NDefines.NMilitary.BATALION_CHANGED_EXPERIENCE_DROP = 0 -- vanilla: 0.5. Allow TFB-Style converts, since freaky converts would already work anyway to keep all trained XP.
 NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2 -- WAS 1 aka TRAINED | Since the above was changed there is no point to not allowing divs to be trained to regular considering that its only 10% stats now.
-NDefines.NMilitary.UNIT_LEADER_ASSIGN_TRAIT_COST = 0.1
+NDefines.NMilitary.UNIT_LEADER_ASSIGN_TRAIT_COST = 0.1 -- QoL for forgetting to assign traits to spend unused CP during idle times
 NDefines.NMilitary.COHESION_IMMOBILE_PLANNING_SPEED_MULTIPLIER = 1.0	-- If using the 'immobile' cohesion setting, factor ALL planning speed growth by this
 
 NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 30                           -- Up from 10, should allow for more flexibility with picking focuses while doing something else, like tank templates
-NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROLLED = 0
-NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROL_DIFF = 0
 NDefines.NGame.GAME_SPEED_SECONDS = { 1000.0, 0.25, 0.20, 0.10, 0.0 } 
 NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 999
 NDefines.NGame.LAG_DAYS_FOR_PAUSE = 999
@@ -131,38 +102,36 @@ NDefines.NGame.MESSAGE_TIMEOUT_DAYS = 14					     	    -- WAS 60 | less messages
 NDefines_CareerProfile.NCareerProfile.MOD_STATISTICS_GROUP = "HMM"
 NDefines_CareerProfile.NCareerProfile.MOD_STATISTICS_GROUP_NAME = "HMM"
 
-NDefines.NCountry.POPULATION_YEARLY_GROWTH_BASE = 0                     -- Removed for game stability/reducing chance of desync
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 9999						    -- Unlimited special forces
 NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0.00                        -- Unlimited special forces
-NDefines.NCountry.SCORCHED_EARTH_STATE_COST = 5000	                    -- No scourched earth
+NDefines.NCountry.SCORCHED_EARTH_STATE_COST = 5000	                    -- No scorched earth
 NDefines.NDiplomacy.VOLUNTEERS_PER_TARGET_PROVINCE = 0.5			    -- Volunteer shit to prevent 2w spam
 NDefines.NDiplomacy.VOLUNTEERS_PER_COUNTRY_ARMY = 0.5				    -- Volunteer shit to prevent 2w spam
 NDefines.NDiplomacy.VOLUNTEERS_DIVISIONS_REQUIRED = 1				    -- Volunteer shit to prevent 2w spam
-NDefines.NOperatives.AGENCY_CREATION_FACTORIES = 5				        -- Number of factories used to create an intelligence agency
 
 
 
--- Increased General Size
+-- Increased General Size to compensate for no longer being able to use garrison planning
 
 NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 90			-- how many divisions a corps commander is limited to. 0 = inf, < 0 = blocked
 NDefines.NMilitary.GARRISON_ORDER_ARMY_CAP_FACTOR = 1.0			-- armies gets increased cap when they are garrisoned
 NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 90			-- how many divisions a field marshall is limited to. 0 = inf, < 0 = blocked
 NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 10				-- how many armies a field marshall is limited to. 0 = inf, < 0 = blocked
 
--- Regimental Support Company Fix
+-- Regimental Support Company Fix (helps low-width divisions that would otherwise be really bad post-TaOG anyway)
 NDefines.NMilitary.REGIMENTAL_SUPPORT_REQUIRED_BATTALIONS = { 1 } -- For each regimental support row, how many battalions are required in the regiment to be able to place a support in that row.
 
 
 -- License Stuff
-NDefines.NProduction.LICENSE_IC_COST_YEAR_INCREASE = 0					-- Free license
-NDefines.NProduction.MIN_LICENSE_ACTIVE_DAYS = 1                        -- Free license
-NDefines.NProduction.BASE_LICENSE_IC_COST = 0						    -- Base IC cost for lended license
+NDefines.NProduction.LICENSE_IC_COST_YEAR_INCREASE = 0					-- Free licenses (players would exchange licenses in pure vanilla anyway to keep civs neutral)
+NDefines.NProduction.MIN_LICENSE_ACTIVE_DAYS = 1                        -- Free licenses (players would exchange licenses in pure vanilla anyway to keep civs neutral)
+NDefines.NProduction.BASE_LICENSE_IC_COST = 0						    -- Base IC cost for lended licenses (players would exchange licenses in pure vanilla anyway to keep civs neutral)
 NDefines.NDiplomacy.LICENSE_ACCEPTANCE_TECH_DIFFERENCE = 200 		-- Acceptance modifier for each year of technology difference.
 NDefines.NDiplomacy.LICENSE_ACCEPTANCE_TECH_DIFFERENCE_BASE = 1000    -- Acceptance base for tech difference
 NDefines.NDiplomacy.LICENSE_ACCEPTANCE_OPINION_FACTOR = 0
 
 
--- Free Templates
+-- Free Templates (QoL when players would otherwise be incentivized to fill their division templates with duplicates and abuse temporary design XP cost reduction modifiers to get very low XP cost for division designs overall)
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 0 	--Base cost to unlock a regiment slot,
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 0	--Base cost to change a regiment column.
 NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 0 	--Base cost to unlock a support slot
@@ -174,10 +143,7 @@ NDefines.NProduction.EQUIPMENT_MODULE_REPLACE_XP_COST = 0				-- XP cost for repl
 NDefines.NProduction.EQUIPMENT_MODULE_CONVERT_XP_COST = 0				-- XP cost for converting one equipment module to a related module when creating an equipment variant.
 NDefines.NProduction.EQUIPMENT_MODULE_REMOVE_XP_COST = 0
 
--- NDefines.NNavy.NAVAL_MINES_IN_REGION_MAX = 1							-- Max number of mines that can be layed by the ships. The value should be hidden from the user, as we present % so it's an abstract value that should be used for balancing.
--- NDefines.NNavy.NAVAL_MINES_PLANTING_SPEED_MULT = 0						-- Value used to overall balance of the speed of planting naval mines
-
--- Anti-Autism
+-- Forcibly turn off spy missions that we want to disable anyway
 NDefines.NOperatives.BOOST_IDEOLOGY_NATIONAL_COVERAGE_FACTOR = 0
 NDefines.NOperatives.BOOST_IDEOLOGY_MAX_DRIFT_BY_OPERATIVE = 0
 NDefines.NOperatives.BOOST_IDEOLOGY_DRIFT_STACKING_FACTOR = 0
@@ -197,12 +163,13 @@ NDefines.NOperatives.OPERATIVE_BASE_DIPLOMATIC_PRESSURE_AI_ACCEPTANCE_SCORE_DRIF
 NDefines.NOperatives.DIPLOMATIC_PRESSURE_MAX_AI_ACCEPTANCE_SCORE_INCREASE = 0
 NDefines.NOperatives.DIPLOMATIC_PRESSURE_MAX_TENSION_REQUIREMENTS_DECREASE = 0
 NDefines.NOperatives.DIPLOMATIC_PRESSURE_DAILY_XP_GAIN = 0
+
+-- QoL to not have to improve relations for a few ticks every time you want to send an attache
 NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_BASE = 100
 NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_OPINION_TRASHHOLD = 0
 NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_OPINION_PENALTY = 0
 NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROLLED = 0
 NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROL_DIFF = 0
-NDefines.NAI.MINIMUM_CONVOY_TO_ASK_LEND_LEASE = 0
 
 -- Contingencies for disabling international market
 NDefines.NMarket.MAX_CIV_FACTORIES_PER_CONTRACT = 1 -- This can't go lower than 1, so we also have to alter other defines to make the market unusable for sending equipment or gaining CIC from the AI
@@ -247,9 +214,9 @@ NDefines.NAI.DESIRE_USE_XP_TO_UPGRADE_AIR_EQUIPMENT = 0.0
 -- Why is this even a thing? No, no wacky crazy AIs trying to do wacky crazy things, that is really dumb to bake into a define
 NDefines.NAI.IRRATIONALITY_LAMBDA = 0
 
--- Garbage building, never build
+-- Garbage building, AI should never build
 NDefines.NAI.NUM_FACTORIES_IN_STATE_TO_WANT_ENERGY_REDUCTION = 9999
--- Less garbage building, but be pickier about where we'd build it
+-- Less garbage building, but AI should be pickier about where we'd build it
 NDefines.NAI.TOTAL_STATE_EXTRACTED_RESOURCES_FOR_BUILDING_RESOURCE_CAP_BUILDING = 100
 -- AI should not build fuel silos
 NDefines.NAI.NUM_SILOS_PER_CIVILIAN_FACTORIES = 0
@@ -259,20 +226,19 @@ NDefines.NAI.NUM_SILOS_PER_DOCKYARDS = 0
 -- AI only builds convoys (helpful for performance and annex builds)
 NDefines.NAI.CONVOY_NEED_SAFETY_BUFFER = 9999
 
--- Avoid building in non-cores and especially occupied territory (helps with annex builds especially)
+-- AI should avoid building in non-cores and especially occupied territory (helps with annex builds especially)
 NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_OCCUPIED_TERRITORY = 0.01
 NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_OWNED_NONCORE = 0.10
 
--- Why are these even true in the first place?
+-- Why was this even true in the first place?
 NDefines.NMilitary.GENERATE_AI_DIV_COMMAND_HISTORY_ENTRIES = false	--Should we generate history entries for the AI (may cause savegame bloat)
-NDefines.NMilitary.HISTORICAL_ORDER_NAME_EXHAUSTION = false	-- Do historically chosen order instances exhaust their case names? If false ie, Operation Barbarossa will appear for any orders fulfilling the conditions for Germany
+
+-- AC QoL defines
+NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 0.2 --makes redeployement of fighters faster vanilla is 0.02
+NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0                              -- Down from 2 | Makes AC player much more responsive
 
 --THANKS THRASHY
-NDefines.NAir.ACE_WING_SIZE_MAX_BONUS = 1                       -- biggest bonus we can get from having a small wing with an ace on
 NDefines.NNavy.INITIAL_ALLOWED_DOCKYARD_RATIO_FOR_REPAIRS = 1.0				-- initially countries will allocate this ratio of dockyards for repairs
-NDefines.NNavy.RESOURCE_EXPORT_PRIORITY = 3 --swapped prio so imports go first
-NDefines.NNavy.RESOURCE_LENDLEASE_PRIORITY = 3
-NDefines.NNavy.RESOURCE_ORIGIN_PRIORITY = 3
 NDefines.NCountry.COUNTRY_SCORE_MULTIPLIER = 0				-- Weight of the country score.
 NDefines.NCountry.ARMY_SCORE_MULTIPLIER = 0					-- Based on number of armies.
 NDefines.NCountry.NAVY_SCORE_MULTIPLIER = 0					-- Based on number of navies.
@@ -285,22 +251,20 @@ NDefines.NBuildings.MAX_SHARED_SLOTS = 99 -- WAS 25 | Increased to accommodate G
 NDefines.NDiplomacy.CAPITAL_CAPITULATE_BONUS_SCORE = 10000			-- vanilla 150, changed in attempt to make capitulations look more reasonable. extra bonus when deciding who to capitulate to (applied to capital holder)
 NDefines.NDiplomacy.DIPLOMACY_HOURS_BETWEEN_REQUESTS = 12           -- Cuts annoying spam from players like WestWood ~Thrasymachus
 NDefines.NDiplomacy.PEACE_SCORE_PER_PASS = 100.0						-- When you pass once you should get enough points to finish the peace deal
-NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 0.2 --makes redeployement of fighters faster vanilla is 0.02
-NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0                              -- Down from 3 | Makes AC player much more responsive
 NDefines.NMilitary.ENCIRCLED_DISBAND_MANPOWER_FACTOR = 0            -- WAS 0.2 | Most rulesets ban deleting encircled troops, but at least this prevents some manpower from returning | Deleting encircled divisions is always banned anyways, so this reduces unfair play | percentage of manpower returned when an encircled unit is disbanded
-NDefines.NTrade.ANTI_MONOPOLY_TRADE_FACTOR = 0					-- WAS -100 this group reduces the number of opinion/trade factor changes the game tracks| This is added to the factor value when anti-monopoly threshold is exceeded; cucks majors often if the value is vanilla
-NDefines.NTrade.PARTY_SUPPORT_TRADE_FACTOR = 0			-- Trade factor bonus at the other side having 100 % party popularity for my party
-NDefines.NTrade.ANTI_MONOPOLY_TRADE_FACTOR_THRESHOLD = 0	-- What percentage of resources has to be sold to the buyer for the anti-monopoly factor to take effect
-NDefines.NTrade.MAX_MONTH_TRADE_FACTOR = 0				-- This is the maximum bonus that can be gained from time
-NDefines.NTrade.DISTANCE_TRADE_FACTOR = 0				-- Trade factor is modified by distance times this
-NDefines.NTrade.RELATION_TRADE_FACTOR = 0				-- Trade factor is modified by Opinion value times this
-NDefines.NBuildings.OWNER_CHANGE_EXTRA_SHARED_SLOTS_FACTOR = 1.0 -- You get all the factories in a territory when you annex it
-NDefines.NAir.STRATEGIC_BOMBING_RAILWAY_PRIORITY_SCALE = 0					-- The scale of extra priority assigned to railway for strategic bombing
-NDefines.NSupply.RAILWAY_FLOW_PENALTY_PER_DAMAGED = 4.9
+-- Trade factor modifiers are really annoying when people can use them to deliberate screw each other out of resources
+NDefines.NTrade.PARTY_SUPPORT_TRADE_FACTOR = 0			-- vanilla: 50. Made more sense at game launch, is just a mess now that you can have lots of non-aligned in both Axis and Allies.
+NDefines.NTrade.ANTI_MONOPOLY_TRADE_FACTOR_THRESHOLD = 1.0	-- vanilla: 0.5. Important as QoL to prevent majors from getting screwed out of trade.
+NDefines.NTrade.MAX_MONTH_TRADE_FACTOR = 0				-- vanilla: 50. QoL so that multiplayer people can rebalance trades quickly without worrying about who gets more trade factor from keeping their trades up longer.
+NDefines.NTrade.DISTANCE_TRADE_FACTOR = -0.01			-- vanilla: -0.02. Scaled down to account for lack of bonuses from things like opinion and party support, but still present to e.g. prioritize intra-Euroaxis trade over Euroaxis-Japan trade.
+NDefines.NTrade.RELATION_TRADE_FACTOR = 0				-- vanilla: 1. Disabled so that people don't generally have to track (or can mess with) trade opinion through opinion modifiers on focuses and events and the like.
+-- Misc. strategic bombing and air define changes
+NDefines.NSupply.RAILWAY_FLOW_PENALTY_PER_DAMAGED = 4.9 -- Scaled down a tiny bit to avoid rounding issues and to still let supply flow on partially damaged railway levels.
 NDefines.NAir.AIR_WING_BOMB_DAMAGE_FACTOR = 0.5 --Vanilla 2
-NDefines.NIndustrialOrganisation.DESIGN_TEAM_CHANGE_XP_COST = 0
-NDefines.NMilitary.ANTI_AIR_TARGETTING_TO_CHANCE = 0.09 -- Vanilla 0.07
-NDefines.NAir.AA_INDUSTRY_AIR_DAMAGE_FACTOR = 0 --Vanilla -0.12
+NDefines.NAir.AA_INDUSTRY_AIR_DAMAGE_FACTOR = 0 --Vanilla -0.12, effects moved to technologies instead because otherwise this define would clash with and potentially override technology effects like Dispersed's factory bombing vulnerability reduction
+NDefines.NAir.STRATEGIC_BOMBING_RAILWAY_PRIORITY_SCALE = 0					-- The scale of extra priority assigned to railway for strategic bombing
+
+-- General map graphic changes to help performance (in case of no map mod being used) and make zoom levels less annoying
 --NDefines_Graphics.NAirGfx.MAX_MISSILE_BOMBING_SCENARIOS = 0
 --NDefines_Graphics.NAirGfx.MAX_BOMBING_SCENARIOS = 0
 NDefines_Graphics.NAirGfx.MAX_PATROL_SCENARIOS = 0
