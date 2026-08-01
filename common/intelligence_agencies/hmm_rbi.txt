@@ -1,0 +1,9 @@
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_rbi
+	names = { "RBI" }
+	
+	available = { always = yes }
+	
+	default = { always = yes } 
+}

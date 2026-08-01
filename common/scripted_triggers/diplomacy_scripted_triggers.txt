@@ -964,6 +964,10 @@ DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {
 
 }
 DIPLOMACY_MILACC_ENABLE_TRIGGER = {
+	if = { # Stops the AI from spamming mil access requests
+		limit = { is_ai = yes }
+		always = no
+	}
 	if = {
 		limit = {
 			has_game_rule = {
@@ -999,6 +1003,10 @@ DIPLOMACY_MILACC_ENABLE_TRIGGER = {
 	}
 }
 DIPLOMACY_OFFER_MILACC_ENABLE_TRIGGER = {
+	if = { # Stops the AI from spamming mil access requests
+		limit = { is_ai = yes }
+		always = no
+	}
 	if = {
 		limit = {
 			has_game_rule = {
@@ -1113,6 +1121,10 @@ DIPLOMACY_REVOKE_OFFER_AIR_BASE_ACCESS_ENABLE_TRIGGER = {
 }
 
 DIPLOMACY_DOCKING_RIGHTS_ENABLE_TRIGGER = {
+	if = { # Limit docking rights to just people within the same faction (docking rights can otherwise cause weird supply and/or performance issues)
+		limit = { is_ai = yes }
+		always = no
+	}
 	if = {
 		limit = {
 			has_game_rule = {
@@ -1148,6 +1160,10 @@ DIPLOMACY_DOCKING_RIGHTS_ENABLE_TRIGGER = {
 	}
 }
 DIPLOMACY_OFFER_DOCKING_RIGHTS_ENABLE_TRIGGER = {
+	if = { # Limit docking rights to just people within the same faction (docking rights can otherwise cause weird supply and/or performance issues)
+		limit = { is_ai = yes }
+		always = no
+	}
 	if = {
 		limit = {
 			has_game_rule = {

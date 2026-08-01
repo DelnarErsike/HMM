@@ -1,32 +1,24 @@
 ﻿l_english:
  peace_training:0 "Peacetime Training"
+ peace_training_desc:0 "Substitutes for various macro tricks that people would use outside of war."
  no_tradebacks:0 "No Tradebacks"
+ no_tradebacks_desc:0 "This spirit simulates the fact that countries within factions will automatically buy each other's resources."
  no_grind:0 "No Grind"
- no_grind_desc:0 "No Grinding Generals"
- pre_grind:0 "No XP Gain"
- pre_grind_desc:0 "No Grinding Pregrinded Generals"
- tank_pre_grind:0 "Tank Pregrind" 
-
-
-
-
-
-
-
-
-
+ no_grind_desc:0 "Factions' generals should not gain experience by fighting weak units fielded by the AI."
+ pre_grind:0 "Pre-Grind"
+ pre_grind_desc:0 "This general has been assigned levels and traits to simulate the effects of grinding for experience on the AI. They should definitely not be gaining any more levels or traits."
 
 ## Victory System Localisation
 
  MOD_countdown_to_victory_cat:0 "Victory!"
- MOD_countdown_to_victory_cat_desc:0 "The winner of the game is the team who controls 7 or more of the 10 following Cities for §Y365 days§!:\n\n§YNanjing§! - [GetNanjingOwner]\n§YDehli§! - [GetDehliOwner]\n§YAlexandria§! - [GetAlexandriaOwner]\n§YBenghasi§! - [GetBenghasiOwner]\n§YAmsterdam§! - [GetAmsterdamOwner]\n§YParis§! - [GetParisOwner]\n§YLyon§! - [GetLyonOwner]\n§YBryansk§! - [GetBryanskOwner]\n§YMoscow§! - [GetMoscowOwner]\n§YStalingrad§! - [GetStalingradOwner]\n\n\n§YCurrent Score§!:\n\n[GER.GetFlag] §RAxis§!: [?global.axis_score]/§Y10§!\n\n[ENG.GetFlag] §CAllies§!: [?global.allies_score]/§Y10§!\n"
+ MOD_countdown_to_victory_cat_desc:0 "The winner of the game is the team who controls 7 or more of the 10 following Cities for §Y365 days§!:\n\n§YNanjing§! - [GetNanjingOwner]\n§YDehli§! - [GetDehliOwner]\n§YAlexandria§! - [GetAlexandriaOwner]\n§YBenghasi§! - [GetBenghasiOwner]\n§YAmsterdam§! - [GetAmsterdamOwner]\n§YParis§! - [GetParisOwner]\n§YLyon§! - [GetLyonOwner]\n§YBryansk§! - [GetBryanskOwner]\n§YMoscow§! - [GetMoscowOwner]\n§YStalingrad§! - [GetStalingradOwner]\n\n\n§YCurrent Score§!:\n\n[GER.GetFlag] §OAxis§!: [?global.axis_score]/§Y10§!\n\n[ENG.GetFlag] §CAllies§!: [?global.allies_score]/§Y10§!\n"
 
 
- vp_axis_owns:0 "[GER.GetFlag] §RAxis§!"
+ vp_axis_owns:0 "[GER.GetFlag] §OAxis§!"
  vp_alies_owns:0 "[ENG.GetFlag] §CAllies§!"
 
  MOD_countdown_to_allied_victory_mission:0 "Imminent [ENG.GetFlag] §CAllied§! §YVictory§!"
- MOD_countdown_to_axis_victory_mission:0 "Imminent [GER.GetFlag] §RAxis§! §YVictory§!"
+ MOD_countdown_to_axis_victory_mission:0 "Imminent [GER.GetFlag] §OAxis§! §YVictory§!"
 
  soviet_cap_timer:0 "Time passed since the Soviet Union capitulated"
  hmm.7.t:0 "Axis Win"
@@ -111,10 +103,10 @@
  bul_caudillo:0 "Caudillo Búlgaro"
  bul_sotamarsalkka:0 "Bulgarian Sotamarsalkka"
  GER_mech_delivery_SPR_to_BUL:0 "Start Spanish Mech. Delivery to Bulgaria"
- GER_recieving_ll_mech_1a:0 "Receiving Spanish Mech. Delivery"
- GER_recieving_ll_mech_2a:0 "Receiving Spanish Mech. Delivery"
- GER_recieving_ll_mech_bul_1a:0 "Receiving Spanish Mech. Delivery"
- GER_recieving_ll_mech_bul_2a:0 "Receiving Spanish Mech. Delivery"
+ GER_recieving_ll_mech_1a:0 "Incoming Spanish Mech. Delivery to Germany"
+ GER_recieving_ll_mech_2a:0 "Incoming Spanish Mech. Delivery to Germany"
+ GER_recieving_ll_mech_bul_1a:0 "Incoming Spanish Mech. Delivery to Bulgaria"
+ GER_recieving_ll_mech_bul_2a:0 "Incoming Spanish Mech. Delivery to Bulgaria"
  GER_started_ll_mech_bul:0 "Started mech. Delivery to Bulgaria"
  GER_close_mech_LL_bul:0"Close Mechanized LL for Bulgaria"
  GER_close_mech_LL:0"Close Mechanized LL for Germany"

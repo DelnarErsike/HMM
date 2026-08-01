@@ -1177,8 +1177,11 @@ Technologies = {
             }
 		}
 		complete_effect = {
-            SPR_mohamed_meziane = {
-                set_nationality = BUL
+            SPR = {
+                set_nationality = {
+                    target_country = BUL
+                    character = SPR_mohamed_meziane
+                }
             }
             ITA = { 
                 add_offsite_building = { type = industrial_complex level = 4 } 
@@ -1254,8 +1257,11 @@ Technologies = {
             }
 		}
 		complete_effect = {
-            SPR_mohamed_meziane = {
-                set_nationality = BUL
+            SPR = {
+                set_nationality = {
+                    target_country = BUL
+                    character = SPR_mohamed_meziane
+                }
             }
             BUL = {
                 activate_mission = GER_recieving_ll_mech_bul_1a
@@ -1330,51 +1336,67 @@ Technologies = {
     
         timeout_effect = {
             # Tapered structure is a binary search, helps cut down on how many conditions we need to check on average
+            set_temp_variable = { mech_sent = 0 }
             if = {
                 limit = { date > 1940.12.31 }
                 if = {
                     limit = { date > 1942.12.31 }
                     if = {
                         limit = { date > 1943.12.31 }
-                        BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 6000 producer = SWE variant_name = "Cheap Mechanised" } }
-                        ITA = { add_offsite_building = { type = arms_factory level = 1 } }
+                        set_temp_variable = { mech_sent = 6000 }
                     }
                     else = {
-                        BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5800 producer = SWE variant_name = "Cheap Mechanised" } }
-                        ITA = { add_offsite_building = { type = arms_factory level = 1 } }
+                        set_temp_variable = { mech_sent = 5800 }
                     }
                 }
                 else_if = {
                     limit = { date > 1941.12.31 }
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5500 producer = SWE variant_name = "Cheap Mechanised" } }
+                    set_temp_variable = { mech_sent = 5500 }
                     BUL = { add_manpower = 100000 }
-                    ITA = { add_offsite_building = { type = arms_factory level = 1 } }
                 }
                 else = {
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5000 producer = SWE variant_name = "Cheap Mechanised" } }
+                    set_temp_variable = { mech_sent = 5000 }
                     BUL = { add_manpower = 50000 }
-                    ITA = { add_offsite_building = { type = arms_factory level = 1 } }
                 }
+                ITA = { add_offsite_building = { type = arms_factory level = 1 } }
             }
             else_if = {
                 limit = { date > 1939.12.31 }
                 if = {
                     limit = { date > 1940.5.31 }
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3700 producer = SWE variant_name = "Cheap Mechanised" } }
-                    BUL = { add_manpower = 50000 }
+                    set_temp_variable = { mech_sent = 3700 }
                 }
                 else = {
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2500 producer = SWE variant_name = "Cheap Mechanised" } }
-                    BUL = { add_manpower = 50000 }
+                    set_temp_variable = { mech_sent = 2500 }
                 }
+                BUL = { add_manpower = 50000 }
             }
             else_if = {
                 limit = { date > 1939.5.31 }
-                BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1800 producer = SWE variant_name = "Cheap Mechanised" } }
+                set_temp_variable = { mech_sent = 1800 }
                 BUL = { add_manpower = 50000 }
             }
             else = {
-                BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1200 producer = SWE variant_name = "Cheap Mechanised" } }
+                set_temp_variable = { mech_sent = 1200 }
+            }
+            BUL = {
+                if = {
+                    limit = {
+                        has_tech = mechanised_infantry
+                    }
+                    add_equipment_to_stockpile = {
+                        type = mechanized_equipment_1
+                        amount = mech_sent
+                        producer = BUL # Needs to be own equipment, otherwise they can't LL it away
+                    }
+                }
+                else = { # Need this as a backup, since no equipment will spawn if the country doesn't have the equipment themselves
+                    add_equipment_to_stockpile = {
+                        type = mechanized_equipment_1
+                        amount = mech_sent
+                        producer = SWE
+                    }
+                }
             }
             activate_mission = GER_recieving_ll_mech_bul_2a
         }
@@ -1392,51 +1414,67 @@ Technologies = {
         days_mission_timeout = 30
     
         timeout_effect = {
+            set_temp_variable = { mech_sent = 0 }
             if = {
                 limit = { date > 1940.12.31 }
                 if = {
                     limit = { date > 1942.12.31 }
                     if = {
                         limit = { date > 1943.12.31 }
-                        BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 6000 producer = SWE variant_name = "Cheap Mechanised" } }
-                        ITA = { add_offsite_building = { type = arms_factory level = 1 } }
+                        set_temp_variable = { mech_sent = 6000 }
                     }
                     else = {
-                        BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5800 producer = SWE variant_name = "Cheap Mechanised" } }
-                        ITA = { add_offsite_building = { type = arms_factory level = 1 } }
+                        set_temp_variable = { mech_sent = 5800 }
                     }
                 }
                 else_if = {
                     limit = { date > 1941.12.31 }
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5500 producer = SWE variant_name = "Cheap Mechanised" } }
+                    set_temp_variable = { mech_sent = 5500 }
                     BUL = { add_manpower = 100000 }
-                    ITA = { add_offsite_building = { type = arms_factory level = 1 } }
                 }
                 else = {
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5000 producer = SWE variant_name = "Cheap Mechanised" } }
+                    set_temp_variable = { mech_sent = 5000 }
                     BUL = { add_manpower = 50000 }
-                    ITA = { add_offsite_building = { type = arms_factory level = 1 } }
                 }
+                ITA = { add_offsite_building = { type = arms_factory level = 1 } }
             }
             else_if = {
                 limit = { date > 1939.12.31 }
                 if = {
                     limit = { date > 1940.5.31 }
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3700 producer = SWE variant_name = "Cheap Mechanised" } }
-                    BUL = { add_manpower = 50000 }
+                    set_temp_variable = { mech_sent = 3700 }
                 }
                 else = {
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2500 producer = SWE variant_name = "Cheap Mechanised" } }
-                    BUL = { add_manpower = 50000 }
+                    set_temp_variable = { mech_sent = 2500 }
                 }
+                BUL = { add_manpower = 50000 }
             }
             else_if = {
                 limit = { date > 1939.5.31 }
-                BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1800 producer = SWE variant_name = "Cheap Mechanised" } }
+                set_temp_variable = { mech_sent = 1800 }
                 BUL = { add_manpower = 50000 }
             }
             else = {
-                BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1200 producer = SWE variant_name = "Cheap Mechanised" } }
+                set_temp_variable = { mech_sent = 1200 }
+            }
+            BUL = {
+                if = {
+                    limit = {
+                        has_tech = mechanised_infantry
+                    }
+                    add_equipment_to_stockpile = {
+                        type = mechanized_equipment_1
+                        amount = mech_sent
+                        producer = BUL # Needs to be own equipment, otherwise they can't LL it away
+                    }
+                }
+                else = { # Need this as a backup, since no equipment will spawn if the country doesn't have the equipment themselves
+                    add_equipment_to_stockpile = {
+                        type = mechanized_equipment_1
+                        amount = mech_sent
+                        producer = SWE
+                    }
+                }
             }
             activate_mission = GER_recieving_ll_mech_bul_1a    
         }
@@ -1454,51 +1492,67 @@ Technologies = {
         days_mission_timeout = 30
     
         timeout_effect = {
+            set_temp_variable = { mech_sent = 0 }
             if = {
                 limit = { date > 1940.12.31 }
                 if = {
                     limit = { date > 1942.12.31 }
                     if = {
                         limit = { date > 1943.12.31 }
-                        GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 6000 producer = SWE variant_name = "Cheap Mechanised" } }
-                        ITA = { add_offsite_building = { type = arms_factory level = 1 } }
+                        set_temp_variable = { mech_sent = 6000 }
                     }
                     else = {
-                        GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5800 producer = SWE variant_name = "Cheap Mechanised" } }
-                        ITA = { add_offsite_building = { type = arms_factory level = 1 } }
+                        set_temp_variable = { mech_sent = 5800 }
                     }
                 }
                 else_if = {
                     limit = { date > 1941.12.31 }
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5500 producer = SWE variant_name = "Cheap Mechanised" } }
-                    GER = { add_manpower = 100000 }
-                    ITA = { add_offsite_building = { type = arms_factory level = 1 } }
+                    set_temp_variable = { mech_sent = 5500 }
+                    BUL = { add_manpower = 100000 }
                 }
                 else = {
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5000 producer = SWE variant_name = "Cheap Mechanised" } }
-                    GER = { add_manpower = 50000 }
-                    ITA = { add_offsite_building = { type = arms_factory level = 1 } }
+                    set_temp_variable = { mech_sent = 5000 }
+                    BUL = { add_manpower = 50000 }
                 }
+                ITA = { add_offsite_building = { type = arms_factory level = 1 } }
             }
             else_if = {
                 limit = { date > 1939.12.31 }
                 if = {
                     limit = { date > 1940.5.31 }
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3700 producer = SWE variant_name = "Cheap Mechanised" } }
-                    GER = { add_manpower = 50000 }
+                    set_temp_variable = { mech_sent = 3700 }
                 }
                 else = {
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2500 producer = SWE variant_name = "Cheap Mechanised" } }
-                    GER = { add_manpower = 50000 }
+                    set_temp_variable = { mech_sent = 2500 }
                 }
+                BUL = { add_manpower = 50000 }
             }
             else_if = {
                 limit = { date > 1939.5.31 }
-                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1800 producer = SWE variant_name = "Cheap Mechanised" } }
-                GER = { add_manpower = 50000 }
+                set_temp_variable = { mech_sent = 1800 }
+                BUL = { add_manpower = 50000 }
             }
             else = {
-                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1200 producer = SWE variant_name = "Cheap Mechanised" } }
+                set_temp_variable = { mech_sent = 1200 }
+            }
+            GER = {
+                if = {
+                    limit = {
+                        has_tech = mechanised_infantry
+                    }
+                    add_equipment_to_stockpile = {
+                        type = mechanized_equipment_1
+                        amount = mech_sent
+                        producer = GER # Needs to be own equipment, otherwise they can't LL it away
+                    }
+                }
+                else = { # Need this as a backup, since no equipment will spawn if the country doesn't have the equipment themselves
+                    add_equipment_to_stockpile = {
+                        type = mechanized_equipment_1
+                        amount = mech_sent
+                        producer = SWE
+                    }
+                }
             }
             activate_mission = GER_recieving_ll_mech_2a    
         }
@@ -1516,51 +1570,67 @@ Technologies = {
         days_mission_timeout = 30
     
         timeout_effect = {
+            set_temp_variable = { mech_sent = 0 }
             if = {
                 limit = { date > 1940.12.31 }
                 if = {
                     limit = { date > 1942.12.31 }
                     if = {
                         limit = { date > 1943.12.31 }
-                        GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 6000 producer = SWE variant_name = "Cheap Mechanised" } }
-                        ITA = { add_offsite_building = { type = arms_factory level = 1 } }
+                        set_temp_variable = { mech_sent = 6000 }
                     }
                     else = {
-                        GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5800 producer = SWE variant_name = "Cheap Mechanised" } }
-                        ITA = { add_offsite_building = { type = arms_factory level = 1 } }
+                        set_temp_variable = { mech_sent = 5800 }
                     }
                 }
                 else_if = {
                     limit = { date > 1941.12.31 }
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5500 producer = SWE variant_name = "Cheap Mechanised" } }
-                    GER = { add_manpower = 100000 }
-                    ITA = { add_offsite_building = { type = arms_factory level = 1 } }
+                    set_temp_variable = { mech_sent = 5500 }
+                    BUL = { add_manpower = 100000 }
                 }
                 else = {
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5000 producer = SWE variant_name = "Cheap Mechanised" } }
-                    GER = { add_manpower = 50000 }
-                    ITA = { add_offsite_building = { type = arms_factory level = 1 } }
+                    set_temp_variable = { mech_sent = 5000 }
+                    BUL = { add_manpower = 50000 }
                 }
+                ITA = { add_offsite_building = { type = arms_factory level = 1 } }
             }
             else_if = {
                 limit = { date > 1939.12.31 }
                 if = {
                     limit = { date > 1940.5.31 }
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3700 producer = SWE variant_name = "Cheap Mechanised" } }
-                    GER = { add_manpower = 50000 }
+                    set_temp_variable = { mech_sent = 3700 }
                 }
                 else = {
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2500 producer = SWE variant_name = "Cheap Mechanised" } }
-                    GER = { add_manpower = 50000 }
+                    set_temp_variable = { mech_sent = 2500 }
                 }
+                BUL = { add_manpower = 50000 }
             }
             else_if = {
                 limit = { date > 1939.5.31 }
-                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1800 producer = SWE variant_name = "Cheap Mechanised" } }
-                GER = { add_manpower = 50000 }
+                set_temp_variable = { mech_sent = 1800 }
+                BUL = { add_manpower = 50000 }
             }
             else = {
-                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1200 producer = SWE variant_name = "Cheap Mechanised" } }
+                set_temp_variable = { mech_sent = 1200 }
+            }
+            GER = {
+                if = {
+                    limit = {
+                        has_tech = mechanised_infantry
+                    }
+                    add_equipment_to_stockpile = {
+                        type = mechanized_equipment_1
+                        amount = mech_sent
+                        producer = GER # Needs to be own equipment, otherwise they can't LL it away
+                    }
+                }
+                else = { # Need this as a backup, since no equipment will spawn if the country doesn't have the equipment themselves
+                    add_equipment_to_stockpile = {
+                        type = mechanized_equipment_1
+                        amount = mech_sent
+                        producer = SWE
+                    }
+                }
             }
             activate_mission = GER_recieving_ll_mech_1a    
         }
@@ -1643,52 +1713,48 @@ Technologies = {
         days_mission_timeout = 30
     
         timeout_effect = {
+            set_temp_variable = { gun2_to_ita = 0 }
+            set_temp_variable = { gun3_to_ita = 0 }
+            set_temp_variable = { gun3_to_ger = 0 }
             # Tapered structure is a binary search, helps cut down on how many conditions we need to check on average
             if = { # There are a lot of dates post-43, so doing this check first will cut down on our averages in longer games
                 limit = { date > 1942.12.31 }
-                ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 13000 producer = SWE } }
-                ITA = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 16000 producer = SWE } }
-                GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 14000 producer = SWE } }
+                set_temp_variable = { gun2_to_ita = 11000 }
+                set_temp_variable = { gun3_to_ita = 16000 }
+                set_temp_variable = { gun3_to_ger = 14000 }
             }
             else_if = { # Tapered structure is a binary search, helps cut down on how many conditions we need to check on average
                 limit = { date > 1941.1.31 }
+                set_temp_variable = { gun2_to_ita = 11000 }
                 if = {
                     limit = { date > 1941.12.31 }
+                    set_temp_variable = { gun3_to_ger = 14000 }
                     if = {
                         limit = { date > 1942.5.31 }
                         if = {
                             limit = { date > 1942.9.31 }
-                            ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 13000 producer = SWE } }
-                            ITA = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 10000 producer = SWE } }
-                            GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 14000 producer = SWE } }
+                            set_temp_variable = { gun3_to_ita = 10000 }
                         }
                         else = {
-                            ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 13000 producer = SWE } }
-                            ITA = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 8000 producer = SWE } }
-                            GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 14000 producer = SWE } }
+                            set_temp_variable = { gun3_to_ita = 8000 }
                         }
                     }
                     else = {
-                        ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 13000 producer = SWE } }
-                        ITA = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 4000 producer = SWE } }
-                        GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 14000 producer = SWE } }
+                        set_temp_variable = { gun3_to_ita = 4000 }
                     }
                 }
                 else_if = {
                     limit = { date > 1941.5.31 }
                     if = {
                         limit = { date > 1941.9.31 }
-                        ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 11000 producer = SWE } }
-                        GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 14000 producer = SWE } }
+                        set_temp_variable = { gun3_to_ger = 14000 }
                     }
                     else = {
-                        ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 11000 producer = SWE } }
-                        GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 10000 producer = SWE } }
+                        set_temp_variable = { gun3_to_ger = 10000 }
                     }
                 }
                 else = {
-                    ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 11000 producer = SWE } }
-                    GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 8000 producer = SWE } }
+                    set_temp_variable = { gun3_to_ger = 8000 }
                 }
             }
             else_if = {
@@ -1697,31 +1763,80 @@ Technologies = {
                     limit = { date > 1940.7.31 }
                     if = {
                         limit = { date > 1940.9.31 }
-                        ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 10000 producer = SWE } }
-                        GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 5000 producer = SWE } }
+                        set_temp_variable = { gun2_to_ita = 10000 }
+                        set_temp_variable = { gun3_to_ger = 5000 }
                     }
                     else = {
-                        ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 8000 producer = SWE } }
-                        GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 3000 producer = SWE } }
+                        set_temp_variable = { gun2_to_ita = 8000 }
+                        set_temp_variable = { gun3_to_ger = 3000 }
                     }
                 }
                 else = {
-                    ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 7000 producer = SWE } }
-                    GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 1000 producer = SWE } }
+                    set_temp_variable = { gun2_to_ita = 7000 }
+                    set_temp_variable = { gun3_to_ger = 1000 }
                 }
             }
             else_if = {
                 limit = { date > 1939.8.31 }
                 if = {
                     limit = { date > 1939.12.31 }
-                    ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 6000 producer = SWE } }
+                    set_temp_variable = { gun2_to_ita = 6000 }
                 }
                 else = {
-                    ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 5000 producer = SWE } }
+                    set_temp_variable = { gun2_to_ita = 5000 }
                 }
             }
             else = {
-                ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 3000 producer = SWE } }
+                set_temp_variable = { gun2_to_ita = 3000 }
+            }
+            ITA = {
+                add_equipment_to_stockpile = {
+                    type = infantry_equipment_2
+                    amount = gun2_to_ita
+                    producer = ITA # Needs to be own equipment, otherwise they can't LL it away
+                }
+                if = {
+                    limit = { check_variable = { gun3_to_ita > 0 } }
+                    if = {
+                        limit = {
+                            has_tech = advanced_infantry_weapons
+                        }
+                        add_equipment_to_stockpile = {
+                            type = infantry_equipment_3
+                            amount = gun3_to_ita
+                            producer = ITA # Needs to be own equipment, otherwise they can't LL it away
+                        }
+                    }
+                    else = {
+                        add_equipment_to_stockpile = {
+                            type = infantry_equipment_3
+                            amount = gun3_to_ita
+                            producer = SWE
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = { check_variable = { gun3_to_ger > 0 } }
+                GER = {
+                    if = {
+                        limit = {
+                            has_tech = advanced_infantry_weapons
+                        }
+                        add_equipment_to_stockpile = {
+                            type = infantry_equipment_3
+                            amount = gun3_to_ger
+                            producer = GER
+                        }
+                    }
+                    else = {
+                        add_equipment_to_stockpile = {
+                            type = infantry_equipment_3
+                            amount = gun3_to_ger
+                            producer = SWE
+                        }
+                    }
+                }
             }
             if = {
                 limit = { FIN = { is_ai = yes } }
@@ -1745,52 +1860,48 @@ Technologies = {
         days_mission_timeout = 30
     
         timeout_effect = {
+            set_temp_variable = { gun2_to_ita = 0 }
+            set_temp_variable = { gun3_to_ita = 0 }
+            set_temp_variable = { gun3_to_ger = 0 }
             # Tapered structure is a binary search, helps cut down on how many conditions we need to check on average
             if = { # There are a lot of dates post-43, so doing this check first will cut down on our averages in longer games
                 limit = { date > 1942.12.31 }
-                ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 13000 producer = SWE } }
-                ITA = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 16000 producer = SWE } }
-                GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 14000 producer = SWE } }
+                set_temp_variable = { gun2_to_ita = 11000 }
+                set_temp_variable = { gun3_to_ita = 16000 }
+                set_temp_variable = { gun3_to_ger = 14000 }
             }
             else_if = { # Tapered structure is a binary search, helps cut down on how many conditions we need to check on average
                 limit = { date > 1941.1.31 }
+                set_temp_variable = { gun2_to_ita = 11000 }
                 if = {
                     limit = { date > 1941.12.31 }
+                    set_temp_variable = { gun3_to_ger = 14000 }
                     if = {
                         limit = { date > 1942.5.31 }
                         if = {
                             limit = { date > 1942.9.31 }
-                            ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 13000 producer = SWE } }
-                            ITA = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 10000 producer = SWE } }
-                            GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 14000 producer = SWE } }
+                            set_temp_variable = { gun3_to_ita = 10000 }
                         }
                         else = {
-                            ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 13000 producer = SWE } }
-                            ITA = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 8000 producer = SWE } }
-                            GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 14000 producer = SWE } }
+                            set_temp_variable = { gun3_to_ita = 8000 }
                         }
                     }
                     else = {
-                        ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 13000 producer = SWE } }
-                        ITA = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 4000 producer = SWE } }
-                        GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 14000 producer = SWE } }
+                        set_temp_variable = { gun3_to_ita = 4000 }
                     }
                 }
                 else_if = {
                     limit = { date > 1941.5.31 }
                     if = {
                         limit = { date > 1941.9.31 }
-                        ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 11000 producer = SWE } }
-                        GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 14000 producer = SWE } }
+                        set_temp_variable = { gun3_to_ger = 14000 }
                     }
                     else = {
-                        ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 11000 producer = SWE } }
-                        GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 10000 producer = SWE } }
+                        set_temp_variable = { gun3_to_ger = 10000 }
                     }
                 }
                 else = {
-                    ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 11000 producer = SWE } }
-                    GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 8000 producer = SWE } }
+                    set_temp_variable = { gun3_to_ger = 8000 }
                 }
             }
             else_if = {
@@ -1799,31 +1910,93 @@ Technologies = {
                     limit = { date > 1940.7.31 }
                     if = {
                         limit = { date > 1940.9.31 }
-                        ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 10000 producer = SWE } }
-                        GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 5000 producer = SWE } }
+                        set_temp_variable = { gun2_to_ita = 10000 }
+                        set_temp_variable = { gun3_to_ger = 5000 }
                     }
                     else = {
-                        ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 8000 producer = SWE } }
-                        GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 3000 producer = SWE } }
+                        set_temp_variable = { gun2_to_ita = 8000 }
+                        set_temp_variable = { gun3_to_ger = 3000 }
                     }
                 }
                 else = {
-                    ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 7000 producer = SWE } }
-                    GER = { add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 1000 producer = SWE } }
+                    set_temp_variable = { gun2_to_ita = 7000 }
+                    set_temp_variable = { gun3_to_ger = 1000 }
                 }
             }
             else_if = {
                 limit = { date > 1939.8.31 }
                 if = {
                     limit = { date > 1939.12.31 }
-                    ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 6000 producer = SWE } }
+                    set_temp_variable = { gun2_to_ita = 6000 }
                 }
                 else = {
-                    ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 5000 producer = SWE } }
+                    set_temp_variable = { gun2_to_ita = 5000 }
                 }
             }
             else = {
-                ITA = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 3000 producer = SWE } }
+                set_temp_variable = { gun2_to_ita = 3000 }
+            }
+            # Need this structure to work around issues where foreign-spawned equipment can't be lend-leased
+            ITA = {
+                if = {
+                    limit = {
+                        has_tech = improved_infantry_weapons
+                    }
+                    add_equipment_to_stockpile = {
+                        type = infantry_equipment_2
+                        amount = gun2_to_ita
+                        producer = ITA
+                    }
+                }
+                else = {
+                    add_equipment_to_stockpile = {
+                        type = infantry_equipment_2
+                        amount = gun2_to_ita
+                        producer = SWE
+                    }
+                }
+                if = {
+                    limit = { check_variable = { gun3_to_ita > 0 } }
+                    if = {
+                        limit = {
+                            has_tech = advanced_infantry_weapons
+                        }
+                        add_equipment_to_stockpile = {
+                            type = infantry_equipment_3
+                            amount = gun3_to_ita
+                            producer = ITA
+                        }
+                    }
+                    else = {
+                        add_equipment_to_stockpile = {
+                            type = infantry_equipment_3
+                            amount = gun3_to_ita
+                            producer = SWE
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = { check_variable = { gun3_to_ger > 0 } }
+                GER = {
+                    if = {
+                        limit = {
+                            has_tech = advanced_infantry_weapons
+                        }
+                        add_equipment_to_stockpile = {
+                            type = infantry_equipment_3
+                            amount = gun3_to_ger
+                            producer = GER
+                        }
+                    }
+                    else = {
+                        add_equipment_to_stockpile = {
+                            type = infantry_equipment_3
+                            amount = gun3_to_ger
+                            producer = SWE
+                        }
+                    }
+                }
             }
             if = {
                 limit = { FIN = { is_ai = yes } }

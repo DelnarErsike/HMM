@@ -9287,6 +9287,7 @@ focus_tree = {
 					}
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
+				AUS = {
 					AUS_alfred_klahr = {
 						set_nationality = ROOT
 						add_advisor_role = {
@@ -9300,6 +9301,7 @@ focus_tree = {
 							}
 						}
 					}
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER }

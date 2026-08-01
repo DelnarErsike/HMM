@@ -3475,7 +3475,7 @@ focus_tree = {
                     add_ideas = RAJ_marginalized_muslim_community
                     add_ideas = RAJ_princely_states
                     add_ideas = RAJ_risk_of_famine
-                    RAJ_freeman_freeman_thomas = { set_nationality = PREV }
+                    RAJ = { RAJ_freeman_freeman_thomas = { set_nationality = PREV } }
                     promote_character = RAJ_freeman_freeman_thomas
                     set_popularities = {
                         democratic= 28 # 0.0-100
@@ -19485,7 +19485,10 @@ focus = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 
 		RAJ_noel_beresfordpeirse = {
+            if = {
+				limit = { NOT = { has_trait = desert_fox } }
 			add_unit_leader_trait = desert_fox
+            }
 			add_skill_level = 1
 			add_logistics = 1
 			add_defense = 1
@@ -19611,7 +19614,10 @@ focus = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 		RAJ_GOE_sam_manekshaw = {
+            if = {
+				limit = { NOT = { has_trait = jungle_rat } }
 			add_unit_leader_trait = jungle_rat
+            }
 			add_skill_level = 1
 			add_logistics = 1
 			add_defense = 1
@@ -19814,7 +19820,10 @@ focus = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 
 		RAJ_kodandera_cariappa = {
+            if = {
+				limit = { NOT = { has_trait = hill_fighter } }
 			add_unit_leader_trait = hill_fighter
+            }
 			add_skill_level = 1
 			add_logistics = 1
 			add_defense = 1
@@ -23332,6 +23341,7 @@ focus = {
                     }
                 }
 
+                ETH = {
                 RAJ_orde_wingate = {
                     hidden_effect = {
                         if = {
@@ -23344,6 +23354,7 @@ focus = {
                         set_character_flag = is_in_raj
                     }
                     set_nationality = RAJ
+                }
                 }
             }
 

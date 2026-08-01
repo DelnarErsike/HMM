@@ -9923,7 +9923,15 @@ operations = {
 			tag = ENG
 			has_government = democratic
 			has_war_with = GER
+			OR = {
 			ICE = { exists = yes }
+				100 = {
+					owner = {
+						has_capitulated = yes
+						is_in_faction_with = ROOT
+					}
+				}
+			}
 			IF = {
 				limit = {
 					NOR = { has_government = democratic }
@@ -9956,10 +9964,20 @@ operations = {
 		visible = {
 			tag = ENG
 			has_war_with = GER
+			OR = {
 			ICE = { exists = yes }
+				100 = {
+					owner = {
+						has_capitulated = yes
+						is_in_faction_with = ROOT
+					}
+				}
+			}
 		}
 		
 		complete_effect = {
+			if = {
+				limit = { ICE = { exists = yes } }
                ENG = {
                     annex_country = {
                         target = ICE
@@ -9970,6 +9988,15 @@ operations = {
 						add_compliance = 100
 					}
                 }
+			}
+			else = {
+				ENG = {
+					transfer_state = 100
+					100 = {
+						add_compliance = 100
+					}
+				}
+			}
 		}
 	}
 
@@ -9983,10 +10010,17 @@ operations = {
 		}
 		
 		available = { #Dublicate of Visibility intented
+			OR = {
 			DEN = {
 				is_subject = yes
 				NOT = {
 					is_in_faction_with = var:DEN.DEN_overlord_nation
+				}
+			}
+				any_country_with_original_tag = {
+					original_tag_to_check = DEN 
+					has_capitulated = yes
+					is_in_faction_with = ROOT 
 				}
 			}
 			has_war_with = var:DEN.DEN_overlord_nation
@@ -10030,10 +10064,17 @@ operations = {
 		
 		visible = {
 			original_tag = ENG
+			OR = {
 			DEN = {
 				is_subject = yes
 				NOT = {
 					is_in_faction_with = var:DEN.DEN_overlord_nation
+				}
+			}
+				any_country_with_original_tag = {
+					original_tag_to_check = DEN 
+					has_capitulated = yes
+					is_in_faction_with = ROOT 
 				}
 			}
 			has_war_with = var:DEN.DEN_overlord_nation

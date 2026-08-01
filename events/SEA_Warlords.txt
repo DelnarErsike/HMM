@@ -3329,14 +3329,19 @@ country_event = {
 	option = {
 		name = SEA_warlords.60.a
 		
-		MAN_yu_zishan = {
-			set_nationality = FROM
-		}
-		MAN_zhang_haipeng = {
-			set_nationality = FROM
-		}
-		MAN_ma_zhanshan = {
-			set_nationality = FROM
+		MAN = {
+			set_nationality = {
+				target_country = FROM
+				character = MAN_yu_zishan
+			}
+			set_nationality = {
+				target_country = FROM
+				character = MAN_zhang_haipeng
+			}
+			set_nationality = {
+				target_country = FROM
+				character = MAN_ma_zhanshan
+			}
 		}
 
 		add_manpower = -5000
@@ -3630,8 +3635,11 @@ country_event = {
 	option = {
 		name = SEA_warlords.68.a
 		
-		CHI_feng_yuxiang = {
-			set_nationality = FROM
+		CHI = {
+			set_nationality = {
+				target_country = FROM
+				character = CHI_feng_yuxiang
+			}
 		}
 
 		add_manpower = -5000

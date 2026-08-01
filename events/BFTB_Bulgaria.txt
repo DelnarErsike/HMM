@@ -515,6 +515,7 @@ country_event = {
 				limit = {
 					NOT = { has_trait = trait_BUL_tsar_loyalist }
 					NOT = { has_trait = trait_BUL_ff_sympathizer }
+					NOT = { has_trait = trait_BUL_zveno_member }
 				}
 				add_unit_leader_trait = trait_BUL_zveno_member
 			}
@@ -2903,6 +2904,7 @@ country_event = {
 		random_unit_leader = {
 			limit = {
 				has_id = 1203 #Hadzhipetkov
+				NOT = { has_trait = trait_BUL_ff_sympathizer }
 			}
 			add_unit_leader_trait = trait_BUL_ff_sympathizer
 		}
@@ -2912,6 +2914,7 @@ country_event = {
 				random_unit_leader = {
 					limit = {
 						has_id = 1202 #Popov
+						NOT = { has_trait = trait_BUL_ff_sympathizer }
 					}
 					add_unit_leader_trait = trait_BUL_ff_sympathizer
 				}
@@ -2920,6 +2923,7 @@ country_event = {
 				random_unit_leader = {
 					limit = {
 						has_id = 1211 #Dotsev
+						NOT = { has_trait = trait_BUL_ff_sympathizer }
 					}
 					add_unit_leader_trait = trait_BUL_ff_sympathizer
 				}
@@ -6504,36 +6508,42 @@ country_event = {
 				if = {
 					limit = {
 						BUL = { check_variable = { var = BUL_trait_gained_during_scw value = 1 compare = equals } }
+						NOT = { has_trait = commando }
 					}
 					add_unit_leader_trait = commando
 				}
 				else_if = {
 					limit = {
 						BUL = { check_variable = { BUL_trait_gained_during_scw = 2 } }
+						NOT = { has_trait = trait_mountaineer }
 					}
 					add_unit_leader_trait = trait_mountaineer
 				}
 				else_if = {
 					limit = {
 						BUL = { check_variable = { BUL_trait_gained_during_scw = 3 } }
+						NOT = { has_trait = hill_fighter }
 					}
 					add_unit_leader_trait = hill_fighter
 				}
 				else_if = {
 					limit = {
 						BUL = { check_variable = { BUL_trait_gained_during_scw = 4 } }
+						NOT = { has_trait = urban_assault_specialist }
 					}
 					add_unit_leader_trait = urban_assault_specialist
 				}
 				else_if = {
 					limit = {
 						BUL = { check_variable = { BUL_trait_gained_during_scw = 5 } }
+						NOT = { has_trait = trickster }
 					}
 					add_unit_leader_trait = trickster
 				}
 				else_if = {
 					limit = {
 						BUL = { check_variable = { BUL_trait_gained_during_scw = 6 } }
+						NOT = { has_trait = organizer }
 					}
 					add_unit_leader_trait = organizer
 				}
@@ -7013,11 +7023,7 @@ country_event = {
 					}
 				}
 			}
-			random_country = {
-				limit = {
-					is_in_faction_with = ROOT
-					is_faction_leader = yes
-				}
+			faction_leader = {
 				add_to_faction = FROM
 			}
 		}

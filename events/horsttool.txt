@@ -21,10 +21,11 @@ news_event = {
 	picture = GFX_news_event_001
 	major = yes
 	is_triggered_only = yes
+    immediate = {
+        clear_variable=Root.selected_cheat
+    }
 	option = {
 		name = "Ja... Commandant"
-		clear_variable=this.selected_cheat
-		clear_variable=this.target_country
 	}
 }
 news_event = {
@@ -36,20 +37,6 @@ news_event = {
 	is_triggered_only = yes
 	option = {
 		name = "ok Lol"
-	}
-}
-
-news_event = {
-	id = hosttool.1
-	title = "Hosttool"
-	desc = " [From.Getname] gave [Root.cheat_selected] to [From.From.Owner.Getname]"
-	picture = GFX_news_event_001
-	major = yes
-	is_triggered_only = yes
-	option = {
-		name = "ok cool"
-		clear_variable=this.selected_cheat 
-		clear_variable=this.target_country
 	}
 }
 
@@ -229,30 +216,38 @@ country_event = {
     desc = hosttool.1000.desc
     picture = GFX_report_event_001
     is_triggered_only = yes
+
+    trigger = { # We could cause an issue if our new potential host gets killed between us selecting them and the even transferring, so we need these checks to be sure
+        event_target:potential_new_host = { exists = yes }
+    }
     
     option = {
         name = "Yes, move the host tool"
-        # Store new host globally BEFORE clearing flags
-        set_variable = { global.new_host_country = temp_new_host }
-        # Clear host flag from everyone
-        every_country = {
-            clr_country_flag = host
-            clr_country_flag = pause_blocked
-            clr_country_flag = transfer_enabled
+        trigger = { # We could cause an issue if our new potential host gets killed between us selecting them and the even transferring, so we need these checks to be sure
+            event_target:potential_new_host = { exists = yes }
         }
         # Set new host
-        var:temp_new_host = { 
+        event_target:potential_new_host = { 
             set_country_flag = host 
             set_country_flag = transfer_enabled
+            clr_country_flag = pause_blocked
+            # Clear host flag from everyone
+            every_other_country = {
+                clr_country_flag = host
+                clr_country_flag = pause_blocked
+                clr_country_flag = transfer_enabled
+            }
         }
         # Send ONE global notification
         news_event = { id = hosttool.1001 }
-        clear_variable = temp_new_host
     }
     
     option = {
         name = "No, cancel"
-        clear_variable = temp_new_host
+    }
+
+    after = {
+        clear_global_event_target = potential_new_host
     }
 }
 
@@ -264,11 +259,16 @@ news_event = {
     picture = GFX_news_event_001
     major = yes
     is_triggered_only = yes
+
+    immediate = {
+        random_country = {
+            limit = { has_country_flag = host }
+            save_event_target_as = new_host
+        }
+    }
     
     option = {
         name = "Understood"
-        # Clear the global variable after showing the notification
-        clear_variable = global.new_host_country
     }
 }
 # Pause blocker events
@@ -281,36 +281,6 @@ news_event = {
     is_triggered_only = yes
     option = {
         name = "Nooo la pause rights"
-    }
-}
-
-# Declare war event
-news_event = {
-    id = hosttool.21
-    title = "War Declared by Host Tool"
-    desc = "[From.GetName] used the host tool to make [?global.war_declarer.GetName] declare war on [?global.war_target.GetName]."
-    picture = GFX_news_event_001
-    major = yes
-    is_triggered_only = yes
-    option = {
-        name = "War in my war game?Bruh"
-        clear_variable = global.war_declarer
-        clear_variable = global.war_target
-    }
-}
-
-# Tag switch event
-news_event = {
-    id = hosttool.22
-    title = "Player Tag Switched"
-    desc = "[From.GetName] used the host tool to move a player from [?global.switch_from.GetName] to [?global.switch_to.GetName]. Musical chairs, but with entire nations!"
-    picture = GFX_news_event_001
-    major = yes
-    is_triggered_only = yes
-    option = {
-        name = "Hope they like their new home!"
-        clear_variable = global.switch_from
-        clear_variable = global.switch_to
     }
 }
 
@@ -682,36 +652,6 @@ news_event = {
     is_triggered_only = yes
     option = {
         name = "Acknowledged"
-    }
-}
-
-# Compliance events
-news_event = {
-    id = hosttool.54
-    title = "Hosttool - Compliance Changed"
-    desc = "[From.GetName] set compliance to [?global.compliance_value]% in [From.From.GetName] owned by [From.From.Owner.GetName]"
-    picture = GFX_news_event_001
-    major = yes
-    is_triggered_only = yes
-    option = {
-        name = "Acknowledged"
-        clear_variable = global.compliance_value
-        clear_variable = global.compliance_state
-    }
-}
-
-# Resistance events
-news_event = {
-    id = hosttool.55
-    title = "Hosttool - Resistance Changed"
-    desc = "[From.GetName] set resistance to [?global.resistance_value]% in [From.From.GetName] owned by [From.From.Owner.GetName]"
-    picture = GFX_news_event_001
-    major = yes
-    is_triggered_only = yes
-    option = {
-        name = "Acknowledged"
-        clear_variable = global.resistance_value
-        clear_variable = global.resistance_state
     }
 }
 

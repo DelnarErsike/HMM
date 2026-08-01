@@ -8697,8 +8697,14 @@ focus_tree = {
 			custom_effect_tooltip = SOV_approach_tukhachevsky_tt
 			hidden_effect = {
 				SOV_mikhail_tukhachevsky = {
+					if = {
+						limit = { NOT = { has_trait = trait_SOV_trotskyist } }
 					add_unit_leader_trait = trait_SOV_trotskyist
+					}
+					if = {
+						limit = { NOT = { has_trait = trait_SOV_stalinist } }
 					remove_unit_leader_trait = trait_SOV_stalinist
+					}
 					set_character_flag = SOV_aligned_left_opposition_flag
 				}
 				random_unit_leader = {
@@ -17216,11 +17222,8 @@ ai_will_do = {
 
 		completion_reward = {
 
-			random_country = {
-	 		 	limit = {
-	     			 owns_state = 2
-	  				}
-
+			2 = {
+	 		owner = {
 				 SOV = {
 
 					create_wargoal = {
@@ -17230,12 +17233,10 @@ ai_will_do = {
 	  				}
     			}
     		}
+			}
 
-			random_country = {
-	 		 	limit = {
-	     			 owns_state = 454
-	  				}
-
+			454 = {
+			owner = {
 				 SOV = {
 
 					create_wargoal = {
@@ -17245,11 +17246,9 @@ ai_will_do = {
 	  				}
     			}
     		}
- 			random_country = {
-	 		 	limit = {
-	     			 owns_state = 797
-	  				}
-
+			}
+ 			797 = {
+			owner = {
 				 SOV = {
 
 					create_wargoal = {
@@ -17258,7 +17257,8 @@ ai_will_do = {
 					    generator = { 797 }
 	  				}
     			}
-    		}   			
+    		}
+			}
     		add_state_claim = 2
    			add_state_claim = 797
    			add_state_claim = 454

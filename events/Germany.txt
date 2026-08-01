@@ -2452,11 +2452,7 @@ country_event = {
 					is_subject = no
 				}
 			}
-			random_country = {
-				limit = {
-					is_faction_leader = yes
-					is_in_faction_with = ROOT #this may in fact be ROOT, since countries are in a faction with themselves!
-				}
+			faction_leader = {
 				add_to_faction = CZE
 			}
 		}

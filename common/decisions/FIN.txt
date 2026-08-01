@@ -2810,11 +2810,10 @@ FIN_foreign_politics_decision_category = {
 			has_war_with = SOV
 			GER = {
 				has_war_with = SOV
-			}
-			any_country = {
+				any_enemy_country = {
 				has_government = democratic
 				is_faction_leader = yes
-				has_war_with = GER
+				}
 			}
 			722 = {
 				is_owned_and_controlled_by = ROOT
@@ -2876,11 +2875,11 @@ FIN_foreign_politics_decision_category = {
 				popularity = 0.05
 			}
 
-			random_country = {
+			GER = {
+			random_enemy_country = {
 				limit = {
 					has_government = democratic
 					is_faction_leader = yes
-					has_war_with = GER
 				}
 				set_country_flag = FIN_major_democratic_leader_flag
 				
@@ -2889,6 +2888,7 @@ FIN_foreign_politics_decision_category = {
 					days = 3
 					random_days = 5
 				}
+			}
 			}
 
 			SOV = {

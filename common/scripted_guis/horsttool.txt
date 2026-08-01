@@ -59,7 +59,7 @@ st_country_powers = {
 
 		change_host_nation_click = {
 			owner = {
-				ROOT = { set_variable = { temp_new_host = PREV } }
+				save_global_event_target_as = potential_new_host
 			}
 			ROOT = {
 				country_event = { id = hosttool.1000 }
@@ -325,11 +325,10 @@ st_country_powers = {
 	
 		add_cores_click = {
 			owner = {
-				set_temp_variable = { ROOT.taker = this }
 				for_each_loop = {
 					array = ROOT.marked_states
 					value = state
-					var:state = { add_core_of = var:taker }
+					var:state = { add_core_of = PREV }
 				}
 				ROOT = {
 					for_each_scope_loop = {
@@ -362,12 +361,13 @@ st_country_powers = {
 		}
 
 		add_cores_to_all_cores_of_selected_nation_click = {			
-			owner = { set_variable = { ROOT.taker = this } }
-			var:ROOT.marked_states^0 = { owner = { set_variable = { ROOT.target = this } } }
-			if = { limit = { check_variable = { ROOT.target = ROOT.taker } } }
-			else={
-				var:ROOT.target = {
-					every_core_state = { add_core_of = var:ROOT.taker }
+			owner = {
+				var:ROOT.marked_states^0 = { owner = { save_event_target_as = target_country } }
+				if = {
+					limit = { NOT = { tag = event_target:target_country } }
+					event_target:target_country = {
+						every_core_state = { add_core_of = PREV.PREV }
+					}
 				}
 			}
 				
@@ -377,8 +377,6 @@ st_country_powers = {
 					clear_variable = mark_status
 				}
 				clear_array = marked_states
-				clear_variable = target
-				clear_variable = taker
 				clear_variable = first_marked_state
 			}
 		}
@@ -472,66 +470,56 @@ st_country_powers = {
 			set_resistance = ROOT.rest			
 		}
 		add_cheat_click = {
-			set_variable = { ROOT.taker = this}
-			var:taker = {
-				owner = { set_variable = { Root.target_country = this }
-					if = { limit= { check_variable = { Root.selected_cheat = 1 } } generic_bonus_1 = yes }
-					if = { limit= { check_variable = { Root.selected_cheat = 2 } } generic_bonus_3 = yes }
-					if = { limit= { check_variable = { Root.selected_cheat = 3 } } generic_bonus_2y = yes }
-					if = { limit= { check_variable = { Root.selected_cheat = 4 } } generic_bonus_999 = yes }
-					if = { limit = { check_variable = { Root.selected_cheat = 5 } } add_tech_bonus = { name=armor_bonus bonus = 1 uses = 1 category = armor } }
-					if = { limit = { check_variable = { Root.selected_cheat = 6 } } add_tech_bonus = { name=armor_bonus ahead_reduction = 2 uses = 1 category = armor } }
-					if = { limit = { check_variable = { Root.selected_cheat = 7 } } add_tech_bonus = { name=air_equipment bonus = 1 uses = 1 category = air_equipment } }
-					if = { limit = { check_variable = { Root.selected_cheat = 8 } } add_tech_bonus = { name=industry_bonus bonus = 1 uses = 1 category = industry } }
-					if = { limit = { check_variable = { Root.selected_cheat = 9 } } scoped_sound_effect = "earrape_sound_effect" }
-					if = { limit = { check_variable = { Root.selected_cheat = 10 } } army_experience = 50 }
-					if = { limit = { check_variable = { Root.selected_cheat = 11 } } air_experience = 50 }
-					if = { limit = { check_variable = { Root.selected_cheat = 12 } } navy_experience = 50 }
-					if = { limit = { check_variable = { Root.selected_cheat = 13 } } scoped_sound_effect = "schizophrenic_meltdown_sound_effect" }
-					if = { limit = { check_variable = { Root.selected_cheat = 14 } } add_command_power = 25 }
-					if = { limit = { check_variable = { Root.selected_cheat = 15 } } armor_bonus_50 = yes }
-					if = { limit = { check_variable = { Root.selected_cheat = 16 } } armor_bonus_999 = yes }
-					if = { limit = { check_variable = { Root.selected_cheat = 17 } } armor_bonus_1y = yes }
-					if = { limit = { check_variable = { Root.selected_cheat = 18 } } air_bonus_50 = yes }
-					if = { limit = { check_variable = { Root.selected_cheat = 19 } } air_bonus_1y = yes }
-					if = { limit = { check_variable = { Root.selected_cheat = 20 } } air_bonus_2y = yes }
-					if = { limit = { check_variable = { Root.selected_cheat = 21 } } air_bonus_999 = yes }
-					if = { limit = { check_variable = { Root.selected_cheat = 22 } } industry_bonus_50 = yes }
-					if = { limit = { check_variable = { Root.selected_cheat = 23 } } industry_bonus_1y = yes }
-					if = { limit = { check_variable = { Root.selected_cheat = 24 } } industry_bonus_2y = yes }
-					if = { limit = { check_variable = { Root.selected_cheat = 25 } } industry_bonus_999 = yes }
-					if = { limit = { check_variable = { Root.selected_cheat = 26 } } naval_bonus_50 = yes }
-					if = { limit = { check_variable = { Root.selected_cheat = 27 } } naval_bonus_100 = yes }
-					if = { limit = { check_variable = { Root.selected_cheat = 28 } } naval_bonus_999 = yes }
-					if = { limit = { check_variable = { Root.selected_cheat = 29 } } naval_bonus_1y = yes }
-					if = { limit = { check_variable = { Root.selected_cheat = 30 } } naval_bonus_2y = yes }
-					if = { limit = { check_variable = { Root.selected_cheat = 31 } } add_equipment_to_stockpile = { type = convoy_1 amount = 100 } }
-					if = { limit = { check_variable = { Root.selected_cheat = 32 } } add_fuel = 50000 }
-					if = { limit = { check_variable = { Root.selected_cheat = 33 } } add_mastery = { amount = 50 } }
-				}	
+			if = {
+				limit = { check_variable = { Root.selected_cheat > 0 } }
+				THIS = {
+					owner = {
+						if = { limit= { check_variable = { Root.selected_cheat = 1 } } generic_bonus_1 = yes }
+						else_if = { limit= { check_variable = { Root.selected_cheat = 2 } } generic_bonus_3 = yes }
+						else_if = { limit= { check_variable = { Root.selected_cheat = 3 } } generic_bonus_2y = yes }
+						else_if = { limit= { check_variable = { Root.selected_cheat = 4 } } generic_bonus_999 = yes }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 5 } } add_tech_bonus = { name=armor_bonus bonus = 1 uses = 1 category = armor } }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 6 } } add_tech_bonus = { name=armor_bonus ahead_reduction = 2 uses = 1 category = armor } }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 7 } } add_tech_bonus = { name=air_equipment bonus = 1 uses = 1 category = air_equipment } }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 8 } } add_tech_bonus = { name=industry_bonus bonus = 1 uses = 1 category = industry } }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 9 } } scoped_sound_effect = "earrape_sound_effect" }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 10 } } army_experience = 50 }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 11 } } air_experience = 50 }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 12 } } navy_experience = 50 }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 13 } } scoped_sound_effect = "schizophrenic_meltdown_sound_effect" }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 14 } } add_command_power = 25 }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 15 } } armor_bonus_50 = yes }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 16 } } armor_bonus_999 = yes }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 17 } } armor_bonus_1y = yes }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 18 } } air_bonus_50 = yes }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 19 } } air_bonus_1y = yes }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 20 } } air_bonus_2y = yes }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 21 } } air_bonus_999 = yes }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 22 } } industry_bonus_50 = yes }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 23 } } industry_bonus_1y = yes }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 24 } } industry_bonus_2y = yes }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 25 } } industry_bonus_999 = yes }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 26 } } naval_bonus_50 = yes }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 27 } } naval_bonus_100 = yes }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 28 } } naval_bonus_999 = yes }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 29 } } naval_bonus_1y = yes }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 30 } } naval_bonus_2y = yes }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 31 } } add_equipment_to_stockpile = { type = convoy_1 amount = 100 } }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 32 } } add_fuel = 50000 }
+						else_if = { limit = { check_variable = { Root.selected_cheat = 33 } } add_mastery = { amount = 50 } }
+					}	
+				}
+				ROOT={
+					news_event = { id = horsttool.1 }
+				}
 			}
-			GER={
-				set_variable = { this.target_country = Root.target_country }
-				set_variable = { this.selected_cheat = Root.selected_cheat }
-				news_event = { id = horsttool.1}
-			}
-			clear_variable = ROOT.taker
 		}
 		annex_country_click = {
-			owner = { set_variable = { ROOT.taker = this } }
-			var:ROOT.marked_states^0 = { owner = { set_variable = { ROOT.target = this } } }
-			if = { limit = { check_variable = { ROOT.target = ROOT.taker } } }
-			else = {
-				var:ROOT.target = {
-					var:ROOT.taker = {
-						annex_country = { target = PREV transfer_troops = yes }
-						every_owned_state = { 
-							limit = {
-								is_core_of = var:ROOT.target
-							}
-							add_compliance = 80
-						}
-					}
+			owner = {
+				var:ROOT.marked_states^0 = { owner = { save_event_target_as = target_country } }
+				if = {
+					limit = { NOT = { tag = event_target:target_country } }
+					annex_country = { target = event_target:target_country transfer_troops = yes }
 				}
 			}
 			
@@ -541,24 +529,15 @@ st_country_powers = {
 					clear_variable = mark_status
 				}
 				clear_array = marked_states
-				clear_variable = target
-				clear_variable = taker
 				clear_variable = first_marked_state
 			}
 		}
 		puppet_country_click = {
 			owner = {
-				set_variable = { ROOT.taker = this }
-			}
-			var:ROOT.marked_states^0 = { owner = { set_variable = { ROOT.target = this } } }
-			if ={ 
-				limit = { check_variable = { ROOT.target = ROOT.taker } }
-			}
-			else={
-				var:ROOT.target = {
-					var:ROOT.taker = {
-						puppet = PREV
-					}
+				var:ROOT.marked_states^0 = { owner = { save_event_target_as = target_country } }
+				if = { 
+					limit = { NOT = { tag = event_target:target_country } }
+					puppet = event_target:target_country
 				}
 			}
 
@@ -568,8 +547,6 @@ st_country_powers = {
 					clear_variable = mark_status
 				}
 				clear_array = marked_states
-				clear_variable = target
-				clear_variable = taker
 				clear_variable = first_marked_state
 			}
 

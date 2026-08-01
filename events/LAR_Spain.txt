@@ -645,6 +645,7 @@ country_event = {
 							has_id = 1112
 							has_id = 1113
 						}
+						NOT = { has_trait = trait_SPA_falangist_loyalties }
 					}
 					add_unit_leader_trait = trait_SPA_falangist_loyalties
 				}
@@ -655,6 +656,7 @@ country_event = {
 							has_id = 1115
 							has_id = 1116
 						}
+						NOT = { has_trait = trait_SPA_carlist_loyalties }
 					}
 					add_unit_leader_trait = trait_SPA_carlist_loyalties
 				}
@@ -666,6 +668,7 @@ country_event = {
 								has_id = 1102
 								has_id = 1103
 							}
+							NOT = { has_trait = trait_SPR_republican_loyalties }
 						}
 						add_unit_leader_trait = trait_SPR_republican_loyalties
 					}
@@ -677,6 +680,7 @@ country_event = {
 								has_id = 1106
 								is_character = SPR_enrique_lister
 							}
+							NOT = { has_trait = trait_SPR_stalinist_loyalties }
 						}
 						add_unit_leader_trait = trait_SPR_stalinist_loyalties
 					}
@@ -685,6 +689,7 @@ country_event = {
 							OR = {
 								has_id = 1107
 							}
+							NOT = { has_trait = trait_SPR_anti_stalinist_loyalties }
 						}
 						add_unit_leader_trait = trait_SPR_anti_stalinist_loyalties
 					}
@@ -2743,8 +2748,12 @@ country_event = {
 								has_id = 1112
 								has_id = 1113
 							}
+							NOT = { has_trait = trait_SPA_falangist_loyalties }
 						}
+						if = {
+							limit = { has_trait = trait_SPA_nationalist_sympathies }
 						remove_unit_leader_trait = trait_SPA_nationalist_sympathies
+						}
 						add_unit_leader_trait = trait_SPA_falangist_loyalties
 					}
 					every_unit_leader = {
@@ -2754,13 +2763,18 @@ country_event = {
 								has_id = 1115
 								has_id = 1116
 							}
+							NOT = { has_trait = trait_SPA_carlist_loyalties }
 						}
+						if = {
+							limit = { has_trait = trait_SPA_nationalist_sympathies }
 						remove_unit_leader_trait = trait_SPA_nationalist_sympathies
+						}
 						add_unit_leader_trait = trait_SPA_carlist_loyalties
 					}
 					every_unit_leader = {
 						limit = {
 							has_id = 1110
+							has_trait = trait_SPA_nationalist_sympathies
 						}
 						remove_unit_leader_trait = trait_SPA_nationalist_sympathies
 					}
@@ -2772,6 +2786,7 @@ country_event = {
 							has_id = 1102
 							has_id = 1103
 						}
+						NOT = { has_trait = trait_SPR_republican_loyalties }
 					}
 					add_unit_leader_trait = trait_SPR_republican_loyalties
 				}
@@ -2782,6 +2797,7 @@ country_event = {
 							has_id = 1105
 							has_id = 1106
 						}
+						NOT = { has_trait = trait_SPR_stalinist_loyalties }
 					}
 					add_unit_leader_trait = trait_SPR_stalinist_loyalties
 				}
@@ -2790,6 +2806,7 @@ country_event = {
 						OR = {
 							has_id = 1107
 						}
+						NOT = { has_trait = trait_SPR_anti_stalinist_loyalties }
 					}
 					add_unit_leader_trait = trait_SPR_anti_stalinist_loyalties
 				}

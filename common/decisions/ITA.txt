@@ -6007,8 +6007,9 @@ ITA_diplomacy_balkan_decision_category = {
 			}
 			set_country_flag = ITA_aimones_coronation
 			hidden_effect = {
-				ITA_prince_aimone = {
-					set_nationality = CRO
+				set_nationality = {
+					target_country = CRO
+					character = ITA_prince_aimone
 				}
 			}
 		}
@@ -6615,13 +6616,14 @@ ITA_diplomacy_balkan_decision_category = {
 		cost = 100
 
 		complete_effect = {
-			random_country = {
-				limit = { controls_state = 105 }
+			105 = {
+			controller = {
 				country_event = {
 				    id = BBA_italy_interaction_events.11
 				    days = 2
 				    random = 3
 				}
+			}
 			}
 			hidden_effect = {
 				set_country_flag = ITA_demanded_montenegro
@@ -6763,13 +6765,14 @@ ITA_diplomacy_balkan_decision_category = {
 		cost = 100
 
 		complete_effect = {
-			random_country = {
-				limit = { controls_state = 342 }
+			342 = {
+			controller = {
 				country_event = {
 				    id = BBA_italy_interaction_events.14
 				    days = 1
 				    random = 4
 				}
+			}
 			}
 
 			hidden_effect = {
