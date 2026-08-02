@@ -10011,19 +10011,21 @@ operations = {
 		
 		available = { #Dublicate of Visibility intented
 			OR = {
+				AND = {
 			DEN = {
 				is_subject = yes
 				NOT = {
 					is_in_faction_with = var:DEN.DEN_overlord_nation
 				}
 			}
+			has_war_with = var:DEN.DEN_overlord_nation
+				}
 				any_country_with_original_tag = {
 					original_tag_to_check = DEN 
 					has_capitulated = yes
 					is_in_faction_with = ROOT 
 				}
 			}
-			has_war_with = var:DEN.DEN_overlord_nation
 			337 = {
 				is_controlled_by = DEN
 			}
@@ -10065,19 +10067,21 @@ operations = {
 		visible = {
 			original_tag = ENG
 			OR = {
+				AND = {
 			DEN = {
 				is_subject = yes
 				NOT = {
 					is_in_faction_with = var:DEN.DEN_overlord_nation
 				}
 			}
+			has_war_with = var:DEN.DEN_overlord_nation
+				}
 				any_country_with_original_tag = {
 					original_tag_to_check = DEN 
 					has_capitulated = yes
 					is_in_faction_with = ROOT 
 				}
 			}
-			has_war_with = var:DEN.DEN_overlord_nation
 			337 = {
 				is_controlled_by = DEN
 			}
