@@ -182,6 +182,10 @@ operations = {
                 is_ai = yes
                 has_completed_focus = MEX_focus_soldaderas
             }
+            OR = {
+                has_government = neutrality
+                MEX = { NOT = { has_government = neutrality } }
+            }
         }
         targets = {
             MEX
