@@ -763,11 +763,12 @@ country_event = {
 				fascism = 76
 				communism = 2
 			}
-			every_unit_leader = {
-				limit = {
-					has_id = 101
-				}
+			
+			if = {
+				limit = { has_character = FRA_charles_de_gaulle }
+			FRA_charles_de_gaulle = {
 				set_nationality = FRA
+			}
 			}
 			
 			set_country_flag = vichy_france
@@ -1367,11 +1368,11 @@ country_event = {
 			GER = {
 				give_guarantee = PREV
 			}
-			every_unit_leader = {
-				limit = {
-					has_id = 101 #de Gaulle
-				}
+			if = {
+				limit = { has_character = FRA_charles_de_gaulle }
+			FRA_charles_de_gaulle = {
 				set_nationality = FRA
+			}
 			}
 			every_army_leader = {
 				limit = {
@@ -1389,11 +1390,11 @@ country_event = {
 					}
 					set_nationality = PREV.PREV
 				}
-				every_navy_leader = {
-					limit = {
-						has_id = 102 #Darlan
-					}
+				if = {
+					limit = { has_character = FRA_francois_darlan }
+					FRA_francois_darlan = {
 					set_nationality = PREV.PREV
+					}
 				}
 			}
 		}

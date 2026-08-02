@@ -4856,9 +4856,7 @@ operations = {
 					}
 				}
 				ROOT = {
-					white_peace = {
-						tag = PREV
-					}
+					white_peace = PREV
 				}
 			}
 			1017 = {
@@ -5035,9 +5033,7 @@ operations = {
 					}
 				}
 				ROOT = {
-					white_peace = {
-						tag = PREV
-					}
+					white_peace = PREV
 				}
 			}
 			1017 = {
