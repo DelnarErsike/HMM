@@ -428,13 +428,12 @@ on_actions = {
         	        if = { 
         	            limit = {
         	            	FROM = { has_government = neutrality } 
+							has_character = TUR_mustafa_kemal_ataturk
         	            }
-        	            every_unit_leader = {
-        	                limit = { 
-        	                    has_id = 59
-        	                }
-        	                set_nationality = FROM
-        	            }
+						set_nationality = {
+							target_country = FROM
+							character = TUR_mustafa_kemal_ataturk
+						}
         	        }
         	    }
         	}

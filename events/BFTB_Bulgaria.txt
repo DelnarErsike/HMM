@@ -2901,31 +2901,41 @@ country_event = {
 		}
 		add_ideas = BUL_fatherland_front_negative
 		activate_mission_tooltip = BUL_ff_impending_coup_mission
-		random_unit_leader = {
+		if = {
 			limit = {
-				has_id = 1203 #Hadzhipetkov
-				NOT = { has_trait = trait_BUL_ff_sympathizer }
+				has_character = BUL_nikola_hadzipetkov
+				BUL_nikola_hadzipetkov = {
+					NOT = { has_trait = trait_BUL_ff_sympathizer }
+				}
 			}
-			add_unit_leader_trait = trait_BUL_ff_sympathizer
+			BUL_nikola_hadzipetkov = {
+				add_unit_leader_trait = trait_BUL_ff_sympathizer
+			}
 		}
 
 		random_list = {
 			50 = {
-				random_unit_leader = {
-					limit = {
-						has_id = 1202 #Popov
-						NOT = { has_trait = trait_BUL_ff_sympathizer }
+				modifier = {
+					factor = 0
+					NOT = { has_character = BUL_georgi_popov }
+				}
+				BUL_georgi_popov = {
+					if = {
+						limit = { NOT = { has_trait = trait_BUL_ff_sympathizer } }
+						add_unit_leader_trait = trait_BUL_ff_sympathizer
 					}
-					add_unit_leader_trait = trait_BUL_ff_sympathizer
 				}
 			}
 			50 = {
-				random_unit_leader = {
-					limit = {
-						has_id = 1211 #Dotsev
-						NOT = { has_trait = trait_BUL_ff_sympathizer }
+				modifier = {
+					factor = 0
+					NOT = { has_character = BUL_angel_dotsev }
+				}
+				BUL_angel_dotsev = {
+					if = {
+						limit = { NOT = { has_trait = trait_BUL_ff_sympathizer } }
+						add_unit_leader_trait = trait_BUL_ff_sympathizer
 					}
-					add_unit_leader_trait = trait_BUL_ff_sympathizer
 				}
 			}
 		}

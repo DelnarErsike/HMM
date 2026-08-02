@@ -2900,16 +2900,21 @@ country_event = {
 			}
 			hidden_effect = {
 				set_cosmetic_tag = GER_german_empire
-				every_unit_leader = {
-					limit = {
-						OR = {
-							has_id = 10
-							has_id = 15
-							has_id = 20
-							has_id = 24
-						}
-					}
-					set_nationality = GER
+				set_nationality = {
+					target_country = GER
+					character = GER_walter_model
+				}
+				set_nationality = {
+					target_country = GER
+					character = GER_walter_kruger
+				}
+				set_nationality = {
+					target_country = GER
+					character = GER_paul_hausser
+				}
+				set_nationality = {
+					target_country = GER
+					character = GER_sepp_dietrich
 				}
 			}
 			set_party_name = { ideology = neutrality long_name = GER_neutrality_party_kaiserreich_long name = GER_neutrality_party_kaiserreich }

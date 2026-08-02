@@ -793,6 +793,12 @@ characters = {
 					NOT = {
 						has_government = communism
 					}
+					NOT = { # HMM: added for extra clarity that he will retire
+						AND = {
+							is_in_faction_with = GER
+							GER = { has_government = fascism }
+						}
+					}
 				}
 				traits = {
 					army_chief_maneuver_2

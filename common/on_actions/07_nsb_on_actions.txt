@@ -1460,11 +1460,10 @@ on_actions = {
 							is_ai = yes
 						}
 						save_global_event_target_as = BALTIC_country_to_transfer
-						random_country = {
+						random_other_country = {
 							limit = {
 								is_baltic_country = yes
 								is_ai = yes
-								NOT = { tag = PREV } 	
 							}
 							save_global_event_target_as = BALTIC_loose_territory_country
 						}

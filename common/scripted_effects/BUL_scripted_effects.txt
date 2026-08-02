@@ -1150,11 +1150,11 @@ BUL_start_ff_civil_war = {
 				set_nationality = PREV.PREV
 			}
 		}
-		random_unit_leader = {
-			limit = {
-				has_id = 1203 #Hadzhipetkov
-			}
+		if = {
+			limit = { has_character = BUL_nikola_hadzipetkov }
+		BUL_nikola_hadzipetkov = {
 			promote_leader = yes
+		}
 		}
 
 		#Operatives in the FF

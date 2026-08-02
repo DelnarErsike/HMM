@@ -636,10 +636,15 @@ country_event = {
 					remove_unit_leader_trait = trait_SPA_nationalist_sympathies
 				}
 				# Add various loyalist traits that now become relevant - indicating loyalties to the different subfactions
+				SPA_francisco_franco = {
+					if = {
+						limit = { NOT = { has_trait = trait_SPA_falangist_loyalties } }
+						add_unit_leader_trait = trait_SPA_falangist_loyalties
+					}
+				}
 				every_unit_leader = {
 					limit = {
 						OR = {
-							has_id = 1108
 							has_id = 1109
 							has_id = 1111
 							has_id = 1112
@@ -2739,10 +2744,19 @@ country_event = {
 					set_nationality = SPA
 				}
 				SPA = {
+					SPA_francisco_franco = {
+						if = {
+							limit = { has_trait = trait_SPA_nationalist_sympathies }
+							remove_unit_leader_trait = trait_SPA_nationalist_sympathies
+						}
+						if = {
+							limit = { NOT = { has_trait = trait_SPA_falangist_loyalties } }
+							add_unit_leader_trait = trait_SPA_falangist_loyalties
+						}
+					}
 					every_unit_leader = {
 						limit = {
 							OR = {
-								has_id = 1108
 								has_id = 1109
 								has_id = 1111
 								has_id = 1112
@@ -8119,14 +8133,9 @@ country_event = {
 					target_country = SPD
 				}
 			}
-			every_unit_leader = {
-				limit = {
-					has_id = 1108
-				}
-				set_nationality = {
-					character = THIS
-					target_country = SPD
-				}
+			set_nationality = {
+				character = SPA_francisco_franco
+				target_country = SPD
 			}
 			every_unit_leader = {
 				limit = {

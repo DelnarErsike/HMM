@@ -2809,16 +2809,29 @@ focus_tree = {
 					ruling_party = communism
 				}
 				hidden_effect = {
-					every_unit_leader = {
-						limit = {
-							OR = {
-								has_id = 1207 #Asen Nikolov
-								has_id = 1208 #Konstantin Lukash
+					if = {
+						limit = { has_character = BUL_asen_dobrev_nikolov }
+						BUL_asen_dobrev_nikolov = {
+							if = {
+								limit = {
+									NOT = { has_trait = trait_BUL_zveno_member }
+									NOT = { has_trait = trait_BUL_tsar_loyalist }
+								}
+								add_unit_leader_trait = trait_BUL_tsar_loyalist
 							}
+						}
+					}
+					if = {
+						limit = { has_character = BUL_konstantin_lukash }
+						BUL_konstantin_lukash = {
+							if = {
+								limit = {
 							NOT = { has_trait = trait_BUL_zveno_member }
 							NOT = { has_trait = trait_BUL_tsar_loyalist }
 						}
 						add_unit_leader_trait = trait_BUL_tsar_loyalist
+							}
+						}
 					}
 
 					start_civil_war = {	
@@ -3211,25 +3224,13 @@ focus_tree = {
 
 			#Using separate scopes for tooltip reasons
 			#Separate scopes for tt reasons
-			every_army_leader = {
-				limit = {
-					is_field_marshal = yes
-					OR = {
-						has_id = 1207 #Nikolov
-						has_id = 1208 #Lukash
-					}
-				}
-				retire = yes
+			if = {
+				limit = { has_character = BUL_asen_dobrev_nikolov }
+				retire_character = BUL_asen_dobrev_nikolov
 			}
-			every_unit_leader = {
-				limit = {
-					is_field_marshal = no
-					OR = {
-						has_id = 1207 #Nikolov
-						has_id = 1208 #Lukash
-					}
-				}
-				retire = yes
+			if = {
+				limit = { has_character = BUL_konstantin_lukash }
+				retire_character = BUL_konstantin_lukash
 			}
 		}
 	}
@@ -5057,19 +5058,16 @@ focus_tree = {
 				clr_country_flag = BUL_factions_unlocked_flag
 			}
 			else = {
+				if = {
+					limit = { has_character = BUL_vasil_boydev }
+					retire_character = BUL_vasil_boydev
+				}
 				every_unit_leader = {
 					limit = {
-						NOT = { has_id = 1204 } #Boydev
 						has_trait = trait_BUL_tsar_loyalist
 					}
 					custom_effect_tooltip = BUL_remove_tsar_loyalist_trait_tt
 					remove_unit_leader_trait = trait_BUL_tsar_loyalist
-				}
-				random_unit_leader = {
-					limit = {
-						has_id = 1204 #Boydev
-					}
-					retire = yes
 				}
 				add_stability = -0.1
 				if = {
@@ -7899,16 +7897,29 @@ focus_tree = {
 					ruling_party = fascism
 				}
 				hidden_effect = { #Generates undesired "Politics will change" tooltip
-					every_unit_leader = {
-						limit = {
-							OR = {
-								has_id = 1207 #Asen Nikolov
-								has_id = 1208 #Konstantin Lukash
+					if = {
+						limit = { has_character = BUL_asen_dobrev_nikolov }
+						BUL_asen_dobrev_nikolov = {
+							if = {
+								limit = {
+									NOT = { has_trait = trait_BUL_zveno_member }
+									NOT = { has_trait = trait_BUL_tsar_loyalist }
+								}
+								add_unit_leader_trait = trait_BUL_tsar_loyalist
 							}
+						}
+					}
+					if = {
+						limit = { has_character = BUL_konstantin_lukash }
+						BUL_konstantin_lukash = {
+							if = {
+								limit = {
 							NOT = { has_trait = trait_BUL_zveno_member }
 							NOT = { has_trait = trait_BUL_tsar_loyalist }
 						}
 						add_unit_leader_trait = trait_BUL_tsar_loyalist
+							}
+						}
 					}
 
 					start_civil_war = {	
@@ -7964,15 +7975,12 @@ focus_tree = {
 				}		
 			}
 			else = {
-				random_unit_leader = {
-					limit = {
-						has_id = 1204 #Boydev
-					}
-					retire = yes
+				if = {
+					limit = { has_character = BUL_vasil_boydev }
+					retire_character = BUL_vasil_boydev
 				}
 				every_unit_leader = {
 					limit = {
-						NOT = { has_id = 1204 } #Boydev
 						has_trait = trait_BUL_tsar_loyalist
 					}
 					custom_effect_tooltip = BUL_remove_tsar_loyalist_trait_tt
@@ -8646,27 +8654,13 @@ focus_tree = {
 				}
 				#Using separate scopes for tooltip reasons
 				if = {
-					limit = {
-						has_unit_leader = 1203
-					}
-					random_unit_leader = {
-						limit = {
-							has_id = 1203 #Hadzhipetkov
-						}
-						retire = yes
-					}
+					limit = { has_character = BUL_nikola_hadzipetkov }
+					retire_character = BUL_nikola_hadzipetkov
 				}
 				if = {
-					limit = {
-						has_unit_leader = 1204
-					}
-					random_unit_leader = {
-						limit = {
-							has_id = 1204 #Boydev
-						}
-						retire = yes
-					}
-				}			
+					limit = { has_character = BUL_vasil_boydev }
+					retire_character = BUL_vasil_boydev
+				}
 			}
 			GER = { country_event = { id = generic.2 hours = 4 random_hours = 2 } }
 			custom_effect_tooltip = BUL_join_the_tripartite_pact_tt

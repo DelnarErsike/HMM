@@ -2177,7 +2177,7 @@ country_event = {
 
 		every_enemy_country = {
 			limit = { is_in_faction_with = FROM }
-			ROOT = { white_peace = { tag = PREV } }
+			ROOT = { white_peace = PREV }
 		}
 
 		dismantle_faction = yes

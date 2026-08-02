@@ -1533,9 +1533,7 @@ war_measures = {
 						}
 					}
 					ROOT = {
-						white_peace = {
-							tag = PREV
-						}
+						white_peace = PREV
 					}
 				}
 

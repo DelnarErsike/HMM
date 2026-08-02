@@ -295,12 +295,13 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SPA_CIVIL_WAR}
 		completion_reward = {
 			custom_effect_tooltip = SPA_con_paquito_tt
-			random_unit_leader = {
+			SPA_francisco_franco = {
+				if = {
 				limit = {
-					has_id = 1108
 					NOT = { has_trait = trait_SPA_nationalist_sympathies }
 				}
 				add_unit_leader_trait = trait_SPA_nationalist_sympathies
+				}
 			}
 		}
 	}

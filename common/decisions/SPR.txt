@@ -345,7 +345,7 @@ SPR_the_inevitable_civil_war = {
 			random_unit_leader = {
 				limit = {
 					NOT = { has_trait = trait_SPA_nationalist_sympathies }
-					NOT = { has_id = 1108 }
+					NOT = { is_character = SPA_francisco_franco }
 					NOT = { has_character_flag = SPR_do_not_align_me_flag }
 				}
 				add_unit_leader_trait = trait_SPA_nationalist_sympathies
@@ -4705,10 +4705,7 @@ SPR_opposition_civil_war_preparations = {
 		is_good = yes
 
 		timeout_effect = {
-			random_unit_leader = {
-				limit = {
-					has_id = 1108
-				}
+			SPA_francisco_franco = {
 				add_unit_leader_trait = trait_SPA_nationalist_sympathies
 			}
 			set_country_flag = SPA_con_paquito_flag
@@ -5212,7 +5209,7 @@ SPR_opposition_civil_war_preparations = {
 			random_unit_leader = {
 				limit = {
 					NOT = { has_trait = trait_SPA_nationalist_sympathies }
-					NOT = { has_id = 1108 }
+					NOT = { is_character = SPA_francisco_franco }
 					NOT = { has_character_flag = SPR_do_not_align_me_flag }
 				}
 				add_unit_leader_trait = trait_SPA_nationalist_sympathies
