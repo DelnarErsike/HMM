@@ -1145,53 +1145,45 @@
 							value = 50
 							compare = greater_than
 						}
-						NOT = {
-							has_country_flag = AST_uap_50_discount
+					}
+					if = {
+						limit = { NOT = { has_country_flag = AST_uap_50_discount } }
+						AST_uap_5_time_discount_effect = yes
+						set_country_flag = AST_uap_50_discount
+					}
+					IF = { #Reduce UAP focus completion time if votes > 70
+						limit = {
+							check_variable = {
+								var = AST_uap_votes_var
+								value = 70
+								compare = greater_than
+							}
+						}
+						if = {
+							limit = { NOT = { has_country_flag = AST_uap_70_discount } }
+							AST_uap_5_time_discount_effect = yes
+							set_country_flag = AST_uap_70_discount
 						}
 					}
-					AST_uap_5_time_discount_effect = yes
-					set_country_flag = AST_uap_50_discount
+					else_if = { #Reverse reduced UAP focus completion time if votes < 70
+						limit = { has_country_flag = AST_uap_70_discount }
+						AST_uap_5_time_discount_effect_reverse = yes
+						clr_country_flag = AST_uap_70_discount
+					}
 				}
-				else_if = { #Reverse reduced UAP focus completion time if votes < 50
-					limit = {
-						check_variable = {
-							var = AST_uap_votes_var
-							value = 50
-							compare = less_than_or_equals
-						}
-						has_country_flag = AST_uap_50_discount
+				else = { #Reverse reduced UAP focus completion time if votes < 50
+					if = {
+						limit = { has_country_flag = AST_uap_70_discount }
+						AST_uap_5_time_discount_effect_reverse = yes
+						clr_country_flag = AST_uap_70_discount
 					}
-					AST_uap_5_time_discount_effect_reverse = yes
-					clr_country_flag = AST_uap_50_discount
+					if = {
+						limit = { has_country_flag = AST_uap_50_discount }
+						AST_uap_5_time_discount_effect_reverse = yes
+						clr_country_flag = AST_uap_50_discount
+					}
 				}
 
-				IF = { #Reduce UAP focus completion time if votes > 70
-					limit = {
-						check_variable = {
-							var = AST_uap_votes_var
-							value = 70
-							compare = greater_than
-						}
-						NOT = {
-							has_country_flag = AST_uap_70_discount
-						}
-					}
-					AST_uap_5_time_discount_effect = yes
-					set_country_flag = AST_uap_70_discount
-				}
-				else_if = { #Reverse reduced UAP focus completion time if votes < 70
-					limit = {
-						check_variable = {
-							var = AST_uap_votes_var
-							value = 70
-							compare = less_than_or_equals
-						}
-						has_country_flag = AST_uap_70_discount
-					}
-					AST_uap_5_time_discount_effect_reverse = yes
-					clr_country_flag = AST_uap_70_discount
-				}
-				
 				IF = { #Reduce ALP focus completion time if votes > 50
 					limit = {
 						check_variable = {
@@ -1199,199 +1191,258 @@
 							value = 50
 							compare = greater_than
 						}
-						NOT = {
-							has_country_flag = AST_alp_50_discount
+					}
+					if = {
+						limit = { NOT = { has_country_flag = AST_alp_50_discount } }
+						AST_alp_5_time_discount_effect = yes
+						set_country_flag = AST_alp_50_discount
+					}
+					IF = { #Reduce ALP focus completion time if votes > 70
+						limit = {
+							check_variable = {
+								var = AST_alp_votes_var
+								value = 70
+								compare = greater_than
+							}
+						}
+						if = {
+							limit = { NOT = { has_country_flag = AST_alp_70_discount } }
+							AST_alp_5_time_discount_effect = yes
+							set_country_flag = AST_alp_70_discount
 						}
 					}
-					AST_alp_5_time_discount_effect = yes
-					set_country_flag = AST_alp_50_discount
+					else_if = { #Reverse reduced ALP focus completion time if votes < 70
+						limit = { has_country_flag = AST_alp_70_discount }
+						AST_alp_5_time_discount_effect_reverse = yes
+						clr_country_flag = AST_alp_70_discount
+					}
 				}
-				else_if = { #Reverse reduced ALP focus completion time if votes < 50
-					limit = {
-						check_variable = {
-							var = AST_alp_votes_var
-							value = 50
-							compare = less_than_or_equals
-						}
-						has_country_flag = AST_alp_50_discount
+				else = { #Reverse reduced ALP focus completion time if votes < 50
+					if = {
+						limit = { has_country_flag = AST_alp_70_discount }
+						AST_alp_5_time_discount_effect_reverse = yes
+						clr_country_flag = AST_alp_70_discount
 					}
-					AST_alp_5_time_discount_effect_reverse = yes
-					clr_country_flag = AST_alp_50_discount
-				}
-
-				IF = { #Reduce ALP focus completion time if votes > 70
-					limit = {
-						check_variable = {
-							var = AST_alp_votes_var
-							value = 70
-							compare = greater_than
-						}
-						NOT = {
-							has_country_flag = AST_alp_70_discount
-						}
+					if = {
+						limit = { has_country_flag = AST_alp_50_discount }
+						AST_alp_5_time_discount_effect_reverse = yes
+						clr_country_flag = AST_alp_50_discount
 					}
-					AST_alp_5_time_discount_effect = yes
-					set_country_flag = AST_alp_70_discount
-				}
-				else_if = { #Reverse reduced ALP focus completion time if votes < 75
-					limit = {
-						check_variable = {
-							var = AST_alp_votes_var
-							value = 70
-							compare = less_than_or_equals
-						}
-						has_country_flag = AST_alp_70_discount
-					}
-					AST_alp_5_time_discount_effect_reverse = yes
-					clr_country_flag = AST_alp_70_discount
 				}
 
+				# HMM: felt the need to massively optimize these, the vanilla setup is very subpar in terms of setup and how many useless checks are run
+				#Shared focuses gets reversed discount if the other party unlocks them.
 				IF = { #Shared focuses gets reversed discount if the other party unlocks them. Remove 50 discount here from loyalist branch
-					limit = {
-						OR = {
-							AND = {
-								has_completed_focus = AST_pleading_britain
-								has_country_flag = AST_uap_50_discount
-							}
-							AND = {
-								has_completed_focus = AST_the_ultimate_overseas_duty
-								has_country_flag = AST_alp_50_discount
-							}
+					limit = { has_completed_focus = AST_the_ultimate_overseas_duty }
+					if = {
+						limit = {
+							has_country_flag = AST_alp_50_discount
+							NOT = { has_country_flag = AST_50_discount_shared_loyalist_reversed }
 						}
-						NOT = {
-							has_country_flag = AST_50_discount_shared_loyalist_reversed
+						reduce_focus_completion_cost = {
+							focus = AST_under_the_rule_of_canberra
+							cost = -5
 						}
+						reduce_focus_completion_cost = {
+							focus = AST_taking_the_helm
+							cost = -5
+						}
+						reduce_focus_completion_cost = {
+							focus = AST_a_change_of_authority
+							cost = -5
+						}
+						set_country_flag = AST_50_discount_shared_loyalist_reversed
 					}
-					reduce_focus_completion_cost = {
-						focus = AST_under_the_rule_of_canberra
-						cost = -5
+					if = {
+						limit = {
+							has_country_flag = AST_alp_70_discount
+							NOT = { has_country_flag = AST_70_discount_shared_loyalist_reversed }
+						}
+						reduce_focus_completion_cost = {
+							focus = AST_under_the_rule_of_canberra
+							cost = -5
+						}
+						reduce_focus_completion_cost = {
+							focus = AST_taking_the_helm
+							cost = -5
+						}
+						reduce_focus_completion_cost = {
+							focus = AST_a_change_of_authority
+							cost = -5
+						}
+						set_country_flag = AST_70_discount_shared_loyalist_reversed
 					}
-					reduce_focus_completion_cost = {
-						focus = AST_taking_the_helm
-						cost = -5
-					}
-					reduce_focus_completion_cost = {
-						focus = AST_a_change_of_authority
-						cost = -5
-					}
-					set_country_flag = AST_50_discount_shared_loyalist_reversed
 				}
-
-				IF = { #Shared focuses gets reversed discount if the other party unlocks them. Remove 70 discount here from loyalist branch
-					limit = {
-						OR = {
-							AND = {
-								has_completed_focus = AST_pleading_britain
-								has_country_flag = AST_uap_70_discount
-							}
-							AND = {
-								has_completed_focus = AST_the_ultimate_overseas_duty
-								has_country_flag = AST_alp_70_discount
-							}
+				else_if = {
+					limit = { has_completed_focus = AST_pleading_britain }
+					if = {
+						limit = {
+							has_country_flag = AST_uap_50_discount
+							NOT = { has_country_flag = AST_50_discount_shared_loyalist_reversed }
 						}
-						NOT = {
-							has_country_flag = AST_70_discount_shared_loyalist_reversed
+						reduce_focus_completion_cost = {
+							focus = AST_under_the_rule_of_canberra
+							cost = -5
 						}
+						reduce_focus_completion_cost = {
+							focus = AST_taking_the_helm
+							cost = -5
+						}
+						reduce_focus_completion_cost = {
+							focus = AST_a_change_of_authority
+							cost = -5
+						}
+						set_country_flag = AST_50_discount_shared_loyalist_reversed
 					}
-					reduce_focus_completion_cost = {
-						focus = AST_under_the_rule_of_canberra
-						cost = -5
+					if = {
+						limit = {
+							has_country_flag = AST_uap_70_discount
+							NOT = { has_country_flag = AST_70_discount_shared_loyalist_reversed }
+						}
+						reduce_focus_completion_cost = {
+							focus = AST_under_the_rule_of_canberra
+							cost = -5
+						}
+						reduce_focus_completion_cost = {
+							focus = AST_taking_the_helm
+							cost = -5
+						}
+						reduce_focus_completion_cost = {
+							focus = AST_a_change_of_authority
+							cost = -5
+						}
+						set_country_flag = AST_70_discount_shared_loyalist_reversed
 					}
-					reduce_focus_completion_cost = {
-						focus = AST_taking_the_helm
-						cost = -5
-					}
-					reduce_focus_completion_cost = {
-						focus = AST_a_change_of_authority
-						cost = -5
-					}
-					set_country_flag = AST_70_discount_shared_loyalist_reversed
 				}
-
-				IF = { #Shared focuses gets reversed discount if the other party unlocks them. Remove 50 discount here from independence branch
-					limit = {
-						OR = {
-							AND = {
-								has_completed_focus = AST_bring_on_the_giant
-								has_country_flag = AST_uap_50_discount
-							}
-							AND = {
-								has_completed_focus = AST_inevitably_independent
-								has_country_flag = AST_alp_50_discount
-							}
+				else_if = {
+					limit = { has_completed_focus = AST_inevitably_independent }
+					if = {
+						limit = {
+							has_country_flag = AST_alp_50_discount
+							NOT = { has_country_flag = AST_50_discount_shared_independence_reversed }
 						}
-						NOT = {
-							has_country_flag = AST_50_discount_shared_independence_reversed
+						reduce_focus_completion_cost = {
+							focus = AST_allied_after_all
+							cost = -5
 						}
+						reduce_focus_completion_cost = {
+							focus = AST_the_pacific_resistance
+							cost = -5
+						}
+						reduce_focus_completion_cost = {
+							focus = AST_equal_training
+							cost = -5
+						}
+						reduce_focus_completion_cost = {
+							focus = AST_a_northern_barrier
+							cost = -5
+						}
+						reduce_focus_completion_cost = {
+							focus = AST_demand_resources
+							cost = -5
+						}
+						reduce_focus_completion_cost = {
+							focus = AST_reclaim_the_lost_territory
+							cost = -5
+						}
+						set_country_flag = AST_50_discount_shared_independence_reversed
 					}
-					reduce_focus_completion_cost = {
-						focus = AST_allied_after_all
-						cost = -5
+					if = {
+						limit = {
+							has_country_flag = AST_alp_70_discount
+							NOT = { has_country_flag = AST_70_discount_shared_independence_reversed }
+						}
+						reduce_focus_completion_cost = {
+							focus = AST_allied_after_all
+							cost = -5
+						}
+						reduce_focus_completion_cost = {
+							focus = AST_the_pacific_resistance
+							cost = -5
+						}
+						reduce_focus_completion_cost = {
+							focus = AST_equal_training
+							cost = -5
+						}
+						reduce_focus_completion_cost = {
+							focus = AST_a_northern_barrier
+							cost = -5
+						}
+						reduce_focus_completion_cost = {
+							focus = AST_demand_resources
+							cost = -5
+						}
+						reduce_focus_completion_cost = {
+							focus = AST_reclaim_the_lost_territory
+							cost = -5
+						}
+						set_country_flag = AST_70_discount_shared_independence_reversed
 					}
-					reduce_focus_completion_cost = {
-						focus = AST_the_pacific_resistance
-						cost = -5
-					}
-					reduce_focus_completion_cost = {
-						focus = AST_equal_training
-						cost = -5
-					}
-					reduce_focus_completion_cost = {
-						focus = AST_a_northern_barrier
-						cost = -5
-					}
-					reduce_focus_completion_cost = {
-						focus = AST_demand_resources
-						cost = -5
-					}
-					reduce_focus_completion_cost = {
-						focus = AST_reclaim_the_lost_territory
-						cost = -5
-					}
-					set_country_flag = AST_50_discount_shared_independence_reversed
 				}
-
-				IF = { #Shared focuses gets reversed discount if the other party unlocks them. Remove 70 discount here from independence branch
-					limit = {
-						OR = {
-							AND = {
-								has_completed_focus = AST_bring_on_the_giant
-								has_country_flag = AST_uap_70_discount
-							}
-							AND = {
-								has_completed_focus = AST_inevitably_independent
-								has_country_flag = AST_alp_70_discount
-							}
+				else_if = {
+					limit = { has_completed_focus = AST_bring_on_the_giant }
+					if = {
+						limit = {
+							has_country_flag = AST_uap_50_discount
+							NOT = { has_country_flag = AST_50_discount_shared_independence_reversed }
 						}
-						NOT = {
-							has_country_flag = AST_70_discount_shared_independence_reversed
+						reduce_focus_completion_cost = {
+							focus = AST_allied_after_all
+							cost = -5
 						}
+						reduce_focus_completion_cost = {
+							focus = AST_the_pacific_resistance
+							cost = -5
+						}
+						reduce_focus_completion_cost = {
+							focus = AST_equal_training
+							cost = -5
+						}
+						reduce_focus_completion_cost = {
+							focus = AST_a_northern_barrier
+							cost = -5
+						}
+						reduce_focus_completion_cost = {
+							focus = AST_demand_resources
+							cost = -5
+						}
+						reduce_focus_completion_cost = {
+							focus = AST_reclaim_the_lost_territory
+							cost = -5
+						}
+						set_country_flag = AST_50_discount_shared_independence_reversed
 					}
-					reduce_focus_completion_cost = {
-						focus = AST_allied_after_all
-						cost = -5
+					if = {
+						limit = {
+							has_country_flag = AST_uap_70_discount
+							NOT = { has_country_flag = AST_70_discount_shared_independence_reversed }
+						}
+						reduce_focus_completion_cost = {
+							focus = AST_allied_after_all
+							cost = -5
+						}
+						reduce_focus_completion_cost = {
+							focus = AST_the_pacific_resistance
+							cost = -5
+						}
+						reduce_focus_completion_cost = {
+							focus = AST_equal_training
+							cost = -5
+						}
+						reduce_focus_completion_cost = {
+							focus = AST_a_northern_barrier
+							cost = -5
+						}
+						reduce_focus_completion_cost = {
+							focus = AST_demand_resources
+							cost = -5
+						}
+						reduce_focus_completion_cost = {
+							focus = AST_reclaim_the_lost_territory
+							cost = -5
+						}
+						set_country_flag = AST_70_discount_shared_independence_reversed
 					}
-					reduce_focus_completion_cost = {
-						focus = AST_the_pacific_resistance
-						cost = -5
-					}
-					reduce_focus_completion_cost = {
-						focus = AST_equal_training
-						cost = -5
-					}
-					reduce_focus_completion_cost = {
-						focus = AST_a_northern_barrier
-						cost = -5
-					}
-					reduce_focus_completion_cost = {
-						focus = AST_demand_resources
-						cost = -5
-					}
-					reduce_focus_completion_cost = {
-						focus = AST_reclaim_the_lost_territory
-						cost = -5
-					}
-					set_country_flag = AST_70_discount_shared_independence_reversed
 				}
 			}
 		}
@@ -1551,14 +1602,14 @@
 	on_startup = {
 		effect = {
 			if = {
-				limit = {
-					date < 1939.1.1
-					has_dlc = "Thunder at Our Gates"
-				}
+				limit = { has_dlc = "Thunder at Our Gates" }
 				AST = {
-					country_event = {
-						id = AST_political_events.6 #Launch event The 1938 Sesquicentenary 
-						days = 756 # 26 Jan 1938
+					if = {
+						limit = { date < 1939.1.1 }
+						country_event = {
+							id = AST_political_events.6 #Launch event The 1938 Sesquicentenary 
+							days = 756 # 26 Jan 1938
+						}
 					}
 					if = { # HMM: Only the first election season needs to be queued, since each one will queue up the next one in 3 years' time
 						limit = { has_country_flag = AST_1939_start }
