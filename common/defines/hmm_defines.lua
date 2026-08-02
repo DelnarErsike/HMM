@@ -258,6 +258,8 @@ NDefines.NTrade.ANTI_MONOPOLY_TRADE_FACTOR_THRESHOLD = 1.0	-- vanilla: 0.5. Impo
 NDefines.NTrade.MAX_MONTH_TRADE_FACTOR = 0				-- vanilla: 50. QoL so that multiplayer people can rebalance trades quickly without worrying about who gets more trade factor from keeping their trades up longer.
 NDefines.NTrade.DISTANCE_TRADE_FACTOR = -0.01			-- vanilla: -0.02. Scaled down to account for lack of bonuses from things like opinion and party support, but still present to e.g. prioritize intra-Euroaxis trade over Euroaxis-Japan trade.
 NDefines.NTrade.RELATION_TRADE_FACTOR = 0				-- vanilla: 1. Disabled so that people don't generally have to track (or can mess with) trade opinion through opinion modifiers on focuses and events and the like.
+NDefines.NDiplomacy.TROOP_FEAR = 0 						-- vanilla: 1. Disabled so troop locations do not affect trade opinion.
+NDefines.NDiplomacy.FLEET_FEAR = 0 						-- vanilla: 1. Disabled so fleet missions do not affect trade opinion.
 -- Misc. strategic bombing and air define changes
 NDefines.NSupply.RAILWAY_FLOW_PENALTY_PER_DAMAGED = 4.9 -- Scaled down a tiny bit to avoid rounding issues and to still let supply flow on partially damaged railway levels.
 NDefines.NAir.AIR_WING_BOMB_DAMAGE_FACTOR = 0.5 --Vanilla 2
