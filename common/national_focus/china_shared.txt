@@ -1905,6 +1905,7 @@ shared_focus = {
 			}
 		}
 	}
+	allow_branch = { always = no }
 
 	cancel_if_invalid = yes
 	continue_if_invalid = no
@@ -2203,6 +2204,7 @@ shared_focus = {
 		country_exists = CAM
 		country_exists = LAO
 	}
+	allow_branch = { always = no }
 
 	cancel_if_invalid = yes
 	continue_if_invalid = no
@@ -2338,6 +2340,7 @@ shared_focus = {
 	bypass = {
 
 	}
+	allow_branch = { always = no }
 
 	cancel_if_invalid = yes
 	continue_if_invalid = no
@@ -2462,6 +2465,7 @@ shared_focus = {
 		controls_state = 1068 
 		controls_state = 1069 
 	}
+	allow_branch = { always = no }
 
 	cancel_if_invalid = yes
 	continue_if_invalid = no
@@ -2536,6 +2540,7 @@ shared_focus = {
 	bypass = {
 		JAP = { is_subject_of = ROOT }
 	}
+	allow_branch = { always = no }
 
 	cancel_if_invalid = yes
 	continue_if_invalid = no
