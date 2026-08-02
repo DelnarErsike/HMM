@@ -7188,14 +7188,18 @@ focus_tree = {
 					elections_allowed = no
 				}
 			}
-			if = { 
-				limit = {
-					num_subjects > 0
-				}
+			# HMM: altered for clarification, since these will also get applied to future puppets, too
+			#if = { 
+			#	limit = {
+			#		num_subjects > 0
+			#	}
 				every_subject_country = {
+					tooltip = hmm_all_current_and_future_puppets
+					visible_when_empty = yes
 					add_ideas = BUL_ferdinands_puppet
 				}
-			}
+				custom_effect_tooltip = generic_skip_one_line_tt
+			#}
 			BUL = {
 				custom_effect_tooltip = BUL_the_return_of_ferdinand_opinion_tt
 			}
