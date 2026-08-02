@@ -2810,8 +2810,8 @@ focus_tree = {
 				}
 				hidden_effect = {
 					if = {
-						limit = { has_character = BUL_asen_dobrev_nikolov }
-						BUL_asen_dobrev_nikolov = {
+						limit = { has_character = BUL_asen_nikolov }
+						BUL_asen_nikolov = {
 							if = {
 								limit = {
 									NOT = { has_trait = trait_BUL_zveno_member }
@@ -3225,8 +3225,8 @@ focus_tree = {
 			#Using separate scopes for tooltip reasons
 			#Separate scopes for tt reasons
 			if = {
-				limit = { has_character = BUL_asen_dobrev_nikolov }
-				retire_character = BUL_asen_dobrev_nikolov
+				limit = { has_character = BUL_asen_nikolov }
+				retire_character = BUL_asen_nikolov
 			}
 			if = {
 				limit = { has_character = BUL_konstantin_lukash }
@@ -7902,8 +7902,8 @@ focus_tree = {
 				}
 				hidden_effect = { #Generates undesired "Politics will change" tooltip
 					if = {
-						limit = { has_character = BUL_asen_dobrev_nikolov }
-						BUL_asen_dobrev_nikolov = {
+						limit = { has_character = BUL_asen_nikolov }
+						BUL_asen_nikolov = {
 							if = {
 								limit = {
 									NOT = { has_trait = trait_BUL_zveno_member }
