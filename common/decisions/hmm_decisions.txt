@@ -1294,41 +1294,9 @@ Technologies = {
             }
 		}
 		complete_effect = {
+            enable_spain_simulator_effects = yes
             activate_mission = GER_recieving_ll_mech_1a
             set_country_flag = GER_started_ll_mech
-            if = { # These effects should only trigger once per game, even if Germany is mixing up who gets the mech delivery
-                limit = { NOT = { has_global_flag = spain_simulator_enabled } }
-                set_global_flag = spain_simulator_enabled
-                ITA = { 
-                    add_offsite_building = { type = industrial_complex level = 4 } 
-                    add_offsite_building = { type = arms_factory level = 3 }
-                }
-                SPR = {
-                    set_nationality = {
-                        target_country = BUL
-                        character = SPR_mohamed_meziane
-                    }
-                    give_resource_rights = { receiver = ITA state = 792 }
-                    give_resource_rights = { receiver = ITA state = 791 }
-                    give_resource_rights = { receiver = ITA state = 790 }
-                    give_resource_rights = { receiver = ITA state = 788 }
-                    give_resource_rights = { receiver = ITA state = 166 }
-                    give_resource_rights = { receiver = ITA state = 174 }
-                    give_resource_rights = { receiver = ITA state = 173 }
-                    give_resource_rights = { receiver = ITA state = 171 }
-                    give_resource_rights = { receiver = ITA state = 170 }
-                    give_resource_rights = { receiver = ITA state = 165 }
-                    give_resource_rights = { receiver = ITA state = 41 }
-                    give_resource_rights = { receiver = ITA state = 290 }
-                }
-                290 = { # We want the AI to keep ignoring building in non-cores, so just manually add 5 infra in Spanish North Africa to compensate
-                    add_building_construction = {
-                        type = infrastructure
-                        level = 5
-                        instant_build = yes
-                    }
-                }
-            }
 		}
 	}
     GER_mech_delivery_SPR_to_BUL = {
@@ -1384,43 +1352,11 @@ Technologies = {
             }
 		}
 		complete_effect = {
+            enable_spain_simulator_effects = yes
             BUL = {
                 activate_mission = GER_recieving_ll_mech_bul_1a
             }
             set_country_flag = GER_started_ll_mech_bul
-			if = { # These effects should only trigger once per game, even if Germany is mixing up who gets the mech delivery
-                limit = { NOT = { has_global_flag = spain_simulator_enabled } }
-                set_global_flag = spain_simulator_enabled
-                ITA = { 
-                    add_offsite_building = { type = industrial_complex level = 4 } 
-                    add_offsite_building = { type = arms_factory level = 3 }
-                }
-                SPR = {
-                    set_nationality = {
-                        target_country = BUL
-                        character = SPR_mohamed_meziane
-                    }
-                    give_resource_rights = { receiver = ITA state = 792 }
-                    give_resource_rights = { receiver = ITA state = 791 }
-                    give_resource_rights = { receiver = ITA state = 790 }
-                    give_resource_rights = { receiver = ITA state = 788 }
-                    give_resource_rights = { receiver = ITA state = 166 }
-                    give_resource_rights = { receiver = ITA state = 174 }
-                    give_resource_rights = { receiver = ITA state = 173 }
-                    give_resource_rights = { receiver = ITA state = 171 }
-                    give_resource_rights = { receiver = ITA state = 170 }
-                    give_resource_rights = { receiver = ITA state = 165 }
-                    give_resource_rights = { receiver = ITA state = 41 }
-                    give_resource_rights = { receiver = ITA state = 290 }
-                }
-                290 = { # We want the AI to keep ignoring building in non-cores, so just manually add 5 infra in Spanish North Africa to compensate
-                    add_building_construction = {
-                        type = infrastructure
-                        level = 5
-                        instant_build = yes
-                    }
-                }
-            }
 		}
 	}
     GER_close_mech_LL = {
