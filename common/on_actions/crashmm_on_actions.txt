@@ -1,0 +1,21 @@
+on_actions = {
+    on_daily = {
+        effect = {
+            every_country = {
+                every_army_leader = {
+					remove_unit_leader_trait = no_grind
+				}
+            }
+        }
+    }
+
+    on_weekly = {
+        effect = {
+            every_country = {
+                every_army_leader = {
+					add_unit_leader_trait = no_grind
+				}
+            }
+        }
+    }
+}
