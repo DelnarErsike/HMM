@@ -154,7 +154,10 @@ foreign_civilian_oversight = {
 			add = 100
 		}
 		modifier = { # HMM: we want AI Spain to use Civ Oversight to get compliance high to be able to core states and get resources from them
-			FROM = { original_tag = SPR }
+			FROM = {
+				original_tag = SPR
+				NOT = { has_government = democratic } # Do local autonomy instead if we're democratic Spain
+			}
 			add = 2000
 		}
 	}

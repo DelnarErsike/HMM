@@ -216,8 +216,8 @@ NDefines.NAI.IRRATIONALITY_LAMBDA = 0
 
 -- Garbage building, AI should never build
 NDefines.NAI.NUM_FACTORIES_IN_STATE_TO_WANT_ENERGY_REDUCTION = 9999
--- Less garbage building, but AI should be pickier about where we'd build it
-NDefines.NAI.TOTAL_STATE_EXTRACTED_RESOURCES_FOR_BUILDING_RESOURCE_CAP_BUILDING = 100
+-- Less garbage building, but AI should be a bit pickier about where it will build it
+NDefines.NAI.TOTAL_STATE_EXTRACTED_RESOURCES_FOR_BUILDING_RESOURCE_CAP_BUILDING = 40
 -- AI should not build fuel silos
 NDefines.NAI.NUM_SILOS_PER_CIVILIAN_FACTORIES = 0
 NDefines.NAI.NUM_SILOS_PER_MILITARY_FACTORIES = 0
