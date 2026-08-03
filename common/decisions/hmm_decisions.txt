@@ -706,13 +706,20 @@ Technologies = {
             factor = 0
         }
         visible = {
-            NOT = {
-                    tag = HOL
-                }
+            is_ai = no
         }
         available = {
-                date > 1937.08.01
+            date > 1937.08.01
+            NOT = {
+                has_license = {
+                    from = SWE
+                    equipment = {
+                        type = mechanized_equipment_1
+                        version = 1
+                    }
+                }
             }
+        }
         complete_effect = {
             SWE = {
                 create_production_license = {
@@ -727,9 +734,10 @@ Technologies = {
         }
     }
 
-     auto_basic_med= {
+    auto_basic_med = {
         # icon = generic_operation
         allowed = {
+            tag = SOV
         }
         fire_only_once = no
         cost = 0
@@ -738,12 +746,20 @@ Technologies = {
         }
 
         available = {
-                date > 1937.01.01
-                tag = SOV
+            date > 1937.01.01
+            NOT = {
+                has_license = {
+                    from = SWE
+                    equipment = {
+                        type = medium_tank_chassis_1
+                        version = 1
+                    }
+                }
             }
+        }
         visible = {
-            tag = SOV
-            }
+            is_ai = no
+        }
         complete_effect = {
             SWE = {
                 create_production_license = {
@@ -759,9 +775,10 @@ Technologies = {
     }
 
     
-     auto_improved_med= {
+    auto_improved_med = {
         # icon = generic_operation
         allowed = {
+            tag = SOV
         }
         fire_only_once = no
         cost = 0
@@ -770,12 +787,20 @@ Technologies = {
         }
 
         available = {
-                date > 1938.01.01
-                tag = SOV
+            date > 1938.01.01
+            NOT = {
+                has_license = {
+                    from = SWE
+                    equipment = {
+                        type = medium_tank_chassis_2
+                        version = 1
+                    }
+                }
             }
+        }
         visible = {
-            tag = SOV
-            }
+            is_ai = no
+        }
         complete_effect = {
             SWE = {
                 create_production_license = {
@@ -789,94 +814,83 @@ Technologies = {
             }
         }
     }
-    hosttool_armored_train = {
-            # icon = generic_operation
-            allowed = {
-            }
-            fire_only_once = no
-            cost = 0
-            ai_will_do = {
-                factor = 0
-            }
-            
-            available = {
-                tag = SOV
-            }
-            visible = {
-            tag = SOV
-            }
-            complete_effect = {
-                SWE = {
-                    create_production_license = {
-                        target = ROOT
-                        equipment = {
-                            type = train_equipment_3
-                            version = 0
-                        }
-                        cost_factor = 0
-                    }
-                }
-            }
-    }
         
     hosttool_aa2 = {
-            # icon = generic_operation
-            allowed = {
-            }
-            fire_only_once = no
-            cost = 0
-            ai_will_do = {
-                factor = 0
-            }
-            
-            available = {
-                AND = {
-                    date > 1938.08.01
-                    
-                }
-            }
-            complete_effect = {
-                SWE = {
-                    create_production_license = {
-                        target = ROOT
-                        equipment = {
-                            type = anti_air_equipment_2
-                            version = 0
-                        }
-                        cost_factor = 0
+        # icon = generic_operation
+        allowed = {
+        }
+        fire_only_once = no
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        
+        available = {
+            date > 1938.08.01
+            NOT = {
+                has_license = {
+                    from = SWE
+                    equipment = {
+                        type = anti_air_equipment_2
+                        version = 0
                     }
                 }
             }
+        }
+        visible = {
+            is_ai = no
+        }
+        complete_effect = {
+            SWE = {
+                create_production_license = {
+                    target = ROOT
+                    equipment = {
+                        type = anti_air_equipment_2
+                        version = 0
+                    }
+                    cost_factor = 0
+                }
+            }
+        }
     }
     hosttool_aa3 = {
-            # icon = generic_operation
-            allowed = {
-            }
-            fire_only_once = no
-            cost = 0
-            ai_will_do = {
-                factor = 0
-            }
-            
-            available = {
-                AND = {
-                    date > 1940.08.01
-                    
-                }
-            }
-            complete_effect = {
-                SWE = {
-                    create_production_license = {
-                        target = ROOT
-                        equipment = {
-                            type = anti_air_equipment_3
-                            version = 0
-                            
-                        }
-                        cost_factor = 0
+        # icon = generic_operation
+        allowed = {
+        }
+        fire_only_once = no
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        
+        available = {
+            date > 1940.08.01
+            NOT = {
+                has_license = {
+                    from = SWE
+                    equipment = {
+                        type = anti_air_equipment_3
+                        version = 0
                     }
                 }
             }
+        }
+        visible = {
+            is_ai = no
+        }
+        complete_effect = {
+            SWE = {
+                create_production_license = {
+                    target = ROOT
+                    equipment = {
+                        type = anti_air_equipment_3
+                        version = 0
+                        
+                    }
+                    cost_factor = 0
+                }
+            }
+        }
     }
         
     hosttool_gun2 = {
@@ -890,10 +904,19 @@ Technologies = {
         }
         
         available = {
-            AND = {
-                date > 1938.02.1
-                
+            date > 1938.02.1
+            NOT = {
+                has_license = {
+                    from = SWE
+                    equipment = {
+                        type = infantry_equipment_2
+                        version = 0
+                    }
+                }
             }
+        }
+        visible = {
+            is_ai = no
         }
         complete_effect = {
             SWE = {
@@ -919,8 +942,20 @@ Technologies = {
             factor = 0
         }
         available = {
-                date > 1939.12.01
+            date > 1939.12.01
+            NOT = {
+                has_license = {
+                    from = SWE
+                    equipment = {
+                        type = infantry_equipment_3
+                        version = 0
+                    }
+                }
             }
+        }
+        visible = {
+            is_ai = no
+        }
         complete_effect = {
             SWE = {
                 create_production_license = {
@@ -938,6 +973,7 @@ Technologies = {
     auto_AT1 = {
         # icon = generic_operation
         allowed = {
+            tag = SOV
         }
         fire_only_once = no
         cost = 0
@@ -946,10 +982,18 @@ Technologies = {
         }
         
         available = {
-            tag = SOV
+            NOT = {
+                has_license = {
+                    from = SWE
+                    equipment = {
+                        type = anti_tank_equipment_1
+                        version = 0
+                    }
+                }
             }
+        }
         visible = {
-            tag = SOV
+            is_ai = no
         }
         complete_effect = {
             SWE = {
@@ -976,8 +1020,20 @@ Technologies = {
         }
         
         available = {
-                date > 1938.08.1
+            date > 1938.08.1
+            NOT = {
+                has_license = {
+                    from = SWE
+                    equipment = {
+                        type = anti_tank_equipment_2
+                        version = 0
+                    }
+                }
             }
+        }
+        visible = {
+            is_ai = no
+        }
         complete_effect = {
             SWE = {
                 create_production_license = {
@@ -1003,8 +1059,20 @@ Technologies = {
         }
         
         available = {
-                date > 1940.08.01
+            date > 1940.08.01
+            NOT = {
+                has_license = {
+                    from = SWE
+                    equipment = {
+                        type = anti_tank_equipment_3
+                        version = 0
+                    }
+                }
             }
+        }
+        visible = {
+            is_ai = no
+        }
         complete_effect = {
             SWE = {
                 create_production_license = {
@@ -1030,10 +1098,19 @@ Technologies = {
         }
         
         available = {
-            AND = {
-                date > 1938.02.1
-                
+            date > 1938.02.1
+            NOT = {
+                has_license = {
+                    from = SWE
+                    equipment = {
+                        type = artillery_equipment_2
+                        version = 0
+                    }
+                }
             }
+        }
+        visible = {
+            is_ai = no
         }
         complete_effect = {
             SWE = {
@@ -1060,7 +1137,19 @@ Technologies = {
         }
 		available = {
 			date > 1939.06.01
+            NOT = {
+                has_license = {
+                    from = SWE
+                    equipment = {
+                        type = rocket_artillery_equipment_1
+                        version = 0
+                    }
+                }
+            }
 		}
+        visible = {
+            is_ai = no
+        }
 		complete_effect = {
 			SWE = {
 				create_production_license = {
@@ -1087,6 +1176,18 @@ Technologies = {
                     
         available = {
             date > 1941.1.1
+            NOT = {
+                has_license = {
+                    from = SWE
+                    equipment = {
+                        type = artillery_equipment_3
+                        version = 0
+                    }
+                }
+            }
+        }
+        visible = {
+            is_ai = no
         }
         complete_effect = {
             SWE = {
@@ -1113,6 +1214,18 @@ Technologies = {
                     
         available = {
             date > 1941.08.1
+            NOT = {
+                has_license = {
+                    from = SWE
+                    equipment = {
+                        type = rocket_artillery_equipment_2
+                        version = 0
+                    }
+                }
+            }
+        }
+        visible = {
+            is_ai = no
         }
         complete_effect = {
             SWE = {
