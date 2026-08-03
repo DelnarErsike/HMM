@@ -216,8 +216,8 @@ NDefines.NAI.IRRATIONALITY_LAMBDA = 0
 
 -- Garbage building, AI should never build
 NDefines.NAI.NUM_FACTORIES_IN_STATE_TO_WANT_ENERGY_REDUCTION = 9999
--- Less garbage building, but AI should be pickier about where we'd build it
-NDefines.NAI.TOTAL_STATE_EXTRACTED_RESOURCES_FOR_BUILDING_RESOURCE_CAP_BUILDING = 100
+-- Less garbage building, but AI should be a bit pickier about where it will build it
+NDefines.NAI.TOTAL_STATE_EXTRACTED_RESOURCES_FOR_BUILDING_RESOURCE_CAP_BUILDING = 40
 -- AI should not build fuel silos
 NDefines.NAI.NUM_SILOS_PER_CIVILIAN_FACTORIES = 0
 NDefines.NAI.NUM_SILOS_PER_MILITARY_FACTORIES = 0
@@ -258,6 +258,8 @@ NDefines.NTrade.ANTI_MONOPOLY_TRADE_FACTOR_THRESHOLD = 1.0	-- vanilla: 0.5. Impo
 NDefines.NTrade.MAX_MONTH_TRADE_FACTOR = 0				-- vanilla: 50. QoL so that multiplayer people can rebalance trades quickly without worrying about who gets more trade factor from keeping their trades up longer.
 NDefines.NTrade.DISTANCE_TRADE_FACTOR = -0.01			-- vanilla: -0.02. Scaled down to account for lack of bonuses from things like opinion and party support, but still present to e.g. prioritize intra-Euroaxis trade over Euroaxis-Japan trade.
 NDefines.NTrade.RELATION_TRADE_FACTOR = 0				-- vanilla: 1. Disabled so that people don't generally have to track (or can mess with) trade opinion through opinion modifiers on focuses and events and the like.
+NDefines.NDiplomacy.TROOP_FEAR = 0 						-- vanilla: 1. Disabled so troop locations do not affect trade opinion.
+NDefines.NDiplomacy.FLEET_FEAR = 0 						-- vanilla: 1. Disabled so fleet missions do not affect trade opinion.
 -- Misc. strategic bombing and air define changes
 NDefines.NSupply.RAILWAY_FLOW_PENALTY_PER_DAMAGED = 4.9 -- Scaled down a tiny bit to avoid rounding issues and to still let supply flow on partially damaged railway levels.
 NDefines.NAir.AIR_WING_BOMB_DAMAGE_FACTOR = 0.5 --Vanilla 2

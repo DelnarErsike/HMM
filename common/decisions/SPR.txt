@@ -14349,6 +14349,17 @@ SPR_expand_resource_extraction = {
 					has_state_flag = basque_steel_developed
 				}
 			}
+			if = {
+				limit = {
+					OR = {
+						is_ai = no
+						NOT = { original_tag = SPR }
+						has_game_rule = {
+							rule = spanish_production
+							option = off
+						}
+					}
+				}
 			OR = {
 				has_completed_focus = SPR_communal_autarky
 				has_completed_focus = SPA_reduce_reliance_on_foreign_resources
@@ -14356,6 +14367,7 @@ SPR_expand_resource_extraction = {
 				has_completed_focus = SPA_encourage_local_mining
 				has_completed_focus = SPR_exploit_spains_riches
 				has_completed_focus = SPR_fuel_for_the_war_machine
+			}
 			}
 		}
 
@@ -14380,6 +14392,16 @@ SPR_expand_resource_extraction = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				tag = SPR
+				NOT = {
+					has_game_rule = {
+						rule = spanish_production
+						option = off
+					}
+				}
+				factor = 1000
+			}
 		}
 	}
 
@@ -14412,6 +14434,17 @@ SPR_expand_resource_extraction = {
 					has_state_flag = western_aragon_steel_developed
 				}
 			}
+			if = {
+				limit = {
+					OR = {
+						is_ai = no
+						NOT = { original_tag = SPR }
+						has_game_rule = {
+							rule = spanish_production
+							option = off
+						}
+					}
+				}
 			OR = {
 				has_completed_focus = SPR_communal_autarky
 				has_completed_focus = SPA_reduce_reliance_on_foreign_resources
@@ -14419,6 +14452,7 @@ SPR_expand_resource_extraction = {
 				has_completed_focus = SPA_encourage_local_mining
 				has_completed_focus = SPR_exploit_spains_riches
 				has_completed_focus = SPR_fuel_for_the_war_machine
+			}
 			}
 		}
 
@@ -14443,6 +14477,16 @@ SPR_expand_resource_extraction = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				tag = SPR
+				NOT = {
+					has_game_rule = {
+						rule = spanish_production
+						option = off
+					}
+				}
+				factor = 1000
+			}
 		}
 	}
 
@@ -14475,6 +14519,17 @@ SPR_expand_resource_extraction = {
 					has_state_flag = granada_steel_developed
 				}
 			}
+			if = {
+				limit = {
+					OR = {
+						is_ai = no
+						NOT = { original_tag = SPR }
+						has_game_rule = {
+							rule = spanish_production
+							option = off
+						}
+					}
+				}
 			OR = {
 				has_completed_focus = SPR_communal_autarky
 				has_completed_focus = SPA_reduce_reliance_on_foreign_resources
@@ -14482,6 +14537,7 @@ SPR_expand_resource_extraction = {
 				has_completed_focus = SPA_encourage_local_mining
 				has_completed_focus = SPR_exploit_spains_riches
 				has_completed_focus = SPR_fuel_for_the_war_machine
+			}
 			}
 		}
 
@@ -14506,6 +14562,16 @@ SPR_expand_resource_extraction = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				tag = SPR
+				NOT = {
+					has_game_rule = {
+						rule = spanish_production
+						option = off
+					}
+				}
+				factor = 1000
+			}
 		}
 	}
 
@@ -14538,6 +14604,17 @@ SPR_expand_resource_extraction = {
 					has_state_flag = salamanca_tungsten_developed
 				}
 			}
+			if = {
+				limit = {
+					OR = {
+						is_ai = no
+						NOT = { original_tag = SPR }
+						has_game_rule = {
+							rule = spanish_production
+							option = off
+						}
+					}
+				}
 			OR = {
 				has_completed_focus = SPR_communal_autarky
 				has_completed_focus = SPA_reduce_reliance_on_foreign_resources
@@ -14545,6 +14622,7 @@ SPR_expand_resource_extraction = {
 				has_completed_focus = SPA_encourage_local_mining
 				has_completed_focus = SPR_exploit_spains_riches
 				has_completed_focus = SPR_fuel_for_the_war_machine
+			}
 			}
 		}
 
@@ -14563,6 +14641,16 @@ SPR_expand_resource_extraction = {
 				tag = ENG
 				has_war = no
 				factor = 0
+			}
+			modifier = {
+				tag = SPR
+				NOT = {
+					has_game_rule = {
+						rule = spanish_production
+						option = off
+					}
+				}
+				factor = 1000
 			}
 		}
 
@@ -14606,6 +14694,17 @@ SPR_expand_resource_extraction = {
 					has_state_flag = valladolid_tungsten_developed
 				}
 			}
+			if = {
+				limit = {
+					OR = {
+						is_ai = no
+						NOT = { original_tag = SPR }
+						has_game_rule = {
+							rule = spanish_production
+							option = off
+						}
+					}
+				}
 			OR = {
 				has_completed_focus = SPR_communal_autarky
 				has_completed_focus = SPA_reduce_reliance_on_foreign_resources
@@ -14613,6 +14712,7 @@ SPR_expand_resource_extraction = {
 				has_completed_focus = SPA_encourage_local_mining
 				has_completed_focus = SPR_exploit_spains_riches
 				has_completed_focus = SPR_fuel_for_the_war_machine
+			}
 			}
 		}
 
@@ -14631,6 +14731,16 @@ SPR_expand_resource_extraction = {
 				tag = ENG
 				has_war = no
 				factor = 0
+			}
+			modifier = {
+				tag = SPR
+				NOT = {
+					has_game_rule = {
+						rule = spanish_production
+						option = off
+					}
+				}
+				factor = 1000
 			}
 		}
 
@@ -14674,6 +14784,17 @@ SPR_expand_resource_extraction = {
 					has_state_flag = galicia_tungsten_developed
 				}
 			}
+			if = {
+				limit = {
+					OR = {
+						is_ai = no
+						NOT = { original_tag = SPR }
+						has_game_rule = {
+							rule = spanish_production
+							option = off
+						}
+					}
+				}
 			OR = {
 				has_completed_focus = SPR_communal_autarky
 				has_completed_focus = SPA_reduce_reliance_on_foreign_resources
@@ -14681,6 +14802,7 @@ SPR_expand_resource_extraction = {
 				has_completed_focus = SPA_encourage_local_mining
 				has_completed_focus = SPR_exploit_spains_riches
 				has_completed_focus = SPR_fuel_for_the_war_machine
+			}
 			}
 		}
 
@@ -14699,6 +14821,16 @@ SPR_expand_resource_extraction = {
 				tag = ENG
 				has_war = no
 				factor = 0
+			}
+			modifier = {
+				tag = SPR
+				NOT = {
+					has_game_rule = {
+						rule = spanish_production
+						option = off
+					}
+				}
+				factor = 1000
 			}
 		}
 
@@ -14742,6 +14874,17 @@ SPR_expand_resource_extraction = {
 					has_state_flag = extremadura_tungsten_developed
 				}
 			}
+			if = {
+				limit = {
+					OR = {
+						is_ai = no
+						NOT = { original_tag = SPR }
+						has_game_rule = {
+							rule = spanish_production
+							option = off
+						}
+					}
+				}
 			OR = {
 				has_completed_focus = SPR_communal_autarky
 				has_completed_focus = SPA_reduce_reliance_on_foreign_resources
@@ -14749,6 +14892,7 @@ SPR_expand_resource_extraction = {
 				has_completed_focus = SPA_encourage_local_mining
 				has_completed_focus = SPR_exploit_spains_riches
 				has_completed_focus = SPR_fuel_for_the_war_machine
+			}
 			}
 		}
 
@@ -14767,6 +14911,16 @@ SPR_expand_resource_extraction = {
 				tag = ENG
 				has_war = no
 				factor = 0
+			}
+			modifier = {
+				tag = SPR
+				NOT = {
+					has_game_rule = {
+						rule = spanish_production
+						option = off
+					}
+				}
+				factor = 1000
 			}
 		}
 

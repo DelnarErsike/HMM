@@ -3159,6 +3159,12 @@ operations = {
 			base = 1
 			modifier = {
 				factor = 50 
+				IF = {
+					limit = {	
+						DEN = {
+							is_subject = yes
+						}
+					}
 				DEN = {
 					overlord = {
 						OR = {
@@ -3166,6 +3172,10 @@ operations = {
 							has_government = communism
 						}
 					}
+				}
+				}
+				else = {
+					always = yes
 				}
 			}
 			modifier = {
