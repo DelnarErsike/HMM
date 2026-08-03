@@ -2166,6 +2166,7 @@ templates = {
 		complete_effect = {
 			division_template = {
 				name = "Garrison"
+                priority = 0
 
 				regiments = {
 					cavalry = { x = 0 y = 0 }
@@ -2210,6 +2211,8 @@ templates = {
 		complete_effect = {
 			division_template = {
 				name = "2W Infantry/FALS division"
+                priority = 0
+                template_counter = 0
 
 				regiments = {
 					infantry = { x = 0 y = 0 }			
@@ -2257,6 +2260,8 @@ templates = {
 		complete_effect = {
 			division_template = {
 				name = "50W Infantry/40 MM Infantry"
+                priority = 0
+                template_counter = 11
 
 				regiments = {
 					infantry = { x = 0 y = 0 }
