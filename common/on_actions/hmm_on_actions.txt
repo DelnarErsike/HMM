@@ -924,7 +924,7 @@ on_actions = {
 							# Modifier should automatically invalidate, but let's manually remove them, just in case.
 							remove_dynamic_modifier = { modifier = IRQ_shia_resistance_modifier }
 						}
-						set_compliance = 80
+						set_compliance = 100
 					}
 				}
 			}
