@@ -677,5 +677,10 @@ ROOT_inherit_current_scope_wars_effect = {
 
 leave_the_league_of_nations = {
 	custom_effect_tooltip = leave_the_league_of_nations_tt
-	hidden_effect = { remove_ideas = league_of_nations_member_idea }
+	hidden_effect = {
+        if = {
+            limit = { has_idea = league_of_nations_member_idea }
+            remove_ideas = league_of_nations_member_idea
+        }
+    }
 }

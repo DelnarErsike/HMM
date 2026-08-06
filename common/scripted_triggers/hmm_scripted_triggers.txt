@@ -148,6 +148,14 @@ axis = {
 	}
 }
 
+axis_geacps = {
+	OR = {
+		tag = JAP
+		tag = SIA
+		tag = MAN
+	}
+}
+
 # HMM: keep this in sync with the on_war_relation_added block in on actions responsible for removing the no grind trait
 can_grind_generals = {
 	if = {

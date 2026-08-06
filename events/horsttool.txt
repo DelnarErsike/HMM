@@ -218,13 +218,13 @@ country_event = {
     is_triggered_only = yes
 
     trigger = { # We could cause an issue if our new potential host gets killed between us selecting them and the even transferring, so we need these checks to be sure
-        event_target:potential_new_host = { exists = yes }
+        country_exists = event_target:potential_new_host
     }
     
     option = {
         name = "Yes, move the host tool"
         trigger = { # We could cause an issue if our new potential host gets killed between us selecting them and the even transferring, so we need these checks to be sure
-            event_target:potential_new_host = { exists = yes }
+            country_exists = event_target:potential_new_host
         }
         # Set new host
         event_target:potential_new_host = { 

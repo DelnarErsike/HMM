@@ -523,7 +523,7 @@ operations = {
     }
 	soviet_cap_timer = {
 	    activation = {
-            SOV = { exists = no }
+            NOT = { country_exists = SOV }
 	    }
 
 	    fire_only_once = yes
