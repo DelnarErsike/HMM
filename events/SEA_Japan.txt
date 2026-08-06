@@ -11714,9 +11714,7 @@ country_event = {
 			base = 25 
 		}
 		trigger = {
-			ANU = {
-				exists = no
-			}
+			NOT = { country_exists = ANU }
 		}
 		
 		every_owned_state = {

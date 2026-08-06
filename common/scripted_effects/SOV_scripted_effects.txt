@@ -8781,9 +8781,7 @@ SOV_exiles_civil_war_start = {
 	# Vladimir Sidorin
 	IF = {
 		limit = {
-			DON = {
-				exists = no
-			}
+			NOT = { country_exists = DON }
 		}
 
 		set_country_flag = DON_vladimir_sidorin_went_to_rejoin_the_russian_whites_flag
@@ -8806,9 +8804,7 @@ SOV_exiles_civil_war_start = {
 	# Ivanis Vasily Nikolaevich
 	IF = {
 		limit = {
-			KUB = {
-				exists = no
-			}
+			NOT = { country_exists = KUB }
 		}
 
 		set_country_flag = KUB_ivanis_vasily_nikolaevich_went_to_rejoin_the_russian_whites_flag

@@ -2138,9 +2138,7 @@ on_actions = {
 						owns_state = 768
 						has_war = no
 					}
-					RWA = {
-						exists = no
-					}
+					NOT = { country_exists = RWA }
 					768 = {
 						NOT = {
 							is_core_of = COG
@@ -2167,9 +2165,7 @@ on_actions = {
 						owns_state = 769
 						has_war = no
 					}
-					BRD = {
-						exists = no
-					}
+					NOT = { country_exists = BRD }
 					769 = {
 						NOT = {
 							is_core_of = COG

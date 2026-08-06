@@ -2578,9 +2578,7 @@ focus_tree = {
 		}
 		available = {
 
-			USA = {
-				exists = yes 
-			}
+			country_exists = USA
 
 			NOT = {
 				has_war_with = USA
@@ -3147,9 +3145,7 @@ focus_tree = {
 			factor = 5
 		}
 		available = {
-			GER = {
-				exists = yes
-			}
+			country_exists = GER
 			NOT = {
 				has_war_with = GER
 			}
@@ -3270,9 +3266,7 @@ focus_tree = {
 			factor = 15
 		}
 		available = {
-			GER = {
-				exists = yes
-			}
+			country_exists = GER
 			NOT = {
 				has_war_with = GER
 			}
@@ -3351,9 +3345,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			GER = {
-				exists = yes
-			}
+			country_exists = GER
 			NOT = {
 				has_war_with = GER
 			}
@@ -3941,9 +3933,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			ITA = {
-				exists = yes
-			}
+			country_exists = ITA
 			NOT = {
 				has_war_with = ITA
 			}
@@ -4044,9 +4034,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			ITA = {
-				exists = yes
-			}
+			country_exists = ITA
 			NOT = {
 				has_war_with = ITA
 			}
@@ -7251,9 +7239,7 @@ focus_tree = {
 		bypass = {
 			OR = {
 				has_subject = POR
-				POR = {
-					exists = no 
-				}
+				NOT = { country_exists = POR }
 				has_war_with = POR
 			}
 		}

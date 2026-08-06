@@ -304,7 +304,7 @@ country_event = {
 		ai_chance = {
 			factor = 90
 			modifier = { # Decrease chance YUG resists if AUS isn't taken first
-				AUS = { exists = yes }
+				country_exists = AUS
 				factor = 0.5
 			}
 			modifier = { # If they stand a chance to hold the line they will fight

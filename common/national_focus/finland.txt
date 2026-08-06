@@ -6166,7 +6166,7 @@ focus_tree = {
 				NOT = { country_exists = GER }
 				GER = { has_capitulated = yes }
 				GER = { has_war_with = SOV }
-				SOV = { exists = no }
+				NOT = { country_exists = SOV }
 				GER = { has_subject = SOV }
 				AND = {
 					has_war_with = SOV

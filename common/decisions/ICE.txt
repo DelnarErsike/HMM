@@ -129,7 +129,7 @@ ICE_infiltrate_the_british_isles_category = {
 				tooltip = ICE_uprising_scotland_tt
 				121 = { owner = { communism > ICE.communism_support_needed } }
 			}	
-			SCO = {	exists = no }		
+			NOT = { country_exists = SCO }
 			ENG = {
 				NOT = {
 					has_government = communism
@@ -138,7 +138,7 @@ ICE_infiltrate_the_british_isles_category = {
 		}
 	
 		visible = {
-			SCO = {	exists = no }
+			NOT = { country_exists = SCO }
 			ENG = {
 				NOT = {
 					has_government = communism
@@ -229,7 +229,7 @@ ICE_infiltrate_the_british_isles_category = {
 				tooltip = ICE_uprising_wales_tt
 				122 = { owner = { communism > ICE.communism_support_needed } }
 			}	
-			WLS = {	exists = no }		
+			NOT = { country_exists = WLS }
 			ENG = {
 				NOT = {
 					has_government = communism
@@ -238,7 +238,7 @@ ICE_infiltrate_the_british_isles_category = {
 		}
 	
 		visible = {
-			WLS = {	exists = no }
+			NOT = { country_exists = WLS }
 			ENG = {
 				NOT = {
 					has_government = communism
@@ -331,7 +331,7 @@ ICE_infiltrate_the_british_isles_category = {
 				tooltip = ICE_uprising_ni_tt
 				122 = { owner = { communism > ICE.communism_support_needed } }
 			}	
-			NIR = {	exists = no }	
+			NOT = { country_exists = NIR }
 			ENG = {
 				NOT = {
 					has_government = communism
@@ -340,7 +340,7 @@ ICE_infiltrate_the_british_isles_category = {
 		}
 	
 		visible = {
-			NIR = {	exists = no }
+			NOT = { country_exists = NIR }
 			ENG = {
 				NOT = {
 					has_government = communism

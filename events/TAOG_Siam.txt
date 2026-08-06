@@ -400,9 +400,7 @@ country_event = {
 		if = {
 			limit = {
 				has_variable = SIA.limited_war_target
-				var:SIA.limited_war_target = {
-					exists = yes
-				}
+				country_exists = var:SIA.limited_war_target
 			}
 			var:SIA.limited_war_target = { country_event = { id = siam.11 hours = 2 } }
 		}
@@ -2474,7 +2472,7 @@ country_event = {
 
 		if = {
 			limit = {
-				var:SIA_adc_demand_country_to_be_released = { exists = no }
+				NOT = { country_exists = var:SIA_adc_demand_country_to_be_released }
 			}
 			release = var:SIA_adc_demand_country_to_be_released
 		}
@@ -2494,9 +2492,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				var:SIA_adc_demand_country_to_be_released = {
-					exists = yes
-				}
+				country_exists = var:SIA_adc_demand_country_to_be_released
 			}
 
 			var:SIA_adc_demand_country_to_be_released = {

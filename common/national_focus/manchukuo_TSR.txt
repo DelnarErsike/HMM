@@ -170,9 +170,7 @@
 				NOT = { has_idea = MAN_banditry }
 			}
 			NOT = { has_war_with = JAP }
-			JAP = {
-				exists = yes
-			}
+			country_exists = JAP
 			OR = {
 				is_ally_with = JAP
 				JAP = {
@@ -4734,18 +4732,10 @@
 			1045 = { is_fully_controlled_by = ROOT }
 			1044 = { is_fully_controlled_by = ROOT }
 			756 = { is_fully_controlled_by = ROOT }
-			XSM = {
-				exists = no
-			}
-			GSM = {
-				exists = no
-			}
-			NXM = {
-				exists = no
-			}
-			KHM = {
-				exists = no
-			}
+			NOT = { country_exists = XSM }
+			NOT = { country_exists = GSM }
+			NOT = { country_exists = NXM }
+			NOT = { country_exists = KHM }
 		}
 
 		bypass = {

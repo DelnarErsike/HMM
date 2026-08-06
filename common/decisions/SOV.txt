@@ -14264,7 +14264,7 @@ SOV_soviet_civil_war_dec_cat = {
 			}
 		}
 		available = {
-			JAP = { exists = yes }
+			country_exists = JAP
 			408 = { CONTROLLER = { original_tag = SOV } }
 			custom_trigger_tooltip = {
 				tooltip = SOV_not_has_conflict_with_japan
@@ -14350,7 +14350,7 @@ SOV_soviet_civil_war_dec_cat = {
 		}
 
 		available = {
-			JAP = { exists = yes }
+			country_exists = JAP
 			655 = { CONTROLLER = { original_tag = SOV } }
 			custom_trigger_tooltip = {
 				tooltip = SOV_not_has_conflict_with_japan
@@ -14426,7 +14426,7 @@ SOV_soviet_civil_war_dec_cat = {
 		}
 
 		available = {
-			GER = { exists = yes }
+			country_exists = GER
 			229 = { CONTROLLER = { original_tag = SOV } }
 		}
 		ai_will_do = {
@@ -14513,7 +14513,7 @@ SOV_soviet_civil_war_dec_cat = {
 		}
 
 		available = {
-			GER = { exists = yes }
+			country_exists = GER
 		}
 		ai_will_do = {
 			base = 0
@@ -14574,7 +14574,7 @@ SOV_soviet_civil_war_dec_cat = {
 		}
 
 		available = {
-			ENG = { exists = yes }
+			country_exists = ENG
 			206 = { CONTROLLER = { original_tag = SOV } }
 
 		}
@@ -17507,7 +17507,7 @@ operations = {
 		fire_only_once = yes
 		visible = {
 			JAP = { has_completed_focus = JAP_strengthen_civilian_government }
-			MAN = { exists = yes }
+			country_exists = MAN
 		}
 
 		complete_effect = {
@@ -17566,7 +17566,7 @@ political_actions = {
 		fire_only_once = yes
 		visible = {
 			JAP = { has_completed_focus = JAP_strengthen_civilian_government }
-			PRC = { exists = yes }
+			country_exists = PRC
 		}
 
 		complete_effect = {

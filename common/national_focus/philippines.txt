@@ -894,31 +894,17 @@ initial_show_position = {
 
 		available = {
 			OR = {
-				#SIA = {
-				#	exists = yes
-				#}
-				INS = {
-					exists = yes
-				}
-				MAL = {
-						exists = yes
-				}
+				#country_exists = SIA
+				country_exists = INS
+				country_exists = MAL
 			}
 		}
 
 		bypass = {
 			# HMM: we want to keep this focus and insta-bypass it instead of removing it to make the focuses below this one still consider it
-			AND = {
-				#SIA = {
-				#	exists = no
-				#}
-				INS = {
-					exists = no
-				}
-				MAL = {
-					exists = no
-				}
-			}
+			#NOT = { country_exists = SIA }
+			NOT = { country_exists = INS }
+			NOT = { country_exists = MAL }
 		}
 
 		available_if_capitulated = no
@@ -928,9 +914,7 @@ initial_show_position = {
 				limit = {
 					# HMM: Siam would/should reject because no cross-faction trade
 					always = no
-					SIA = {
-						exists = yes
-					}
+					country_exists = SIA
 				}
 				SIA = {
 					country_event = {
@@ -947,9 +931,7 @@ initial_show_position = {
 			}
 			if = {
 				limit = {
-					INS = {
-						exists = yes
-					}
+					country_exists = INS
 				}
 				INS = {
 					country_event = {
@@ -966,9 +948,7 @@ initial_show_position = {
 			}
 			if = {
 				limit = {
-					MAL = {
-						exists = yes
-					}
+					country_exists = MAL
 				}
 				MAL = {
 					country_event = {
@@ -4618,9 +4598,7 @@ initial_show_position = {
 		completion_reward = {
 			IF = {
 				limit = {
-					JAP = {
-						exists = yes
-					}
+					country_exists = JAP
 				}
 				declare_war_on = {
 					target = JAP
@@ -4788,9 +4766,7 @@ initial_show_position = {
 		completion_reward = {
 			IF = {
 				limit = {
-					ENG = {
-						exists = yes
-					}
+					country_exists = ENG
 				}
 				declare_war_on = {
 					target = ENG
@@ -4835,9 +4811,7 @@ initial_show_position = {
 		completion_reward = {
 			IF = {
 				limit = {
-					USA = {
-						exists = yes
-					}
+					country_exists = USA
 				}
 				declare_war_on = {
 					target = USA

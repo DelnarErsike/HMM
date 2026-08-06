@@ -2154,7 +2154,7 @@ POL_reopen_the_maritime_and_colonial_league = {
 					has_state_flag = rejected_purchase_flag
 				}
 			}
-			MAD = { exists = no }
+			NOT = { country_exists = MAD }
 		}
 		
 		highlight_states = {

@@ -26,9 +26,7 @@ war_measures = {
 
 		visible = {
 			has_defensive_war = yes
-			CSA = {
-				exists = no
-			}
+			NOT = { country_exists = CSA }
 		}
 
 		complete_effect = {
@@ -3007,9 +3005,7 @@ USA_intervention_mandate = {
 USA_decolonisation = {
 	USA_freedom_for_Papua = {
 		available = {
-			PNG = {
-				exists = no
-			}
+			NOT = { country_exists = PNG }
 			controls_state = 523
 			controls_state = 737
 		}

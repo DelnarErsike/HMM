@@ -16168,14 +16168,14 @@ focus_tree = {
 			is_subject = no
 			OR = {
 				FRA = { is_subject_of = ROOT }
-				FRA = { exists = no }
+				NOT = { country_exists = FRA }
 				is_in_faction_with = FRA
 			}
 		}
 
 		available = {
 			is_subject = no
-			FRA = { exists = yes }
+			country_exists = FRA
 			NOT = { is_in_faction_with = FRA }
 			NOT = { has_guaranteed = FRA }
 			NOT = { has_non_aggression_pact_with = FRA }
@@ -16360,14 +16360,14 @@ focus_tree = {
 			is_subject = no
 			OR = {
 				GRE = { is_subject_of = ROOT }
-				GRE = { exists = no }
+				NOT = { country_exists = GRE }
 				is_in_faction_with = GRE
 			}
 		}
 
 		available = {
 			is_subject = no
-			GRE = { exists = yes }
+			country_exists = GRE
 			NOT = { is_in_faction_with = GRE }
 			NOT = { has_guaranteed = GRE }
 			NOT = { has_non_aggression_pact_with = GRE }

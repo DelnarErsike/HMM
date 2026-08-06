@@ -588,9 +588,7 @@ ideas = {
 				OR = {
 					has_war_with = GER
 					GER = {	is_subject = yes }
-					ROOT = {
-						exists = no
-					}
+					NOT = { country_exists = ROOT }
 				}
 			}
 
@@ -602,9 +600,7 @@ ideas = {
 							OR = {
 								has_war_with = ROOT
 								is_subject = yes
-								ROOT = {
-									exists = no
-								}
+								NOT = { country_exists = ROOT }
 							}
 						}
 						clr_country_flag = GER_french_war_reparations_flag
@@ -636,9 +632,7 @@ ideas = {
 				OR = {
 					has_war_with = GER
 					GER = {	is_subject = yes }
-					ROOT = {
-						exists = no
-					}
+					NOT = { country_exists = ROOT }
 				}
 			}
 
@@ -650,9 +644,7 @@ ideas = {
 							OR = {
 								has_war_with = ROOT
 								is_subject = yes
-								ROOT = {
-									exists = no
-								}
+								NOT = { country_exists = ROOT }
 							}
 						}
 						clr_country_flag = GER_french_war_reparations_flag
@@ -684,9 +676,7 @@ ideas = {
 				OR = {
 					has_war_with = GER
 					GER = {	is_subject = yes }
-					ROOT = {
-						exists = no
-					}
+					NOT = { country_exists = ROOT }
 				}
 			}
 
@@ -698,9 +688,7 @@ ideas = {
 							OR = {
 								has_war_with = ROOT
 								is_subject = yes
-								ROOT = {
-									exists = no
-								}
+								NOT = { country_exists = ROOT }
 							}
 						}
 						clr_country_flag = GER_french_war_reparations_flag
@@ -731,9 +719,7 @@ ideas = {
 				OR = {
 					has_war_with = GER
 					GER = {	is_subject = yes }
-					ROOT = {
-						exists = no
-					}
+					NOT = { country_exists = ROOT }
 				}
 			}
 
@@ -745,9 +731,7 @@ ideas = {
 							OR = {
 								has_war_with = ROOT
 								is_subject = yes
-								ROOT = {
-									exists = no
-								}
+								NOT = { country_exists = ROOT }
 							}
 						}
 						clr_country_flag = GER_french_war_reparations_flag

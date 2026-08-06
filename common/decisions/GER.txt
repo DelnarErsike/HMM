@@ -3535,9 +3535,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_uplift_the_rosenberg_office
-			RKG = {
-				exists = no
-			}
+			NOT = { country_exists = RKG }
 		}
 
 		fire_only_once = yes
@@ -3620,7 +3618,7 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 25
-				NOR = { exists = no }
+				NOT = { country_exists = NOR }
 			}
 		}
 
@@ -3731,9 +3729,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_uplift_the_rosenberg_office
-			RKN = {
-				exists = no
-			}
+			NOT = { country_exists = RKN }
 		}
 
 		available = {
@@ -3782,7 +3778,7 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 25
-				HOL = { exists = no }
+				NOT = { country_exists = HOL }
 			}
 		}
 
@@ -3890,9 +3886,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_uplift_the_rosenberg_office
-			RKB = {
-				exists = no
-			}
+			NOT = { country_exists = RKB }
 		}
 
 		priority = 100
@@ -3950,7 +3944,7 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 25
-				BEL = { exists = no }
+				NOT = { country_exists = BEL }
 			}
 		}
 
@@ -4060,9 +4054,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_uplift_the_rosenberg_office
-			RKO = {
-				exists = no
-			}
+			NOT = { country_exists = RKO }
 		}
 
 		available = {
@@ -4149,11 +4141,11 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 50
-				SOV = { exists = no }
+				NOT = { country_exists = SOV }
 			}
 			modifier = {
 				add = 10
-				BLR = { exists = no }
+				NOT = { country_exists = BLR }
 			}
 			modifier = {
 				add = 10
@@ -4161,19 +4153,19 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 5
-				LIT = { exists = no }
+				NOT = { country_exists = LIT }
 			}
 			modifier = {
 				add = 5
-				LAT = { exists = no }
+				NOT = { country_exists = LAT }
 			}
 			modifier = {
 				add = 5
-				EST = { exists = no }
+				NOT = { country_exists = EST }
 			}
 			modifier = {
 				add = 15
-				POL = { exists = no }
+				NOT = { country_exists = POL }
 			}
 		}
 
@@ -4310,9 +4302,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_uplift_the_rosenberg_office
-			RKU = {
-				exists = no
-			}
+			NOT = { country_exists = RKU }
 		}
 
 		available = {
@@ -4408,12 +4398,12 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 50
-				SOV = { exists = no }
+				NOT = { country_exists = SOV }
 			
 			}
 			modifier = {
 				add = 15
-				UKR = { exists = no }
+				NOT = { country_exists = UKR }
 			}
 		}
 
@@ -4531,9 +4521,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_uplift_the_rosenberg_office
-			RKU = {
-				exists = yes
-			}
+			country_exists = RKU
 			NOT = {
 				has_country_flag = GER_handed_over_greater_romania_to_rku
 			}
@@ -4577,7 +4565,7 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 9
-				RKU = { exists = yes }
+				country_exists = RKU
 			}
 		}
 
@@ -4635,12 +4623,8 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_uplift_the_rosenberg_office
-			RKU = {
-				exists = yes
-			}
-			RKC = {
-				exists = no
-			}
+			country_exists = RKU
+			NOT = { country_exists = RKC }
 			has_country_flag = GER_handed_over_greater_romania_to_rku
 			NOT = {
 				has_country_flag = GER_handed_over_normal_romania_to_rku
@@ -4649,9 +4633,7 @@ GER_reichskommissariats = {
 
 		available = {
 			is_subject = no
-			RKC = {
-				exists = no
-			}
+			NOT = { country_exists = RKC }
 			OR = {
 				has_completed_focus = GER_heed_von_neuraths_concerns
 				has_completed_focus = GER_reorganize_the_wehrmacht
@@ -4684,7 +4666,7 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 9
-				RKU = { exists = yes }
+				country_exists = RKU
 			}
 		}
 
@@ -4741,9 +4723,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_uplift_the_rosenberg_office
-			RKK = {
-				exists = no
-			}
+			NOT = { country_exists = RKK }
 		}
 
 		available = {
@@ -4936,9 +4916,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_uplift_the_rosenberg_office
-			RKT = {
-				exists = no
-			}
+			NOT = { country_exists = RKT }
 		}
 
 		available = {
@@ -5166,9 +5144,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_uplift_the_rosenberg_office
-			RKM = {
-				exists = no
-			}
+			NOT = { country_exists = RKM }
 		}
 
 		available = {
@@ -5349,7 +5325,7 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 10
-				SOV = { exists = no }
+				NOT = { country_exists = SOV }
 			}
 		}
 
@@ -5472,9 +5448,7 @@ GER_reichskommissariats = {
 		available = {
 			OR = {
 				has_completed_focus = GER_the_triumphant_will
-				SOV = {
-					exists = no
-				}
+				NOT = { country_exists = SOV }
 			}
 			829 = {
 				is_controlled_by_ROOT_or_subject = yes
@@ -5497,7 +5471,7 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 25
-				SOV = { exists = no }
+				NOT = { country_exists = SOV }
 			}
 		}
 
@@ -5532,24 +5506,12 @@ GER_reichskommissariats = {
 
 		available = {
 			OR = {
-				RKM = {
-					exists = yes
-				}
-				RKO = {
-					exists = yes
-				}
-				RKU = {
-					exists = yes
-				}
-				RKT = {
-					exists = yes
-				}
-				RKK = {
-					exists = yes
-				}
-				RKL = {
-					exists = yes
-				}
+				country_exists = RKM
+				country_exists = RKO
+				country_exists = RKU
+				country_exists = RKT
+				country_exists = RKK
+				country_exists = RKL
 			}
 			has_manpower > 15000
 		}
@@ -5557,24 +5519,12 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			OR = {
-				RKM = {
-					exists = yes
-				}
-				RKO = {
-					exists = yes
-				}
-				RKU = {
-					exists = yes
-				}
-				RKT = {
-					exists = yes
-				}
-				RKK = {
-					exists = yes
-				}
-				RKL = {
-					exists = yes
-				}
+				country_exists = RKM
+				country_exists = RKO
+				country_exists = RKU
+				country_exists = RKT
+				country_exists = RKK
+				country_exists = RKL
 			}
 		}
 
@@ -5582,9 +5532,7 @@ GER_reichskommissariats = {
 
 			IF = {
 				limit = {
-					RKM = {
-						exists = yes
-					}
+					country_exists = RKM
 				}
 				add_manpower = -2500
 				RKM = {
@@ -5603,9 +5551,7 @@ GER_reichskommissariats = {
 			}
 			IF = {
 				limit = {
-					RKO = {
-						exists = yes
-					}
+					country_exists = RKO
 				}
 				add_manpower = -2500
 				RKO = {
@@ -5624,9 +5570,7 @@ GER_reichskommissariats = {
 			}
 			IF = {
 				limit = {
-					RKU = {
-						exists = yes
-					}
+					country_exists = RKU
 				}
 				add_manpower = -2500
 				RKU = {
@@ -5645,9 +5589,7 @@ GER_reichskommissariats = {
 			}
 			IF = {
 				limit = {
-					RKT = {
-						exists = yes
-					}
+					country_exists = RKT
 				}
 				add_manpower = -2500
 				RKT = {
@@ -5666,9 +5608,7 @@ GER_reichskommissariats = {
 			}
 			IF = {
 				limit = {
-					RKK = {
-						exists = yes
-					}
+					country_exists = RKK
 				}
 				add_manpower = -2500
 				RKK = {
@@ -5687,9 +5627,7 @@ GER_reichskommissariats = {
 			}
 			IF = {
 				limit = {
-					RKL = {
-						exists = yes
-					}
+					country_exists = RKL
 				}
 				add_manpower = -2500
 				RKL = {
@@ -5725,9 +5663,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_uplift_the_rosenberg_office
-			RKL = {
-				exists = no
-			}
+			NOT = { country_exists = RKL }
 			NOT = {
 				has_country_flag = GER_decided_on_south_urals_status
 			}
@@ -5795,7 +5731,7 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 15
-				RKM = { exists = yes }
+				country_exists = RKM
 			}
 		}
 
@@ -5825,9 +5761,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_uplift_the_rosenberg_office
-			RKM = {
-				exists = yes
-			}
+			country_exists = RKM
 			NOT = {
 				has_country_flag = GER_decided_on_north_urals_status
 			}
@@ -5887,7 +5821,7 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 25
-				RKM = { exists = yes }
+				country_exists = RKM
 			}
 		}
 
@@ -5945,9 +5879,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_uplift_the_rosenberg_office
-			RKM = {
-				exists = yes
-			}
+			country_exists = RKM
 			has_country_flag = GER_decided_on_north_urals_status
 			NOT = {
 				has_country_flag = GER_decided_on_west_yenisei_status
@@ -6024,7 +5956,7 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 25
-				RKM = { exists = yes }
+				country_exists = RKM
 			}
 		}
 
@@ -6083,9 +6015,7 @@ GER_reichskommissariats = {
 			always = no
 			has_completed_focus = GER_uplift_the_rosenberg_office
 			OR = {
-				RKM = {
-					exists = yes
-				}
+				country_exists = RKM
 				FIN = {
 					exists = yes
 					OR = {
@@ -6115,9 +6045,7 @@ GER_reichskommissariats = {
 			is_subject = no
 			OR = {
 				has_completed_focus = GER_the_triumphant_will
-				SOV = {
-					exists = no
-				}
+				NOT = { country_exists = SOV }
 			}
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
@@ -6151,7 +6079,7 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 25
-				RKM = { exists = yes }
+				country_exists = RKM
 			}
 		}
 
@@ -6180,9 +6108,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_uplift_the_rosenberg_office
-			GEN = {
-				exists = no
-			}
+			NOT = { country_exists = GEN }
 		}
 
 		available = {
@@ -6335,9 +6261,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_uplift_the_rosenberg_office
-			GEN = {
-				exists = yes
-			}
+			country_exists = GEN
 			NOT = {
 				has_country_flag = GER_handed_over_austrian_galicia_to_gen
 			}
@@ -6377,7 +6301,7 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 9
-				GEN = { exists = yes }
+				country_exists = GEN
 			}
 		}
 
@@ -6433,9 +6357,7 @@ GER_reichskommissariats = {
 
 		visible = {
 			always = no
-			RKH = {
-				exists = no
-			}
+			NOT = { country_exists = RKH }
 			CZE = {
 				NOT = {
 					is_subject_of = ROOT
@@ -6481,7 +6403,7 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 25
-				CZE = { exists = no }
+				NOT = { country_exists = CZE }
 			}
 		}
 
@@ -6591,9 +6513,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_uplift_the_rosenberg_office
-			RKI = {
-				exists = no
-			}
+			NOT = { country_exists = RKI }
 		}
 
 		available = {
@@ -6726,11 +6646,11 @@ GER_reichskommissariats = {
 			base = 0
 			modifier = {
 				add = 5
-				SPR = { exists = no }
+				NOT = { country_exists = SPR }
 			}
 			modifier = {
 				add = 5
-				POR = { exists = no }
+				NOT = { country_exists = POR }
 			}
 			modifier = {
 				add = 2
@@ -6845,9 +6765,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_uplift_the_rosenberg_office
-			RKC = {
-				exists = no
-			}
+			NOT = { country_exists = RKC }
 		}
 
 		available = {
@@ -6976,15 +6894,15 @@ GER_reichskommissariats = {
 			base = 0
 			modifier = {
 				add = 5
-				YUG = { exists = no }
+				NOT = { country_exists = YUG }
 			}
 			modifier = {
 				add = 5
-				ROM = { exists = no }
+				NOT = { country_exists = ROM }
 			}
 			modifier = {
 				add = 5
-				BUL = { exists = no }
+				NOT = { country_exists = BUL }
 			}
 			modifier = {
 				add = 5
@@ -7126,9 +7044,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_uplift_the_rosenberg_office
-			RKC = {
-				exists = yes
-			}
+			country_exists = RKC
 			NOT = {
 				has_country_flag = GER_handed_over_zadar_to_rkc
 			}
@@ -7164,7 +7080,7 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 9
-				RKC = { exists = yes }
+				country_exists = RKC
 			}
 		}
 
@@ -7221,9 +7137,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_uplift_the_rosenberg_office
-			RGB = {
-				exists = no
-			}
+			NOT = { country_exists = RGB }
 		}
 
 		available = {
@@ -7315,11 +7229,11 @@ GER_reichskommissariats = {
 			base = 0
 			modifier = {
 				add = 1
-				WLS = { exists = no }
+				NOT = { country_exists = WLS }
 			}
 			modifier = {
 				add = 8
-				ENG = { exists = no }
+				NOT = { country_exists = ENG }
 			}
 			modifier = {
 				add = 5
@@ -7327,7 +7241,7 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 1
-				SCO = { exists = no }
+				NOT = { country_exists = SCO }
 			}
 		}
 
@@ -7439,9 +7353,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_uplift_the_rosenberg_office
-			RKC = {
-				exists = yes
-			}
+			country_exists = RKC
 			NOT = {
 				has_country_flag = GER_decided_on_greek_status
 			}
@@ -7501,7 +7413,7 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 25
-				GRE = { exists = no }
+				NOT = { country_exists = GRE }
 			}
 		}
 
@@ -7559,9 +7471,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_uplift_the_rosenberg_office
-			RKC = {
-				exists = yes
-			}
+			country_exists = RKC
 			NOT = {
 				has_country_flag = GER_decided_on_hungarian_status
 			}
@@ -7637,7 +7547,7 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 10
-				HUN = { exists = no }
+				NOT = { country_exists = HUN }
 			}
 		}
 
@@ -7698,9 +7608,7 @@ GER_reichskommissariats = {
 			OR = {
 				AND = {
 					has_country_flag = GER_decided_on_hungarian_status
-					RKC = {
-						exists = yes
-					}
+					country_exists = RKC
 				}
 				HUN = {
 					OR = {
@@ -7723,12 +7631,8 @@ GER_reichskommissariats = {
 					}
 				}
 				AND = {
-					RKH = {
-						exists = yes
-					}
-					SLO = {
-						exists = no
-					}
+					country_exists = RKH
+					NOT = { country_exists = SLO }
 				}
 			}
 			NOT = {
@@ -7739,15 +7643,11 @@ GER_reichskommissariats = {
 		available = {
 			is_subject = no
 			OR = {
-				RKC = {
-					exists = yes
-				}
+				country_exists = RKC
 				has_completed_focus = GER_the_triumphant_will
 				AND = {
 					has_completed_focus = GER_reintegrate_luxemburg_and_alsace_lorraine
-					SLO = {
-						exists = no
-					}
+					NOT = { country_exists = SLO }
 				}
 			}
 			custom_trigger_tooltip = {
@@ -7782,11 +7682,11 @@ GER_reichskommissariats = {
 			base = 0
 			modifier = {
 				add = 5
-				SLO = { exists = no }
+				NOT = { country_exists = SLO }
 			}
 			modifier = {
 				add = 15
-				RKC = { exists = yes }
+				country_exists = RKC
 			}
 		}
 
@@ -7816,9 +7716,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_uplift_the_rosenberg_office
-			RGB = {
-				exists = yes
-			}
+			country_exists = RGB
 			NOT = {
 				has_country_flag = GER_decided_on_irish_status
 			}
@@ -7874,11 +7772,11 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 2
-				NIR = { exists = no }
+				NOT = { country_exists = NIR }
 			}
 			modifier = {
 				add = 13
-				IRE = { exists = no }
+				NOT = { country_exists = IRE }
 			}
 		}
 
@@ -7936,9 +7834,7 @@ GER_reichskommissariats = {
 			always = no
 			has_completed_focus = GER_uplift_the_rosenberg_office
 			has_completed_focus = GER_mittelafrika
-			RNA = {
-				exists = no
-			}
+			NOT = { country_exists = RNA }
 		}
 
 		priority = 70
@@ -8105,11 +8001,11 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 10
-				ENG = { exists = no }
+				NOT = { country_exists = ENG }
 			}
 			modifier = {
 				add = 10
-				ITA = { exists = no }
+				NOT = { country_exists = ITA }
 			}
 			modifier = {
 				add = 10
@@ -8225,9 +8121,7 @@ GER_reichskommissariats = {
 			always = no
 			has_completed_focus = GER_uplift_the_rosenberg_office
 			has_completed_focus = GER_mittelafrika
-			RKA = {
-				exists = no
-			}
+			NOT = { country_exists = RKA }
 		}
 
 		priority = 70
@@ -8526,11 +8420,11 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 10
-				ENG = { exists = no }
+				NOT = { country_exists = ENG }
 			}
 			modifier = {
 				add = 10
-				ITA = { exists = no }
+				NOT = { country_exists = ITA }
 			}
 			modifier = {
 				add = 10
@@ -8649,9 +8543,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_uplift_the_rosenberg_office
-			RKA = {
-				exists = yes
-			}
+			country_exists = RKA
 			NOT = {
 				has_country_flag = GER_decided_on_saf_status
 			}
@@ -8691,7 +8583,7 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 13
-				SAF = { exists = no }
+				NOT = { country_exists = SAF }
 			}
 		}
 
@@ -8747,9 +8639,7 @@ GER_reichskommissariats = {
 			always = no
 			has_completed_focus = GER_uplift_the_rosenberg_office
 			has_completed_focus = GER_establish_protectorates_in_america
-			RKV = {
-				exists = no
-			}
+			NOT = { country_exists = RKV }
 		}
 
 		priority = 60
@@ -8945,7 +8835,7 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 10
-				BRA = { exists = no }
+				NOT = { country_exists = BRA }
 			}
 			modifier = {
 				add = 10
@@ -8957,7 +8847,7 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 10
-				VEN = { exists = no }
+				NOT = { country_exists = VEN }
 			}
 		}
 
@@ -9065,9 +8955,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_establish_protectorates_in_america
-			RAN = {
-				exists = no
-			}
+			NOT = { country_exists = RAN }
 		}
 
 		priority = 59
@@ -9218,7 +9106,7 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 10
-				CHL = { exists = no }
+				NOT = { country_exists = CHL }
 			}
 			modifier = {
 				add = 10
@@ -9230,7 +9118,7 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 10
-				PRU = { exists = no }
+				NOT = { country_exists = PRU }
 			}
 		}
 
@@ -9338,9 +9226,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_establish_protectorates_in_america
-			RCO = {
-				exists = no
-			}
+			NOT = { country_exists = RCO }
 		}
 
 		priority = 58
@@ -9543,7 +9429,7 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 10
-				MEX = { exists = no }
+				NOT = { country_exists = MEX }
 			}
 			modifier = {
 				add = 10
@@ -9555,7 +9441,7 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 10
-				CUB = { exists = no }
+				NOT = { country_exists = CUB }
 			}
 		}
 
@@ -9663,9 +9549,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_establish_protectorates_in_america
-			RUS = {
-				exists = no
-			}
+			NOT = { country_exists = RUS }
 		}
 
 		priority = 57
@@ -9884,11 +9768,11 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 10
-				USA = { exists = no }
+				NOT = { country_exists = USA }
 			}
 			modifier = {
 				add = 10
-				CAN = { exists = no }
+				NOT = { country_exists = CAN }
 			}
 		}
 
@@ -9999,9 +9883,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_uplift_the_rosenberg_office
-			RUS = {
-				exists = yes
-			}
+			country_exists = RUS
 			NOT = {
 				has_country_flag = GER_decided_on_nfl_status
 			}
@@ -10041,7 +9923,7 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 13
-				CAN = { exists = no }
+				NOT = { country_exists = CAN }
 			}
 		}
 
@@ -10108,12 +9990,8 @@ GER_reichskommissariats = {
 			always = no
 			has_completed_focus = GER_establish_protectorates_in_america
 			OR = {
-				RUS = {
-					exists = yes
-				}
-				RCO = {
-					exists = yes
-				}
+				country_exists = RUS
+				country_exists = RCO
 				JAP = {
 					exists = yes
 					has_government = ROOT
@@ -10137,9 +10015,7 @@ GER_reichskommissariats = {
 			is_subject = no
 			OR = {
 				has_completed_focus = GER_establish_protectorates_in_america
-				USA = {
-					exists = no
-				}
+				NOT = { country_exists = USA }
 			}
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
@@ -10205,15 +10081,15 @@ GER_reichskommissariats = {
 			base = 1
 			modifier = {
 				add = 15
-				USA = { exists = no }
+				NOT = { country_exists = USA }
 			}
 			modifier = {
 				add = 25
-				RUS = { exists = yes }
+				country_exists = RUS
 			}
 			modifier = {
 				add = 5
-				RCO = { exists = yes }
+				country_exists = RCO
 			}
 		}
 
@@ -10243,9 +10119,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_create_asian_reichskommissariat
-			RKM = {
-				exists = yes
-			}
+			country_exists = RKM
 			has_country_flag = GER_decided_on_west_yenisei_status
 			NOT = {
 				has_country_flag = GER_decided_on_east_yenisei_status
@@ -10359,11 +10233,11 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 10
-				SOV = { exists = no }
+				NOT = { country_exists = SOV }
 			}
 			modifier = {
 				add = 15
-				RKM = { exists = yes }
+				country_exists = RKM
 			}
 		}
 
@@ -10421,9 +10295,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_create_asian_reichskommissariat
-			RKT = {
-				exists = yes
-			}
+			country_exists = RKT
 			NOT = {
 				has_country_flag = GER_decided_on_east_turkestan_status
 			}
@@ -10488,11 +10360,11 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 10
-				SIK = { exists = no }
+				NOT = { country_exists = SIK }
 			}
 			modifier = {
 				add = 15
-				RKT = { exists = yes }
+				country_exists = RKT
 			}
 		}
 
@@ -10545,9 +10417,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_create_asian_reichskommissariat
-			RAR = {
-				exists = no
-			}
+			NOT = { country_exists = RAR }
 		}
 
 		priority = 52
@@ -10716,11 +10586,11 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 10
-				SAU = { exists = no }
+				NOT = { country_exists = SAU }
 			}
 			modifier = {
 				add = 10
-				IRQ = { exists = no }
+				NOT = { country_exists = IRQ }
 			}
 		}
 
@@ -10831,9 +10701,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_create_asian_reichskommissariat
-			RAR = {
-				exists = yes
-			}
+			country_exists = RAR
 			NOT = {
 				has_country_flag = GER_decided_on_turkish_status
 			}
@@ -10934,11 +10802,11 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 10
-				TUR = { exists = no }
+				NOT = { country_exists = TUR }
 			}
 			modifier = {
 				add = 15
-				RAR = { exists = yes }
+				country_exists = RAR
 			}
 		}
 
@@ -10994,9 +10862,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_create_asian_reichskommissariat
-			RAR = {
-				exists = yes
-			}
+			country_exists = RAR
 			NOT = {
 				has_country_flag = GER_decided_on_iranian_status
 			}
@@ -11093,11 +10959,11 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 10
-				PER = { exists = no }
+				NOT = { country_exists = PER }
 			}
 			modifier = {
 				add = 15
-				RAR = { exists = yes }
+				country_exists = RAR
 			}
 		}
 
@@ -11150,9 +11016,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_create_asian_reichskommissariat
-			RHD = {
-				exists = no
-			}
+			NOT = { country_exists = RHD }
 		}
 
 		priority = 47
@@ -11431,11 +11295,11 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 10
-				TIB = { exists = no }
+				NOT = { country_exists = TIB }
 			}
 			modifier = {
 				add = 10
-				RAJ = { exists = no }
+				NOT = { country_exists = RAJ }
 			}
 		}
 
@@ -11541,9 +11405,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_create_asian_reichskommissariat
-			ROA = {
-				exists = no
-			}
+			NOT = { country_exists = ROA }
 		}
 
 		priority = 47
@@ -12086,11 +11948,11 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 10
-				JAP = { exists = no }
+				NOT = { country_exists = JAP }
 			}
 			modifier = {
 				add = 10
-				CHI = { exists = no }
+				NOT = { country_exists = CHI }
 			}
 			modifier = {
 				add = 10
@@ -12098,7 +11960,7 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 10
-				MON = { exists = no }
+				NOT = { country_exists = MON }
 			}
 		}
 
@@ -12205,9 +12067,7 @@ GER_reichskommissariats = {
 		visible = {
 			always = no
 			has_completed_focus = GER_create_asian_reichskommissariat
-			RAA = {
-				exists = no
-			}
+			NOT = { country_exists = RAA }
 		}
 
 		priority = 47
@@ -12460,11 +12320,11 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 10
-				INS = { exists = no }
+				NOT = { country_exists = INS }
 			}
 			modifier = {
 				add = 10
-				AST = { exists = no }
+				NOT = { country_exists = AST }
 			}
 			modifier = {
 				add = 10
@@ -12472,7 +12332,7 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 10
-				NZL = { exists = no }
+				NOT = { country_exists = NZL }
 			}
 		}
 
@@ -13598,12 +13458,8 @@ GER_austro_hungarian_empire = {
 				}
 				has_government = neutrality
 			}
-			AUS = {
-				exists = yes
-			}
-			HUN = {
-				exists = yes
-			}
+			country_exists = AUS
+			country_exists = HUN
 			NOT = { has_global_flag = GER_reformed_austro_hungarian_empire }
 		}
 
@@ -13632,9 +13488,7 @@ GER_austro_hungarian_empire = {
 				HUN = { country_event = { id = wtt_germany.68 hours = 1 } }
 				IF = {
 					limit = {
-						CZE = {
-							exists = yes
-						}
+						country_exists = CZE
 					}
 					CZE = { country_event = { id = wtt_germany.68 hours = 3 } }
 				}
@@ -13646,9 +13500,7 @@ GER_austro_hungarian_empire = {
 				AUS = { country_event = { id = wtt_germany.68 hours = 1 } }
 				IF = {
 					limit = {
-						CZE = {
-							exists = yes
-						}
+						country_exists = CZE
 					}
 					CZE = { country_event = { id = wtt_germany.68 hours = 3 } }
 				}
@@ -16732,9 +16584,7 @@ GER_a_fourth_silesian_uprising_cat = {
 		cancel_trigger = {
 			OR = {
 				has_completed_focus = GER_tend_to_the_future_of_germany
-				SIL = {
-					exists = yes
-				}
+				country_exists = SIL
 			}
 		}
 
@@ -19154,9 +19004,7 @@ GER_realpolitik_cat = {
 
 		visible = {
 			has_completed_focus = GER_establish_eastern_grand_duchies
-			UBD = {
-				exists = no
-			}
+			NOT = { country_exists = UBD }
 		}
 
 		fire_only_once = yes
@@ -19357,16 +19205,12 @@ GER_realpolitik_cat = {
 	
 		visible = { 
 			has_completed_focus = GER_establish_eastern_grand_duchies
-			UKR = {
-				exists = no
-			}
+			NOT = { country_exists = UKR }
 		} 
 	
 		available = {
 			has_completed_focus = GER_establish_eastern_grand_duchies
-			UKR = {
-				exists = no
-			}
+			NOT = { country_exists = UKR }
 			is_subject = no
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
@@ -19538,9 +19382,7 @@ GER_realpolitik_cat = {
 
 		visible = {
 			has_completed_focus = GER_establish_eastern_grand_duchies
-			GEO = {
-				exists = no
-			}
+			NOT = { country_exists = GEO }
 		}
 
 		fire_only_once = yes
@@ -19794,16 +19636,12 @@ GER_realpolitik_cat = {
 	
 		visible = { 
 			has_completed_focus = GER_establish_eastern_grand_duchies
-			BLR = {
-				exists = no
-			}
+			NOT = { country_exists = BLR }
 		} 
 	
 		available = {
 			has_completed_focus = GER_establish_eastern_grand_duchies
-			BLR = {
-				exists = no
-			}
+			NOT = { country_exists = BLR }
 			is_subject = no
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states

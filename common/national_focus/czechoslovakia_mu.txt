@@ -1625,9 +1625,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = {
-					RUT = {
-						exists = no
-					}
+					NOT = { country_exists = RUT }
 					UKR = {
 						exists = yes
 						NOT = {
@@ -1665,9 +1663,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = {
-					RUT = {
-						exists = no
-					}
+					NOT = { country_exists = RUT }
 					UKR = {
 						exists = yes
 						NOT = {
@@ -6775,12 +6771,8 @@ focus_tree = {
 			}
 			hidden_trigger = {
 				OR = {
-					AUS = {
-						exists = yes
-					}
-					HUN = {
-						exists = yes
-					}
+					country_exists = AUS
+					country_exists = HUN
 				}
 			}
 		}
@@ -8578,9 +8570,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					GER = {
-						exists = yes
-					}
+					country_exists = GER
 				}
 				GER = {	#do not move out of the if statement as it might mess up the tooltip
 					NOT = { #todo_logan if time allows, a custom trigger would be much better here that acounts for german focues
@@ -9282,9 +9272,7 @@ focus_tree = {
 
 			if = {
 				limit = {
-					AUS = {
-						exists = no
-					}
+					NOT = { country_exists = AUS }
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 				AUS = {
@@ -10926,9 +10914,7 @@ focus_tree = {
 		}
 		
 		bypass = {
-			SOV = {
-				exists = no
-			}
+			NOT = { country_exists = SOV }
 		}
 
 		completion_reward = {
@@ -18245,9 +18231,7 @@ focus_tree = {
 		}
 	
 		available = {
-			ROOT = {
-				exists = yes
-			}
+			country_exists = ROOT
 			hidden_trigger = {
 				always = no
 			}

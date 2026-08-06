@@ -32,9 +32,7 @@ CHI_anti_imperialism = {
 		activation = {			
 			owns_state = 525
 			owns_state = 527
-			KOR = {
-				exists = no
-			}
+			NOT = { country_exists = KOR }
 			OR = {
 				has_completed_focus = CHI_commit_to_korean_independence
 				has_completed_focus = CHI_sea_commit_to_korean_independence
@@ -45,9 +43,7 @@ CHI_anti_imperialism = {
 			always = no
 			owns_state = 525
 			owns_state = 527
-			KOR = {
-				exists = no
-			}
+			NOT = { country_exists = KOR }
 			OR = {
 				has_completed_focus = CHI_commit_to_korean_independence
 				has_completed_focus = CHI_sea_commit_to_korean_independence
@@ -4586,9 +4582,7 @@ CHI_xian_incident = {
 					has_dlc = "No Compromise, No Surrender"
 				}
 				OR = {
-					XIC = {
-						exists = no
-					}
+					NOT = { country_exists = XIC }
 					date > 1936.12.1
 					XIC = {
 						has_completed_focus = XIC_sixth_encirclement_campaign
@@ -10202,9 +10196,7 @@ CHI_the_lingguang_incident_cat = {
 
 		visible = {
 			always = no
-			GXC = {
-				exists = yes
-			}
+			country_exists = GXC
 			NOT = {
 				has_war_with = GXC
 			}

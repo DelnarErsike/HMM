@@ -41,7 +41,7 @@ focus_tree = {
 					has_war = yes
 					is_in_faction_with = USA
 				}
-				GER = { exists = no }
+				NOT = { country_exists = GER }
 			}
 		}
 		
@@ -3226,9 +3226,7 @@ focus_tree = {
 				limit = {
 					has_dlc = "Graveyard of Empires"
 					has_event_target = UK_INDIA
-					event_target:UK_INDIA = {
-						exists = yes
-					}
+					country_exists = event_target:UK_INDIA
 				}
 				event_target:UK_INDIA = {
 					IF = {
@@ -3479,9 +3477,7 @@ focus_tree = {
 				limit = {
 					has_dlc = "Graveyard of Empires"
 					has_event_target = UK_INDIA
-					event_target:UK_INDIA = {
-						exists = yes
-					}
+					country_exists = event_target:UK_INDIA
 				}
 				event_target:UK_INDIA = { 
 					swap_ideas = {
@@ -3497,9 +3493,7 @@ focus_tree = {
 			IF = {
 				limit = {
 					has_event_target = UK_INDIA
-					event_target:UK_INDIA = {
-						exists = yes
-					}
+					country_exists = event_target:UK_INDIA
 				}
 				RAJ = {
 				remove_ideas = ENG_guided_by_britain_RAJ_1
@@ -4029,7 +4023,7 @@ focus_tree = {
 						has_full_control_of_state = 904
 						has_full_control_of_state = 905
 					}
-					KEN = { exists = no }
+					NOT = { country_exists = KEN }
 				}
 				effect_tooltip = {
 					release = KEN 
@@ -5830,7 +5824,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			CHI = { exists = no }
+			NOT = { country_exists = CHI }
 		}
 
 		icon = GFX_goal_generic_construct_infrastructure
@@ -7206,13 +7200,13 @@ focus_tree = {
 		prerequisite = { focus = ENG_south_east_asia_air_command_focus  }
 
 		available = {
-			CHI = { exists = yes }
+			country_exists = CHI
 			has_government = democratic
 		} 
 		allow_branch = { always = no }
 
 		cancel = {
-			CHI = { exists = no }
+			NOT = { country_exists = CHI }
 		}
 
 		icon = GFX_focus_chi_cooperation_with_the_nationalists
@@ -7301,36 +7295,16 @@ focus_tree = {
 		}
 
 		bypass = {
-			CAN = {
-				exists = no
-			}
-			SAF = {
-				exists = no
-			}
-			RAJ = {
-				exists = no
-			}
-			AST = {
-				exists = no
-			}
-			NZL = {
-				exists = no
-			}
-			MAL = {
-				exists = no
-			}
-			PAL = {
-				exists = no
-			}
-			JOR = {
-				exists = no
-			}
-			KUW = {
-				exists = no
-			}
-			BRM = {
-				exists = no
-			}
+			NOT = { country_exists = CAN }
+			NOT = { country_exists = SAF }
+			NOT = { country_exists = RAJ }
+			NOT = { country_exists = AST }
+			NOT = { country_exists = NZL }
+			NOT = { country_exists = MAL }
+			NOT = { country_exists = PAL }
+			NOT = { country_exists = JOR }
+			NOT = { country_exists = KUW }
+			NOT = { country_exists = BRM }
 			NOT = {
 				any_state = {
 					OR = {
@@ -7690,7 +7664,7 @@ focus_tree = {
 
 		bypass = {
 			OR = {
-				AST = { exists = no }
+				NOT = { country_exists = AST }
 				AST = {
 					custom_trigger_tooltip = {
 						tooltip = construction_effort_tt
@@ -7850,7 +7824,7 @@ focus_tree = {
 		}
 		bypass = {
 			OR = {
-				NZL = { exists = no }
+				NOT = { country_exists = NZL }
 				NZL = {
 					custom_trigger_tooltip = {
 						tooltip = construction_effort_tt
@@ -8010,7 +7984,7 @@ focus_tree = {
 		}
 		bypass = {
 			OR = {
-				CAN = { exists = no }
+				NOT = { country_exists = CAN }
 				CAN = {
 					custom_trigger_tooltip = {
 						tooltip = construction_effort_tt
@@ -8169,7 +8143,7 @@ focus_tree = {
 		}
 		bypass = {
 			OR = {
-				SAF = { exists = no }
+				NOT = { country_exists = SAF }
 				SAF = {
 					custom_trigger_tooltip = {
 						tooltip = construction_effort_tt
@@ -8446,24 +8420,11 @@ focus_tree = {
 		}
 
 		bypass = {
-			CAN = {
-				exists = no
-			}
-			SAF = {
-				exists = no
-			}
-			RAJ = {
-				#OR = {
-					exists = no
-				#	NOT = { is_subject_of = ENG }
-				#}
-			}
-			AST = {
-				exists = no
-			}
-			NZL = {
-				exists = no
-			}
+			NOT = { country_exists = CAN }
+			NOT = { country_exists = SAF }
+			NOT = { country_exists = RAJ }
+			NOT = { country_exists = AST }
+			NOT = { country_exists = NZL }
 			NOT = {
 				any_state = {
 					OR = {
@@ -8924,10 +8885,10 @@ focus_tree = {
 			if = {
 				limit = {
 					OR = {
-						CAN = { exists = yes }
-						SAF = { exists = yes }
-						AST = { exists = yes }
-						NZL = { exists = yes }
+						country_exists = CAN
+						country_exists = SAF
+						country_exists = AST
+						country_exists = NZL
 					}
 				}
 				has_country_flag = ENG_dominions_accepted_federation
@@ -11434,7 +11395,7 @@ focus_tree = {
 
 		bypass = {
 			OR = {
-				ITA = {	exists = no }
+				NOT = { country_exists = ITA }
 				ITA = { is_subject = yes }
 				ITA = { is_in_faction = yes }
 				if = {

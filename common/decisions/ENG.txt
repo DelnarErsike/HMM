@@ -9421,10 +9421,10 @@ political_actions = {
 			tag = ENG
 			has_government = democratic
 			has_war_with = GER
+			country_exists = IRE
 			NOT = {
 				has_war_with = IRE
 			}
-			IRE = { exists = yes }
 			NOT = { is_in_faction_with = IRE }
 			FRA = { has_capitulated = yes }
 			is_in_faction_with = FRA
@@ -9439,7 +9439,7 @@ political_actions = {
 			tag = ENG
 			has_government = democratic
 			has_war_with = GER
-			IRE = { exists = yes }
+			country_exists = IRE
 			NOT = { is_in_faction_with = IRE }
 		}
 		
@@ -9924,7 +9924,7 @@ operations = {
 			has_government = democratic
 			has_war_with = GER
 			OR = {
-			ICE = { exists = yes }
+				country_exists = ICE
 				100 = {
 					owner = {
 						has_capitulated = yes
@@ -9965,7 +9965,7 @@ operations = {
 			tag = ENG
 			has_war_with = GER
 			OR = {
-			ICE = { exists = yes }
+				country_exists = ICE
 				100 = {
 					owner = {
 						has_capitulated = yes
@@ -9977,8 +9977,8 @@ operations = {
 		
 		complete_effect = {
 			if = {
-				limit = { ICE = { exists = yes } }
-               ENG = {
+				limit = { country_exists = ICE }
+               	ENG = {
                     annex_country = {
                         target = ICE
                         transfer_troops = no
@@ -10129,7 +10129,7 @@ operations = {
 			tag = ENG
 			has_government = democratic
 			has_war_with = GER
-			IRE = { exists = yes }
+			country_exists = IRE
 			NOT = { is_in_faction_with = IRE }
 			IF = {
 				limit = {
@@ -10174,7 +10174,7 @@ operations = {
 		visible = {
 			tag = ENG
 			has_war_with = GER
-			IRE = { exists = yes }
+			country_exists = IRE
 		}
 		
 		complete_effect = {

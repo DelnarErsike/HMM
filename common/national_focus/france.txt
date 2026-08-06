@@ -6278,9 +6278,7 @@
 		}
 		
 		bypass = {
-			BEL = { 
-				exists = no 
-			}
+			NOT = { country_exists = BEL }
 			NOT = { 
 				295 = { 
 					CONTROLLER = { 
@@ -8299,7 +8297,7 @@
 			}
 			if = {
 				limit = {
-					CZE = { exists = yes }
+					country_exists = CZE
 					NOT = { has_war_with = CZE }
 				}
 				CZE = {

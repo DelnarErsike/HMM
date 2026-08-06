@@ -702,7 +702,7 @@ faction_goal_disarm_aggression_central_powers = {
 					has_government = democratic
 				}
 			}
-			GER = { exists = no }
+			NOT = { country_exists = GER }
 		}
 		OR = {
 			any_country_with_original_tag = {
@@ -712,7 +712,7 @@ faction_goal_disarm_aggression_central_powers = {
 					has_government = democratic
 				}
 			}
-			HUN = { exists = no }
+			NOT = { country_exists = HUN }
 		}
 		OR = {
 			any_country_with_original_tag = {
@@ -722,7 +722,7 @@ faction_goal_disarm_aggression_central_powers = {
 					has_government = democratic
 				}
 			}
-			AUS = { exists = no }
+			NOT = { country_exists = AUS }
 		}
 		OR = {
 			any_country_with_original_tag = {
@@ -732,7 +732,7 @@ faction_goal_disarm_aggression_central_powers = {
 					has_government = democratic
 				}
 			}
-			BUL = { exists = no }
+			NOT = { country_exists = BUL }
 		}
 	}
 	complete_effect = {

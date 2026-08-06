@@ -1076,9 +1076,7 @@ country_event = {
 			is_subject = no
 		}
 
-		SIC = { 
-			exists = yes
-		}
+		country_exists = SIC
 		
 		date > 1938.1.1
 

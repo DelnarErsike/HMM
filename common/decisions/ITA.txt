@@ -4880,9 +4880,7 @@ ITA_colonial_management_dec_cat = {
 		}
 
 		available = {
-			AOI = {
-				exists = yes
-			}
+			country_exists = AOI
 			ITA = {
 			OR = {
 				controls_state = 269 # British Somaliland
@@ -4932,9 +4930,7 @@ ITA_colonial_management_dec_cat = {
 		}
 
 		available = {
-			AOI = {
-				exists = yes
-			}
+			country_exists = AOI
 			ITA = {
 			OR = {
 				controls_state = 268 # French Somaliland
@@ -4984,9 +4980,7 @@ ITA_colonial_management_dec_cat = {
 		}
 
 		available = {
-			AOI = {
-				exists = yes
-			}
+			country_exists = AOI
 			ITA = {
 			OR = {
 				controls_state = 903 # Garissa
@@ -5036,9 +5030,7 @@ ITA_colonial_management_dec_cat = {
 		}
 
 		available = {
-			AOI = {
-				exists = yes
-			}
+			country_exists = AOI
 			ITA = {
 				has_manpower > 10000
 			}
@@ -5088,9 +5080,7 @@ ITA_colonial_management_dec_cat = {
 		}
 
 		available = {
-			AOI = {
-				exists = yes
-			}
+			country_exists = AOI
 			OR = {
 				ITA = {
 					has_equipment = {
@@ -6150,9 +6140,7 @@ ITA_diplomacy_balkan_decision_category = {
 		}
 
 		available = {
-			ALB = {
-				exists = no
-			}
+			NOT = { country_exists = ALB }
 			44 = {
 				is_controlled_by = ITA
 			}
@@ -6299,9 +6287,7 @@ ITA_diplomacy_balkan_decision_category = {
 		}
 
 		available = {
-			MNT = {
-				exists = no
-			}
+			NOT = { country_exists = MNT }
 			105 = {
 				is_controlled_by = ITA
 			}

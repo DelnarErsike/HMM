@@ -1794,7 +1794,7 @@ focus_tree = {
 				has_war = yes
 			}
 			YUG = { is_subject_of = ROOT }
-			YUG = { exists = no }
+			NOT = { country_exists = YUG }
 			has_wargoal_against = YUG
 		}
 
@@ -2041,7 +2041,7 @@ focus_tree = {
 				has_country_flag = ROM_HUN_aligned
 				HUN = { is_subject_of = ROM }
 				AND = {
-					HUN = { exists = no }
+					NOT = { country_exists = HUN }
 					ROM = {
 						owns_state = 155
 						owns_state = 154

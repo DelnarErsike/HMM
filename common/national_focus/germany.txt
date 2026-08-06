@@ -10165,9 +10165,7 @@ focus_tree = {
 			}
 			else_if = {
 				limit = {
-					CZE = {
-						exists = no
-					}
+					NOT = { country_exists = CZE }
 					9 = {
 						is_controlled_by = ROOT
 					}
@@ -10253,7 +10251,7 @@ focus_tree = {
 			}
 			else_if = {
 				limit = {
-					CZE = { exists = yes }
+					country_exists = CZE
 				}
 				add_state_claim = 9
 				add_state_claim = 75
@@ -11602,9 +11600,7 @@ focus_tree = {
 
 		bypass = {
 			OR = {
-				POL = {
-					exists = no
-				}
+				NOT = { country_exists = POL }
 				owns_state = 85
 				has_war_with = POL
 			}
@@ -12931,9 +12927,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			USA = {
-				exists = no
-			}
+			NOT = { country_exists = USA }
 		}
 		allow_branch = { always = no }
 
@@ -13277,9 +13271,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			USA = {
-				exists = no
-			}
+			NOT = { country_exists = USA }
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -13470,9 +13462,7 @@ focus_tree = {
 						is_subject = no
 						NOT = { has_war_with = ENG }
 					}
-					ENG = {
-						exists = yes
-					}
+					country_exists = ENG
 				}
 				ENG = {
 					country_event = { 
@@ -13483,9 +13473,7 @@ focus_tree = {
 			}
 			else_if = {
 				limit = {
-					YUG = {
-						exists = yes
-					}
+					country_exists = YUG
 				}
 				create_wargoal = {
 					type = annex_everything
@@ -14633,9 +14621,7 @@ focus_tree = {
 		bypass = {
 			OR = {
 				has_war_with = SOV
-				SOV = {
-					exists = no
-				}
+				NOT = { country_exists = SOV }
 			}
 		}
 
@@ -14730,12 +14716,8 @@ focus_tree = {
 
 			IF = {
 				limit = {
-					KUB = {
-						exists = no
-					}
-					DON = {
-						exists = no
-					}
+					NOT = { country_exists = KUB }
+					NOT = { country_exists = DON }
 					SOV = {
 						NOT = {
 							has_completed_focus = SOV_beaten_but_not_defeated
@@ -26942,9 +26924,7 @@ focus_tree = {
 			
 			IF = {
 				limit = {
-					BAY = {
-						exists = no
-					}
+					NOT = { country_exists = BAY }
 				}
 				custom_effect_tooltip = GER_fan_prussian_militarism_tt
 				hidden_effect = {
@@ -27118,9 +27098,7 @@ focus_tree = {
 			
 			IF = {
 				limit = {
-					PRE = {
-						exists = no
-					}
+					NOT = { country_exists = PRE }
 				}
 				custom_effect_tooltip = GER_glory_to_the_imperial_army_tt
 				hidden_effect = {
@@ -28251,9 +28229,7 @@ focus_tree = {
 						is_in_faction_with = AUS
 						is_in_faction_with = HUN
 					}
-					CZE = {
-						exists = yes
-					}
+					country_exists = CZE
 				}
 				if = {
 					limit = {
@@ -28483,7 +28459,7 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					AUS = { exists = yes }
+					country_exists = AUS
 				}
 				AUS = {
 					add_timed_idea = { idea = GER_rekindle_imperial_sentiment days = 1095 }
@@ -28491,7 +28467,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					HUN = { exists = yes }
+					country_exists = HUN
 				}
 				HUN = {
 					add_timed_idea = { idea = GER_rekindle_imperial_sentiment days = 1095 }
@@ -28499,7 +28475,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					CZE = { exists = yes }
+					country_exists = CZE
 				}
 				CZE = {
 					add_timed_idea = { idea = GER_rekindle_imperial_sentiment days = 1095 }
@@ -28849,11 +28825,11 @@ focus_tree = {
 			OR = {
 				AND = {
 					is_in_faction_with = AUS
-					HUN = { exists = no }
+					NOT = { country_exists = HUN }
 				}
 				AND = {
 					is_in_faction_with = HUN
-					AUS = { exists = no }
+					NOT = { country_exists = AUS }
 				}
 			}
 			any_allied_country = {
@@ -30706,12 +30682,8 @@ focus_tree = {
 						has_government = communism
 						has_civil_war = no
 					}
-					DON = {
-						exists = no
-					}
-					KUB = {
-						exists = no
-					}
+					NOT = { country_exists = DON }
+					NOT = { country_exists = KUB }
 				}
 				custom_effect_tooltip = GER_andrey_shckuro_and_pyotr_krasnov_join_tt
 				hidden_effect = {
@@ -31743,9 +31715,7 @@ focus_tree = {
 
 			IF = {
 				limit = {
-					GEO = {
-						exists = no
-					}
+					NOT = { country_exists = GEO }
 				}
 				country_event = {
 					id = wuw_GER_legions.1
@@ -32277,7 +32247,7 @@ focus_tree = {
 				AND = {
 					OR = {
 						has_war_with = BEL
-						BEL = { exists = no }
+						NOT = { country_exists = BEL }
 						BEL = { is_in_faction = yes }
 						BEL = {
 							is_subject = yes
@@ -32288,7 +32258,7 @@ focus_tree = {
 					}
 					OR = {
 						has_war_with = HOL
-						HOL = { exists = no }
+						NOT = { country_exists = HOL }
 						HOL = { is_in_faction = yes }
 						HOL = {
 							is_subject = yes
@@ -32361,12 +32331,12 @@ focus_tree = {
 					OR = {
 						has_war_with = BEL
 						is_in_faction_with = BEL
-						BEL = { exists = no }
+						NOT = { country_exists = BEL }
 					}
 					OR = {
 						has_war_with = LUX
 						is_in_faction_with = LUX
-						LUX = { exists = no }
+						NOT = { country_exists = LUX }
 					}
 				}
 				FRA = {
@@ -32571,9 +32541,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					FRA = {
-						exists = yes
-					}	
+					country_exists = FRA
 				}
 				FRA = {
 					country_event = { id = wtt_germany.63 }
@@ -36467,7 +36435,7 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					AUS = { exists = yes }
+					country_exists = AUS
 				}
 				AUS = {
 					add_timed_idea = { idea = GER_rekindle_imperial_sentiment days = 1095 }
@@ -36475,7 +36443,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					HUN = { exists = yes }
+					country_exists = HUN
 				}
 				HUN = {
 					add_timed_idea = { idea = GER_rekindle_imperial_sentiment days = 1095 }
@@ -36483,7 +36451,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					CZE = { exists = yes }
+					country_exists = CZE
 				}
 				CZE = {
 					add_timed_idea = { idea = GER_rekindle_imperial_sentiment days = 1095 }
@@ -36730,9 +36698,7 @@ focus_tree = {
 			set_province_name = { id = 678 name = "Mulhausen" }
 			if = {
 				limit = {
-					FRA = {
-						exists = yes
-					}	
+					country_exists = FRA
 				}
 				FRA = {
 					country_event = { id = wtt_germany.63 }
@@ -36869,7 +36835,7 @@ focus_tree = {
 					POL = { is_subject = yes }
 					NOT = { POL = { is_subject_of = GER } }
 				}
-				POL = { exists = no }
+				NOT = { country_exists = POL }
 				AND = {
 					owns_state = 85
 					owns_state = 86
@@ -37044,7 +37010,7 @@ focus_tree = {
 
 		bypass = {
 			OR = {
-				FIN = { exists = no }
+				NOT = { country_exists = FIN }
 				FIN = { has_government = communism }
 				AND = {
 					FIN = { is_subject = yes }

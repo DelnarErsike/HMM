@@ -4349,7 +4349,7 @@ country_event = {
 	option = {# ask Germany to participate in the split
 		name = DOD_hungary.102.b
 		trigger = {
-			GER = { exists = yes }
+			country_exists = GER
 		}
 		ai_chance = {
 			factor = 90

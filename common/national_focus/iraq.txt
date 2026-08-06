@@ -1249,8 +1249,8 @@ focus_tree = {
 			NOT = {
 				ENG = { is_subject = yes }
 				has_war_with = ENG
-				ENG = { exists = no }
 			}
+			country_exists = ENG
 		}
 
 		bypass = {
@@ -1269,9 +1269,7 @@ focus_tree = {
 
 			IF = {
 				limit = {
-					ENG = {
-						exists = yes
-					}
+					country_exists = ENG
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 				ENG = { 
@@ -1333,8 +1331,8 @@ focus_tree = {
 			NOT = {
 				ENG = { is_subject = yes }
 				has_war_with = ENG
-				ENG = { exists = no }
 			}
+			country_exists = ENG
 		}
 
 		bypass = {
@@ -6805,7 +6803,7 @@ focus_tree = {
 		bypass = {
 			is_in_faction_with = AFG
 			OR = {
-				AFG = { exists = no }
+				NOT = { country_exists = AFG }
 				AFG = { is_subject = yes }
 			}
 		}
@@ -9357,9 +9355,7 @@ focus_tree = {
 			any_owned_state = {
 				is_core_of = KUR
 			}
-			KUR = {
-				exists = no
-			}
+			NOT = { country_exists = KUR }
 		}
 	
 		bypass = {
@@ -9809,9 +9805,7 @@ focus_tree = {
 				}
 				IF = {
 					limit = {
-						KUR = {
-							exists = no
-						}
+						NOT = { country_exists = KUR }
 					}
 					KUR = {
 					every_core_state = {
@@ -10258,22 +10252,16 @@ focus_tree = {
 		available = {
 			has_civil_war = no
 			OR = {
-				TUR = {
-					exists = yes
-				}
-				PER = {
-					exists = yes
-				}
-				SYR = {
-					exists = yes
-				}
+				country_exists = TUR
+				country_exists = PER
+				country_exists = SYR
 			}
 		}
 	
 		bypass = {
-			TUR = { exists = no }
-			PER = { exists = no }
-			SYR = { exists = no }
+			NOT = { country_exists = TUR }
+			NOT = { country_exists = PER }
+			NOT = { country_exists = SYR }
 		}
 	
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }

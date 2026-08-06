@@ -1057,23 +1057,23 @@ faction_goal_undoing_brest_litowsk = {
 		count_triggers = {
 			amount = 4
 			OR = {
-				LIT = { exists = no }
+				NOT = { country_exists = LIT }
 				LIT = { is_in_faction_with = ROOT }
 			}
 			OR = {
-				LAT = { exists = no }
+				NOT = { country_exists = LAT }
 				LAT = { is_in_faction_with = ROOT }
 			}
 			OR = {
-				EST = { exists = no }
+				NOT = { country_exists = EST }
 				EST = { is_in_faction_with = ROOT }
 			}
 			OR = {
-				POL = { exists = no }
+				NOT = { country_exists = POL }
 				POL = { is_in_faction_with = ROOT }
 			}
 			OR = {
-				FIN = { exists = no }
+				NOT = { country_exists = FIN }
 				FIN = { is_in_faction_with = ROOT }
 			}
 		}

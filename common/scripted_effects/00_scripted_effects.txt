@@ -864,9 +864,7 @@ instantiate_collaboration_government = {
 		if = {
 			# if country_to_initiate does not exist, simply release it as a puppet
 			limit = {
-				var:country_to_initiate = {
-					exists = no
-				}
+				NOT = { country_exists = var:country_to_initiate }
 			}
 			var:country_to_initiate = { set_variable = { collaboration_formed_by = PREV } }
 			release_autonomy = {

@@ -526,7 +526,7 @@ country_event = {
 			}
 		}
 		has_global_flag = sov_yes_pact
-		SOU = { exists = yes }
+		country_exists = SOU
 		NOT =  { has_war_with = SOU }
 		OR = {
 			AND = {
@@ -3571,7 +3571,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				AUS = { exists = yes }
+				country_exists = AUS
 			}
 			modifier = {
 				factor = 0.5
@@ -3919,9 +3919,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				SLO = {
-					exists = no
-				}
+				NOT = { country_exists = SLO }
 			}
 			set_country_flag = GER_slovakia_doesn_not_exist
 		}
@@ -4456,9 +4454,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				SLO = {
-					exists = no
-				}
+				NOT = { country_exists = SLU }
 			}
 			set_country_flag = GER_slovakia_doesn_not_exist
 		}
@@ -8253,7 +8249,7 @@ country_event = {
 		GER = { country_event = { id = germany.81 days = 1 } }
 		effect_tooltip = {
 			if = {
-				limit = { SLO = { exists = yes } }
+				limit = { country_exists = SLO }
 				annex_country = { target = SLO }
 			}
 			if = {
@@ -8337,7 +8333,7 @@ country_event = {
 	option = {
 		name = germany.81.a
 		if = {
-			limit = { SLO = { exists = yes } }
+			limit = { country_exists = SLO }
 			POL = { annex_country = { target = SLO } }
 		}
 		if = {
@@ -10406,9 +10402,7 @@ country_event = {
 
 		IF = {
 			limit = {
-				AUS = {
-					exists = no
-				}
+				NOT = { country_exists = AUS }
 			}
 
 			AUS = {

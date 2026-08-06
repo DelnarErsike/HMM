@@ -1978,14 +1978,10 @@ characters={
 				original_tag = RAJ
 			}
 			available = {
-				PAK = {
-					exists = no
-				}
+				NOT = { country_exists = PAK }
 			}
 			visible = {
-				PAK = {
-					exists = no
-				}
+				NOT = { country_exists = PAK }
 			}
 			traits = {
 				muslim_scholar 
@@ -2026,14 +2022,10 @@ characters={
 				original_tag = RAJ
 			}
 			available = {
-				PAK = {
-					exists = no
-				}
+				NOT = { country_exists = PAK }
 			}
 			visible = {
-				PAK = {
-					exists = no
-				}
+				NOT = { country_exists = PAK }
 			}
 			traits = {
 				well_mannered_iman 

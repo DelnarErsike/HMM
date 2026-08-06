@@ -6455,9 +6455,10 @@
 
 				#Change #SIA_chemical_imports_opinion_threshold for tooltip if changing this. Seems like value does take variables directly
 
+				if = {
+					limit = { country_exists = MAL }
 				if = { 
 					limit = { 
-						country_exists = MAL
 						MAL = { has_opinion = { target = ROOT value > 75 } } 
 						NOT = { 
 							has_war_with = MAL 
@@ -6467,17 +6468,16 @@
 					add_offsite_building = { type = industrial_complex level = 1 }
 				}
 				else = {
-					if = {
-						limit = { MAL = { exists = yes } }
 						MAL = {
 							custom_effect_tooltip = SIA_chemical_imports_tt
 						}
-					}
+				}
 				}
 
+				if = {
+					limit = { country_exists = JAP }
 				if = { 
 					limit = { 
-						country_exists = JAP
 						JAP = { has_opinion = { target = ROOT value > 75 } } 
 						NOT = { 
 							has_war_with = JAP 
@@ -6487,19 +6487,17 @@
 					add_offsite_building = { type = industrial_complex level = 1 }
 				}
 				else = {
-					if = {
-						limit = { JAP = { exists = yes } }
 						JAP = {
 							custom_effect_tooltip = SIA_chemical_imports_tt
 						}
-					}
-
+				}
 				}
 
 
+				if = {
+					limit = { country_exists = INS }
 				if = { 
 					limit = { 
-						country_exists = INS
 						INS = { has_opinion = { target = ROOT value > 75 } } 
 						
 						NOT = { 
@@ -6510,19 +6508,17 @@
 					add_offsite_building = { type = industrial_complex level = 1 }
 				}
 				else = {
-					if = {
-						limit = { INS = { exists = yes } }
 						INS = {
 							custom_effect_tooltip = SIA_chemical_imports_tt
 						}
-					}
-
+				}
 				}
 
 
+				if = {
+					limit = { country_exists = ENG }
 				if = { 
 					limit = { 
-						country_exists = ENG
 						ENG = { has_opinion = { target = ROOT value > 75 } } 
 						NOT = { 
 							has_war_with = ENG 
@@ -6532,12 +6528,10 @@
 					add_offsite_building = { type = industrial_complex level = 1 }
 				}
 				else = {
-					if = {
-						limit = { ENG = { exists = yes } }
 						ENG = {
 							custom_effect_tooltip = SIA_chemical_imports_tt
 						}
-					}
+				}
 				}
 		}
 	}

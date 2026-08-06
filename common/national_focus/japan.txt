@@ -704,9 +704,7 @@ focus_tree = {
 			OR = {
 				has_wargoal_against = MAN
 				has_war_with = MAN
-				MAN = {
-					exists = no
-				}
+				NOT = { country_exists = MAN }
 				MAN = {
 					not = {
 						has_government = fascism
@@ -2067,9 +2065,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			MAN = {
-				exists = no
-			}
+			NOT = { country_exists = MAN }
 		}
 
 		cancel_if_invalid = yes
@@ -2144,9 +2140,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			MAN = {
-				exists = no
-			}
+			NOT = { country_exists = MAN }
 		}
 
 		cancel_if_invalid = yes
@@ -3387,7 +3381,7 @@ focus_tree = {
 				limit = {
 					has_full_control_of_state = 525
 					has_full_control_of_state = 527
-					KOR = { exists = no }
+					NOT = { country_exists = KOR }
 				}
 				activate_mission_tooltip = JAP_release_korea
 				set_country_flag = JAP_release_korea_activate
@@ -3896,9 +3890,7 @@ focus_tree = {
 
 		available = {
 			has_war = no
-			ETH = {
-				exists = yes
-			}
+			country_exists = ETH
 			has_global_flag = second_italo_ethiopian_war_flag
 		}
 
@@ -10804,9 +10796,7 @@ focus_tree = {
 
 			IF = {
 				limit = {
-					CHI = {
-						exists = yes
-					}
+					country_exists = CHI
 				}
 				CHI = {
 					add_opinion_modifier = {
@@ -12112,9 +12102,7 @@ focus_tree = {
 			}
 			OR = {
 				has_war_with = CHI
-				CHI = {
-					exists = no
-				}
+				NOT = { country_exists = CHI }
 				has_subject = CHI
 				has_subject = RNG
 			}
@@ -12646,9 +12634,7 @@ focus_tree = {
 		}
 
 		available = {
-			SOV = {
-				exists = yes
-			}
+			country_exists = SOV
 			NOT = {
 				has_war_with = SOV
 			}
@@ -14108,7 +14094,7 @@ focus_tree = {
 			}
 			IF = {
 				limit = {
-					INS = { exists = no }
+					NOT = { country_exists = INS }
 					335 = {
 						CONTROLLER = {
 							NOT = {
@@ -14168,7 +14154,7 @@ focus_tree = {
 			}
 			IF = {
 				limit = {
-					MAL = { exists = no }
+					NOT = { country_exists = MAL }
 					336 = {
 						CONTROLLER = {
 							NOT = {
@@ -15296,9 +15282,7 @@ focus_tree = {
 				}
 			}
 			is_subject = no
-			SOV = {
-				exists = yes
-			}
+			country_exists = SOV
 			NOT = {
 				has_war_with = SOV
 			}
@@ -15327,9 +15311,7 @@ focus_tree = {
 				has_war_with = SOV
 				has_wargoal_against = SOV
 				has_subject = SOV
-				SOV = {
-					exists = no
-				}
+				NOT = { country_exists = SOV }
 			}
 		}
 		allow_branch = { always = no }
@@ -15469,9 +15451,7 @@ focus_tree = {
 				}
 			}
 			is_subject = no
-			SOV = {
-				exists = yes
-			}
+			country_exists = SOV
 			NOT = {
 				has_war_with = SOV
 			}
@@ -15504,9 +15484,7 @@ focus_tree = {
 				has_war_with = SOV
 				has_wargoal_against = SOV
 				has_subject = SOV
-				SOV = {
-					exists = no
-				}
+				NOT = { country_exists = SOV }
 			}
 		}
 		allow_branch = { always = no }
@@ -19255,14 +19233,8 @@ focus_tree = {
 
 			IF = {
 				limit = {
-					AND = {
-						FOR = {
-							exists = no
-						}
-						PLU = {
-							exists = no
-						}
-					}
+					NOT = { country_exists = FOR }
+					NOT = { country_exists = PLU }
 				}
 				effect_tooltip = {
 					FOR = {
@@ -20526,9 +20498,7 @@ focus_tree = {
 
 			IF = {
 				limit = {
-					PLU = {
-						exists = yes
-					}
+					country_exists = PLU
 				}
 				create_wargoal = {
 					type = annex_everything
@@ -20538,9 +20508,7 @@ focus_tree = {
 			}
 			IF = {
 				limit = {
-					FOR = {
-						exists = yes
-					}
+					country_exists = FOR
 				}
 				create_wargoal = {
 					type = annex_everything
@@ -20550,9 +20518,7 @@ focus_tree = {
 			}
 			IF = {
 				limit = {
-					KOR = {
-						exists = yes
-					}
+					country_exists = KOR
 				}
 				create_wargoal = {
 					type = annex_everything

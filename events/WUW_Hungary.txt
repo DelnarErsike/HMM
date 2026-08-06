@@ -5617,9 +5617,7 @@ country_event = {
 					FROM = {
 						original_tag = CRO
 					}
-					CRO = {
-						exists = no
-					}
+					NOT = { country_exists = CRO }
 				}
 			}
 			CRO = {
