@@ -2,8 +2,20 @@ on_actions = {
     on_daily = {
         effect = {
             every_country = {
+                limit = { axis = yes }
                 every_army_leader = {
 					remove_unit_leader_trait = no_grind
+				}
+            }
+            every_country = {
+                limit = { allies = yes }
+                every_army_leader = {
+                    limit = {
+                        NOT = { 
+                            has_trait = no_grind
+                        }
+                    }
+                    add_unit_leader_trait = no_grind
 				}
             }
         }
@@ -12,8 +24,42 @@ on_actions = {
     on_weekly = {
         effect = {
             every_country = {
+                limit = { axis = no }
                 every_army_leader = {
-					add_unit_leader_trait = no_grind
+					remove_unit_leader_trait = no_grind
+				}
+            }
+            every_country = {
+                limit = { allies = no }
+                every_army_leader = {
+                    limit = {
+                        NOT = { 
+                            has_trait = no_grind
+                        }
+                    }
+                    add_unit_leader_trait = no_grind
+				}
+            }
+        }
+    }
+
+    on_monthly = {
+        effect = {
+            every_country = {
+                limit = { axis = no }
+                every_army_leader = {
+					remove_unit_leader_trait = no_grind
+				}
+            }
+            every_country = {
+                limit = { allies = no }
+                every_army_leader = {
+                    limit = {
+                        NOT = { 
+                            has_trait = no_grind
+                        }
+                    }
+                    add_unit_leader_trait = no_grind
 				}
             }
         }
