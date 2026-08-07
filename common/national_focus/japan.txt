@@ -8587,16 +8587,13 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			GER = {
-				has_government = ROOT
-			}
+			has_government = GER # HMM: has the same mechanics as the vanilla check, but leads to a clearer tooltip
 			NOT = { has_war_with = GER }
 		}
 
 		bypass = {
 
 		}
-		allow_branch = { always = no }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -8757,6 +8754,9 @@ focus_tree = {
 
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = JAP_koichi_kido
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom-effect_tooltip = hmm_JAP_potential_tokko_coup
 				
 			hidden_effect = {
 				IF = {
@@ -9841,7 +9841,7 @@ focus_tree = {
 		prerequisite = { focus = JAP_ichioku_isshin }
 
 		allow_branch = {
-			has_country_flag = JAP_tohokai_prime_minister_added
+			#has_country_flag = JAP_tohokai_prime_minister_added # HMM: there's no need to hide this check, the setup for this is already hidden as-is
 			IF = {
 				limit = {
 					has_game_rule = {
@@ -9865,6 +9865,10 @@ focus_tree = {
 		}
 
 		available = {
+			custom_trigger_tooltip = { # HMM: made the check visible
+				tooltip = hmm_JAP_tokko_has_couped_government
+				has_country_flag = JAP_tohokai_prime_minister_added
+			}
 			has_country_leader = {
 				ruling_only = yes
 				character = JAP_seigo_nakano
@@ -11565,7 +11569,6 @@ focus_tree = {
 				}
 			}
 		}
-		allow_branch = { always = no }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -11577,15 +11580,16 @@ focus_tree = {
 
 			custom_effect_tooltip = JAP_strategic_offensives_tt
 
-			IF = {
-				limit = {
-					USA = {
-						has_war = no
-					}
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				USA = { add_war_support = 0.05 }
-			}
+			# HMM: removed to mirror the removal of the -5% WS in another focus
+			#IF = {
+			#	limit = {
+			#		USA = {
+			#			has_war = no
+			#		}
+			#	}
+			#	custom_effect_tooltip = generic_skip_one_line_tt
+			#	USA = { add_war_support = 0.05 }
+			#}
 				
 			
 		}
@@ -11626,6 +11630,7 @@ focus_tree = {
 		bypass = {
 			
 		}
+		allow_branch = { always = no }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -11673,6 +11678,7 @@ focus_tree = {
 				has_completed_focus = MAN_tsr_national_cooperation_government
 			}
 		}
+		allow_branch = { always = no } # HMM: this is effectively a trap even beyond the whole releasing nations thing, and we also don't want to have to force the Japan to wait around for Manchu to finish their focus before annexing them just to be able to bypass this
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -11816,10 +11822,12 @@ focus_tree = {
 		icon = GFX_focus_JAP_occupy_macau
 		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
 		x = 0
-		y = 2
-		relative_position_id = JAP_reorganized_national_government
+		y = 3
+		relative_position_id = JAP_strategic_offensives
 
-		prerequisite = { focus = JAP_reorganized_national_government }
+		prerequisite = { focus = JAP_strategic_offensives }
+		# HMM: shifted prereq to strategic offensives so that we don't have to bend over backwards getting the AI Manchu to finish their coring focus at just the right time to not interfere with Japan broadly
+		# This focus is potentially valuable for a player Manchu though, so keep it in for that
 
 		cost = 2
 
@@ -11831,6 +11839,14 @@ focus_tree = {
 
 		available = {
 			is_subject = no
+			# HMM: moved the reorganize national government requirements to here
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+			613 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
 			592 = {
 				CONTROLLER = { 
 					OR = {

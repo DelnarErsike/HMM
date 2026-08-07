@@ -137,6 +137,8 @@
  hmm_wuw_HUN_support_for_our_finnish_brothers_extra_arms: "After a few days, Finland will receive a shipment from us of infantry equipment, support equipment, and a military factory."
  hmm_SAF_outlaw_strikes_warning: "§RWARNING!§!\nIf you take this focus instead of Expand the Cape Corps, you WILL run out of manpower for most builds!\n\n§YOnly take this if you know what you are doing!§!"
  hmm_all_current_and_future_puppets: "All Current and Future §YPuppets§!"
+ hmm_JAP_potential_tokko_coup: "If we have finished §Y$JAP_empower_the_thought_police$§! and $JAP_civilian_government_is_at_least_influential_tt$, we will get a special request from the §Y$JAP_tokko_idea_lar$§!..."
+ hmm_JAP_tokko_has_couped_government: "The §Y$JAP_tokko_idea_lar$§! has successfully taken over the §Y$JAP_taisei_party_long$§!"
 
   # Template decisions category and decisions
  templates:0 "Division Templates"
