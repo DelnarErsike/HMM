@@ -146,10 +146,9 @@ country_event = {
 		else = {
 			start_civil_war = { ideology = democratic size = 0.6 capital = 107 states = { 108 803 802 106 105 } }
 		}
-		random_country = {
+		random_other_country = {
 			limit = {
 				original_tag = YUG
-				NOT = { tag = ROOT }
 				has_government = democratic
 			}
 			add_ideas = { king_peter_1 }
@@ -304,7 +303,7 @@ country_event = {
 		ai_chance = {
 			factor = 90
 			modifier = { # Decrease chance YUG resists if AUS isn't taken first
-				AUS = { exists = yes }
+				country_exists = AUS
 				factor = 0.5
 			}
 			modifier = { # If they stand a chance to hold the line they will fight

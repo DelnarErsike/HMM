@@ -1697,17 +1697,13 @@ PRC_anti_japanese_expedition = {
 			declare_war_on = { target = JAP type = annex_everything }
 			if = {
 				limit = {
-					MAN = { 
-						exists = yes
-					}
+					country_exists = MAN
 				}
 				declare_war_on = { target = MAN type = annex_everything }
 			}
 			if = {
 				limit = {
-					MEN = { 
-						exists = yes
-					}
+					country_exists = MEN
 				}
 				declare_war_on = { target = MEN type = annex_everything }
 			}
@@ -2978,9 +2974,7 @@ PRC_the_communist_power_struggle_balance_of_power_category = {
 					has_character_flag = PRC_dismissed_advisor
 				}
 			}
-			SOV = {
-				exists = yes
-			}
+			country_exists = SOV
 		}
 
 

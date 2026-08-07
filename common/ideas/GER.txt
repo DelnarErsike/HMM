@@ -703,7 +703,7 @@ ideas = {
 			cancel = {
 				OR = {
 					ENG = { is_subject = yes }
-					ENG = { exists = no}
+					NOT = { country_exists = ENG }
 					has_war_with = ENG
 				}
 			}
@@ -732,7 +732,7 @@ ideas = {
 			cancel = {
 				OR = {
 					ENG = { is_subject = yes }
-					ENG = { exists = no}
+					NOT = { country_exists = ENG }
 					has_war_with = ENG
 				}
 			}

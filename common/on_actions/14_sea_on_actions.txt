@@ -3375,12 +3375,9 @@ on_actions = {
 							}
 						}
 					}
-					ELSE = {
-						IF = {
+					ELSE_IF = {
 							limit = {
-								CHI = {
-									exists = yes
-								}
+								country_exists = CHI
 							}
 							CHI = {
 								country_event = {
@@ -3388,7 +3385,6 @@ on_actions = {
 									hours = 6
 								}
 							}
-						}
 					}
 				}
 				ELSE_IF = {
@@ -3400,9 +3396,7 @@ on_actions = {
 					}
 					IF = {
 						limit = {
-							CHI = {
-								exists = yes
-							}
+							country_exists = CHI
 						}
 						CHI = {
 							country_event = {
@@ -3412,12 +3406,9 @@ on_actions = {
 						}
 					}
 				}
-				ELSE = {
-					IF = {
+				ELSE_IF = {
 						limit = {
-							CHI = {
-								exists = yes
-							}
+							country_exists = CHI
 						}
 						CHI = {
 							country_event = {
@@ -3425,7 +3416,6 @@ on_actions = {
 								hours = 6
 							}
 						}
-					}
 				}
 			}
 		}
@@ -3442,9 +3432,7 @@ on_actions = {
 				}
 				IF = {
 					limit = {
-						NXM = {
-							exists = yes
-						}
+						country_exists = NXM
 					}
 					NXM = {
 						country_event = {
@@ -3455,9 +3443,7 @@ on_actions = {
 				}
 				ELSE_IF = {
 					limit = {
-						XSM = {
-							exists = yes
-						}
+						country_exists = XSM
 					}
 					XSM = {
 						country_event = {
@@ -3468,9 +3454,7 @@ on_actions = {
 				}
 				ELSE_IF = {
 					limit = {
-						GSM = {
-							exists = yes
-						}
+						country_exists = GSM
 					}
 					GSM = {
 						country_event = {
@@ -3517,9 +3501,7 @@ on_actions = {
 					FROM = {
 						original_tag = SIK
 					}
-					RAJ = {
-						exists = yes
-					}
+					country_exists = RAJ
 				}
 				RAJ = {
 					country_event = {

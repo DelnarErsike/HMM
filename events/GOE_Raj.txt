@@ -2672,7 +2672,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				BAN = { exists = yes }
+				country_exists = BAN
 			}
 			set_variable = { pressure_left = 3 }
 			set_variable = { default_pressure = pressure_left }
@@ -3340,7 +3340,7 @@ country_event = {
 						}
 						if = {
 							limit = {
-								BAN = { exists = yes }
+								country_exists = BAN
 							}
 							add_to_variable = { pressure_left = 0.25 }
 							set_variable = { default_pressure = pressure_left }
@@ -3423,7 +3423,7 @@ country_event = {
 						}
 						if = {
 							limit = {
-								BAN = { exists = yes }
+								country_exists = BAN
 							}
 							add_to_variable = { pressure_left = 0.25 }
 							set_variable = { default_pressure = pressure_left }
@@ -3458,7 +3458,7 @@ country_event = {
 						}
 						if = {
 							limit = {
-								BAN = { exists = yes }
+								country_exists = BAN
 							}
 							add_to_variable = { pressure_left = 0.25 }
 							set_variable = { default_pressure = pressure_left }
@@ -3495,7 +3495,7 @@ country_event = {
 						}
 						if = {
 							limit = {
-								BAN = { exists = yes }
+								country_exists = BAN
 							}
 							add_to_variable = { pressure_left = 0.25 }
 							set_variable = { default_pressure = pressure_left }
@@ -3530,7 +3530,7 @@ country_event = {
 						}
 						if = {
 							limit = {
-								BAN = { exists = yes }
+								country_exists = BAN
 							}
 							add_to_variable = { pressure_left = 1 }
 							set_variable = { default_pressure = pressure_left }
@@ -3564,7 +3564,7 @@ country_event = {
 						}
 						if = {
 							limit = {
-								BAN = { exists = yes }
+								country_exists = BAN
 							}
 							add_to_variable = { pressure_left = 0.25 }
 							set_variable = { default_pressure = pressure_left }
@@ -3601,7 +3601,7 @@ country_event = {
 						}
 						if = {
 							limit = {
-								BAN = { exists = yes }
+								country_exists = BAN
 							}
 							add_to_variable = { pressure_left = 0.25 }
 							set_variable = { default_pressure = pressure_left }
@@ -3636,7 +3636,7 @@ country_event = {
 						}
 						if = {
 							limit = {
-								BAN = { exists = yes }
+								country_exists = BAN
 							}
 							add_to_variable = { pressure_left = 0.25 }
 							set_variable = { default_pressure = pressure_left }
@@ -3670,7 +3670,7 @@ country_event = {
 						}
 						if = {
 							limit = {
-								BAN = { exists = yes }
+								country_exists = BAN
 							}
 							add_to_variable = { pressure_left = 0.25 }
 							set_variable = { default_pressure = pressure_left }
@@ -3724,7 +3724,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					BAN = { exists = yes }
+					country_exists = BAN
 				}
 				BAN = {
 					if = {
@@ -4167,7 +4167,7 @@ country_event = {
 		name = GOE_RAJ_partition.7.c
 		trigger = {
 			has_completed_focus = RAJ_a_secular_state	
-			PAK = { exists = no }
+			NOT = { country_exists = PAK }
 		}
 
 

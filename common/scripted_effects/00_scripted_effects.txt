@@ -703,9 +703,9 @@ civil_war_anti_exploiter_punitive_action = {
 				artillery = { x = 0 y = 2 }
 			}
 		}
-		random_controlled_state = {
+		capital_scope = {
+			if = {
 			limit = {
-				is_capital = yes
 				is_fully_controlled_by = PREV
 			}
 			create_unit = {
@@ -723,6 +723,7 @@ civil_war_anti_exploiter_punitive_action = {
 			create_unit = {
 				division = "division_template = \"Anti-Exploit Punitive Brigade\" start_experience_factor = 1 start_equipment_factor = 1"
 				owner = PREV
+			}
 			}
 		}
 		random_controlled_state = {
@@ -864,9 +865,7 @@ instantiate_collaboration_government = {
 		if = {
 			# if country_to_initiate does not exist, simply release it as a puppet
 			limit = {
-				var:country_to_initiate = {
-					exists = no
-				}
+				NOT = { country_exists = var:country_to_initiate }
 			}
 			var:country_to_initiate = { set_variable = { collaboration_formed_by = PREV } }
 			release_autonomy = {

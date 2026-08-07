@@ -2200,9 +2200,7 @@ shared_focus = {
 
 	bypass = {
 		OR = {
-			TIB = {
-				exists = no
-			}
+			NOT = { country_exists = TIB }
 			has_war_with = TIB
 			has_wargoal_against = TIB
 		}

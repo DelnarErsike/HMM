@@ -4345,7 +4345,7 @@
 		
 		bypass = {
 			OR = {
-				USA = { exists = no }
+				NOT = { country_exists = USA }
 				USA = {
 					AND = {
 						is_in_faction = yes
@@ -5156,7 +5156,7 @@
 			ROOT = {
 				communism > 0.3
 			}
-			event_target:WTT_communist_china = { exists = yes }
+			country_exists = event_target:WTT_communist_china
 			NOT = { has_country_flag = britain_enforced_our_loyalty }
 		}
 		

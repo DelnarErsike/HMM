@@ -2246,9 +2246,7 @@ HUN_territorial_revision_category = {
 	
 		available = {
 			has_completed_focus = wuw_HUN_revenge_for_the_brusilov_offensive
-			UKR = {
-				exists = no
-			}
+			NOT = { country_exists = UKR }
 			is_subject = no
 			custom_trigger_tooltip = {
 				tooltip = wuw_HUN_the_kingdom_of_ukraine_required_states_tt
@@ -3116,9 +3114,7 @@ HUN_the_empire_category = {
 					is_subject_of = ROOT
 				}
 				AND = {
-					AUS = {
-						exists = no
-					}
+					NOT = { country_exists = AUS }
 					4 = {
 						is_owned_by = ROOT
 					}
@@ -3208,9 +3204,7 @@ HUN_the_empire_category = {
 					is_subject_of = ROOT
 				}
 				AND = {
-					ALB = {
-						exists = no
-					}
+					NOT = { country_exists = ALB }
 					934 = {
 						is_owned_by = ROOT
 					}
@@ -3292,9 +3286,7 @@ HUN_the_empire_category = {
 			has_government = neutrality
 			is_subject = no
 			AND = {
-				POL = {
-					exists = no
-				}
+				NOT = { country_exists = POL }
 					10 = {
 						OR = {
 						is_controlled_by = ROOT
@@ -3379,9 +3371,7 @@ HUN_the_empire_category = {
 			has_government = neutrality
 			is_subject = no
 			AND = {
-				SPR = {
-					exists = no
-				}
+				NOT = { country_exists = SPR }
 					41 = {
 						OR = {
 						is_controlled_by = ROOT
@@ -3460,9 +3450,7 @@ HUN_the_empire_category = {
 					is_subject_of = ROOT
 				}
 				AND = {
-					CZE = {
-						exists = no
-					}
+					NOT = { country_exists = CZE }
 					9 = {
 						is_owned_by = ROOT
 					}
@@ -3553,9 +3541,7 @@ HUN_the_empire_category = {
 			is_subject = no
 			OR = {
 				AND = {
-					MEX = {
-						exists = no
-					}
+					NOT = { country_exists = MEX }
 						277 = {
 							OR = {
 							is_controlled_by = ROOT
@@ -3645,9 +3631,7 @@ HUN_the_empire_category = {
 			is_subject = no
 			OR = {
 				AND = {
-					CRO = {
-						exists = no
-					}
+					NOT = { country_exists = CRO }
 						109 = {
 							OR = {
 							is_controlled_by = ROOT
@@ -3793,9 +3777,7 @@ HUN_the_empire_category = {
 			is_subject = no
 			OR = {
 				AND = {
-					LBV = {
-						exists = no
-					}
+					NOT = { country_exists = LBV }
 					AND = {
 							160 = {
 								OR = {

@@ -3360,9 +3360,7 @@ focus_tree = {
 
 		available = {
 			threat > 0.8
-			INS = {
-				exists = yes
-			}
+			country_exists = INS
 			NOT = {
 				INS = {
 					is_subject_of = AST
@@ -3438,9 +3436,7 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			NZL = {
-				exists = yes
-			}
+			country_exists = NZL
 		}
 
 		bypass = {
@@ -5845,9 +5841,7 @@ focus_tree = {
 
 		    IF = {
 		        limit = {
-		            SPD = {
-		                exists = yes
-		            }
+		            country_exists = SPD
 		            SPR_scw_in_progress = yes
 		        }
 		        add_relation_rule_override = {

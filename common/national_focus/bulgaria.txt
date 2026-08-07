@@ -1879,19 +1879,13 @@ focus_tree = {
 						has_full_control_of_state = 797 #ISTANBUL
 					}
 				}
-				random_country = {
-					limit = {
-						OR = {
-							is_in_faction_with = ROOT
-							is_subject_of = ROOT
-						}	
-						has_full_control_of_state = 341 #EDIRNE
-						has_full_control_of_state = 797 #ISTANBUL
-					}
+				797 = {
+					controller = { # HMM: we already know the controller of this province passes the requirements from the check above
 					add_timed_idea = {
 						idea = BUL_supremacy_on_the_bosporus
 						days = 365
 					}
+				}
 				}
 			}
 		}
@@ -6291,7 +6285,7 @@ focus_tree = {
 						is_faction_leader = yes
 					}
 				}
-				random_other_country = {
+				random_allied_country = {
 					limit = {
 						is_in_faction_with = ROOT
 						is_faction_leader = yes
@@ -6306,7 +6300,7 @@ focus_tree = {
 						is_in_faction_with = ROOT
 					}
 				}
-				random_other_country = {
+				random_allied_country = {
 					limit = {
 						is_in_faction_with = ROOT
 					}
@@ -9040,7 +9034,7 @@ focus_tree = {
 						has_war_with = SOV
 					}
 				}
-				random_other_country = {
+				random_allied_country = {
 					limit = {
 						is_faction_leader = yes
 						is_in_faction_with = ROOT
@@ -9056,7 +9050,7 @@ focus_tree = {
 				}
 			}
 			else = {
-				random_other_country = {
+				random_allied_country = {
 					limit = {
 						is_in_faction_with = ROOT
 						has_war_with = SOV

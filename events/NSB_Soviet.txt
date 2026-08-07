@@ -11835,7 +11835,7 @@ country_event = {
 						factor = 0
 						OR = { 
 							has_country_flag = ukr_uprising_flag
-							UKR = { exists = yes }
+							country_exists = UKR
 						}
 					}
 					set_variable = { SOV_nationalist_country = UKR }
@@ -11851,7 +11851,7 @@ country_event = {
 						factor = 0
 						OR = {
 							has_country_flag = blr_uprising_flag
-							BLR = { exists = yes }
+							country_exists = BLR
 						}
 					}
 					set_variable = { SOV_nationalist_country = BLR }
@@ -11875,7 +11875,7 @@ country_event = {
 						factor = 0
 						OR = {
 							has_country_flag = CRI_uprising_flag
-							CRI = { exists = yes }
+							country_exists = CRI
 						}
 					}
 					set_variable = { SOV_nationalist_country = CRI }
@@ -11899,7 +11899,7 @@ country_event = {
 						factor = 0
 						OR = {
 							has_country_flag = KAR_uprising_flag
-							KAR = { exists = yes }
+							country_exists = KAR
 						}
 					}
 					set_variable = { SOV_nationalist_country = KAR }
@@ -11986,7 +11986,7 @@ country_event = {
 						factor = 0
 						OR = {
 							has_country_flag = geo_uprising_flag
-							GEO = { exists = yes }
+							country_exists = GEO
 						}
 					}
 					set_variable = { SOV_nationalist_country = GEO }
@@ -12002,7 +12002,7 @@ country_event = {
 						factor = 0
 						OR = {
 							has_country_flag = arm_uprising_flag
-							ARM = { exists = yes }
+							country_exists = ARM
 						}
 					}
 					set_variable = { SOV_nationalist_country = ARM }
@@ -12018,7 +12018,7 @@ country_event = {
 						factor = 0
 						OR = {
 							has_country_flag = azr_uprising_flag
-							AZR = { exists = yes }
+							country_exists = AZR
 						}
 					}
 					set_variable = { SOV_nationalist_country = AZR }
@@ -12034,7 +12034,7 @@ country_event = {
 						factor = 0
 						OR = {
 							has_country_flag = KAL_uprising_flag
-							KAL = { exists = yes }
+							country_exists = KAL
 						}
 					}
 					set_variable = { SOV_nationalist_country = KAL }
@@ -12058,7 +12058,7 @@ country_event = {
 						factor = 0
 						OR = {
 							has_country_flag = DAG_uprising_flag
-							DAG = { exists = yes }
+							country_exists = DAG
 						}
 					}
 					set_variable = { SOV_nationalist_country = DAG }
@@ -12082,7 +12082,7 @@ country_event = {
 						factor = 0
 						OR = {
 							has_country_flag = CIN_uprising_flag
-							CIN = { exists = yes }
+							country_exists = CIN
 						}
 					}
 					set_variable = { SOV_nationalist_country = CIN }
@@ -12106,7 +12106,7 @@ country_event = {
 						factor = 0
 						OR = {
 							has_country_flag = ABK_uprising_flag
-							ABK = { exists = yes }
+							country_exists = ABK
 						}
 					}
 					set_variable = { SOV_nationalist_country = ABK }
@@ -12132,7 +12132,7 @@ country_event = {
 						factor = 0
 						OR = {
 							has_country_flag = KOM_uprising_flag
-							KOM = { exists = yes }
+							country_exists = KOM
 						}
 					}
 					set_variable = { SOV_nationalist_country = KOM }
@@ -12156,7 +12156,7 @@ country_event = {
 						factor = 0
 						OR = {
 							has_country_flag = NEN_uprising_flag
-							NEN = { exists = yes }
+							country_exists = NEN
 						}
 					}
 					set_variable = { SOV_nationalist_country = NEN }
@@ -12182,7 +12182,7 @@ country_event = {
 						factor = 0
 						OR = {
 							has_country_flag = khi_uprising_flag
-							KHI = { exists = yes }
+							country_exists = KHI
 						}
 					}
 					set_variable = { SOV_nationalist_country = KHI }
@@ -12206,7 +12206,7 @@ country_event = {
 						factor = 0
 						OR = {
 							has_country_flag = buk_uprising_flag
-							BUK = { exists = yes }
+							country_exists = BUK
 						}
 					}
 					set_variable = { SOV_nationalist_country = BUK }
@@ -12230,7 +12230,7 @@ country_event = {
 						factor = 0
 						OR = {
 							has_country_flag = kaz_uprising_flag
-							KAZ = { exists = yes }
+							country_exists = KAZ
 						}
 					}
 					set_variable = { SOV_nationalist_country = KAZ }
@@ -12254,7 +12254,7 @@ country_event = {
 						factor = 0
 						OR = {
 							has_country_flag = uzb_uprising_flag
-							UZB = { exists = yes }
+							country_exists = UZB
 						}
 					}
 					set_variable = { SOV_nationalist_country = UZB }
@@ -12278,7 +12278,7 @@ country_event = {
 						factor = 0
 						OR = {
 							has_country_flag = kkp_uprising_flag
-							KKP = { exists = yes }
+							country_exists = KKP
 						}
 					}
 					set_variable = { SOV_nationalist_country = KKP }
@@ -12302,7 +12302,7 @@ country_event = {
 						factor = 0
 						OR = {
 							has_country_flag = tms_uprising_flag
-							TMS = { exists = yes }
+							country_exists = TMS
 						}
 					}
 					set_variable = { SOV_nationalist_country = TMS }
@@ -12326,7 +12326,7 @@ country_event = {
 						factor = 0
 						OR = {
 							has_country_flag = KYR_uprising_flag
-							KYR = { exists = yes }
+							country_exists = KYR
 						}
 					}
 					set_variable = { SOV_nationalist_country = KYR }
@@ -12350,7 +12350,7 @@ country_event = {
 						factor = 0
 						OR = {
 							has_country_flag = TAJ_uprising_flag
-							TAJ = { exists = yes }
+							country_exists = TAJ
 						}
 					}
 					set_variable = { SOV_nationalist_country = TAJ }

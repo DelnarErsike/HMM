@@ -1457,9 +1457,7 @@ indonesia_declare_war_is_over_effect = { #always use this instead of directly cl
 	#Now that the above has been handled, give out events based on the way the war ended
 	if = {
 		limit = {
-			INS = {
-				exists = no
-			}
+			NOT = { country_exists = INS }
 			has_event_target = INS_dutch_indonesia
 		}
 		if = {
@@ -1474,9 +1472,7 @@ indonesia_declare_war_is_over_effect = { #always use this instead of directly cl
 
 	else_if = {
 		limit = {
-			INS = {
-				exists = yes
-			}
+			country_exists = INS
 			has_event_target = INS_dutch_indonesia
 			event_target:INS_dutch_indonesia = {
 				num_of_controlled_states < 4
@@ -1494,9 +1490,7 @@ indonesia_declare_war_is_over_effect = { #always use this instead of directly cl
 
 	else_if = {
 		limit = {
-			INS = {
-				exists = yes
-			}
+			country_exists = INS
 			has_event_target = INS_dutch_indonesia
 			event_target:INS_dutch_indonesia = {
 				num_of_controlled_states > 3
@@ -1514,9 +1508,7 @@ indonesia_declare_war_is_over_effect = { #always use this instead of directly cl
 
 	else_if = {
 		limit = {
-			INS = {
-				exists = yes
-			}
+			country_exists = INS
 			NOT = {
 				has_event_target = INS_dutch_indonesia
 			}

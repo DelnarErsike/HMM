@@ -7241,9 +7241,7 @@ country_event = {
 		}
 		IF = {
 			limit = {
-				COG = {
-					exists = no
-				}
+				NOT = { country_exists = COG }
 			}
 			effect_tooltip = {
 				ROOT = {
@@ -7279,9 +7277,7 @@ country_event = {
 
 		IF = {
 			limit = {
-				COG = {
-					exists = yes
-				}
+				country_exists = COG
 			}
 			COG = {
 				# Belgium decides to split us
@@ -7382,9 +7378,7 @@ country_event = {
 			
 			IF = {
 				limit = {
-					COG = {
-						exists = yes
-					}
+					country_exists = COG
 				}
 				every_country_with_original_tag = {
    					original_tag_to_check = ENG
@@ -7693,9 +7687,7 @@ country_event = {
 		
 		IF = {
 			limit = {
-				COG = {
-					exists = yes
-				}
+				country_exists = COG
 			}
 			create_wargoal = {
 				type = take_claimed_state
@@ -7795,9 +7787,7 @@ country_event = {
 		
 		IF = {
 			limit = {
-				COG = {
-					exists = yes
-				}
+				country_exists = COG
 			}
 			create_wargoal = {
 				type = take_claimed_state
@@ -8999,9 +8989,7 @@ country_event = {
 		hidden_effect = {
 			IF = {
 				limit = {
-					AUS = {
-						exists = no
-					}
+					NOT = { country_exists = AUS }
 				}
 				AUS = {
 					set_nationality = {
@@ -9012,9 +9000,7 @@ country_event = {
 			}
 			ELSE_IF = {
 				limit = {
-					AUS = {
-						exists = yes
-					}
+					country_exists = AUS
 				}
 				AUS = {
 					set_nationality = {
@@ -9054,9 +9040,7 @@ country_event = {
 		RKN = {
 			IF = {
 				limit = {
-					AUS = {
-						exists = no
-					}
+					NOT = { country_exists = AUS }
 				}
 				AUS_arthur_seyss-inquart = {
 					remove_country_leader_role = {
@@ -9075,9 +9059,7 @@ country_event = {
 			}
 			ELSE_IF = {
 				limit = {
-					AUS = {
-						exists = yes
-					}
+					country_exists = AUS
 				}
 				AUS_edmund_glaise_horstenau = {
 					remove_country_leader_role = {
@@ -9142,9 +9124,7 @@ country_event = {
 		hidden_effect = {
 			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
-					AUS = {
-						exists = no
-					}
+					NOT = { country_exists = AUS }
 				}
 				RKN = {
 					set_nationality = {
@@ -9155,9 +9135,7 @@ country_event = {
 			}
 			ELSE_IF = {
 				limit = {
-					AUS = {
-						exists = yes
-					}
+					country_exists = AUS
 				}
 				RKN = {
 					set_nationality = {
@@ -9303,9 +9281,7 @@ country_event = {
 		hidden_effect = {
 			IF = {
 				limit = {
-					UKR = {
-						exists = no
-					}
+					NOT = { country_exists = UKR }
 				}
 				UKR = {
 					set_nationality = {
@@ -9332,9 +9308,7 @@ country_event = {
 		hidden_effect = {
 			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
-					UKR = {
-						exists = no
-					}
+					NOT = { country_exists = UKR }
 				}
 				RKU = {
 					set_nationality = {
@@ -9350,9 +9324,7 @@ country_event = {
 	option = { # It might be wise to use a local puppet
 		name = wuw_GER_reichskommissariats.4.b
 		trigger = {
-			UKR = {
-				exists = no
-			}
+			NOT = { country_exists = UKR }
 		}
 		ai_chance = {
 			base = 15
@@ -9483,9 +9455,7 @@ country_event = {
 		hidden_effect = {
 			IF = {
 				limit = {
-					GEO = {
-						exists = no
-					}
+					NOT = { country_exists = GEO }
 				}
 				GEO = {
 					set_nationality = {
@@ -9512,9 +9482,7 @@ country_event = {
 		hidden_effect = {
 			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
-					GEO = {
-						exists = no
-					}
+					NOT = { country_exists = GEO }
 				}
 				RKK = {
 					set_nationality = {
@@ -9530,9 +9498,7 @@ country_event = {
 	option = { # It might be wise to use a local puppet
 		name = wuw_GER_reichskommissariats.6.b
 		trigger = {
-			GEO = {
-				exists = no
-			}
+			NOT = { country_exists = GEO }
 		}
 		ai_chance = {
 			base = 15
@@ -9836,9 +9802,7 @@ country_event = {
 	option = { # It should be incorporated into Moskowien
 		name = wuw_GER_reichskommissariats.9.b
 		trigger = {
-			RKM = {
-				exists = yes
-			}
+			country_exists = RKM
 		}
 		ai_chance = {
 			base = 20
@@ -9854,9 +9818,7 @@ country_event = {
 	option = { # It should be incorporated into Turkestan
 		name = wuw_GER_reichskommissariats.9.c
 		trigger = {
-			RKT = {
-				exists = yes
-			}
+			country_exists = RKT
 		}
 		ai_chance = {
 			base = 0
@@ -10034,9 +9996,7 @@ country_event = {
 	option = { # It should be incorporated into Moskowien
 		name = wuw_GER_reichskommissariats.10.b
 		trigger = {
-			RKM = {
-				exists = yes
-			}
+			country_exists = RKM
 		}
 		ai_chance = {
 			base = 70
@@ -10113,9 +10073,7 @@ country_event = {
 	option = { # It should be incorporated into Turkestan
 		name = wuw_GER_reichskommissariats.10.c
 		trigger = {
-			RKT = {
-				exists = yes
-			}
+			country_exists = RKT
 		}
 		ai_chance = {
 			base = 5
@@ -10256,9 +10214,7 @@ country_event = {
 	option = { # It should be incorporated into Moskowien
 		name = wuw_GER_reichskommissariats.11.b
 		trigger = {
-			RKM = {
-				exists = yes
-			}
+			country_exists = RKM
 		}
 		ai_chance = {
 			base = 50
@@ -10926,9 +10882,7 @@ country_event = {
 			# German Guy
 			IF = {
 				limit = {
-					HES = {
-						exists = no
-					}
+					NOT = { country_exists = HES }
 				}
 				HES = {
 					set_nationality = {
@@ -10959,9 +10913,7 @@ country_event = {
 		RGB = {
 			IF = {
 				limit = {
-					HES = {
-						exists = no
-					}
+					NOT = { country_exists = HES }
 				}
 				HES_philipp_of_hesse = {
 					remove_country_leader_role = {
@@ -11056,9 +11008,7 @@ country_event = {
 		hidden_effect = {
 			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
-					HES = {
-						exists = no
-					}
+					NOT = { country_exists = HES }
 				}
 				RGB = {
 					set_nationality = {
@@ -11136,9 +11086,7 @@ country_event = {
 	option = { # It should be incorporated into Balkan
 		name = wuw_GER_reichskommissariats.17.b
 		trigger = {
-			RKC = {
-				exists = yes
-			}
+			country_exists = RKC
 			has_country_flag = GER_decided_on_hungarian_status
 		}
 		ai_chance = {
@@ -11190,12 +11138,8 @@ country_event = {
 		name = wuw_GER_reichskommissariats.17.c
 		trigger = {
 			AND = {
-				RKH = {
-					exists = yes
-				}
-				SLO = {
-					exists = no
-				}
+				country_exists = RKH
+				NOT = { country_exists = SLO }
 			}
 		}
 		ai_chance = {
@@ -11543,9 +11487,7 @@ country_event = {
 
 			IF = {
 				limit = {
-					MEK = {
-						exists = no
-					}
+					NOT = { country_exists = MEK }
 				}
 				MEK = {
 					set_nationality = {
@@ -11604,9 +11546,7 @@ country_event = {
 		RAN = {
 			IF = {
 				limit = {
-					MEK = {
-						exists = no
-					}
+					NOT = { country_exists = MEK }
 				}
 				MEK_christian_louis = {
 					remove_country_leader_role = {
@@ -11730,9 +11670,7 @@ country_event = {
 			
 			IF = {
 				limit = {
-					MEK = {
-						exists = no
-					}
+					NOT = { country_exists = MEK }
 				}
 				RAN = {
 					set_nationality = {
@@ -11767,9 +11705,7 @@ country_event = {
 
 			IF = {
 				limit = {
-					SAX = {
-						exists = no
-					}
+					NOT = { country_exists = SAX }
 				}
 				SAX = {
 					set_nationality = {
@@ -11820,9 +11756,7 @@ country_event = {
 		RCO = {
 			IF = {
 				limit = {
-					SAX = {
-						exists = no
-					}
+					NOT = { country_exists = SAX }
 				}
 				SAX_george_of_saxony = {
 					remove_country_leader_role = {
@@ -11920,9 +11854,7 @@ country_event = {
 			
 			IF = {
 				limit = {
-					SAX = {
-						exists = no
-					}
+					NOT = { country_exists = SAX }
 				}
 				RCO = {
 					set_nationality = {
@@ -12217,9 +12149,7 @@ country_event = {
 	option = { # It should be incorporated into Nordamerika
 		name = wuw_GER_reichskommissariats.23.b
 		trigger = {
-			RUS = {
-				exists = yes
-			}
+			country_exists = RUS
 		}
 		ai_chance = {
 			base = 50
@@ -12269,9 +12199,7 @@ country_event = {
 	option = { # It should be incorporated into Kolumbus
 		name = wuw_GER_reichskommissariats.23.c
 		trigger = {
-			RCO = {
-				exists = yes
-			}
+			country_exists = RCO
 		}
 		ai_chance = {
 			base = 50
@@ -16890,7 +16818,7 @@ country_event = {
 					is_in_faction_with = ROOT
 					is_faction_leader = no
 				}
-				random_other_country = {
+				random_allied_country = {
 					limit = {
 						is_in_faction_with = FROM
 						is_faction_leader = yes
@@ -18574,9 +18502,7 @@ country_event = {
 
 					IF = {
 						limit = {
-							HUN = {
-								exists = yes
-							}
+							country_exists = HUN
 						}
 						HUN = {
 							add_opinion_modifier = {
@@ -18588,9 +18514,7 @@ country_event = {
 
 					IF = {
 						limit = {
-							CZE = {
-								exists = yes
-							}
+							country_exists = CZE
 						}
 						CZE = {
 							add_opinion_modifier = {
@@ -18602,9 +18526,7 @@ country_event = {
 
 					IF = {
 						limit = {
-							YUG = {
-								exists = yes
-							}
+							country_exists = YUG
 						}
 						YUG = {
 							add_opinion_modifier = {
@@ -18616,9 +18538,7 @@ country_event = {
 
 					IF = {
 						limit = {
-							ROM = {
-								exists = yes
-							}
+							country_exists = ROM
 						}
 						ROM = {
 							add_opinion_modifier = {

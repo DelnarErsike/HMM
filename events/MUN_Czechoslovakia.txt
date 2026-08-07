@@ -5732,9 +5732,7 @@ country_event = { #Now Ruthenian wants out
 		}
 		if = {
 			limit = {
-				RUT = {
-					exists = no
-				}
+				NOT = { country_exists = RUT }
 				73 = {
 					is_fully_controlled_by = ROOT
 				}
@@ -5805,9 +5803,7 @@ country_event = { #Now Ruthenian wants out
 		}
 		if = {
 			limit = {
-				RUT = {
-					exists = no
-				}
+				NOT = { country_exists = RUT }
 				73 = {
 					is_fully_controlled_by = ROOT
 				}

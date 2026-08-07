@@ -4974,7 +4974,7 @@ focus_tree = {
 			NOT = { 693 = { is_controlled_by = ENG } } 
 			NOT = { 689 = { is_controlled_by = ENG } } 
 			NOT = { 691 = { is_controlled_by = ENG } } 
-			ENG = { exists = no }
+			NOT = { country_exists = ENG }
 		}
 
 		x = 0

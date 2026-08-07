@@ -1751,11 +1751,9 @@ SOV_paranoia_system = {
 
 			#Generic
 			set_variable = { SOV_paranoia_portrait_index = 1 }
-			set_temp_variable = { i = 0 }
-			while_loop_effect = {
-				limit = {
-					check_variable = { i = 12 compare = less_than }
-				}
+			for_loop_effect = {
+				start = 0
+				end = 12
 				set_temp_variable = { SOV_generic_portrait_frame = SOV_paranoia_portrait_index }
 				if = { #There are 6 portraits and 12 slots, so second round of generic portraits
 					limit = {
@@ -1773,7 +1771,6 @@ SOV_paranoia_system = {
 				}
 
 				add_to_variable = { SOV_paranoia_portrait_index = 1 }
-				add_to_temp_variable = { i = 1 }
 				#log = "New index is [?SOV_paranoia_portrait_index]"
 			}
 		}
@@ -2804,15 +2801,14 @@ SOV_propaganda_campaigns = {
 
 			custom_effect_tooltip = SOV_propaganda_heroes_forward_tt
 
-			set_temp_variable = { temp_targets_index = 0 }
-			while_loop_effect = {
-				limit = {
-					check_variable = { temp_targets_index = 5 compare = less_than }
-				}
+			for_loop_effect = {
+				start = 0
+				end = 5
 				if = {
 					limit = {
 						any_unit_leader = {
 							is_assigned = yes
+							has_trait = panzer_leader # HMM: fixed this bug, executive decision
 							NOT = { has_trait = trait_SOV_determined }
 						}
 					}
@@ -2840,7 +2836,6 @@ SOV_propaganda_campaigns = {
 						}
 					}
 				}
-				add_to_temp_variable = { temp_targets_index = 1 }
 			}
 		}
 
@@ -11050,7 +11045,7 @@ SOV_industry_relocation = {
 					#Attempt to relocate 50%-50% of mils-civs
 					set_temp_variable = { SOV_half_the_factories_to_relocate = SOV.SOV_industrial_relocation_max_factories }
 					divide_temp_variable = { SOV_half_the_factories_to_relocate = 2 }
-					while_loop_effect = {
+					while_loop_effect = { #NOTE: Due to the seed not changing during the execution of this effect, the same state will always be chosen, UNLESS it runs out of slots -> That's the reason for this
 						limit = {
 							check_variable = { SOV_factories_counter = SOV.SOV_industrial_relocation_max_factories compare = less_than }
 						}
@@ -14264,7 +14259,7 @@ SOV_soviet_civil_war_dec_cat = {
 			}
 		}
 		available = {
-			JAP = { exists = yes }
+			country_exists = JAP
 			408 = { CONTROLLER = { original_tag = SOV } }
 			custom_trigger_tooltip = {
 				tooltip = SOV_not_has_conflict_with_japan
@@ -14350,7 +14345,7 @@ SOV_soviet_civil_war_dec_cat = {
 		}
 
 		available = {
-			JAP = { exists = yes }
+			country_exists = JAP
 			655 = { CONTROLLER = { original_tag = SOV } }
 			custom_trigger_tooltip = {
 				tooltip = SOV_not_has_conflict_with_japan
@@ -14426,7 +14421,7 @@ SOV_soviet_civil_war_dec_cat = {
 		}
 
 		available = {
-			GER = { exists = yes }
+			country_exists = GER
 			229 = { CONTROLLER = { original_tag = SOV } }
 		}
 		ai_will_do = {
@@ -14513,7 +14508,7 @@ SOV_soviet_civil_war_dec_cat = {
 		}
 
 		available = {
-			GER = { exists = yes }
+			country_exists = GER
 		}
 		ai_will_do = {
 			base = 0
@@ -14574,7 +14569,7 @@ SOV_soviet_civil_war_dec_cat = {
 		}
 
 		available = {
-			ENG = { exists = yes }
+			country_exists = ENG
 			206 = { CONTROLLER = { original_tag = SOV } }
 
 		}
@@ -17507,7 +17502,7 @@ operations = {
 		fire_only_once = yes
 		visible = {
 			JAP = { has_completed_focus = JAP_strengthen_civilian_government }
-			MAN = { exists = yes }
+			country_exists = MAN
 		}
 
 		complete_effect = {
@@ -17566,7 +17561,7 @@ political_actions = {
 		fire_only_once = yes
 		visible = {
 			JAP = { has_completed_focus = JAP_strengthen_civilian_government }
-			PRC = { exists = yes }
+			country_exists = PRC
 		}
 
 		complete_effect = {

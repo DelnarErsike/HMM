@@ -199,6 +199,10 @@
 				limit = {
 					has_dlc = "Thunder at Our Gates"
 					has_completed_focus = SIA_use_ships_as_generators
+					has_navy_size = { # HMM: pointless to run this check if we don't have capital ships
+						size > 0
+						type = capital_ship
+					}
 				}
 				subtract_from_variable = { SIA_aep_factory_energy_consumption = capital_ship_count }
 				set_variable = { capital_ship_count = 0 }
@@ -210,35 +214,95 @@
 								state = PREV
 								size > 0
 							}
+							check_variable = { capital_ship_count < 8 } # HMM: this is where the effect caps out, so just break after we've counted at least 8 ships
 						}
 					}
-					
-					set_variable = { i = 0 }
 
-					while_loop_effect = {
-						limit = {  
-							ROOT = {
+					ROOT = {
+						if = {
+							limit = {
 								ships_in_state_ports = {
 									type = capital_ship # optional
 									state = PREV
-									size > PREV.i
+									size > 7 # Effect caps out at 8, so there's no point counting above that
 								}
 							}
-						}  
-						break = b
-
-						add_to_variable = { ROOT.capital_ship_count = 1 }
-						add_to_variable = { i = 1 }
-
-
-						
-
+							add_to_variable = { capital_ship_count = 8 }
+						}
+						else_if = { # Between 1 and 7 ships in the state, binary search it
+							limit = {
+								ships_in_state_ports = {
+									type = capital_ship # optional
+									state = PREV
+									size > 3
+								}
+							}
+							if = {
+								limit = {
+									ships_in_state_ports = {
+										type = capital_ship # optional
+										state = PREV
+										size > 5
+									}
+								}
+								if = {
+									limit = {
+										ships_in_state_ports = {
+											type = capital_ship # optional
+											state = PREV
+											size > 6
+										}
+									}
+									add_to_variable = { capital_ship_count = 7 }
+								}
+								else = {
+									add_to_variable = { capital_ship_count = 6 }
+								}
+							}
+							else_if = {
+								limit = {
+									ships_in_state_ports = {
+										type = capital_ship # optional
+										state = PREV
+										size > 4
+									}
+								}
+								add_to_variable = { capital_ship_count = 5 }
+							}
+							else = {
+								add_to_variable = { capital_ship_count = 4 }
+							}
+						}
+						else_if = {
+							limit = {
+								ships_in_state_ports = {
+									type = capital_ship # optional
+									state = PREV
+									size > 1
+								}
+							}
+							if = {
+								limit = {
+									ships_in_state_ports = {
+										type = capital_ship # optional
+										state = PREV
+										size > 2
+									}
+								}
+								add_to_variable = { capital_ship_count = 3 }
+							}
+							else = {
+								add_to_variable = { capital_ship_count = 2 }
+							}
+						}
+						else = {
+							add_to_variable = { capital_ship_count = 1 }
+						}
 					}
 				}
 
 				
-				multiply_variable = { capital_ship_count = -1 }
-				multiply_variable = { capital_ship_count = 0.02 }
+				multiply_variable = { capital_ship_count = -0.02 }
 				
 				clamp_variable = {
 					var = capital_ship_count #less = good
@@ -2257,7 +2321,7 @@
 						has_country_flag = abdacom_member
 					}
 				}
-				random_other_country = {
+				random_allied_country = {
 					limit = {
 						is_in_faction_with = ROOT
 						has_country_flag = abdacom_member

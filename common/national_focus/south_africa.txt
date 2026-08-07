@@ -1637,8 +1637,8 @@
 
 		available = {
 			OR = {
-				ANG = { exists = no }
-				MZB = { exists = no }
+				NOT = { country_exists = ANG }
+				NOT = { country_exists = MZB }
 			}
 			NOT = { has_country_flag = britain_enforced_our_loyalty }
 		}
@@ -1680,7 +1680,7 @@
 		}
 
 		available = {
-			COG = { exists = no }
+			NOT = { country_exists = COG }
 			NOT = { has_country_flag = britain_enforced_our_loyalty }
 		}
 		
@@ -1722,8 +1722,8 @@
 
 		available = {
 			OR = {
-				KEN = { exists = no } 
-				ZIM = { exists = no }
+				NOT = { country_exists = KEN }
+				NOT = { country_exists = ZIM }
 			}
 			NOT = { has_country_flag = britain_enforced_our_loyalty }
 		}
@@ -1842,7 +1842,7 @@
 		}
 
 		available = {
-			SOV = { exists = yes }
+			country_exists = SOV
 			NOT = { has_country_flag = britain_enforced_our_loyalty }
 		}
 		

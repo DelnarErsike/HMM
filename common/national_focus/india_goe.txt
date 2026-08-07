@@ -2613,9 +2613,7 @@ focus_tree = {
 
             IF = {
                 limit = {
-                    KHM = {
-                        exists = yes
-                    }
+                    country_exists = KHM
                 }
                 create_wargoal = {
                     type = annex_everything
@@ -9410,7 +9408,7 @@ focus_tree = {
 
             if = {
                 limit = {
-                    PAK = { exists = no }
+                    NOT = { country_exists = PAK }
                 }
                 release = PAK
             }
@@ -10272,7 +10270,6 @@ focus_tree = {
                     limit = {
                         has_government = communism
                         is_faction_leader = yes
-                        exists = yes
                     }
                     country_event = { id = generic.2 hours = 2 }
                 }
@@ -11432,7 +11429,7 @@ focus_tree = {
         bypass = {
 
             OR = {
-                PAK = { exists = no }
+                NOT = { country_exists = PAK }
                 PAK = { is_subject_of = ROOT }
                 has_war_with = PAK
                 AND = {
@@ -13475,9 +13472,7 @@ focus_tree = {
         }
         
         bypass = {
-            TIB = {
-                exists = no
-            }
+            NOT = { country_exists = TIB }
         }
 
         cancel_if_invalid = yes
@@ -14112,9 +14107,7 @@ focus_tree = {
         }
         
         bypass = {
-            NEP = {
-                exists = no
-            }
+            NOT = { country_exists = NEP }
         }
 
         cancel_if_invalid = yes
@@ -15111,9 +15104,7 @@ focus_tree = {
         bypass = {
            OR = {
                 is_subject = no
-                BAN = {
-                    exists = yes
-                }
+                country_exists = BAN
             }
         }
         allow_branch = { always = no }
@@ -15160,9 +15151,7 @@ focus_tree = {
         bypass = {
             OR = {
                 is_subject = no
-                PAK = {
-                    exists = yes
-                }
+                country_exists = PAK
             }
         }
         allow_branch = { always = no }
@@ -15304,9 +15293,7 @@ focus_tree = {
         available = {
             if = {
                 limit = {
-                    PAK = {
-                        exists = yes
-                    }
+                    country_exists = PAK
                 }
                 OR = {
                     check_variable = { RAJ.num_of_factories >  pak_factories tooltip = pak_factories_tt }

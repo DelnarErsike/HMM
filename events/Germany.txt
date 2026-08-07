@@ -526,7 +526,7 @@ country_event = {
 			}
 		}
 		has_global_flag = sov_yes_pact
-		SOU = { exists = yes }
+		country_exists = SOU
 		NOT =  { has_war_with = SOU }
 		OR = {
 			AND = {
@@ -736,7 +736,7 @@ country_event = {
 					}
 				}
 			}
-			random_country = {
+			random_allied_country = {
 				limit = {
 					is_in_faction_with = ROOT
 					NOT = { is_subject_of = GER }
@@ -1016,7 +1016,7 @@ country_event = {
 						}
 					}
 				}
-				random_country = {
+				random_allied_country = {
 					limit = {
 						is_in_faction_with = ROOT
 						NOT = { is_subject_of = ROOT }
@@ -2424,7 +2424,7 @@ country_event = {
 							has_government = fascism
 						}
 					}
-					random_other_country = {
+					random_allied_country = {
 						limit = {
 							is_in_faction_with = ROOT
 							is_faction_leader = yes
@@ -2433,7 +2433,7 @@ country_event = {
 					}
 				}
 				else = {
-					random_other_country = {
+					random_allied_country = {
 						limit = {
 							is_in_faction_with = ROOT
 							is_faction_leader = yes
@@ -2601,7 +2601,7 @@ country_event = {
 				limit = {
 					is_faction_leader = no
 				}
-				random_other_country = {
+				random_allied_country = {
 					limit = {
 						is_in_faction_with = ROOT
 						is_faction_leader = yes
@@ -3571,7 +3571,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				AUS = { exists = yes }
+				country_exists = AUS
 			}
 			modifier = {
 				factor = 0.5
@@ -3919,9 +3919,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				SLO = {
-					exists = no
-				}
+				NOT = { country_exists = SLO }
 			}
 			set_country_flag = GER_slovakia_doesn_not_exist
 		}
@@ -4202,10 +4200,11 @@ country_event = {
 			else_if = {
 				limit = { #First some overly safe sanity checks
 					country_exists = RUT
-					any_other_country = {
+					RUT = {
+					any_neighbor_country = {
 						exists = yes
-						is_neighbor_of = RUT
 						controls_state = 154
+						NOT = { tag = ROOT }
 						has_war_with_major = no
 						is_subject = no
 						NOT = {
@@ -4217,7 +4216,6 @@ country_event = {
 							}
 						}
 					}
-					RUT = {
 						controls_state = 73
 						is_subject = no
 						is_in_faction = no
@@ -4234,11 +4232,12 @@ country_event = {
 					}
 				}
 				hidden_effect = {
-					random_other_country = {
+					RUT = {
+					random_neighbor_country = {
 						limit = {
 							exists = yes
-							is_neighbor_of = RUT
 							controls_state = 154
+							NOT = { tag = ROOT }
 							has_war = no
 							is_subject = no
 							NOT = {
@@ -4253,6 +4252,7 @@ country_event = {
 						THIS = {
 							set_country_flag = CZE_pfot_rut_war_news_event_flag #Tags THIS so they can trigger the news event
 						}
+					}
 					}
 				}
 				
@@ -4456,9 +4456,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				SLO = {
-					exists = no
-				}
+				NOT = { country_exists = SLU }
 			}
 			set_country_flag = GER_slovakia_doesn_not_exist
 		}
@@ -4735,10 +4733,11 @@ country_event = {
 			else_if = {
 				limit = { #First some overly safe sanity checks
 					country_exists = RUT
-					any_other_country = {
+					RUT = {
+					any_neighbor_country = {
 						exists = yes
-						is_neighbor_of = RUT
 						controls_state = 154
+						NOT = { tag = ROOT }
 						has_war_with_major = no
 						is_subject = no
 						NOT = {
@@ -4750,7 +4749,6 @@ country_event = {
 							}
 						}
 					}
-					RUT = {
 						controls_state = 73
 						is_subject = no
 						is_in_faction = no
@@ -4766,11 +4764,12 @@ country_event = {
 					}
 				}
 				hidden_effect = {
-					random_other_country = {
+					RUT = {
+					random_neighbor_country = {
 						limit = {
 							exists = yes
-							is_neighbor_of = RUT
 							controls_state = 154
+							NOT = { tag = ROOT }
 							has_war = no
 							is_subject = no
 							NOT = {
@@ -4785,6 +4784,7 @@ country_event = {
 						THIS = {
 							set_country_flag = CZE_pfot_rut_war_news_event_flag #Tags THIS so they can trigger the news event
 						}
+					}
 					}
 				}
 			}
@@ -5034,10 +5034,11 @@ country_event = {
 			else_if = {
 				limit = { #First some overly safe sanity checks
 					country_exists = RUT
-					any_other_country = {
+					RUT = {
+					any_neighbor_country = {
 						exists = yes
-						is_neighbor_of = RUT
 						controls_state = 154
+						NOT = { tag = ROOT }
 						has_war_with_major = no
 						is_subject = no
 						NOT = {
@@ -5049,7 +5050,6 @@ country_event = {
 							}
 						}
 					}
-					RUT = {
 						controls_state = 73
 						is_subject = no
 						is_in_faction = no
@@ -5065,11 +5065,12 @@ country_event = {
 					}
 				}
 				hidden_effect = {
-					random_other_country = {
+					RUT = {
+					random_neighbor_country = {
 						limit = {
 							exists = yes
-							is_neighbor_of = RUT
 							controls_state = 154
+							NOT = { tag = ROOT }
 							has_war = no
 							is_subject = no
 							NOT = {
@@ -5084,6 +5085,7 @@ country_event = {
 						THIS = {
 							set_country_flag = CZE_pfot_rut_war_news_event_flag #Tags THIS so they can trigger the news event
 						}
+					}
 					}
 				}
 			}
@@ -5387,10 +5389,11 @@ country_event = {
 			else_if = {
 				limit = { #First some overly safe sanity checks
 					country_exists = RUT
-					any_other_country = {
+					RUT = {
+					any_neighbor_country = {
 						exists = yes
-						is_neighbor_of = RUT
 						controls_state = 154
+						NOT = { tag = ROOT }
 						has_war_with_major = no
 						is_subject = no
 						NOT = {
@@ -5402,7 +5405,6 @@ country_event = {
 							}
 						}
 					}
-					RUT = {
 						controls_state = 73
 						is_subject = no
 						is_in_faction = no
@@ -5418,11 +5420,12 @@ country_event = {
 					}
 				}
 				hidden_effect = {
-					random_other_country = {
+					RUT = {
+					random_neighbor_country = {
 						limit = {
 							exists = yes
-							is_neighbor_of = RUT
 							controls_state = 154
+							NOT = { tag = ROOT }
 							has_war = no
 							is_subject = no
 							NOT = {
@@ -5437,6 +5440,7 @@ country_event = {
 						THIS = {
 							set_country_flag = CZE_pfot_rut_war_news_event_flag #Tags THIS so they can trigger the news event
 						}
+					}
 					}
 				}
 			}
@@ -8253,7 +8257,7 @@ country_event = {
 		GER = { country_event = { id = germany.81 days = 1 } }
 		effect_tooltip = {
 			if = {
-				limit = { SLO = { exists = yes } }
+				limit = { country_exists = SLO }
 				annex_country = { target = SLO }
 			}
 			if = {
@@ -8306,7 +8310,7 @@ country_event = {
 					is_in_faction_with = POL
 					is_faction_leader = no
 				}
-				random_other_country = {
+				random_allied_country = {
 					limit = {
 						is_in_faction_with = GER
 						is_faction_leader = yes
@@ -8337,7 +8341,7 @@ country_event = {
 	option = {
 		name = germany.81.a
 		if = {
-			limit = { SLO = { exists = yes } }
+			limit = { country_exists = SLO }
 			POL = { annex_country = { target = SLO } }
 		}
 		if = {
@@ -8649,7 +8653,7 @@ country_event = {
 					is_in_faction_with = POL
 					is_faction_leader = no
 				}
-				random_other_country = {
+				random_allied_country = {
 					limit = {
 						is_in_faction_with = GER
 						is_faction_leader = yes
@@ -10406,9 +10410,7 @@ country_event = {
 
 		IF = {
 			limit = {
-				AUS = {
-					exists = no
-				}
+				NOT = { country_exists = AUS }
 			}
 
 			AUS = {
@@ -11030,7 +11032,7 @@ country_event = {
 				}
 			}
 			else = {
-				random_other_country = {
+				random_allied_country = {
 					limit = {
 						is_in_faction_with = ROOT
 						is_faction_leader = yes
@@ -11387,7 +11389,6 @@ country_event = {
 		random_other_country = {
 			limit = {
 				original_tag = AUS
-				NOT = { tag = ROOT }
 			}
 			FROM = {
 				add_to_war = {

@@ -3278,44 +3278,46 @@ focus_tree = {
 			
 			IF = {
 				limit = {
-					any_country = {
-						AND = {
-							owns_state = 332
+					332 = {
+						owner = {
 							owns_state = 331
+							OR = {
+								has_subject = ROOT
+								original_tag = ENG
+							}
 						}
 					}
 				}
-				random_country = {
-					limit = {
-						AND = {
-							owns_state = 332
-							owns_state = 331
-						}
-						OR = {
-							has_subject = ROOT
-							original_tag = ENG
-						}
-					}
+				332 = {
+					owner = {
 					country_event = {
 						id = tfv_canada.70
 						days = 2
 						random_days = 3 
 					}	
+					}
 				}
 			}
 			ELSE = {
 				set_global_flag = not_all_newf_owned
-				random_country = {
-					limit = {
-						OR = {
-							has_subject = ROOT
-							original_tag = ENG
+				if = {
+					limit = { is_subject = yes }
+					overlord = {
+						country_event = {
+							id = tfv_canada.70
+							days = 2
+							random_days = 3 
 						}
 					}
+				}
+				else = {
+					random_country_with_original_tag = {
+						original_tag_to_check = ENG
 					country_event = {
 						id = tfv_canada.70
 						days = 2
 						random_days = 3 
+					}
 					}
 				}
 			}

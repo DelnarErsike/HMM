@@ -4005,7 +4005,7 @@ country_event = {
 							}
 						}
 						if = {
-							limit = { MOL = { exists = no } }
+							limit = { NOT = { country_exists = MOL } }
 							release_puppet = MOL 
 							MOL = { save_event_target_as = released_nation_target }
 						}

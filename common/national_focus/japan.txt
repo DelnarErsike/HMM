@@ -704,9 +704,7 @@ focus_tree = {
 			OR = {
 				has_wargoal_against = MAN
 				has_war_with = MAN
-				MAN = {
-					exists = no
-				}
+				NOT = { country_exists = MAN }
 				MAN = {
 					not = {
 						has_government = fascism
@@ -2067,9 +2065,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			MAN = {
-				exists = no
-			}
+			NOT = { country_exists = MAN }
 		}
 
 		cancel_if_invalid = yes
@@ -2144,9 +2140,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			MAN = {
-				exists = no
-			}
+			NOT = { country_exists = MAN }
 		}
 
 		cancel_if_invalid = yes
@@ -3387,7 +3381,7 @@ focus_tree = {
 				limit = {
 					has_full_control_of_state = 525
 					has_full_control_of_state = 527
-					KOR = { exists = no }
+					NOT = { country_exists = KOR }
 				}
 				activate_mission_tooltip = JAP_release_korea
 				set_country_flag = JAP_release_korea_activate
@@ -3896,9 +3890,7 @@ focus_tree = {
 
 		available = {
 			has_war = no
-			ETH = {
-				exists = yes
-			}
+			country_exists = ETH
 			has_global_flag = second_italo_ethiopian_war_flag
 		}
 
@@ -7964,12 +7956,7 @@ focus_tree = {
 				}
 				has_idea = JAP_tokko_idea_lar
 			}
-			ELSE_IF = {
-				limit = {
-					NOT = {
-						has_dlc = "La Resistance"
-					}
-				}
+			ELSE = {
 				has_idea = JAP_tokko_idea_no_lar
 			}
 		}
@@ -8600,16 +8587,13 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			GER = {
-				has_government = ROOT
-			}
+			has_government = GER # HMM: has the same mechanics as the vanilla check, but leads to a clearer tooltip
 			NOT = { has_war_with = GER }
 		}
 
 		bypass = {
 
 		}
-		allow_branch = { always = no }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -8770,6 +8754,9 @@ focus_tree = {
 
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = JAP_koichi_kido
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = hmm_JAP_potential_tokko_coup
 				
 			hidden_effect = {
 				IF = {
@@ -9854,7 +9841,7 @@ focus_tree = {
 		prerequisite = { focus = JAP_ichioku_isshin }
 
 		allow_branch = {
-			has_country_flag = JAP_tohokai_prime_minister_added
+			#has_country_flag = JAP_tohokai_prime_minister_added # HMM: there's no need to hide this check, the setup for this is already hidden as-is
 			IF = {
 				limit = {
 					has_game_rule = {
@@ -9878,6 +9865,10 @@ focus_tree = {
 		}
 
 		available = {
+			custom_trigger_tooltip = { # HMM: made the check visible
+				tooltip = hmm_JAP_tokko_has_couped_government
+				has_country_flag = JAP_tohokai_prime_minister_added
+			}
 			has_country_leader = {
 				ruling_only = yes
 				character = JAP_seigo_nakano
@@ -10804,9 +10795,7 @@ focus_tree = {
 
 			IF = {
 				limit = {
-					CHI = {
-						exists = yes
-					}
+					country_exists = CHI
 				}
 				CHI = {
 					add_opinion_modifier = {
@@ -10823,7 +10812,7 @@ focus_tree = {
 		id = JAP_invest_in_senbu
 		icon = GFX_focus_generic_concessions
 		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = JAP_revisit_the_thirteen_demands
 
@@ -11248,7 +11237,7 @@ focus_tree = {
 		id = JAP_reinforce_the_beijing_garrison
 		icon = GFX_focus_JAP_reinforce_the_east_hebei_garrisons
 		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = JAP_revisit_the_thirteen_demands
 
@@ -11580,7 +11569,6 @@ focus_tree = {
 				}
 			}
 		}
-		allow_branch = { always = no }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -11592,15 +11580,16 @@ focus_tree = {
 
 			custom_effect_tooltip = JAP_strategic_offensives_tt
 
-			IF = {
-				limit = {
-					USA = {
-						has_war = no
-					}
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				USA = { add_war_support = 0.05 }
-			}
+			# HMM: removed to mirror the removal of the -5% WS in another focus
+			#IF = {
+			#	limit = {
+			#		USA = {
+			#			has_war = no
+			#		}
+			#	}
+			#	custom_effect_tooltip = generic_skip_one_line_tt
+			#	USA = { add_war_support = 0.05 }
+			#}
 				
 			
 		}
@@ -11641,6 +11630,7 @@ focus_tree = {
 		bypass = {
 			
 		}
+		allow_branch = { always = no }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -11688,6 +11678,7 @@ focus_tree = {
 				has_completed_focus = MAN_tsr_national_cooperation_government
 			}
 		}
+		allow_branch = { always = no } # HMM: this is effectively a trap even beyond the whole releasing nations thing, and we also don't want to have to force the Japan to wait around for Manchu to finish their focus before annexing them just to be able to bypass this
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -11831,10 +11822,12 @@ focus_tree = {
 		icon = GFX_focus_JAP_occupy_macau
 		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
 		x = 0
-		y = 2
-		relative_position_id = JAP_reorganized_national_government
+		y = 3
+		relative_position_id = JAP_strategic_offensives
 
-		prerequisite = { focus = JAP_reorganized_national_government }
+		prerequisite = { focus = JAP_strategic_offensives }
+		# HMM: shifted prereq to strategic offensives so that we don't have to bend over backwards getting the AI Manchu to finish their coring focus at just the right time to not interfere with Japan broadly
+		# This focus is potentially valuable for a player Manchu though, so keep it in for that
 
 		cost = 2
 
@@ -11846,6 +11839,14 @@ focus_tree = {
 
 		available = {
 			is_subject = no
+			# HMM: moved the reorganize national government requirements to here
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+			613 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
 			592 = {
 				CONTROLLER = { 
 					OR = {
@@ -12112,9 +12113,7 @@ focus_tree = {
 			}
 			OR = {
 				has_war_with = CHI
-				CHI = {
-					exists = no
-				}
+				NOT = { country_exists = CHI }
 				has_subject = CHI
 				has_subject = RNG
 			}
@@ -12646,9 +12645,7 @@ focus_tree = {
 		}
 
 		available = {
-			SOV = {
-				exists = yes
-			}
+			country_exists = SOV
 			NOT = {
 				has_war_with = SOV
 			}
@@ -14108,7 +14105,7 @@ focus_tree = {
 			}
 			IF = {
 				limit = {
-					INS = { exists = no }
+					NOT = { country_exists = INS }
 					335 = {
 						CONTROLLER = {
 							NOT = {
@@ -14168,7 +14165,7 @@ focus_tree = {
 			}
 			IF = {
 				limit = {
-					MAL = { exists = no }
+					NOT = { country_exists = MAL }
 					336 = {
 						CONTROLLER = {
 							NOT = {
@@ -15296,9 +15293,7 @@ focus_tree = {
 				}
 			}
 			is_subject = no
-			SOV = {
-				exists = yes
-			}
+			country_exists = SOV
 			NOT = {
 				has_war_with = SOV
 			}
@@ -15327,9 +15322,7 @@ focus_tree = {
 				has_war_with = SOV
 				has_wargoal_against = SOV
 				has_subject = SOV
-				SOV = {
-					exists = no
-				}
+				NOT = { country_exists = SOV }
 			}
 		}
 		allow_branch = { always = no }
@@ -15469,9 +15462,7 @@ focus_tree = {
 				}
 			}
 			is_subject = no
-			SOV = {
-				exists = yes
-			}
+			country_exists = SOV
 			NOT = {
 				has_war_with = SOV
 			}
@@ -15504,9 +15495,7 @@ focus_tree = {
 				has_war_with = SOV
 				has_wargoal_against = SOV
 				has_subject = SOV
-				SOV = {
-					exists = no
-				}
+				NOT = { country_exists = SOV }
 			}
 		}
 		allow_branch = { always = no }
@@ -19255,14 +19244,8 @@ focus_tree = {
 
 			IF = {
 				limit = {
-					AND = {
-						FOR = {
-							exists = no
-						}
-						PLU = {
-							exists = no
-						}
-					}
+					NOT = { country_exists = FOR }
+					NOT = { country_exists = PLU }
 				}
 				effect_tooltip = {
 					FOR = {
@@ -20110,9 +20093,12 @@ focus_tree = {
 
 				set_temp_variable = { temp_targets_index = JAP_educating_the_peasants_modifier_allies_count }
 
-				while_loop_effect = {
+				for_loop_effect = {
+					start = 0
+					end = JAP_educating_the_peasants_modifier_allies_count
+					break = b
+					if = {
 					limit = {
-						check_variable = { temp_targets_index > 0 }
 						check_variable = { 
 							var = JAP_educating_the_peasants_modifier_research_speed_factor
 							value = 0.1
@@ -20120,7 +20106,10 @@ focus_tree = {
 						}
 					}
 					add_to_variable = { JAP_educating_the_peasants_modifier_research_speed_factor = 0.01 }
-					subtract_from_temp_variable = { temp_targets_index = 1 }
+					}
+					else = {
+						set_temp_variable = { b = 1 }
+					}
 				}
 
 				hidden_effect = { #This is necessary since Japan is already accounted for when setting all of this up
@@ -20526,9 +20515,7 @@ focus_tree = {
 
 			IF = {
 				limit = {
-					PLU = {
-						exists = yes
-					}
+					country_exists = PLU
 				}
 				create_wargoal = {
 					type = annex_everything
@@ -20538,9 +20525,7 @@ focus_tree = {
 			}
 			IF = {
 				limit = {
-					FOR = {
-						exists = yes
-					}
+					country_exists = FOR
 				}
 				create_wargoal = {
 					type = annex_everything
@@ -20550,9 +20535,7 @@ focus_tree = {
 			}
 			IF = {
 				limit = {
-					KOR = {
-						exists = yes
-					}
+					country_exists = KOR
 				}
 				create_wargoal = {
 					type = annex_everything
