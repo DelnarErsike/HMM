@@ -2364,11 +2364,9 @@ SWE_military_matters = {
 		complete_effect = {
 			custom_effect_tooltip = SWE_activate_home_guard_tt
 			FROM = {
-				while_loop_effect = {
-					limit = { check_variable = { SWE_has_added_home_guard > 0 } }
-
-
-					subtract_from_variable = { SWE_has_added_home_guard = 1 }
+				for_loop_effect = {
+					start = 0
+					end = SWE_has_added_home_guard
 					if = {
 						limit = {
 							NOT = { SWE = { has_completed_focus = SWE_swedish_shooting_movement }}
@@ -2387,6 +2385,7 @@ SWE_military_matters = {
 						}
 					}
 				}
+				set_variable = { SWE_has_added_home_guard = 0 }
 
 				set_state_flag = has_activated_home_guard
 			}
@@ -2421,10 +2420,9 @@ SWE_military_matters = {
 					NOT = { has_state_flag = has_activated_home_guard }
 				}
 				set_state_flag = has_activated_home_guard
-				while_loop_effect = {
-					limit = { check_variable = { SWE_has_added_home_guard > 0 } }
-
-					subtract_from_variable = { SWE_has_added_home_guard = 1 }
+				for_loop_effect = {
+					start = 0
+					end = SWE_has_added_home_guard
 					if = {
 						limit = {
 							NOT = { SWE = { has_completed_focus = SWE_swedish_shooting_movement }}
@@ -2443,6 +2441,7 @@ SWE_military_matters = {
 						}
 					}
 				}
+				set_variable = { SWE_has_added_home_guard = 0 }
 			}
 
 			set_division_template_lock = {

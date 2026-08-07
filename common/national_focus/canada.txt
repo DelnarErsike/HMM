@@ -3278,29 +3278,24 @@ focus_tree = {
 			
 			IF = {
 				limit = {
-					any_country = {
-						AND = {
-							owns_state = 332
+					332 = {
+						owner = {
 							owns_state = 331
+							OR = {
+								has_subject = ROOT
+								original_tag = ENG
+							}
 						}
 					}
 				}
-				random_country = {
-					limit = {
-						AND = {
-							owns_state = 332
-							owns_state = 331
-						}
-						OR = {
-							has_subject = ROOT
-							original_tag = ENG
-						}
-					}
+				332 = {
+					owner = {
 					country_event = {
 						id = tfv_canada.70
 						days = 2
 						random_days = 3 
 					}	
+					}
 				}
 			}
 			ELSE = {

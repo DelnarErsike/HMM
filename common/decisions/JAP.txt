@@ -14926,12 +14926,9 @@ JAP_ashigaru_category = {
 			set_country_flag = JAP_raise_ashigaru_active
 			custom_effect_tooltip = JAP_raise_ashigaru_tt
 			add_stability = -0.05
-			set_variable = { deployed_divs = 0 }
-			while_loop_effect = {
-				limit = {
-					check_variable = { deployed_divs < JAP_levy_cap }
-				}
-				add_to_variable = { deployed_divs = 1 }
+			for_loop_effect = {
+				start = 0
+				end = JAP_levy_cap
 				capital_scope = {
 					create_unit = {
 						division = "division_template =\"Ashigaru Levy\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
@@ -15077,12 +15074,9 @@ JAP_boeitai_category = {
 			set_country_flag = JAP_raise_boeitai_active
 			custom_effect_tooltip = JAP_raise_boeitai_tt
 			add_stability = -0.05
-			set_variable = { deployed_divs = 0 }
-			while_loop_effect = {
-				limit = {
-					check_variable = { deployed_divs < JAP_levy_cap }
-				}
-				add_to_variable = { deployed_divs = 1 }
+			for_loop_effect = {
+				start = 0
+				end = JAP_levy_cap
 				capital_scope = {
 					create_unit = {
 						division = "division_template =\"Kokumin Giyū Sentōtai\" start_experience_factor = 0.4 start_equipment_factor = 1.0"

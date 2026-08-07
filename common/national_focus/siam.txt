@@ -4693,7 +4693,7 @@
 
 					}
 					else = {
-						set_variable = { b = 1 }
+						set_temp_variable = { b = 1 }
 					}
 				}
 
@@ -4735,7 +4735,7 @@
 
 					}
 					else = {
-						set_variable = { b = 1 }
+						set_temp_variable = { b = 1 }
 					}
 				}
 

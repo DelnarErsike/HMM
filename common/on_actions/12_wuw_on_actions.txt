@@ -2952,16 +2952,15 @@ on_actions = {
 				}
 				set_temp_variable = { number_of_reichskommissariats_difference = GER_total_reichskommissariats }
 				subtract_from_temp_variable = { number_of_reichskommissariats_difference = current_number_of_reichskommissariats }
-				while_loop_effect = {#Lessen Rosenberg's trait for each country that is no longer a RK
-					limit = {
-						check_variable = { 
-							var = number_of_reichskommissariats_difference
-							value = 0
-							compare = greater_than
-						}
-					}
+				if = {
+					limit = { check_variable = { number_of_reichskommissariats_difference > 0 } }
+					for_loop_effect = {#Lessen Rosenberg's trait for each country that is no longer a RK
+						start = 0
+						end = number_of_reichskommissariats_difference
+						# HMM: fixed a vanilla bug that caused this effect to loop infinitely (the temporary variable used to index wasn't being updated by this effect here)
 					GER = {
 						GER_worsen_rosenbergs_trait_effect = yes
+					}
 					}
 				}
 				every_other_country = {

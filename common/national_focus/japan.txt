@@ -7956,12 +7956,7 @@ focus_tree = {
 				}
 				has_idea = JAP_tokko_idea_lar
 			}
-			ELSE_IF = {
-				limit = {
-					NOT = {
-						has_dlc = "La Resistance"
-					}
-				}
+			ELSE = {
 				has_idea = JAP_tokko_idea_no_lar
 			}
 		}
@@ -10813,7 +10808,7 @@ focus_tree = {
 		id = JAP_invest_in_senbu
 		icon = GFX_focus_generic_concessions
 		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = JAP_revisit_the_thirteen_demands
 
@@ -11238,7 +11233,7 @@ focus_tree = {
 		id = JAP_reinforce_the_beijing_garrison
 		icon = GFX_focus_JAP_reinforce_the_east_hebei_garrisons
 		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = JAP_revisit_the_thirteen_demands
 
@@ -20082,9 +20077,12 @@ focus_tree = {
 
 				set_temp_variable = { temp_targets_index = JAP_educating_the_peasants_modifier_allies_count }
 
-				while_loop_effect = {
+				for_loop_effect = {
+					start = 0
+					end = JAP_educating_the_peasants_modifier_allies_count
+					break = b
+					if = {
 					limit = {
-						check_variable = { temp_targets_index > 0 }
 						check_variable = { 
 							var = JAP_educating_the_peasants_modifier_research_speed_factor
 							value = 0.1
@@ -20092,7 +20090,10 @@ focus_tree = {
 						}
 					}
 					add_to_variable = { JAP_educating_the_peasants_modifier_research_speed_factor = 0.01 }
-					subtract_from_temp_variable = { temp_targets_index = 1 }
+					}
+					else = {
+						set_temp_variable = { b = 1 }
+					}
 				}
 
 				hidden_effect = { #This is necessary since Japan is already accounted for when setting all of this up

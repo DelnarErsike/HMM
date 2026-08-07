@@ -9344,21 +9344,27 @@ focus_tree = {
 					}
 				}
 				capital_scope = {
+					if = {
+						limit = {
+							has_dlc = "By Blood Alone"
+						}
+						create_unit = {
+							division = "division_template = \"Straf-Division\" start_experience_factor = 1 start_equipment_factor = 1.0"
+							divisional_commander_xp = 2300
+							owner = ROOT
+						}
+						create_unit = {
+							division = "division_template = \"Straf-Division\" start_experience_factor = 1 start_equipment_factor = 1.0"
+							owner = ROOT
+							count = 2
+						}
+					}
+					else = {
 					create_unit = {
 						division = "division_template = \"Straf-Division\" start_experience_factor = 1 start_equipment_factor = 1.0"
 						owner = ROOT
 						count = 3
 					}
-				}
-				if = {
-					limit = {
-						has_dlc = "By Blood Alone"
-					}
-					random_country_division = {
-						limit = {
-							division_has_battalion_in_template = penal_battalion
-						}
-						add_divisional_commander_xp = 2300
 					}
 				}
 			}
@@ -26087,11 +26093,12 @@ focus_tree = {
 					log = "[This.GetName] was added to the RnD Program§"
 				}
 
-				set_temp_variable = { temp_targets_index = GER_rnd_programs_modifier_allies_count }
-
-				while_loop_effect = {
+				for_loop_effect = {
+					start = 0
+					end = GER_rnd_programs_modifier_allies_count
+					break = b
+					if = {
 					limit = {
-						check_variable = { temp_targets_index > 0 }
 						check_variable = { 
 							var = GER_rnd_programs_modifier_research_speed_factor
 							value = 0.1
@@ -26099,7 +26106,10 @@ focus_tree = {
 						}
 					}
 					add_to_variable = { GER_rnd_programs_modifier_research_speed_factor = 0.01 }
-					subtract_from_temp_variable = { temp_targets_index = 1 }
+					}
+					else = {
+						set_temp_variable = { b = 1 }
+					}
 				}
 
 				hidden_effect = { #This is necessary since Germany is already accounted for when setting all of this up

@@ -17150,11 +17150,9 @@ focus_tree = {
 			#Add 2 Militia divs in up to 5 fully controlled states
 			custom_effect_tooltip = ITA_corpo_volontari_della_liberta_spawn_divs_tt
 			hidden_effect = {
-				set_temp_variable = { i = 0 }
-				while_loop_effect = {
-					limit = {
-						check_variable = { i = 5 compare = less_than }
-					}
+				for_loop_effect = {
+					start = 0
+					end = 5
 					random_core_state = {
 						limit = {
 							is_fully_controlled_by = ROOT
@@ -17167,7 +17165,6 @@ focus_tree = {
 						}
 						set_state_flag = ITA_corpo_volontari_della_liberta_partisans_raised_flag
 					}
-					add_to_temp_variable = { i = 1 }
 				}
 			}
 			#Add 2 Infantry Divs in capital scope (if controlled)
@@ -17359,11 +17356,9 @@ focus_tree = {
 			#Add 2 Militia divs in up to 5 fully controlled states
 			custom_effect_tooltip = ITA_partisan_republics_spawn_divs_tt
 			hidden_effect = {
-				set_temp_variable = { i = 0 }
-				while_loop_effect = {
-					limit = {
-						check_variable = { i = 5 compare = less_than }
-					}
+				for_loop_effect = {
+					start = 0
+					end = 5
 					random_core_state = {
 						limit = {
 							is_fully_controlled_by = ROOT
@@ -17376,7 +17371,6 @@ focus_tree = {
 						}
 						set_state_flag = ITA_corpo_volontari_della_liberta_partisans_raised_flag
 					}
-					add_to_temp_variable = { i = 1 }
 				}
 				#Clear flags
 				every_core_state = {
@@ -22200,11 +22194,9 @@ focus_tree = {
 			hidden_effect = {
 				set_variable = { ITA_camelry_raised = 0 }
 				set_variable = { ITA_cavalry_raised = 0 }
-				set_temp_variable = { i = 0 }
-				while_loop_effect = {
-					limit = {
-						check_variable = { i = 10 compare = less_than }
-					}
+				for_loop_effect = {
+					start = 0
+					end = 10
 					random_controlled_state = {
 						limit = {
 							is_on_continent = africa
@@ -22287,7 +22279,6 @@ focus_tree = {
 						}
 						set_state_flag = ITA_irregulars_raised_flag
 					}
-					add_to_temp_variable = { i = 1 }
 				}
 				#Clean flag and vars
 				every_controlled_state = {
@@ -22824,11 +22815,9 @@ focus_tree = {
 			hidden_effect = {
 				set_variable = { ITA_camelry_raised = 0 }
 				set_variable = { ITA_cavalry_raised = 0 }
-				set_temp_variable = { i = 0 }
-				while_loop_effect = {
-					limit = {
-						check_variable = { i = 10 compare = less_than }
-					}
+				for_loop_effect = {
+					start = 0
+					end = 10
 					random_controlled_state = {
 						limit = {
 							is_on_continent = africa
@@ -22911,7 +22900,6 @@ focus_tree = {
 						}
 						set_state_flag = ITA_ascari_raised_flag
 					}
-					add_to_temp_variable = { i = 1 }
 				}
 				#Clean flag and vars
 				every_controlled_state = {

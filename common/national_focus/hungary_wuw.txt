@@ -9676,22 +9676,25 @@ focus_tree = {
 						}
 					}
 				}
-				random_country = {
-					limit = {
-						OR = {
-							AND = {
-								owns_state = 664
-								is_subject = no
-							}
-							any_subject_country = {
-								owns_state = 664
-							}
-						}
-					}
+				664 = {
+					owner = {
+						if = {
+							limit = { is_subject = no }
 					country_event = {
 						id = WW_hungary.7
 						days = 2
 						random_days = 3
+					}
+						}
+						else = {
+							overlord = {
+								country_event = {
+									id = WW_hungary.7
+									days = 2
+									random_days = 3
+								}
+							}
+						}
 					}
 				}
 			}
@@ -9764,22 +9767,25 @@ focus_tree = {
 		completion_reward = {
 
 			custom_effect_tooltip = HUN_demands_tt
-			random_country = {
-				limit = {
-					OR = {
-						AND = {
-							owns_state = 73
-							is_subject = no
-						}
-						any_subject_country = {
-							owns_state = 73
-						}
-					}
-				}
+			73 = {
+				owner = {
+					if = {
+						limit = { is_subject = no }
 				country_event = {
 					id = WW_hungary.20
 					days = 2
 					random_days = 3
+				}
+					}
+					else = {
+						overlord = {
+							country_event = {
+								id = WW_hungary.20
+								days = 2
+								random_days = 3
+							}
+						}
+					}
 				}
 			}
 

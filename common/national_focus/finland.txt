@@ -6898,6 +6898,26 @@ focus_tree = {
 					}
 				}
 				capital_scope = {
+					if = {
+						limit = {
+							has_dlc = "By Blood Alone"
+						}
+						create_unit = {
+							division = "name = \"Erillinen pataljoona 21\" division_template = \"Rangaistusdivisioona\" start_experience_factor = 1 start_equipment_factor = 1.0"
+							officer = {
+								name = FIN_nikke_parmi
+								portraits = {
+									army = {
+										large = GFX_portrait_FIN_nikke_parmi
+										small = GFX_portrait_FIN_nikke_parmi_small
+									}
+								}
+							}
+							divisional_commander_xp = 2300
+							owner = ROOT
+						}
+					}
+					else = {
 					create_unit = {
 						division = "division_template = \"Rangaistusdivisioona\" start_experience_factor = 1 start_equipment_factor = 1.0"
 						officer = {
@@ -6911,21 +6931,6 @@ focus_tree = {
 						}
 						owner = ROOT
 					}
-				}
-				if = {
-					limit = {
-						has_dlc = "By Blood Alone"
-					}
-					random_country_division = {
-						limit = {
-							division_has_battalion_in_template = penal_battalion
-						}
-						add_divisional_commander_xp = 2300
-						add_history_entry = {
-							key = FIN_parmis_devils
-							subject = "Pärmi's Devils"
-							allow = no #(allow medal award)
-						}
 					}
 				}
 			}
