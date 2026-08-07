@@ -9536,7 +9536,14 @@ focus_tree = {
 		available = {
 			has_government = fascism
 		}
-		allow_branch = { always = no }
+		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = allow_release_nations
+					option = BLOCKED
+				}
+			}
+		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MANPOWER }
 
