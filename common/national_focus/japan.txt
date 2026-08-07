@@ -8756,7 +8756,7 @@ focus_tree = {
 			show_ideas_tooltip = JAP_koichi_kido
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-			custom-effect_tooltip = hmm_JAP_potential_tokko_coup
+			custom_effect_tooltip = hmm_JAP_potential_tokko_coup
 				
 			hidden_effect = {
 				IF = {
