@@ -9724,8 +9724,7 @@ focus_tree = {
 			}
 			every_other_country = {
 				limit = {
-					any_owned_state = {
-						is_capital = yes
+					capital_scope = {
 						is_on_continent = europe
 					}
 					has_government = democratic
@@ -9734,8 +9733,7 @@ focus_tree = {
 			}
 			every_other_country = {
 				limit = {
-					any_owned_state = {
-						is_capital = yes
+					capital_scope = {
 						is_on_continent = europe
 					}
 					has_added_tension_amount > 0.1
@@ -9767,8 +9765,7 @@ focus_tree = {
 			custom_effect_tooltip = ENG_continental_intervention_tt
 			every_other_country = {
 				limit = {
-					any_owned_state = {
-						is_capital = yes
+					capital_scope = {
 						is_on_continent = europe
 					}
 					NOT = { is_in_faction_with = ROOT }

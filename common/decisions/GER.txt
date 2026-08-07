@@ -20921,10 +20921,7 @@ GER_volkskommissariats_cat = {
 			clr_country_flag = GER_currently_improving_volkskommissariat_flag
 
 			FROM = {
-				random_owned_controlled_state = {
-					limit = {
-						is_capital = yes
-					}
+				capital_scope = {
 					
 					add_building_construction = {
 						type = industrial_complex

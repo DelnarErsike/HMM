@@ -9530,8 +9530,7 @@ focus_tree = {
 				add_ideas = { SOV_puppet_international_of_soviet_republics_idea }
 				custom_effect_tooltip = SOV_international_union_of_soviet_republics_puppet_tt
 				hidden_effect = {
-					random_owned_controlled_state = {
-						limit = { is_capital = yes }
+					capital_scope = {
 						add_building_construction = {
 						    type = industrial_complex
 							level = 1

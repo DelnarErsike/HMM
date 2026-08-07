@@ -1364,15 +1364,16 @@ spawn_pret_in_cw_if_cheating = {
 				}
 			}
 
-			random_controlled_state = {
-				limit = { is_capital = yes }
-
+			capital_scope = {
+				if = {
+					limit = { is_controlled_by = PREV }
 				create_unit = {
 					division = "name = \"Pret\" division_template = \"Pret\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1"
 					owner = PREV
 					 
 					allow_spawning_on_enemy_provs = yes 
 					count = 3 
+				}
 				}
 			}
 		}
@@ -1397,11 +1398,9 @@ spawn_pret_in_cw_if_cheating = {
 				}
 			}
 
-			random_controlled_state = {
-				limit = {
-					is_capital = yes
-				}
-
+			capital_scope = {
+				if = {
+					limit = { is_controlled_by = PREV }
 				create_unit = {
 					division = "name = \"Pret\" division_template = \"Pret\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1"
 					owner = PREV
@@ -1409,6 +1408,7 @@ spawn_pret_in_cw_if_cheating = {
 					allow_spawning_on_enemy_provs = yes 
 					country_score = {} # optional 
 					count = 6 
+				}
 				}
 			}
 		}	

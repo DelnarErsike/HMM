@@ -597,9 +597,9 @@ PER_mass_protests = {
 	           			has_state_flag = PER_established_cell_here
 	           			has_state_flag = PER_state_supports_communists
 	           			has_dynamic_modifier = { modifier = PER_opposition_cell }
-	           			is_capital = yes
 	           		}
 	           	}
+				is_capital = no
 	        }
 	    }
 	    on_map_mode = map_and_decisions_view 
@@ -660,11 +660,7 @@ PER_mass_protests = {
 	    target_trigger = {
 	        FROM = {
 	           	is_fully_controlled_by = ROOT
-	           	NOT = {
-	           		OR = {
-	           			is_capital = yes
-	           		}
-	           	}
+	           	is_capital = no
 	           	OR = {
 	           		has_state_category = town
 	           		has_state_category = large_town

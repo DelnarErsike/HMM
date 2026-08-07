@@ -6933,8 +6933,7 @@ SOV_decrease_church_power = {
 ###########################################################################################################################
 
 SOV_set_up_nkvd = {
-	random_owned_state = {
-		limit = { is_capital = yes }
+	capital_scope = {
 
 		create_unit = {
 			division = "name = \"5ya NKVD Pogranichnaya Diviziya\" division_template = \"NKVD Pogranichnaya Diviziya\" start_experience_factor = 0.2 start_equipment_factor = 1.0" owner = PREV
