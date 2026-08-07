@@ -10270,7 +10270,6 @@ focus_tree = {
                     limit = {
                         has_government = communism
                         is_faction_leader = yes
-                        exists = yes
                     }
                     country_event = { id = generic.2 hours = 2 }
                 }

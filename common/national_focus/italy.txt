@@ -355,9 +355,8 @@ focus_tree = {
 						}
 					}
 				}
-				random_other_country = {
+				random_subject_country = {
 					limit = {
-						is_subject_of = ROOT
 						any_controlled_state = {
 							is_core_of = ETH
 							is_fully_controlled_by = PREV
@@ -440,9 +439,8 @@ focus_tree = {
 						}
 					}
 				}
-				random_other_country = {
+				random_subject_country = {
 					limit = {
-						is_subject_of = ROOT
 						any_controlled_state = {
 							is_core_of = ETH
 							is_fully_controlled_by = PREV
@@ -527,9 +525,8 @@ focus_tree = {
 						}
 					}
 				}
-				random_other_country = {
+				random_subject_country = {
 					limit = {
-						is_subject_of = ROOT
 						any_controlled_state = {
 							is_core_of = ETH
 							is_fully_controlled_by = PREV
@@ -669,9 +666,8 @@ focus_tree = {
 						}
 					}
 				}
-				random_other_country = {
+				random_subject_country = {
 					limit = {
-						is_subject_of = ROOT
 						any_controlled_state = {
 							is_core_of = LBA
 							is_fully_controlled_by = PREV
@@ -755,9 +751,8 @@ focus_tree = {
 						}
 					}
 				}
-				random_other_country = {
+				random_subject_country = {
 					limit = {
-						is_subject_of = ROOT
 						any_controlled_state = {
 							is_core_of = ETH
 							is_fully_controlled_by = PREV
@@ -842,9 +837,8 @@ focus_tree = {
 						}
 					}
 				}
-				random_other_country = {
+				random_subject_country = {
 					limit = {
-						is_subject_of = ROOT
 						any_controlled_state = {
 							is_core_of = LBA
 							is_fully_controlled_by = PREV
@@ -1028,9 +1022,8 @@ focus_tree = {
 							}
 						}
 					}
-					random_other_country = {
+					random_subject_country = {
 						limit = {
-							is_subject_of = ROOT
 							any_controlled_state = {
 								is_core_of = ETH
 								is_fully_controlled_by = PREV
@@ -1969,9 +1962,8 @@ focus_tree = {
 						}
 					}
 				}
-				random_other_country = {
+				random_subject_country = {
 					limit = {
-						is_subject_of = ROOT
 						any_controlled_state = {
 							is_core_of = ERI
 							is_fully_controlled_by = PREV
@@ -2038,9 +2030,8 @@ focus_tree = {
 						}
 					}
 				}
-				random_other_country = {
+				random_subject_country = {
 					limit = {
-						is_subject_of = ROOT
 						any_controlled_state = {
 							is_core_of = LBA
 							is_fully_controlled_by = PREV
@@ -2107,9 +2098,8 @@ focus_tree = {
 						}
 					}
 				}
-				random_other_country = {
+				random_subject_country = {
 					limit = {
-						is_subject_of = ROOT
 						any_controlled_state = {
 							is_core_of = SOM
 							is_fully_controlled_by = PREV
@@ -2172,9 +2162,8 @@ focus_tree = {
 						}
 					}
 				}
-				random_other_country = {
+				random_subject_country = {
 					limit = {
-						is_subject_of = ROOT
 						any_controlled_state = {
 							is_core_of = ETH
 							is_fully_controlled_by = PREV
@@ -2231,9 +2220,8 @@ focus_tree = {
 							}
 						}
 					}
-					random_other_country = {
+					random_subject_country = {
 						limit = {
-							is_subject_of = ROOT
 							any_controlled_state = {
 								is_core_of = LBA
 								is_fully_controlled_by = ROOT
@@ -2286,9 +2274,8 @@ focus_tree = {
 							}
 						}
 					}
-					random_other_country = {
+					random_subject_country = {
 						limit = {
-							is_subject_of = ROOT
 							any_controlled_state = {
 								is_core_of = ERI
 								is_fully_controlled_by = ROOT
@@ -2475,9 +2462,8 @@ focus_tree = {
 						}
 					}
 				}
-				random_other_country = {
+				random_subject_country = {
 					limit = {
-						is_subject_of = ROOT
 						any_controlled_state = {
 							is_core_of = ERI
 							is_fully_controlled_by = PREV
@@ -2544,9 +2530,8 @@ focus_tree = {
 						}
 					}
 				}
-				random_other_country = {
+				random_subject_country = {
 					limit = {
-						is_subject_of = ROOT
 						any_controlled_state = {
 							is_core_of = LBA
 							is_fully_controlled_by = PREV
@@ -2613,9 +2598,8 @@ focus_tree = {
 						}
 					}
 				}
-				random_other_country = {
+				random_subject_country = {
 					limit = {
-						is_subject_of = ROOT
 						any_controlled_state = {
 							is_core_of = SOM
 							is_fully_controlled_by = PREV
@@ -2687,7 +2671,7 @@ focus_tree = {
 						}
 					}
 				}
-				random_other_country = {
+				random_subject_country = {
 					limit = {
 						any_controlled_state = {
 							is_core_of = ETH
@@ -11696,9 +11680,8 @@ focus_tree = {
 						}
 					}
 				}
-				random_other_country = {
+				random_subject_country = {
 					limit = {
-						is_subject_of = ROOT
 						any_controlled_state = {
 							is_core_of = LBA
 							is_fully_controlled_by = PREV
@@ -16637,10 +16620,7 @@ focus_tree = {
 					add_opinion_modifier = { target = ITA modifier = ita_supported_spain_civil_war }
 				}
 			}
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
+			else = {
 				SPA = { add_opinion_modifier = { target = ITA modifier = ita_supported_spain_civil_war } }
 			}
 
@@ -16782,10 +16762,7 @@ focus_tree = {
 					owns_state = 177
 				}
 			}
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
+			else = {
 				SPA = {
 					has_war = no
 					owns_state = 177
@@ -16805,10 +16782,7 @@ focus_tree = {
 					owns_state = 177
 				}
 			}
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
+			else = {
 				has_war_with = ROOT
 				owns_state = 177
 			}
@@ -16817,11 +16791,10 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 
 		completion_reward = {
-			random_other_country = {
-				limit = {
-					owns_state = 177
-				}
+			177 = {
+				owner = {
 				country_event = { id = italy.9 }
+				}
 			}
 		}
 	}
@@ -16950,9 +16923,8 @@ focus_tree = {
 				#Puppet
 				if = {
 					limit = {
-						any_other_country = {
+						any_enemy_country = {
 							original_tag = ITA
-							has_war_with = ROOT
 							any_enemy_country = {
 								is_major = yes
 								OR = {
@@ -16962,10 +16934,9 @@ focus_tree = {
 							}
 						}
 					}
-					random_other_country = {
+					random_enemy_country = {
 						limit = {
 							original_tag = ITA
-							has_war_with = ROOT
 						}
 						random_enemy_country = {
 							limit = {
@@ -17971,9 +17942,8 @@ focus_tree = {
 						}
 					}
 				}
-				random_other_country = {
+				random_subject_country = {
 					limit = {
-						is_subject_of = ROOT
 						any_controlled_state = {
 							is_core_of = ERI
 							is_fully_controlled_by = PREV
@@ -18040,9 +18010,8 @@ focus_tree = {
 						}
 					}
 				}
-				random_other_country = {
+				random_subject_country = {
 					limit = {
-						is_subject_of = ROOT
 						any_controlled_state = {
 							is_core_of = LBA
 							is_fully_controlled_by = PREV
@@ -18104,9 +18073,8 @@ focus_tree = {
 						}
 					}
 				}
-				random_other_country = {
+				random_subject_country = {
 					limit = {
-						is_subject_of = ROOT
 						any_controlled_state = {
 							is_core_of = SOM
 							is_fully_controlled_by = PREV
@@ -18164,9 +18132,8 @@ focus_tree = {
 						}
 					}
 				}
-				random_other_country = {
+				random_subject_country = {
 					limit = {
-						is_subject_of = ROOT
 						any_controlled_state = {
 							is_core_of = ETH
 							is_fully_controlled_by = PREV
@@ -18223,9 +18190,8 @@ focus_tree = {
 							}
 						}
 					}
-					random_other_country = {
+					random_subject_country = {
 						limit = {
-							is_subject_of = ROOT
 							any_controlled_state = {
 								is_core_of = LBA
 								is_fully_controlled_by = ROOT

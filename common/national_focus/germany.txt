@@ -10758,15 +10758,13 @@ focus_tree = {
 
 			add_named_threat = { threat = 3 name = GER_demand_memel_threat }
 
-			random_other_country = {
-				limit = {
-					owns_state = 188
-					controls_state = 188
-				}
+			188 = {
+				owner = {
 				country_event = { 
 					id = baltic.4 
 					days = 1
 					random_days = 3
+				}
 				}
 			}
 
@@ -36752,17 +36750,15 @@ focus_tree = {
 
 
 		completion_reward = {
-			188 = { add_claim_by = GER }
 			add_named_threat = { threat = 4 name = GER_demand_memel_threat }
-			random_other_country = {
-				limit = {
-					owns_state = 188
-					controls_state = 188 
-				}
+			188 = {
+				add_claim_by = GER
+				owner = {
 				country_event = { 
 					id = baltic.4 
 					days = 1
 					random_days = 3
+				}
 				}
 			}
 			if = {

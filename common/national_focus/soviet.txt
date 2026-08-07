@@ -14092,26 +14092,32 @@ focus_tree = {
 				add_state_claim = 80
 			}
 			add_named_threat = { threat = 1 name = SOV_claim_on_bessarabia }
-			random_other_country = {
-				limit = { owns_state = 78 }
+			78 = {
+				owner = {
 				add_opinion_modifier = { target = SOV modifier = claimed_bessarabia }
 				set_country_flag = SOV_added_claimed_bessarabia
 				country_event = { id = romania.1 hours = 16 random_hours = 8 }
+				}
 			}
 			if = { #Done like this to prevent disgusting tooltip issues, but I hate it ok?
 				limit = {
-					any_other_country = {
-						owns_state = 78
+					78 = {
+						owner = {
+							NOT = { tag = PREV }
 						NOT = {	owns_state = 80 }
+						}
 					}
 				}
-				random_other_country = {
+				80 = {
+					owner = {
+						if = {
 					limit = { 
-						owns_state = 80 
 						NOT = { has_country_flag = SOV_added_claimed_bessarabia }
 					}
 					add_opinion_modifier = { target = SOV modifier = claimed_bucovina }
 					country_event = { id = romania.1 hours = 16 random_hours = 8 }
+						}
+					}
 				}
 			}
 			if = {
@@ -14127,13 +14133,16 @@ focus_tree = {
 						}
 					}
 				}
-				random_other_country = {
+				766 = {
+					owner = {
+						if = {
 					limit = { 
-						owns_state = 766
 						NOT = { has_country_flag = SOV_added_claimed_bessarabia }
 					}
 					add_opinion_modifier = { target = SOV modifier = claimed_bucovina }
 					country_event = { id = romania.1 hours = 16 random_hours = 8 }
+						}
+					}
 				}
 			}
 		}

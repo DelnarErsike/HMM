@@ -16818,7 +16818,7 @@ country_event = {
 					is_in_faction_with = ROOT
 					is_faction_leader = no
 				}
-				random_other_country = {
+				random_allied_country = {
 					limit = {
 						is_in_faction_with = FROM
 						is_faction_leader = yes

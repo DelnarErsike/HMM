@@ -483,7 +483,6 @@ POL_peasant_strike_category = {
 					random_other_country = {
 						limit = {
 							original_tag = ROOT
-							NOT = { tag = ROOT }
 							has_government = democratic
 						}
 						promote_character = POL_stanislaw_mikolajczyk
@@ -608,9 +607,8 @@ POL_peasant_strike_category = {
 				}
 				promote_character = POL_stanislaw_mikolajczyk
 				hidden_effect = {
-					random_other_country = {
+					random_enemy_country = {
 						limit = {
-							has_war_with = ROOT
 							original_tag = ROOT
 						}
 						set_cosmetic_tag = POL_SANATION #Make the other side of the civil war less generic

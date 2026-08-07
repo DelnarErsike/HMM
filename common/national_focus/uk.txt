@@ -7337,7 +7337,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			random_country = {
+			random_allied_country = {
 				limit = {
 					original_tag = CAN
 					exists = yes
@@ -7346,7 +7346,7 @@ focus_tree = {
 				add_political_power = 50
 				add_opinion_modifier = { target = ENG modifier = ENG_commonwealth_ties }
 			}
-			random_country = {
+			random_allied_country = {
 				limit = {
 					original_tag = AST
 					exists = yes
@@ -7355,7 +7355,7 @@ focus_tree = {
 				add_political_power = 50
 				add_opinion_modifier = { target = ENG modifier = ENG_commonwealth_ties }
 			}
-			random_country = {
+			random_allied_country = {
 				limit = {
 					original_tag = RAJ
 					exists = yes
@@ -7364,7 +7364,7 @@ focus_tree = {
 				add_political_power = 50
 				add_opinion_modifier = { target = ENG modifier = ENG_commonwealth_ties }
 			}
-			random_country = {
+			random_allied_country = {
 				limit = {
 					original_tag = NZL
 					exists = yes
@@ -7373,7 +7373,7 @@ focus_tree = {
 				add_political_power = 50
 				add_opinion_modifier = { target = ENG modifier = ENG_commonwealth_ties }
 			}
-			random_country = {
+			random_allied_country = {
 				limit = {
 					original_tag = SAF
 					exists = yes
@@ -7382,7 +7382,7 @@ focus_tree = {
 				add_political_power = 50
 				add_opinion_modifier = { target = ENG modifier = ENG_commonwealth_ties }
 			}
-			random_country = {
+			random_allied_country = {
 				limit = {
 					original_tag = MAL
 					exists = yes
@@ -7391,7 +7391,7 @@ focus_tree = {
 				add_political_power = 50
 				add_opinion_modifier = { target = ENG modifier = ENG_commonwealth_ties }
 			}
-			random_country = {
+			random_allied_country = {
 				limit = {
 					original_tag = PAL
 					exists = yes
@@ -7400,7 +7400,7 @@ focus_tree = {
 				add_political_power = 50
 				add_opinion_modifier = { target = ENG modifier = ENG_commonwealth_ties }
 			}
-			random_country = {
+			random_allied_country = {
 				limit = {
 					original_tag = JOR
 					exists = yes
@@ -7409,7 +7409,7 @@ focus_tree = {
 				add_political_power = 50
 				add_opinion_modifier = { target = ENG modifier = ENG_commonwealth_ties }
 			}
-			random_country = {
+			random_allied_country = {
 				limit = {
 					original_tag = KUW
 					exists = yes
@@ -7418,7 +7418,7 @@ focus_tree = {
 				add_political_power = 50
 				add_opinion_modifier = { target = ENG modifier = ENG_commonwealth_ties }
 			}
-			random_country = {
+			random_allied_country = {
 				limit = {
 					original_tag = BRM
 					exists = yes
@@ -7508,7 +7508,7 @@ focus_tree = {
 		}
 
 		complete_tooltip = {
-			random_country = {
+			random_allied_country = {
 				limit = {
 					original_tag = RAJ
 					is_in_faction_with = ROOT
@@ -7698,7 +7698,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		complete_tooltip = {
-			random_country = {
+			random_allied_country = {
 				limit = {
 					original_tag = AST
 					is_in_faction_with = ROOT
@@ -7858,7 +7858,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		complete_tooltip = {
-			random_country = {
+			random_allied_country = {
 				limit = {
 					original_tag = NZL
 					is_in_faction_with = ROOT
@@ -8018,7 +8018,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		complete_tooltip = {
-			random_country = {
+			random_allied_country = {
 				limit = {
 					original_tag = CAN
 					is_in_faction_with = ROOT
@@ -8177,7 +8177,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		complete_tooltip = {
-			random_country = {
+			random_allied_country = {
 				limit = {
 					original_tag = SAF
 					is_in_faction_with = ROOT

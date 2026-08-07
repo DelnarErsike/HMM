@@ -3300,17 +3300,24 @@ focus_tree = {
 			}
 			ELSE = {
 				set_global_flag = not_all_newf_owned
-				random_country = {
-					limit = {
-						OR = {
-							has_subject = ROOT
-							original_tag = ENG
+				if = {
+					limit = { is_subject = yes }
+					overlord = {
+						country_event = {
+							id = tfv_canada.70
+							days = 2
+							random_days = 3 
 						}
 					}
+				}
+				else = {
+					random_country_with_original_tag = {
+						original_tag_to_check = ENG
 					country_event = {
 						id = tfv_canada.70
 						days = 2
 						random_days = 3 
+					}
 					}
 				}
 			}

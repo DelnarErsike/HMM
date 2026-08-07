@@ -2321,7 +2321,7 @@
 						has_country_flag = abdacom_member
 					}
 				}
-				random_other_country = {
+				random_allied_country = {
 					limit = {
 						is_in_faction_with = ROOT
 						has_country_flag = abdacom_member

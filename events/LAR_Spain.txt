@@ -8928,7 +8928,7 @@ country_event = {
 				FROM = { is_in_faction = no }
 			}
 			effect_tooltip = {
-				random_other_country = {
+				random_allied_country = {
 					limit = {
 						is_in_faction_with = ROOT
 						is_faction_leader = yes
@@ -8942,7 +8942,7 @@ country_event = {
 				is_in_faction = no
 				FROM = { is_in_faction = yes }
 			}
-			random_other_country = {
+			random_allied_country = {
 				limit = {
 					is_in_faction_with = FROM
 					is_faction_leader = yes
@@ -9014,7 +9014,7 @@ country_event = {
 				FROM = { is_in_faction = no }
 			}
 			effect_tooltip = {
-				random_other_country = {
+				random_allied_country = {
 					limit = {
 						is_in_faction_with = ROOT
 						is_faction_leader = yes
@@ -9129,10 +9129,9 @@ country_event = {
 					has_country_flag = SPA_iberian_pact_enemy_flag
 				}
 			}
-			random_other_country = {
+			random_enemy_country = {
 				limit = {
 					has_country_flag = SPA_iberian_pact
-					has_war_with = PREV
 				}
 				ROOT = {
 					add_to_war = { 
@@ -10131,11 +10130,10 @@ country_event = {
 	
 	option = { # Ok
 		name = lar_spain.50.a
-		random_country = {
+		random_subject_country = {
 			limit = {
 				original_tag = POR
 				has_government = neutrality
-				is_subject_of = ROOT
 			}
 			SPC = {
 				annex_country = {

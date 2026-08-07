@@ -61,10 +61,9 @@ country_event = {
 				   }
 				}
 			}
-			random_other_country = {
+			random_enemy_country = {
 				limit = {
 					original_tag = MEX
-					has_war_with = ROOT
 				}
 				hidden_effect = {
 					division_template = {
@@ -484,7 +483,7 @@ country_event = {
 			limit = {
 				is_faction_leader = no
 			}
-			random_other_country = {
+			random_allied_country = {
 				limit = {
 					is_in_faction_with = ROOT
 					is_faction_leader = yes
@@ -2218,15 +2217,18 @@ country_event = {
 		
 		add_war_support = 0.01
 		
-		random_other_country = {
+		USA = {
+		random_allied_country = {
 			limit = {
 				is_in_faction_with = USA
 				is_faction_leader = yes
+				NOT = { tag = ROOT }
 			}
 			country_event = {
 				id = mexico.25
 				days = 1
 			}
+		}
 		}
 		
 		ai_chance = {
@@ -2504,10 +2506,9 @@ country_event = {
 					keep_all_characters = yes
 				}
 			}
-			random_other_country = {
+			random_enemy_country = {
 				limit = {
 					original_tag = MEX
-					has_war_with = ROOT
 				}
 				MEX = {
 					set_nationality = {
@@ -3147,10 +3148,9 @@ country_event = {
 				    }
 				}
 			}
-			random_other_country = {
+			random_enemy_country = {
 				limit = {
 					original_tag = MEX
-					has_war_with = ROOT
 				}
 				drop_cosmetic_tag = yes
 				MEX_remove_church_power = yes

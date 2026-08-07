@@ -1443,13 +1443,14 @@ on_actions = {
 							set_global_flag = BALTIC_more_than_one_territory
 						}
 						save_global_event_target_as = BALTIC_country_to_transfer
-						random_country = { 
+						SOV = {
+						random_subject_country = { 
 							limit = {
 								is_baltic_country = yes
-								is_subject_of = SOV
 								is_ai = no
 							}
-							transfer_state = PREV
+							transfer_state = PREV.PREV
+						}
 						}
 					}
 					SOV = {

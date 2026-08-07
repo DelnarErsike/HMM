@@ -3309,9 +3309,8 @@ country_event = {
 			is_puppet = no
 			is_in_faction = yes
 		}
-		random_other_country = {
+		random_allied_country = {
 			limit = { 
-				is_in_faction_with = CZE
 				is_faction_leader = yes
 			}
 			country_event = {
