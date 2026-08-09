@@ -4326,14 +4326,13 @@ focus_tree = {
 		bypass = {
 			
 		}
-		allow_branch = { always = no }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY FOCUS_FILTER_MEX_CHURCH_AUTHORITY}
 		completion_reward = {
-			unlock_decision_tooltip = MEX_decision_support_spanish_fascists
+			#unlock_decision_tooltip = MEX_decision_support_spanish_fascists
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.1
@@ -4434,14 +4433,13 @@ focus_tree = {
 		bypass = {
 			
 		}
-		allow_branch = { always = no }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MEX_CHURCH_AUTHORITY FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			unlock_decision_tooltip = MEX_decision_support_spanish_loyalists
+			#unlock_decision_tooltip = MEX_decision_support_spanish_loyalists
 			
 			add_popularity = {
 				ideology = communism
@@ -4538,6 +4536,7 @@ focus_tree = {
 		bypass = {
 			
 		}
+		allow_branch = { always = no }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -4776,7 +4775,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			set_rule = { can_create_factions = yes }
+			#set_rule = { can_create_factions = yes }
 			add_stability = 0.05
 			add_war_support = 0.05
 			add_political_power = 120
@@ -4815,6 +4814,7 @@ focus_tree = {
 		bypass = {
 			
 		}
+		allow_branch = { always = no }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
