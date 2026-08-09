@@ -46,113 +46,156 @@ is_annexable_playable_country = {
 }
 
 allies = {
-	if = { # Has to be set up this way to not cause weird bugs
-		limit = {
-			has_game_rule = {
-				rule = playable_iraq
-				option = axis
-			}
-		}
+	custom_trigger_tooltip = {
+		tooltip = hmm_is_allies
 		OR = {
-			tag = ENG
-			tag = FRA
-			tag = CAN
-			tag = AST
-			tag = BRA
-			tag = MEX
-			tag = NZL
-			tag = USA
-			tag = RAJ
-			tag = SAF
-			tag = IRE
-			tag = SOV
-			tag = MON
-			tag = TAN
-			tag = NOR
-			tag = HOL
-			tag = BEL
-			tag = LUX
-			tag = POL
-			tag = DEN
-			tag = PHI
+			allies_western = yes
+			allies_comintern = yes
 		}
 	}
-	else = {
+}
+
+allies_western = {
+	custom_trigger_tooltip = {
+		tooltip = hmm_is_allies_western
 		OR = {
-			tag = ENG
-			tag = FRA
-			tag = CAN
-			tag = AST
-			tag = BRA
-			tag = MEX
-			tag = NZL
+			allies_western_early_join = yes
+			allies_western_late_join = yes
+		}
+	}
+}
+
+allies_western_early_join = {
+	custom_trigger_tooltip = {
+		tooltip = hmm_is_allies_western_early_join
+		if = { # Has to be set up this way to not cause weird bugs
+			limit = {
+				has_game_rule = {
+					rule = playable_iraq
+					option = axis
+				}
+			}
+			OR = {
+				tag = ENG
+				tag = FRA
+				tag = CAN
+				tag = AST
+				tag = NZL
+				tag = RAJ
+				tag = SAF
+				tag = IRE
+				tag = NOR
+				tag = HOL
+				tag = BEL
+				tag = LUX
+				tag = POL
+				tag = DEN
+			}
+		}
+		else = {
+			OR = {
+				tag = ENG
+				tag = FRA
+				tag = CAN
+				tag = AST
+				tag = NZL
+				tag = USA
+				tag = RAJ
+				tag = SAF
+				tag = IRE
+				tag = NOR
+				tag = HOL
+				tag = BEL
+				tag = LUX
+				tag = POL
+				tag = DEN
+				tag = IRQ
+			}
+		}
+	}
+}
+
+allies_western_late_join = {
+	custom_trigger_tooltip = {
+		tooltip = hmm_is_allies_western_late_join
+		OR = {
 			tag = USA
-			tag = RAJ
-			tag = SAF
-			tag = IRE
+			tag = PHI
+			tag = MEX
+			tag = BRA
+		}
+	}
+}
+
+allies_comintern = {
+	custom_trigger_tooltip = {
+		tooltip = hmm_is_allies_comintern
+		OR = {
 			tag = SOV
 			tag = MON
 			tag = TAN
-			tag = NOR
-			tag = HOL
-			tag = BEL
-			tag = LUX
-			tag = POL
-			tag = DEN
-			tag = PHI
-			tag = IRQ
 		}
 	}
 }
 
 
 axis = {
-	if = { # Has to be set up this way to not cause weird bugs
-		limit = {
-			has_game_rule = {
-				rule = playable_iraq
-				option = axis
-			}
-		}
+	custom_trigger_tooltip = {
+		tooltip = hmm_is_axis
 		OR = {
-			tag = GER
-			tag = ITA
-			tag = HUN
-			tag = ROM
-			tag = SPR
-			tag = BUL
-			tag = JAP
-			tag = SIA
-			tag = MAN
-			tag = FIN
-			tag = SLO
-			tag = IRQ
-			ai_rk = yes
+			axis_european = yes
+			axis_geacps = yes
 		}
 	}
-	else = {
-		OR = {
-			tag = GER
-			tag = ITA
-			tag = HUN
-			tag = ROM
-			tag = SPR
-			tag = BUL
-			tag = JAP
-			tag = SIA
-			tag = MAN
-			tag = FIN
-			tag = SLO
-			ai_rk = yes
+}
+
+axis_european = {
+	custom_trigger_tooltip = {
+		tooltip = hmm_is_axis_european
+		if = { # Has to be set up this way to not cause weird bugs
+			limit = {
+				has_game_rule = {
+					rule = playable_iraq
+					option = axis
+				}
+			}
+			OR = {
+				tag = GER
+				tag = ITA
+				tag = HUN
+				tag = ROM
+				tag = SPR
+				tag = BUL
+				tag = FIN
+				tag = SLO
+				tag = IRQ
+				ai_rk = yes
+			}
+		}
+		else = {
+			OR = {
+				tag = GER
+				tag = ITA
+				tag = HUN
+				tag = ROM
+				tag = SPR
+				tag = BUL
+				tag = FIN
+				tag = SLO
+				ai_rk = yes
+			}
 		}
 	}
 }
 
 axis_geacps = {
-	OR = {
-		tag = JAP
-		tag = SIA
-		tag = MAN
+	custom_trigger_tooltip = {
+		tooltip = hmm_is_axis_geacps
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}
 	}
 }
 

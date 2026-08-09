@@ -10,11 +10,11 @@ defined_text = {
 		trigger = {
 			613 = { controller = { allies = yes } }
 		}
-		localization_key = vp_alies_owns
+		localization_key = vp_allies_owns
 	}
 }
 defined_text = {
-	name = GetDehliOwner
+	name = GetDelhiOwner
 	text = {
 		trigger = {
 			439 = { controller = { axis = yes } }
@@ -25,7 +25,7 @@ defined_text = {
 		trigger = {
 			439 = { controller = { allies = yes } }
 		}
-		localization_key = vp_alies_owns
+		localization_key = vp_allies_owns
 	}
 }
 defined_text = {
@@ -40,7 +40,7 @@ defined_text = {
 		trigger = {
 			447 = { controller = { allies = yes } }
 		}
-		localization_key = vp_alies_owns
+		localization_key = vp_allies_owns
 	}
 }
 defined_text = {
@@ -55,7 +55,7 @@ defined_text = {
 		trigger = {
 			450 = { controller = { allies = yes } }
 		}
-		localization_key = vp_alies_owns
+		localization_key = vp_allies_owns
 	}
 }
 defined_text = {
@@ -70,7 +70,7 @@ defined_text = {
 		trigger = {
 			7 = { controller = { allies = yes } }
 		}
-		localization_key = vp_alies_owns
+		localization_key = vp_allies_owns
 	}
 }
 defined_text = {
@@ -85,7 +85,7 @@ defined_text = {
 		trigger = {
 			16 = { controller = { allies = yes } }
 		}
-		localization_key = vp_alies_owns
+		localization_key = vp_allies_owns
 	}
 }
 defined_text = {
@@ -100,7 +100,7 @@ defined_text = {
 		trigger = {
 			20 = { controller = { allies = yes } }
 		}
-		localization_key = vp_alies_owns
+		localization_key = vp_allies_owns
 	}
 }
 defined_text = {
@@ -115,7 +115,7 @@ defined_text = {
 		trigger = {
 			224 = { controller = { allies = yes } }
 		}
-		localization_key = vp_alies_owns
+		localization_key = vp_allies_owns
 	}
 }
 defined_text = {
@@ -130,7 +130,7 @@ defined_text = {
 		trigger = {
 			219 = { controller = { allies = yes } }
 		}
-		localization_key = vp_alies_owns
+		localization_key = vp_allies_owns
 	}
 }
 defined_text = {
@@ -145,6 +145,6 @@ defined_text = {
 		trigger = {
 			217 = { controller = { allies = yes } }
 		}
-		localization_key = vp_alies_owns
+		localization_key = vp_allies_owns
 	}
 }
