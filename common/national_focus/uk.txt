@@ -8894,7 +8894,39 @@ focus_tree = {
 				has_country_flag = ENG_dominions_accepted_federation
 			}
 		}
-		allow_branch = { always = no }
+		allow_branch = {
+			CAN = {
+				OR = {
+					exists = no
+					is_ai = yes
+				}
+			}
+			SAF = {
+				OR = {
+					exists = no
+					is_ai = yes
+				}
+			}
+			RAJ = {
+				OR = {
+					exists = no
+					is_ai = yes
+					NOT = { has_country_flag = ENG_accepted_federation }
+				}
+			}
+			AST = {
+				OR = {
+					exists = no
+					is_ai = yes
+				}
+			}
+			NZL = {
+				OR = {
+					exists = no
+					is_ai = yes
+				}
+			}
+		}
 
 		icon = GFX_focus_eng_imperial_federation
 
