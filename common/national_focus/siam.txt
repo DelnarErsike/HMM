@@ -5789,9 +5789,19 @@
 	focus = {
 		id = SIA_the_bank_of_siam
 		icon = GFX_focus_spa_the_spanish_miracle
-		x = -1
-		y = 2
-		relative_position_id = SIA_asian_financial_compact
+		x = -5
+		y = 3
+		relative_position_id = SIA_industrialization_drive
+		offset = {
+			x = 5
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = alt_hist_sia_eco
+					option = forced
+				}
+			}
+		}
 		prerequisite = { focus = SIA_asian_financial_compact focus = SIA_revision_of_unequal_treaties }
 		mutually_exclusive = { focus = SIA_thai_rice_company }
 		cost = 10
@@ -5801,7 +5811,12 @@
 		available = {
 		}
 		allow_branch = {
-			always = no
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_sia_eco
+					option = banned
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -5841,9 +5856,15 @@
 	focus = {
 		id = SIA_thai_rice_company
 		icon = GFX_focus_SIA_thai_rice_company
-		x = 0
+		x = 5
 		y = 3
 		relative_position_id = SIA_industrialization_drive
+		offset = {
+			has_game_rule = {
+				rule = alt_hist_sia_eco
+				option = banned
+			}
+		}
 		prerequisite = { focus = SIA_asian_financial_compact focus = SIA_revision_of_unequal_treaties }
 		mutually_exclusive = { focus = SIA_the_bank_of_siam }
 		cost = 5
@@ -5853,6 +5874,12 @@
 		available = {
 		}
 		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_sia_eco
+					option = forced
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 

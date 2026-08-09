@@ -2810,7 +2810,20 @@ focus_tree = {
 				is_in_faction_with = ITA
 			}
 		}
-		allow_branch = { always = no }
+		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_spr
+					option = banned
+				}
+			}
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_spr
+					option = banned_no_faction_needed
+				}
+			}
+		}
 		prerequisite = { focus = SPA_the_national_syndicalist_state focus = SPA_fuse_the_parties }
 
 		ai_will_do = {
@@ -2854,10 +2867,26 @@ focus_tree = {
 	focus = {
 		id = SPA_fascist_economic_aid
 		available = {
-			any_country = {
-				is_in_faction_with = ROOT
+			if = {
+				limit = {
+					OR = {
+						has_game_rule = {
+							rule = alt_hist_spr
+							option = allowed_no_faction_needed
+						}
+						has_game_rule = {
+							rule = alt_hist_spr
+							option = forced_no_faction_needed
+						}
+					}
+				}
+				has_government = fascism
+			}
+			else = {
+			any_allied_country = {
 				has_government = fascism
 				is_major = yes
+			}
 			}
 		}
 		bypass = {
@@ -2898,9 +2927,26 @@ focus_tree = {
 			has_full_control_of_state = 176
 			has_full_control_of_state = 792
 			has_full_control_of_state = 41
+			if = {
+				limit = {
+					OR = {
+						has_game_rule = {
+							rule = alt_hist_spr
+							option = allowed_no_faction_needed
+						}
+						has_game_rule = {
+							rule = alt_hist_spr
+							option = forced_no_faction_needed
+						}
+					}
+				}
+				has_government = fascism
+			}
+			else = {
 			any_allied_country = {
 				is_major = yes
 				has_government = fascism
+			}
 			}
 		}
 		bypass = {
@@ -2982,9 +3028,30 @@ focus_tree = {
 	focus = {
 		id = SPA_improve_cross_country_railways
 		available = {
+			if = {
+				limit = {
+					OR = {
+						has_game_rule = {
+							rule = alt_hist_spr
+							option = banned_no_faction_needed
+						}
+						has_game_rule = {
+							rule = alt_hist_spr
+							option = allowed_no_faction_needed
+						}
+						has_game_rule = {
+							rule = alt_hist_spr
+							option = forced_no_faction_needed
+						}
+					}
+				}
+				has_government = fascism
+			}
+			else = {
 			any_allied_country = {
 				is_major = yes
 				has_government = fascism
+			}
 			}
 			has_full_control_of_state = 169
 			has_full_control_of_state = 789
@@ -2995,7 +3062,6 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		allow_branch = { always = no }
 		prerequisite = { focus = SPA_fascist_economic_aid focus = SPA_spanish_austerity }
 		
 		icon = GFX_goal_generic_construct_infrastructure
@@ -3028,10 +3094,26 @@ focus_tree = {
 	focus = {
 		id = SPA_support_the_war_industry
 		available = {
-			any_country = {
-				is_in_faction_with = ROOT
+			if = {
+				limit = {
+					OR = {
+						has_game_rule = {
+							rule = alt_hist_spr
+							option = allowed_no_faction_needed
+						}
+						has_game_rule = {
+							rule = alt_hist_spr
+							option = forced_no_faction_needed
+						}
+					}
+				}
+				has_government = fascism
+			}
+			else = {
+			any_allied_country = {
 				has_government = fascism
 				is_major = yes
+			}
 			}
 		}
 		bypass = {
@@ -3121,7 +3203,24 @@ focus_tree = {
 	focus = {
 		id = SPA_italian_shipbuilding_expertise
 		available = {
+			if = {
+				limit = {
+					OR = {
+						has_game_rule = {
+							rule = alt_hist_spr
+							option = allowed_no_faction_needed
+						}
+						has_game_rule = {
+							rule = alt_hist_spr
+							option = forced_no_faction_needed
+						}
+					}
+				}
+				ITA = { has_government = fascism }
+			}
+			else = {
 			is_in_faction_with = ITA
+			}
 		}
 		bypass = {
 		}
@@ -3149,10 +3248,26 @@ focus_tree = {
 	focus = {
 		id = SPA_the_duty_to_work
 		available = {
-			any_country = {
-				is_in_faction_with = ROOT
+			if = {
+				limit = {
+					OR = {
+						has_game_rule = {
+							rule = alt_hist_spr
+							option = allowed_no_faction_needed
+						}
+						has_game_rule = {
+							rule = alt_hist_spr
+							option = forced_no_faction_needed
+						}
+					}
+				}
+				has_government = fascism
+			}
+			else = {
+			any_allied_country = {
 				has_government = fascism
 				is_major = yes
+			}
 			}
 		}
 		bypass = {
@@ -3175,7 +3290,31 @@ focus_tree = {
 	focus = {
 		id = SPA_expand_the_war_industry
 		available = {
-			
+			if = {
+				limit = {
+					OR = {
+						has_game_rule = {
+							rule = alt_hist_spr
+							option = banned_no_faction_needed
+						}
+						has_game_rule = {
+							rule = alt_hist_spr
+							option = allowed_no_faction_needed
+						}
+						has_game_rule = {
+							rule = alt_hist_spr
+							option = forced_no_faction_needed
+						}
+					}
+				}
+				has_government = fascism
+			}
+			else = {
+			any_allied_country = {
+				has_government = fascism
+				is_major = yes
+			}
+			}
 		}
 		bypass = {
 		}
@@ -3267,6 +3406,20 @@ focus_tree = {
 		available = {
 		}
 		bypass = {
+		}
+		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_spr
+					option = forced
+				}
+			}
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_spr
+					option = forced_no_faction_needed
+				}
+			}
 		}
 		prerequisite = { focus = SPA_national_recovery }
 		mutually_exclusive = { focus = SPA_fascist_economic_aid }

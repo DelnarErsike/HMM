@@ -7049,7 +7049,12 @@ focus_tree = {
         }
 
         allow_branch = {
-        	always = no
+        	NOT = {
+                has_game_rule = {
+                    rule = alt_hist_raj
+                    option = forced
+                }
+            }
         	if = {
 				limit = {
 					has_game_rule = {
@@ -9019,7 +9024,32 @@ focus_tree = {
         bypass = {
 
         }
-        allow_branch = { always = no }
+        allow_branch = {
+            NOT = {
+				has_game_rule = {
+					rule = alt_hist_raj
+					option = banned
+				}
+			}
+            NOT = {
+				has_game_rule = {
+					rule = alt_hist_raj
+					option = forced
+				}
+			}
+            if = {
+                limit = {
+                    has_game_rule = {
+                        rule = obsolete_focus_branches_visibility
+                        option = HIDE
+                    }
+                }
+                NOT = {
+                    has_completed_focus = RAJ_his_majestys_loyal_government
+                    has_completed_focus = RAJ_great_depression_price_controls
+                }
+            }
+        }
 
         cancel_if_invalid = yes
         continue_if_invalid = no
@@ -15098,7 +15128,15 @@ focus_tree = {
         }
 
         available = {
-
+            if = {
+                limit = {
+                    has_game_rule = {
+                        rule = allow_release_nations
+                        option = PEACE_ONLY
+                    }
+                }
+                has_war = no
+            }
         }
         
         bypass = {
@@ -15107,7 +15145,32 @@ focus_tree = {
                 country_exists = BAN
             }
         }
-        allow_branch = { always = no }
+        allow_branch = {
+            NOT = {
+                has_game_rule = {
+                    rule = allow_release_nations
+                    option = BLOCKED
+                }
+            }
+            NOT = {
+				has_game_rule = {
+					rule = alt_hist_raj
+					option = forced
+				}
+			}
+            if = {
+                limit = {
+                    has_game_rule = {
+                        rule = obsolete_focus_branches_visibility
+                        option = HIDE
+                    }
+                }
+                NOT = {
+                    has_completed_focus = RAJ_his_majestys_loyal_government
+                    has_completed_focus = RAJ_great_depression_price_controls
+                }
+            }
+        }
         
         cancel_if_invalid = yes
         continue_if_invalid = no
@@ -15145,7 +15208,15 @@ focus_tree = {
         }
 
         available = {
-
+            if = {
+                limit = {
+                    has_game_rule = {
+                        rule = allow_release_nations
+                        option = PEACE_ONLY
+                    }
+                }
+                has_war = no
+            }
         }
         
         bypass = {
@@ -15154,7 +15225,32 @@ focus_tree = {
                 country_exists = PAK
             }
         }
-        allow_branch = { always = no }
+        allow_branch = {
+            NOT = {
+                has_game_rule = {
+                    rule = allow_release_nations
+                    option = BLOCKED
+                }
+            }
+            NOT = {
+				has_game_rule = {
+					rule = alt_hist_raj
+					option = forced
+				}
+			}
+            if = {
+                limit = {
+                    has_game_rule = {
+                        rule = obsolete_focus_branches_visibility
+                        option = HIDE
+                    }
+                }
+                NOT = {
+                    has_completed_focus = RAJ_his_majestys_loyal_government
+                    has_completed_focus = RAJ_great_depression_price_controls
+                }
+            }
+        }
 
         cancel_if_invalid = yes
         continue_if_invalid = no
@@ -15590,6 +15686,7 @@ focus_tree = {
         bypass = {
 
         }
+        allow_branch = { always = no }
 
         cancel_if_invalid = yes
         continue_if_invalid = no
@@ -15741,9 +15838,9 @@ focus_tree = {
         id = RAJ_pledge_for_the_allies
         icon = GFX_focus_eng_the_sun_never_sets
         prerequisite = { focus =  RAJ_tryst_with_destiny }
-        x = 4
-        y = 0
-        relative_position_id = RAJ_sideline_the_conflict
+        x = 0
+        y = 1
+        relative_position_id = RAJ_tryst_with_destiny
         mutually_exclusive = { focus = RAJ_i_am_death focus = RAJ_sideline_the_conflict }
         cost = 5
 
@@ -16801,6 +16898,32 @@ focus = {
 	available = {
 		is_subject_of = ENG
 	}
+    allow_branch = {
+        NOT = {
+            has_game_rule = {
+                rule = alt_hist_raj
+                option = banned
+            }
+        }
+        NOT = {
+            has_game_rule = {
+                rule = alt_hist_raj
+                option = only_india_united
+            }
+        }
+        if = {
+            limit = {
+                has_game_rule = {
+                    rule = obsolete_focus_branches_visibility
+                    option = HIDE
+                }
+            }
+            NOT = {
+                has_completed_focus = RAJ_provincial_autonomy
+                has_completed_focus = RAJ_great_depression_price_controls
+            }
+        }
+    }
 
 	search_filters = { FOCUS_FILTER_POLITICAL }
 

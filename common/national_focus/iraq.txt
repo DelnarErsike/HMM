@@ -4003,6 +4003,25 @@ focus_tree = {
 		bypass = {
 
 		}
+		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_irq
+					option = banned
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = IRQ_promote_kurdish_culture
+				}
+			}
+		}
 
 		search_filters = { FOCUS_FILTER_STABILITY }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5368,7 +5387,15 @@ focus_tree = {
 				has_government = democratic
 			}
 		}
-		allow_branch = { allies = yes }
+		allow_branch = {
+			allies = yes
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_irq
+					option = banned
+				}
+			}
+		}
 
 		bypass = {
 		}
@@ -5502,7 +5529,15 @@ focus_tree = {
 				}
 			}
 		}
-		allow_branch = { allies = yes }
+		allow_branch = {
+			allies = yes
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_irq
+					option = banned
+				}
+			}
+		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
 
@@ -6088,6 +6123,12 @@ focus_tree = {
 		relative_position_id = IRQ_rally_behind_the_hashemite_dynasty
 
 		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_irq
+					option = forced
+				}
+			}
 			if = {
 				limit = {
 					has_game_rule = {
@@ -6321,7 +6362,15 @@ focus_tree = {
 		bypass = {
 
 		}
-		allow_branch = { allies = no }
+		allow_branch = {
+			allies = no
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_irq
+					option = forced
+				}
+			}
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 

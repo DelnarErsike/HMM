@@ -180,22 +180,6 @@ Philippines_AC_rule = {
 		desc = "The Philippines cannot do their more powerful air focuses"
 	}
 }
-Germany_Wirtschaftswunder = {
-	name = "Can Germany complete Prioritize Economic Growth (Left Side Eco)?"
-	group = "HMM Rules"
-	icon = "GFX_volunteers"
-	default = {
-		name = Germany_no_wirtschaftswunder
-		text = "RNo"
-		desc = "Germany cannot do any focuses on the left side of its economy tree."
-	}
-	option = {
-		name = Germany_wirtschaftswunder
-		text = "GYes"
-		desc = "Germany can opt to do focuses on the left side of its economy tree."
-	}
-
-}
 Germany_Cancel_Mefo= {
 	name = "Can Germany cancel MEFO Bills prematurely?"
 	group = "HMM Rules"
@@ -872,5 +856,337 @@ tradebacks = {
 		name = only_axis
 		text = "YOnly Axis"
 		desc = "The axis has a tradeback idea that gives -100% missing resource penalty"
+	}
+}
+
+alt_hist_fra = {
+	name = "Can France do alt-historical democratic focuses?"
+	group = "HMM Alternate History Rules"
+	option = {
+		name = banned
+		text = "RNo"
+		desc = "France is forced to follow focuses under $FRA_form_the_popular_front$ (historical)."
+	}
+	default = {
+		name = allowed
+		text = "GYes"
+		desc = "France can follow either $FRA_form_the_popular_front$ (historical) or $FRA_revive_the_national_bloc$."
+	}
+	option = {
+		name = forced
+		text = "CForced"
+		desc = "France is forced to follow focuses under $FRA_revive_the_national_bloc$."
+	}
+}
+alt_hist_usa = {
+	name = "Can the USA do alt-historical democratic focuses?"
+	group = "HMM Alternate History Rules"
+	default = {
+		name = banned
+		text = "RNo"
+		desc = "The USA is forced to follow focuses under $USA_continue_the_new_deal$ (historical)."
+	}
+	option = {
+		name = allowed
+		text = "GYes"
+		desc = "The USA can follow either $USA_continue_the_new_deal$ (historical) or $USA_reestablish_the_gold_standard$."
+	}
+	option = {
+		name = forced
+		text = "CForced"
+		desc = "The USA is forced to follow focuses under $USA_reestablish_the_gold_standard$."
+	}
+}
+alt_hist_ger_eco = {
+	name = "Can Germany do alt-historical economy focuses?"
+	group = "HMM Alternate History Rules"
+	default = {
+		name = banned
+		text = "RNo"
+		desc = "Germany is forced to follow focuses under $GER_the_four_year_plan$ (historical)."
+	}
+	option = {
+		name = allowed
+		text = "GYes"
+		desc = "Germany can follow either $GER_the_four_year_plan$ (historical) or $GER_prioritize_economic_growth$."
+	}
+	option = {
+		name = forced
+		text = "CForced"
+		desc = "Germany is forced to follow focuses under $GER_prioritize_economic_growth$."
+	}
+}
+alt_hist_ita = {
+	name = "Can Italy do alt-historical fascist focuses?"
+	group = "HMM Alternate History Rules"
+	default = {
+		name = banned
+		text = "RNo"
+		desc = "Italy is forced to follow focuses under $ITA_culto_del_duce$ (historical)."
+	}
+	option = {
+		name = only_italo_balbo
+		text = "OOnly $ITA_italo_balbo_focus$"
+		desc = "Italy can follow focuses under $ITA_culto_del_duce$ (historical) or $ITA_italo_balbo_focus$."
+	}
+	option = {
+		name = only_dino_grandi
+		text = "YOnly $ITA_dino_grandi_focus$"
+		desc = "Italy can follow focuses under $ITA_culto_del_duce$ (historical) or $ITA_dino_grandi_focus$."
+	}
+	option = {
+		name = allowed
+		text = "GAlt-Fascist Allowed"
+		desc = "Italy can follow focuses under $ITA_culto_del_duce$ (historical), $ITA_italo_balbo_focus$, or $ITA_dino_grandi_focus$."
+	}
+}
+alt_hist_jap = {
+	name = "Can Japan do alt-historical non-aligned focuses?"
+	group = "HMM Alternate History Rules"
+	default = {
+		name = banned
+		text = "RNo"
+		desc = "Japan is forced to follow focuses under $JAP_sea_purge_the_kodoha_faction$ (historical)."
+	}
+	option = {
+		name = allowed
+		text = "GYes"
+		desc = "Japan can follow either $JAP_sea_purge_the_kodoha_faction$ (historical) or $JAP_revere_the_emperor_destroy_the_traitors$."
+	}
+	option = {
+		name = forced
+		text = "CForced"
+		desc = "Japan is forced to follow focuses under $JAP_revere_the_emperor_destroy_the_traitors$."
+	}
+}
+alt_hist_bra = {
+	name = "Can Brazil do alt-historical democratic focuses?"
+	group = "HMM Alternate History Rules"
+	default = {
+		name = banned
+		text = "RNo"
+		desc = "Brazil is forced to follow focuses under $BRA_tribunal_de_seguranca_nacional$ and $BRA_estado_novo$ (historical)."
+	}
+	option = {
+		name = allowed
+		text = "GYes"
+		desc = "Brazil can follow either $BRA_tribunal_de_seguranca_nacional$ and $BRA_estado_novo$ (historical) or $BRA_end_the_state_of_emergency$ and $BRA_repeal_the_national_security_law$."
+	}
+	option = {
+		name = forced
+		text = "CForced"
+		desc = "Brazil is forced to follow focuses under $BRA_end_the_state_of_emergency$ and $BRA_repeal_the_national_security_law$."
+	}
+}
+alt_hist_bul = {
+	name = "Can Bulgaria do alt-historical fascist focuses?"
+	group = "HMM Alternate History Rules"
+	option = {
+		name = banned
+		text = "RNo"
+		desc = "Bulgaria is forced to follow focuses under $BUL_the_tsars_regime$ (historical)."
+	}
+	default = {
+		name = allowed
+		text = "GYes"
+		desc = "Bulgaria can follow either $BUL_the_tsars_regime$ (historical) or $BUL_appoint_right_wing_ministers$."
+	}
+	option = {
+		name = forced
+		text = "CForced"
+		desc = "Bulgaria is forced to follow focuses under $BUL_appoint_right_wing_ministers$."
+	}
+}
+alt_hist_fin = {
+	name = "Can Finland do alt-historical political focuses?"
+	group = "HMM Alternate History Rules"
+	default = {
+		name = banned_no_lone_wolf
+		text = "0No & Lone Wolf Banned"
+		desc = "Finland is forced to follow focuses under $FIN_finnish_neutrality$ (historical) and cannot do $FIN_the_lone_wolf$, $FIN_northern_defense_front$, or $FIN_join_the_allies$."
+	}
+	option = {
+		name = banned
+		text = "RNo"
+		desc = "Finland is forced to follow focuses under $FIN_finnish_neutrality$ and $FIN_the_lone_wolf$ (historical)."
+	}
+	option = {
+		name = allowed_no_lone_wolf
+		text = "YYes, but Lone Wolf banned"
+		desc = "Finland can follow either $FIN_finnish_neutrality$ (historical) or $FIN_right_wing_policies$, but if they choose the former, they cannot do $FIN_the_lone_wolf$, $FIN_northern_defense_front$, or $FIN_join_the_allies$."
+	}
+	option = {
+		name = allowed
+		text = "GYes"
+		desc = "Finland can follow either $FIN_finnish_neutrality$ and $FIN_the_lone_wolf$ (historical) or $FIN_right_wing_policies$."
+	}
+	option = {
+		name = forced
+		text = "CForced"
+		desc = "Finland is forced to follow focuses under $FIN_right_wing_policies$."
+	}
+}
+alt_hist_hun = {
+	name = "Can Hungary do alt-historical fascist and non-aligned focuses?"
+	group = "HMM Alternate History Rules"
+	default = {
+		name = banned
+		text = "RNo"
+		desc = "Hungary is forced to follow focuses under $wuw_HUN_continue_the_regency$ (historical) and $wuw_HUN_strengthen_horthys_reign$ (historical)."
+	}
+	option = {
+		name = only_fascist_king
+		text = "OFascist King Allowed"
+		desc = "Hungary can follow either $wuw_HUN_continue_the_regency$ (historical) and $wuw_HUN_strengthen_horthys_reign$ (historical) or $wuw_HUN_end_the_regency$ and $wuw_HUN_elect_a_fascist_king$."
+	}
+	option = {
+		name = only_arrow_cross
+		text = "YNon-Monarchist Fascist Allowed"
+		desc = "Hungary is forced to follow focuses under $wuw_HUN_continue_the_regency$ (historical), but can follow either $wuw_HUN_strengthen_horthys_reign$ (historical) or $wuw_HUN_undermine_the_admiral$."
+	}
+	option = {
+		name = allowed
+		text = "GYes"
+		desc = "Hungary can follow either $wuw_HUN_continue_the_regency$ (historical) and either $wuw_HUN_strengthen_horthys_reign$ (historical) or $wuw_HUN_undermine_the_admiral$, or $wuw_HUN_end_the_regency$ and $wuw_HUN_elect_a_fascist_king$."
+	}
+	option = {
+		name = forced_arrow_cross
+		text = "CForced Non-Monarchist Fascist"
+		desc = "Hungary is forced to follow focuses under $wuw_HUN_continue_the_regency$ (historical) and $wuw_HUN_undermine_the_admiral$."
+	}
+	option = {
+		name = forced_fascist_king
+		text = "0Forced Fascist King"
+		desc = "Hungary is forced to follow focuses under $wuw_HUN_end_the_regency$ and $wuw_HUN_elect_a_fascist_king$."
+	}
+}
+alt_hist_irq = {
+	name = "Can Iraq do alt-historical non-aligned or democratic focuses?"
+	group = "HMM Alternate History Rules"
+	option = {
+		name = banned
+		text = "RNo"
+		desc = "Iraq is forced to follow focuses under $IRQ_party_of_national_brotherhood$ (historical)."
+	}
+	default = {
+		name = allowed
+		text = "GYes"
+		desc = "Iraq can follow either $IRQ_party_of_national_brotherhood$ (historical) or $IRQ_rally_behind_the_hashemite_dynasty$."
+	}
+	option = {
+		name = forced
+		text = "CForced"
+		desc = "Iraq is forced to follow focuses under $IRQ_rally_behind_the_hashemite_dynasty$."
+	}
+}
+alt_hist_mex = {
+	name = "Can Mexico do alt-historical democratic and non-aligned focuses?"
+	group = "HMM Alternate History Rules"
+	option = {
+		name = banned
+		text = "RNo"
+		desc = "Mexico is forced to $MEX_focus_arrest_general_cedillo$ (historical) and follow focuses under $MEX_focus_state_education$ (historical)."
+	}
+	option = {
+		name = only_christian_democracy
+		text = "OChristian Democracy Allowed"
+		desc = "Mexico is forced to $MEX_focus_arrest_general_cedillo$ (historical), but can follow either $MEX_focus_state_education$ (historical) or $MEX_focus_knights_of_columbus$."
+	}
+	option = {
+		name = only_caudillos
+		text = "YCaudillos Allowed"
+		desc = "Mexico can either $MEX_focus_arrest_general_cedillo$ (historical) or $MEX_focus_support_general_cedillo$, but is forced to follow focuses under $MEX_focus_state_education$ (historical)."
+	}
+	default = {
+		name = allowed
+		text = "GYes"
+		desc = "Mexico can either $MEX_focus_arrest_general_cedillo$ (historical) or $MEX_focus_support_general_cedillo$, and can follow either $MEX_focus_state_education$ (historical) or $MEX_focus_knights_of_columbus$."
+	}
+	option = {
+		name = forced_caudillos
+		text = "CForced Caudillos"
+		desc = "Mexico is forced to $MEX_focus_support_general_cedillo$, but can follow either $MEX_focus_state_education$ (historical) or $MEX_focus_knights_of_columbus$."
+	}
+	option = {
+		name = forced_caudillos_secularism
+		text = "0Forced Caudillos & Secularism"
+		desc = "Mexico is forced to $MEX_focus_support_general_cedillo$ and to follow focuses under $MEX_focus_state_education$ (historical)."
+	}
+}
+alt_hist_raj = {
+	name = "Can the British Raj do alt-historical democratic focuses?"
+	group = "HMM Alternate History Rules"
+	option = {
+		name = banned
+		text = "RNo"
+		desc = "The British Raj is forced to follow focuses under $RAJ_provincial_autonomy$ and $RAJ_two_nation_theory_dlc$."
+	}
+	option = {
+		name = only_india_united
+		text = "YIndependence Paths Allowed"
+		desc = "The British Raj is forced to follow $RAJ_provincial_autonomy$, but can choose either $RAJ_two_nation_theory_dlc$ (historical) or $RAJ_india_united$."
+	}
+	option = {
+		name = allowed
+		text = "GAll Paths Allowed"
+		desc = "The British Raj can follow either $RAJ_provincial_autonomy$ or $RAJ_his_majestys_loyal_government$. If they choose $RAJ_provincial_autonomy$, they can also choose to follow either $RAJ_two_nation_theory_dlc$ (historical) or $RAJ_india_united$."
+	}
+	default = {
+		name = forced
+		text = "CForced Loyalty Path"
+		desc = "The British Raj is forced to follow focuses under $RAJ_his_majestys_loyal_government$."
+	}
+}
+alt_hist_sia_eco = {
+	name = "Can Siam do alt-historical economy focuses?"
+	group = "HMM Alternate History Rules"
+	default = {
+		name = banned
+		text = "RNo"
+		desc = "Siam is forced to follow focuses under $SIA_thai_rice_company$ (historical)."
+	}
+	option = {
+		name = allowed
+		text = "GYes"
+		desc = "Siam can follow either $SIA_thai_rice_company$ (historical) or $SIA_the_bank_of_siam$."
+	}
+	option = {
+		name = forced
+		text = "CForced"
+		desc = "Siam is forced to follow focuses under $SIA_the_bank_of_siam$."
+	}
+}
+alt_hist_spr = {
+	name = "Can Spain do alt-historical fascist focuses?"
+	group = "HMM Alternate History Rules"
+	option = {
+		name = banned
+		text = "RNo"
+		desc = "Spain is forced to follow focuses under $SPA_autarky$ and cannot do $SPA_join_the_axis$ (historical)."
+	}
+	default = {
+		name = banned_no_faction_needed
+		text = "ONo & Relax Faction Requirements"
+		desc = "Spain is forced to follow focuses under $SPA_autarky$ and cannot do $SPA_join_the_axis$ (historical), but does not need to join the Axis to finish certain focuses."
+	}
+	option = {
+		name = allowed
+		text = "GYes"
+		desc = "Spain can follow either $SPA_autarky$ (historical) or $SPA_fascist_economic_aid$, though needs to remain in the Axis to complete focuses under the latter."
+	}
+	option = {
+		name = allowed_no_faction_needed
+		text = "YYes & Relax Faction Requirements"
+		desc = "Spain can follow either $SPA_autarky$ (historical) or $SPA_fascist_economic_aid$, and can follow the latter without staying in the Axis."
+	}
+	option = {
+		name = forced
+		text = "CForced"
+		desc = "Spain is forced to follow focuses under $SPA_fascist_economic_aid$ and needs to remain in the Axis to complete the focuses under it."
+	}
+	option = {
+		name = forced_no_faction_needed
+		text = "0Forced & Relax Faction Requirements"
+		desc = "Spain is forced to follow focuses under $SPA_fascist_economic_aid$ and does not need to remain in the Axis to complete the focuses under it."
 	}
 }

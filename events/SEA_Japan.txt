@@ -27,6 +27,14 @@ country_event = {
 	# We want to go for the historical option :/
 	option = { 
 		name = SEA_japan.1.a
+		trigger = {
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_jap
+					option = forced
+				}
+			}
+		}
 		ai_chance = {
 			base = 0
 			modifier = {
@@ -92,6 +100,14 @@ country_event = {
 	# It's shougunating time heck yea
 	option = { 
 		name = SEA_japan.1.b
+		trigger = {
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_jap
+					option = banned
+				}
+			}
+		}
 		ai_chance = {
 			base = 0
 			modifier = {
@@ -168,6 +184,7 @@ country_event = {
 	# We have come to the conclusion that fascism = bad
 	option = { 
 		name = SEA_japan.1.c
+		trigger = { always = no }
 		ai_chance = {
 			base = 0
 			modifier = {
@@ -270,6 +287,7 @@ country_event = {
 	# We have come to the conclusion that fascism = bad (non sea dem)
 	option = { 
 		name = SEA_japan.1.d
+		trigger = { always = no }
 		ai_chance = {
 			base = 0
 			modifier = {
@@ -322,6 +340,7 @@ country_event = {
 	# We have come to the conclusion that fascism = bad (non sea com)
 	option = { 
 		name = SEA_japan.1.e
+		trigger = { always = no }
 		ai_chance = {
 			base = 0
 			modifier = {

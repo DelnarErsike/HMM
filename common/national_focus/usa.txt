@@ -87,6 +87,12 @@ focus_tree = {
 					has_completed_focus = USA_reestablish_the_gold_standard
 				}
 			}
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_usa
+					option = forced
+				}
+			}
 		}
 
 		available = {
@@ -2883,6 +2889,12 @@ focus_tree = {
 					has_completed_focus = USA_continue_the_new_deal
 				}
 			}
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_usa
+					option = banned
+				}
+			}
 		}
 
 		available = {
@@ -2895,7 +2907,6 @@ focus_tree = {
 		bypass = {
 
 		}
-		allow_branch = { always = no }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -3236,6 +3247,7 @@ focus_tree = {
 		bypass = {
 
 		}
+		allow_branch = { always = no }
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
@@ -3294,6 +3306,7 @@ focus_tree = {
 		bypass = {
 			has_government = fascism
 		}
+		allow_branch = { always = no }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -3632,6 +3645,7 @@ focus_tree = {
 		bypass = {
 
 		}
+		allow_branch = { always = no }
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes

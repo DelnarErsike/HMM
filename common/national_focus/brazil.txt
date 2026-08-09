@@ -52,6 +52,12 @@ focus_tree = {
 		available = {
 		}
 		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_bul
+					option = forced
+				}
+			}
 			IF = {
 				limit = {
 					has_game_rule = {
@@ -4529,7 +4535,12 @@ focus_tree = {
 		available = {
 		}
 		allow_branch = {
-			always = no
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_bul
+					option = banned
+				}
+			}
 			IF = {
 				limit = {
 					has_game_rule = {
@@ -4562,7 +4573,7 @@ focus_tree = {
 	focus = {
 		id = BRA_repeal_the_national_security_law
 		icon = GFX_focus_BRA_repeale_national_security_law
-		x = -4
+		x = 0
 		y = 1
 		relative_position_id = BRA_end_the_state_of_emergency
 		prerequisite = { focus = BRA_end_the_state_of_emergency }
@@ -5280,9 +5291,9 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = BRA_international_crisis 
-			set_rule = {
-				can_send_volunteers = yes
-			}
+			#set_rule = {
+			#	can_send_volunteers = yes
+			#}
 			#set_rule = {
 			#	can_join_factions = yes 
 			#}

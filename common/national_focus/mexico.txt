@@ -886,6 +886,26 @@ focus_tree = {
 		bypass = {
 			
 		}
+		allow_branch = {
+			OR = {
+				has_game_rule = {
+					rule = alt_hist_mex
+					option = only_caudillos
+				}
+				has_game_rule = {
+					rule = alt_hist_mex
+					option = allowed
+				}
+				has_game_rule = {
+					rule = alt_hist_mex
+					option = forced_caudillos
+				}
+				has_game_rule = {
+					rule = alt_hist_mex
+					option = forced_caudillos_secularism
+				}
+			}
+		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -2431,6 +2451,22 @@ focus_tree = {
 		bypass = {
 			
 		}
+		allow_branch = {
+			OR = {
+				has_game_rule = {
+					rule = alt_hist_mex
+					option = banned
+				}
+				has_game_rule = {
+					rule = alt_hist_mex
+					option = only_christian_democracy
+				}
+				has_game_rule = {
+					rule = alt_hist_mex
+					option = allowed
+				}
+			}
+		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -2932,6 +2968,22 @@ focus_tree = {
 
 		bypass = {
 			
+		}
+		allow_branch = {
+			OR = {
+				has_game_rule = {
+					rule = alt_hist_mex
+					option = only_christian_democracy
+				}
+				has_game_rule = {
+					rule = alt_hist_mex
+					option = allowed
+				}
+				has_game_rule = {
+					rule = alt_hist_mex
+					option = forced_caudillos
+				}
+			}
 		}
 
 		cancel_if_invalid = yes

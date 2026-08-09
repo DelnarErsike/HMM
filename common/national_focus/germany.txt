@@ -132,9 +132,11 @@ focus_tree = {
 		#relative_position_id = GER_strengthen_the_kriegsmarine
 
 		available = {
-			has_game_rule = {
-				rule = Germany_Wirtschaftswunder
-				option = Germany_wirtschaftswunder
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_ger_eco
+					option = banned
+				}
 			}
 		}
 
@@ -1595,7 +1597,12 @@ focus_tree = {
 		relative_position_id = GER_prioritize_economic_growth
 		cost = 5
 		available = {
-
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_ger_eco
+					option = forced
+				}
+			}
 		}
 		
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
@@ -11136,10 +11143,11 @@ focus_tree = {
 		cost = 5
 
 		bypass = { 
-			any_country_with_original_tag = {
-				original_tag_to_check = SPR
-				is_in_faction_with = ROOT
-			}
+			# HMM: removed this bypass as a least-worst option for dealing with the weirdness where if Spain joins the Axis before Germany does this focus, it bypasses and Spain can't get their debuffs removed
+			#any_country_with_original_tag = {
+			#	original_tag_to_check = SPR
+			#	is_in_faction_with = ROOT
+			#}
 		}
 		
 		available = {
@@ -11156,19 +11164,22 @@ focus_tree = {
 					NOT = { has_war_with = ROOT }
 					has_civil_war = no
 					is_subject = no
+					OR = { # HMM: allow this focus to be taken to remove the Spain spirit even after they're in the Axis
 					is_in_faction = no
+					is_in_faction_with = ROOT
+					}
 				}
 			}
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
+			else = {
 				SPA = {
 					exists = yes
 					NOT = { has_war_with = ROOT }
 					has_civil_war = no
 					is_subject = no
+					OR = { # HMM: allow this focus to be taken to remove the Spain spirit even after they're in the Axis
 					is_in_faction = no
+					is_in_faction_with = ROOT
+					}
 				}
 			}
 			FRA = {
@@ -11180,7 +11191,6 @@ focus_tree = {
 				}
 			}
 		}
-		allow_branch = { always = no }
 
 		ai_will_do = {
 			factor = 10
@@ -11257,9 +11267,15 @@ focus_tree = {
 								value = 50
 							}
 						}
+						if = {
+							limit = { NOT = { is_in_faction_with = ROOT } }
 						country_event = { id = generic.5 hours = 4 random_hours = 4 }
+						}
 					}
+					if = {
+						limit = { NOT = { is_in_faction_with = ROOT } }
 					custom_effect_tooltip = generic_invite_to_faction_tt
+					}
 				}
 			}
 			else = {
@@ -11270,7 +11286,10 @@ focus_tree = {
 						exists = yes
 						NOT = { has_war_with = ROOT }
 						is_subject = no
+						OR = { # HMM: allow this focus to be taken to remove the Spain spirit even after they're in the Axis
 						is_in_faction = no
+						is_in_faction_with = ROOT
+						}
 					}
 					if = {
 						limit = {
@@ -11300,9 +11319,15 @@ focus_tree = {
 								value = 50
 							}
 						}
+						if = {
+							limit = { NOT = { is_in_faction_with = ROOT } }
 						country_event = { id = generic.5 hours = 4 random_hours = 4 }
+						}
 					}
+					if = {
+						limit = { NOT = { is_in_faction_with = ROOT } }
 					custom_effect_tooltip = generic_invite_to_faction_tt
+					}
 				}
 			}
 		}

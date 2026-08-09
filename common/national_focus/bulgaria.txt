@@ -6568,6 +6568,14 @@ focus_tree = {
 		available = {
 
 		}
+		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_bul
+					option = forced
+				}
+			}
+		}
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
@@ -7779,6 +7787,14 @@ focus_tree = {
 
 		available = {
 
+		}
+		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_bul
+					option = banned
+				}
+			}
 		}
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}

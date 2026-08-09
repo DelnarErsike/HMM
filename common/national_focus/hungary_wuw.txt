@@ -48,7 +48,20 @@ focus_tree = {
 		}
 
 		allow_branch = {
-			always = no
+			OR = {
+				has_game_rule = {
+					rule = alt_hist_hun
+					option = only_fascist_king
+				}
+				has_game_rule = {
+					rule = alt_hist_hun
+					option = allowed
+				}
+				has_game_rule = {
+					rule = alt_hist_hun
+					option = forced_fascist_king
+				}
+			}
 			IF = {
 				limit = {
 					has_game_rule = {
@@ -164,6 +177,12 @@ focus_tree = {
 		}
 
 		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_hun
+					option = forced_fascist_king
+				}
+			}
 			IF = {
 				limit = {
 					has_game_rule = {
@@ -5742,7 +5761,20 @@ focus_tree = {
 		}
 
 		allow_branch = {
-			always = no
+			OR = {
+				has_game_rule = {
+					rule = alt_hist_hun
+					option = only_fascist_king
+				}
+				has_game_rule = {
+					rule = alt_hist_hun
+					option = allowed
+				}
+				has_game_rule = {
+					rule = alt_hist_hun
+					option = forced_fascist_king
+				}
+			}
 			IF = {
 				limit = {
 					has_game_rule = {
@@ -7629,6 +7661,18 @@ focus_tree = {
 		}
 
 		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_hun
+					option = forced_fascist_king
+				}
+			}
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_hun
+					option = forced_arrow_cross
+				}
+			}
 			IF = {
 				limit = {
 					has_game_rule = {
@@ -7716,7 +7760,20 @@ focus_tree = {
 		}
 
 		allow_branch = {
-			always = no
+			OR = {
+				has_game_rule = {
+					rule = alt_hist_hun
+					option = only_arrow_cross
+				}
+				has_game_rule = {
+					rule = alt_hist_hun
+					option = allowed
+				}
+				has_game_rule = {
+					rule = forced_arrow_cross
+					option = forced_fascist_king
+				}
+			}
 			IF = {
 				limit = {
 					has_game_rule = {
@@ -8847,7 +8904,7 @@ focus_tree = {
 		icon = GFX_focus_HUN_incorporate_the_hungarian_life_movement
 		prerequisite = { focus = wuw_HUN_a_roman_catholic_state }
 		#mutually_exclusive = { focus = wuw_HUN_government_of_national_unity }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = wuw_HUN_a_roman_catholic_state
 
@@ -9100,6 +9157,7 @@ focus_tree = {
 		bypass = {
 
 		}
+		allow_branch = { always = no }
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
@@ -9326,8 +9384,9 @@ focus_tree = {
 
 		allow_branch = {
 			has_dlc = "Gotterdammerung"
-			has_completed_focus = wuw_HUN_wherever_the_cross_points
-			has_completed_focus = wuw_HUN_strengthen_the_turani_vadaszok
+			# HMM: no point hiding this
+			#has_completed_focus = wuw_HUN_wherever_the_cross_points
+			#has_completed_focus = wuw_HUN_strengthen_the_turani_vadaszok
 		}
 
 		available = {
@@ -9468,7 +9527,7 @@ focus_tree = {
 		prerequisite = { focus = wuw_HUN_reaffirm_territorial_claims }
 		prerequisite = { focus = wuw_HUN_wherever_the_cross_points }
 		#mutually_exclusive = { focus = wuw_HUN_government_of_national_unity }
-		x = 3
+		x = 1
 		y = 4
 		relative_position_id = wuw_HUN_wherever_the_cross_points
 

@@ -8554,7 +8554,12 @@ focus_tree = {
 		mutually_exclusive = { focus = ITA_culto_del_duce focus = ITA_defy_the_duce }
 
 		allow_branch = {
-			always = no
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_ita
+					option = banned
+				}
+			}
 			has_dlc = "By Blood Alone"
 			if = {
 				limit = {
@@ -10621,6 +10626,20 @@ focus_tree = {
 				}
 			}
 		}
+		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_ita
+					option = banned
+				}
+			}
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_ita
+					option = only_dino_grandi
+				}
+			}
+		}
 
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_BALANCE_OF_POWER}
 
@@ -10676,6 +10695,20 @@ focus_tree = {
 			GER = {
 				NOT = {
 					has_completed_focus = GER_assassinate_mussolini
+				}
+			}
+		}
+		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_ita
+					option = banned
+				}
+			}
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_ita
+					option = only_italo_balbo
 				}
 			}
 		}
@@ -11012,6 +11045,7 @@ focus_tree = {
 						NOT = { is_guaranteed_by = ROOT }
 						NOT = { has_non_aggression_pact_with = ROOT }
 						capital_scope = { is_on_continent = europe }
+						axis = no
 					}
 					ROOT = {
 						create_wargoal = {
@@ -11733,6 +11767,7 @@ focus_tree = {
 				}
 			}
 		}
+		allow_branch = { always = no }
 		
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
@@ -11816,6 +11851,7 @@ focus_tree = {
 				}
 			}
 		}
+		allow_branch = { always = no }
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
@@ -12292,6 +12328,7 @@ focus_tree = {
 		available = {
 			neutrality > 0.25
 		}
+		allow_branch = { always = no }
 
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER}
 
