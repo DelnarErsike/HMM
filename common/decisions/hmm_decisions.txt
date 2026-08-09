@@ -58,6 +58,10 @@ operations = {
         available = {
             SAF = {
                 is_ai = yes
+                OR = { # Just in case
+                    is_in_faction_with = ENG
+                    is_in_faction_with = ROOT
+                }
             }
             ENG = {
                 has_completed_focus = uk_south_africa_focus
@@ -148,7 +152,7 @@ operations = {
             factor = 100
         }
         available = {
-            
+            ETH = { is_ai = yes } # Just in case
         }
         targets = {
             ETH
@@ -231,8 +235,9 @@ operations = {
             factor = 100
         }
         available = {
-            FRA = {has_capitulated = yes}
-            }
+            COG = { is_ai = yes } # Just in case
+            FRA = { has_capitulated = yes }
+        }
         targets = {
             COG
         }
@@ -277,8 +282,9 @@ operations = {
             factor = 100
         }
         available = {
-            FRA = {has_capitulated = yes}
-            }
+            IRE = { is_ai = yes } # Just in case
+            FRA = { has_capitulated = yes }
+        }
         targets = {
             IRE
         }
@@ -321,6 +327,7 @@ operations = {
         available = {
             MAN = {
                 is_ai = yes
+                is_in_faction_with = ROOT # Just in case
             }
         }
         fire_only_once = yes
@@ -376,14 +383,12 @@ operations = {
         available = {
             NZL = {
                 is_ai = yes
+                is_in_faction_with = ROOT # Just in case
+                has_completed_focus = NZL_think_big
             }
             ENG = {
-                    has_completed_focus = uk_new_zealand_focus
+                has_completed_focus = uk_new_zealand_focus
             }
-            NZL = {
-                    has_completed_focus = NZL_think_big
-            }
-
         }
         targets = {
             NZL
@@ -430,6 +435,7 @@ operations = {
         available = {
             PHI = {
                 is_ai = yes
+                is_in_faction_with = ROOT # Just in case
             }
         }
         targets = {

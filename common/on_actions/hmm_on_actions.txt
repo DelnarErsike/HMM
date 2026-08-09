@@ -372,8 +372,6 @@ on_actions = {
 
 	on_capitulation = {
 		effect = {
-			hmm_capitulations_on_actions = yes
-
 			if = {
 				limit = { tag = BEL }
 				if = {
@@ -452,6 +450,8 @@ on_actions = {
 					allow_axis_grind = yes
 				}
 			}
+
+			hmm_capitulations_on_actions = yes
 		}
 	}
 
