@@ -659,6 +659,7 @@ country_event = {
 	option = { 
 		name = SEA_japan_foreign_policy.4.b
 		trigger = {
+			always = no
 			NOT = { has_active_mission = SIA_limited_war_indochina }
 		}
 		ai_chance = {
