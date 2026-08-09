@@ -349,43 +349,52 @@ hmm_capitulations_on_actions = {
 }
 
 allow_axis_grind = {
-	set_global_flag = axis_grind_allowed
-	every_country = {
-		limit = {
-			can_grind_generals = yes
-			any_army_leader = { has_trait = no_grind }
-		}
-		every_army_leader = {
-			limit = { has_trait = no_grind }
-			remove_unit_leader_trait = no_grind
+	if = {
+		limit = { NOT = { has_global_flag = axis_grind_allowed } }
+		set_global_flag = axis_grind_allowed
+		every_country = {
+			limit = {
+				can_grind_generals = yes
+				any_army_leader = { has_trait = no_grind }
+			}
+			every_army_leader = {
+				limit = { has_trait = no_grind }
+				remove_unit_leader_trait = no_grind
+			}
 		}
 	}
 }
 
 allow_allies_grind = {
-	set_global_flag = allies_grind_allowed
-	every_country = {
-		limit = {
-			can_grind_generals = yes
-			any_army_leader = { has_trait = no_grind }
-		}
-		every_army_leader = {
-			limit = { has_trait = no_grind }
-			remove_unit_leader_trait = no_grind
+	if = {
+		limit = { NOT = { has_global_flag = allies_grind_allowed } }
+		set_global_flag = allies_grind_allowed
+		every_country = {
+			limit = {
+				can_grind_generals = yes
+				any_army_leader = { has_trait = no_grind }
+			}
+			every_army_leader = {
+				limit = { has_trait = no_grind }
+				remove_unit_leader_trait = no_grind
+			}
 		}
 	}
 }
 
 allow_geacps_grind = { # Need a separate one for GEACPS in case of EuroAxis skill issue (or special rules in non-RB servers) where they might not cap Norway
-	set_global_flag = geacps_grind_allowed
-	every_country = {
-		limit = {
-			can_grind_generals = yes
-			any_army_leader = { has_trait = no_grind }
-		}
-		every_army_leader = {
-			limit = { has_trait = no_grind }
-			remove_unit_leader_trait = no_grind
+	if = {
+		limit = { NOT = { has_global_flag = geacps_grind_allowed } }
+		set_global_flag = geacps_grind_allowed
+		every_country = {
+			limit = {
+				can_grind_generals = yes
+				any_army_leader = { has_trait = no_grind }
+			}
+			every_army_leader = {
+				limit = { has_trait = no_grind }
+				remove_unit_leader_trait = no_grind
+			}
 		}
 	}
 }

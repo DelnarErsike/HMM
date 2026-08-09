@@ -201,23 +201,32 @@ axis_geacps = {
 
 # HMM: keep this in sync with the on_war_relation_added block in on actions responsible for removing the no grind trait
 can_grind_generals = {
-	if = { # This needs to be first because axis_geacps counts as part of axis, too
-		limit = { axis_geacps = yes }
-		has_global_flag = geacps_grind_allowed
-		has_war_with = ENG
-	}
-	else_if = {
-		limit = { axis = yes }
+	if = {
+		limit = { axis_european = yes }
 		has_global_flag = axis_grind_allowed
 		OR = {
 			has_war_with = ENG
+			has_war_with = USA
+			has_war_with = SOV
 			tag = SPR
+		}
+	}
+	else_if = {
+		limit = { axis_geacps = yes }
+		has_global_flag = geacps_grind_allowed
+		OR = {
+			has_war_with = ENG
+			has_war_with = USA
+			has_war_with = SOV # Just in case
 		}
 	}
 	else_if = {
 		limit = { allies = yes }
 		has_global_flag = allies_grind_allowed
-		has_war_with = GER
+		OR = {
+			has_war_with = GER
+			has_war_with = JAP
+		}
 	}
 }
 
