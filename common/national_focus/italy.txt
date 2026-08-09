@@ -8935,6 +8935,24 @@ focus_tree = {
 		mutually_exclusive = { focus = ITA_convene_the_grand_council focus = ITA_defy_the_duce }
 
 		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_ita
+					option = forced
+				}
+			}
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_ita
+					option = forced_italo_balbo
+				}
+			}
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_ita
+					option = forced_dino_grandi
+				}
+			}
 			if = {
 				limit = {
 					has_dlc = "By Blood Alone"
@@ -10639,6 +10657,12 @@ focus_tree = {
 					option = only_dino_grandi
 				}
 			}
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_ita
+					option = forced_dino_grandi
+				}
+			}
 		}
 
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_BALANCE_OF_POWER}
@@ -10709,6 +10733,12 @@ focus_tree = {
 				has_game_rule = {
 					rule = alt_hist_ita
 					option = only_italo_balbo
+				}
+			}
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_ita
+					option = forced_italo_balbo
 				}
 			}
 		}

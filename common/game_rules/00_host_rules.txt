@@ -939,6 +939,21 @@ alt_hist_ita = {
 		text = "GYes"
 		desc = "Italy can follow focuses under Culto del Duce (historical), Italo Balbo, or Dino Grandi."
 	}
+	option = {
+		name = forced
+		text = "CForced Alt-Historical"
+		desc = "Italy can follow focuses under Italo Balbo or Dino Grandi."
+	}
+	option = {
+		name = forced_italo_balbo
+		text = "BForced Italo Balbo"
+		desc = "Italy can follow focuses under Culto del Duce (historical) or Italo Balbo."
+	}
+	option = {
+		name = forced_dino_grandi
+		text = "0Forced Dino Grandi"
+		desc = "Italy can follow focuses under Culto del Duce (historical) or Dino Grandi."
+	}
 }
 alt_hist_jap = {
 	name = "Can Japan do alt-historical non-aligned focuses?"
