@@ -865,17 +865,17 @@ alt_hist_fra = {
 	option = {
 		name = banned
 		text = "RNo"
-		desc = "France is forced to follow focuses under $FRA_form_the_popular_front$ (historical)."
+		desc = "France is forced to follow focuses under Form the Popular Front (historical)."
 	}
 	default = {
 		name = allowed
 		text = "GYes"
-		desc = "France can follow either $FRA_form_the_popular_front$ (historical) or $FRA_revive_the_national_bloc$."
+		desc = "France can follow either Form the Popular Front (historical) or Revive the National Bloc."
 	}
 	option = {
 		name = forced
 		text = "CForced"
-		desc = "France is forced to follow focuses under $FRA_revive_the_national_bloc$."
+		desc = "France is forced to follow focuses under Revive the National Bloc."
 	}
 }
 alt_hist_usa = {
@@ -884,17 +884,17 @@ alt_hist_usa = {
 	default = {
 		name = banned
 		text = "RNo"
-		desc = "The USA is forced to follow focuses under $USA_continue_the_new_deal$ (historical)."
+		desc = "The USA is forced to follow focuses under Continue the New Deal (historical)."
 	}
 	option = {
 		name = allowed
 		text = "GYes"
-		desc = "The USA can follow either $USA_continue_the_new_deal$ (historical) or $USA_reestablish_the_gold_standard$."
+		desc = "The USA can follow either Continue the New Deal (historical) or Reestablish the Gold Standard."
 	}
 	option = {
 		name = forced
 		text = "CForced"
-		desc = "The USA is forced to follow focuses under $USA_reestablish_the_gold_standard$."
+		desc = "The USA is forced to follow focuses under Reestablish the Gold Standard."
 	}
 }
 alt_hist_ger_eco = {
@@ -903,17 +903,17 @@ alt_hist_ger_eco = {
 	default = {
 		name = banned
 		text = "RNo"
-		desc = "Germany is forced to follow focuses under $GER_the_four_year_plan$ (historical)."
+		desc = "Germany is forced to follow focuses under The Four-Year Plan (historical)."
 	}
 	option = {
 		name = allowed
 		text = "GYes"
-		desc = "Germany can follow either $GER_the_four_year_plan$ (historical) or $GER_prioritize_economic_growth$."
+		desc = "Germany can follow either The Four-Year Plan (historical) or Prioritize Economic Growth."
 	}
 	option = {
 		name = forced
 		text = "CForced"
-		desc = "Germany is forced to follow focuses under $GER_prioritize_economic_growth$."
+		desc = "Germany is forced to follow focuses under Prioritize Economic Growth."
 	}
 }
 alt_hist_ita = {
@@ -922,22 +922,22 @@ alt_hist_ita = {
 	default = {
 		name = banned
 		text = "RNo"
-		desc = "Italy is forced to follow focuses under $ITA_culto_del_duce$ (historical)."
+		desc = "Italy is forced to follow focuses under Culto del Duce (historical)."
 	}
 	option = {
 		name = only_italo_balbo
-		text = "OOnly $ITA_italo_balbo_focus$"
-		desc = "Italy can follow focuses under $ITA_culto_del_duce$ (historical) or $ITA_italo_balbo_focus$."
+		text = "OOnly Italo Balbo"
+		desc = "Italy can follow focuses under Culto del Duce (historical) or Italo Balbo."
 	}
 	option = {
 		name = only_dino_grandi
-		text = "YOnly $ITA_dino_grandi_focus$"
-		desc = "Italy can follow focuses under $ITA_culto_del_duce$ (historical) or $ITA_dino_grandi_focus$."
+		text = "YOnly Dino Grandi"
+		desc = "Italy can follow focuses under Culto del Duce (historical) or Dino Grandi."
 	}
 	option = {
 		name = allowed
-		text = "GAlt-Fascist Allowed"
-		desc = "Italy can follow focuses under $ITA_culto_del_duce$ (historical), $ITA_italo_balbo_focus$, or $ITA_dino_grandi_focus$."
+		text = "GYes"
+		desc = "Italy can follow focuses under Culto del Duce (historical), Italo Balbo, or Dino Grandi."
 	}
 }
 alt_hist_jap = {
@@ -946,17 +946,17 @@ alt_hist_jap = {
 	default = {
 		name = banned
 		text = "RNo"
-		desc = "Japan is forced to follow focuses under $JAP_sea_purge_the_kodoha_faction$ (historical)."
+		desc = "Japan is forced to follow focuses under Purge the Kodoha Faction (historical)."
 	}
 	option = {
 		name = allowed
 		text = "GYes"
-		desc = "Japan can follow either $JAP_sea_purge_the_kodoha_faction$ (historical) or $JAP_revere_the_emperor_destroy_the_traitors$."
+		desc = "Japan can follow either Purge the Kodoha Faction (historical) or Revere the Emperor, Destroy the Traitors."
 	}
 	option = {
 		name = forced
 		text = "CForced"
-		desc = "Japan is forced to follow focuses under $JAP_revere_the_emperor_destroy_the_traitors$."
+		desc = "Japan is forced to follow focuses under Revere the Emperor, Destroy the Traitors."
 	}
 }
 alt_hist_bra = {
@@ -965,17 +965,17 @@ alt_hist_bra = {
 	default = {
 		name = banned
 		text = "RNo"
-		desc = "Brazil is forced to follow focuses under $BRA_tribunal_de_seguranca_nacional$ and $BRA_estado_novo$ (historical)."
+		desc = "Brazil is forced to follow focuses under Tribunal de Segurança Nacional and Estado Novo (historical)."
 	}
 	option = {
 		name = allowed
 		text = "GYes"
-		desc = "Brazil can follow either $BRA_tribunal_de_seguranca_nacional$ and $BRA_estado_novo$ (historical) or $BRA_end_the_state_of_emergency$ and $BRA_repeal_the_national_security_law$."
+		desc = "Brazil can follow either Tribunal de Segurança Nacional and Estado Novo (historical) or End the State of Emergency and Repeal the National Security Laws."
 	}
 	option = {
 		name = forced
 		text = "CForced"
-		desc = "Brazil is forced to follow focuses under $BRA_end_the_state_of_emergency$ and $BRA_repeal_the_national_security_law$."
+		desc = "Brazil is forced to follow focuses under End the State of Emergency and Repeal the National Security Laws."
 	}
 }
 alt_hist_bul = {
@@ -984,17 +984,17 @@ alt_hist_bul = {
 	option = {
 		name = banned
 		text = "RNo"
-		desc = "Bulgaria is forced to follow focuses under $BUL_the_tsars_regime$ (historical)."
+		desc = "Bulgaria is forced to follow focuses under The Tsar's Regime (historical)."
 	}
 	default = {
 		name = allowed
 		text = "GYes"
-		desc = "Bulgaria can follow either $BUL_the_tsars_regime$ (historical) or $BUL_appoint_right_wing_ministers$."
+		desc = "Bulgaria can follow either The Tsar's Regime (historical) or Appoint Right-Wing Ministers."
 	}
 	option = {
 		name = forced
 		text = "CForced"
-		desc = "Bulgaria is forced to follow focuses under $BUL_appoint_right_wing_ministers$."
+		desc = "Bulgaria is forced to follow focuses under Appoint Right-Wing Ministers."
 	}
 }
 alt_hist_fin = {
@@ -1003,27 +1003,27 @@ alt_hist_fin = {
 	default = {
 		name = banned_no_lone_wolf
 		text = "0No & Lone Wolf Banned"
-		desc = "Finland is forced to follow focuses under $FIN_finnish_neutrality$ (historical) and cannot do $FIN_the_lone_wolf$, $FIN_northern_defense_front$, or $FIN_join_the_allies$."
+		desc = "Finland is forced to follow focuses under Finnish Neutrality (historical) and cannot do The Lone Wolf, Northern Defense Front, or Join the Allies."
 	}
 	option = {
 		name = banned
 		text = "RNo"
-		desc = "Finland is forced to follow focuses under $FIN_finnish_neutrality$ and $FIN_the_lone_wolf$ (historical)."
+		desc = "Finland is forced to follow focuses under Finnish Neutrality and The Lone Wolf (historical)."
 	}
 	option = {
 		name = allowed_no_lone_wolf
 		text = "YYes, but Lone Wolf banned"
-		desc = "Finland can follow either $FIN_finnish_neutrality$ (historical) or $FIN_right_wing_policies$, but if they choose the former, they cannot do $FIN_the_lone_wolf$, $FIN_northern_defense_front$, or $FIN_join_the_allies$."
+		desc = "Finland can follow either Finnish Neutrality (historical) or Right-Wing Policies, but if they choose the former, they cannot do The Lone Wolf, Northern Defense Front, or Join the Allies."
 	}
 	option = {
 		name = allowed
 		text = "GYes"
-		desc = "Finland can follow either $FIN_finnish_neutrality$ and $FIN_the_lone_wolf$ (historical) or $FIN_right_wing_policies$."
+		desc = "Finland can follow either Finnish Neutrality and The Lone Wolf (historical) or Right-Wing Policies."
 	}
 	option = {
 		name = forced
 		text = "CForced"
-		desc = "Finland is forced to follow focuses under $FIN_right_wing_policies$."
+		desc = "Finland is forced to follow focuses under Right-Wing Policies."
 	}
 }
 alt_hist_hun = {
@@ -1032,32 +1032,32 @@ alt_hist_hun = {
 	default = {
 		name = banned
 		text = "RNo"
-		desc = "Hungary is forced to follow focuses under $wuw_HUN_continue_the_regency$ (historical) and $wuw_HUN_strengthen_horthys_reign$ (historical)."
+		desc = "Hungary is forced to follow focuses under Continue the Regency (historical) and Reinforce Horthy's Reign (historical)."
 	}
 	option = {
 		name = only_fascist_king
 		text = "OFascist King Allowed"
-		desc = "Hungary can follow either $wuw_HUN_continue_the_regency$ (historical) and $wuw_HUN_strengthen_horthys_reign$ (historical) or $wuw_HUN_end_the_regency$ and $wuw_HUN_elect_a_fascist_king$."
+		desc = "Hungary can follow either Continue the Regency (historical) and Reinforce Horthy's Reign (historical) or End the Regency and Elect a Fascist King."
 	}
 	option = {
 		name = only_arrow_cross
 		text = "YNon-Monarchist Fascist Allowed"
-		desc = "Hungary is forced to follow focuses under $wuw_HUN_continue_the_regency$ (historical), but can follow either $wuw_HUN_strengthen_horthys_reign$ (historical) or $wuw_HUN_undermine_the_admiral$."
+		desc = "Hungary is forced to follow focuses under Continue the Regency (historical), but can follow either Reinforce Horthy's Reign (historical) or Undermine the Admiral."
 	}
 	option = {
 		name = allowed
 		text = "GYes"
-		desc = "Hungary can follow either $wuw_HUN_continue_the_regency$ (historical) and either $wuw_HUN_strengthen_horthys_reign$ (historical) or $wuw_HUN_undermine_the_admiral$, or $wuw_HUN_end_the_regency$ and $wuw_HUN_elect_a_fascist_king$."
+		desc = "Hungary can follow either Continue the Regency (historical) and either Reinforce Horthy's Reign (historical) or Undermine the Admiral, or End the Regency and Elect a Fascist King."
 	}
 	option = {
 		name = forced_arrow_cross
 		text = "CForced Non-Monarchist Fascist"
-		desc = "Hungary is forced to follow focuses under $wuw_HUN_continue_the_regency$ (historical) and $wuw_HUN_undermine_the_admiral$."
+		desc = "Hungary is forced to follow focuses under Continue the Regency (historical) and Undermine the Admiral."
 	}
 	option = {
 		name = forced_fascist_king
 		text = "0Forced Fascist King"
-		desc = "Hungary is forced to follow focuses under $wuw_HUN_end_the_regency$ and $wuw_HUN_elect_a_fascist_king$."
+		desc = "Hungary is forced to follow focuses under End the Regency and Elect a Fascist King."
 	}
 }
 alt_hist_irq = {
@@ -1066,17 +1066,17 @@ alt_hist_irq = {
 	option = {
 		name = banned
 		text = "RNo"
-		desc = "Iraq is forced to follow focuses under $IRQ_party_of_national_brotherhood$ (historical)."
+		desc = "Iraq is forced to follow focuses under Party of National Brotherhood (historical)."
 	}
 	default = {
 		name = allowed
 		text = "GYes"
-		desc = "Iraq can follow either $IRQ_party_of_national_brotherhood$ (historical) or $IRQ_rally_behind_the_hashemite_dynasty$."
+		desc = "Iraq can follow either Party of National Brotherhood (historical) or Rally Behind the Hashemite Dynasty."
 	}
 	option = {
 		name = forced
 		text = "CForced"
-		desc = "Iraq is forced to follow focuses under $IRQ_rally_behind_the_hashemite_dynasty$."
+		desc = "Iraq is forced to follow focuses under Rally Behind the Hashemite Dynasty."
 	}
 }
 alt_hist_mex = {
@@ -1085,32 +1085,32 @@ alt_hist_mex = {
 	option = {
 		name = banned
 		text = "RNo"
-		desc = "Mexico is forced to $MEX_focus_arrest_general_cedillo$ (historical) and follow focuses under $MEX_focus_state_education$ (historical)."
+		desc = "Mexico is forced to Arrest General Cedillo (historical) and follow focuses under State Education (historical)."
 	}
 	option = {
 		name = only_christian_democracy
 		text = "OChristian Democracy Allowed"
-		desc = "Mexico is forced to $MEX_focus_arrest_general_cedillo$ (historical), but can follow either $MEX_focus_state_education$ (historical) or $MEX_focus_knights_of_columbus$."
+		desc = "Mexico is forced to Arrest General Cedillo (historical), but can follow either State Education (historical) or Knights of Columbus."
 	}
 	option = {
 		name = only_caudillos
 		text = "YCaudillos Allowed"
-		desc = "Mexico can either $MEX_focus_arrest_general_cedillo$ (historical) or $MEX_focus_support_general_cedillo$, but is forced to follow focuses under $MEX_focus_state_education$ (historical)."
+		desc = "Mexico can either Arrest General Cedillo (historical) or Support General Cedillo, but is forced to follow focuses under State Education (historical)."
 	}
 	default = {
 		name = allowed
 		text = "GYes"
-		desc = "Mexico can either $MEX_focus_arrest_general_cedillo$ (historical) or $MEX_focus_support_general_cedillo$, and can follow either $MEX_focus_state_education$ (historical) or $MEX_focus_knights_of_columbus$."
+		desc = "Mexico can either Arrest General Cedillo (historical) or Support General Cedillo, and can follow either State Education (historical) or Knights of Columbus."
 	}
 	option = {
 		name = forced_caudillos
 		text = "CForced Caudillos"
-		desc = "Mexico is forced to $MEX_focus_support_general_cedillo$, but can follow either $MEX_focus_state_education$ (historical) or $MEX_focus_knights_of_columbus$."
+		desc = "Mexico is forced to Support General Cedillo, but can follow either State Education (historical) or Knights of Columbus."
 	}
 	option = {
 		name = forced_caudillos_secularism
 		text = "0Forced Caudillos & Secularism"
-		desc = "Mexico is forced to $MEX_focus_support_general_cedillo$ and to follow focuses under $MEX_focus_state_education$ (historical)."
+		desc = "Mexico is forced to Support General Cedillo and to follow focuses under State Education (historical)."
 	}
 }
 alt_hist_raj = {
@@ -1119,22 +1119,22 @@ alt_hist_raj = {
 	option = {
 		name = banned
 		text = "RNo"
-		desc = "The British Raj is forced to follow focuses under $RAJ_provincial_autonomy$ and $RAJ_two_nation_theory_dlc$."
+		desc = "The British Raj is forced to follow focuses under Onto the Road of Independence and Two-Nation Theory."
 	}
 	option = {
 		name = only_india_united
 		text = "YIndependence Paths Allowed"
-		desc = "The British Raj is forced to follow $RAJ_provincial_autonomy$, but can choose either $RAJ_two_nation_theory_dlc$ (historical) or $RAJ_india_united$."
+		desc = "The British Raj is forced to follow Onto the Road of Independence, but can choose either Two-Nation Theory (historical) or India United."
 	}
 	option = {
 		name = allowed
-		text = "GAll Paths Allowed"
-		desc = "The British Raj can follow either $RAJ_provincial_autonomy$ or $RAJ_his_majestys_loyal_government$. If they choose $RAJ_provincial_autonomy$, they can also choose to follow either $RAJ_two_nation_theory_dlc$ (historical) or $RAJ_india_united$."
+		text = "GYes"
+		desc = "The British Raj can follow either Onto the Road of Independence or His Majesty's Loyal Government. If they choose Onto the Road of Independence, they can also choose to follow either Two-Nation Theory (historical) or India United."
 	}
 	default = {
 		name = forced
 		text = "CForced Loyalty Path"
-		desc = "The British Raj is forced to follow focuses under $RAJ_his_majestys_loyal_government$."
+		desc = "The British Raj is forced to follow focuses under His Majesty's Loyal Government."
 	}
 }
 alt_hist_sia_eco = {
@@ -1143,17 +1143,17 @@ alt_hist_sia_eco = {
 	default = {
 		name = banned
 		text = "RNo"
-		desc = "Siam is forced to follow focuses under $SIA_thai_rice_company$ (historical)."
+		desc = "Siam is forced to follow focuses under Thai Rice Company (historical)."
 	}
 	option = {
 		name = allowed
 		text = "GYes"
-		desc = "Siam can follow either $SIA_thai_rice_company$ (historical) or $SIA_the_bank_of_siam$."
+		desc = "Siam can follow either Thai Rice Company (historical) or The Bank of Siam."
 	}
 	option = {
 		name = forced
 		text = "CForced"
-		desc = "Siam is forced to follow focuses under $SIA_the_bank_of_siam$."
+		desc = "Siam is forced to follow focuses under The Bank of Siam."
 	}
 }
 alt_hist_spr = {
@@ -1162,31 +1162,31 @@ alt_hist_spr = {
 	option = {
 		name = banned
 		text = "RNo"
-		desc = "Spain is forced to follow focuses under $SPA_autarky$ and cannot do $SPA_join_the_axis$ (historical)."
+		desc = "Spain is forced to follow focuses under Autarky and cannot do Join the Axis (historical)."
 	}
 	default = {
 		name = banned_no_faction_needed
 		text = "ONo & Relax Faction Requirements"
-		desc = "Spain is forced to follow focuses under $SPA_autarky$ and cannot do $SPA_join_the_axis$ (historical), but does not need to join the Axis to finish certain focuses."
+		desc = "Spain is forced to follow focuses under Autarky and cannot do Join the Axis (historical), but does not need to join the Axis to finish certain focuses."
 	}
 	option = {
 		name = allowed
 		text = "GYes"
-		desc = "Spain can follow either $SPA_autarky$ (historical) or $SPA_fascist_economic_aid$, though needs to remain in the Axis to complete focuses under the latter."
+		desc = "Spain can follow either Autarky (historical) or Fascist Economic Aid, though needs to remain in the Axis to complete focuses under the latter."
 	}
 	option = {
 		name = allowed_no_faction_needed
 		text = "YYes & Relax Faction Requirements"
-		desc = "Spain can follow either $SPA_autarky$ (historical) or $SPA_fascist_economic_aid$, and can follow the latter without staying in the Axis."
+		desc = "Spain can follow either Autarky (historical) or Fascist Economic Aid, and can follow the latter without staying in the Axis."
 	}
 	option = {
 		name = forced
 		text = "CForced"
-		desc = "Spain is forced to follow focuses under $SPA_fascist_economic_aid$ and needs to remain in the Axis to complete the focuses under it."
+		desc = "Spain is forced to follow focuses under Fascist Economic Aid and needs to remain in the Axis to complete the focuses under it."
 	}
 	option = {
 		name = forced_no_faction_needed
 		text = "0Forced & Relax Faction Requirements"
-		desc = "Spain is forced to follow focuses under $SPA_fascist_economic_aid$ and does not need to remain in the Axis to complete the focuses under it."
+		desc = "Spain is forced to follow focuses under Fascist Economic Aid and does not need to remain in the Axis to complete the focuses under it."
 	}
 }
