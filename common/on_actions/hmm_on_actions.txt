@@ -450,6 +450,39 @@ on_actions = {
 					allow_axis_grind = yes
 				}
 			}
+			else_if = {
+				limit = { tag = CHI }
+				if = {
+					limit = {
+						SIA = { # Only care about Siam if they're not Axis (for some reason)
+							OR = {
+								exists = no
+								axis = yes
+								has_capitulated = yes
+							}
+						}
+					}
+					allow_geacps_grind = yes
+				}
+			}
+			else_if = { # Only care about Siam if they're not Axis (for some reason)
+				limit = {
+					tag = SIA
+					axis = no
+				}
+				if = {
+					limit = {
+						CHI = { # Only care about Siam if they're not Axis (for some reason)
+							OR = {
+								exists = no
+								axis = yes
+								has_capitulated = yes
+							}
+						}
+					}
+					allow_geacps_grind = yes
+				}
+			}
 
 			hmm_capitulations_on_actions = yes
 		}

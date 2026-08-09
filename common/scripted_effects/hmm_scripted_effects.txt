@@ -376,6 +376,20 @@ allow_allies_grind = {
 	}
 }
 
+allow_geacps_grind = { # Need a separate one for GEACPS in case of EuroAxis skill issue (or special rules in non-RB servers) where they might not cap Norway
+	set_global_flag = geacps_grind_allowed
+	every_country = {
+		limit = {
+			can_grind_generals = yes
+			any_army_leader = { has_trait = no_grind }
+		}
+		every_army_leader = {
+			limit = { has_trait = no_grind }
+			remove_unit_leader_trait = no_grind
+		}
+	}
+}
+
 enable_spain_simulator_effects = {
 	if = { # These effects should only trigger once per game, even if Germany is starting or stopping their mech deliveries
 		limit = { NOT = { has_global_flag = spain_simulator_enabled } }
