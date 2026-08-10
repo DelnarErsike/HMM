@@ -838,6 +838,76 @@ soviet_post_cap_compliance_scaling = {
 		desc = "Compliance in Soviet cores after they capitulate will behave as it does for any other country's cores."
 	}
 }
+steal_blueprints_operation = {
+	name = "Status of Steal Blueprints Operation"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_ignite_civil_war"
+	default = {
+		name = off
+		text = "RBanned"
+		desc = "Countries cannot perform the Steal Blueprints operation on each other."
+	}
+	option = {
+		name = enemies_only
+		text = "OEnemies Only"
+		desc = "Countries can only perform the Steal Blueprints operation on targets that are considered on the opposite side of World War 2."
+	}
+	option = {
+		name = non_faction_only
+		text = "YDifferent Faction Only"
+		desc = "Countries can only perform the Steal Blueprints operation on targets that are not considered part of the same faction (Western Allies, Comintern, European Axis, GEACPS)."
+	}
+	option = {
+		name = on
+		text = "GAllowed"
+		desc = "Countries can perform the Steal Blueprints operation on each other as normal."
+	}
+}
+resistance_operations = {
+	name = "Status of Resistance-Based Operations"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_ignite_civil_war"
+	default = {
+		name = off
+		text = "RBanned"
+		desc = "Countries cannot perform the Make Resistance Contacts operation, which means they also inherently cannot perform sabotage operations or operations boosting resistance."
+	}
+	option = {
+		name = only_sabotage
+		text = "OOnly Sabotage"
+		desc = "Countries can perform the Make Resistance Contacts operation and any operation that sabotages buildings in occupied territories. However, Make Resistance Contacts will never affect resistance, and the Boost Resistance operation cannot be performed."
+	}
+	option = {
+		name = only_boost_resistance
+		text = "YOnly Boost Resistance"
+		desc = "Countries can perform the Make Resistance Contacts and Boost Resistance operations. However, they cannot perform any of the operations that would sabotage buildings in occupied territories."
+	}
+	option = {
+		name = on
+		text = "GAllowed"
+		desc = "Countries can perform any operation that increases resistance or that sabotages buildings in occupied territories as normal."
+	}
+}
+coordinated_strike_operation = {
+	name = "Status of Coordinated Strike Operation"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_ignite_civil_war"
+	default = {
+		name = off
+		text = "RBanned"
+		desc = "Countries cannot perform the Coordinated Strike operation on each other."
+	}
+	option = {
+		name = axis_only
+		text = "YAxis Only"
+		desc = "Only Axis countries can perform the Coordinated Strike operation."
+	}
+	option = {
+		name = on
+		text = "GAllowed"
+		desc = "Countries can perform the Coordinated Strike operation on each other as normal."
+	}
+}
 tradebacks = {
 	name = "No Tradebacks Idea"
 	group = "HMM Rules"

@@ -221,7 +221,12 @@ branch_operation = {
 		}
 
 		available = {
-			marker_for_useless_agency_upgrade = yes
+			NOT = {
+				has_game_rule = {
+					rule = steal_blueprints_operation
+					option = off
+				}
+			}
 		}
 		
 		modifiers_during_progress = {
@@ -252,7 +257,21 @@ branch_operation = {
 		}
 	
 		available = {
-			marker_for_useless_agency_upgrade = yes
+			NOT = {
+				has_game_rule = {
+					rule = coordinated_strike_operation
+					option = off
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = coordinated_strike_operation
+						option = axis_only
+					}
+				}
+				axis = yes
+			}
 			has_tech = radio
 		}
 
@@ -312,7 +331,18 @@ branch_operation = {
 		}
 
 		available = {
-			marker_for_useless_agency_upgrade = yes
+			NOT = {
+				has_game_rule = {
+					rule = resistance_operations
+					option = off
+				}
+			}
+			NOT = {
+				has_game_rule = {
+					rule = resistance_operations
+					option = only_boost_resistance
+				}
+			}
 		}
 		
 		modifiers_during_progress = {
