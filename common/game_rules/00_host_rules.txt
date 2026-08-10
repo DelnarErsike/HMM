@@ -763,6 +763,31 @@ who_gets_saf_annex = {
 		desc = "The United Kingdom will get the decision to annex South Africa if there is no player on it."
 	}
 }
+desperate_defense_conditions_status = {
+	name = "The Desperate Defense subdoctrine's conditions are..."
+	group = "HMM Rules"
+	icon = "GFX_volunteers"
+	option = {
+		name = unchanged
+		text = "RUnchanged"
+		desc = "Desperate Defense can only be taken by countries when they are in a defensive war or have enough surrender progress."
+	}
+	option = {
+		name = axix_removed
+		text = "ORemoved for Axis Only"
+		desc = "Desperate Defense can be taken at any time by Axis countries, but other countries must be in a defensive war or have enough surrender progress to take it."
+	}
+	option = {
+		name = allies_removed
+		text = "4Removed for Allies Only"
+		desc = "Desperate Defense can be taken at any time by Allied countries, but other countries must be in a defensive war or have enough surrender progress to take it."
+	}
+	default = {
+		name = removed
+		text = "GRemoved for Everyone"
+		desc = "Desperate Defense can be taken at any time by anyone."
+	}
+}
 battlefield_support_status = {
 	name = "The Battlefield Support grand doctrine is..."
 	group = "HMM Rules"
@@ -1352,7 +1377,7 @@ alt_hist_spr = {
 	default = {
 		name = banned_no_faction_needed
 		text = "ONo & Relax Faction Requirements"
-		desc = "Spain is forced to follow focuses under Autarky and cannot do Join the Axis (historical), but does not need to join the Axis to finish certain focuses."
+		desc = "Spain is forced to follow focuses under Autarky and cannot do Join the Axis (historical), but does not need to be in the Axis to finish certain focuses."
 	}
 	option = {
 		name = allowed
@@ -1362,7 +1387,7 @@ alt_hist_spr = {
 	option = {
 		name = allowed_no_faction_needed
 		text = "YYes & Relax Faction Requirements"
-		desc = "Spain can follow either Autarky (historical) or Fascist Economic Aid, and can follow the latter without staying in the Axis."
+		desc = "Spain can follow either Autarky (historical) or Fascist Economic Aid, and can follow the latter without being in the Axis."
 	}
 	option = {
 		name = forced
@@ -1372,6 +1397,6 @@ alt_hist_spr = {
 	option = {
 		name = forced_no_faction_needed
 		text = "0Forced & Relax Faction Requirements"
-		desc = "Spain is forced to follow focuses under Fascist Economic Aid and does not need to remain in the Axis to complete the focuses under it."
+		desc = "Spain is forced to follow focuses under Fascist Economic Aid and does not need to be in the Axis to complete the focuses under it."
 	}
 }
