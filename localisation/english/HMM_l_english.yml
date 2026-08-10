@@ -136,6 +136,10 @@
  HMM_rule_can_lend_lease_no: "Can send lend-lease: §RNo§!"
  HMM_rule_can_lend_lease_yes: "Can send lend-lease: §GYes§!"
 
+ RULE_OPTION_BLOCKED_EXCEPT_SPAIN: "Blocked Except for Spain"
+ RULE_ALLOW_VOLUNTEERS_BLOCKED_EXCEPT_SPAIN_DESC: "Countries besides Spain may never send Volunteers to any country. Only Spain can send volunteers."
+ RULE_VOLUNTEERS_BLOCKED_EXCEPT_SPAIN_TT: "Game Rule: §OOnly Spain may ever send Volunteers to another country.§!"
+
  # Custom Ideas
  HMM_innovative_weapons_designer:0 "Innovative Weapons Designer"
  ger_eco_nerf:0 "No Strategic Bombing Economy Nerf"

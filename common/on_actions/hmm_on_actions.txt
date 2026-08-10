@@ -16,13 +16,6 @@ on_actions = {
 						limit = { NOT = { has_idea = peace_training } }
 						add_ideas = { peace_training }
 					}
-					if = {
-						limit = {
-							NOT = { tag = SPR }
-							NOT = { has_idea = novols }
-						}
-						add_ideas = { novols }
-					}
 				}
 				if = {
 					limit = {
