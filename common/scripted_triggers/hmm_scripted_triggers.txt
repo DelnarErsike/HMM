@@ -345,6 +345,13 @@ INS_releasables = {
 	}
 }
 
+marker_for_useless_agency_upgrade = {
+	custom_trigger_tooltip = {
+		tooltip = HMM_useless_agency_upgrade_disabled
+		always = no
+	}
+}
+
 DIPLOMACY_PEACE_PROPOSAL_ENABLE_TRIGGER = {
 	always = no
 }

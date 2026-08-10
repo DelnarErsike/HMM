@@ -219,6 +219,10 @@ branch_operation = {
 		ai_will_do = {
 			factor = 1
 		}
+
+		available = {
+			marker_for_useless_agency_upgrade = yes
+		}
 		
 		modifiers_during_progress = {
 			hidden_modifier = {
@@ -248,6 +252,7 @@ branch_operation = {
 		}
 	
 		available = {
+			marker_for_useless_agency_upgrade = yes
 			has_tech = radio
 		}
 
@@ -304,6 +309,10 @@ branch_operation = {
 		
 		ai_will_do = {
 			factor = 1
+		}
+
+		available = {
+			marker_for_useless_agency_upgrade = yes
 		}
 		
 		modifiers_during_progress = {
@@ -451,6 +460,10 @@ branch_operative = {
 		ai_will_do = {
 			factor = 1
 		}
+
+		available = {
+			marker_for_useless_agency_upgrade = yes
+		}
 		
 		modifiers_during_progress = {
 			hidden_modifier = {
@@ -478,6 +491,10 @@ branch_operative = {
 		
 		ai_will_do = {
 			factor = 1
+		}
+
+		available = {
+			marker_for_useless_agency_upgrade = yes
 		}
 		
 		modifiers_during_progress = {
