@@ -178,10 +178,7 @@ technologies = {
 
 					load_oob = "unlock_tanks_mot"
 				}
-				if = {
-					limit = {
-						NOT = { has_tech = motorised_infantry }
-					}
+				else = {
 
 					load_oob = "unlock_tanks"
 				}
@@ -330,7 +327,7 @@ technologies = {
 				}
 				ITA_add_improved_light_tank_templates = yes
 			}
-			IF = { #Hungarian templates
+			else_if = { #Hungarian templates
 				limit = {
 					original_tag = HUN
 					has_completed_focus = wuw_HUN_the_toldi
@@ -580,10 +577,7 @@ technologies = {
 
 					load_oob = "unlock_tanks_mot"
 				}
-				if = {
-					limit = {
-						NOT = { has_tech = motorised_infantry }
-					}
+				else = {
 
 					load_oob = "unlock_tanks"
 				}
@@ -720,11 +714,14 @@ technologies = {
 				}
 				ITA_add_improved_medium_tank_templates = yes
 			}
-			IF = { #Hungarian templates
+			else_if = { #Hungarian templates
 				limit = {
 					original_tag = HUN
-					has_completed_focus = wuw_HUN_the_turan
 				}
+				if = {
+					limit = {
+					has_completed_focus = wuw_HUN_the_turan
+					}
 				#40M Turán
 				create_equipment_variant = {
 					name = "40M Turán"
@@ -745,10 +742,9 @@ technologies = {
 					}
 					#icon = "GFX_ITA_basic_medium_tank_medium"
 				}
-			}
+				}
 			IF = { #Hungarian templates
 				limit = {
-					original_tag = HUN
 					has_completed_focus = wuw_HUN_assault_gun_focus
 				}
 				# 40M Nimród
@@ -771,6 +767,7 @@ technologies = {
 					}
 					#icon = "GFX_ITA_advanced_medium_spaa_medium"
 				}
+			}
 			}
 		}
 
@@ -873,9 +870,12 @@ technologies = {
 				}
 				ITA_add_advanced_medium_tank_templates = yes
 			}
-			IF = { #Hungarian templates
+			else_if = { #Hungarian templates
 				limit = {
 					original_tag = HUN
+				}
+				if = {
+					limit = {
 					has_completed_focus = wuw_HUN_the_turan
 				}
 				#43M Turán III
@@ -901,7 +901,6 @@ technologies = {
 			}
 			IF = { #Hungarian templates
 				limit = {
-					original_tag = HUN
 					has_completed_focus = wuw_HUN_assault_gun_focus
 				}
 				# 43M Zrínyi
@@ -922,6 +921,7 @@ technologies = {
 					}
 					#icon = "GFX_ITA_advanced_medium_art_medium"
 				}
+			}
 			}
 		}
 
@@ -1052,10 +1052,7 @@ technologies = {
 
 					load_oob = "unlock_tanks_mot"
 				}
-				if = {
-					limit = {
-						NOT = { has_tech = motorised_infantry }
-					}
+				else = {
 
 					load_oob = "unlock_tanks"
 				}
@@ -1276,7 +1273,12 @@ technologies = {
 
 	super_heavy_tank_chassis = { #Maus
 		allow_branch = {
-			always = no
+			NOT = {
+				has_game_rule = {
+					rule = super_heavy_tank
+					option = banned
+				}
+			}
 		}
 		enable_equipments = {
 			super_heavy_tank_chassis_1
@@ -1345,7 +1347,7 @@ technologies = {
 				}
 			}
 
-			IF = { #Japanese templates
+			else_if = { #Japanese templates
 				limit = {
 					original_tag = JAP
 					has_completed_focus = JAP_the_ultimate_tank
@@ -1377,6 +1379,10 @@ technologies = {
 			if = {
 				limit = {
 					has_dlc = "Gotterdammerung"
+					has_game_rule = {
+						rule = super_heavy_tank
+						option = allowed
+					}
 				}
 				custom_effect_tooltip = {
 					localization_key = SP_UNLOCK_PROJECT
@@ -2019,7 +2025,10 @@ technologies = {
 
 	sp_armored_lc_naval_engine_conversion_tech = {
 		allow_branch = {
-			always = no
+			has_game_rule = {
+				rule = super_heavy_tank
+				option = allowed
+			}
 			 has_dlc = "Gotterdammerung"
 		}
 
@@ -2094,7 +2103,10 @@ technologies = {
 
 	sp_armored_lc_transmission_improvements_tech = {
 		allow_branch = {
-			always = no
+			has_game_rule = {
+				rule = super_heavy_tank
+				option = allowed
+			}
 			 has_dlc = "Gotterdammerung"
 		}
 
@@ -2189,7 +2201,10 @@ technologies = {
 
 	sp_armored_lc_specialized_field_manuals_tech = {
 		allow_branch = {
-			always = no
+			has_game_rule = {
+				rule = super_heavy_tank
+				option = allowed
+			}
 			 has_dlc = "Gotterdammerung"
 		}
 
@@ -2260,7 +2275,10 @@ technologies = {
 
 	sp_armored_lc_weapon_fire_control_tech = {
 		allow_branch = {
-			always = no
+			has_game_rule = {
+				rule = super_heavy_tank
+				option = allowed
+			}
 			 has_dlc = "Gotterdammerung"
 		}
 
@@ -2325,7 +2343,10 @@ technologies = {
 
 	sp_armored_lc_high_impact_obliterator_cannon_tech = {
 		allow_branch = {
-			always = no
+			has_game_rule = {
+				rule = super_heavy_tank
+				option = allowed
+			}
 			 has_dlc = "Gotterdammerung"
 		}
 

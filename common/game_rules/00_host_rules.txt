@@ -272,6 +272,26 @@ multi_charge_large_caliber_gun= {
 		desc = "Multi-charge large caliber guns can be researched and built."
 	}
 }
+super_heavy_tank = {
+	name = "Status of Super Heavy Tanks & Land Cruisers"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_ignite_civil_war"
+	default = {
+		name = banned
+		text = "RBanned"
+		desc = "Super heavy tanks cannot be researched, and by extension, land cruisers also cannot be researched."
+	}
+	option = {
+		name = only_super_heavy_tank
+		text = "YLand Cruiser Banned"
+		desc = "Super heavy tanks can be researched and built, but land cruisers cannot."
+	}
+	option = {
+		name = allowed
+		text = "GAllowed"
+		desc = "Both super heavy tanks and land cruisers can be researched and built."
+	}
+}
 marine_commando_status = {
 	name = "Status of Marine Commandos"
 	group = "HMM Rules"

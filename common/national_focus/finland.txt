@@ -11524,11 +11524,16 @@ focus_tree = {
 		cost = 5
 
 		allow_branch = {
-			# HMM: no reason to hide this... but we've disabled super-heavy tank tech, so this focus would be impossible anyway
-			always = no
+			# HMM: no reason to hide this...
 			#has_dlc = "No Step Back"
 			#has_completed_focus = FIN_national_armor_focus
 			#has_completed_focus = FIN_militarized_society
+			NOT = {
+				has_game_rule = {
+					rule = super_heavy_tank
+					option = banned
+				}
+			}
 		}
 
 		available = {
