@@ -272,6 +272,21 @@ multi_charge_large_caliber_gun= {
 		desc = "Multi-charge large caliber guns can be researched and built."
 	}
 }
+dozer_blade_status = {
+	name = "Status of Dozer Blades"
+	group = "HMM Rules"
+	icon = "GFX_volunteers"
+	default = {
+		name = banned
+		text = "RBanned"
+		desc = "Dozer Blades cannot be unlocked."
+	}
+	option = {
+		name = allowed
+		text = "GAllowed"
+		desc = "Dozer Blades can be unlocked with 1939 Engineers tech as normal."
+	}
+}
 super_heavy_tank = {
 	name = "Status of Super Heavy Tanks & Land Cruisers"
 	group = "HMM Rules"

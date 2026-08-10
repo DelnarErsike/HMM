@@ -222,8 +222,28 @@ technologies = {
 		}
 
 		enable_equipment_modules = {
-			dozer_blade
+			#dozer_blade # HMM: moved this to a separate technology so that we can gate it with rules
 			#flamethrower #MM: Moved to Special Project sp_land_flamethrower_tank
+		}
+
+		on_research_complete = {
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = dozer_blade_status
+							option = banned
+						}
+					}
+				}
+				custom_effect_tooltip = HMM_unlock_dozer_blade
+				hidden_effect = {
+					set_technology = {
+						HMM_dozer_blade_tech = 1
+						popup = no
+					}
+				}
+			}
 		}
 
 		#enable_subunits = { #MM: Moved to Special Project sp_land_flamethrower_tank

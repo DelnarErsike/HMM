@@ -11,4 +11,17 @@ technologies = {
 			assault_engineer
 		}
 	}
+
+	HMM_dozer_blade_tech = { #hidden tech to enable dozer blades, needed because of how game rule checks aren't supported in module unlock blocks
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1939
+
+		enable_equipment_modules = {
+			dozer_blade
+		}
+	}
 }
