@@ -5142,17 +5142,18 @@ focus_tree = {
 		cost = 10
 
 		allow_branch = {
-			has_completed_focus = FIN_a_new_course_for_kokoomus
-			OR = {
-				has_country_leader = {
-					ruling_only = yes
-					character = FIN_pehr_evind_svinhufvud
-				}
-				has_country_leader = {
-					ruling_only = yes
-					character = FIN_prince_wolfgang_von_hesse
-				}
-			}
+			# HMM: no reason to hide this
+			#has_completed_focus = FIN_a_new_course_for_kokoomus
+			#OR = {
+			#	has_country_leader = {
+			#		ruling_only = yes
+			#		character = FIN_pehr_evind_svinhufvud
+			#	}
+			#	has_country_leader = {
+			#		ruling_only = yes
+			#		character = FIN_prince_wolfgang_von_hesse
+			#	}
+			#}
 		}
 
 		available = {
@@ -11523,22 +11524,23 @@ focus_tree = {
 		cost = 5
 
 		allow_branch = {
-			has_dlc = "No Step Back"
-			has_completed_focus = FIN_national_armor_focus
-			has_completed_focus = FIN_militarized_society
+			# HMM: no reason to hide this... but we've disabled super-heavy tank tech, so this focus would be impossible anyway
+			always = no
+			#has_dlc = "No Step Back"
+			#has_completed_focus = FIN_national_armor_focus
+			#has_completed_focus = FIN_militarized_society
 		}
 
 		available = {
+			# HMM: added here instead of as prerequisite so the focus tree can remain clean.
+			has_completed_focus = FIN_militarized_society
 			has_tech = super_heavy_tank_chassis
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			if = { #Intended that this is not to shown to the player until the other focus is completed.
-				limit = {
-					has_completed_focus = FIN_militarized_society
-				}
+			# HMM: we've already integrated the militarized society requirement into the available block, no need to hide the effect
 				random_core_state = {
 					limit = {
 						is_fully_controlled_by = ROOT
@@ -11587,7 +11589,6 @@ focus_tree = {
 					progress = 0.6
 					efficiency = 50
 				}
-			}
 		}
 	}
 	
