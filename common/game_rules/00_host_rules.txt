@@ -1134,17 +1134,17 @@ alt_hist_raj = {
 	option = {
 		name = banned
 		text = "RNo"
-		desc = "The British Raj is forced to follow focuses under Onto the Road of Independence and Two-Nation Theory."
+		desc = "The British Raj is forced to follow focuses under Onto the Road of Independence (historical) and Two-Nation Theory (historical). Since going independent would result in the Partition of India, they can only go independent if releasing nations is not banned."
 	}
 	option = {
 		name = only_india_united
 		text = "YIndependence Paths Allowed"
-		desc = "The British Raj is forced to follow Onto the Road of Independence, but can choose either Two-Nation Theory (historical) or India United."
+		desc = "The British Raj is forced to follow Onto the Road of Independence (historical), but can choose either Two-Nation Theory (historical) or India United."
 	}
 	option = {
 		name = allowed
 		text = "GYes"
-		desc = "The British Raj can follow either Onto the Road of Independence or His Majesty's Loyal Government. If they choose Onto the Road of Independence, they can also choose to follow either Two-Nation Theory (historical) or India United."
+		desc = "The British Raj can follow either Onto the Road of Independence (historical) or His Majesty's Loyal Government. If they choose Onto the Road of Independence, they can also choose to follow either Two-Nation Theory (historical) or India United."
 	}
 	default = {
 		name = forced

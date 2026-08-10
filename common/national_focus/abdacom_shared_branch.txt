@@ -26,7 +26,7 @@
 	}
 
 	offset = {
-		x = 61
+		x = 57
 		y = 0
 		trigger = { tag = USA }
 	}
@@ -51,7 +51,7 @@
 		}
 	}
 	offset = {
-		x = -7
+		x = -13
 		y = 0
 		trigger = {
 			tag = USA

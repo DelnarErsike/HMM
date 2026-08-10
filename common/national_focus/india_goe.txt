@@ -119,6 +119,29 @@ focus_tree = {
         mutually_exclusive = { focus = RAJ_keep_british_generals }
         cost = 5
 
+        offset = {
+            x = -24
+            y = 0
+            trigger = {
+                OR = {
+                    AND = {
+                        has_game_rule = {
+                            rule = obsolete_focus_branches_visibility
+                            option = HIDE
+                        }
+                        has_completed_focus = RAJ_provincial_autonomy
+                    }
+                    has_game_rule = {
+                        rule = alt_hist_raj
+                        option = banned
+                    }
+                    has_game_rule = {
+                        rule = alt_hist_raj
+                        option = only_india_united
+                    }
+                }
+            }
+        }
 
         ai_will_do = {
             factor = 1
@@ -17001,6 +17024,16 @@ focus = {
 		hidden_effect = {
 			country_event = { id = GOE_RAJ_partition.1 days = 80 } # Unrest event
 			country_event = { id = GOE_RAJ.29 days = 38 }  #April 18ish #Freeman retires
+
+            if = {
+                limit = {
+                    has_game_rule = {
+                        rule = obsolete_focus_branches_visibility
+                        option = HIDE
+                    }
+                }
+                mark_focus_tree_layout_dirty = yes
+            }
 		}
 	}
 }

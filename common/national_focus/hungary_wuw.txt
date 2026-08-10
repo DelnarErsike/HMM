@@ -7727,25 +7727,6 @@ focus_tree = {
 		mutually_exclusive = { focus = wuw_HUN_strengthen_horthys_reign }
 		x = 2
 		y = 1
-		offset = {
-			x = -2
-			y = 0
-			trigger = {
-				OR = {
-					AND = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-						has_completed_focus = wuw_HUN_undermine_the_admiral
-					}
-					has_game_rule = {
-						rule = alt_hist_hun
-						option = forced_arrow_cross
-					}
-				}
-			}
-		}
 		relative_position_id = wuw_HUN_continue_the_regency
 
 		cost = 5
@@ -7765,8 +7746,8 @@ focus_tree = {
 					option = allowed
 				}
 				has_game_rule = {
-					rule = forced_arrow_cross
-					option = forced_fascist_king
+					rule = alt_hist_hun
+					option = forced_arrow_cross
 				}
 			}
 			IF = {
@@ -7786,11 +7767,19 @@ focus_tree = {
 			x = -2
 			y = 0
 			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = wuw_HUN_undermine_the_admiral
+					}
+					has_game_rule = {
+						rule = alt_hist_hun
+						option = forced_arrow_cross
+					}
 				}
-				has_completed_focus = wuw_HUN_undermine_the_admiral
 			}
 		}
 
@@ -7860,6 +7849,25 @@ focus_tree = {
 			factor = 10
 		}
 
+		offset = {
+			x = -2
+			y = 0
+			trigger = {
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = wuw_HUN_undermine_the_admiral
+					}
+					has_game_rule = {
+						rule = alt_hist_hun
+						option = forced_arrow_cross
+					}
+				}
+			}
+		}
 
 		available = {
 			OR = {
@@ -8709,6 +8717,25 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_absolute_rule_of_the_national_unity_party
 
+		offset = {
+			x = -2
+			y = 0
+			trigger = {
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = wuw_HUN_undermine_the_admiral
+					}
+					has_game_rule = {
+						rule = alt_hist_hun
+						option = forced_arrow_cross
+					}
+				}
+			}
+		}
 
 		cost = 5
 
@@ -9378,8 +9405,8 @@ focus_tree = {
 		}
 
 		allow_branch = {
-			has_dlc = "Gotterdammerung"
 			# HMM: no point hiding this
+			#has_dlc = "Gotterdammerung"
 			#has_completed_focus = wuw_HUN_wherever_the_cross_points
 			#has_completed_focus = wuw_HUN_strengthen_the_turani_vadaszok
 		}
@@ -9522,7 +9549,7 @@ focus_tree = {
 		prerequisite = { focus = wuw_HUN_reaffirm_territorial_claims }
 		prerequisite = { focus = wuw_HUN_wherever_the_cross_points }
 		#mutually_exclusive = { focus = wuw_HUN_government_of_national_unity }
-		x = 1
+		x = 2
 		y = 4
 		relative_position_id = wuw_HUN_wherever_the_cross_points
 

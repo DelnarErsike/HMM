@@ -104,8 +104,39 @@ focus_tree = {
 	inlay_window = {
 		id = jap_imperial_influence_inlay_window
 		
-		position = { X = 3150 y = 700 }
+		position = { X = 4850 y = 700 }
 
+		override_position = {
+			x = 3150
+			y = 700
+			trigger = {
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = JAP_sea_purge_the_kodoha_faction
+					}
+					has_game_rule = {
+						rule = alt_hist_jap
+						option = banned
+					}
+				}
+			}
+		}
+
+		override_position = {
+			x = 4100
+			y = 700
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
+			}
+		}
 	}
 
 	default = no
@@ -10779,7 +10810,21 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_sea_purge_the_kodoha_faction
 
-
+		offset = {
+			x = -34
+			y = 0
+			trigger = {
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
+					}
+				}
+			}
+		}
 
 		prerequisite = { focus = JAP_sea_purge_the_kodoha_faction focus = JAP_revere_the_emperor_destroy_the_traitors }
 
@@ -12564,7 +12609,25 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_sea_purge_the_kodoha_faction
 
-
+		offset = {
+			x = -34 
+			y = 0
+			trigger = {
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
+					}
+					has_game_rule = {
+						rule = alt_hist_jap
+						option = forced
+					}
+				}
+			}
+		}
 
 		prerequisite = { focus = JAP_sea_purge_the_kodoha_faction focus = JAP_revere_the_emperor_destroy_the_traitors }
 
@@ -24939,6 +25002,25 @@ focus_tree = {
 		x = 16
 		y = 0
 
+		offset = {
+			x = -42
+			y = 0
+			trigger = {
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
+					}
+					has_game_rule = {
+						rule = alt_hist_jap
+						option = forced
+					}
+				}
+			}
+		}
 
 		cost = 5
 

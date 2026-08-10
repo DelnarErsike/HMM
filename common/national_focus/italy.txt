@@ -8569,6 +8569,7 @@ focus_tree = {
 					}
 				}
 				NOT = { has_completed_focus = ITA_defy_the_duce	}
+				NOT = { has_completed_focus = ITA_culto_del_duce }
 			}
 		}
 
@@ -8577,7 +8578,7 @@ focus_tree = {
 		relative_position_id = ITA_triumph_in_africa_bba
 
 		offset = {
-			x = -11
+			x = -7
 			y = 0
 			trigger = {
 				OR = {
@@ -9347,6 +9348,33 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_culto_del_duce
 
+		offset = {
+			x = -6
+			y = 0
+			trigger = {
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = ITA_convene_the_grand_council
+					}
+					has_game_rule = {
+						rule = alt_hist_ita
+						option = forced
+					}
+					has_game_rule = {
+						rule = alt_hist_ita
+						option = forced_italo_balbo
+					}
+					has_game_rule = {
+						rule = alt_hist_ita
+						option = forced_dino_grandi
+					}
+				}
+			}
+		}
 
 		cost = 5
 		available = {
@@ -9521,6 +9549,34 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_culto_del_duce
 
+		offset = {
+			x = -7
+			y = 0
+			trigger = {
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = ITA_convene_the_grand_council
+					}
+					has_game_rule = {
+						rule = alt_hist_ita
+						option = forced
+					}
+					has_game_rule = {
+						rule = alt_hist_ita
+						option = forced_italo_balbo
+					}
+					has_game_rule = {
+						rule = alt_hist_ita
+						option = forced_dino_grandi
+					}
+				}
+			}
+		}
+
 		cost = 5
 		available = {
 			has_government = fascism
@@ -9553,7 +9609,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_security_militias }
 		mutually_exclusive = { focus = ITA_strengthen_the_blackshirts }
 		x = -1
-		y = 1
+		y = 2
 		relative_position_id = ITA_security_militias
 
 
@@ -9635,7 +9691,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_battaglioni_d_assalto focus = ITA_strengthen_the_blackshirts }
 
 		x = 1
-		y = 1
+		y = 2
 		relative_position_id = ITA_battaglioni_d_assalto
 		cost = 10
 		available = {
@@ -9680,6 +9736,33 @@ focus_tree = {
 		relative_position_id = ITA_strengthen_the_regime
 		cost = 5
 
+		offset = {
+			x = 7
+			y = 0
+			trigger = {
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = ITA_convene_the_grand_council
+					}
+					has_game_rule = {
+						rule = alt_hist_ita
+						option = forced
+					}
+					has_game_rule = {
+						rule = alt_hist_ita
+						option = forced_italo_balbo
+					}
+					has_game_rule = {
+						rule = alt_hist_ita
+						option = forced_dino_grandi
+					}
+				}
+			}
+		}
 
 		bypass = {
 			458 = { is_claimed_by = ROOT }
@@ -10687,6 +10770,16 @@ focus_tree = {
 					option = forced_dino_grandi
 				}
 			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = ITA_defy_the_duce	}
+				NOT = { has_completed_focus = ITA_culto_del_duce }
+			}
 		}
 
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_BALANCE_OF_POWER}
@@ -10780,6 +10873,16 @@ focus_tree = {
 					rule = alt_hist_ita
 					option = forced_italo_balbo
 				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = ITA_defy_the_duce	}
+				NOT = { has_completed_focus = ITA_culto_del_duce }
 			}
 		}
 		
@@ -14949,7 +15052,7 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = -11
+			x = -7
 			y = 0
 			trigger = {
 				OR = {

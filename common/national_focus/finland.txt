@@ -6669,6 +6669,26 @@ focus_tree = {
 		y = 0
 		relative_position_id = FIN_reach_out_to_scandinavia
 
+		offset = {
+			x = -25
+			y = 0
+			trigger = {
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = FIN_right_wing_policies
+					}
+					has_game_rule = {
+						rule = alt_hist_fin
+						option = forced
+					}
+				}
+			}
+		}
+
 		cost = 5
 
 		available = {
@@ -7209,11 +7229,19 @@ focus_tree = {
 			x = -25
 			y = 0
 			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = FIN_right_wing_policies
+					}
+					has_game_rule = {
+						rule = alt_hist_fin
+						option = forced
+					}
 				}
-				has_completed_focus = FIN_right_wing_policies
 			}
 		}
 		
@@ -9206,7 +9234,7 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = -8
+			x = -25
 			y = 0
 			trigger = {
 				OR = {

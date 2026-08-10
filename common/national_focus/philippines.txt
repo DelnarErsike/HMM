@@ -3284,7 +3284,7 @@ initial_show_position = {
 
 		relative_position_id = PHI_bring_in_eisenhower	
 		
-		x = -1
+		x = 0
 		y = 1
 
 		cost = 5
@@ -8859,7 +8859,7 @@ focus = {
 		relative_position_id = PHI_10_year_training_plan
 
 
-		x = 0
+		x = -1
 		y = 1
 	
 		cost = 10
@@ -8887,7 +8887,7 @@ focus = {
 		relative_position_id = PHI_10_year_training_plan
 
 
-		x = 2
+		x = 1
 		y = 1
 	
 		cost = 10
@@ -9100,6 +9100,16 @@ focus = {
 
 		x = 1
 		y = 1
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = Philippines_AC_rule
+					option = Philippines_no_AC
+				}
+			}
+		}
 	
 		cost = 10
 
@@ -9171,6 +9181,16 @@ focus = {
 
 		x = 1
 		y = 1
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = Philippines_AC_rule
+					option = Philippines_no_AC
+				}
+			}
+		}
 	
 		cost = 10
 
