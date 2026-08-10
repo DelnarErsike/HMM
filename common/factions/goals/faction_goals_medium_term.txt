@@ -75,12 +75,10 @@ faction_goal_undo_versailles = {
 			visible_when_empty = yes
 			limit = {
 				faction_influence_ratio > 0.3
+				NOT = { has_completed_goal = faction_goal_undo_versailles }
 			}
-			IF = {
-				limit = { NOT = { has_completed_goal = faction_goal_undo_versailles } }
 				add_war_support = 0.05
 				add_political_power = 50
-			}
 		}
 	}
 	ai_will_do = {
@@ -347,10 +345,9 @@ faction_goal_the_arteries_of_trade = {
 	complete_effect = {
 		add_faction_power_projection = 100
 		every_faction_member = {
-			IF = {
+			visible_when_empty = yes
 				limit = { NOT = { has_completed_goal = faction_goal_the_arteries_of_trade } }
 				add_stability = 0.05
-			}
 		}
 	}
 	ai_will_do = {
@@ -512,10 +509,9 @@ faction_goal_guardians_of_peace = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
-			IF = {
+			visible_when_empty = yes
 				limit = { NOT = { has_completed_goal = faction_goal_guardians_of_peace } }
 				add_stability = 0.05
-			}
 		}
 	}
 	ai_will_do = {
@@ -1025,14 +1021,13 @@ faction_goal_indifference_is_a_threat = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
-			IF = {
+			visible_when_empty = yes
 				limit = { NOT = { has_completed_goal = faction_goal_indifference_is_a_threat } }
 				add_political_power = 50
 				add_popularity = {
 					ideology = communism
 					popularity = 0.05
 				}
-			}
 		}
 	}
 	ai_will_do = {
@@ -1087,10 +1082,9 @@ faction_goal_undoing_brest_litowsk = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
-			IF = {
+			visible_when_empty = yes
 				limit = { NOT = { has_completed_goal = faction_goal_undoing_brest_litowsk } }
 				army_experience = 50
-			}
 		}
 	}
 	ai_will_do = {
@@ -1275,7 +1269,7 @@ faction_goal_marine_corps = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
-			IF = {
+			visible_when_empty = yes
 				limit = { NOT = { has_completed_goal = faction_goal_marine_corps } }
 				add_tech_bonus = {
 					name = marine_corps_tech_bonus
@@ -1283,7 +1277,6 @@ faction_goal_marine_corps = {
 					uses = 1
 					category = marine_tech
 				}
-			}
 		}
 	}
 	ai_will_do = {
@@ -1381,7 +1374,7 @@ faction_goal_airborne_corps = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
-			IF = {
+			visible_when_empty = yes
 				limit = { NOT = { has_completed_goal = faction_goal_airborne_corps } }
 				add_tech_bonus = {
 					name = airborne_corps_tech_bonus
@@ -1389,7 +1382,6 @@ faction_goal_airborne_corps = {
 					uses = 1
 					category = para_tech
 				}
-			}
 		}
 	}
 	ai_will_do = {
@@ -1480,7 +1472,7 @@ faction_goal_mountaineer_corps = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
-			IF = {
+			visible_when_empty = yes
 				limit = { NOT = { has_completed_goal = faction_goal_mountaineer_corps } }
 				add_tech_bonus = {
 					name = mountaineer_corps_tech_bonus
@@ -1488,7 +1480,6 @@ faction_goal_mountaineer_corps = {
 					uses = 1
 					category = mountaineers_tech
 				}
-			}
 		}
 	}
 	ai_will_do = {
@@ -1567,7 +1558,7 @@ faction_goal_submarine_force = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
-			IF = {
+			visible_when_empty = yes
 				limit = { NOT = { has_completed_goal = faction_goal_submarine_force } }
 				add_tech_bonus = {
 					name = submarine_force_tech_bonus
@@ -1575,7 +1566,6 @@ faction_goal_submarine_force = {
 					uses = 1
 					category = naval_equipment
 				}
-			}
 		}
 	}
 	ai_will_do = {
@@ -1661,7 +1651,7 @@ faction_goal_convoy_escort_force = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
-			IF = {
+			visible_when_empty = yes
 				limit = { NOT = { has_completed_goal = faction_goal_convoy_escort_force } }
 				add_tech_bonus = {
 					name = convoy_escort_force_tech_bonus
@@ -1669,7 +1659,6 @@ faction_goal_convoy_escort_force = {
 					uses = 1
 					category = naval_equipment
 				}
-			}
 		}
 	}
 	ai_will_do = {
@@ -1737,7 +1726,7 @@ faction_goal_air_superiority = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
-			IF = {
+			visible_when_empty = yes
 				limit = { NOT = { has_completed_goal = faction_goal_air_superiority } }
 				add_tech_bonus = {
 					name = air_superiority_tech_bonus
@@ -1745,7 +1734,6 @@ faction_goal_air_superiority = {
 					uses = 1
 					category = air_equipment
 				}
-			}
 		}
 	}
 	ai_will_do = {
@@ -1806,16 +1794,14 @@ faction_goal_industrial_expansion = {
 			visible_when_empty = yes
 			limit = {
 				num_of_civilian_factories > 49
+				NOT = { has_completed_goal = faction_goal_industrial_expansion }
 			}
-			IF = {
-				limit = { NOT = { has_completed_goal = faction_goal_industrial_expansion } }
 				add_tech_bonus = {
 					name = industrial_expansion_tech_bonus
 					bonus = 0.5
 					uses = 2
 					category = industry
 				}
-			}
 		}
 	}
 	ai_will_do = {
@@ -1933,16 +1919,14 @@ faction_goal_a_military_base = {
 			visible_when_empty = yes
 			limit = {
 				num_of_military_factories > 49
+				NOT = { has_completed_goal = faction_goal_a_military_base }
 			}
-			IF = {
-				limit = { NOT = { has_completed_goal = faction_goal_a_military_base } }
 				add_tech_bonus = {
 					name = a_military_base_tech_bonus
 					bonus = 0.5
 					uses = 2
 					category = excavation_tech
 				}
-			}
 		}
 	}
 	ai_will_do = {
@@ -2011,10 +1995,9 @@ faction_goal_aggressive_defense = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
-			IF = {
+			visible_when_empty = yes
 				limit = { NOT = { has_completed_goal = faction_goal_aggressive_defense } }
 				army_experience = 50
-			}
 		}
 	}
 	ai_will_do = {
