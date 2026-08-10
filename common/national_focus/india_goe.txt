@@ -7030,9 +7030,9 @@ focus_tree = {
         icon = GFX_focus_RAJ_provincial_autonomy
         #prerequisite = { focus = }
         mutually_exclusive = { focus = RAJ_great_depression_price_controls focus = RAJ_his_majestys_loyal_government }
-        x = 29
+        x = -42
         y = 0
-        relative_position_id = RAJ_great_depression_price_controls 
+        #relative_position_id = RAJ_great_depression_price_controls 
 
         cost = 5
 
@@ -7318,8 +7318,9 @@ focus_tree = {
         id = RAJ_trade_port
         icon = GFX_focus_POL_develop_polish_shipbuilding
         prerequisite = { focus = RAJ_great_depression_price_controls focus = RAJ_provincial_autonomy }
-        x = -47
+        x = -6
         y = 1
+        relative_position_id = RAJ_provincial_autonomy
 
 
         cost = 5
@@ -7374,7 +7375,7 @@ focus_tree = {
         icon = GFX_focus_generic_coastal_fort
         prerequisite = { focus = RAJ_trade_port }
         x = 0
-        y = 3
+        y = 1
         relative_position_id = RAJ_trade_port
 
         cost = 5
@@ -7521,8 +7522,8 @@ focus_tree = {
         id = RAJ_mahatma
         icon = GFX_focus_RAJ_mahatma
         prerequisite = { focus = RAJ_purna_swaraj }
-        x = -6
-        y = 8
+        x = 8
+        y = 7
         relative_position_id = RAJ_purna_swaraj
         mutually_exclusive = { focus = RAJ_league_against_gandhism }
         cost = 10
@@ -7540,7 +7541,12 @@ focus_tree = {
         }
 
         allow_branch = {
-        	always = no
+        	NOT = {
+				has_game_rule = {
+					rule = alt_hist_raj
+					option = forced
+				}
+			}
         	if = {
 				limit = {
 					has_game_rule = {
@@ -7810,7 +7816,7 @@ focus_tree = {
         id = RAJ_khadi_movement
         icon = GFX_focus_RAJ_khadi_movement 
         prerequisite = { focus = RAJ_swadeshi_movement }
-        x = 0
+        x = 1
         y = 1
         relative_position_id = RAJ_swadeshi_movement
        
@@ -7847,7 +7853,7 @@ focus_tree = {
         id = RAJ_boycott_british_made_goods
         icon = GFX_focus_eng_decolonization
         prerequisite = { focus = RAJ_swadeshi_movement }
-        x = -2
+        x = -1
         y = 1
         relative_position_id = RAJ_swadeshi_movement
        
@@ -8584,7 +8590,7 @@ focus_tree = {
         id = RAJ_tea_exports
         icon = GFX_focus_RAJ_tea_exports
         prerequisite = { focus = RAJ_agricultural_cooperatives  }
-        x = 0
+        x = 1 # HMM: makes prereqs clearer
         y = 1
         relative_position_id = RAJ_agricultural_cooperatives
 
@@ -9009,6 +9015,16 @@ focus_tree = {
         prerequisite = { focus = RAJ_a_congress_resurgent }
         x = 3
         y = 1
+        offset = {
+            x = -2
+            y = 0
+            trigger = {
+                has_game_rule = {
+                    rule = allow_release_nations
+                    option = BLOCKED
+                }
+            }
+        }
         relative_position_id = RAJ_a_congress_resurgent
         mutually_exclusive = { focus = RAJ_two_nation_theory_dlc }
         cost = 10
@@ -9066,9 +9082,35 @@ focus_tree = {
         id = RAJ_two_nation_theory_dlc
         icon = GFX_focus_RAJ_two_nation_theory
         prerequisite = { focus = RAJ_a_congress_resurgent }
-        x = 0
-        y = 0
-        relative_position_id = RAJ_india_united
+        x = -3
+        y = 1
+        relative_position_id = RAJ_a_congress_resurgent
+        offset = {
+            x = 3
+            y = 0
+            trigger = {
+                has_game_rule = {
+					rule = alt_hist_raj
+					option = banned
+				}
+            }
+        }
+        offset = {
+            x = 2
+            y = 0
+            trigger = {
+                has_game_rule = {
+                    rule = allow_release_nations
+                    option = BLOCKED
+                }
+                NOT = {
+                    has_game_rule = {
+                        rule = alt_hist_raj
+                        option = banned
+                    }
+                }
+            }
+        }
         mutually_exclusive = { focus = RAJ_india_united }
         cost = 10
 
@@ -15531,9 +15573,25 @@ focus_tree = {
             GFX_focus_RAJ_tryst_with_destiny = yes
         }
         prerequisite = { focus = RAJ_united_bengal focus = RAJ_eastern_pakistan focus = RAJ_a_secular_state }
-        x = 2
-        y = 1
-        relative_position_id = RAJ_hedgemony_of_the_subcontinent
+        x = 0
+        y = 7
+        offset = {
+            x = 1
+            y = -1
+            trigger = {
+                has_game_rule = {
+                    rule = allow_release_nations
+                    option = BLOCKED
+                }
+                NOT = {
+                    has_game_rule = {
+                        rule = alt_hist_raj
+                        option = banned
+                    }
+                }
+            }
+        }
+        relative_position_id = RAJ_a_congress_resurgent
         
 
         cost = 10
@@ -15564,7 +15622,6 @@ focus_tree = {
         bypass = {
 
         }
-        allow_branch = { always = no }
 
         cancel_if_invalid = yes
         continue_if_invalid = no
@@ -16888,7 +16945,7 @@ focus = {
 	id = RAJ_his_majestys_loyal_government
 	icon = GFX_focus_RAJ_his_majestys_loyal_government
 	
-	x = -22
+	x = -26
 	y = 0
 	cost = 5
 

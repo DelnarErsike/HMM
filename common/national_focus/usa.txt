@@ -3136,7 +3136,6 @@ focus_tree = {
 		bypass = {
 
 		}
-		allow_branch = { always = no }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -4562,8 +4561,46 @@ focus_tree = {
  	focus = {
 		id = USA_war_plans_division
 		icon = GFX_goal_generic_position_armies
-		x = 24
+		x = 28
 		y = 0
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = USA_continue_the_new_deal
+					}
+					has_game_rule = {
+						rule = alt_hist_usa
+						option = banned
+					}
+				}
+			}
+		}
+		offset = {
+			x = -7
+			y = 0
+			trigger = {
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = USA_reestablish_the_gold_standard
+					}
+					has_game_rule = {
+						rule = alt_hist_usa
+						option = forced
+					}
+				}
+			}
+		}
 		
 		cost = 10
 

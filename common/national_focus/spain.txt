@@ -2494,7 +2494,7 @@ focus_tree = {
 		prerequisite = { focus = SPA_the_national_syndicalist_state focus = SPA_fuse_the_parties }
 		
 		icon = GFX_goal_generic_army_doctrines
-		x = -4
+		x = -5
 		y = 1
 		relative_position_id = SPA_fuse_the_parties
 		cost = 10
@@ -2835,9 +2835,9 @@ focus_tree = {
 		}
 		
 		icon = GFX_goal_support_fascism
-		x = 4
+		x = -3
 		y = 1
-		relative_position_id = SPA_the_national_syndicalist_state
+		relative_position_id = SPA_fuse_the_parties
 		cost = 5
 
 		available_if_capitulated = yes
@@ -3425,8 +3425,24 @@ focus_tree = {
 		mutually_exclusive = { focus = SPA_fascist_economic_aid }
 		
 		icon = GFX_goal_generic_oil_refinery
-		x = 0
+		x = 1
 		y = 1
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				OR = {
+					has_game_rule = {
+						rule = alt_hist_spr
+						option = banned
+					}
+					has_game_rule = {
+						rule = alt_hist_spr
+						option = banned_no_faction_needed
+					}
+				}
+			}
+		}
 		relative_position_id = SPA_national_recovery
 		cost = 10
 

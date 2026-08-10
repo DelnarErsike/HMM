@@ -23,7 +23,7 @@ focus_tree = {
 
 	default = no
 
-	continuous_focus_position = { x = 50 y = 1750 }
+	continuous_focus_position = { x = 50 y = 1850 }
 
 	#shared_focus = HABSBURG_part_of_something_bigger
 
@@ -37,7 +37,7 @@ focus_tree = {
 		icon = GFX_focus_hun_elect_a_king
 		#prerequisite = { focus = }
 		mutually_exclusive = { focus = wuw_HUN_continue_the_regency focus = wuw_HUN_end_the_white_terror }
-		x = 17
+		x = -1
 		y = 0
 		#relative_position_id =
 
@@ -71,42 +71,6 @@ focus_tree = {
 				}
 				NOT = { has_completed_focus = wuw_HUN_continue_the_regency }
 				NOT = { has_completed_focus = wuw_HUN_end_the_white_terror }
-			}
-		}
-
-		offset = {
-			x = -5
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = wuw_HUN_reinstate_the_pragmatic_sanction
-			}
-		}
-
-		offset = {
-			x = -8
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = wuw_HUN_abide_by_the_little_ententes_stipulations
-			}
-		}
-
-		offset = {
-			x = -4
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = wuw_HUN_establishing_a_new_dynasty
 			}
 		}
 
@@ -628,7 +592,7 @@ focus_tree = {
 		icon = GFX_focus_generic_little_entente
 		prerequisite = { focus = wuw_HUN_reach_out_to_candidates }
 		mutually_exclusive = { focus = wuw_HUN_reinstate_the_pragmatic_sanction }
-		x = 6
+		x = 0
 		y = 1
 		relative_position_id = wuw_HUN_reach_out_to_candidates
 
@@ -639,7 +603,20 @@ focus_tree = {
 		}
 
 		allow_branch = {
-			always = no
+			OR = {
+				has_game_rule = {
+					rule = alt_hist_hun
+					option = only_fascist_king
+				}
+				has_game_rule = {
+					rule = alt_hist_hun
+					option = allowed
+				}
+				has_game_rule = {
+					rule = alt_hist_hun
+					option = forced_fascist_king
+				}
+			}
 			IF = {
 				limit = {
 					has_game_rule = {
@@ -650,18 +627,6 @@ focus_tree = {
 				NOT = { has_completed_focus = wuw_HUN_reinstate_the_pragmatic_sanction }
 				NOT = { has_completed_focus = wuw_HUN_continue_the_regency }
 				NOT = { has_completed_focus = wuw_HUN_end_the_white_terror }
-			}
-		}
-
-		offset = {
-			x = -6
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = wuw_HUN_abide_by_the_little_ententes_stipulations
 			}
 		}
 
@@ -5750,7 +5715,7 @@ focus_tree = {
 		icon = GFX_focus_HUN_elect_a_fascist_king
 		prerequisite = { focus = wuw_HUN_abide_by_the_little_ententes_stipulations }
 		mutually_exclusive = { focus = wuw_HUN_establishing_a_new_dynasty focus = wuw_HUN_elect_a_democratic_king }
-		x = 4
+		x = 0
 		y = 1
 		relative_position_id = wuw_HUN_abide_by_the_little_ententes_stipulations
 
@@ -5787,18 +5752,6 @@ focus_tree = {
 				NOT = { has_completed_focus = wuw_HUN_establishing_a_new_dynasty }
 				NOT = { has_completed_focus = wuw_HUN_elect_a_democratic_king }
 				NOT = { has_completed_focus = wuw_HUN_reinstate_the_pragmatic_sanction }
-			}
-		}
-
-		offset = {
-			x = -4
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = wuw_HUN_elect_a_fascist_king
 			}
 		}
 
@@ -7650,8 +7603,31 @@ focus_tree = {
 		icon = GFX_focus_HUN_strengthen_horthys_reign
 		prerequisite = { focus = wuw_HUN_continue_the_regency }
 		mutually_exclusive = { focus = wuw_HUN_undermine_the_admiral }
-		x = 0
+		x = -2
 		y = 1
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = wuw_HUN_strengthen_horthys_reign
+					}
+					has_game_rule = {
+						rule = alt_hist_hun
+						option = banned
+					}
+					has_game_rule = {
+						rule = alt_hist_hun
+						option = only_fascist_king
+					}
+				}
+			}
+		}
 		relative_position_id = wuw_HUN_continue_the_regency
 
 		cost = 5
@@ -7751,6 +7727,25 @@ focus_tree = {
 		mutually_exclusive = { focus = wuw_HUN_strengthen_horthys_reign }
 		x = 2
 		y = 1
+		offset = {
+			x = -2
+			y = 0
+			trigger = {
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = wuw_HUN_undermine_the_admiral
+					}
+					has_game_rule = {
+						rule = alt_hist_hun
+						option = forced_arrow_cross
+					}
+				}
+			}
+		}
 		relative_position_id = wuw_HUN_continue_the_regency
 
 		cost = 5
@@ -8266,8 +8261,8 @@ focus_tree = {
 		icon = GFX_focus_renounce_the_treaty_of_trianon
 		prerequisite = { focus = wuw_HUN_spur_on_the_trianon_trauma focus = wuw_HUN_elect_a_fascist_king }
 		#mutually_exclusive = { focus = wuw_HUN_undermine_the_admiral }
-		x = 0
-		y = 1
+		x = -1
+		y = 2
 		relative_position_id = wuw_HUN_spur_on_the_trianon_trauma
 
 		cost = 5
@@ -8365,8 +8360,8 @@ focus_tree = {
 		icon = GFX_focus_HUN_the_hungarian_life_and_renewal_party
 		prerequisite = { focus = wuw_HUN_absolute_rule_of_the_national_unity_party focus = wuw_HUN_elect_a_fascist_king }
 		#mutually_exclusive = { focus = wuw_HUN_undermine_the_admiral }
-		x = 0
-		y = 1
+		x = -1
+		y = 2
 		relative_position_id = wuw_HUN_absolute_rule_of_the_national_unity_party
 
 		cost = 5
@@ -8710,7 +8705,7 @@ focus_tree = {
 		icon = GFX_focus_HUN_the_turul_association
 		prerequisite = { focus = wuw_HUN_absolute_rule_of_the_national_unity_party focus = wuw_HUN_government_of_national_unity focus = wuw_HUN_spur_on_the_trianon_trauma focus = wuw_HUN_elect_a_fascist_king }
 		#mutually_exclusive = { focus = wuw_HUN_government_of_national_unity }
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = wuw_HUN_absolute_rule_of_the_national_unity_party
 
@@ -8751,7 +8746,7 @@ focus_tree = {
 		prerequisite = { focus = wuw_HUN_the_turul_association }
 		#mutually_exclusive = { focus = wuw_HUN_government_of_national_unity }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = wuw_HUN_the_turul_association
 
 		cost = 10
@@ -14733,7 +14728,7 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		#prerequisite = { focus = wuw_HUN_a_revolutionary_greater_hungary }
 		mutually_exclusive = { focus = wuw_HUN_economic_intervention }
-		x = 9
+		x = 11
 		y = 0
 		relative_position_id = wuw_HUN_continue_the_regency
 
@@ -14813,9 +14808,9 @@ focus_tree = {
 		icon = GFX_focus_secret_rearmament
 		#prerequisite = { focus = wuw_HUN_a_revolutionary_greater_hungary }
 		#mutually_exclusive = { focus = wuw_HUN_avoid_interventionalist_destablilization }
-		x = 18
+		x = 9
 		y = 0
-		relative_position_id = wuw_HUN_continue_the_regency
+		relative_position_id = wuw_HUN_avoid_interventionalist_destablilization
 
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL }
 

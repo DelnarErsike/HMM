@@ -8572,31 +8572,35 @@ focus_tree = {
 			}
 		}
 
-		x = 20
+		x = 13
 		y = 2
 		relative_position_id = ITA_triumph_in_africa_bba
 
 		offset = {
-			x = -12
+			x = -11
 			y = 0
 			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = ITA_convene_the_grand_council
+					}
+					has_game_rule = {
+						rule = alt_hist_ita
+						option = forced
+					}
+					has_game_rule = {
+						rule = alt_hist_ita
+						option = forced_italo_balbo
+					}
+					has_game_rule = {
+						rule = alt_hist_ita
+						option = forced_dino_grandi
+					}
 				}
-				has_completed_focus = ITA_culto_del_duce
-			}
-		}
-
-		offset = {
-			x = -12
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = ITA_convene_the_grand_council
 			}
 		}
 
@@ -9245,8 +9249,27 @@ focus_tree = {
 		prerequisite = { focus = ITA_la_battaglia_per_le_nascite }
 
 		x = 0
-		y = 1
+		y = 4
 		relative_position_id = ITA_la_battaglia_per_le_nascite
+		offset = {
+			x = 0
+			y = -3
+			trigger = {
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = ITA_culto_del_duce
+					}
+					has_game_rule = {
+						rule = alt_hist_ita
+						option = banned
+					}
+				}
+			}
+		}
 		cost = 10
 		available = {
 			has_country_leader = {
@@ -10576,21 +10599,6 @@ focus_tree = {
 		prerequisite = { focus = ITA_convene_the_grand_council }
 		relative_position_id = ITA_convene_the_grand_council
 
-		allow_branch = {
-			always = no
-			has_dlc = "By Blood Alone"
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { has_completed_focus = ITA_culto_del_duce }
-				NOT = { has_completed_focus = ITA_defy_the_duce }
-			}
-		}
-
 		x = 0
 		y = 1
 		
@@ -10631,8 +10639,24 @@ focus_tree = {
 		prerequisite = { focus = ITA_depose_mussolini }
 		mutually_exclusive = { focus = ITA_dino_grandi_focus focus = ITA_monarchia_d_italia }
 		relative_position_id = ITA_depose_mussolini
-		x = -10
+		x = -4
 		y = 1
+		offset = {
+			x = 4
+			y = 0
+			trigger = {
+				OR = {
+					has_game_rule = {
+						rule = alt_hist_ita
+						option = only_italo_balbo
+					}
+					has_game_rule = {
+						rule = alt_hist_ita
+						option = forced_italo_balbo
+					}
+				}
+			}
+		}
 
 		cost = 5
 		available = {
@@ -10709,8 +10733,24 @@ focus_tree = {
 		prerequisite = { focus = ITA_depose_mussolini }
 		mutually_exclusive = { focus = ITA_italo_balbo_focus focus = ITA_monarchia_d_italia }
 		relative_position_id = ITA_depose_mussolini
-		x = 0
+		x = 4
 		y = 1
+		offset = {
+			x = -4
+			y = 0
+			trigger = {
+				OR = {
+					has_game_rule = {
+						rule = alt_hist_ita
+						option = only_dino_grandi
+					}
+					has_game_rule = {
+						rule = alt_hist_ita
+						option = forced_dino_grandi
+					}
+				}
+			}
+		}
 
 		cost = 5
 		available = {
@@ -10990,7 +11030,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_divino_duce }
 		relative_position_id = ITA_divino_duce
 		x = 0
-		y = 2
+		y = 1
 
 		cost = 10
 		available = {}
@@ -12071,7 +12111,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_dino_grandi_focus }
 		prerequisite = { focus = ITA_consolidate_power }
 		relative_position_id = ITA_dino_grandi_focus
-		x = -1
+		x = 1
 		y = 2
 
 		cost = 10
@@ -14886,8 +14926,55 @@ focus_tree = {
 			}
 		}
 
-		x = 18
+		x = 28
 		y = 1
+		offset = {
+			x = -10
+			y = 0
+			trigger = {
+				OR = {
+					NOT = { has_dlc = "By Blood Alone" }
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = ITA_culto_del_duce
+					}
+					has_game_rule = {
+						rule = alt_hist_ita
+						option = banned
+					}
+				}
+			}
+		}
+		offset = {
+			x = -11
+			y = 0
+			trigger = {
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = ITA_convene_the_grand_council
+					}
+					has_game_rule = {
+						rule = alt_hist_ita
+						option = forced
+					}
+					has_game_rule = {
+						rule = alt_hist_ita
+						option = forced_italo_balbo
+					}
+					has_game_rule = {
+						rule = alt_hist_ita
+						option = forced_dino_grandi
+					}
+				}
+			}
+		}
 		relative_position_id = ITA_triumph_in_africa_bba
 		cost = 5
 		available = {

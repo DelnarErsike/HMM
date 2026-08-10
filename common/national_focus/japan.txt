@@ -3705,10 +3705,10 @@ focus_tree = {
 			focus = JAP_sea_purge_the_kodoha_faction 
 			focus = JAP_okadas_military_purge_speech 
 		}
-		x = 27
+		x = -9
 		y = 0
 		
-		relative_position_id = JAP_okadas_military_purge_speech
+		#relative_position_id = JAP_okadas_military_purge_speech
 
 		offset = {
 			x = -34
@@ -4209,7 +4209,7 @@ focus_tree = {
 		id = JAP_ikki_kitas_state_socialist_ideals
 		icon = GFX_focus_JAP_ikki_kitas_state_socialist_ideals
 		#mutually_exclusive = { focus = JAP_the_unthinkable_option }
-		x = -6
+		x = -5
 		y = 1
 		relative_position_id = JAP_sea_the_showa_restoration
 
@@ -4521,7 +4521,7 @@ focus_tree = {
 		id = JAP_ally_the_league_of_blood
 		icon = GFX_goal_tripartite_pact
 		#mutually_exclusive = { focus = JAP_the_unthinkable_option }
-		x = -9
+		x = -8
 		y = 1
 		relative_position_id = JAP_sea_the_showa_restoration
 
@@ -6421,7 +6421,7 @@ focus_tree = {
 		icon = GFX_focus_JAP_national_spiritual_mobilization_movement
 		#mutually_exclusive = { focus = JAP_utilize_our_polish_friendship }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = JAP_propagandize_the_nihon_shoki
 
 		prerequisite = { focus = JAP_propagandize_the_nihon_shoki }
@@ -6688,7 +6688,7 @@ focus_tree = {
 		icon = GFX_focus_JAP_hakko_ichiu
 		#mutually_exclusive = { focus = JAP_utilize_our_polish_friendship }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = JAP_the_jeweled_spear_has_struck
 
 		prerequisite = { focus = JAP_the_jeweled_spear_has_struck }
@@ -13785,7 +13785,7 @@ focus_tree = {
 		id = JAP_sea_pressure_siam
 		icon = GFX_focus_generic_befriend_siam
 		mutually_exclusive = { focus = JAP_occupy_siam }
-		x = 0
+		x = -1
 		y = 2
 		relative_position_id = JAP_demand_tonkinese_bases
 
@@ -13889,7 +13889,7 @@ focus_tree = {
 		id = JAP_occupy_siam
 		icon = GFX_focus_generic_attack_siam
 		mutually_exclusive = { focus = JAP_sea_pressure_siam }
-		x = 0
+		x = 1
 		y = 2
 		relative_position_id = JAP_demand_tonkinese_bases
 
@@ -13982,8 +13982,15 @@ focus_tree = {
 		icon = GFX_focus_jap_strike_south
 		#mutually_exclusive = { focus = JAP_sea_pressure_siam }
 		x = -1
-		y = 1
-		relative_position_id = JAP_occupy_siam
+		y = 3
+		relative_position_id = JAP_demand_tonkinese_bases
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
+				SIA = { axis = no }
+			}
+		}
 
 		prerequisite = { focus = JAP_occupy_siam focus = JAP_sea_pressure_siam }
 

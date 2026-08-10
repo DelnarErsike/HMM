@@ -6399,7 +6399,7 @@ focus_tree = {
 		icon = GFX_focus_IRQ_curtail_arabism
 		prerequisite = { focus = IRQ_attempted_assasination_of_sidqi }
 		mutually_exclusive = { focus = IRQ_strengthen_the_golden_square }
-		x = 11
+		x = 8
 		y = 1
 		relative_position_id = IRQ_attempted_assasination_of_sidqi
 
@@ -6839,7 +6839,7 @@ focus_tree = {
 		prerequisite = { focus = IRQ_carve_up_syria focus = IRQ_take_advantage_of_british_weakness }
 		#mutually_exclusive = { focus =  }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = IRQ_take_advantage_of_british_weakness
 
 		cost = 10

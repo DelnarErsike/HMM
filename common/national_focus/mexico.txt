@@ -3077,7 +3077,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = MEX_focus_knights_of_columbus }
 		x = -1
-		y = 1
+		y = 2
 		relative_position_id = MEX_focus_knights_of_columbus
 
 		cost = 10
@@ -3309,7 +3309,7 @@ focus_tree = {
 		id = MEX_focus_church_schools
 		icon = GFX_focus_research
 		prerequisite = { focus = MEX_focus_knights_of_columbus focus = MEX_focus_legion_of_christ }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = MEX_focus_knights_of_columbus
 

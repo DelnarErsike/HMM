@@ -5604,8 +5604,24 @@
 	focus = {
 		id = SIA_renegotiate_teak_control
 		icon = GFX_goal_generic_construct_infrastructure
-		x = 1
+		x = 2
 		y = 1
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				OR = {
+					has_game_rule = {
+						rule = alt_hist_sia_eco
+						option = banned
+					}
+					has_game_rule = {
+						rule = alt_hist_sia_eco
+						option = forced
+					}
+				}
+			}
+		}
 		relative_position_id = SIA_asian_financial_compact	
 		prerequisite = { focus = SIA_asian_financial_compact focus = SIA_revision_of_unequal_treaties }
 		#mutually_exclusive = { focus =  }
@@ -6048,9 +6064,29 @@
 	focus = {
 		id = SIA_boon_rawd_brewery
 		icon = GFX_focus_SIA_boon_rawd_brewery
-		x = -4
-		y = 1
-		relative_position_id = SIA_reduction_of_agricultural_yield_taxes	
+		x = -1
+		y = 5
+		offset = {
+			x = -5
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = alt_hist_sia_eco
+					option = banned
+				}
+			}
+		}
+		offset = {
+			x = 5
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = alt_hist_sia_eco
+					option = forced
+				}
+			}
+		}
+		relative_position_id = SIA_industrialization_drive	
 		prerequisite = { focus = SIA_siamese_development_cooperative focus = SIA_reduction_of_agricultural_yield_taxes}
 		#mutually_exclusive = { focus =  }
 		cost = 5
@@ -7300,9 +7336,9 @@
 	focus = {
 		id = SIA_kasetsart_university
 		icon = GFX_focus_research
-		x = -2
-		y = 1
-		relative_position_id = SIA_prepare_for_the_next_blockade	
+		x = 0
+		y = 3
+		relative_position_id = SIA_siam_cement_group	
 		prerequisite = { focus = SIA_railway_and_port_extensions focus = SIA_prepare_for_the_next_blockade }
 		#mutually_exclusive = { focus =  }
 		cost = 5
