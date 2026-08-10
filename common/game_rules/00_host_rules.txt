@@ -908,6 +908,31 @@ coordinated_strike_operation = {
 		desc = "Countries can perform the Coordinated Strike operation on each other as normal."
 	}
 }
+continuous_air_production = {
+	name = "Status of Continuous Air Production"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_air"
+	default = {
+		name = banned
+		text = "RFully Banned"
+		desc = "Continuous Air Production cannot be done by anyone."
+	}
+	option = {
+		name = axis
+		text = "OAxis Only"
+		desc = "Continuous Air Production is only allowed for Axis countries."
+	}
+	option = {
+		name = allies
+		text = "4Allies Only"
+		desc = "Continuous Air Production is only allowed for Allied countries."
+	}
+	option = {
+		name = allowed
+		text = "GAllowed for Everyone"
+		desc = "Continuous Air Production can be done by anyone."
+	}
+}
 tradebacks = {
 	name = "No Tradebacks Idea"
 	group = "HMM Rules"

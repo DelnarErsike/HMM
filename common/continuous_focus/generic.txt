@@ -280,7 +280,33 @@ continuous_focus_palette = {
 		icon = GFX_goal_continuous_air_production
 		
 		available = {
-			always = no
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = continuous_air_production
+						option = banned
+					}
+				}
+				always = no
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = continuous_air_production
+						option = axis
+					}
+				}
+				axis = yes
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = continuous_air_production
+						option = allies
+					}
+				}
+				allies = yes
+			}
 		}
 		
 		idea = continuous_air_production
