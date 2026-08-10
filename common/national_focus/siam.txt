@@ -4225,6 +4225,12 @@
 					NOT = {
 						has_tech = tech_field_hospital
 					}
+					NOT = {
+						has_game_rule = {
+							rule = max_field_hospital_tech
+							option = banned
+						}
+					}
 				}
 
 				set_technology = {

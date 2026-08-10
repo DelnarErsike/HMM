@@ -307,6 +307,36 @@ max_submarine_tech= {
 		desc = "All submarine hulls and technologies are allowed."
 	}
 }
+max_field_hospital_tech = {
+	name = "Maximum Field Hospital Tech Level"
+	group = "HMM Rules"
+	icon = "GFX_volunteers"
+	option = {
+		name = none
+		text = "RBanned"
+		desc = "Field hospital technologies cannot be unlocked at all."
+	}
+	default = {
+		name = hospital_1
+		text = "O1938"
+		desc = "Field hospitals and helicopter med-evacs can be unlocked, but no passive upgrades for them are available."
+	}
+	option = {
+		name = hospital_2
+		text = "Y1939"
+		desc = "Field hospitals and helicopter med-evacs can be unlocked, and the first passive upgrade for them can be unlocked."
+	}
+	option = {
+		name = hospital_3
+		text = "41942"
+		desc = "Field hospitals and helicopter med-evacs can be unlocked, and the first and second passive upgrades for them can be unlocked."
+	}
+	option = {
+		name = hospital_4
+		text = "G1945"
+		desc = "All field hospital and helicopter med-evac related technologies can be unlocked."
+	}
+}
 easier_arteries_of_trade_for_allies = {
 	name = "Protect the Arteries of Trade..."
 	group = "HMM Rules"

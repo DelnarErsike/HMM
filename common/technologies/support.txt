@@ -1149,6 +1149,15 @@ technologies = {
 
 	tech_field_hospital = {
 
+		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = max_field_hospital_tech
+					option = banned
+				}
+			}
+		}
+
 		enable_subunits = {
 			field_hospital
 		}
@@ -1223,8 +1232,19 @@ technologies = {
 	}
 
 	tech_field_hospital2 = {
-		allow = {
-			always = no
+		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = max_field_hospital_tech
+					option = banned
+				}
+			}
+			NOT = {
+				has_game_rule = {
+					rule = max_field_hospital_tech
+					option = hospital_1
+				}
+			}
 		}
 		field_hospital = {
 			casualty_trickleback = 0.10
@@ -1281,6 +1301,27 @@ technologies = {
 	}
 
 	tech_field_hospital3 = {
+
+		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = max_field_hospital_tech
+					option = banned
+				}
+			}
+			NOT = {
+				has_game_rule = {
+					rule = max_field_hospital_tech
+					option = hospital_1
+				}
+			}
+			NOT = {
+				has_game_rule = {
+					rule = max_field_hospital_tech
+					option = hospital_2
+				}
+			}
+		}
 
 		field_hospital = {
 			casualty_trickleback = 0.1
@@ -1346,6 +1387,13 @@ technologies = {
 		}
 	}
 	tech_field_hospital4 = {
+
+		allow_branch = {
+			has_game_rule = {
+				rule = max_field_hospital_tech
+				option = hospital_4
+			}
+		}
 
 		field_hospital = {
 			casualty_trickleback = 0.1
