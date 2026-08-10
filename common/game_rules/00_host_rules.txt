@@ -294,17 +294,17 @@ max_submarine_tech= {
 	default = {
 		name = sub2
 		text = "R1936"
-		desc = "1939 submarine hulls, 1943 submarine hulls, and all snorkel techs are banned, and fleet submarines are indirectly banned."
+		desc = "Improved Submarine hulls, Advanced Submarine hulls, all snorkel technologies, and all AIP engine upgrade technologies are banned. Fleet submarines, nuclear submarines, and missile launching submarines are indirectly banned."
 	}
 	option = {
 		name = sub3
 		text = "Y1939"
-		desc = "1943 submarine hulls and Improved Snorkel technologies are banned."
+		desc = "Advanced Submarine hulls, the Improved Snorkel technology, and the High-Speed Walter Engines technology are banned."
 	}
 	option = {
 		name = sub4
 		text = "G1943"
-		desc = "All submarine technologies are allowed."
+		desc = "All submarine hulls and technologies are allowed."
 	}
 }
 easier_arteries_of_trade_for_allies = {

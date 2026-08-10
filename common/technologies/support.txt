@@ -1910,7 +1910,7 @@ technologies = {
 		enable_equipments = {
 			railway_gun_equipment_1
 		}
-		allow = {
+		allow_branch = {
 			NOT = {
 				has_game_rule = {
 					rule = railway_gun

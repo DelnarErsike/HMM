@@ -84,11 +84,7 @@ technologies = {
 
 					load_oob = "unlock_tanks_mot"
 				}
-				if = {
-					limit = {
-						NOT = { has_tech = motorised_infantry }
-					}
-
+				else = {
 					load_oob = "unlock_tanks"
 				}
 			}
@@ -1279,9 +1275,9 @@ technologies = {
 	}
 
 	super_heavy_tank_chassis = { #Maus
-		allow = {
+		allow_branch = {
 			always = no
-		}		
+		}
 		enable_equipments = {
 			super_heavy_tank_chassis_1
 			super_heavy_tank_destroyer_chassis_1
@@ -2023,6 +2019,7 @@ technologies = {
 
 	sp_armored_lc_naval_engine_conversion_tech = {
 		allow_branch = {
+			always = no
 			 has_dlc = "Gotterdammerung"
 		}
 
@@ -2097,6 +2094,7 @@ technologies = {
 
 	sp_armored_lc_transmission_improvements_tech = {
 		allow_branch = {
+			always = no
 			 has_dlc = "Gotterdammerung"
 		}
 
@@ -2191,6 +2189,7 @@ technologies = {
 
 	sp_armored_lc_specialized_field_manuals_tech = {
 		allow_branch = {
+			always = no
 			 has_dlc = "Gotterdammerung"
 		}
 
@@ -2261,6 +2260,7 @@ technologies = {
 
 	sp_armored_lc_weapon_fire_control_tech = {
 		allow_branch = {
+			always = no
 			 has_dlc = "Gotterdammerung"
 		}
 
@@ -2325,6 +2325,7 @@ technologies = {
 
 	sp_armored_lc_high_impact_obliterator_cannon_tech = {
 		allow_branch = {
+			always = no
 			 has_dlc = "Gotterdammerung"
 		}
 

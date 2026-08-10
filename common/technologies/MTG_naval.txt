@@ -1720,7 +1720,7 @@ early_ship_hull_carrier = {
 
 	improved_ship_hull_submarine = {
 
-		allow = {
+		allow_branch = {
 			NOT = {
 				has_game_rule = {
 					rule = max_submarine_tech
@@ -1787,7 +1787,7 @@ early_ship_hull_carrier = {
 
 	advanced_ship_hull_submarine = {
 
-		allow = {
+		allow_branch = {
 			has_game_rule = {
 				rule = max_submarine_tech
 				option = sub4
@@ -1832,13 +1832,6 @@ early_ship_hull_carrier = {
 	}
 
 	basic_submarine_snorkel = {
-
-		allow = {
-			has_game_rule = {
-				rule = max_submarine_tech
-				option = sub4
-			}
-		}
 
 		enable_equipment_modules = {
 			ship_sub_snorkel_1
@@ -1888,6 +1881,13 @@ early_ship_hull_carrier = {
 	}
 
 	improved_submarine_snorkel = {
+
+		allow_branch = {
+			has_game_rule = {
+				rule = max_submarine_tech
+				option = sub4
+			}
+		}
 
 		enable_equipment_modules = {
 			ship_sub_snorkel_2
@@ -2020,6 +2020,12 @@ early_ship_hull_carrier = {
 	sp_aip_engine_improved_tech = {
 
 		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = max_submarine_tech
+					option = sub2
+				}
+			}
 			 	has_dlc = "Gotterdammerung"
 		}	
 
@@ -2056,6 +2062,13 @@ early_ship_hull_carrier = {
 	}
 
 	sp_aip_engine_advanced_tech = {
+
+		allow_branch = {
+			has_game_rule = {
+				rule = max_submarine_tech
+				option = sub4
+			}
+		}
 
 		allow = {
 	 		ROOT = {

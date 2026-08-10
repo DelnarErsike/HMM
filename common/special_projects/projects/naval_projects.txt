@@ -1272,6 +1272,12 @@ sp_naval_aip_engine = {
 			if = {
 				limit = {
 					has_dlc = "Man the Guns"
+					NOT = {
+						has_game_rule = {
+							rule = max_submarine_tech
+							option = sub2
+						}
+					}
 				}
 				custom_effect_tooltip = {
 					localization_key = SP_UNLOCK_TECH
