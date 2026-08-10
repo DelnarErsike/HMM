@@ -908,6 +908,31 @@ coordinated_strike_operation = {
 		desc = "Countries can perform the Coordinated Strike operation on each other as normal."
 	}
 }
+continuous_recruitment_drive = {
+	name = "Status of Continuous Recruitment Drive"
+	group = "HMM Rules"
+	icon = "GFX_volunteers"
+	option = {
+		name = banned
+		text = "RRemoved"
+		desc = "The non-vanilla continuous national focus 'Continuous Recruitment Drive' is removed from the game."
+	}
+	option = {
+		name = axis
+		text = "OAxis Only"
+		desc = "The non-vanilla continuous national focus 'Continuous Recruitment Drive' is only allowed to be done by Axis countries."
+	}
+	option = {
+		name = allies
+		text = "4Allies Only"
+		desc = "The non-vanilla continuous national focus 'Continuous Recruitment Drive' is only allowed to be done by Allied countries."
+	}
+	default = {
+		name = allowed
+		text = "GAdded for Everyone"
+		desc = "The non-vanilla continuous national focus 'Continuous Recruitment Drive' can be done by anyone."
+	}
+}
 continuous_air_production = {
 	name = "Status of Continuous Air Production"
 	group = "HMM Rules"
@@ -915,22 +940,22 @@ continuous_air_production = {
 	default = {
 		name = banned
 		text = "RFully Banned"
-		desc = "Continuous Air Production cannot be done by anyone."
+		desc = "The continuous national focus 'Continuous Air Production' cannot be done by anyone."
 	}
 	option = {
 		name = axis
 		text = "OAxis Only"
-		desc = "Continuous Air Production is only allowed for Axis countries."
+		desc = "The continuous national focus 'Continuous Air Production' is only allowed for Axis countries."
 	}
 	option = {
 		name = allies
 		text = "4Allies Only"
-		desc = "Continuous Air Production is only allowed for Allied countries."
+		desc = "The continuous national focus 'Continuous Air Production' is only allowed for Allied countries."
 	}
 	option = {
 		name = allowed
 		text = "GAllowed for Everyone"
-		desc = "Continuous Air Production can be done by anyone."
+		desc = "The continuous national focus 'Continuous Air Production' can be done by anyone, as in the base game."
 	}
 }
 tradebacks = {

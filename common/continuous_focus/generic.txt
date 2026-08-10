@@ -555,7 +555,35 @@ continuous_focus_palette = {
 		id = continuous_recruitment_drive	
 		icon = GFX_focus_ger_oppose_hitler
 		modifier = { mobilization_speed = 1.0	}
-		#available = { NOT = { AND ={  tag = EFR date < 1940.1.1 }}   }
+		available = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = continuous_recruitment_drive
+						option = banned
+					}
+				}
+				always = no
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = continuous_recruitment_drive
+						option = axis
+					}
+				}
+				axis = yes
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = continuous_recruitment_drive
+						option = allies
+					}
+				}
+				allies = yes
+			}
+		}
 		daily_cost = 1	
 		available_if_capitulated = yes
 	}
