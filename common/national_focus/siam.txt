@@ -4228,7 +4228,7 @@
 					NOT = {
 						has_game_rule = {
 							rule = max_field_hospital_tech
-							option = banned
+							option = none
 						}
 					}
 				}
@@ -5882,9 +5882,13 @@
 		y = 3
 		relative_position_id = SIA_industrialization_drive
 		offset = {
-			has_game_rule = {
-				rule = alt_hist_sia_eco
-				option = banned
+			x = -5
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = alt_hist_sia_eco
+					option = banned
+				}
 			}
 		}
 		prerequisite = { focus = SIA_asian_financial_compact focus = SIA_revision_of_unequal_treaties }

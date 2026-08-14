@@ -1173,7 +1173,7 @@ technologies = {
 			NOT = {
 				has_game_rule = {
 					rule = max_field_hospital_tech
-					option = banned
+					option = none
 				}
 			}
 		}
@@ -1256,7 +1256,7 @@ technologies = {
 			NOT = {
 				has_game_rule = {
 					rule = max_field_hospital_tech
-					option = banned
+					option = none
 				}
 			}
 			NOT = {
@@ -1326,7 +1326,7 @@ technologies = {
 			NOT = {
 				has_game_rule = {
 					rule = max_field_hospital_tech
-					option = banned
+					option = none
 				}
 			}
 			NOT = {
