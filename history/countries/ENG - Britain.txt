@@ -2090,3 +2090,35 @@ if = {
 		}
 	}
 }
+
+# HMM: starting stockpiles to compensate for deleted day 1 starting units
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 74
+}
+add_equipment_to_stockpile = {
+	type = infantry_equipment_0
+	amount = 6000
+}
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 20000
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 510
+}
+add_equipment_to_stockpile = {
+	type = artillery_equipment_1
+	amount = 200
+}
+add_equipment_to_stockpile = {
+	type = armored_car_equipment
+	amount = 462
+}
+add_equipment_to_stockpile = {
+	type = light_tank_chassis_1
+	amount = 180
+	producer = ENG
+	variant_name = "Light Tank Mk. IV"
+}

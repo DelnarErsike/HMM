@@ -1390,3 +1390,47 @@ if = {
 		}
 	}
 }
+
+# HMM: starting stockpiles to compensate for deleted day 1 starting units
+add_equipment_to_stockpile = {
+	type = infantry_equipment_0
+	amount = 4200
+}
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 31300
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 766
+}
+add_equipment_to_stockpile = {
+	type = motorized_equipment_1
+	amount = 2500
+}
+add_equipment_to_stockpile = {
+	type = artillery_equipment_1
+	amount = 217
+}
+add_equipment_to_stockpile = {
+	type = light_tank_chassis_0
+	amount = 480
+	producer = FRA
+	variant_name = "FT mod. 31"
+}
+add_equipment_to_stockpile = {
+	type = light_tank_chassis_0
+	amount = 480
+	producer = FRA
+	variant_name = "FT Char Cannon"
+}
+add_equipment_to_stockpile = {
+	type = light_tank_chassis_1
+	amount = 240
+	producer = FRA
+	variant_name = "H-35"
+}
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 82
+}

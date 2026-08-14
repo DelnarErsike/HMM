@@ -1846,3 +1846,31 @@ if = {
 	#	obsolete = yes
 	#}
 }
+
+# HMM: starting stockpiles to compensate for deleted day 1 starting units
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 45
+}
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 24900
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 891
+}
+add_equipment_to_stockpile = {
+	type = motorized_equipment_0
+	amount = 607
+}
+add_equipment_to_stockpile = {
+	type = artillery_equipment_1
+	amount = 349
+}
+add_equipment_to_stockpile = {
+	type = light_tank_chassis_1
+	amount = 720
+	producer = GER
+	variant_name = "Panzer I Ausf. A"
+}

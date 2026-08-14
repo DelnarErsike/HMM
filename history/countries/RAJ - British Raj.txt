@@ -512,10 +512,8 @@ if = {
 		producer = RAJ
 	}
 }
-if = {
-	limit = { #If not having goe core everything again since non dlc cant recore
-		NOT = { has_dlc = "Graveyard of Empires" }
-	}
+else = {
+	#If not having goe core everything again since non dlc cant recore
 	every_owned_state = {
 		limit = {
 			NOT = {
@@ -643,4 +641,18 @@ if = {
 	set_variable = { RAJ_congress_decision_cost = 100 }
 	set_variable = { RAJ_congress_decision_cost_increment = 25 }
 
+}
+
+# HMM: starting stockpiles to compensate for deleted day 1 starting units
+add_equipment_to_stockpile = {
+	type = infantry_equipment_0
+	amount = 12400
+}
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 3800
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 30
 }

@@ -361,10 +361,7 @@ if = {
 		variant_name = "Lt vz. 34"
 	}
 }
-if = {
-	limit = {
-		NOT = { has_dlc = "No Step Back" }
-	}
+else = {
 	add_equipment_to_stockpile = {
 		type = light_tank_equipment_1
 		amount = 50
