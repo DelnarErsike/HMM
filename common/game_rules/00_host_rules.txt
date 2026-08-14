@@ -788,7 +788,7 @@ desperate_defense_conditions_status = {
 		desc = "Desperate Defense can only be taken by countries when they are in a defensive war or have enough surrender progress."
 	}
 	option = {
-		name = axix_removed
+		name = axis_removed
 		text = "ORemoved for Axis Only"
 		desc = "Desperate Defense can be taken at any time by Axis countries, but other countries must be in a defensive war or have enough surrender progress to take it."
 	}
