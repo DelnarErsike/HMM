@@ -3062,12 +3062,20 @@ focus_tree = {
 		}
 		bypass = {
 		}
+		allow_branch = { # We aren't allowed to join factions, so this focus becomes impossible
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_spr
+					option = banned
+				}
+			}
+		}
 		prerequisite = { focus = SPA_fascist_economic_aid focus = SPA_spanish_austerity }
 		
 		icon = GFX_goal_generic_construct_infrastructure
-		x = 1
+		x = -1
 		y = 2
-		relative_position_id = SPA_fascist_economic_aid
+		relative_position_id = SPA_spanish_austerity
 		cost = 10
 
 		available_if_capitulated = yes
@@ -3317,6 +3325,14 @@ focus_tree = {
 			}
 		}
 		bypass = {
+		}
+		allow_branch = { # We aren't allowed to join factions, so this focus becomes impossible
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_spr
+					option = banned
+				}
+			}
 		}
 		prerequisite = { focus = SPA_support_the_war_industry focus = SPA_expand_the_axis_gold_trade }
 		
