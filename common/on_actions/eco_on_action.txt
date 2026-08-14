@@ -556,10 +556,6 @@ on_actions = {
 			# AI country starting stockpiles
 			AUS = {
 				add_equipment_to_stockpile = {
-					type = infantry_equipment_0
-					amount = 0
-				}
-				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
 					amount = 3400
 				}
@@ -568,20 +564,8 @@ on_actions = {
 					amount = 240
 				}
 				add_equipment_to_stockpile = {
-					type = motorized_equipment_1
-					amount = 0
-				}
-				add_equipment_to_stockpile = {
 					type = artillery_equipment_1
 					amount = 121
-				}
-				#add_equipment_to_stockpile = {
-				#	type = anti_tank_equipment_1
-				#	amount = 0
-				#}
-				add_equipment_to_stockpile = {
-					type = convoy
-					amount = 0
 				}
 				add_equipment_to_stockpile = {
 					type = train_equipment_1
@@ -591,10 +575,6 @@ on_actions = {
 
 			CZE = {
 				add_equipment_to_stockpile = {
-					type = infantry_equipment_0
-					amount = 0
-				}
-				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
 					amount = 34000
 				}
@@ -603,24 +583,12 @@ on_actions = {
 					amount = 240
 				}
 				add_equipment_to_stockpile = {
-					type = motorized_equipment_1
-					amount = 0
-				}
-				add_equipment_to_stockpile = {
 					type = artillery_equipment_1
 					amount = 680
 				}
 				add_equipment_to_stockpile = {
-					type = anti_tank_equipment_1
-					amount = 0
-				}
-				add_equipment_to_stockpile = {
 					type = anti_air_equipment_1
 					amount = 205
-				}
-				add_equipment_to_stockpile = {
-					type = convoy
-					amount = 0
 				}
 				add_equipment_to_stockpile = {
 					type = train_equipment_1
@@ -639,32 +607,8 @@ on_actions = {
 					amount = 1600
 				}
 				add_equipment_to_stockpile = {
-					type = infantry_equipment_1
-					amount = 0
-				}
-				add_equipment_to_stockpile = {
 					type = support_equipment_1
 					amount = 545
-				}
-				add_equipment_to_stockpile = {
-					type = motorized_equipment_1
-					amount = 0
-				}
-				add_equipment_to_stockpile = {
-					type = artillery_equipment_1
-					amount = 66
-				}
-				add_equipment_to_stockpile = {
-					type = anti_tank_equipment_1
-					amount = 0
-				}
-				add_equipment_to_stockpile = {
-					type = anti_air_equipment_1
-					amount = 0
-				}
-				add_equipment_to_stockpile = {
-					type = convoy
-					amount = 0
 				}
 				add_equipment_to_stockpile = {
 					type = train_equipment_1
@@ -676,30 +620,14 @@ on_actions = {
 					type = infantry_equipment_0
 					amount = 1100
 				}
-				#add_equipment_to_stockpile = {
-				#	type = infantry_equipment_1
-				#	amount = 0
-				#}
 				add_equipment_to_stockpile = {
 					type = support_equipment_1
 					amount = 400
 				}
-				#add_equipment_to_stockpile = {
-				#	type = motorized_equipment_1
-				#	amount = 0
-				#}
 				add_equipment_to_stockpile = {
 					type = artillery_equipment_1
 					amount = 177
 				}
-				#add_equipment_to_stockpile = {
-				#	type = anti_tank_equipment_1
-				#	amount = 0
-				#}
-				#add_equipment_to_stockpile = {
-				#	type = anti_air_equipment_1
-				#	amount = 0
-				#}
 				add_equipment_to_stockpile = {
 					type = convoy
 					amount = 114
@@ -714,22 +642,6 @@ on_actions = {
 					type = support_equipment_1
 					amount = 320
 				}
-				#add_equipment_to_stockpile = {
-				#	type = motorized_equipment_1
-				#	amount = 0
-				#}
-				#add_equipment_to_stockpile = {
-				#	type = artillery_equipment_1
-				#	amount = 0
-				#}
-				#add_equipment_to_stockpile = {
-				#	type = anti_tank_equipment_1
-				#	amount = 0
-				#}
-				#add_equipment_to_stockpile = {
-				#	type = anti_air_equipment_1
-				#	amount = 0
-				#}
 				add_equipment_to_stockpile = {
 					type = convoy
 					amount = 5
@@ -752,22 +664,10 @@ on_actions = {
 					type = support_equipment_1
 					amount = 292
 				}
-				#add_equipment_to_stockpile = {
-				#	type = motorized_equipment_1
-				#	amount = 0
-				#}
 				add_equipment_to_stockpile = {
 					type = artillery_equipment_1
 					amount = 265
 				}
-				#add_equipment_to_stockpile = {
-				#	type = anti_tank_equipment_1
-				#	amount = 0
-				#}
-				#add_equipment_to_stockpile = {
-				#	type = anti_air_equipment_1
-				#	amount = 0
-				#}
 				add_equipment_to_stockpile = {
 					type = convoy
 					amount = 45
@@ -790,22 +690,10 @@ on_actions = {
 					type = support_equipment_1
 					amount = 241
 				}
-				#add_equipment_to_stockpile = {
-				#	type = motorized_equipment_1
-				#	amount = 0
-				#}
 				add_equipment_to_stockpile = {
 					type = artillery_equipment_1
 					amount = 216
 				}
-				#add_equipment_to_stockpile = {
-				#	type = anti_tank_equipment_1
-				#	amount = 0
-				#}
-				#add_equipment_to_stockpile = {
-				#	type = anti_air_equipment_1
-				#	amount = 0
-				#}
 				add_equipment_to_stockpile = {
 					type = convoy
 					amount = 10
@@ -828,22 +716,6 @@ on_actions = {
 					type = support_equipment_1
 					amount = 654
 				}
-				#add_equipment_to_stockpile = {
-				#	type = motorized_equipment_1
-				#	amount = 0
-				#}
-				#add_equipment_to_stockpile = {
-				#	type = artillery_equipment_1
-				#	amount = 0
-				#}
-				#add_equipment_to_stockpile = {
-				#	type = anti_tank_equipment_1
-				#	amount = 0
-				#}
-				#add_equipment_to_stockpile = {
-				#	type = anti_air_equipment_1
-				#	amount = 0
-				#}
 				add_equipment_to_stockpile = {
 					type = convoy
 					amount = 5
@@ -854,10 +726,6 @@ on_actions = {
 				}
 			}
 			BEL = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_0
-					amount = 0
-				}
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
 					amount = 1700
@@ -893,20 +761,12 @@ on_actions = {
 			}
 			HOL = {
 				add_equipment_to_stockpile = {
-					type = infantry_equipment_0
-					amount = 0
-				}
-				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
 					amount = 4400
 				}
 				add_equipment_to_stockpile = {
 					type = support_equipment_1
 					amount = 780
-				}
-				add_equipment_to_stockpile = {
-					type = motorized_equipment_1
-					amount = 0
 				}
 				add_equipment_to_stockpile = {
 					type = artillery_equipment_1
@@ -931,10 +791,6 @@ on_actions = {
 			}
 			LUX = {
 				add_equipment_to_stockpile = {
-					type = infantry_equipment_0
-					amount = 0
-				}
-				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
 					amount = 4800
 				}
@@ -942,25 +798,9 @@ on_actions = {
 					type = support_equipment_1
 					amount = 293
 				}
-				#add_equipment_to_stockpile = {
-				#	type = motorized_equipment_1
-				#	amount = 0
-				#}
 				add_equipment_to_stockpile = {
 					type = artillery_equipment_1
 					amount = 43
-				}
-				#add_equipment_to_stockpile = {
-				#	type = anti_tank_equipment_1
-				#	amount = 0
-				#}
-				#add_equipment_to_stockpile = {
-				#	type = anti_air_equipment_1
-				#	amount = 0
-				#}
-				add_equipment_to_stockpile = {
-					type = convoy
-					amount = 0
 				}
 				add_equipment_to_stockpile = {
 					type = train_equipment_1
@@ -976,10 +816,6 @@ on_actions = {
 					type = support_equipment_1
 					amount = 490
 				}
-				#add_equipment_to_stockpile = {
-				#	type = motorized_equipment_1
-				#	amount = 0
-				#}
 				add_equipment_to_stockpile = {
 					type = artillery_equipment_1
 					amount = 200
@@ -988,10 +824,6 @@ on_actions = {
 					type = anti_tank_equipment_1
 					amount = 75
 				}
-				#add_equipment_to_stockpile = {
-				#	type = anti_air_equipment_1
-				#	amount = 0
-				#}
 				add_equipment_to_stockpile = {
 					type = convoy
 					amount = 106
@@ -1003,10 +835,6 @@ on_actions = {
 			}
 			NOR = {
 				add_equipment_to_stockpile = {
-					type = infantry_equipment_0
-					amount = 0
-				}
-				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
 					amount = 3000
 				}
@@ -1014,18 +842,10 @@ on_actions = {
 					type = support_equipment_1
 					amount = 430
 				}
-				#add_equipment_to_stockpile = {
-				#	type = motorized_equipment_1
-				#	amount = 0
-				#}
 				add_equipment_to_stockpile = {
 					type = artillery_equipment_1
 					amount = 470
 				}
-				#add_equipment_to_stockpile = {
-				#	type = anti_tank_equipment_1
-				#	amount = 0
-				#}
 				add_equipment_to_stockpile = {
 					type = anti_air_equipment_1
 					amount = 230
@@ -1040,10 +860,6 @@ on_actions = {
 				}
 			}
 			POL = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_0
-					amount = 0
-				}
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
 					amount = 7400
@@ -1082,26 +898,10 @@ on_actions = {
 					type = infantry_equipment_0
 					amount = 18000
 				}
-				#add_equipment_to_stockpile = {
-				#	type = infantry_equipment_1
-				#	amount = 0
-				#}
-				#add_equipment_to_stockpile = {
-				#	type = support_equipment_1
-				#	amount = 0
-				#}
-				#add_equipment_to_stockpile = {
-				#	type = motorized_equipment_1
-				#	amount = 0
-				#}
 				add_equipment_to_stockpile = {
 					type = artillery_equipment_1
 					amount = 400
 				}
-				#add_equipment_to_stockpile = {
-				#	type = anti_tank_equipment_1
-				#	amount = 0
-				#}
 				add_equipment_to_stockpile = {
 					type = anti_air_equipment_1
 					amount = 77

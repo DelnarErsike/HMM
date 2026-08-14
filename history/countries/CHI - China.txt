@@ -653,20 +653,6 @@ set_convoys = 40
 	#load_oob = "CHI_united_front"
 	set_global_flag = CHI_unite
 	
-	if = {
-		limit = { has_dlc = "By Blood Alone" }
-			set_air_oob = "CHI_1939_air_bba"
-		else = {
-			set_air_oob = "CHI_1939_air_legacy"
-		}
-	}
-	if = {
-		limit = { has_dlc = "Man the Guns" }
-			set_naval_oob = "CHI_1939_naval_mtg"
-		else = {
-			set_naval_oob = "CHI_1939_naval_legacy"
-		}
-	}
 	set_technology = {
 
 		#PLACEHOLDER techs for vehicles

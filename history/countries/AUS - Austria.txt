@@ -1,23 +1,9 @@
 ﻿capital = 4 # Vienna
 
-IF = {
-	limit = {
-		has_dlc = "Gotterdammerung"
-	}
-	set_oob = "AUS_ww_1936"
-	ELSE_IF = {
-		limit = {
-			NOT = {
-				has_dlc = "Gotterdammerung"
-			}
-		}
-		set_oob = "AUS_1936"
-	}
-}
+oob = "EMPTY"
 
 if = {
 	limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "AUS_1936_air_bba"
 		set_technology = {
 			aa_lmg = 1
 			engines_1 = 1
@@ -25,7 +11,6 @@ if = {
 			iw_small_airframe = 1
 		}
 	else = {
-		set_air_oob = "AUS_1936_air_legacy"
 		set_technology = {
 			early_fighter = 1
 

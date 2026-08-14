@@ -1,6 +1,6 @@
 ﻿capital = 11
 
-oob = "LIT_1936"
+oob = "EMPTY"
 if = {
 	limit = { has_dlc = "By Blood Alone" }
 		set_air_oob = "LIT_1936_air_bba"

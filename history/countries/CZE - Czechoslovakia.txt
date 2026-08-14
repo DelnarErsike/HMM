@@ -1,23 +1,9 @@
 ﻿capital = 9
 
-if = {
-	limit = {
-		NOT = {
-			has_dlc = "No Step Back"
-		}
-	}
-	set_oob = "CZE_1936"
-}
-if = {
-	limit = {
-		has_dlc = "No Step Back"
-	}
-	set_oob = "CZE_1936_nsb"
-}
+oob = "EMPTY"
 
 if = {
 	limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "CZE_1936_air_bba"
 		set_technology = {
 			aa_lmg = 1
 			engines_1 = 1
@@ -28,7 +14,6 @@ if = {
 			bba_early_transport_plane = 1
 		}
 	else = {
-		set_air_oob = "CZE_1936_air_legacy"
 		set_technology = {
 			early_fighter = 1
 			early_bomber = 1
