@@ -352,17 +352,18 @@ marker_for_useless_agency_upgrade = {
 	}
 }
 
+# Not sure these actually even work...
 DIPLOMACY_PEACE_PROPOSAL_ENABLE_TRIGGER = {
 	always = no
 }
 DIPLOMACY_RETURN_TERRITORY_ENABLE_TRIGGER = {
 	if = {
 		limit = {
-			FROM = { tag = WST }
+			FROM = { ai_black = yes }
 		}
 		custom_trigger_tooltip = {
-			tooltip = RETURN_TERRITORY_TO_WST_BLOCKED_TOOLTIP
-			NOT = { FROM = { tag = WST } }
+			tooltip = HMM_RETURN_TERRITORY_TO_BLACK_NATION_BLOCKED_TOOLTIP
+			always = no
 		}
 	}
 }
