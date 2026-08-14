@@ -139,6 +139,7 @@
  RULE_OPTION_BLOCKED_EXCEPT_SPAIN: "Blocked Except for Spain"
  RULE_ALLOW_VOLUNTEERS_BLOCKED_EXCEPT_SPAIN_DESC: "Countries besides Spain may never send Volunteers to any country. Only Spain can send volunteers."
  RULE_VOLUNTEERS_BLOCKED_EXCEPT_SPAIN_TT: "Game Rule: §OOnly Spain may ever send Volunteers to another country.§!"
+ HMM_RETURN_TERRITORY_TO_BLACK_NATION_BLOCKED_TOOLTIP: "Cannot return territory to a dummy or placeholder nation."
 
  # Custom Ideas
  HMM_innovative_weapons_designer:0 "Innovative Weapons Designer"
