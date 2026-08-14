@@ -134,7 +134,7 @@ shared_focus = {
 	}
 
 	offset = {
-		x = -15
+		x = -11
 		y = 0
 		trigger = {
 			has_game_rule = {

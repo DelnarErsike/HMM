@@ -673,11 +673,12 @@ faction_goal_production_quotas = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 		custom_effect_tooltip = INFLUENCE_ABOVE_30_PERCENT
 		every_faction_member = {
-			limit = { faction_influence_ratio > 0.3}
-			IF = {
-				limit = { NOT = { has_completed_goal = faction_goal_production_quotas } }
-				add_political_power = 75
+			visible_when_empty = yes
+			limit = {
+				faction_influence_ratio > 0.3
+				NOT = { has_completed_goal = faction_goal_production_quotas }
 			}
+				add_political_power = 75
 		}
 	}
 	ai_will_do = {
@@ -722,10 +723,9 @@ faction_goal_stall_the_fascist_threat = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
-			IF = {
+			visible_when_empty = yes
 				limit = { NOT = { has_completed_goal = faction_goal_stall_the_fascist_threat } }
 				army_experience = 50
-			}
 		}
 	}
 	ai_will_do = {
@@ -820,73 +820,45 @@ faction_goal_spy_master = {
 		custom_effect_tooltip = THE_SPY_MASTER
 		add_faction_initiative = 1
 		custom_effect_tooltip = generic_skip_one_line_tt
+		# Note: this effect is bugged in vanilla and gives too many upgrades (because the designer for it didn't think things through), but we want to keep the buggy behavior in HMM to stay consistent
 		every_faction_member = {
+			visible_when_empty = yes
+			limit = { NOT = { has_completed_goal = faction_goal_spy_master } }
+			if = {
 			limit = {
 				has_intelligence_agency = no
 			}
-			IF = {
-				limit = { NOT = { has_completed_goal = faction_goal_spy_master } }
 				create_intelligence_agency = yes
 			}
-		}
-		every_faction_member = {
+			if = {
 			limit = {
-				has_intelligence_agency = yes
 				NOT = { has_done_agency_upgrade  = upgrade_form_department }
 			}
-			IF = {
-				limit = { NOT = { has_completed_goal = faction_goal_spy_master } }
 				upgrade_intelligence_agency = upgrade_form_department
 			}
-		}
-		every_faction_member = {
+			if = {
 			limit = {
-				has_intelligence_agency = yes
-				has_done_agency_upgrade  = upgrade_form_department
 				NOT = { has_done_agency_upgrade = upgrade_crypto_strength }
 			}
-			IF = {
-				limit = { NOT = { has_completed_goal = faction_goal_spy_master } }
 				upgrade_intelligence_agency = upgrade_crypto_strength
 			}
-		}
-		every_faction_member = {
+			if = {
 			limit = {
-				has_intelligence_agency = yes
-				has_done_agency_upgrade = upgrade_crypto_strength
 				has_tech = mechanical_computing
 				NOT = { has_done_agency_upgrade = upgrade_crypto_strength_2 }
 			}
 			add_faction_initiative = 1
-			IF = {
-				limit = { NOT = { has_completed_goal = faction_goal_spy_master } }
 				upgrade_intelligence_agency = upgrade_crypto_strength_2
 			}
-		}
-		every_faction_member = {
+			else_if = {
 			limit = {
-				has_intelligence_agency = yes
 				NOT = { agency_upgrade_number > 30 }
-				OR = {
-					has_done_agency_upgrade = upgrade_crypto_strength_2
-					NOT = { has_tech = mechanical_computing }
-				}
 			}
 			add_faction_initiative = 1
-			IF = {
-				limit = { NOT = { has_completed_goal = faction_goal_spy_master } }
 				gain_random_agency_upgrade = yes
 			}
-		}
-		every_faction_member = { # Fallback in case someone completed everything
-			visible_when_empty = no
-			limit = {
-				has_intelligence_agency = yes
-				agency_upgrade_number > 30
-			}
+			else = {
 			add_faction_initiative = 1
-			IF = {
-				limit = { NOT = { has_completed_goal = faction_goal_spy_master } }
 				add_political_power = 100
 			}
 		}
@@ -931,11 +903,9 @@ faction_goal_convoy_sufficiency = {
 				    size > 199
 				    type = convoy
 				}
+				NOT = { has_completed_goal = faction_goal_convoy_sufficiency }
 			}
-			IF = {
-				limit = { NOT = { has_completed_goal = faction_goal_convoy_sufficiency } }
 				navy_experience = 50
-			}
 		}
 	}
 	ai_will_do = {
@@ -1096,6 +1066,25 @@ faction_goal_ensure_military_r_d = {
 			OWNER = { add_faction_influence_ratio = 0.05 }
 		}
 		every_faction_member = {
+			visible_when_empty = yes
+			limit = {
+				any_active_scientist = {
+					OR = {
+						has_scientist_level = {
+							level > 0
+							specialization = specialization_land
+						}
+						has_scientist_level = {
+							level > 0
+							specialization = specialization_naval
+						}
+						has_scientist_level = {
+							level > 0
+							specialization = specialization_air
+						}
+					}
+				}
+			}
 			if = {
 				limit = {
 					any_active_scientist = {
@@ -1226,10 +1215,9 @@ faction_goal_military_infrastructure = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
-			IF = {
+			visible_when_empty = yes
 				limit = { NOT = { has_completed_goal = faction_goal_military_infrastructure } }
 				army_experience = 50
-			}
 		}
 	}
 	ai_will_do = {
@@ -1288,16 +1276,15 @@ faction_goal_a_great_fortress = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
+			visible_when_empty = yes
 			limit = {
 				NOT = { has_idea = deterrence }
+				NOT = { has_completed_goal = faction_goal_a_great_fortress }
 			}
-			IF = {
-				limit = { NOT = { has_completed_goal = faction_goal_a_great_fortress } }
 				add_timed_idea = {
 					idea = deterrence
 					days = 360
 				}
-			}
 		}
 	}
 	ai_will_do = {
@@ -1348,11 +1335,10 @@ faction_goal_preemptive_strike_on_fascism = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
-			IF = {
+			visible_when_empty = yes
 				limit = { NOT = { has_completed_goal = faction_goal_preemptive_strike_on_fascism } }
 				army_experience = 25
 				add_war_support = 0.05
-			}
 		}
 	}
 	ai_will_do = {
@@ -1404,10 +1390,9 @@ faction_goal_war_on_communism = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
-			IF = {
+			visible_when_empty = yes
 				limit = { NOT = { has_completed_goal = faction_goal_war_on_communism } }
 				add_war_support = 0.05
-			}
 		}
 	}
 	ai_will_do = {
@@ -1456,10 +1441,9 @@ faction_goal_war_on_democracy = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
-			IF = {
+			visible_when_empty = yes
 				limit = { NOT = { has_completed_goal = faction_goal_war_on_democracy } }
 				add_war_support = 0.05
-			}
 		}
 	}
 	ai_will_do = {
@@ -1497,7 +1481,7 @@ faction_goal_an_armored_fist = {
 		add_faction_power_projection = 200
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
-			IF = {
+			visible_when_empty = yes
 				limit = { NOT = { has_completed_goal = faction_goal_an_armored_fist } }
 				army_experience = 50
 				random_unit_leader = {
@@ -1513,7 +1497,6 @@ faction_goal_an_armored_fist = {
 					gain_xp = 400
 					add_attack = 1
 				}
-			}
 		}
 	}
 	ai_will_do = {
@@ -1547,7 +1530,7 @@ faction_goal_an_infantry_army = {
 		add_faction_power_projection = 200
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
-			IF = {
+			visible_when_empty = yes
 				limit = { NOT = { has_completed_goal = faction_goal_an_infantry_army } }
 				army_experience = 50
 				random_unit_leader = {
@@ -1563,7 +1546,6 @@ faction_goal_an_infantry_army = {
 					gain_xp = 400
 					add_logistics = 1
 				}
-			}
 		}
 	}
 	ai_will_do = {

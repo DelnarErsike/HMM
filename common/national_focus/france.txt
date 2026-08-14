@@ -1611,6 +1611,14 @@
 		bypass = {
 
 		}
+		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_fra
+					option = forced
+				}
+			}
+		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -4743,6 +4751,14 @@
 		}
 		mutually_exclusive = { focus = FRA_form_the_popular_front }
 		bypass = {
+		}
+		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_fra
+					option = banned
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no

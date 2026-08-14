@@ -222,8 +222,28 @@ technologies = {
 		}
 
 		enable_equipment_modules = {
-			dozer_blade
+			#dozer_blade # HMM: moved this to a separate technology so that we can gate it with rules
 			#flamethrower #MM: Moved to Special Project sp_land_flamethrower_tank
+		}
+
+		on_research_complete = {
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = dozer_blade_status
+							option = banned
+						}
+					}
+				}
+				custom_effect_tooltip = HMM_unlock_dozer_blade
+				hidden_effect = {
+					set_technology = {
+						HMM_dozer_blade_tech = 1
+						popup = no
+					}
+				}
+			}
 		}
 
 		#enable_subunits = { #MM: Moved to Special Project sp_land_flamethrower_tank
@@ -1149,6 +1169,15 @@ technologies = {
 
 	tech_field_hospital = {
 
+		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = max_field_hospital_tech
+					option = banned
+				}
+			}
+		}
+
 		enable_subunits = {
 			field_hospital
 		}
@@ -1223,8 +1252,19 @@ technologies = {
 	}
 
 	tech_field_hospital2 = {
-		allow = {
-			always = no
+		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = max_field_hospital_tech
+					option = banned
+				}
+			}
+			NOT = {
+				has_game_rule = {
+					rule = max_field_hospital_tech
+					option = hospital_1
+				}
+			}
 		}
 		field_hospital = {
 			casualty_trickleback = 0.10
@@ -1281,6 +1321,27 @@ technologies = {
 	}
 
 	tech_field_hospital3 = {
+
+		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = max_field_hospital_tech
+					option = banned
+				}
+			}
+			NOT = {
+				has_game_rule = {
+					rule = max_field_hospital_tech
+					option = hospital_1
+				}
+			}
+			NOT = {
+				has_game_rule = {
+					rule = max_field_hospital_tech
+					option = hospital_2
+				}
+			}
+		}
 
 		field_hospital = {
 			casualty_trickleback = 0.1
@@ -1346,6 +1407,13 @@ technologies = {
 		}
 	}
 	tech_field_hospital4 = {
+
+		allow_branch = {
+			has_game_rule = {
+				rule = max_field_hospital_tech
+				option = hospital_4
+			}
+		}
 
 		field_hospital = {
 			casualty_trickleback = 0.1
@@ -1910,7 +1978,7 @@ technologies = {
 		enable_equipments = {
 			railway_gun_equipment_1
 		}
-		allow = {
+		allow_branch = {
 			NOT = {
 				has_game_rule = {
 					rule = railway_gun

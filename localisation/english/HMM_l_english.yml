@@ -8,14 +8,23 @@
  pre_grind:0 "Pre-Grind"
  pre_grind_desc:0 "This general has been assigned levels and traits to simulate the effects of grinding for experience on the AI. They should definitely not be gaining any more levels or traits."
 
+ hmm_is_allies:0 "Is part of [ENG.GetFlag][USA.GetFlag][SOV.GetFlag] §4Allies§!"
+ hmm_is_allies_western:0 "Is part of [ENG.GetFlag][FRA.GetFlag][USA.GetFlag] §4Western Allies§!"
+ hmm_is_allies_western_early_join:0 "Is part of [ENG.GetFlag][FRA.GetFlag] §4Early Western Allies§!"
+ hmm_is_allies_western_late_join:0 "Is part of [USA.GetFlag] §2Late Western Allies§!"
+ hmm_is_allies_comintern:0 "Is part of [SOV.GetFlag] §tEastern Allies§!"
+ hmm_is_axis:0 "Is part of [GER.GetFlag][ITA.GetFlag][JAP.GetFlag] §OAxis§!"
+ hmm_is_axis_european:0 "Is part of [GER.GetFlag][ITA.GetFlag] §OEuropean Axis§!"
+ hmm_is_axis_geacps:0 "Is part of [JAP.GetFlag] §0Asian Axis§!"
+
 ## Victory System Localisation
 
  MOD_countdown_to_victory_cat:0 "Victory!"
- MOD_countdown_to_victory_cat_desc:0 "The winner of the game is the team who controls 7 or more of the 10 following Cities for §Y365 days§!:\n\n§YNanjing§! - [GetNanjingOwner]\n§YDehli§! - [GetDehliOwner]\n§YAlexandria§! - [GetAlexandriaOwner]\n§YBenghasi§! - [GetBenghasiOwner]\n§YAmsterdam§! - [GetAmsterdamOwner]\n§YParis§! - [GetParisOwner]\n§YLyon§! - [GetLyonOwner]\n§YBryansk§! - [GetBryanskOwner]\n§YMoscow§! - [GetMoscowOwner]\n§YStalingrad§! - [GetStalingradOwner]\n\n\n§YCurrent Score§!:\n\n[GER.GetFlag] §OAxis§!: [?global.axis_score]/§Y10§!\n\n[ENG.GetFlag] §CAllies§!: [?global.allies_score]/§Y10§!\n"
+ MOD_countdown_to_victory_cat_desc:0 "The winner of the game is the team who controls 7 or more of the 10 following Cities for §Y365 days§!:\n\n§YNanjing§! - [GetNanjingOwner]\n§YDehli§! - [GetDelhiOwner]\n§YAlexandria§! - [GetAlexandriaOwner]\n§YBenghasi§! - [GetBenghasiOwner]\n§YAmsterdam§! - [GetAmsterdamOwner]\n§YParis§! - [GetParisOwner]\n§YLyon§! - [GetLyonOwner]\n§YBryansk§! - [GetBryanskOwner]\n§YMoscow§! - [GetMoscowOwner]\n§YStalingrad§! - [GetStalingradOwner]\n\n\n§YCurrent Score§!:\n\n$vp_axis_owns$: [?global.axis_score]/§Y10§!\n\n$vp_allies_owns$: [?global.allies_score]/§Y10§!\n"
 
 
  vp_axis_owns:0 "[GER.GetFlag] §OAxis§!"
- vp_alies_owns:0 "[ENG.GetFlag] §CAllies§!"
+ vp_allies_owns:0 "[ENG.GetFlag] §4Allies§!"
 
  MOD_countdown_to_allied_victory_mission:0 "Imminent [ENG.GetFlag] §CAllied§! §YVictory§!"
  MOD_countdown_to_axis_victory_mission:0 "Imminent [GER.GetFlag] §OAxis§! §YVictory§!"
@@ -127,10 +136,17 @@
  HMM_rule_can_lend_lease_no: "Can send lend-lease: §RNo§!"
  HMM_rule_can_lend_lease_yes: "Can send lend-lease: §GYes§!"
 
+ RULE_OPTION_BLOCKED_EXCEPT_SPAIN: "Blocked Except for Spain"
+ RULE_ALLOW_VOLUNTEERS_BLOCKED_EXCEPT_SPAIN_DESC: "Countries besides Spain may never send Volunteers to any country. Only Spain can send volunteers."
+ RULE_VOLUNTEERS_BLOCKED_EXCEPT_SPAIN_TT: "Game Rule: §OOnly Spain may ever send Volunteers to another country.§!"
+
  # Custom Ideas
  HMM_innovative_weapons_designer:0 "Innovative Weapons Designer"
  ger_eco_nerf:0 "No Strategic Bombing Economy Nerf"
  axis_fuel:0 "Axis Fuel Production"
+
+ HMM_useless_agency_upgrade_disabled:0 "This agency upgrade is useless in this mod, so it has been disabled."
+ HMM_unlock_dozer_blade:0 "Unlock the §YDozer Blade§! module for the tank designer. When used in a design, it provides the vehicle with §G+1 Entrenchment§! for §Y+1 Production Cost§!."
 
  # Altered versions of vanilla descriptions that we only want to override in specific spots
  HMM_seize_gold_modify_economy_of_conquest_modifier_tt: "Modify §Y$GER_economy_of_conquest_modifier$§! by up to (less than if country is not fully occupied or has already had its reserves seized before):"

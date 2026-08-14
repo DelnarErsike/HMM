@@ -1015,7 +1015,24 @@ operation_coup_government = { ### 7 1/70
 	is_staged_coup = yes
 
 	visible = {
-		always = no
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = allow_coups
+					option = BLOCKED
+				}
+			}
+			always = no
+		}
+		else_if = {
+			limit = {
+				has_game_rule = {
+					rule = allow_coups
+					option = AI_ONLY
+				}
+			}
+			FROM = { is_ai = yes }
+		}
 		network_strength = {
 			target = FROM
 			value > 35
@@ -1277,7 +1294,18 @@ operation_boost_resistance = { ### 8 2/40
 	operatives = 2
 
 	visible = {
-		always = no
+		NOT = {
+			has_game_rule = {
+				rule = resistance_operations
+				option = off
+			}
+		}
+		NOT = {
+			has_game_rule = {
+				rule = resistance_operations
+				option = only_sabotage
+			}
+		}
 		network_national_coverage = {
 			target = FROM
 			value > 0
@@ -1433,7 +1461,12 @@ operation_make_resistance_contacts = { ### 9 2/40
 	operatives = 2
 
 	visible = {
-		always = no
+		NOT = {
+			has_game_rule = {
+				rule = resistance_operations
+				option = off
+			}
+		}
 		network_national_coverage = {
 			target = FROM
 			value > 0
@@ -1501,6 +1534,21 @@ operation_make_resistance_contacts = { ### 9 2/40
 		}
 	}
 	outcome_extra_execute = { # SCOPE_OPERATION
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = resistance_operations
+					option = only_sabotage
+				}
+			}
+			ROOT = {
+				add_operation_token = {
+					tag = FROM
+					token = token_resistance_contacts
+				}
+			}
+		}
+		else = {
 		random_list = {
 			33 = {
 				ROOT = {
@@ -1534,6 +1582,7 @@ operation_make_resistance_contacts = { ### 9 2/40
 					subtract_from_variable = { boost_resistance_chance = 10 }
 				}
 			}
+		}
 		}
 	}
 
@@ -1730,7 +1779,24 @@ operation_coordinated_strike = { ### 11 2/70
 	operatives = 2
 
 	visible = {
-		always = no
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = coordinated_strike_operation
+					option = off
+				}
+			}
+			always = no
+		}
+		else_if = {
+			limit = {
+				has_game_rule = {
+					rule = coordinated_strike_operation
+					option = axis_only
+				}
+			}
+			axis = yes
+		}
 		network_strength = {
 			target = FROM
 			value > 35
@@ -1842,7 +1908,61 @@ operation_steal_tech_civilian = { ### 12 3/35
 	cost_multiplier = 0.05
 
 	visible = { #civi steal
-		always = no
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = steal_blueprints_operation
+					option = off
+				}
+			}
+			always = no
+		}
+		else_if = {
+			limit = {
+				has_game_rule = {
+					rule = steal_blueprints_operation
+					option = enemies_only
+				}
+			}
+			if = {
+				limit = { allies = yes }
+				FROM = { axis = yes }
+			}
+			else_if = {
+				limit = { axis = yes }
+				FROM = { allies = no }
+			}
+			else = {
+				always = no
+			}
+		}
+		else_if = {
+			limit = {
+				has_game_rule = {
+					rule = steal_blueprints_operation
+					option = non_faction_only
+				}
+			}
+			if = {
+				limit = { allies_western = yes }
+				FROM = { allies_western = no }
+			}
+			else_if = {
+				limit = { allies_comintern = yes }
+				FROM = { allies_comintern = no }
+			}
+			else_if = {
+				limit = { axis_european = yes }
+				FROM = { axis_european = no }
+			}
+			else_if = {
+				limit = { axis_geacps = yes }
+				FROM = { axis_geacps = no }
+			}
+			else = {
+				always = no
+			}
+		}
 		num_of_operatives > 0
 		network_national_coverage = {
 			target = FROM
@@ -2017,7 +2137,18 @@ operation_targeted_sabotage_industry = { ### 13 3/35
 	operatives = 3
 
 	visible = {
-		always = no
+		NOT = {
+			has_game_rule = {
+				rule = resistance_operations
+				option = off
+			}
+		}
+		NOT = {
+			has_game_rule = {
+				rule = resistance_operations
+				option = only_boost_resistance
+			}
+		}
 		num_of_operatives > 1
 		network_national_coverage = {
 			target = FROM
@@ -2152,7 +2283,18 @@ operation_targeted_sabotage_infrastructure = { ### 14 3/35
 	operatives = 3
 
 	visible = {
-		always = no
+		NOT = {
+			has_game_rule = {
+				rule = resistance_operations
+				option = off
+			}
+		}
+		NOT = {
+			has_game_rule = {
+				rule = resistance_operations
+				option = only_boost_resistance
+			}
+		}
 		num_of_operatives > 1
 		network_national_coverage = {
 			target = FROM
@@ -2284,7 +2426,18 @@ operation_targeted_sabotage_resources = { ### 15 3/35
 	operatives = 3
 
 	visible = {
-		always = no
+		NOT = {
+			has_game_rule = {
+				rule = resistance_operations
+				option = off
+			}
+		}
+		NOT = {
+			has_game_rule = {
+				rule = resistance_operations
+				option = only_boost_resistance
+			}
+		}
 		num_of_operatives > 1
 		network_national_coverage = {
 			target = FROM
@@ -2416,7 +2569,61 @@ operation_steal_tech_army = { ### 16 3/55
 	cost_multiplier = 0.05
 
 	visible = { #army steal
-		always = no
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = steal_blueprints_operation
+					option = off
+				}
+			}
+			always = no
+		}
+		else_if = {
+			limit = {
+				has_game_rule = {
+					rule = steal_blueprints_operation
+					option = enemies_only
+				}
+			}
+			if = {
+				limit = { allies = yes }
+				FROM = { axis = yes }
+			}
+			else_if = {
+				limit = { axis = yes }
+				FROM = { allies = no }
+			}
+			else = {
+				always = no
+			}
+		}
+		else_if = {
+			limit = {
+				has_game_rule = {
+					rule = steal_blueprints_operation
+					option = non_faction_only
+				}
+			}
+			if = {
+				limit = { allies_western = yes }
+				FROM = { allies_western = no }
+			}
+			else_if = {
+				limit = { allies_comintern = yes }
+				FROM = { allies_comintern = no }
+			}
+			else_if = {
+				limit = { axis_european = yes }
+				FROM = { axis_european = no }
+			}
+			else_if = {
+				limit = { axis_geacps = yes }
+				FROM = { axis_geacps = no }
+			}
+			else = {
+				always = no
+			}
+		}
 		num_of_operatives > 1
 		network_national_coverage = {
 			target = FROM
@@ -2696,7 +2903,61 @@ operation_steal_tech_navy = { ### 17 3/55
 	cost_multiplier = 0.05
 
 	visible = { #navy steal
-		always = no
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = steal_blueprints_operation
+					option = off
+				}
+			}
+			always = no
+		}
+		else_if = {
+			limit = {
+				has_game_rule = {
+					rule = steal_blueprints_operation
+					option = enemies_only
+				}
+			}
+			if = {
+				limit = { allies = yes }
+				FROM = { axis = yes }
+			}
+			else_if = {
+				limit = { axis = yes }
+				FROM = { allies = no }
+			}
+			else = {
+				always = no
+			}
+		}
+		else_if = {
+			limit = {
+				has_game_rule = {
+					rule = steal_blueprints_operation
+					option = non_faction_only
+				}
+			}
+			if = {
+				limit = { allies_western = yes }
+				FROM = { allies_western = no }
+			}
+			else_if = {
+				limit = { allies_comintern = yes }
+				FROM = { allies_comintern = no }
+			}
+			else_if = {
+				limit = { axis_european = yes }
+				FROM = { axis_european = no }
+			}
+			else_if = {
+				limit = { axis_geacps = yes }
+				FROM = { axis_geacps = no }
+			}
+			else = {
+				always = no
+			}
+		}
 		num_of_operatives > 1
 		network_national_coverage = {
 			target = FROM
@@ -2933,7 +3194,61 @@ operation_steal_tech_airforce = { ### 18 3/55
 	cost_multiplier = 0.05
 
 	visible = { #air steal 
-		always = no
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = steal_blueprints_operation
+					option = off
+				}
+			}
+			always = no
+		}
+		else_if = {
+			limit = {
+				has_game_rule = {
+					rule = steal_blueprints_operation
+					option = enemies_only
+				}
+			}
+			if = {
+				limit = { allies = yes }
+				FROM = { axis = yes }
+			}
+			else_if = {
+				limit = { axis = yes }
+				FROM = { allies = no }
+			}
+			else = {
+				always = no
+			}
+		}
+		else_if = {
+			limit = {
+				has_game_rule = {
+					rule = steal_blueprints_operation
+					option = non_faction_only
+				}
+			}
+			if = {
+				limit = { allies_western = yes }
+				FROM = { allies_western = no }
+			}
+			else_if = {
+				limit = { allies_comintern = yes }
+				FROM = { allies_comintern = no }
+			}
+			else_if = {
+				limit = { axis_european = yes }
+				FROM = { axis_european = no }
+			}
+			else_if = {
+				limit = { axis_geacps = yes }
+				FROM = { axis_geacps = no }
+			}
+			else = {
+				always = no
+			}
+		}
 		num_of_operatives > 1
 		network_national_coverage = {
 			target = FROM

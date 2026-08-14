@@ -58,6 +58,10 @@ operations = {
         available = {
             SAF = {
                 is_ai = yes
+                OR = { # Just in case
+                    is_in_faction_with = ENG
+                    is_in_faction_with = ROOT
+                }
             }
             ENG = {
                 has_completed_focus = uk_south_africa_focus
@@ -148,7 +152,7 @@ operations = {
             factor = 100
         }
         available = {
-            
+            ETH = { is_ai = yes } # Just in case
         }
         targets = {
             ETH
@@ -231,8 +235,9 @@ operations = {
             factor = 100
         }
         available = {
-            FRA = {has_capitulated = yes}
-            }
+            COG = { is_ai = yes } # Just in case
+            FRA = { has_capitulated = yes }
+        }
         targets = {
             COG
         }
@@ -277,8 +282,9 @@ operations = {
             factor = 100
         }
         available = {
-            FRA = {has_capitulated = yes}
-            }
+            IRE = { is_ai = yes } # Just in case
+            FRA = { has_capitulated = yes }
+        }
         targets = {
             IRE
         }
@@ -321,6 +327,7 @@ operations = {
         available = {
             MAN = {
                 is_ai = yes
+                is_in_faction_with = ROOT # Just in case
             }
         }
         fire_only_once = yes
@@ -363,6 +370,62 @@ operations = {
             
         }
     }
+
+    annex_siam = {
+        # icon = generic_operation
+        allowed = {
+            tag = JAP
+        }
+        available = {
+            SIA = {
+                is_ai = yes
+            }
+            OR = {
+                is_in_faction_with = SIA
+                has_completed_focus = JAP_sea_pressure_siam
+            }
+        }
+        fire_only_once = yes
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        visible = {
+            tag = JAP
+        }
+        targets = {
+            SIA
+        }
+        complete_effect = {
+            SIA = {
+                transfer_units_fraction = {
+                    target = JAP
+                    size = 1
+                    stockpile_ratio = 1
+                    army_ratio = 1
+                    navy_ratio = 1
+                    air_ratio = 1
+                    keep_unit_leaders_trigger = {
+                        always = no
+                    }
+                }
+            }
+            JAP = {
+                annex_country = {
+                    target = SIA
+                    transfer_troops = yes
+                }
+                every_controlled_state = {
+                    limit = {
+                        is_core_of = SIA
+                    }
+                    add_compliance = 100
+                }
+            }
+            
+        }
+    }
+
     annex_new_zealand = {
         # icon = generic_operation
         allowed = {
@@ -376,14 +439,12 @@ operations = {
         available = {
             NZL = {
                 is_ai = yes
+                is_in_faction_with = ROOT # Just in case
+                has_completed_focus = NZL_think_big
             }
             ENG = {
-                    has_completed_focus = uk_new_zealand_focus
+                has_completed_focus = uk_new_zealand_focus
             }
-            NZL = {
-                    has_completed_focus = NZL_think_big
-            }
-
         }
         targets = {
             NZL
@@ -430,6 +491,7 @@ operations = {
         available = {
             PHI = {
                 is_ai = yes
+                is_in_faction_with = ROOT # Just in case
             }
         }
         targets = {

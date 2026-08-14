@@ -4579,6 +4579,12 @@ focus_tree = {
 				NOT = { has_completed_focus = FIN_suomalainen_sosialismi }
 				NOT = { has_completed_focus = FIN_right_wing_policies }
 			}
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_fin
+					option = forced
+				}
+			}
 		}
 
 		x = 7
@@ -4723,8 +4729,24 @@ focus_tree = {
 		icon = GFX_focus_generic_self_management
 		prerequisite = { focus = FIN_finnish_neutrality }
 
-		x = -3
+		x = -6
 		y = 1
+		offset = {
+			x = 3
+			y = 0
+			trigger = {
+				OR = {
+					has_game_rule = {
+						rule = alt_hist_fin
+						option = banned_no_lone_wolf
+					}
+					has_game_rule = {
+						rule = alt_hist_fin
+						option = allowed_no_lone_wolf
+					}
+				}
+			}
+		}
 		relative_position_id = FIN_finnish_neutrality
 		cost = 10
 		available = {
@@ -5120,17 +5142,18 @@ focus_tree = {
 		cost = 10
 
 		allow_branch = {
-			has_completed_focus = FIN_a_new_course_for_kokoomus
-			OR = {
-				has_country_leader = {
-					ruling_only = yes
-					character = FIN_pehr_evind_svinhufvud
-				}
-				has_country_leader = {
-					ruling_only = yes
-					character = FIN_prince_wolfgang_von_hesse
-				}
-			}
+			# HMM: no reason to hide this
+			#has_completed_focus = FIN_a_new_course_for_kokoomus
+			#OR = {
+			#	has_country_leader = {
+			#		ruling_only = yes
+			#		character = FIN_pehr_evind_svinhufvud
+			#	}
+			#	has_country_leader = {
+			#		ruling_only = yes
+			#		character = FIN_prince_wolfgang_von_hesse
+			#	}
+			#}
 		}
 
 		available = {
@@ -5583,7 +5606,7 @@ focus_tree = {
 		icon = GFX_focus_FIN_the_lone_wolf
 		prerequisite = { focus = FIN_moderate_politics }
 		mutually_exclusive = { focus = FIN_northern_defense_front focus = FIN_join_the_allies }
-		x = 2
+		x = 0
 		y = 1
 		relative_position_id = FIN_moderate_politics
 		cost = 5
@@ -5595,7 +5618,28 @@ focus_tree = {
 			NOT = { has_government = democratic }
 			NOT = { has_government = communism }
 		}
-		allow_branch = { always = no }
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = FIN_suomalainen_sosialismi }
+				NOT = { has_completed_focus = FIN_right_wing_policies }
+			}
+			OR = {
+				has_game_rule = {
+					rule = alt_hist_fin
+					option = banned
+				}
+				has_game_rule = {
+					rule = alt_hist_fin
+					option = allowed
+				}
+			}
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER }
 
@@ -6443,9 +6487,9 @@ focus_tree = {
 		icon = GFX_focus_research
 		prerequisite = { focus = FIN_industrialize_the_region focus = FIN_cooperation_with_germany focus = FIN_military_aid }
 
-		x = 0
+		x = -2
 		y = 2
-		relative_position_id = FIN_industrialize_the_region
+		relative_position_id = FIN_cooperation_with_germany
 		cost = 10
 		available = {
 			OR = {
@@ -6625,6 +6669,26 @@ focus_tree = {
 		x = 4
 		y = 0
 		relative_position_id = FIN_reach_out_to_scandinavia
+
+		offset = {
+			x = -25
+			y = 0
+			trigger = {
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = FIN_right_wing_policies
+					}
+					has_game_rule = {
+						rule = alt_hist_fin
+						option = forced
+					}
+				}
+			}
+		}
 
 		cost = 5
 
@@ -6840,7 +6904,7 @@ focus_tree = {
 		prerequisite = { focus = FIN_arm_the_lotta_svard }
 
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = FIN_arm_the_lotta_svard
 		cost = 10
 		available = {
@@ -6860,7 +6924,7 @@ focus_tree = {
 		icon = GFX_focus_FIN_parmis_devils
 		prerequisite = { focus = FIN_union_of_finnish_brothers_in_arms }
 
-		x = -2
+		x = 1
 		y = 1
 		relative_position_id = FIN_union_of_finnish_brothers_in_arms
 		cost = 5
@@ -6943,7 +7007,7 @@ focus_tree = {
 		prerequisite = { focus = FIN_union_of_finnish_brothers_in_arms }
 
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = FIN_union_of_finnish_brothers_in_arms
 		cost = 10
 		available = {
@@ -6999,7 +7063,7 @@ focus_tree = {
 
 		mutually_exclusive = { focus = FIN_seek_german_protection }
 
-		x = 2
+		x = 1
 		y = 2
 		relative_position_id = FIN_national_unity
 		cost = 5
@@ -7131,7 +7195,20 @@ focus_tree = {
 		icon = GFX_focus_FIN_right_wing_policies
 		
 		allow_branch = {
-			always = no
+			OR = {
+				has_game_rule = {
+					rule = alt_hist_fin
+					option = allowed
+				}
+				has_game_rule = {
+					rule = alt_hist_fin
+					option = allowed_no_lone_wolf
+				}
+				has_game_rule = {
+					rule = alt_hist_fin
+					option = forced
+				}
+			}
 			has_dlc = "Arms Against Tyranny"
 			if = {
 				limit = {
@@ -7145,7 +7222,7 @@ focus_tree = {
 			}
 		}
 
-		x = 13
+		x = 10
 		y = 0
 		relative_position_id = FIN_finnish_neutrality
 
@@ -7153,11 +7230,19 @@ focus_tree = {
 			x = -25
 			y = 0
 			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = FIN_right_wing_policies
+					}
+					has_game_rule = {
+						rule = alt_hist_fin
+						option = forced
+					}
 				}
-				has_completed_focus = FIN_right_wing_policies
 			}
 		}
 		
@@ -8195,6 +8280,7 @@ focus_tree = {
 			has_government = fascism
 			is_faction_leader = yes
 		}
+		allow_branch = { always = no }
 
 		search_filters = {}
 
@@ -8556,9 +8642,9 @@ focus_tree = {
 		icon = GFX_focus_FIN_keepers_of_the_north
 		prerequisite = { focus = FIN_finnish_irredentism focus = FIN_bring_foreign_armor_experts }
 
-		x = -2
+		x = 0
 		y = 1
-		relative_position_id = FIN_finnish_irredentism
+		relative_position_id = FIN_bring_foreign_armor_experts
 		cost = 10
 		available = {
 			is_subject = no
@@ -8595,787 +8681,26 @@ focus_tree = {
 
 			custom_effect_tooltip = FIN_keepers_of_the_north_tt
 			hidden_effect = {
-
-				### SAMI ### (Only if country exists)
-
-				if = { #Finnish puppet or independent ally - Annexation
-					limit = {
-						SMI = {
-							FIN_is_valid_root_puppet_or_independent_ally = yes
-						}
-					}
-					SMI = {
-						country_event = { id = AAT_finland_diplomacy.14 hours = 1 }
+				ICE = {
+					every_core_state = {
+						add_claim_by = ROOT
 					}
 				}
-				else_if = { #Ally's puppet and AI - Request puppet transfer
-					limit = {
-						SMI = {
-							FIN_is_valid_allied_puppet_ai = yes
-						}
-					}
-					SMI = {
-						overlord = {
-							if = {
-								limit = {
-									NOT = { is_in_array = { ROOT.countries_with_nordic_territory_array = THIS } }
-								}
-								#This array will be used at the end of the effect to send ONE SINGLE EVENT to each country with Baltic puppets or states with Finnish demands
-								add_to_array = { ROOT.countries_with_nordic_territory_array = THIS }
-							}
-							PREV = {
-								every_controlled_state = {
-									if = {
-										limit = {
-											OR = {
-												AND = {
-													is_core_of = SMI
-													is_owned_by = SMI
-												}
-												AND = {
-													is_core_of = KAR
-													is_owned_by = KAR
-												}
-												is_core_of = ICE
-												is_core_of = SWE
-												is_core_of = NOR
-												is_core_of = DEN
-												is_owned_by = PREV
-											}
-										}
-										#This array will be used in the ONE event that the country's overlord will receive for transferring the appropriate states
-										add_to_array = { PREV.PREV.FIN_states_requested_by_finland_array = THIS } #store array in overlord
-									}
-									else = {
-										#This array will be used in the ONE event that the country's overlord will receive for transferring states back to the overlord 
-										add_to_array = { PREV.PREV.FIN_states_to_come_back_to_overlord_array = THIS } #store array in overlord
-									}
-								}
-							}
-						}
+				SWE = {
+					every_core_state = {
+						add_claim_by = ROOT
 					}
 				}
-				else_if = { #Neutral/enemy - Claims and wargoal
-					limit = {
-						SMI = {
-							OR = {
-								FIN_is_valid_neutral_or_enemy = yes
-								has_civil_war = yes
-							}
-						}
-					}
-
-					SMI = {
-						every_core_state = {
-							limit = {
-								controller = {
-									original_tag = PREV.PREV
-									FIN_is_valid_neutral_or_enemy = yes
-								}
-							}
-							add_claim_by = ROOT
-						}
-						ROOT = {
-							create_wargoal = {
-								type = annex_everything
-								target = PREV
-							}
-
-							if = {
-								limit = {
-									has_non_aggression_pact_with = PREV
-								}
-								diplomatic_relation = {
-									country = PREV
-									relation = non_aggression_pact
-									active = no
-								}
-							}
-							if = {
-								limit = {
-									has_guaranteed = PREV
-								}
-								diplomatic_relation = {
-									country = PREV
-									relation = guarantee
-									active = no
-								}
-							}
-						}
+				NOR = {
+					every_core_state = {
+						add_claim_by = ROOT
 					}
 				}
-
-				### KARELIA ### (Only if country exists)
-
-				if = { #Finnish puppet or independent ally - Annexation
-					limit = {
-						KAR = {
-							FIN_is_valid_root_puppet_or_independent_ally = yes
-						}
-					}
-					KAR = {
-						country_event = { id = AAT_finland_diplomacy.14 hours = 1 }
+				DEN = {
+					every_core_state = {
+						add_claim_by = ROOT
 					}
 				}
-				else_if = { #Ally's puppet and AI - Request puppet transfer
-					limit = {
-						KAR = {
-							FIN_is_valid_allied_puppet_ai = yes
-						}
-					}
-					KAR = {
-						overlord = {
-							if = {
-								limit = {
-									NOT = { is_in_array = { ROOT.countries_with_nordic_territory_array = THIS } }
-								}
-								#This array will be used at the end of the effect to send ONE SINGLE EVENT to each country with Baltic puppets or states with Finnish demands
-								add_to_array = { ROOT.countries_with_nordic_territory_array = THIS }
-							}
-							PREV = {
-								every_controlled_state = {
-									if = {
-										limit = {
-											OR = {
-												AND = {
-													is_core_of = SMI
-													is_owned_by = SMI
-												}
-												AND = {
-													is_core_of = KAR
-													is_owned_by = KAR
-												}
-												is_core_of = ICE
-												is_core_of = SWE
-												is_core_of = NOR
-												is_core_of = DEN
-												is_owned_by = PREV
-											}
-										}
-										#This array will be used in the ONE event that the country's overlord will receive for transferring the appropriate states
-										add_to_array = { PREV.PREV.FIN_states_requested_by_finland_array = THIS } #store array in overlord
-									}
-									else = {
-										#This array will be used in the ONE event that the country's overlord will receive for transferring states back to the overlord 
-										add_to_array = { PREV.PREV.FIN_states_to_come_back_to_overlord_array = THIS } #store array in overlord
-									}
-								}
-							}
-						}
-					}
-				}
-				else_if = { #Neutral/enemy - Claims and wargoal
-					limit = {
-						KAR = {
-							OR = {
-								FIN_is_valid_neutral_or_enemy = yes
-								has_civil_war = yes
-							}
-						}
-					}
-
-					KAR = {
-						every_core_state = {
-							limit = {
-								controller = {
-									original_tag = PREV.PREV
-									FIN_is_valid_neutral_or_enemy = yes
-								}
-							}
-							add_claim_by = ROOT
-						}
-						ROOT = {
-							create_wargoal = {
-								type = annex_everything
-								target = PREV
-							}
-
-							if = {
-								limit = {
-									has_non_aggression_pact_with = PREV
-								}
-								diplomatic_relation = {
-									country = PREV
-									relation = non_aggression_pact
-									active = no
-								}
-							}
-							if = {
-								limit = {
-									has_guaranteed = PREV
-								}
-								diplomatic_relation = {
-									country = PREV
-									relation = guarantee
-									active = no
-								}
-							}
-						}
-					}
-				}
-
-				### ICELAND ### (First since it's puppet of DEN potentially)
-
-				if = { #Finnish puppet or independent ally - Annexation
-					limit = {
-						ICE = {
-							FIN_is_valid_root_puppet_or_independent_ally = yes
-						}
-					}
-					ICE = {
-						country_event = { id = AAT_finland_diplomacy.14 hours = 1 }
-					}
-				}
-				else_if = { #Ally's puppet and AI - Request puppet transfer
-					limit = {
-						ICE = {
-							FIN_is_valid_allied_puppet_ai = yes
-						}
-					}
-					ICE = {
-						overlord = {
-							if = {
-								limit = {
-									NOT = { is_in_array = { ROOT.countries_with_nordic_territory_array = THIS } }
-								}
-								#This array will be used at the end of the effect to send ONE SINGLE EVENT to each country with Baltic puppets or states with Finnish demands
-								add_to_array = { ROOT.countries_with_nordic_territory_array = THIS }
-							}
-							PREV = {
-								every_controlled_state = {
-									if = {
-										limit = {
-											OR = {
-												AND = {
-													is_core_of = SMI
-													is_owned_by = SMI
-												}
-												AND = {
-													is_core_of = KAR
-													is_owned_by = KAR
-												}
-												is_core_of = ICE
-												is_core_of = SWE
-												is_core_of = NOR
-												is_core_of = DEN
-												is_owned_by = PREV
-											}
-										}
-										#This array will be used in the ONE event that the country's overlord will receive for transferring the appropriate states
-										add_to_array = { PREV.PREV.FIN_states_requested_by_finland_array = THIS } #store array in overlord
-									}
-									else = {
-										#This array will be used in the ONE event that the country's overlord will receive for transferring states back to the overlord 
-										add_to_array = { PREV.PREV.FIN_states_to_come_back_to_overlord_array = THIS } #store array in overlord
-									}
-								}
-							}
-						}
-					}
-				}
-				else_if = { #Neutral/enemy - Claims and wargoal
-					limit = {
-						ICE = {
-							OR = {
-								FIN_is_valid_neutral_or_enemy = yes
-								has_civil_war = yes
-							}
-						}
-					}
-					ICE = {
-						every_core_state = {
-							limit = {
-								controller = {
-									original_tag = PREV.PREV
-									FIN_is_valid_neutral_or_enemy = yes
-								}
-							}
-							add_claim_by = ROOT
-						}
-						ROOT = {
-							create_wargoal = {
-								type = annex_everything
-								target = PREV
-							}
-
-							if = {
-								limit = {
-									has_non_aggression_pact_with = PREV
-								}
-								diplomatic_relation = {
-									country = PREV
-									relation = non_aggression_pact
-									active = no
-								}
-							}
-							if = {
-								limit = {
-									has_guaranteed = PREV
-								}
-								diplomatic_relation = {
-									country = PREV
-									relation = guarantee
-									active = no
-								}
-							}
-						}
-					}
-				}
-				
-				if = { #Someone else controls Icelandic states - Demand Icelandic states.
-					limit = {
-						ICE = {
-							any_core_state = {
-								FIN_is_valid_occupier_country = yes
-							}
-						}
-					}
-					ICE = {
-						every_core_state = {
-							limit = {
-								FIN_is_valid_occupier_country = yes
-							}
-							controller = {
-								if = {
-									limit = {
-										NOT = { is_in_array = { ROOT.countries_with_nordic_territory_array = THIS } }
-									}
-									#This array will be used at the end of the effect to send ONE SINGLE EVENT to each country with Baltic puppets or states with Finnish demands
-									add_to_array = { ROOT.countries_with_nordic_territory_array = THIS }
-								}
-
-								#Add state target for Finnish request of state transfer. This array will be used in the ONE event that the country will receive for transferring the appropriate states
-								add_to_array = { FIN_states_requested_by_finland_array = PREV }
-							}
-						}
-					}
-				}
-
-				### SWEDEN ###
-				if = { #Finnish puppet or independent ally - Annexation
-					limit = {
-						SWE = {
-							FIN_is_valid_root_puppet_or_independent_ally = yes
-						}
-					}
-					SWE = {
-						country_event = { id = AAT_finland_diplomacy.14 hours = 1 }
-					}
-				}
-				else_if = { #Ally's puppet and AI - Request puppet transfer
-					limit = {
-						SWE = {
-							FIN_is_valid_allied_puppet_ai = yes
-						}
-					}
-					SWE = {
-						overlord = {
-							if = {
-								limit = {
-									NOT = { is_in_array = { ROOT.countries_with_nordic_territory_array = THIS } }
-								}
-								#This array will be used at the end of the effect to send ONE SINGLE EVENT to each country with Baltic puppets or states with Finnish demands
-								add_to_array = { ROOT.countries_with_nordic_territory_array = THIS }
-							}
-							PREV = {
-								every_controlled_state = {
-									if = {
-										limit = {
-											OR = {
-												AND = {
-													is_core_of = SMI
-													is_owned_by = SMI
-												}
-												AND = {
-													is_core_of = KAR
-													is_owned_by = KAR
-												}
-												is_core_of = ICE
-												is_core_of = SWE
-												is_core_of = NOR
-												is_core_of = DEN
-												is_owned_by = PREV
-											}
-										}
-										#This array will be used in the ONE event that the country's overlord will receive for transferring the appropriate states
-										add_to_array = { PREV.PREV.FIN_states_requested_by_finland_array = THIS } #store array in overlord
-									}
-									else = {
-										#This array will be used in the ONE event that the country's overlord will receive for transferring states back to the overlord 
-										add_to_array = { PREV.PREV.FIN_states_to_come_back_to_overlord_array = THIS } #store array in overlord
-									}
-								}
-							}
-						}
-					}
-				}
-				else_if = { #Neutral/enemy - Claims and wargoal
-					limit = {
-						SWE = {
-							OR = {
-								FIN_is_valid_neutral_or_enemy = yes
-								has_civil_war = yes
-							}
-						}
-					}
-					SWE = {
-						every_core_state = {
-							limit = {
-								controller = {
-									original_tag = PREV.PREV
-									FIN_is_valid_neutral_or_enemy = yes
-								}
-							}
-							add_claim_by = ROOT
-						}
-						ROOT = {
-							create_wargoal = {
-								type = annex_everything
-								target = PREV
-							}
-
-							if = {
-								limit = {
-									has_non_aggression_pact_with = PREV
-								}
-								diplomatic_relation = {
-									country = PREV
-									relation = non_aggression_pact
-									active = no
-								}
-							}
-							if = {
-								limit = {
-									has_guaranteed = PREV
-								}
-								diplomatic_relation = {
-									country = PREV
-									relation = guarantee
-									active = no
-								}
-							}
-						}
-					}
-				}
-			
-				if = { #Someone else controls Swedish states - Demand Swedish states.
-					limit = {
-						SWE = {
-							any_core_state = {
-								FIN_is_valid_occupier_country = yes
-							}
-						}
-					}
-					SWE = {
-						every_core_state = {
-							limit = {
-								FIN_is_valid_occupier_country = yes
-							}
-							controller = {
-								if = {
-									limit = {
-										NOT = { is_in_array = { ROOT.countries_with_nordic_territory_array = THIS } }
-									}
-									#This array will be used at the end of the effect to send ONE SINGLE EVENT to each country with Baltic puppets or states with Finnish demands
-									add_to_array = { ROOT.countries_with_nordic_territory_array = THIS }
-								}
-
-								#Add state target for Finnish request of state transfer. This array will be used in the ONE event that the country will receive for transferring the appropriate states
-								add_to_array = { FIN_states_requested_by_finland_array = PREV }
-							}
-						}
-					}
-				}
-
-
-				### NORWAY ###
-
-				if = { #Finnish puppet or independent ally - Annexation
-					limit = {
-						NOR = {
-							FIN_is_valid_root_puppet_or_independent_ally = yes
-						}
-					}
-					#log = "Finnish Puppet or Ally"
-					NOR = {
-						country_event = { id = AAT_finland_diplomacy.14 hours = 1 }
-					}
-				}
-				else_if = { #Ally's puppet and AI - Request puppet transfer
-					limit = {
-						NOR = {
-							FIN_is_valid_allied_puppet_ai = yes
-						}
-					}
-					#log = "Ally's puppet"
-					NOR = {
-						overlord = {
-							if = {
-								limit = {
-									NOT = { is_in_array = { ROOT.countries_with_nordic_territory_array = THIS } }
-								}
-								#This array will be used at the end of the effect to send ONE SINGLE EVENT to each country with Baltic puppets or states with Finnish demands
-								add_to_array = { ROOT.countries_with_nordic_territory_array = THIS }
-							}
-							PREV = {
-								every_controlled_state = {
-									if = {
-										limit = {
-											OR = {
-												AND = {
-													is_core_of = SMI
-													is_owned_by = SMI
-												}
-												AND = {
-													is_core_of = KAR
-													is_owned_by = KAR
-												}
-												is_core_of = ICE
-												is_core_of = SWE
-												is_core_of = NOR
-												is_core_of = DEN
-												is_owned_by = PREV
-											}
-										}
-										#This array will be used in the ONE event that the country's overlord will receive for transferring the appropriate states
-										add_to_array = { PREV.PREV.FIN_states_requested_by_finland_array = THIS } #store array in overlord
-									}
-									else = {
-										#This array will be used in the ONE event that the country's overlord will receive for transferring states back to the overlord 
-										add_to_array = { PREV.PREV.FIN_states_to_come_back_to_overlord_array = THIS } #store array in overlord
-									}
-								}
-							}
-						}
-					}
-				}
-				else_if = { #Neutral/enemy - Claims and wargoal
-					limit = {
-						NOR = {
-							OR = {
-								FIN_is_valid_neutral_or_enemy = yes
-								has_civil_war = yes
-							}
-						}
-					}
-					#log = "NOR is neutral/enemy"
-					NOR = {
-						every_core_state = {
-							limit = {
-								controller = {
-									original_tag = PREV.PREV
-									FIN_is_valid_neutral_or_enemy = yes
-								}
-							}
-							add_claim_by = ROOT
-						}
-						ROOT = {
-							create_wargoal = {
-								type = annex_everything
-								target = PREV
-							}
-
-							if = {
-								limit = {
-									has_non_aggression_pact_with = PREV
-								}
-								diplomatic_relation = {
-									country = PREV
-									relation = non_aggression_pact
-									active = no
-								}
-							}
-							if = {
-								limit = {
-									has_guaranteed = PREV
-								}
-								diplomatic_relation = {
-									country = PREV
-									relation = guarantee
-									active = no
-								}
-							}
-						}
-					}
-				}
-			
-				if = { #Someone else controls Norwegian states - Demand Norwegian states.
-					limit = {
-						NOR = {
-							any_core_state = {
-								FIN_is_valid_occupier_country = yes
-							}
-						}
-					}
-					#log = "Cores controlled by someone else"
-					NOR = {
-						every_core_state = {
-							limit = {
-								FIN_is_valid_occupier_country = yes
-							}
-							controller = {
-								if = {
-									limit = {
-										NOT = { is_in_array = { ROOT.countries_with_nordic_territory_array = THIS } }
-									}
-									#This array will be used at the end of the effect to send ONE SINGLE EVENT to each country with Baltic puppets or states with Finnish demands
-									add_to_array = { ROOT.countries_with_nordic_territory_array = THIS }
-								}
-
-								#Add state target for Finnish request of state transfer. This array will be used in the ONE event that the country will receive for transferring the appropriate states
-								add_to_array = { FIN_states_requested_by_finland_array = PREV }
-							}
-						}
-					}
-				}
-
-
-				### DENMARK ###
-
-				if = { #Finnish puppet or independent ally - Annexation
-					limit = {
-						DEN = {
-							FIN_is_valid_root_puppet_or_independent_ally = yes
-						}
-					}
-					DEN = {
-						country_event = { id = AAT_finland_diplomacy.14 hours = 1 }
-					}
-				}
-				else_if = { #Ally's puppet and AI - Request puppet transfer
-					limit = {
-						DEN = {
-							FIN_is_valid_allied_puppet_ai = yes
-						}
-					}
-					DEN = {
-						overlord = {
-							if = {
-								limit = {
-									NOT = { is_in_array = { ROOT.countries_with_nordic_territory_array = THIS } }
-								}
-								#This array will be used at the end of the effect to send ONE SINGLE EVENT to each country with Baltic puppets or states with Finnish demands
-								add_to_array = { ROOT.countries_with_nordic_territory_array = THIS }
-							}
-							PREV = {
-								every_controlled_state = {
-									if = {
-										limit = {
-											OR = {
-												AND = {
-													is_core_of = SMI
-													is_owned_by = SMI
-												}
-												AND = {
-													is_core_of = KAR
-													is_owned_by = KAR
-												}
-												is_core_of = ICE
-												is_core_of = SWE
-												is_core_of = NOR
-												is_core_of = DEN
-												is_owned_by = PREV
-											}
-										}
-										#This array will be used in the ONE event that the country's overlord will receive for transferring the appropriate states
-										add_to_array = { PREV.PREV.FIN_states_requested_by_finland_array = THIS } #store array in overlord
-									}
-									else = {
-										#This array will be used in the ONE event that the country's overlord will receive for transferring states back to the overlord 
-										add_to_array = { PREV.PREV.FIN_states_to_come_back_to_overlord_array = THIS } #store array in overlord
-									}
-								}
-							}
-						}
-					}
-				}
-				else_if = { #Neutral/enemy - Claims and wargoal
-					limit = {
-						DEN = {
-							OR = {
-								FIN_is_valid_neutral_or_enemy = yes
-								has_civil_war = yes
-							}
-						}
-					}
-
-					DEN = {
-						every_core_state = {
-							limit = {
-								controller = {
-									original_tag = PREV.PREV
-									FIN_is_valid_neutral_or_enemy = yes
-								}
-							}
-							add_claim_by = ROOT
-						}
-						ROOT = {
-							create_wargoal = {
-								type = annex_everything
-								target = PREV
-							}
-
-							if = {
-								limit = {
-									has_non_aggression_pact_with = PREV
-								}
-								diplomatic_relation = {
-									country = PREV
-									relation = non_aggression_pact
-									active = no
-								}
-							}
-							if = {
-								limit = {
-									has_guaranteed = PREV
-								}
-								diplomatic_relation = {
-									country = PREV
-									relation = guarantee
-									active = no
-								}
-							}
-						}
-					}
-				}
-			
-				if = { #Someone else controls Danish states - Demand Danish states.
-					limit = {
-						DEN = {
-							any_core_state = {
-								FIN_is_valid_occupier_country = yes
-							}
-						}
-					}
-					DEN = {
-						every_core_state = {
-							limit = {
-								FIN_is_valid_occupier_country = yes
-							}
-							controller = {
-								if = {
-									limit = {
-										NOT = { is_in_array = { ROOT.countries_with_nordic_territory_array = THIS } }
-									}
-									#This array will be used at the end of the effect to send ONE SINGLE EVENT to each country with Baltic puppets or states with Finnish demands
-									add_to_array = { ROOT.countries_with_nordic_territory_array = THIS }
-								}
-
-								#Add state target for Finnish request of state transfer. This array will be used in the ONE event that the country will receive for transferring the appropriate states
-								add_to_array = { FIN_states_requested_by_finland_array = PREV }
-							}
-						}
-					}
-				}
-
-				#### SEND EVENT TO COUTNRIES OCCUPYING / PUPPETING BALTICS ###
-				for_each_scope_loop = {
-					array = ROOT.countries_with_nordic_territory_array			
-					country_event = { id = AAT_finland_diplomacy.17 hours = 1 }
-					#log = "Sent event to [THIS.GetName]"
-				}
-				clear_array = ROOT.countries_with_nordic_territory_array
-
 				every_controlled_state = {
 					limit = {
 						OR = {
@@ -9398,9 +8723,9 @@ focus_tree = {
 		icon = GFX_focus_FIN_patriotic_peoples_movement
 		prerequisite = { focus = FIN_a_fascist_regime }
 
-		x = 4
-		y = 0
-		relative_position_id = FIN_finnish_supremacy_in_the_north
+		x = 3
+		y = 1
+		relative_position_id = FIN_a_fascist_regime
 		cost = 5
 		available = {
 		}
@@ -9883,9 +9208,51 @@ focus_tree = {
 		id = FIN_enhance_southern_infrastructure
 		icon = GFX_goal_generic_construct_infrastructure
 
-		x = 8
+		x = 20
 		y = 0
 		relative_position_id = FIN_finnish_neutrality
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = FIN_finnish_neutrality
+					}
+					has_game_rule = {
+						rule = alt_hist_fin
+						option = banned_no_lone_wolf
+					}
+					has_game_rule = {
+						rule = alt_hist_fin
+						option = banned
+					}
+				}
+			}
+		}
+		offset = {
+			x = -25
+			y = 0
+			trigger = {
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = FIN_right_wing_policies
+					}
+					has_game_rule = {
+						rule = alt_hist_fin
+						option = forced
+					}
+				}
+			}
+		}
 
 
 		cost = 10
@@ -12157,22 +11524,28 @@ focus_tree = {
 		cost = 5
 
 		allow_branch = {
-			has_dlc = "No Step Back"
-			has_completed_focus = FIN_national_armor_focus
-			has_completed_focus = FIN_militarized_society
+			# HMM: no reason to hide this...
+			#has_dlc = "No Step Back"
+			#has_completed_focus = FIN_national_armor_focus
+			#has_completed_focus = FIN_militarized_society
+			NOT = {
+				has_game_rule = {
+					rule = super_heavy_tank
+					option = banned
+				}
+			}
 		}
 
 		available = {
+			# HMM: added here instead of as prerequisite so the focus tree can remain clean.
+			has_completed_focus = FIN_militarized_society
 			has_tech = super_heavy_tank_chassis
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			if = { #Intended that this is not to shown to the player until the other focus is completed.
-				limit = {
-					has_completed_focus = FIN_militarized_society
-				}
+			# HMM: we've already integrated the militarized society requirement into the available block, no need to hide the effect
 				random_core_state = {
 					limit = {
 						is_fully_controlled_by = ROOT
@@ -12221,7 +11594,6 @@ focus_tree = {
 					progress = 0.6
 					efficiency = 50
 				}
-			}
 		}
 	}
 	

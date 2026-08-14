@@ -23,7 +23,7 @@ focus_tree = {
 			original_tag = USA
 		}
 	}
-	continuous_focus_position = { x = 50 y = 800 }
+	continuous_focus_position = { x = 50 y = 1200 }
 	shared_focus = ABDA_abdacom
 	default = no
 #	focus = {
@@ -65,7 +65,7 @@ focus_tree = {
 	focus = {
 		id = USA_continue_the_new_deal
 		icon = GFX_focus_generic_self_management
-		x = 14
+		x = 10
 		y = 0
 
 		mutually_exclusive = { focus = USA_reestablish_the_gold_standard }
@@ -85,6 +85,12 @@ focus_tree = {
 				}
 				NOT = {
 					has_completed_focus = USA_reestablish_the_gold_standard
+				}
+			}
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_usa
+					option = forced
 				}
 			}
 		}
@@ -1976,6 +1982,25 @@ focus_tree = {
 		icon = GFX_goal_generic_neutrality_focus
 		x = 3
 		y = 1
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = USA_reestablish_the_gold_standard
+					}
+					has_game_rule = {
+						rule = alt_hist_usa
+						option = forced
+					}
+				}
+			}
+		}
 		prerequisite = { focus = USA_continue_the_new_deal focus = USA_reestablish_the_gold_standard }
 		mutually_exclusive = { focus = USA_limited_intervention }
 		relative_position_id = USA_continue_the_new_deal
@@ -2067,10 +2092,10 @@ focus_tree = {
 	focus = {
 		id = USA_lend_lease_act
 		icon = GFX_focus_generic_treaty
-		x = 1
-		y = 1
+		x = -2
+		y = 2
 		prerequisite = { focus = USA_neutrality_act focus = USA_limited_intervention }
-		relative_position_id = USA_limited_intervention
+		relative_position_id = USA_neutrality_act
 
 		cost = 10
 
@@ -2188,7 +2213,7 @@ focus_tree = {
 		icon = GFX_goal_support_democracy
 		prerequisite = { focus = USA_neutrality_act }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = USA_neutrality_act
 
 
@@ -2800,7 +2825,7 @@ focus_tree = {
 	focus = {
 		id = USA_reestablish_the_gold_standard
 		icon = GFX_focus_usa_reestablish_the_gold_standard
-		x = 18
+		x = 14
 		y = 0
 		offset = {
 			x = -12
@@ -2883,6 +2908,12 @@ focus_tree = {
 					has_completed_focus = USA_continue_the_new_deal
 				}
 			}
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_usa
+					option = banned
+				}
+			}
 		}
 
 		available = {
@@ -2895,7 +2926,6 @@ focus_tree = {
 		bypass = {
 
 		}
-		allow_branch = { always = no }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -3125,7 +3155,6 @@ focus_tree = {
 		bypass = {
 
 		}
-		allow_branch = { always = no }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -3236,6 +3265,7 @@ focus_tree = {
 		bypass = {
 
 		}
+		allow_branch = { always = no }
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
@@ -3294,6 +3324,7 @@ focus_tree = {
 		bypass = {
 			has_government = fascism
 		}
+		allow_branch = { always = no }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -3632,6 +3663,7 @@ focus_tree = {
 		bypass = {
 
 		}
+		allow_branch = { always = no }
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
@@ -4550,6 +4582,44 @@ focus_tree = {
 		icon = GFX_goal_generic_position_armies
 		x = 24
 		y = 0
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = USA_continue_the_new_deal
+					}
+					has_game_rule = {
+						rule = alt_hist_usa
+						option = banned
+					}
+				}
+			}
+		}
+		offset = {
+			x = -13
+			y = 0
+			trigger = {
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = USA_reestablish_the_gold_standard
+					}
+					has_game_rule = {
+						rule = alt_hist_usa
+						option = forced
+					}
+				}
+			}
+		}
 		
 		cost = 10
 

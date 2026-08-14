@@ -1646,7 +1646,8 @@ DIPLOMACY_KICK_FROM_FACTION_ENABLE_TRIGGER = {
 DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 	if = {
 		limit = {
-			tag = SPA
+			original_tag = SPR
+			axis = yes
 		}
 		custom_trigger_tooltip = {
 			tooltip = HMM_spa_only_volunteers_to_ger_ita_bul
@@ -2043,6 +2044,18 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 				tooltip = RULE_VOLUNTEERS_NOT_ANARCHISTS_TT
 				NOT = { FROM = { tag = SPC } }
 			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_game_rule = {
+				rule = allow_volunteers
+				option = BLOCKED_EXCEPT_SPAIN
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = RULE_VOLUNTEERS_BLOCKED_EXCEPT_SPAIN_TT
+			original_tag = SPR
 		}
 	}
 	else_if = {

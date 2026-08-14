@@ -104,8 +104,39 @@ focus_tree = {
 	inlay_window = {
 		id = jap_imperial_influence_inlay_window
 		
-		position = { X = 3150 y = 700 }
+		position = { X = 4850 y = 700 }
 
+		override_position = {
+			x = 3150
+			y = 700
+			trigger = {
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = JAP_sea_purge_the_kodoha_faction
+					}
+					has_game_rule = {
+						rule = alt_hist_jap
+						option = banned
+					}
+				}
+			}
+		}
+
+		override_position = {
+			x = 4100
+			y = 700
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
+			}
+		}
 	}
 
 	default = no
@@ -1275,7 +1306,12 @@ focus_tree = {
 		}
 
 		allow_branch = {
-			always = no
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_jap
+					option = banned
+				}
+			}
 			NOT = {
 				has_dlc = "No Compromise, No Surrender"
 			}
@@ -3700,10 +3736,10 @@ focus_tree = {
 			focus = JAP_sea_purge_the_kodoha_faction 
 			focus = JAP_okadas_military_purge_speech 
 		}
-		x = 27
+		x = -9
 		y = 0
 		
-		relative_position_id = JAP_okadas_military_purge_speech
+		#relative_position_id = JAP_okadas_military_purge_speech
 
 		offset = {
 			x = -34
@@ -3726,7 +3762,12 @@ focus_tree = {
 		}
 
 		allow_branch = {
-			always = no
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_jap
+					option = banned
+				}
+			}
 			has_dlc = "No Compromise, No Surrender"
 			IF = {
 				limit = {
@@ -3897,6 +3938,7 @@ focus_tree = {
 		bypass = {
 
 		}
+		allow_branch = { always = no }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -4198,7 +4240,7 @@ focus_tree = {
 		id = JAP_ikki_kitas_state_socialist_ideals
 		icon = GFX_focus_JAP_ikki_kitas_state_socialist_ideals
 		#mutually_exclusive = { focus = JAP_the_unthinkable_option }
-		x = -6
+		x = -5
 		y = 1
 		relative_position_id = JAP_sea_the_showa_restoration
 
@@ -4510,7 +4552,7 @@ focus_tree = {
 		id = JAP_ally_the_league_of_blood
 		icon = GFX_goal_tripartite_pact
 		#mutually_exclusive = { focus = JAP_the_unthinkable_option }
-		x = -9
+		x = -8
 		y = 1
 		relative_position_id = JAP_sea_the_showa_restoration
 
@@ -6024,6 +6066,7 @@ focus_tree = {
 		bypass = {
 
 		}
+		allow_branch = { always = no }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -6056,7 +6099,7 @@ focus_tree = {
 		id = JAP_return_to_sakoku_ron
 		icon = GFX_focus_JAP_return_to_sakoku_ron
 		mutually_exclusive = { focus = JAP_the_enemy_of_our_enemy focus = JAP_utilize_our_polish_friendship }
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = JAP_the_imperial_colors
 
@@ -6142,7 +6185,7 @@ focus_tree = {
 		id = JAP_the_enemy_of_our_enemy
 		icon = GFX_focus_chi_mission_to_germany
 		mutually_exclusive = { focus = JAP_return_to_sakoku_ron focus = JAP_utilize_our_polish_friendship }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = JAP_the_imperial_colors
 
@@ -6225,7 +6268,7 @@ focus_tree = {
 		id = JAP_societal_bushido
 		icon = GFX_focus_generic_japanese_imperial_glory
 		#mutually_exclusive = { focus = JAP_utilize_our_polish_friendship }
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = JAP_the_enemy_of_our_enemy
 
@@ -6409,7 +6452,7 @@ focus_tree = {
 		icon = GFX_focus_JAP_national_spiritual_mobilization_movement
 		#mutually_exclusive = { focus = JAP_utilize_our_polish_friendship }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = JAP_propagandize_the_nihon_shoki
 
 		prerequisite = { focus = JAP_propagandize_the_nihon_shoki }
@@ -6676,7 +6719,7 @@ focus_tree = {
 		icon = GFX_focus_JAP_hakko_ichiu
 		#mutually_exclusive = { focus = JAP_utilize_our_polish_friendship }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = JAP_the_jeweled_spear_has_struck
 
 		prerequisite = { focus = JAP_the_jeweled_spear_has_struck }
@@ -6997,6 +7040,12 @@ focus_tree = {
 		}
 
 		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_jap
+					option = forced
+				}
+			}
 			IF = {
 				limit = {
 					has_game_rule = {
@@ -10761,7 +10810,21 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_sea_purge_the_kodoha_faction
 
-
+		offset = {
+			x = -34
+			y = 0
+			trigger = {
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
+					}
+				}
+			}
+		}
 
 		prerequisite = { focus = JAP_sea_purge_the_kodoha_faction focus = JAP_revere_the_emperor_destroy_the_traitors }
 
@@ -12546,7 +12609,25 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_sea_purge_the_kodoha_faction
 
-
+		offset = {
+			x = -34 
+			y = 0
+			trigger = {
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
+					}
+					has_game_rule = {
+						rule = alt_hist_jap
+						option = forced
+					}
+				}
+			}
+		}
 
 		prerequisite = { focus = JAP_sea_purge_the_kodoha_faction focus = JAP_revere_the_emperor_destroy_the_traitors }
 
@@ -13804,9 +13885,13 @@ focus_tree = {
 
 		bypass = {
 			SIA = {
+				OR = {
 				is_ally_with = ROOT
+				exists = no
+				}
 			}
 		}
+		allow_branch = { SIA = { axis = yes } }
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -13816,6 +13901,35 @@ focus_tree = {
 
 		completion_reward = {
 
+			if = {
+				limit = { SIA = { is_ai = yes } }
+				SIA = {
+					transfer_units_fraction = {
+						target = JAP
+						size = 1
+						stockpile_ratio = 1
+						army_ratio = 1
+						navy_ratio = 1
+						air_ratio = 1
+						keep_unit_leaders_trigger = {
+							always = no
+						}
+					}
+				}
+				JAP = {
+					annex_country = {
+						target = SIA
+						transfer_troops = yes
+					}
+					every_controlled_state = {
+						limit = {
+							is_core_of = SIA
+						}
+						add_compliance = 100
+					}
+				}
+			}
+			else = {
 			SIA = {
 				country_event = {
 					id = SEA_japan_foreign_policy.4
@@ -13828,6 +13942,7 @@ focus_tree = {
 				ROOT = {
 					add_to_faction = SIA
 				}
+			}
 			}
 			
 		}
@@ -13867,6 +13982,7 @@ focus_tree = {
 				}
 			}
 		}
+		allow_branch = { SIA = { axis = no } }
 
 		will_lead_to_war_with = SIA
 
@@ -13905,20 +14021,6 @@ focus_tree = {
 
 			if = {
 				limit = {
-					SIA = { is_ai = yes }
-				}
-				annex_country = { target = SIA transfer_troops = yes }
-				SIA = {
-				every_core_state = {
-					limit = {
-						is_controlled_by = JAP
-					}
-					add_compliance = 100
-				}
-				}
-			}
-			else_if = {
-				limit = {
 					is_ai = yes
 					is_historical_focus_on = yes
 				}
@@ -13943,8 +14045,15 @@ focus_tree = {
 		icon = GFX_focus_jap_strike_south
 		#mutually_exclusive = { focus = JAP_sea_pressure_siam }
 		x = -1
-		y = 1
-		relative_position_id = JAP_occupy_siam
+		y = 3
+		relative_position_id = JAP_demand_tonkinese_bases
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
+				SIA = { axis = no }
+			}
+		}
 
 		prerequisite = { focus = JAP_occupy_siam focus = JAP_sea_pressure_siam }
 
@@ -24893,6 +25002,25 @@ focus_tree = {
 		x = 16
 		y = 0
 
+		offset = {
+			x = -42
+			y = 0
+			trigger = {
+				OR = {
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
+					}
+					has_game_rule = {
+						rule = alt_hist_jap
+						option = forced
+					}
+				}
+			}
+		}
 
 		cost = 5
 

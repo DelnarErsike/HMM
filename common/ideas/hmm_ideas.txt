@@ -137,19 +137,6 @@ ideas = {
 				mobilization_laws_cost_factor = 10000
 			}
 		}
-		novols = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-			modifier = {
-				send_volunteer_size = -100
-				air_volunteer_cap = -1000
-			}
-		}
 		no_faction = {
             allowed = {
 				always = no

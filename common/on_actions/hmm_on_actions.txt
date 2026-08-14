@@ -16,13 +16,6 @@ on_actions = {
 						limit = { NOT = { has_idea = peace_training } }
 						add_ideas = { peace_training }
 					}
-					if = {
-						limit = {
-							NOT = { tag = SPR }
-							NOT = { has_idea = novols }
-						}
-						add_ideas = { novols }
-					}
 				}
 				if = {
 					limit = {
@@ -372,8 +365,6 @@ on_actions = {
 
 	on_capitulation = {
 		effect = {
-			hmm_capitulations_on_actions = yes
-
 			if = {
 				limit = { tag = BEL }
 				if = {
@@ -452,6 +443,41 @@ on_actions = {
 					allow_axis_grind = yes
 				}
 			}
+			else_if = {
+				limit = { tag = CHI }
+				if = {
+					limit = {
+						SIA = { # Only care about Siam if they're not Axis (for some reason)
+							OR = {
+								exists = no
+								axis = yes
+								has_capitulated = yes
+							}
+						}
+					}
+					allow_geacps_grind = yes
+				}
+			}
+			else_if = { # Only care about Siam if they're not Axis (for some reason)
+				limit = {
+					tag = SIA
+					axis = no
+				}
+				if = {
+					limit = {
+						CHI = { # Only care about Siam if they're not Axis (for some reason)
+							OR = {
+								exists = no
+								axis = yes
+								has_capitulated = yes
+							}
+						}
+					}
+					allow_geacps_grind = yes
+				}
+			}
+
+			hmm_capitulations_on_actions = yes
 		}
 	}
 
@@ -624,6 +650,7 @@ on_actions = {
                         hostility_reason = asked_to_join
                     }
                 }
+				allow_axis_grind = yes # Backup in case of skill issues (grind is allowed on Axis once Barb starts)
             }
 			#VP System
 			if = {
@@ -808,22 +835,29 @@ on_actions = {
 				limit = {
 					OR = {
 						has_global_flag = allies_grind_allowed
+						has_global_flag = geacps_grind_allowed
 						has_global_flag = axis_grind_allowed
 					}
 					OR = {
 						tag = GER
+						tag = JAP
 						tag = ENG
+						tag = USA
+						tag = SOV
 						FROM = {
 							OR = {
 								tag = GER
+								tag = JAP
 								tag = ENG
+								tag = USA
+								tag = SOV
 							}
 						}
 					}
 				}
 				if = {
 					limit = {
-						axis = yes
+						axis_european = yes
 						FROM = { allies = yes }
 					}
 					if = {
@@ -844,7 +878,13 @@ on_actions = {
 					if = {
 						limit = {
 							has_global_flag = axis_grind_allowed
-							FROM = { tag = ENG }
+							FROM = {
+								OR = {
+									tag = ENG
+									tag = USA
+									tag = SOV
+								}
+							}
 							any_army_leader = { has_trait = no_grind }
 						}
 						every_army_leader = {
@@ -857,7 +897,7 @@ on_actions = {
 				else_if = {
 					limit = {
 						allies = yes
-						FROM = { axis = yes }
+						FROM = { axis_european = yes }
 					}
 					if = {
 						limit = {
@@ -873,7 +913,86 @@ on_actions = {
 					if = {
 						limit = {
 							has_global_flag = axis_grind_allowed
-							tag = ENG
+							OR = {
+								tag = ENG
+								tag = USA
+								tag = SOV
+							}
+						}
+						FROM = {
+							if = {
+								limit = { any_army_leader = { has_trait = no_grind } }
+								every_army_leader = {
+									limit = { has_trait = no_grind }
+									remove_unit_leader_trait = no_grind
+								}
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						axis_geacps = yes
+						FROM = { allies = yes }
+					}
+					if = {
+						limit = {
+							has_global_flag = allies_grind_allowed
+							tag = JAP
+						}
+						FROM = {
+							if = {
+								limit = { any_army_leader = { has_trait = no_grind } }
+								every_army_leader = {
+									limit = { has_trait = no_grind }
+									remove_unit_leader_trait = no_grind
+								}
+							}
+						}
+					}
+					if = {
+						limit = {
+							has_global_flag = geacps_grind_allowed
+							FROM = {
+								OR = {
+									tag = ENG
+									tag = USA
+									tag = SOV
+								}
+							}
+							any_army_leader = { has_trait = no_grind }
+						}
+						every_army_leader = {
+							limit = { has_trait = no_grind }
+							remove_unit_leader_trait = no_grind
+						}
+					}
+				}
+				# Attacker should always be Axis and defender should always be Allies, but check for the other way around as well, just in case
+				else_if = {
+					limit = {
+						allies = yes
+						FROM = { axis_geacps = yes }
+					}
+					if = {
+						limit = {
+							has_global_flag = allies_grind_allowed
+							FROM = { tag = JAP }
+							any_army_leader = { has_trait = no_grind }
+						}
+						every_army_leader = {
+							limit = { has_trait = no_grind }
+							remove_unit_leader_trait = no_grind
+						}
+					}
+					if = {
+						limit = {
+							has_global_flag = geacps_grind_allowed
+							OR = {
+								tag = ENG
+								tag = USA
+								tag = SOV
+							}
 						}
 						FROM = {
 							if = {

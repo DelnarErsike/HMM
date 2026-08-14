@@ -180,22 +180,6 @@ Philippines_AC_rule = {
 		desc = "The Philippines cannot do their more powerful air focuses"
 	}
 }
-Germany_Wirtschaftswunder = {
-	name = "Can Germany complete Prioritize Economic Growth (Left Side Eco)?"
-	group = "HMM Rules"
-	icon = "GFX_volunteers"
-	default = {
-		name = Germany_no_wirtschaftswunder
-		text = "RNo"
-		desc = "Germany cannot do any focuses on the left side of its economy tree."
-	}
-	option = {
-		name = Germany_wirtschaftswunder
-		text = "GYes"
-		desc = "Germany can opt to do focuses on the left side of its economy tree."
-	}
-
-}
 Germany_Cancel_Mefo= {
 	name = "Can Germany cancel MEFO Bills prematurely?"
 	group = "HMM Rules"
@@ -288,6 +272,41 @@ multi_charge_large_caliber_gun= {
 		desc = "Multi-charge large caliber guns can be researched and built."
 	}
 }
+dozer_blade_status = {
+	name = "Status of Dozer Blades"
+	group = "HMM Rules"
+	icon = "GFX_volunteers"
+	default = {
+		name = banned
+		text = "RBanned"
+		desc = "Dozer Blades cannot be unlocked."
+	}
+	option = {
+		name = allowed
+		text = "GAllowed"
+		desc = "Dozer Blades can be unlocked with 1939 Engineers tech as normal."
+	}
+}
+super_heavy_tank = {
+	name = "Status of Super Heavy Tanks & Land Cruisers"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_ignite_civil_war"
+	default = {
+		name = banned
+		text = "RBanned"
+		desc = "Super heavy tanks cannot be researched, and by extension, land cruisers also cannot be researched."
+	}
+	option = {
+		name = only_super_heavy_tank
+		text = "YLand Cruiser Banned"
+		desc = "Super heavy tanks can be researched and built, but land cruisers cannot."
+	}
+	option = {
+		name = allowed
+		text = "GAllowed"
+		desc = "Both super heavy tanks and land cruisers can be researched and built."
+	}
+}
 marine_commando_status = {
 	name = "Status of Marine Commandos"
 	group = "HMM Rules"
@@ -310,17 +329,47 @@ max_submarine_tech= {
 	default = {
 		name = sub2
 		text = "R1936"
-		desc = "1939 submarine hulls, 1943 submarine hulls, and all snorkel techs are banned, and fleet submarines are indirectly banned."
+		desc = "Improved Submarine hulls, Advanced Submarine hulls, all snorkel technologies, and all AIP engine upgrade technologies are banned. Fleet submarines, nuclear submarines, and missile launching submarines are indirectly banned."
 	}
 	option = {
 		name = sub3
 		text = "Y1939"
-		desc = "1943 submarine hulls and Improved Snorkel technologies are banned."
+		desc = "Advanced Submarine hulls, the Improved Snorkel technology, and the High-Speed Walter Engines technology are banned."
 	}
 	option = {
 		name = sub4
 		text = "G1943"
-		desc = "All submarine technologies are allowed."
+		desc = "All submarine hulls and technologies are allowed."
+	}
+}
+max_field_hospital_tech = {
+	name = "Maximum Field Hospital Tech Level"
+	group = "HMM Rules"
+	icon = "GFX_volunteers"
+	option = {
+		name = none
+		text = "RBanned"
+		desc = "Field hospital technologies cannot be unlocked at all."
+	}
+	default = {
+		name = hospital_1
+		text = "O1938"
+		desc = "Field hospitals and helicopter med-evacs can be unlocked, but no passive upgrades for them are available."
+	}
+	option = {
+		name = hospital_2
+		text = "Y1939"
+		desc = "Field hospitals and helicopter med-evacs can be unlocked, and the first passive upgrade for them can be unlocked."
+	}
+	option = {
+		name = hospital_3
+		text = "41942"
+		desc = "Field hospitals and helicopter med-evacs can be unlocked, and the first and second passive upgrades for them can be unlocked."
+	}
+	option = {
+		name = hospital_4
+		text = "G1945"
+		desc = "All field hospital and helicopter med-evac related technologies can be unlocked."
 	}
 }
 easier_arteries_of_trade_for_allies = {
@@ -729,6 +778,31 @@ who_gets_saf_annex = {
 		desc = "The United Kingdom will get the decision to annex South Africa if there is no player on it."
 	}
 }
+desperate_defense_conditions_status = {
+	name = "The Desperate Defense subdoctrine's conditions are..."
+	group = "HMM Rules"
+	icon = "GFX_volunteers"
+	option = {
+		name = unchanged
+		text = "RUnchanged"
+		desc = "Desperate Defense can only be taken by countries when they are in a defensive war or have enough surrender progress."
+	}
+	option = {
+		name = axix_removed
+		text = "ORemoved for Axis Only"
+		desc = "Desperate Defense can be taken at any time by Axis countries, but other countries must be in a defensive war or have enough surrender progress to take it."
+	}
+	option = {
+		name = allies_removed
+		text = "4Removed for Allies Only"
+		desc = "Desperate Defense can be taken at any time by Allied countries, but other countries must be in a defensive war or have enough surrender progress to take it."
+	}
+	default = {
+		name = removed
+		text = "GRemoved for Everyone"
+		desc = "Desperate Defense can be taken at any time by anyone."
+	}
+}
 battlefield_support_status = {
 	name = "The Battlefield Support grand doctrine is..."
 	group = "HMM Rules"
@@ -854,6 +928,126 @@ soviet_post_cap_compliance_scaling = {
 		desc = "Compliance in Soviet cores after they capitulate will behave as it does for any other country's cores."
 	}
 }
+steal_blueprints_operation = {
+	name = "Status of Steal Blueprints Operation"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_ignite_civil_war"
+	default = {
+		name = off
+		text = "RBanned"
+		desc = "Countries cannot perform the Steal Blueprints operation on each other."
+	}
+	option = {
+		name = enemies_only
+		text = "OEnemies Only"
+		desc = "Countries can only perform the Steal Blueprints operation on targets that are considered on the opposite side of World War 2."
+	}
+	option = {
+		name = non_faction_only
+		text = "YDifferent Faction Only"
+		desc = "Countries can only perform the Steal Blueprints operation on targets that are not considered part of the same faction (Western Allies, Comintern, European Axis, GEACPS)."
+	}
+	option = {
+		name = on
+		text = "GAllowed"
+		desc = "Countries can perform the Steal Blueprints operation on each other as normal."
+	}
+}
+resistance_operations = {
+	name = "Status of Resistance-Based Operations"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_ignite_civil_war"
+	default = {
+		name = off
+		text = "RBanned"
+		desc = "Countries cannot perform the Make Resistance Contacts operation, which means they also inherently cannot perform sabotage operations or operations boosting resistance."
+	}
+	option = {
+		name = only_sabotage
+		text = "OOnly Sabotage"
+		desc = "Countries can perform the Make Resistance Contacts operation and any operation that sabotages buildings in occupied territories. However, Make Resistance Contacts will never affect resistance, and the Boost Resistance operation cannot be performed."
+	}
+	option = {
+		name = only_boost_resistance
+		text = "YOnly Boost Resistance"
+		desc = "Countries can perform the Make Resistance Contacts and Boost Resistance operations. However, they cannot perform any of the operations that would sabotage buildings in occupied territories."
+	}
+	option = {
+		name = on
+		text = "GAllowed"
+		desc = "Countries can perform any operation that increases resistance or that sabotages buildings in occupied territories as normal."
+	}
+}
+coordinated_strike_operation = {
+	name = "Status of Coordinated Strike Operation"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_ignite_civil_war"
+	default = {
+		name = off
+		text = "RBanned"
+		desc = "Countries cannot perform the Coordinated Strike operation on each other."
+	}
+	option = {
+		name = axis_only
+		text = "YAxis Only"
+		desc = "Only Axis countries can perform the Coordinated Strike operation."
+	}
+	option = {
+		name = on
+		text = "GAllowed"
+		desc = "Countries can perform the Coordinated Strike operation on each other as normal."
+	}
+}
+continuous_recruitment_drive = {
+	name = "Status of Continuous Recruitment Drive"
+	group = "HMM Rules"
+	icon = "GFX_volunteers"
+	option = {
+		name = banned
+		text = "RRemoved"
+		desc = "The non-vanilla continuous national focus 'Continuous Recruitment Drive' is removed from the game."
+	}
+	option = {
+		name = axis
+		text = "OAxis Only"
+		desc = "The non-vanilla continuous national focus 'Continuous Recruitment Drive' is only allowed to be done by Axis countries."
+	}
+	option = {
+		name = allies
+		text = "4Allies Only"
+		desc = "The non-vanilla continuous national focus 'Continuous Recruitment Drive' is only allowed to be done by Allied countries."
+	}
+	default = {
+		name = allowed
+		text = "GAdded for Everyone"
+		desc = "The non-vanilla continuous national focus 'Continuous Recruitment Drive' can be done by anyone."
+	}
+}
+continuous_air_production = {
+	name = "Status of Continuous Air Production"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_air"
+	default = {
+		name = banned
+		text = "RFully Banned"
+		desc = "The continuous national focus 'Continuous Air Production' cannot be done by anyone."
+	}
+	option = {
+		name = axis
+		text = "OAxis Only"
+		desc = "The continuous national focus 'Continuous Air Production' is only allowed for Axis countries."
+	}
+	option = {
+		name = allies
+		text = "4Allies Only"
+		desc = "The continuous national focus 'Continuous Air Production' is only allowed for Allied countries."
+	}
+	option = {
+		name = allowed
+		text = "GAllowed for Everyone"
+		desc = "The continuous national focus 'Continuous Air Production' can be done by anyone, as in the base game."
+	}
+}
 tradebacks = {
 	name = "No Tradebacks Idea"
 	group = "HMM Rules"
@@ -872,5 +1066,352 @@ tradebacks = {
 		name = only_axis
 		text = "YOnly Axis"
 		desc = "The axis has a tradeback idea that gives -100% missing resource penalty"
+	}
+}
+
+alt_hist_fra = {
+	name = "Can France do alt-historical democratic focuses?"
+	group = "HMM Alternate History Rules"
+	option = {
+		name = banned
+		text = "RNo"
+		desc = "France is forced to follow focuses under Form the Popular Front (historical)."
+	}
+	default = {
+		name = allowed
+		text = "GYes"
+		desc = "France can follow either Form the Popular Front (historical) or Revive the National Bloc."
+	}
+	option = {
+		name = forced
+		text = "CForced"
+		desc = "France is forced to follow focuses under Revive the National Bloc."
+	}
+}
+alt_hist_usa = {
+	name = "Can the USA do alt-historical democratic focuses?"
+	group = "HMM Alternate History Rules"
+	default = {
+		name = banned
+		text = "RNo"
+		desc = "The USA is forced to follow focuses under Continue the New Deal (historical)."
+	}
+	option = {
+		name = allowed
+		text = "GYes"
+		desc = "The USA can follow either Continue the New Deal (historical) or Reestablish the Gold Standard."
+	}
+	option = {
+		name = forced
+		text = "CForced"
+		desc = "The USA is forced to follow focuses under Reestablish the Gold Standard."
+	}
+}
+alt_hist_ger_eco = {
+	name = "Can Germany do alt-historical economy focuses?"
+	group = "HMM Alternate History Rules"
+	default = {
+		name = banned
+		text = "RNo"
+		desc = "Germany is forced to follow focuses under The Four-Year Plan (historical)."
+	}
+	option = {
+		name = allowed
+		text = "GYes"
+		desc = "Germany can follow either The Four-Year Plan (historical) or Prioritize Economic Growth."
+	}
+	option = {
+		name = forced
+		text = "CForced"
+		desc = "Germany is forced to follow focuses under Prioritize Economic Growth."
+	}
+}
+alt_hist_ita = {
+	name = "Can Italy do alt-historical fascist focuses?"
+	group = "HMM Alternate History Rules"
+	default = {
+		name = banned
+		text = "RNo"
+		desc = "Italy is forced to follow focuses under Culto del Duce (historical)."
+	}
+	option = {
+		name = only_italo_balbo
+		text = "OOnly Italo Balbo"
+		desc = "Italy can follow focuses under Culto del Duce (historical) or Italo Balbo."
+	}
+	option = {
+		name = only_dino_grandi
+		text = "YOnly Dino Grandi"
+		desc = "Italy can follow focuses under Culto del Duce (historical) or Dino Grandi."
+	}
+	option = {
+		name = allowed
+		text = "GYes"
+		desc = "Italy can follow focuses under Culto del Duce (historical), Italo Balbo, or Dino Grandi."
+	}
+	option = {
+		name = forced
+		text = "CForced Alt-Historical"
+		desc = "Italy can follow focuses under Italo Balbo or Dino Grandi."
+	}
+	option = {
+		name = forced_italo_balbo
+		text = "BForced Italo Balbo"
+		desc = "Italy can follow focuses under Culto del Duce (historical) or Italo Balbo."
+	}
+	option = {
+		name = forced_dino_grandi
+		text = "0Forced Dino Grandi"
+		desc = "Italy can follow focuses under Culto del Duce (historical) or Dino Grandi."
+	}
+}
+alt_hist_jap = {
+	name = "Can Japan do alt-historical non-aligned focuses?"
+	group = "HMM Alternate History Rules"
+	default = {
+		name = banned
+		text = "RNo"
+		desc = "Japan is forced to follow focuses under Purge the Kodoha Faction (historical)."
+	}
+	option = {
+		name = allowed
+		text = "GYes"
+		desc = "Japan can follow either Purge the Kodoha Faction (historical) or Revere the Emperor, Destroy the Traitors."
+	}
+	option = {
+		name = forced
+		text = "CForced"
+		desc = "Japan is forced to follow focuses under Revere the Emperor, Destroy the Traitors."
+	}
+}
+alt_hist_bra = {
+	name = "Can Brazil do alt-historical democratic focuses?"
+	group = "HMM Alternate History Rules"
+	default = {
+		name = banned
+		text = "RNo"
+		desc = "Brazil is forced to follow focuses under Tribunal de Segurança Nacional and Estado Novo (historical)."
+	}
+	option = {
+		name = allowed
+		text = "GYes"
+		desc = "Brazil can follow either Tribunal de Segurança Nacional and Estado Novo (historical) or End the State of Emergency and Repeal the National Security Laws."
+	}
+	option = {
+		name = forced
+		text = "CForced"
+		desc = "Brazil is forced to follow focuses under End the State of Emergency and Repeal the National Security Laws."
+	}
+}
+alt_hist_bul = {
+	name = "Can Bulgaria do alt-historical fascist focuses?"
+	group = "HMM Alternate History Rules"
+	option = {
+		name = banned
+		text = "RNo"
+		desc = "Bulgaria is forced to follow focuses under The Tsar's Regime (historical)."
+	}
+	default = {
+		name = allowed
+		text = "GYes"
+		desc = "Bulgaria can follow either The Tsar's Regime (historical) or Appoint Right-Wing Ministers."
+	}
+	option = {
+		name = forced
+		text = "CForced"
+		desc = "Bulgaria is forced to follow focuses under Appoint Right-Wing Ministers."
+	}
+}
+alt_hist_fin = {
+	name = "Can Finland do alt-historical political focuses?"
+	group = "HMM Alternate History Rules"
+	default = {
+		name = banned_no_lone_wolf
+		text = "0No & Lone Wolf Banned"
+		desc = "Finland is forced to follow focuses under Finnish Neutrality (historical) and cannot do The Lone Wolf, Northern Defense Front, or Join the Allies."
+	}
+	option = {
+		name = banned
+		text = "RNo"
+		desc = "Finland is forced to follow focuses under Finnish Neutrality and The Lone Wolf (historical)."
+	}
+	option = {
+		name = allowed_no_lone_wolf
+		text = "YYes, but Lone Wolf banned"
+		desc = "Finland can follow either Finnish Neutrality (historical) or Right-Wing Policies, but if they choose the former, they cannot do The Lone Wolf, Northern Defense Front, or Join the Allies."
+	}
+	option = {
+		name = allowed
+		text = "GYes"
+		desc = "Finland can follow either Finnish Neutrality and The Lone Wolf (historical) or Right-Wing Policies."
+	}
+	option = {
+		name = forced
+		text = "CForced"
+		desc = "Finland is forced to follow focuses under Right-Wing Policies."
+	}
+}
+alt_hist_hun = {
+	name = "Can Hungary do alt-historical fascist and non-aligned focuses?"
+	group = "HMM Alternate History Rules"
+	default = {
+		name = banned
+		text = "RNo"
+		desc = "Hungary is forced to follow focuses under Continue the Regency (historical) and Reinforce Horthy's Reign (historical)."
+	}
+	option = {
+		name = only_fascist_king
+		text = "OFascist King Allowed"
+		desc = "Hungary can follow either Continue the Regency (historical) and Reinforce Horthy's Reign (historical) or End the Regency and Elect a Fascist King."
+	}
+	option = {
+		name = only_arrow_cross
+		text = "YNon-Monarchist Fascist Allowed"
+		desc = "Hungary is forced to follow focuses under Continue the Regency (historical), but can follow either Reinforce Horthy's Reign (historical) or Undermine the Admiral."
+	}
+	option = {
+		name = allowed
+		text = "GYes"
+		desc = "Hungary can follow either Continue the Regency (historical) and either Reinforce Horthy's Reign (historical) or Undermine the Admiral, or End the Regency and Elect a Fascist King."
+	}
+	option = {
+		name = forced_arrow_cross
+		text = "CForced Non-Monarchist Fascist"
+		desc = "Hungary is forced to follow focuses under Continue the Regency (historical) and Undermine the Admiral."
+	}
+	option = {
+		name = forced_fascist_king
+		text = "0Forced Fascist King"
+		desc = "Hungary is forced to follow focuses under End the Regency and Elect a Fascist King."
+	}
+}
+alt_hist_irq = {
+	name = "Can Iraq do alt-historical non-aligned or democratic focuses?"
+	group = "HMM Alternate History Rules"
+	option = {
+		name = banned
+		text = "RNo"
+		desc = "Iraq is forced to follow focuses under Party of National Brotherhood (historical)."
+	}
+	default = {
+		name = allowed
+		text = "GYes"
+		desc = "Iraq can follow either Party of National Brotherhood (historical) or Rally Behind the Hashemite Dynasty."
+	}
+	option = {
+		name = forced
+		text = "CForced"
+		desc = "Iraq is forced to follow focuses under Rally Behind the Hashemite Dynasty."
+	}
+}
+alt_hist_mex = {
+	name = "Can Mexico do alt-historical democratic and non-aligned focuses?"
+	group = "HMM Alternate History Rules"
+	option = {
+		name = banned
+		text = "RNo"
+		desc = "Mexico is forced to Arrest General Cedillo (historical) and follow focuses under State Education (historical)."
+	}
+	option = {
+		name = only_christian_democracy
+		text = "OChristian Democracy Allowed"
+		desc = "Mexico is forced to Arrest General Cedillo (historical), but can follow either State Education (historical) or Knights of Columbus."
+	}
+	option = {
+		name = only_caudillos
+		text = "YCaudillos Allowed"
+		desc = "Mexico can either Arrest General Cedillo (historical) or Support General Cedillo, but is forced to follow focuses under State Education (historical)."
+	}
+	default = {
+		name = allowed
+		text = "GYes"
+		desc = "Mexico can either Arrest General Cedillo (historical) or Support General Cedillo, and can follow either State Education (historical) or Knights of Columbus."
+	}
+	option = {
+		name = forced_caudillos
+		text = "CForced Caudillos"
+		desc = "Mexico is forced to Support General Cedillo, but can follow either State Education (historical) or Knights of Columbus."
+	}
+	option = {
+		name = forced_caudillos_secularism
+		text = "0Forced Caudillos & Secularism"
+		desc = "Mexico is forced to Support General Cedillo and to follow focuses under State Education (historical)."
+	}
+}
+alt_hist_raj = {
+	name = "Can the British Raj do alt-historical democratic focuses?"
+	group = "HMM Alternate History Rules"
+	option = {
+		name = banned
+		text = "RNo"
+		desc = "The British Raj is forced to follow focuses under Onto the Road of Independence (historical) and Two-Nation Theory (historical). Since going independent would result in the Partition of India, they can only go independent if releasing nations is not banned."
+	}
+	option = {
+		name = only_india_united
+		text = "YIndependence Paths Allowed"
+		desc = "The British Raj is forced to follow Onto the Road of Independence (historical), but can choose either Two-Nation Theory (historical) or India United."
+	}
+	option = {
+		name = allowed
+		text = "GYes"
+		desc = "The British Raj can follow either Onto the Road of Independence (historical) or His Majesty's Loyal Government. If they choose Onto the Road of Independence, they can also choose to follow either Two-Nation Theory (historical) or India United."
+	}
+	default = {
+		name = forced
+		text = "CForced Loyalty Path"
+		desc = "The British Raj is forced to follow focuses under His Majesty's Loyal Government."
+	}
+}
+alt_hist_sia_eco = {
+	name = "Can Siam do alt-historical economy focuses?"
+	group = "HMM Alternate History Rules"
+	default = {
+		name = banned
+		text = "RNo"
+		desc = "Siam is forced to follow focuses under Thai Rice Company (historical)."
+	}
+	option = {
+		name = allowed
+		text = "GYes"
+		desc = "Siam can follow either Thai Rice Company (historical) or The Bank of Siam."
+	}
+	option = {
+		name = forced
+		text = "CForced"
+		desc = "Siam is forced to follow focuses under The Bank of Siam."
+	}
+}
+alt_hist_spr = {
+	name = "Can Spain do alt-historical fascist focuses?"
+	group = "HMM Alternate History Rules"
+	option = {
+		name = banned
+		text = "RNo"
+		desc = "Spain is forced to follow focuses under Autarky and cannot do Join the Axis (historical)."
+	}
+	default = {
+		name = banned_no_faction_needed
+		text = "ONo & Relax Faction Requirements"
+		desc = "Spain is forced to follow focuses under Autarky and cannot do Join the Axis (historical), but does not need to be in the Axis to finish certain focuses."
+	}
+	option = {
+		name = allowed
+		text = "GYes"
+		desc = "Spain can follow either Autarky (historical) or Fascist Economic Aid, though needs to remain in the Axis to complete focuses under the latter."
+	}
+	option = {
+		name = allowed_no_faction_needed
+		text = "YYes & Relax Faction Requirements"
+		desc = "Spain can follow either Autarky (historical) or Fascist Economic Aid, and can follow the latter without being in the Axis."
+	}
+	option = {
+		name = forced
+		text = "CForced"
+		desc = "Spain is forced to follow focuses under Fascist Economic Aid and needs to remain in the Axis to complete the focuses under it."
+	}
+	option = {
+		name = forced_no_faction_needed
+		text = "0Forced & Relax Faction Requirements"
+		desc = "Spain is forced to follow focuses under Fascist Economic Aid and does not need to be in the Axis to complete the focuses under it."
 	}
 }

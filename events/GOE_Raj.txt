@@ -7623,6 +7623,7 @@ country_event = {
 	}
 	option = { # dont
 		name = GOE_RAJ_goa.1.b
+		trigger = { has_war_with = RAJ }
 		RAJ = {
 			country_event = { id = GOE_RAJ_goa.3 days = 1 }
 		}

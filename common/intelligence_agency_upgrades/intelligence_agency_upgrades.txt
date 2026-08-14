@@ -219,6 +219,15 @@ branch_operation = {
 		ai_will_do = {
 			factor = 1
 		}
+
+		available = {
+			NOT = {
+				has_game_rule = {
+					rule = steal_blueprints_operation
+					option = off
+				}
+			}
+		}
 		
 		modifiers_during_progress = {
 			hidden_modifier = {
@@ -248,6 +257,21 @@ branch_operation = {
 		}
 	
 		available = {
+			NOT = {
+				has_game_rule = {
+					rule = coordinated_strike_operation
+					option = off
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = coordinated_strike_operation
+						option = axis_only
+					}
+				}
+				axis = yes
+			}
 			has_tech = radio
 		}
 
@@ -304,6 +328,21 @@ branch_operation = {
 		
 		ai_will_do = {
 			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_game_rule = {
+					rule = resistance_operations
+					option = off
+				}
+			}
+			NOT = {
+				has_game_rule = {
+					rule = resistance_operations
+					option = only_boost_resistance
+				}
+			}
 		}
 		
 		modifiers_during_progress = {
@@ -451,6 +490,10 @@ branch_operative = {
 		ai_will_do = {
 			factor = 1
 		}
+
+		available = {
+			marker_for_useless_agency_upgrade = yes
+		}
 		
 		modifiers_during_progress = {
 			hidden_modifier = {
@@ -478,6 +521,10 @@ branch_operative = {
 		
 		ai_will_do = {
 			factor = 1
+		}
+
+		available = {
+			marker_for_useless_agency_upgrade = yes
 		}
 		
 		modifiers_during_progress = {

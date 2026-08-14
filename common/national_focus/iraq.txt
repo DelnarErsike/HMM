@@ -4003,6 +4003,25 @@ focus_tree = {
 		bypass = {
 
 		}
+		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_irq
+					option = banned
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = IRQ_promote_kurdish_culture
+				}
+			}
+		}
 
 		search_filters = { FOCUS_FILTER_STABILITY }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5368,7 +5387,15 @@ focus_tree = {
 				has_government = democratic
 			}
 		}
-		allow_branch = { allies = yes }
+		allow_branch = {
+			allies = yes
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_irq
+					option = banned
+				}
+			}
+		}
 
 		bypass = {
 		}
@@ -5502,7 +5529,15 @@ focus_tree = {
 				}
 			}
 		}
-		allow_branch = { allies = yes }
+		allow_branch = {
+			allies = yes
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_irq
+					option = banned
+				}
+			}
+		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
 
@@ -6088,6 +6123,12 @@ focus_tree = {
 		relative_position_id = IRQ_rally_behind_the_hashemite_dynasty
 
 		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_irq
+					option = forced
+				}
+			}
 			if = {
 				limit = {
 					has_game_rule = {
@@ -6321,7 +6362,15 @@ focus_tree = {
 		bypass = {
 
 		}
-		allow_branch = { allies = no }
+		allow_branch = {
+			allies = no
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_irq
+					option = forced
+				}
+			}
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -6350,7 +6399,7 @@ focus_tree = {
 		icon = GFX_focus_IRQ_curtail_arabism
 		prerequisite = { focus = IRQ_attempted_assasination_of_sidqi }
 		mutually_exclusive = { focus = IRQ_strengthen_the_golden_square }
-		x = 11
+		x = 8
 		y = 1
 		relative_position_id = IRQ_attempted_assasination_of_sidqi
 
@@ -6366,7 +6415,6 @@ focus_tree = {
 		bypass = {
 
 		}
-		allow_branch = { always = no }
 
 		search_filters = { FOCUS_FILTER_STABILITY }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -6419,11 +6467,14 @@ focus_tree = {
 		}
 
 		available = {
+			OR = {
+				NOT = { country_exists = PER }
 			PER = {
 				exists = yes
 				NOT = {
 					has_war_with = ROOT
 				}
+			}
 			}
 		}
 
@@ -6468,11 +6519,14 @@ focus_tree = {
 		}
 
 		available = {
+			OR = {
+				NOT = { country_exists = TUR }
 			TUR = {
 				exists = yes
 				NOT = {
 					has_war_with = ROOT
 				}
+			}
 			}
 		}
 
@@ -6625,58 +6679,6 @@ focus_tree = {
 
 		completion_reward = {
 
-			set_rule = {
-				can_create_factions = yes
-			}
-			create_faction_from_template = {
-				template = faction_template_regional
-				name = IRQ_meto
-				icon = GFX_faction_logo_generic_15
-			}
-
-			IF = {
-				limit = {
-					has_completed_focus = IRQ_strengthen_relations_with_iran
-					NOT = { 
-						OR = {
-							has_war_with = PER 
-							is_in_faction_with = PER
-						}
-					}
-				}
-				custom_effect_tooltip = IRQ_anti_western_alliance_per_tt
-				hidden_effect = {
-					PER = {
-						country_event = {
-							id = generic.5
-							hours = 1
-						}
-					}
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}		
-			IF = {
-				limit = {
-					has_completed_focus = IRQ_strengthen_relations_with_turkey
-					NOT = { 
-						OR = {
-							has_war_with = TUR 
-							is_in_faction_with = TUR
-						}
-					}
-				}
-				custom_effect_tooltip = IRQ_anti_western_alliance_tur_tt
-				hidden_effect = {
-					TUR = {
-						country_event = {
-							id = generic.5
-							hours = 1
-						}
-					}
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}
-
 			add_political_power = 100
 
 		}
@@ -6713,6 +6715,7 @@ focus_tree = {
 		bypass = {
 
 		}
+		allow_branch = { always = no }
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 
@@ -6807,6 +6810,7 @@ focus_tree = {
 				AFG = { is_subject = yes }
 			}
 		}
+		allow_branch = { always = no }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -6835,8 +6839,8 @@ focus_tree = {
 		prerequisite = { focus = IRQ_carve_up_syria focus = IRQ_take_advantage_of_british_weakness }
 		#mutually_exclusive = { focus =  }
 		x = 0
-		y = 2
-		relative_position_id = IRQ_align_afghanistan_fasc
+		y = 1
+		relative_position_id = IRQ_take_advantage_of_british_weakness
 
 		cost = 10
 
@@ -6875,7 +6879,7 @@ focus_tree = {
 		icon = GFX_focus_attack_britain
 		prerequisite = { focus = IRQ_anti_western_alliance }
 		#mutually_exclusive = { focus =  }
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = IRQ_anti_western_alliance
 
@@ -6907,13 +6911,13 @@ focus_tree = {
 
 		completion_reward = {
 
-			create_wargoal = {
-				target = ENG
-				type = liberate_wargoal
-				generator = { 656 765 658 455 454 }
-			}		
+			#create_wargoal = {
+			#	target = ENG
+			#	type = liberate_wargoal
+			#	generator = { 656 765 658 455 454 }
+			#}		
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			#custom_effect_tooltip = generic_skip_one_line_tt
 
 			remove_ideas = IRQ_anglo_iraqi_treaty	
 			ENG = {

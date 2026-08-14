@@ -200,6 +200,10 @@ sp_land_land_cruiser = {
 
 	allowed = {
 		has_dlc = "Gotterdammerung"
+		has_game_rule = {
+			rule = super_heavy_tank
+			option = allowed
+		}
 	}
 
 	available = {

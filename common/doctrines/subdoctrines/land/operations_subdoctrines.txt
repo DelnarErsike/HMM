@@ -92,7 +92,70 @@ last_stand = {
     xp_type = army
 
     available = {
-        always = yes
+        if = {
+            limit = {
+                has_game_rule = {
+                    rule = desperate_defense_conditions_status
+                    option = unchanged
+                }
+            }
+        if = {
+            limit = {
+                NOT = {
+                    original_tag = INS
+                }
+            }
+            OR = {
+                has_defensive_war = yes
+                AND = {
+                    surrender_progress > 0.1
+                    has_war_support > 0.5
+                }                
+            }            
+        }
+        else = {
+            OR = {
+                has_defensive_war = yes
+                AND = {
+                    surrender_progress > 0.1
+                    has_war_support > 0.5
+                }
+                has_country_flag = INS_revolution_has_started
+            }
+        }
+        }
+        else_if = {
+            limit = {
+                has_game_rule = {
+                    rule = desperate_defense_conditions_status
+                    option = axis_removed
+                }
+            }
+            OR = {
+                axis = yes
+                has_defensive_war = yes
+                AND = {
+                    surrender_progress > 0.1
+                    has_war_support > 0.5
+                }                
+            }
+        }
+        else_if = {
+            limit = {
+                has_game_rule = {
+                    rule = desperate_defense_conditions_status
+                    option = allies_removed
+                }
+            }
+            OR = {
+                allies = yes
+                has_defensive_war = yes
+                AND = {
+                    surrender_progress > 0.1
+                    has_war_support > 0.5
+                }                
+            }
+        }
     }
     # EFFECTS
     conscription = 0.05

@@ -1105,12 +1105,34 @@ gain_random_agency_upgrade = { #Gives a random agency upgrade or grants a free a
 						factor = 0
 						has_done_agency_upgrade = upgrade_blueprint_stealing
 					}
+					modifier = {
+						factor = 0
+						has_game_rule = {
+							rule = steal_blueprints_operation
+							option = off
+						}
+					}
 				}
 				1 = {
 					upgrade_intelligence_agency = upgrade_portable_radios
 					modifier = {
 						factor = 0
 						has_done_agency_upgrade = upgrade_portable_radios
+					}
+					modifier = {
+						factor = 0
+						has_game_rule = {
+							rule = coordinated_strike_operation
+							option = off
+						}
+					}
+					modifier = {
+						factor = 0
+						has_game_rule = {
+							rule = coordinated_strike_operation
+							option = axis_only
+						}
+						axis = no
 					}
 				}
 				1 = {
@@ -1125,6 +1147,19 @@ gain_random_agency_upgrade = { #Gives a random agency upgrade or grants a free a
 					modifier = {
 						factor = 0
 						has_done_agency_upgrade = upgrade_plastic_explosives
+					}
+					modifier = {
+						factor = 0
+						OR = {
+							has_game_rule = {
+								rule = resistance_operations
+								option = off
+							}
+							has_game_rule = {
+								rule = resistance_operations
+								option = only_boost_resistance
+							}
+						}
 					}
 				}
 				1 = {
@@ -1155,20 +1190,21 @@ gain_random_agency_upgrade = { #Gives a random agency upgrade or grants a free a
 						has_done_agency_upgrade = upgrade_interrogation_techniques
 					}
 				}
-				1 = {
-					upgrade_intelligence_agency = upgrade_diplo_training
-					modifier = {
-						factor = 0
-						has_done_agency_upgrade = upgrade_diplo_training
-					}
-				}
-				1 = {
-					upgrade_intelligence_agency = upgrade_psycho_warfare
-					modifier = {
-						factor = 0
-						has_done_agency_upgrade = upgrade_psycho_warfare
-					}
-				}
+				# HMM: useless upgrades for the mod
+				#1 = {
+				#	upgrade_intelligence_agency = upgrade_diplo_training
+				#	modifier = {
+				#		factor = 0
+				#		has_done_agency_upgrade = upgrade_diplo_training
+				#	}
+				#}
+				#1 = {
+				#	upgrade_intelligence_agency = upgrade_psycho_warfare
+				#	modifier = {
+				#		factor = 0
+				#		has_done_agency_upgrade = upgrade_psycho_warfare
+				#	}
+				#}
 				1 = {
 					upgrade_intelligence_agency = upgrade_form_department
 					modifier = {

@@ -26,9 +26,49 @@
 	}
 
 	offset = {
-		x = 58
+		x = 57
 		y = 0
 		trigger = { tag = USA }
+	}
+	offset = {
+		x = -3
+		y = 0
+		trigger = {
+			tag = USA
+			OR = {
+				AND = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+					has_completed_focus = USA_continue_the_new_deal
+				}
+				has_game_rule = {
+					rule = alt_hist_usa
+					option = banned
+				}
+			}
+		}
+	}
+	offset = {
+		x = -13
+		y = 0
+		trigger = {
+			tag = USA
+			OR = {
+				AND = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+					has_completed_focus = USA_reestablish_the_gold_standard
+				}
+				has_game_rule = {
+					rule = alt_hist_usa
+					option = forced
+				}
+			}
+		}
 	}
 
 	offset = {
