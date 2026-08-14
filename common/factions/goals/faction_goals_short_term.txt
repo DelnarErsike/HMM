@@ -820,6 +820,7 @@ faction_goal_spy_master = {
 		custom_effect_tooltip = THE_SPY_MASTER
 		add_faction_initiative = 1
 		custom_effect_tooltip = generic_skip_one_line_tt
+		# Note: this effect is bugged in vanilla and gives too many upgrades (because the designer for it didn't think things through), but we want to keep the buggy behavior in HMM to stay consistent
 		every_faction_member = {
 			visible_when_empty = yes
 			limit = { NOT = { has_completed_goal = faction_goal_spy_master } }
@@ -829,19 +830,19 @@ faction_goal_spy_master = {
 			}
 				create_intelligence_agency = yes
 			}
-			else_if = {
+			if = {
 			limit = {
 				NOT = { has_done_agency_upgrade  = upgrade_form_department }
 			}
 				upgrade_intelligence_agency = upgrade_form_department
 			}
-			else_if = {
+			if = {
 			limit = {
 				NOT = { has_done_agency_upgrade = upgrade_crypto_strength }
 			}
 				upgrade_intelligence_agency = upgrade_crypto_strength
 			}
-			else_if = {
+			if = {
 			limit = {
 				has_tech = mechanical_computing
 				NOT = { has_done_agency_upgrade = upgrade_crypto_strength_2 }
