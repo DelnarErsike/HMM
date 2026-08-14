@@ -11191,6 +11191,20 @@ focus_tree = {
 				}
 			}
 		}
+		allow_branch = { # Spain is not allowed to join factions, so this focus becomes impossible
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_spr
+					option = banned
+				}
+			}
+			NOT = {
+				has_game_rule = {
+					rule = alt_hist_spr
+					option = banned_no_faction_needed
+				}
+			}
+		}
 
 		ai_will_do = {
 			factor = 10
