@@ -75,7 +75,12 @@ characters={
 			slot = political_advisor
 			idea_token = LIT_antanas_snieckus
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LIT
 			}
 			available = {
@@ -117,7 +122,12 @@ characters={
 				slot = political_advisor
 				idea_token = LIT_augustinas_voldemaras
 				allowed = {
-					is_ai = no
+					NOT = {
+						has_game_rule = {
+							rule = baltics_status
+							option = abstracted
+						}
+					}
 					original_tag = LIT
 				}
 				available = {
@@ -193,7 +203,12 @@ characters={
 				slot = political_advisor
 				idea_token = LIT_augustinas_voldemaras
 				allowed = {
-					is_ai = no
+					NOT = {
+						has_game_rule = {
+							rule = baltics_status
+							option = abstracted
+						}
+					}
 					original_tag = LIT
 				}
 				available = {
@@ -228,7 +243,12 @@ characters={
 			slot = political_advisor
 			idea_token = LIT_kazys_grinius
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LIT
 			}
 			available = {
@@ -286,7 +306,12 @@ characters={
 			slot = army_chief
 			idea_token = LIT_stasys_rastikis
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LIT
 				has_dlc = "No Step Back"
 			}
@@ -302,7 +327,12 @@ characters={
 			slot = political_advisor
 			idea_token = LIT_stasys_rastikis_government
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LIT
 				has_dlc = "No Step Back"
 			}
@@ -448,7 +478,12 @@ characters={
 			idea_token = LIT_jonas_Cernius
 			ledger = army
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LIT
 			}
 			traits = {
@@ -470,7 +505,12 @@ characters={
 			idea_token = LIT_vincentas_latozaite
 			ledger = air
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LIT
 			}
 			
@@ -496,7 +536,12 @@ characters={
 			slot = army_chief
 			idea_token = LIT_feliksas_baltusis
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LIT
 			}
 			traits = {
@@ -523,7 +568,12 @@ characters={
 			slot = navy_chief
 			idea_token = LIT_antanas_kaskelis
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LIT
 			}
 			traits = {
@@ -547,7 +597,12 @@ characters={
 			slot = navy_chief
 			idea_token = LIT_vladas_karvelis
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LIT
 			}
 			traits = {
@@ -574,7 +629,12 @@ characters={
 			slot = air_chief
 			idea_token = LIT_juozas_ambrazevicius
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LIT
 			}
 			traits = {
@@ -599,7 +659,12 @@ characters={
 			slot = air_chief
 			idea_token = LIT_antanas_gustaitis
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LIT
 			}
 			traits = {
@@ -627,7 +692,12 @@ characters={
 			idea_token = LIT_juoza_barzda_bradauskas
 			ledger = army
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LIT
 			}
 			traits = {
@@ -652,7 +722,12 @@ characters={
 			idea_token = LIT_albinas_cepas
 			ledger = army
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LIT
 			}
 			traits = {
@@ -677,7 +752,12 @@ characters={
 			idea_token = LIT_adolfas_ramanauskas
 			ledger = army
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LIT
 			}
 			traits = {
@@ -704,7 +784,12 @@ characters={
 			slot = political_advisor
 			idea_token = LIT_vladas_jurgutis
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LIT
 			}
 			traits = {
@@ -724,7 +809,12 @@ characters={
 			slot = political_advisor
 			idea_token = LIT_leonas_bistras
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LIT
 			}
 			traits = {
@@ -744,7 +834,12 @@ characters={
 			slot = political_advisor
 			idea_token = LIT_mykolas_slezevicius
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LIT
 			}
 			traits = {
@@ -764,9 +859,16 @@ characters={
 			slot = political_advisor
 			idea_token = LIT_mecislovas_gedvilas
 			allowed = {
-				is_ai = no
 				OR = {
+					AND = {
 					original_tag = LIT
+						NOT = {
+							has_game_rule = {
+								rule = baltics_status
+								option = abstracted
+							}
+						}
+					}
 					original_tag = SWE
 				}
 				has_dlc = "No Step Back"
@@ -794,9 +896,16 @@ characters={
 			slot = political_advisor
 			idea_token = LIT_vladas_mironas
 			allowed = {
-				is_ai = no
 				OR = {
+					AND = {
 					original_tag = LIT
+						NOT = {
+							has_game_rule = {
+								rule = baltics_status
+								option = abstracted
+							}
+						}
+					}
 					original_tag = SWE
 				}
 				has_dlc = "No Step Back"
@@ -827,7 +936,12 @@ characters={
 			slot = political_advisor
 			idea_token = LIT_antanas_venclova
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LIT
 				has_dlc = "No Step Back"
 			}
@@ -851,7 +965,12 @@ characters={
 			slot = political_advisor
 			idea_token = LIT_vytautas_alantas
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LIT
 				has_dlc = "No Step Back"
 			}
@@ -912,7 +1031,12 @@ characters={
 			idea_token = LIT_ernestas_galvanauskas
 			ledger = army 
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LIT
 				has_dlc = "No Step Back"
 			}
@@ -939,7 +1063,12 @@ characters={
 			slot = political_advisor
 			idea_token = LIT_vytautas_petrulis
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LIT
 				has_dlc = "No Step Back"
 			}
@@ -966,7 +1095,12 @@ characters={
 			slot = political_advisor
 			idea_token = LIT_aleksandras_stulginskis
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LIT
 				has_dlc = "No Step Back"
 			}
@@ -993,7 +1127,12 @@ characters={
 			slot = political_advisor
 			idea_token = LIT_jonas_staugaitis
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LIT
 				has_dlc = "No Step Back"
 			}
@@ -1020,7 +1159,12 @@ characters={
 			slot = political_advisor
 			idea_token = LIT_vincas_mickevicius_kapsukas
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LIT
 				has_dlc = "No Step Back"
 			}

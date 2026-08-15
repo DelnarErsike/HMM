@@ -2797,9 +2797,9 @@ focus_tree = {
 		id = EST_threat_on_our_border
 		icon = GFX_focus_generic_home_defense
 		prerequisite = { focus = EST_march_on_talinn focus = EST_fight_the_vaps }
-		x = -5
-		y = 2
-		relative_position_id = EST_march_on_talinn
+		x = 5
+		y = 1
+		relative_position_id = EST_fight_the_vaps
 
 		cost = 10
 
@@ -2849,7 +2849,7 @@ focus_tree = {
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = EST_threat_on_our_border }
 		mutually_exclusive = { focus = EST_fortify_the_border focus = EST_cave_to_enemy_pressure }
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = EST_threat_on_our_border
 
@@ -2931,7 +2931,7 @@ focus_tree = {
 		icon = GFX_goal_fortify_the_westwall
 		prerequisite = { focus = EST_threat_on_our_border }
 		mutually_exclusive = { focus = EST_fortify_tallinn focus = EST_cave_to_enemy_pressure }
-		x = 3
+		x = 1
 		y = 1
 		relative_position_id = EST_threat_on_our_border
 

@@ -66,6 +66,15 @@ country_event = {
 
 	is_triggered_only = yes
 
+	trigger = {
+		NOT = {
+			has_game_rule = {
+				rule = czechs_status
+				option = abstracted
+			}
+		}
+	}
+
 	immediate = {
 		hidden_effect = {
 			add_ideas = CZE_army_readiness_4

@@ -68,7 +68,7 @@ focus_tree = {
 		id = LIT_secure_a_loyal_cabinet
 		icon = GFX_goal_generic_neutrality_focus
 		mutually_exclusive = { focus = BALTIC_restore_workers_republic }
-		x = 22
+		x = 24
 		y = 0
 
 		cost = 10
@@ -124,9 +124,9 @@ focus_tree = {
 		id = LIT_rastikis_military_reforms
 		icon = GFX_focus_generic_military_mission
 		prerequisite = { focus = LIT_secure_a_loyal_cabinet }
-		x = 10
-		y = 1
-		relative_position_id = LIT_secure_a_loyal_cabinet
+		x = 2
+		y = 0
+		relative_position_id = LIT_integrate_the_opposition
 
 		cost = 10
 
@@ -329,7 +329,7 @@ focus_tree = {
 		id = LIT_integrate_the_opposition
 		icon = GFX_goal_support_democracy
 		prerequisite = { focus = LIT_secure_a_loyal_cabinet }
-		x = 8
+		x = 7
 		y = 1
 		relative_position_id = LIT_secure_a_loyal_cabinet
 
@@ -1196,9 +1196,9 @@ focus_tree = {
 		id = LIT_lithuanian_activist_front
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = LIT_free_voldemares focus = LIT_exile_voldemares }
-		x = 1
+		x = -3
 		y = 1
-		relative_position_id = LIT_free_voldemares
+		relative_position_id = LIT_exile_voldemares
 
 		cost = 10
 
@@ -1270,7 +1270,7 @@ focus_tree = {
 		id = LIT_new_kind_of_iron_wolf
 		icon = GFX_focus_LIT_new_kind_of_iron_wolf
 		prerequisite = { focus = LIT_lithuanian_activist_front }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = LIT_lithuanian_activist_front
 
@@ -2541,7 +2541,7 @@ focus_tree = {
 		id = LIT_root_out_the_iron_wolf
 		icon = GFX_focus_generic_anti_fascist_diplomacy
 		prerequisite = { focus = LIT_exile_voldemares }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = LIT_exile_voldemares
 
@@ -2610,7 +2610,7 @@ focus_tree = {
 		id = LIT_lithuanian_preservationism
 		icon = GFX_focus_generic_support_the_left_right
 		prerequisite = { focus = LIT_secure_a_loyal_cabinet }
-		x = -5
+		x = -2
 		y = 0
 		relative_position_id = LIT_integrate_the_opposition
 
@@ -2647,7 +2647,7 @@ focus_tree = {
 		id = LIT_the_nation_and_its_power
 		icon = GFX_focus_generic_treaty
 		prerequisite = { focus = LIT_a_martial_prime_minister focus = LIT_a_priestly_prime_minister focus = LIT_a_king_for_our_people }
-		x = -1
+		x = -3
 		y = 2
 		relative_position_id = LIT_lithuanian_preservationism
 
@@ -2802,7 +2802,7 @@ focus_tree = {
 		icon = GFX_focus_generic_military_mission
 		prerequisite = { focus = LIT_lithuanian_preservationism }
 		prerequisite = { focus = LIT_exile_voldemares }
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = LIT_lithuanian_preservationism
 		mutually_exclusive = { focus = LIT_a_priestly_prime_minister focus = LIT_a_king_for_our_people }

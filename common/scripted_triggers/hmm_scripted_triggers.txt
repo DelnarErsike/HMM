@@ -266,6 +266,20 @@ ai_annex = {
 				option = abstracted
 			}
 		}
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = austria_status
+					option = abstracted
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = czechs_status
+						option = abstracted
+					}
+				}
 				OR = {
 					tag = LIT
 					tag = LAT
@@ -274,13 +288,82 @@ ai_annex = {
 					tag = CZE
 					tag = COG
 				}
+			}
+			else = {
+				OR = {
+					tag = LIT
+					tag = LAT
+					tag = EST
+					tag = AUS
+					tag = COG
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_game_rule = {
+					rule = czechs_status
+					option = abstracted
+				}
+			}
+			OR = {
+				tag = LIT
+				tag = LAT
+				tag = EST
+				tag = CZE
+				tag = COG
+			}
+		}
+		else = {
+			OR = {
+				tag = LIT
+				tag = LAT
+				tag = EST
+				tag = COG
+			}
+		}
+	}
 	else_if = {
-	else = {
+		limit = {
+			has_game_rule = {
+				rule = austria_status
+				option = abstracted
+			}
+		}
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = czechs_status
+					option = abstracted
+				}
+			}
 			OR = {
 				tag = AUS
 				tag = CZE
 				tag = COG
 			}
+		}
+		else = {
+			OR = {
+				tag = AUS
+				tag = COG
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_game_rule = {
+				rule = czechs_status
+				option = abstracted
+			}
+		}
+		OR = {
+			tag = CZE
+			tag = COG
+		}
+	}
+	else = {
+		tag = COG
 	}
 }
 ai_rk = {

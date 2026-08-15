@@ -865,6 +865,7 @@ shared_focus = {
 	bypass = {
 
 	}
+	allow_branch = { always = no }
 
 	cancel_if_invalid = yes
 	continue_if_invalid = no
