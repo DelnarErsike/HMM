@@ -516,3 +516,7 @@ add_equipment_to_stockpile = {
 	type = infantry_equipment_0
 	amount = 1800
 }
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 4
+}

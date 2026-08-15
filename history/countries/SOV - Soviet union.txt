@@ -2062,11 +2062,11 @@ if = {
 # HMM: starting stockpiles to compensate for deleted day 1 starting units
 add_equipment_to_stockpile = {
 	type = train_equipment_1
-	amount = 266
+	amount = 305
 }
 add_equipment_to_stockpile = {
 	type = infantry_equipment_0
-	amount = 22000
+	amount = 21960
 }
 add_equipment_to_stockpile = {
 	type = infantry_equipment_1
@@ -2092,7 +2092,7 @@ add_equipment_to_stockpile = {
 }
 add_equipment_to_stockpile = {
 	type = light_tank_chassis_1
-	amount = 1800
+	amount = 1000
 	producer = SOV
 	variant_name = "BT-5"
 }

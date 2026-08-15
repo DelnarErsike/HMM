@@ -2412,7 +2412,7 @@ create_equipment_variant = {
 # HMM: starting stockpiles to compensate for deleted day 1 starting units
 add_equipment_to_stockpile = {
 	type = train_equipment_1
-	amount = 29
+	amount = 66
 }
 add_equipment_to_stockpile = {
 	type = infantry_equipment_0

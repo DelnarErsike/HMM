@@ -545,7 +545,7 @@ IF = {
 # HMM: starting stockpiles to compensate for deleted day 1 starting units
 add_equipment_to_stockpile = {
 	type = train_equipment_1
-	amount = 4
+	amount = 7
 }
 add_equipment_to_stockpile = {
 	type = infantry_equipment_0
@@ -554,8 +554,4 @@ add_equipment_to_stockpile = {
 add_equipment_to_stockpile = {
 	type = support_equipment_1
 	amount = 75
-}
-add_equipment_to_stockpile = {
-	type = artillery_equipment_1
-	amount = 48
 }

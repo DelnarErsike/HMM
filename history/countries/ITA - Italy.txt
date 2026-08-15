@@ -1731,9 +1731,10 @@ else = {
 }
 
 # HMM: starting stockpiles to compensate for deleted day 1 starting units
+# Note: vanilla already adds some armored cars and trucks earlier
 add_equipment_to_stockpile = {
 	type = train_equipment_1
-	amount = 29
+	amount = 48
 }
 add_equipment_to_stockpile = {
 	type = infantry_equipment_0
@@ -1749,15 +1750,11 @@ add_equipment_to_stockpile = {
 }
 add_equipment_to_stockpile = {
 	type = motorized_equipment_1
-	amount = 361
+	amount = 111
 }
 add_equipment_to_stockpile = {
 	type = artillery_equipment_1
-	amount = 240
-}
-add_equipment_to_stockpile = {
-	type = armored_car_equipment
-	amount = 150
+	amount = 249
 }
 add_equipment_to_stockpile = {
 	type = light_tank_chassis_1

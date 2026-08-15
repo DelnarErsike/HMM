@@ -1406,7 +1406,7 @@ add_equipment_to_stockpile = {
 }
 add_equipment_to_stockpile = {
 	type = motorized_equipment_1
-	amount = 2500
+	amount = 2505
 }
 add_equipment_to_stockpile = {
 	type = artillery_equipment_1
@@ -1420,17 +1420,17 @@ add_equipment_to_stockpile = {
 }
 add_equipment_to_stockpile = {
 	type = light_tank_chassis_0
-	amount = 480
+	amount = 240
 	producer = FRA
 	variant_name = "FT Char Cannon"
 }
 add_equipment_to_stockpile = {
 	type = light_tank_chassis_1
-	amount = 240
+	amount = 480
 	producer = FRA
 	variant_name = "H-35"
 }
 add_equipment_to_stockpile = {
 	type = train_equipment_1
-	amount = 82
+	amount = 119
 }

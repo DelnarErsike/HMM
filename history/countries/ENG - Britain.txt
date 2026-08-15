@@ -2094,31 +2094,52 @@ if = {
 # HMM: starting stockpiles to compensate for deleted day 1 starting units
 add_equipment_to_stockpile = {
 	type = train_equipment_1
-	amount = 74
+	amount = 218
 }
 add_equipment_to_stockpile = {
 	type = infantry_equipment_0
-	amount = 6000
+	amount = 1000
 }
 add_equipment_to_stockpile = {
 	type = infantry_equipment_1
-	amount = 20000
+	amount = 9600
 }
 add_equipment_to_stockpile = {
 	type = support_equipment_1
-	amount = 510
+	amount = 261
 }
 add_equipment_to_stockpile = {
 	type = artillery_equipment_1
-	amount = 200
+	amount = 100
 }
 add_equipment_to_stockpile = {
 	type = armored_car_equipment
-	amount = 462
+	amount = 449
 }
 add_equipment_to_stockpile = {
 	type = light_tank_chassis_1
 	amount = 180
 	producer = ENG
 	variant_name = "Light Tank Mk. IV"
+}
+# From day 1 annexing of puppets
+add_equipment_to_stockpile = {
+	type = infantry_equipment_0
+	amount = 286
+	producer = OMA
+}
+add_equipment_to_stockpile = {
+	type = infantry_equipment_0
+	amount = 615
+	producer = BRM
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 30
+	producer = BRM
+}
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 600
+	producer = MAL
 }
