@@ -11168,6 +11168,7 @@ focus_tree = {
 					is_in_faction = no
 					is_in_faction_with = ROOT
 					}
+					NOT = { has_completed_focus = SPA_autarky }
 				}
 			}
 			else = {
@@ -11180,6 +11181,7 @@ focus_tree = {
 					is_in_faction = no
 					is_in_faction_with = ROOT
 					}
+					NOT = { has_completed_focus = SPA_autarky }
 				}
 			}
 			FRA = {

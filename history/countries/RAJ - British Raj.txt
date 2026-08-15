@@ -511,7 +511,6 @@ if = {
 		amount = 5500
 		producer = RAJ
 	}
-}
 else = {
 	#If not having goe core everything again since non dlc cant recore
 	every_owned_state = {
@@ -533,6 +532,7 @@ else = {
 		}
 		add_core_of = RAJ
 	}
+}
 }
 
 if = {

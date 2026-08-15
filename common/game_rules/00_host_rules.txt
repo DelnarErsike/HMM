@@ -398,57 +398,57 @@ sov_boost = {
 	}
 	option = {
 		name = sov2
-		text = "1On-2"
+		text = "1On (+2)"
 		desc = "Soviets receive 2 extra civilian factories at startup (not recommended)."
 	}
 	option = {
 		name = sov4
-		text = "2On-4"
+		text = "2On (+4)"
 		desc = "Soviets receive 4 extra civilian factories at startup (not recommended)."
 	}
 	option = {
 		name = sov6
-		text = "3On-6"
+		text = "3On (+6)"
 		desc = "Soviets receive 6 extra civilian factories at startup (not recommended)."
 	}
 	option = {
 		name = sov8
-		text = "4On-8"
+		text = "4On (+8)"
 		desc = "Soviets receive 8 extra civilian factories at startup (not recommended)."
 	}
 	default = {
 		name = sov10
-		text = "5On-10"
+		text = "5On (+10)"
 		desc = "Soviets receive 10 extra civilian factories at startup."
 	}
 	option = {
 		name = sov12
-		text = "6On-12"
+		text = "6On (+12)"
 		desc = "Soviets receive 12 extra civilian factories at startup."
 	}
 	option = {
 		name = sov14
-		text = "7On-14"
+		text = "7On (+14)"
 		desc = "Soviets receive 14 extra civilian factories at startup."
 	}
 	option = {
 		name = sov16
-		text = "8On-16"
+		text = "8On (+16)"
 		desc = "Soviets receive 16 extra civilian factories at startup."
 	}
 	option = {
 		name = sov18
-		text = "9On-18"
+		text = "9On (+18)"
 		desc = "Soviets receive 18 extra civilian factories at startup."
 	}
 	option = {
 		name = sov20
-		text = "tOn-20"
+		text = "tOn (+20)"
 		desc = "Soviets receive 20 extra civilian factories at startup."
 	}
 	option = {
 		name = sov22
-		text = "0On-22"
+		text = "0On (+22)"
 		desc = "Soviets receive 22 extra civilian factories at startup."
 	}
 }     
@@ -459,37 +459,37 @@ ger_boost = {
 	icon = "GFX_decision_generic_merge_plant_materiel"
 	default = {
 		name = off
-		text = "0Off"
+		text = "GOff"
 		desc = "Germany does not get any extra civilian factories at startup."
 	}
 	option = {
 		name = ger2
-		text = "6On-2"
+		text = "6On (+2)"
 		desc = "Germany gets 2 extra civilian factories at startup (not recommended)."
 	}
 	option = {
 		name = ger4
-		text = "7On-4"
+		text = "7On (+4)"
 		desc = "Germany gets 4 extra civilian factories at startup (not recommended)."
 	}
 	option = {
 		name = ger6
-		text = "8On-6"
+		text = "8On (+6)"
 		desc = "Germany gets 6 extra civilian factories at startup (not recommended)."
 	}
 	option = {
 		name = ger8
-		text = "9On-8"
+		text = "9On (+8)"
 		desc = "Germany gets 8 extra civilian factories at startup (not recommended)."
 	}
 	option = {
 		name = ger10
-		text = "tOn-10"
+		text = "tOn (+10)"
 		desc = "Germany gets 10 extra civilian factories at startup (not recommended)."
 	}
 	option = {
 		name = ger12
-		text = "0On-12"
+		text = "0On (+12)"
 		desc = "Germany gets 12 extra civilian factories at startup (not recommended)."
 	}
 } 
@@ -504,32 +504,32 @@ jap_boost = {
 	}
 	option = {
 		name = jap2
-		text = "6On-2"
+		text = "6On (+2)"
 		desc = "Japan gets 2 extra civilian factories at startup."
 	}
 	option = {
 		name = jap4
-		text = "7On-4"
+		text = "7On (+4)"
 		desc = "Japan gets 4 extra civilian factories at startup."
 	}
 	option = {
 		name = jap6
-		text = "8On-6"
+		text = "8On (+6)"
 		desc = "Japan gets 6 extra civilian factories at startup."
 	}
 	option = {
 		name = jap8
-		text = "9On-8"
+		text = "9On (+8)"
 		desc = "Japan gets 8 extra civilian factories at startup."
 	}
 	option = {
 		name = jap10
-		text = "tOn-10"
+		text = "tOn (+10)"
 		desc = "Japan gets 10 extra civilian factories at startup."
 	}
 	option = {
 		name = jap12
-		text = "0On-12"
+		text = "0On (+12)"
 		desc = "Japan gets 12 extra civilian factories at startup."
 	}
 }          
@@ -544,32 +544,32 @@ eng_boost = {
 	}
 	option = {
 		name = eng2
-		text = "6On-2"
+		text = "6On (+2)"
 		desc = "The United Kingdom gets 2 extra civilian factories at startup."
 	}
 	option = {
 		name = eng4
-		text = "7On-4"
+		text = "7On (+4)"
 		desc = "The United Kingdom gets 4 extra civilian factories at startup."
 	}
 	option = {
 		name = eng6
-		text = "8On-6"
+		text = "8On (+6)"
 		desc = "The United Kingdom gets 6 extra civilian factories at startup."
 	}
 	option = {
 		name = eng8
-		text = "9On-8"
+		text = "9On (+8)"
 		desc = "The United Kingdom gets 8 extra civilian factories at startup."
 	}
 	option = {
 		name = eng10
-		text = "tOn-10"
+		text = "tOn (+10)"
 		desc = "The United Kingdom gets 10 extra civilian factories at startup."
 	}
 	option = {
 		name = eng12
-		text = "0On-12"
+		text = "0On (+12)"
 		desc = "The United Kingdom gets 12 extra civilian factories at startup."
 	}
 }
@@ -584,32 +584,32 @@ ita_boost = {
 	}
 	option = {
 		name = ita2
-		text = "6On-2"
+		text = "6On (+2)"
 		desc = "Italy gets 2 extra civilian factories at startup."
 	}
 	option = {
 		name = ita4
-		text = "7On-4"
+		text = "7On (+4)"
 		desc = "Italy gets 4 extra civilian factories at startup."
 	}
 	option = {
 		name = ita6
-		text = "8On-6"
+		text = "8On (+6)"
 		desc = "Italy gets 6 extra civilian factories at startup."
 	}
 	option = {
 		name = ita8
-		text = "9On-8"
+		text = "9On (+8)"
 		desc = "Italy gets 8 extra civilian factories at startup."
 	}
 	option = {
 		name = ita10
-		text = "tOn-10"
+		text = "tOn (+10)"
 		desc = "Italy gets 10 extra civilian factories at startup."
 	}
 	option = {
 		name = ita12
-		text = "tOn-12"
+		text = "tOn (+12)"
 		desc = "Italy gets 12 extra civilian factories at startup."
 	}
 }
@@ -624,32 +624,32 @@ fra_boost = {
 	}
 	option = {
 		name = fra2
-		text = "6On-2"
+		text = "6On (+2)"
 		desc = "France gets 2 extra civilian factories at startup."
 	}
 	option = {
 		name = fra4
-		text = "7On-4"
+		text = "7On (+4)"
 		desc = "France gets 4 extra civilian factories at startup."
 	}
 	option = {
 		name = fra6
-		text = "8On-6"
+		text = "8On (+6)"
 		desc = "France gets 6 extra civilian factories at startup."
 	}
 	option = {
 		name = fra8
-		text = "9On-8"
+		text = "9On (+8)"
 		desc = "France gets 8 extra civilian factories at startup."
 	}
 	option = {
 		name = fra10
-		text = "tOn-10"
+		text = "tOn (+10)"
 		desc = "France gets 10 extra civilian factories at startup."
 	}
 	option = {
 		name = fra12
-		text = "tOn-12"
+		text = "tOn (+12)"
 		desc = "France gets 12 extra civilian factories at startup."
 	}
 }
@@ -664,32 +664,32 @@ usa_boost = {
 	}
 	option = {
 		name = usa2
-		text = "6On-2"
+		text = "6On (+2)"
 		desc = "The United States of America gets 2 extra civilian factories at startup."
 	}
 	option = {
 		name = usa4
-		text = "7On-4"
+		text = "7On (+4)"
 		desc = "The United States of America gets 4 extra civilian factories at startup."
 	}
 	option = {
 		name = usa6
-		text = "8On-6"
+		text = "8On (+6)"
 		desc = "The United States of America gets 6 extra civilian factories at startup."
 	}
 	option = {
 		name = usa8
-		text = "9On-8"
+		text = "9On (+8)"
 		desc = "The United States of America gets 8 extra civilian factories at startup."
 	}
 	option = {
 		name = usa10
-		text = "tOn-10"
+		text = "tOn (+10)"
 		desc = "The United States of America gets 10 extra civilian factories at startup."
 	}
 	option = {
 		name = usa12
-		text = "0On-12"
+		text = "0On (+12)"
 		desc = "The United States of America gets 12 extra civilian factories at startup."
 	}
 }
@@ -1522,22 +1522,22 @@ alt_hist_spr = {
 	option = {
 		name = banned
 		text = "RNo"
-		desc = "Spain is forced to follow focuses under Autarky and cannot do Join the Axis (historical)."
+		desc = "Spain is forced to follow focuses under Autarky (historical) and cannot do Join the Axis. Germany cannot do Alliance with Spain."
 	}
 	default = {
 		name = banned_no_faction_needed
 		text = "ONo & Relax Faction Requirements"
-		desc = "Spain is forced to follow focuses under Autarky and cannot do Join the Axis (historical), but does not need to be in the Axis to finish certain focuses."
+		desc = "Spain is forced to follow focuses under Autarky (historical) and cannot do Join the Axis, but does not need to be in the Axis to finish certain focuses. Germany cannot do Alliance with Spain."
 	}
 	option = {
 		name = allowed
 		text = "GYes"
-		desc = "Spain can follow either Autarky (historical) or Fascist Economic Aid, though needs to remain in the Axis to complete focuses under the latter."
+		desc = "Spain can follow either Autarky (historical) or Fascist Economic Aid, though needs to remain in the Axis to complete focuses under the latter. Germany cannot do Alliance with Spain if Spain does Autarky, and Spain cannot do Autarky if Germany does Alliance with Spain."
 	}
 	option = {
 		name = allowed_no_faction_needed
 		text = "YYes & Relax Faction Requirements"
-		desc = "Spain can follow either Autarky (historical) or Fascist Economic Aid, and can follow the latter without being in the Axis."
+		desc = "Spain can follow either Autarky (historical) or Fascist Economic Aid, and can follow the latter without being in the Axis. Germany cannot do Alliance with Spain if Spain does Autarky, and Spain cannot do Autarky if Germany does Alliance with Spain."
 	}
 	option = {
 		name = forced

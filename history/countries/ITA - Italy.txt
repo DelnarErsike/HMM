@@ -1108,13 +1108,13 @@ if = {
 		}
 		icon = "GFX_ITA_basic_light_tank_medium"
 	}
-}
-else = {
+	else = {
 	add_equipment_to_stockpile = {
 		type = gw_tank_equipment
 		amount = 190
 		producer = ITA
 		variant_name = "Fiat 3000"
+	}
 	}
 }
 
@@ -1202,7 +1202,6 @@ if = {
 			ship_gun_upgrade = 2
 		}
 	}
-}
 else = {
 	### Battleship Variants	
 	create_equipment_variant = {			# original configuration of class pre-refit (refit in 1937-40)
@@ -1531,6 +1530,7 @@ else = {
 			rear_1_custom_slot = ship_torpedo_sub_1
 		}
 	}
+}
 }
 
 

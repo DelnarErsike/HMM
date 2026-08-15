@@ -345,11 +345,11 @@ if = {
 		producer = CZE
 		variant_name = "Lt vz. 34"
 	}
-}
-else = {
+	else = {
 	add_equipment_to_stockpile = {
 		type = light_tank_equipment_1
 		amount = 50
+	}
 	}
 }
 
