@@ -230,6 +230,19 @@ can_grind_generals = {
 	}
 }
 
+ai_no_units = { # These countries should not make units at all
+	OR = {
+		tag = LIT
+		tag = LAT
+		tag = EST
+		tag = AUS
+		tag = CZE
+		ai_annex = yes
+		ai_black = yes
+		ai_rk = yes
+		ai_manpower = yes
+	}
+}
 ai_manpower = {
 	OR = {
 		tag = BEL
@@ -246,15 +259,28 @@ ai_manpower = {
 	}
 }
 ai_annex = {
-	OR = {
-		tag = LIT
-		tag = LAT
-		tag = EST
-		tag = AUS
-		tag = CZE
-		tag = COG
-		tag = MON
-		tag = TAN	
+	if = {
+		limit = {
+			has_game_rule = {
+				rule = baltics_status
+				option = abstracted
+			}
+		}
+				OR = {
+					tag = LIT
+					tag = LAT
+					tag = EST
+					tag = AUS
+					tag = CZE
+					tag = COG
+				}
+	else_if = {
+	else = {
+			OR = {
+				tag = AUS
+				tag = CZE
+				tag = COG
+			}
 	}
 }
 ai_rk = {

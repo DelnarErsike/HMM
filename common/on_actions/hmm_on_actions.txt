@@ -19,17 +19,20 @@ on_actions = {
 				}
 				if = {
 					limit = {
+						is_ai = yes
+						ai_no_units = yes
+					}
+					country_lock_all_division_template = yes
+				}
+				if = {
+					limit = {
 						OR = {
 							ai_annex = yes
 							ai_rk = yes
 							ai_manpower = yes
 							ai_black = yes
-							tag = SWE
-							tag = POR
-							tag = TUR
 						}
 					}
-					country_lock_all_division_template = yes
 					if = {
 						limit = { NOT = { has_idea = ai_tradelaw } }
 						add_ideas = { ai_tradelaw }

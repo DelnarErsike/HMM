@@ -1183,6 +1183,21 @@ continuous_air_production = {
 		desc = "The continuous national focus 'Continuous Air Production' can be done by anyone, as in the base game."
 	}
 }
+baltics_status = {
+	name = "Baltic Countries' Status"
+	group = "HMM Rules"
+	icon = "GFX_volunteers"
+	default = {
+		name = abstracted
+		text = "RAbstracted"
+		desc = "Lithuania, Latvia, and Estonia get empty focus trees and cannot produce or construct anything, but instead get extra factories spawned in on Day 1 to simulate their actions. Lithuania gets nothing, Latvia gets +9 civilian factories, and Estonia gets +10 civilian factories and +2 military factories."
+	}
+	option = {
+		name = vanilla
+		text = "GUnmodified"
+		desc = "Lithuania, Latvia, and Estonia get their historical focus trees and can construct buildings and produce equipment as normal, but will not deploy units."
+	}
+}
 tradebacks = {
 	name = "No Tradebacks Idea"
 	group = "HMM Rules"
