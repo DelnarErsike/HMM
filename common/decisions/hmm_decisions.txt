@@ -786,6 +786,7 @@ operations = {
         }
         visible = {
 			original_tag = SPR
+            NOT = { has_global_flag = spain_simulator_enabled }
 		}
         fire_only_once = yes
         cost = 0

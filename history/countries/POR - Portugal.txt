@@ -15,7 +15,7 @@ send_embargo = NZL
 send_embargo = BRA
 send_embargo = PHI
 
-set_research_slots = 0
+set_research_slots = 3
 
 add_ideas = {
 	free_trade
