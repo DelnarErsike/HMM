@@ -5,7 +5,9 @@ state={
 	manpower = 1
 	
 	state_category = wasteland
-	
+	resources={
+		rubber=1 # was: 1
+	}
 	history={
 		owner = POR
 		add_core_of = GNB

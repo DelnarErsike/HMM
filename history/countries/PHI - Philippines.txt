@@ -467,3 +467,9 @@ set_popularities = {
 	fascism = 9
 	communism = 9
 }
+
+# HMM: starting stockpiles to compensate for deleted day 1 starting units
+add_equipment_to_stockpile = {
+	type = infantry_equipment_0
+	amount = 750
+}

@@ -19,7 +19,7 @@ state={
 			928 5
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 3 # HMM: increased from 2 to offset lack of focus tree and spirits
 			industrial_complex = 1
 			air_base = 2
 			4112 = {

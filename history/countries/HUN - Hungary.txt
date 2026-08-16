@@ -808,6 +808,20 @@ set_grand_doctrine = new_strategic_destruction
 	
 }
 
-
-
-
+# HMM: starting stockpiles to compensate for deleted day 1 starting units
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 5
+}
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 3400
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 57
+}
+add_equipment_to_stockpile = {
+	type = artillery_equipment_1
+	amount = 56
+}

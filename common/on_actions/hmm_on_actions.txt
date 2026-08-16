@@ -19,17 +19,20 @@ on_actions = {
 				}
 				if = {
 					limit = {
+						is_ai = yes
+						ai_no_units = yes
+					}
+					country_lock_all_division_template = yes
+				}
+				if = {
+					limit = {
 						OR = {
 							ai_annex = yes
 							ai_rk = yes
 							ai_manpower = yes
 							ai_black = yes
-							tag = SWE
-							tag = POR
-							tag = TUR
 						}
 					}
-					country_lock_all_division_template = yes
 					if = {
 						limit = { NOT = { has_idea = ai_tradelaw } }
 						add_ideas = { ai_tradelaw }
@@ -1013,13 +1016,30 @@ on_actions = {
 		effect = {
 			if = {
 				limit ={
-					has_game_rule = {
-						rule = playable_iraq
-						option = allies
+					OR = {
+						has_game_rule = {
+							rule = playable_iraq
+							option = allies
+						}
+						has_game_rule = {
+							rule = playable_iraq
+							option = subordinated
+						}
 					}
 				}
 				SWE = { send_embargo = IRQ }
 				POR = { send_embargo = IRQ }
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = playable_iraq
+							option = subordinated
+						}
+					}
+					ENG = {
+						IRQ = { subordinate_this_country_to_PREV = yes }
+					}
+				}
 			}
 			else_if = {
 				limit = {

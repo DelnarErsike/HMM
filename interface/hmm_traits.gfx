@@ -15,5 +15,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/operatives/agencies/agency_logo_rbi.dds"
 		noOfFrames = 2
 	}
+
+	spriteType = {
+		name = "GFX_autonomy_hmm_subordinated_country_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_collaboration_government.dds"
+	}
 	
 }

@@ -29,13 +29,6 @@ focus_tree = {
 
 	initial_show_position = {
 		focus = CZE_coalition_building
-		offset = {
-			x = -32
-			y = 0
-			trigger = {
-				has_completed_focus = CZE_appeal_to_the_castle
-			}
-		}
 	}
 	
 	default = no
@@ -66,37 +59,11 @@ focus_tree = {
 	shortcut = {
 		name = CZE_political_path_shortcut
 		target = CZE_coalition_building
-		scroll_wheel_factor = 0.47
-		trigger = {
-			NOT = {
-				OR = {
-					has_completed_focus = CZE_appeal_to_the_castle
-					has_completed_focus = CZE_coalition_building
-				}
-			}
-		}
-	}
-
-	shortcut = {
-		name = CZE_political_path_shortcut
-		target = CZE_coalition_building
 		scroll_wheel_factor = 0.62
 		trigger = {
 			has_completed_focus = CZE_coalition_building
 			NOT = {
 				has_completed_focus = CZE_appeal_to_the_castle
-			}
-		}
-	}
-
-	shortcut = {
-		name = CZE_political_path_shortcut
-		target = CZE_appeal_to_the_castle
-		scroll_wheel_factor = 0.61
-		trigger = {
-			has_completed_focus = CZE_appeal_to_the_castle
-			NOT = {
-				has_completed_focus = CZE_coalition_building
 			}
 		}
 	}
@@ -121,7 +88,7 @@ focus_tree = {
 		scroll_wheel_factor = 0.80
 	}
 
-	continuous_focus_position = { x = 350 y = 1800 }
+	continuous_focus_position = { x = 350 y = 1400 }
 
 	#######################################################################################################################################################
 	##																																					 ##
@@ -131,161 +98,10 @@ focus_tree = {
 
 	inlay_window = {
 		id = cze_industry_focus_inlay_window
-		position = { x = 9990 y = 350 } #y = ~2.5
-			override_position = {
-			x = 8842
-			y = 345
-			trigger = {					#verified 18/03/26
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_coalition_building
-				NOT = {
-					OR = {
-						has_completed_focus = CZE_increase_funding_from_moscow
-						has_completed_focus = CZE_placate_benes_faction
-						has_completed_focus = CZE_negotiations_with_the_autonomous_bloc
-					}
-				}
-			}
-		}
-		override_position = {			#verified 18/03/26
-			x = 6340
-			y = 345
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				AND = {
-					has_completed_focus = CZE_placate_benes_faction
-					has_completed_focus = CZE_coalition_building
-				}
-			}
-		}
-		override_position = {			#verified 19/03/26
-			x = 5970
-			y = 345
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				AND = {
-					has_completed_focus = CZE_negotiations_with_the_autonomous_bloc
-					has_completed_focus = CZE_coalition_building
-				}
-			}
-		}
-		override_position = {			#verified 16/04/26 after reorganizing the diplo branch a bit
-			x = 6840
-			y = 350
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_increase_funding_from_moscow
-				has_completed_focus = CZE_coalition_building
-			}
-		}
-		override_position = {			#verified 18/03/26
-			x = 5482
-			y = 350
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_appeal_to_the_castle
-				NOT = {
-					OR = {
-						has_completed_focus = CZE_unify_the_fascist_parties
-						has_completed_focus = CZE_petition_the_nobles
-					}
-				}
-			}
-		}
-		override_position = {	#verified 18/03/26
-			x = 5095
-			y = 350
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_unify_the_fascist_parties
-				NOT = {
-					OR = {
-						has_completed_focus = CZE_work_with_germany
-						has_completed_focus = CZE_aggressive_foreign_policy
-						has_completed_focus = CZE_complete_capitulation
-					}
-				}
-			}
-		}
-		override_position = {	#verified 26/03/26
-			x = 4710
-			y = 350
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_unify_the_fascist_parties
-				has_completed_focus = CZE_aggressive_foreign_policy
-				NOT = {
-					has_completed_focus = CZE_complete_capitulation
-				}
-			}
-		}
-		override_position = {	#verified 26/03/26
-			x = 4423
-			y = 350
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_unify_the_fascist_parties
-				has_completed_focus = CZE_work_with_germany
-				NOT = {
-					has_completed_focus = CZE_complete_capitulation
-				}
-			}
-		}
-		override_position = {	#verified 21/04/26
-			x = 5100
-			y = 350
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				AND = {
-					has_completed_focus = CZE_unify_the_fascist_parties
-					has_completed_focus = CZE_complete_capitulation
-				}
-			}
-		}
-		override_position = {	#verified 18/03/26
-			x = 4900
-			y = 350
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				AND = {
-					has_completed_focus = CZE_appeal_to_the_castle
-					has_completed_focus = CZE_petition_the_nobles
-				}
-			}
-		}
+		position = { x = 6340 y = 345 } #y = ~2.5
 	}
 
-	shared_focus = HABSBURG_part_of_something_bigger
+	#shared_focus = HABSBURG_part_of_something_bigger
 
 	#	focus = {
 	#		id = CZE_
@@ -340,6 +156,7 @@ focus_tree = {
 		y = 0
 
 		allow_branch = {
+			always = no
 			if = {
 				limit = {
 					has_game_rule = {
@@ -401,6 +218,12 @@ focus_tree = {
 			focus = CZE_appeal_to_the_castle
 		}
 		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = czechs_status
+					option = abstracted
+				}
+			}
 			if = {
 				limit = {
 					has_game_rule = {
@@ -414,49 +237,8 @@ focus_tree = {
 			}
 		}
 
-		x = 36
+		x = 11
 		y = 0
-		
-		offset = {
-			x = -12
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_coalition_building
-			}
-		}
-		offset = {
-			x = -8
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_increase_funding_from_moscow
-			}
-		}
-		offset = {
-			x = -13
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_placate_benes_faction
-			}
-		}
-		offset = {
-			x = -13
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_negotiations_with_the_autonomous_bloc
-			}
-		}
 	
 		cost = 5
 	
@@ -516,6 +298,7 @@ focus_tree = {
 		relative_position_id = CZE_appeal_to_the_castle
 
 		allow_branch = {
+			always = no
 			if = {
 				limit = {
 					has_game_rule = {
@@ -1881,6 +1664,7 @@ focus_tree = {
 		# }
 
 		allow_branch = {
+			always = no
 			OR = {
 				#is_debug = yes
 				has_completed_focus = CZE_proclaim_the_restoration_of_bohemia
@@ -2046,6 +1830,7 @@ focus_tree = {
 		mutually_exclusive = { focus = CZE_petition_the_nobles }
 
 		allow_branch = {
+			always = no
 			if = {
 				limit = {
 					has_game_rule = {
@@ -2678,6 +2463,7 @@ focus_tree = {
 			focus = CZE_complete_capitulation
 		}
 		allow_branch = {
+			always = no
 			if = {
 				limit = {
 					has_game_rule = {
@@ -2751,6 +2537,12 @@ focus_tree = {
 		}
 		mutually_exclusive = { focus = CZE_bastion_of_liberty }
 		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = czechs_status
+					option = abstracted
+				}
+			}
 			if = {
 				limit = {
 					has_game_rule = {
@@ -2768,71 +2560,9 @@ focus_tree = {
 				}
 			}
 		}
-		x = 21
-		y = 4
-		offset = {
-			x = -11
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_coalition_building
-			}
-		}
-		offset = {
-			x = -3
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_placate_benes_faction
-			}
-		}
-		offset = {
-			x = -5
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_unify_the_fascist_parties
-			}
-		}
-		offset = {
-			x = -6
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_work_with_germany
-			}
-		}
-		offset = {
-			x = -5
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_complete_capitulation
-				NOT = {
-					has_completed_focus = CZE_coalition_building	#only for fascists
-				}
-			}
-		}
-		# offset = {
-		# 	x = -1
-		# 	trigger = {
-		# 		has_game_rule = {
-		# 			rule = obsolete_focus_branches_visibility
-		# 			option = HIDE
-		# 		}
-		# 		has_completed_focus = CZE_placate_benes_faction
-		# 	}
-		# }
+		x = 0
+		y = 2
+		relative_position_id = CZE_contact_henlein
 	
 		cost = 5
 	
@@ -2926,6 +2656,7 @@ focus_tree = {
 		y = 1
 
 		allow_branch = {
+			always = no
 			if = {
 				limit = {
 					has_game_rule = {
@@ -2993,19 +2724,9 @@ focus_tree = {
 		cost = 5
 
 		relative_position_id = CZE_work_with_germany
-		x = 1
+		x = -1
 		y = 2
 
-		offset = {
-			x = -2
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_coalition_building
-			}
-		}
 		offset = {	#its intentional that this is seperate, do not merge
 			x = -2
 			trigger = {
@@ -4191,6 +3912,12 @@ focus_tree = {
 			focus = CZE_aggressive_foreign_policy
 		}
 		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = czechs_status
+					option = abstracted
+				}
+			}
 			if = {
 				limit = {
 					has_game_rule = {
@@ -4211,31 +3938,8 @@ focus_tree = {
 			}
 		}
 		relative_position_id = CZE_feeding_the_alligator
-		x = 2
+		x = 0
 		y = 1
-		offset = {
-			x = -2
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_complete_capitulation
-				NOT = {
-					has_completed_focus = CZE_coalition_building	#only for fascists
-				}
-			}
-		}
-		offset = {
-			x = -2
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_coalition_building
-			}
-		}
 	
 		cost = 5
 	
@@ -4284,6 +3988,13 @@ focus_tree = {
 		x = 0
 		y = 1
 		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = czechs_status
+					option = abstracted
+				}
+			}
+			axis = yes
 			if = {
 				limit = {
 					has_game_rule = {
@@ -4568,6 +4279,13 @@ focus_tree = {
 		}
 
 		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = czechs_status
+					option = abstracted
+				}
+			}
+			axis = no
 			has_dlc = "Man the Guns"
 			NOT = {
 				AND = {
@@ -4591,18 +4309,8 @@ focus_tree = {
 		cost = 5
 		
 		relative_position_id = CZE_complete_capitulation
-		x = 3
+		x = 0
 		y = 1
-		offset = {
-			x = -3
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_prepare_for_exile
-			}
-		}
 
 		completion_reward = {
 			mark_focus_tree_layout_dirty = yes
@@ -4877,6 +4585,12 @@ focus_tree = {
 			focus = CZE_increase_funding_from_moscow
 		}
 		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = czechs_status
+					option = abstracted
+				}
+			}
 			if = {
 				limit = {
 					has_game_rule = {
@@ -4894,18 +4608,8 @@ focus_tree = {
 			}
 		}
 		relative_position_id = CZE_coalition_building
-		x = -10
+		x = 0
 		y = 1
-		offset = {
-			x = 10
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_placate_benes_faction
-			}
-		}
 
 		ai_will_do = {
 			factor = 10
@@ -5070,18 +4774,8 @@ focus_tree = {
 	focus = {
 		id = CZE_merge_the_paramilitaries
 		icon = GFX_focus_ITA_banda_carita
-		x = -9
+		x = -6
 		y = 1
-		offset = {
-			x = 3
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_coalition_building
-			}
-		}
 		offset = {
 			x = 1
 			trigger = {
@@ -5372,18 +5066,8 @@ focus_tree = {
 		icon = GFX_focus_CZE_mobilize_the_sokol
 		prerequisite = { focus = CZE_negotiations_with_the_autonomous_bloc focus = CZE_placate_benes_faction }
 		relative_position_id = CZE_placate_benes_faction
-		x = 4
+		x = 3
 		y = 1
-		offset = {
-			x = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_placate_benes_faction
-			}
-		}
 		offset = {
 			x = 0
 			trigger = {
@@ -5473,6 +5157,7 @@ focus_tree = {
 		}
 
 		allow_branch = {
+			always = no
 			if = {
 				limit = {
 					has_game_rule = {
@@ -6253,18 +5938,8 @@ focus_tree = {
 		icon = GFX_focus_ETH_re-convene_the_parliament
 		prerequisite = { focus = CZE_placate_benes_faction focus = CZE_negotiations_with_the_autonomous_bloc }
 		relative_position_id =  CZE_placate_benes_faction
-		x = 6
+		x = 5
 		y = 1
-		offset = {
-			x = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_placate_benes_faction
-			}
-		}
 		offset = {
 			x = 0
 			trigger = {
@@ -6454,18 +6129,8 @@ focus_tree = {
 		prerequisite = { focus = CZE_deepend_ties_with_the_trademans }
 		prerequisite = { focus = CZE_negotiations_with_the_autonomous_bloc  }
 		relative_position_id = CZE_deepend_ties_with_the_trademans
-		x = 3
+		x = 2
 		y = 1
-		offset = {
-			x = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_placate_benes_faction
-			}
-		}
 	
 		cost = 5
 	
@@ -6652,18 +6317,8 @@ focus_tree = {
 		icon = GFX_focus_CZE_free_tuka
 		prerequisite = { focus = CZE_negotiations_with_the_autonomous_bloc focus = CZE_placate_benes_faction }
 		relative_position_id = CZE_placate_benes_faction
-		x = 8
+		x = 7
 		y = 1
-		offset = {
-			x = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_placate_benes_faction
-			}
-		}
 		offset = {
 			x = 0
 			trigger = {
@@ -6940,8 +6595,8 @@ focus_tree = {
 
 		relative_position_id = CZE_form_a_federation
 
-		x = -1
-		y = 2
+		x = -4
+		y = 1
 		offset = {
 			x = -1
 			y = -1
@@ -6954,18 +6609,6 @@ focus_tree = {
 			}
 		}
 
-		offset = {
-			x = -3
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_placate_benes_faction
-			}
-		}
-	
 		cost = 10
 
 		ai_will_do = {
@@ -7004,6 +6647,7 @@ focus_tree = {
 			}
 			is_subject = no
 		}
+		allow_branch = { always = no }
 	
 		completion_reward = {
 			add_political_power = 150
@@ -7298,17 +6942,7 @@ focus_tree = {
 		prerequisite = {focus = CZE_outreach_to_the_western_powers }
 		relative_position_id = CZE_outreach_to_the_western_powers
 		x = 2
-		y = 1
-		offset = {
-			y = 1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_placate_benes_faction
-			}
-		}
+		y = 2
 		offset = {
 			x = -4
 			y = -1
@@ -7713,29 +7347,8 @@ focus_tree = {
 		icon = GFX_focus_generic_democratic_europe
 		prerequisite = { focus = CZE_demand_guarantees focus = CZE_form_a_federation }
 		relative_position_id = CZE_demand_guarantees 
-		x = 1
-		y = 4
-		offset = {
-			x = 3
-			y = -3
-			trigger = {
-				has_completed_focus = CZE_coalition_building
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-			}
-		}
-		offset = {
-			x = -4
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_placate_benes_faction
-			}
-		}
+		x = 0
+		y = 1
 		offset = {
 			x = 4
 			y = -1
@@ -7757,6 +7370,7 @@ focus_tree = {
 		available = {
 			has_government = democratic
 		}
+		allow_branch = { always = no }
 	
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -7800,22 +7414,12 @@ focus_tree = {
 			focus = CZE_central_european_faction
 		}
 		relative_position_id = CZE_guardian_of_central_europe
-		x = -7
+		x = -1
 		y = 1
 		offset = {
 			x = -6
 			trigger = {
 				has_completed_focus = CZE_appeal_to_the_castle
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-			}
-		}
-		offset = {
-			x = 6
-			trigger = {
-				has_completed_focus = CZE_coalition_building
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
@@ -8087,26 +7691,6 @@ focus_tree = {
 		# 		has_completed_focus = CZE_coalition_building
 		# 	}
 		# }
-		offset = {
-			x = 1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_placate_benes_faction
-			}
-		}
-		offset = {
-			x = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_placate_benes_faction
-			}
-		}
 		# offset = {
 		# 	x = 1
 		# 	trigger = {
@@ -8636,6 +8220,12 @@ focus_tree = {
 				democratic > 0.60 #Someone is trying to influence me!
 			}
 		}
+		allow_branch = {
+			OR = { # HMM: Make sure that if we have a player on Czechs, they are forced to go Axis
+				is_ai = yes
+				allies = yes
+			}
+		}
 	
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -8687,7 +8277,7 @@ focus_tree = {
 		}
 
 		allow_branch = {
-			#always = no
+			always = no
 			if = {
 				limit = {
 					has_game_rule = {
@@ -10578,7 +10168,7 @@ focus_tree = {
 		}
 
 		relative_position_id = CZE_coalition_building
-		x = 39
+		x = 15
 		y = 0
 
 		offset = {
@@ -10595,16 +10185,6 @@ focus_tree = {
 			x = -13
 			trigger = {
 				has_completed_focus = CZE_increase_funding_from_moscow
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-			}
-		}
-		offset = {
-			x = -13
-			trigger = {
-				has_completed_focus = CZE_placate_benes_faction
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
@@ -10688,6 +10268,14 @@ focus_tree = {
 		bypass = {
 			#has_rule = can_send_volunteers
 		}
+		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = czechs_status
+					option = abstracted
+				}
+			}
+		}
 
 		completion_reward = {
 			set_rule = {
@@ -10751,7 +10339,7 @@ focus_tree = {
 		}
 
 		relative_position_id = CZE_revive_the_czechoslovak_legion_dynamic
-		x = 1
+		x = -1
 		y = 1
 
 		available = {
@@ -10820,7 +10408,7 @@ focus_tree = {
 		}
 
 		relative_position_id = CZE_revive_the_czechoslovak_legion_dynamic
-		x = 3
+		x = 1
 		y = 1
 
 		cost = 5
@@ -10899,9 +10487,9 @@ focus_tree = {
 			focus = CZE_coalition_building
 		}
 
-		relative_position_id = CZE_revive_the_czechoslovak_legion_dynamic
-		x = -3
-		y = 1
+		relative_position_id = CZE_forgive_trading_debts
+		x = 2
+		y = 0
 		cost = 5
 
 		available = {
@@ -11012,6 +10600,7 @@ focus_tree = {
 				}
 			}
 		}
+		allow_branch = { always = no }
 
 		completion_reward = {
 			GER = {
@@ -11055,6 +10644,7 @@ focus_tree = {
 				has_war_with = ROOT
 			}
 		}
+		allow_branch = { always = no }
 
 		completion_reward = {
 			unlock_decision_tooltip = CZE_escalate_involvement_in_soviet_civil_war
@@ -11277,18 +10867,8 @@ focus_tree = {
 		}
 
 		relative_position_id = CZE_coalition_building
-		x = 28
+		x = 9
 		y = 1
-		offset = {
-			x = -14
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = CZE_placate_benes_faction
-			}
-		}
 		offset = {
 			x = -17
 			trigger = {
@@ -11408,7 +10988,7 @@ focus_tree = {
 		}
 
 		relative_position_id = CZE_forgive_trading_debts
-		x = -4
+		x = 0
 		y = 1
 
 		cost = 5
@@ -11450,6 +11030,7 @@ focus_tree = {
 			is_subject = no
 			is_in_faction = no
 		}
+		allow_branch = { always = no }
 
 		completion_reward = {
 			if = {
@@ -12496,6 +12077,7 @@ focus_tree = {
 		bypass = {
 			is_in_faction_with = SOV
 		}
+		allow_branch = { always = no }
 
 		completion_reward = {
 			if = {
@@ -12925,7 +12507,7 @@ focus_tree = {
 		icon = GFX_focus_generic_industry_investment
 		
 		relative_position_id = CZE_revive_the_czechoslovak_legion_dynamic
-		x = 16
+		x = 14
 		y = 0
 	
 		cost = 5
@@ -12937,6 +12519,14 @@ focus_tree = {
 		available = {
 			any_core_state = {
 				is_controlled_by = ROOT
+			}
+		}
+		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = czechs_status
+					option = abstracted
+				}
 			}
 		}
 	

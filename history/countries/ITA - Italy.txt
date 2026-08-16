@@ -1108,17 +1108,13 @@ if = {
 		}
 		icon = "GFX_ITA_basic_light_tank_medium"
 	}
-}
-
-if = {
-	limit = {
-		NOT = { has_dlc = "No Step Back" }
-	}
+	else = {
 	add_equipment_to_stockpile = {
 		type = gw_tank_equipment
 		amount = 190
 		producer = ITA
 		variant_name = "Fiat 3000"
+	}
 	}
 }
 
@@ -1206,9 +1202,7 @@ if = {
 			ship_gun_upgrade = 2
 		}
 	}
-}
-if = {
-	limit = { has_dlc = "Man the Guns"}
+else = {
 	### Battleship Variants	
 	create_equipment_variant = {			# original configuration of class pre-refit (refit in 1937-40)
 		name = "Andrea Doria Class"
@@ -1537,6 +1531,7 @@ if = {
 		}
 	}
 }
+}
 
 
 1939.1.1 = {
@@ -1733,4 +1728,37 @@ if = {
 			icon = "GFX_ITA_basic_medium_tank_medium"
 		}
 	}
+}
+
+# HMM: starting stockpiles to compensate for deleted day 1 starting units
+# Note: vanilla already adds some armored cars and trucks earlier
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 48
+}
+add_equipment_to_stockpile = {
+	type = infantry_equipment_0
+	amount = 5160
+}
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 17070
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 810
+}
+add_equipment_to_stockpile = {
+	type = motorized_equipment_1
+	amount = 111
+}
+add_equipment_to_stockpile = {
+	type = artillery_equipment_1
+	amount = 249
+}
+add_equipment_to_stockpile = {
+	type = light_tank_chassis_1
+	amount = 180
+	producer = ITA
+	variant_name = "L3/35"
 }

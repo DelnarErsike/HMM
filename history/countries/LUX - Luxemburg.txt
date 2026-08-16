@@ -1,6 +1,6 @@
 ﻿capital = 8 # Luxembourg City
 
-oob = "LUX_1936"
+oob = "EMPTY"
 
 # Starting tech
 set_technology = {

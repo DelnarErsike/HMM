@@ -13,7 +13,12 @@ characters={
 			slot = political_advisor
 			idea_token = LAT_karlis_ulmanis
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LAT
 				has_dlc = "No Step Back"
 			}
@@ -53,10 +58,15 @@ characters={
 				slot = political_advisor
 				idea_token = LAT_gustavs_celminsh
 				allowed = {
+					NOT = {
+						has_game_rule = {
+							rule = baltics_status
+							option = abstracted
+						}
+					}
 					original_tag = LAT
 				}
 				available = {
-					is_ai = no
 					not = {
 						has_government = fascism 
 					}
@@ -91,7 +101,12 @@ characters={
 				slot = political_advisor
 				idea_token = LAT_gustavs_celminsh
 				allowed = {
-					is_ai = no
+					NOT = {
+						has_game_rule = {
+							rule = baltics_status
+							option = abstracted
+						}
+					}
 					original_tag = LAT
 				}
 				available = {
@@ -127,7 +142,12 @@ characters={
 			slot = political_advisor
 			idea_token = LAT_alberts_kvesis
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LAT
 				has_dlc = "No Step Back"
 			}
@@ -163,7 +183,12 @@ characters={
 			slot = political_advisor
 			idea_token = LAT_fricis_menders
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LAT
 			}
 			available = {
@@ -212,7 +237,12 @@ characters={
 			slot = political_advisor
 			idea_token = LAT_augusts_kirhensteins
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LAT
 			}
 			available = {
@@ -252,7 +282,12 @@ characters={
 			idea_token = LAT_janis_balodis
 			ledger = army 
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LAT
 				has_DLC = "No Step Back"
 			}
@@ -397,7 +432,12 @@ characters={
 			idea_token = LAT_krisjanis_berkis
 			ledger = army
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LAT
 				has_dlc = "No Step Back" 
 			}
@@ -441,7 +481,12 @@ characters={
 			idea_token = LAT_ludvigs_bolsteins
 			ledger = army
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LAT
 			}
 			
@@ -464,7 +509,12 @@ characters={
 			idea_token = LAT_kornelijs_veidnieks
 			ledger = air
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LAT
 			}
 			traits = {
@@ -487,7 +537,12 @@ characters={
 			slot = army_chief
 			idea_token = LAT_fricis_celmins
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 					original_tag = LAT
 			}
 			traits = {
@@ -512,7 +567,12 @@ characters={
 			slot = army_chief
 			idea_token = LAT_rudolfs_kocins
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 					original_tag = LAT
 			}
 			traits = {
@@ -536,7 +596,12 @@ characters={
 			slot = army_chief
 			idea_token = LAT_arturs_sprogis
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LAT
 			}
 			traits = {
@@ -563,7 +628,12 @@ characters={
 			slot = navy_chief
 			idea_token = LAT_tomas_spade
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 					original_tag = LAT
 			}
 			traits = {
@@ -587,7 +657,12 @@ characters={
 			slot = navy_chief
 			idea_token = LAT_teodors_zvejnieks
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 					original_tag = LAT
 			}
 			traits = {
@@ -614,7 +689,12 @@ characters={
 			slot = air_chief
 			idea_token = LAT_konstantins_cakste
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 					original_tag = LAT
 			}
 			traits = {
@@ -638,7 +718,12 @@ characters={
 			slot = air_chief
 			idea_token = LAT_rudolfs_kandis
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 					original_tag = LAT
 			}
 			traits = {
@@ -668,7 +753,12 @@ characters={
 			idea_token = LAT_arturs_silgailis
 			ledger = air
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LAT
 			}
 			traits = {
@@ -693,7 +783,12 @@ characters={
 			idea_token = LAT_janis_berzins
 			ledger = navy
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LAT
 			}
 			traits = {
@@ -718,7 +813,12 @@ characters={
 			idea_token = LAT_otto_hellmich
 			ledger = army
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LAT
 			}
 			traits = {
@@ -749,7 +849,12 @@ characters={
 			slot = political_advisor
 			idea_token = LAT_vilis_lacis
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 					original_tag = LAT
 				}
 				traits = {
@@ -776,7 +881,12 @@ characters={
 			slot = political_advisor
 			idea_token = LAT_janis_kaminskis
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LAT
 			}
 			traits = {
@@ -796,7 +906,12 @@ characters={
 			slot = political_advisor
 			idea_token = LAT_vilhelms_munters
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LAT
 			}
 			traits = {
@@ -816,9 +931,16 @@ characters={
 			slot = political_advisor
 			idea_token = LAT_janis_sudrabkalns
 			allowed = {
-				is_ai = no
 				OR = {
+					AND = {
 					original_tag = LAT
+						NOT = {
+							has_game_rule = {
+								rule = baltics_status
+								option = abstracted
+							}
+						}
+					}
 					original_tag = SWE
 				}
 
@@ -848,9 +970,16 @@ characters={
 			slot = political_advisor
 			idea_token = LAT_emilija_veinberga
 			allowed = {
-				is_ai = no
 				OR = {
+					AND = {
 					original_tag = LAT
+						NOT = {
+							has_game_rule = {
+								rule = baltics_status
+								option = abstracted
+							}
+						}
+					}
 					original_tag = SWE
 				}
 				has_dlc = "No Step Back"
@@ -878,9 +1007,16 @@ characters={
 			slot = political_advisor
 			idea_token = LAT_janis_rudzutaks
 			allowed = {
-				is_ai = no
 				OR = {
+					AND = {
 					original_tag = LAT
+						NOT = {
+							has_game_rule = {
+								rule = baltics_status
+								option = abstracted
+							}
+						}
+					}
 					original_tag = SWE
 				}
 				has_dlc = "No Step Back"
@@ -908,7 +1044,12 @@ characters={
 			slot = political_advisor
 			idea_token = LAT_karlis_baumanis
 			allowed = {
-				is_ai = no
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
 				original_tag = LAT
 				has_dlc = "No Step Back"
 			}

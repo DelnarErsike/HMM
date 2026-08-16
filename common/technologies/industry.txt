@@ -1689,6 +1689,14 @@ technologies = {
 				date > "1937.1.1"
 			}
 
+			modifier = { # HMM: Subordinated countries should rush excav techs to maximize the resources their overlord can get
+				factor = 1000
+				OR = {
+					has_autonomy_state = autonomy_hmm_subordinated_country
+					ai_black = yes
+				}
+			}
+
 			modifier = { # HMM: AI Spain should rush construction and excav techs with Spain simulator on
 				factor = 1000
 				original_tag = SPR
@@ -1753,6 +1761,14 @@ technologies = {
 				}
 			}
 
+			modifier = { # HMM: Subordinated countries should rush excav techs to maximize the resources their overlord can get
+				factor = 1000
+				OR = {
+					has_autonomy_state = autonomy_hmm_subordinated_country
+					ai_black = yes
+				}
+			}
+
 			modifier = { # HMM: AI Spain should rush construction and excav techs with Spain simulator on
 				factor = 1000
 				original_tag = SPR
@@ -1801,6 +1817,14 @@ technologies = {
 				factor = 10
 				date > "1937.1.1"
 			}			
+
+			modifier = { # HMM: Subordinated countries should rush excav techs to maximize the resources their overlord can get
+				factor = 1000
+				OR = {
+					has_autonomy_state = autonomy_hmm_subordinated_country
+					ai_black = yes
+				}
+			}
 
 			modifier = { # HMM: AI Spain should rush construction and excav techs with Spain simulator on
 				factor = 1000
@@ -1868,6 +1892,14 @@ technologies = {
 				}
 			}
 
+			modifier = { # HMM: Subordinated countries should rush excav techs to maximize the resources their overlord can get
+				factor = 1000
+				OR = {
+					has_autonomy_state = autonomy_hmm_subordinated_country
+					ai_black = yes
+				}
+			}
+
 			modifier = { # HMM: AI Spain should rush construction and excav techs with Spain simulator on
 				factor = 1000
 				original_tag = SPR
@@ -1925,6 +1957,14 @@ technologies = {
 			modifier = {
 				factor = 3
 				date > "1940.1.1"
+			}
+
+			modifier = { # HMM: Subordinated countries should rush excav techs to maximize the resources their overlord can get
+				factor = 1000
+				OR = {
+					has_autonomy_state = autonomy_hmm_subordinated_country
+					ai_black = yes
+				}
 			}
 
 			modifier = { # HMM: AI Spain should rush construction and excav techs with Spain simulator on
@@ -1993,6 +2033,14 @@ technologies = {
 				}
 			}
 
+			modifier = { # HMM: Subordinated countries should rush excav techs to maximize the resources their overlord can get
+				factor = 1000
+				OR = {
+					has_autonomy_state = autonomy_hmm_subordinated_country
+					ai_black = yes
+				}
+			}
+
 			modifier = { # HMM: AI Spain should rush construction and excav techs with Spain simulator on
 				factor = 1000
 				original_tag = SPR
@@ -2047,6 +2095,14 @@ technologies = {
 			modifier = {
 				factor = 10
 				date > "1941.1.1"
+			}
+
+			modifier = { # HMM: Subordinated countries should rush excav techs to maximize the resources their overlord can get
+				factor = 1000
+				OR = {
+					has_autonomy_state = autonomy_hmm_subordinated_country
+					ai_black = yes
+				}
 			}
 
 			modifier = { # HMM: AI Spain should rush construction and excav techs with Spain simulator on
@@ -2114,6 +2170,14 @@ technologies = {
 				}
 			}
 
+			modifier = { # HMM: Subordinated countries should rush excav techs to maximize the resources their overlord can get
+				factor = 1000
+				OR = {
+					has_autonomy_state = autonomy_hmm_subordinated_country
+					ai_black = yes
+				}
+			}
+
 			modifier = { # HMM: AI Spain should rush construction and excav techs with Spain simulator on
 				factor = 1000
 				original_tag = SPR
@@ -2158,6 +2222,14 @@ technologies = {
 			modifier = {
 				factor = 10
 				date > "1943.1.1"
+			}
+
+			modifier = { # HMM: Subordinated countries should rush excav techs to maximize the resources their overlord can get
+				factor = 1000
+				OR = {
+					has_autonomy_state = autonomy_hmm_subordinated_country
+					ai_black = yes
+				}
 			}
 
 			modifier = { # HMM: AI Spain should rush construction and excav techs with Spain simulator on
@@ -2223,6 +2295,14 @@ technologies = {
 					steel > 8
 					chromium > 8
 					coal > 8
+				}
+			}
+
+			modifier = { # HMM: Subordinated countries should rush excav techs to maximize the resources their overlord can get
+				factor = 1000
+				OR = {
+					has_autonomy_state = autonomy_hmm_subordinated_country
+					ai_black = yes
 				}
 			}
 

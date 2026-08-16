@@ -68,48 +68,30 @@ allies_western = {
 allies_western_early_join = {
 	custom_trigger_tooltip = {
 		tooltip = hmm_is_allies_western_early_join
-		if = { # Has to be set up this way to not cause weird bugs
-			limit = {
-				has_game_rule = {
-					rule = playable_iraq
-					option = axis
-				}
-			}
-			OR = {
-				tag = ENG
-				tag = FRA
-				tag = CAN
-				tag = AST
-				tag = NZL
-				tag = RAJ
-				tag = SAF
-				tag = IRE
-				tag = NOR
-				tag = HOL
-				tag = BEL
-				tag = LUX
-				tag = POL
-				tag = DEN
-			}
-		}
-		else = {
-			OR = {
-				tag = ENG
-				tag = FRA
-				tag = CAN
-				tag = AST
-				tag = NZL
-				tag = USA
-				tag = RAJ
-				tag = SAF
-				tag = IRE
-				tag = NOR
-				tag = HOL
-				tag = BEL
-				tag = LUX
-				tag = POL
-				tag = DEN
+		OR = {
+			tag = ENG
+			tag = FRA
+			tag = CAN
+			tag = AST
+			tag = NZL
+			tag = USA
+			tag = RAJ
+			tag = SAF
+			tag = IRE
+			tag = NOR
+			tag = HOL
+			tag = BEL
+			tag = LUX
+			tag = POL
+			tag = DEN
+			AND = {
 				tag = IRQ
+				NOT = {
+					has_game_rule = {
+						rule = playable_iraq
+						option = axis
+					}
+				}
 			}
 		}
 	}
@@ -134,6 +116,9 @@ allies_comintern = {
 			tag = SOV
 			tag = MON
 			tag = TAN
+			tag = LIT # In case they aren't nomnomed by Soviets
+			tag = LAT # In case they aren't nomnomed by Soviets
+			tag = EST # In case they aren't nomnomed by Soviets
 		}
 	}
 }
@@ -152,38 +137,28 @@ axis = {
 axis_european = {
 	custom_trigger_tooltip = {
 		tooltip = hmm_is_axis_european
-		if = { # Has to be set up this way to not cause weird bugs
-			limit = {
+		OR = {
+			tag = GER
+			tag = ITA
+			tag = HUN
+			tag = ROM
+			tag = SPR
+			tag = BUL
+			tag = FIN
+			tag = SLO
+			AND = {
+				tag = IRQ
 				has_game_rule = {
 					rule = playable_iraq
 					option = axis
 				}
 			}
-			OR = {
-				tag = GER
-				tag = ITA
-				tag = HUN
-				tag = ROM
-				tag = SPR
-				tag = BUL
-				tag = FIN
-				tag = SLO
-				tag = IRQ
-				ai_rk = yes
+			tag = AUS # In case they aren't nomnomed by Germany
+			AND = {
+				original_tag = CZE # In case they aren't nomnomed by Germany
+				is_ai = no
 			}
-		}
-		else = {
-			OR = {
-				tag = GER
-				tag = ITA
-				tag = HUN
-				tag = ROM
-				tag = SPR
-				tag = BUL
-				tag = FIN
-				tag = SLO
-				ai_rk = yes
-			}
+			ai_rk = yes
 		}
 	}
 }
@@ -230,6 +205,19 @@ can_grind_generals = {
 	}
 }
 
+ai_no_units = { # These countries should not make units at all
+	OR = {
+		tag = LIT
+		tag = LAT
+		tag = EST
+		tag = AUS
+		tag = CZE
+		ai_annex = yes
+		ai_black = yes
+		ai_rk = yes
+		ai_manpower = yes
+	}
+}
 ai_manpower = {
 	OR = {
 		tag = BEL
@@ -246,15 +234,111 @@ ai_manpower = {
 	}
 }
 ai_annex = {
-	OR = {
-		tag = LIT
-		tag = LAT
-		tag = EST
-		tag = AUS
-		tag = CZE
+	if = {
+		limit = {
+			has_game_rule = {
+				rule = baltics_status
+				option = abstracted
+			}
+		}
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = austria_status
+					option = abstracted
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = czechs_status
+						option = abstracted
+					}
+				}
+				OR = {
+					tag = LIT
+					tag = LAT
+					tag = EST
+					tag = AUS
+					tag = CZE
+					tag = COG
+				}
+			}
+			else = {
+				OR = {
+					tag = LIT
+					tag = LAT
+					tag = EST
+					tag = AUS
+					tag = COG
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_game_rule = {
+					rule = czechs_status
+					option = abstracted
+				}
+			}
+			OR = {
+				tag = LIT
+				tag = LAT
+				tag = EST
+				tag = CZE
+				tag = COG
+			}
+		}
+		else = {
+			OR = {
+				tag = LIT
+				tag = LAT
+				tag = EST
+				tag = COG
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_game_rule = {
+				rule = austria_status
+				option = abstracted
+			}
+		}
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = czechs_status
+					option = abstracted
+				}
+			}
+			OR = {
+				tag = AUS
+				tag = CZE
+				tag = COG
+			}
+		}
+		else = {
+			OR = {
+				tag = AUS
+				tag = COG
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_game_rule = {
+				rule = czechs_status
+				option = abstracted
+			}
+		}
+		OR = {
+			tag = CZE
+			tag = COG
+		}
+	}
+	else = {
 		tag = COG
-		tag = MON
-		tag = TAN	
 	}
 }
 ai_rk = {

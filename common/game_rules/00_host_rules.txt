@@ -391,25 +391,65 @@ sov_boost = {
 	name = "Soviet Civ Boost"
 	group = "HMM Rules"
 	icon = "GFX_decision_generic_merge_plant_materiel"
-	default = {
+	option = {
 		name = off
 		text = "GOff"
-		desc = "Soviets won't receive civilian factories"
+		desc = "Soviets do not get any extra civilian factories at startup (not recommended)."
+	}
+	option = {
+		name = sov2
+		text = "1On (+2)"
+		desc = "Soviets receive 2 extra civilian factories at startup (not recommended)."
 	}
 	option = {
 		name = sov4
-		text = "YOn-4"
-		desc = "Soviets receives 4 Civilian factories"
+		text = "2On (+4)"
+		desc = "Soviets receive 4 extra civilian factories at startup (not recommended)."
+	}
+	option = {
+		name = sov6
+		text = "3On (+6)"
+		desc = "Soviets receive 6 extra civilian factories at startup (not recommended)."
 	}
 	option = {
 		name = sov8
-		text = "OOn-8"
-		desc = "Soviets receives 8 Civilian factories"
+		text = "4On (+8)"
+		desc = "Soviets receive 8 extra civilian factories at startup (not recommended)."
+	}
+	default = {
+		name = sov10
+		text = "5On (+10)"
+		desc = "Soviets receive 10 extra civilian factories at startup."
 	}
 	option = {
 		name = sov12
-		text = "ROn-12"
-		desc = "Soviets receives 12 Civilian factories"
+		text = "6On (+12)"
+		desc = "Soviets receive 12 extra civilian factories at startup."
+	}
+	option = {
+		name = sov14
+		text = "7On (+14)"
+		desc = "Soviets receive 14 extra civilian factories at startup."
+	}
+	option = {
+		name = sov16
+		text = "8On (+16)"
+		desc = "Soviets receive 16 extra civilian factories at startup."
+	}
+	option = {
+		name = sov18
+		text = "9On (+18)"
+		desc = "Soviets receive 18 extra civilian factories at startup."
+	}
+	option = {
+		name = sov20
+		text = "tOn (+20)"
+		desc = "Soviets receive 20 extra civilian factories at startup."
+	}
+	option = {
+		name = sov22
+		text = "0On (+22)"
+		desc = "Soviets receive 22 extra civilian factories at startup."
 	}
 }     
   
@@ -420,22 +460,37 @@ ger_boost = {
 	default = {
 		name = off
 		text = "GOff"
-		desc = "Germany won't have civilian factories buff (Recommmended)"
+		desc = "Germany does not get any extra civilian factories at startup."
+	}
+	option = {
+		name = ger2
+		text = "6On (+2)"
+		desc = "Germany gets 2 extra civilian factories at startup (not recommended)."
 	}
 	option = {
 		name = ger4
-		text = "YOn-4"
-		desc = "Germany get 4 Civilian factories (Not Recommmended)"
+		text = "7On (+4)"
+		desc = "Germany gets 4 extra civilian factories at startup (not recommended)."
+	}
+	option = {
+		name = ger6
+		text = "8On (+6)"
+		desc = "Germany gets 6 extra civilian factories at startup (not recommended)."
 	}
 	option = {
 		name = ger8
-		text = "OOn-8"
-		desc = "Germany get 8 Civilian factories (Not Recommmended)"
+		text = "9On (+8)"
+		desc = "Germany gets 8 extra civilian factories at startup (not recommended)."
+	}
+	option = {
+		name = ger10
+		text = "tOn (+10)"
+		desc = "Germany gets 10 extra civilian factories at startup (not recommended)."
 	}
 	option = {
 		name = ger12
-		text = "ROn-12"
-		desc = "Germany get 12 Civilian factories (Not Recommmended)"
+		text = "0On (+12)"
+		desc = "Germany gets 12 extra civilian factories at startup (not recommended)."
 	}
 } 
 jap_boost = {
@@ -445,47 +500,77 @@ jap_boost = {
 	default = {
 		name = off
 		text = "GOff"
-		desc = "Japan won't receive civilian factories"
+		desc = "Japan does not get any extra civilian factories at startup."
+	}
+	option = {
+		name = jap2
+		text = "6On (+2)"
+		desc = "Japan gets 2 extra civilian factories at startup."
 	}
 	option = {
 		name = jap4
-		text = "YOn-4"
-		desc = "Japan receives 4 Civilian factories"
+		text = "7On (+4)"
+		desc = "Japan gets 4 extra civilian factories at startup."
+	}
+	option = {
+		name = jap6
+		text = "8On (+6)"
+		desc = "Japan gets 6 extra civilian factories at startup."
 	}
 	option = {
 		name = jap8
-		text = "OOn-8"
-		desc = "Japan receives 8 Civilian factories)"
+		text = "9On (+8)"
+		desc = "Japan gets 8 extra civilian factories at startup."
+	}
+	option = {
+		name = jap10
+		text = "tOn (+10)"
+		desc = "Japan gets 10 extra civilian factories at startup."
 	}
 	option = {
 		name = jap12
-		text = "ROn-12"
-		desc = "Japan receives 12 Civilian factories"
+		text = "0On (+12)"
+		desc = "Japan gets 12 extra civilian factories at startup."
 	}
 }          
 eng_boost = {
-	name = "Britain Civ Boost"
+	name = "United Kingdom Civ Boost"
 	group = "HMM Rules"
 	icon = "GFX_decision_generic_merge_plant_materiel"
 	default = {
 		name = off
 		text = "GOff"
-		desc = "Britain won't receive civilian factories"
+		desc = "The United Kingdom does not get any extra civilian factories at startup."
+	}
+	option = {
+		name = eng2
+		text = "6On (+2)"
+		desc = "The United Kingdom gets 2 extra civilian factories at startup."
 	}
 	option = {
 		name = eng4
-		text = "YOn-4"
-		desc = "Britain receives 4 Civilian factories"
+		text = "7On (+4)"
+		desc = "The United Kingdom gets 4 extra civilian factories at startup."
+	}
+	option = {
+		name = eng6
+		text = "8On (+6)"
+		desc = "The United Kingdom gets 6 extra civilian factories at startup."
 	}
 	option = {
 		name = eng8
-		text = "OOn-8"
-		desc = "Britain receives 8 Civilian factories"
+		text = "9On (+8)"
+		desc = "The United Kingdom gets 8 extra civilian factories at startup."
+	}
+	option = {
+		name = eng10
+		text = "tOn (+10)"
+		desc = "The United Kingdom gets 10 extra civilian factories at startup."
 	}
 	option = {
 		name = eng12
-		text = "ROn-12"
-		desc = "Britain receives 12 Civilian factories"
+		text = "0On (+12)"
+		desc = "The United Kingdom gets 12 extra civilian factories at startup."
 	}
 }
 ita_boost = {
@@ -495,22 +580,37 @@ ita_boost = {
 	default = {
 		name = off
 		text = "GOff"
-		desc = "Italy won't have civilian factories buff"
+		desc = "Italy does not get any extra civilian factories at startup."
+	}
+	option = {
+		name = ita2
+		text = "6On (+2)"
+		desc = "Italy gets 2 extra civilian factories at startup."
 	}
 	option = {
 		name = ita4
-		text = "YOn-4"
-		desc = "Italy receives 4 Civilian factories"
+		text = "7On (+4)"
+		desc = "Italy gets 4 extra civilian factories at startup."
+	}
+	option = {
+		name = ita6
+		text = "8On (+6)"
+		desc = "Italy gets 6 extra civilian factories at startup."
 	}
 	option = {
 		name = ita8
-		text = "OOn-8"
-		desc = "Italy receives 8 Civilian factories"
+		text = "9On (+8)"
+		desc = "Italy gets 8 extra civilian factories at startup."
+	}
+	option = {
+		name = ita10
+		text = "tOn (+10)"
+		desc = "Italy gets 10 extra civilian factories at startup."
 	}
 	option = {
 		name = ita12
-		text = "ROn-12"
-		desc = "Italy receives 12 Civilian factories"
+		text = "tOn (+12)"
+		desc = "Italy gets 12 extra civilian factories at startup."
 	}
 }
 fra_boost = {
@@ -520,22 +620,37 @@ fra_boost = {
 	default = {
 		name = off
 		text = "GOff"
-		desc = "France won't receive civilian factories"
+		desc = "France does not get any extra civilian factories at startup."
+	}
+	option = {
+		name = fra2
+		text = "6On (+2)"
+		desc = "France gets 2 extra civilian factories at startup."
 	}
 	option = {
 		name = fra4
-		text = "YOn-4"
-		desc = "France receives 4 Civilian factories"
+		text = "7On (+4)"
+		desc = "France gets 4 extra civilian factories at startup."
+	}
+	option = {
+		name = fra6
+		text = "8On (+6)"
+		desc = "France gets 6 extra civilian factories at startup."
 	}
 	option = {
 		name = fra8
-		text = "OOn-8"
-		desc = "France receives 8 Civilian factories"
+		text = "9On (+8)"
+		desc = "France gets 8 extra civilian factories at startup."
+	}
+	option = {
+		name = fra10
+		text = "tOn (+10)"
+		desc = "France gets 10 extra civilian factories at startup."
 	}
 	option = {
 		name = fra12
-		text = "ROn-12"
-		desc = "France receives 12 Civilian factories"
+		text = "tOn (+12)"
+		desc = "France gets 12 extra civilian factories at startup."
 	}
 }
 usa_boost = {
@@ -545,17 +660,87 @@ usa_boost = {
 	default = {
 		name = off
 		text = "GOff"
-		desc = "USA won't receive civilian factories"
+		desc = "The United States of America does not get any extra civilian factories at startup."
+	}
+	option = {
+		name = usa2
+		text = "6On (+2)"
+		desc = "The United States of America gets 2 extra civilian factories at startup."
 	}
 	option = {
 		name = usa4
-		text = "YOn-4"
-		desc = "USA receives 4 Civilian factories"
+		text = "7On (+4)"
+		desc = "The United States of America gets 4 extra civilian factories at startup."
+	}
+	option = {
+		name = usa6
+		text = "8On (+6)"
+		desc = "The United States of America gets 6 extra civilian factories at startup."
 	}
 	option = {
 		name = usa8
-		text = "OOn-8"
-		desc = "USA receives 8 Civilian factories"
+		text = "9On (+8)"
+		desc = "The United States of America gets 8 extra civilian factories at startup."
+	}
+	option = {
+		name = usa10
+		text = "tOn (+10)"
+		desc = "The United States of America gets 10 extra civilian factories at startup."
+	}
+	option = {
+		name = usa12
+		text = "0On (+12)"
+		desc = "The United States of America gets 12 extra civilian factories at startup."
+	}
+}
+axis_facility_handicaps = {
+	name = "Free Axis Special Facilities"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_merge_plant_materiel"
+	option = {
+		name = none
+		text = "GOff"
+		desc = "Axis countries get no free special project facilities spawned in for them."
+	}
+	option = {
+		name = bul_land
+		text = "8Bulgaria Land Facility"
+		desc = "Bulgaria gets a free land facility spawned in for it at startup."
+	}
+	option = {
+		name = spa_land
+		text = "9Spain Land Facility"
+		desc = "Spain gets a free land facility spawned in for it at startup."
+	}
+	default = {
+		name = bul_land_spa_land
+		text = "tBulgaria & Spain Land Facility"
+		desc = "Bulgaria and Spain get free land facilities spawned in for them at startup."
+	}
+}
+soviet_facility_handicaps = {
+	name = "Free Soviet Special Facilities"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_merge_plant_materiel"
+	option = {
+		name = none
+		text = "GOff"
+		desc = "The Soviets get no free special project facilities spawned in for them."
+	}
+	default = {
+		name = land
+		text = "8Land Facility"
+		desc = "The Soviets get a free land facility spawned in for them at startup."
+	}
+	option = {
+		name = naval
+		text = "9Naval Facility"
+		desc = "The Soviets get a free naval facility spawned in for them at startup."
+	}
+	option = {
+		name = land_naval
+		text = "tLand & Naval Facility"
+		desc = "The Soviets get a free land facility and a free naval facility spawned in for them at startup."
 	}
 }
 playable_iraq = {
@@ -565,17 +750,22 @@ playable_iraq = {
 	default = {
 		name = annexed
 		text = "YAnnexed into UK"
-		desc = "Iraq is instantly annexed into the UK at the start of the game"
+		desc = "Iraq is instantly annexed into the UK at the start of the game."
+	}
+	option = {
+		name = subordinated
+		text = "OSubordinated to UK"
+		desc = "Iraq starts as a Subordinated Country of the UK (special puppet with all industry transferred and very generous subject terms)."
 	}
 	option = {
 		name = axis
 		text = "RAxis"
-		desc = "Iraq is playable and on the Axis"
+		desc = "Iraq is playable and on the Axis."
 	}
 	option = {
 		name = allies
 		text = "4Allies"
-		desc = "Iraq is playable and on the Allies"
+		desc = "Iraq is playable and on the Allies."
 	}
 }
 strat_bombing = {
@@ -1048,6 +1238,51 @@ continuous_air_production = {
 		desc = "The continuous national focus 'Continuous Air Production' can be done by anyone, as in the base game."
 	}
 }
+baltics_status = {
+	name = "Baltic Countries' Status"
+	group = "HMM Rules"
+	icon = "GFX_volunteers"
+	default = {
+		name = abstracted
+		text = "RAbstracted"
+		desc = "Lithuania, Latvia, and Estonia get empty focus trees and cannot produce or construct anything, but instead get extra factories spawned in on Day 1 to simulate their actions. Lithuania gets nothing, Latvia gets +9 civilian factories, and Estonia gets +10 civilian factories and +2 military factories."
+	}
+	option = {
+		name = vanilla
+		text = "GUnmodified"
+		desc = "Lithuania, Latvia, and Estonia get their historical focus trees and can construct buildings and produce equipment as normal, but will not deploy units."
+	}
+}
+austria_status = {
+	name = "Austria's Status"
+	group = "HMM Rules"
+	icon = "GFX_volunteers"
+	default = {
+		name = abstracted
+		text = "RAbstracted"
+		desc = "Austria gets an empty focus tree and cannot produce or construct anything, but instead gets +6 civilian factories and +1 military factory spawned in on Day 1 to simulate its actions."
+	}
+	option = {
+		name = vanilla
+		text = "GUnmodified"
+		desc = "Austria gets its historical focus tree and can construct buildings and produce equipment as normal, but will not deploy units."
+	}
+}
+czechs_status = {
+	name = "Czechoslovakia's Status"
+	group = "HMM Rules"
+	icon = "GFX_volunteers"
+	default = {
+		name = abstracted
+		text = "RAbstracted"
+		desc = "Czechoslovakia gets an empty focus tree and cannot produce or construct anything, but instead gets +4 civilian factories and +1 military factory spawned in on Day 1 to simulate its actions."
+	}
+	option = {
+		name = vanilla
+		text = "GUnmodified"
+		desc = "Czechoslovakia gets its historical focus tree and can construct buildings and produce equipment as normal, but will not deploy units."
+	}
+}
 tradebacks = {
 	name = "No Tradebacks Idea"
 	group = "HMM Rules"
@@ -1387,22 +1622,22 @@ alt_hist_spr = {
 	option = {
 		name = banned
 		text = "RNo"
-		desc = "Spain is forced to follow focuses under Autarky and cannot do Join the Axis (historical)."
+		desc = "Spain is forced to follow focuses under Autarky (historical) and cannot do Join the Axis. Germany cannot do Alliance with Spain."
 	}
 	default = {
 		name = banned_no_faction_needed
 		text = "ONo & Relax Faction Requirements"
-		desc = "Spain is forced to follow focuses under Autarky and cannot do Join the Axis (historical), but does not need to be in the Axis to finish certain focuses."
+		desc = "Spain is forced to follow focuses under Autarky (historical) and cannot do Join the Axis, but does not need to be in the Axis to finish certain focuses. Germany cannot do Alliance with Spain."
 	}
 	option = {
 		name = allowed
 		text = "GYes"
-		desc = "Spain can follow either Autarky (historical) or Fascist Economic Aid, though needs to remain in the Axis to complete focuses under the latter."
+		desc = "Spain can follow either Autarky (historical) or Fascist Economic Aid, though needs to remain in the Axis to complete focuses under the latter. Germany cannot do Alliance with Spain if Spain does Autarky, and Spain cannot do Autarky if Germany does Alliance with Spain."
 	}
 	option = {
 		name = allowed_no_faction_needed
 		text = "YYes & Relax Faction Requirements"
-		desc = "Spain can follow either Autarky (historical) or Fascist Economic Aid, and can follow the latter without being in the Axis."
+		desc = "Spain can follow either Autarky (historical) or Fascist Economic Aid, and can follow the latter without being in the Axis. Germany cannot do Alliance with Spain if Spain does Autarky, and Spain cannot do Autarky if Germany does Alliance with Spain."
 	}
 	option = {
 		name = forced

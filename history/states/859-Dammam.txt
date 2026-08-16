@@ -3,6 +3,9 @@ state = {
 	name = "STATE_859"
 	manpower = 1
 
+	resources = {
+	}
+
 	history = {
 
 		owner = WST

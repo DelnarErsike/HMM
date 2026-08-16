@@ -16,7 +16,7 @@ focus_tree = {
 			tag = NOR
 		}
 		modifier = {
-			add = 1000000
+			add = 5 # Lower to make sure we only override the generic tree
 			tag = AUS
 		}
 		modifier = {
@@ -28,7 +28,7 @@ focus_tree = {
 			tag = LUX
 		}
 		modifier = {
-			add = 1000000
+			add = 5 # Lower to make sure we only override the generic tree
 			tag = CZE
 		}
 		modifier = {
@@ -68,15 +68,15 @@ focus_tree = {
 			tag = POL
 		}
 		modifier = {
-			add = 1000000
+			add = 5 # Lower to make sure we only override the generic tree
 			tag = LAT
 		}
 		modifier = {
-			add = 1000000
+			add = 5 # Lower to make sure we only override the generic tree
 			tag = EST
 		}
 		modifier = {
-			add = 1000000
+			add = 5 # Lower to make sure we only override the generic tree
 			tag = LIT
 		}
 	}

@@ -19,7 +19,7 @@ state={
 			11673 5
 		}
 		buildings = {
-			infrastructure = 3 #was: 5
+			infrastructure = 5 # HMM: increased from 3 to offset Portugal having no focus tree #was: 5
 			industrial_complex = 2
 			dockyard = 1
 			9817 = {

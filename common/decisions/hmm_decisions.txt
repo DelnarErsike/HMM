@@ -1,5 +1,5 @@
 operations = {
-    annex_South_Africa = {
+    annex_SAF = {
         # icon = generic_operation
         allowed = {
             OR = {
@@ -61,6 +61,7 @@ operations = {
                 OR = { # Just in case
                     is_in_faction_with = ENG
                     is_in_faction_with = ROOT
+                    is_puppet_of = ROOT
                 }
             }
             ENG = {
@@ -139,9 +140,9 @@ operations = {
                 }
             }
         }
-
     }
-    annex_Ethopia = {
+
+    annex_ETH = {
         # icon = generic_operation
         allowed = {
             tag = ITA
@@ -167,11 +168,10 @@ operations = {
 
             }
             add_threat = 2.6
-            
         }
-
     }
-    annex_Mexiko = {
+
+    annex_MEX = {
         # icon = generic_operation
         allowed = {
             tag = BRA
@@ -221,10 +221,36 @@ operations = {
                 }
             }
         }
-
     }
 
-    annex_CONGO = {
+    subordinate_MEX = {
+        # icon = generic_operation
+        allowed = {
+            tag = BRA
+        }
+        fire_only_once = yes
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        available = {
+            MEX = {
+                is_ai = yes
+                OR = {
+                    NOT = { is_subject_of = ROOT }
+                    NOT = { has_autonomy_state = autonomy_hmm_subordinated_country }
+                }
+            }
+        }
+        targets = {
+            MEX
+        }
+        complete_effect = {
+            MEX = { subordinate_this_country_to_ROOT = yes }
+        }
+    }
+
+    annex_COG = {
         # icon = generic_operation
         allowed = {
             tag = FRA
@@ -268,10 +294,9 @@ operations = {
                 }
             }
         }
-
     }
 
-    annex_Ireland = {
+    annex_IRE = {
         # icon = generic_operation
         allowed = {
             tag = FRA
@@ -314,12 +339,10 @@ operations = {
                     add_compliance = 100
                 }
             }
-            
         }
-
     }
 
-    annex_manchukuo = {
+    annex_MAN = {
         # icon = generic_operation
         allowed = {
             tag = JAP
@@ -327,7 +350,10 @@ operations = {
         available = {
             MAN = {
                 is_ai = yes
-                is_in_faction_with = ROOT # Just in case
+                OR = { # Just in case
+                    is_subject_of = ROOT
+                    is_in_faction_with = ROOT
+                }
             }
         }
         fire_only_once = yes
@@ -367,11 +393,44 @@ operations = {
                     add_compliance = 100
                 }
             }
-            
         }
     }
 
-    annex_siam = {
+    subordinate_MAN = {
+        # icon = generic_operation
+        allowed = {
+            tag = JAP
+        }
+        available = {
+            MAN = {
+                is_ai = yes
+                OR = { # Just in case
+                    is_subject_of = ROOT
+                    is_in_faction_with = ROOT
+                }
+                OR = {
+                    NOT = { is_subject_of = ROOT }
+                    NOT = { has_autonomy_state = autonomy_hmm_subordinated_country }
+                }
+            }
+        }
+        fire_only_once = yes
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        visible = {
+            tag = JAP
+        }
+        targets = {
+            MAN
+        }
+        complete_effect = {
+            MAN = { subordinate_this_country_to_ROOT = yes }
+        }
+    }
+
+    annex_SIA = {
         # icon = generic_operation
         allowed = {
             tag = JAP
@@ -381,6 +440,7 @@ operations = {
                 is_ai = yes
             }
             OR = {
+                SIA = { is_subject_of = ROOT }
                 is_in_faction_with = SIA
                 has_completed_focus = JAP_sea_pressure_siam
             }
@@ -422,11 +482,45 @@ operations = {
                     add_compliance = 100
                 }
             }
-            
         }
     }
 
-    annex_new_zealand = {
+    subordinate_SIA = {
+        # icon = generic_operation
+        allowed = {
+            tag = JAP
+        }
+        available = {
+            SIA = {
+                is_ai = yes
+                OR = {
+                    NOT = { is_subject_of = ROOT }
+                    NOT = { has_autonomy_state = autonomy_hmm_subordinated_country }
+                }
+            }
+            OR = {
+                SIA = { is_subject_of = ROOT }
+                is_in_faction_with = SIA
+                has_completed_focus = JAP_sea_pressure_siam
+            }
+        }
+        fire_only_once = yes
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        visible = {
+            tag = JAP
+        }
+        targets = {
+            SIA
+        }
+        complete_effect = {
+            SIA = { subordinate_this_country_to_ROOT = yes }
+        }
+    }
+
+    annex_NZL = {
         # icon = generic_operation
         allowed = {
             tag = AST
@@ -439,7 +533,10 @@ operations = {
         available = {
             NZL = {
                 is_ai = yes
-                is_in_faction_with = ROOT # Just in case
+                OR = { # Just in case
+                    is_in_faction_with = ROOT
+                    is_puppet_of = ROOT
+                }
                 has_completed_focus = NZL_think_big
             }
             ENG = {
@@ -475,10 +572,41 @@ operations = {
                     add_core_of = AST
                 }
             }
-            
         }
     }
-    annex_philippines = {
+
+    subordinate_NZL = {
+        # icon = generic_operation
+        allowed = {
+            tag = AST
+        }
+        fire_only_once = yes
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        available = {
+            NZL = {
+                is_ai = yes
+                OR = { # Just in case
+                    is_in_faction_with = ROOT
+                    is_puppet_of = ROOT
+                }
+                OR = {
+                    NOT = { is_subject_of = ROOT }
+                    NOT = { has_autonomy_state = autonomy_hmm_subordinated_country }
+                }
+            }
+        }
+        targets = {
+            NZL
+        }
+        complete_effect = {
+            NZL = { subordinate_this_country_to_ROOT = yes }
+        }
+    }
+
+    annex_PHI = {
         # icon = generic_operation
         allowed = {
             tag = USA
@@ -491,7 +619,10 @@ operations = {
         available = {
             PHI = {
                 is_ai = yes
-                is_in_faction_with = ROOT # Just in case
+                OR = { # Just in case
+                    is_in_faction_with = ROOT
+                    is_puppet_of = ROOT
+                }
             }
         }
         targets = {
@@ -523,10 +654,41 @@ operations = {
                     add_compliance = 100
                 }
             }
-            
         }
     }
-    annex_iraq = {
+
+    subordinate_PHI = {
+        # icon = generic_operation
+        allowed = {
+            tag = USA
+        }
+        fire_only_once = yes
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        available = {
+            PHI = {
+                is_ai = yes
+                OR = { # Just in case
+                    is_in_faction_with = ROOT
+                    is_puppet_of = ROOT
+                }
+                OR = {
+                    NOT = { is_subject_of = ROOT }
+                    NOT = { has_autonomy_state = autonomy_hmm_subordinated_country }
+                }
+            }
+        }
+        targets = {
+            PHI	
+        }
+        complete_effect = {
+            PHI = { subordinate_this_country_to_ROOT = yes }
+        }
+    }
+
+    annex_IRQ = {
         # icon = generic_operation
         allowed = {
             tag = ENG
@@ -583,6 +745,85 @@ operations = {
             }
         }
     }
+
+    subordinate_IRQ = {
+        # icon = generic_operation
+        allowed = {
+            tag = ENG
+        }
+        fire_only_once = yes
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        available = {
+            IRQ = {
+                is_ai = yes
+                OR = {
+                    NOT = { is_subject_of = ROOT }
+                    NOT = { has_autonomy_state = autonomy_hmm_subordinated_country }
+                }
+            }
+            NOT = {
+                has_game_rule = {
+                    rule = playable_iraq
+                    option = axis
+                }
+            }
+        }
+        targets = {
+            IRQ	
+        }
+        complete_effect = {
+            IRQ = { subordinate_this_country_to_ROOT = yes }
+        }
+    }
+
+    requisition_POR_resources = {
+        # icon = generic_operation
+        allowed = {
+            original_tag = SPR
+        }
+        visible = {
+			original_tag = SPR
+		}
+        fire_only_once = yes
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        available = {
+            NOT = { has_global_flag = scw_over }
+            POR = { is_ai = yes }
+        }
+        targets = {
+            POR	
+        }
+        complete_effect = {
+            POR = {
+                give_resource_rights = { receiver = ROOT state = 112 }
+                give_resource_rights = { receiver = ROOT state = 179 }
+                give_resource_rights = { receiver = ROOT state = 180 }
+                give_resource_rights = { receiver = ROOT state = 181 }
+                give_resource_rights = { receiver = ROOT state = 296 }
+                give_resource_rights = { receiver = ROOT state = 321 }
+                give_resource_rights = { receiver = ROOT state = 540 }
+                give_resource_rights = { receiver = ROOT state = 544 }
+                give_resource_rights = { receiver = ROOT state = 697 }
+                give_resource_rights = { receiver = ROOT state = 698 }
+                give_resource_rights = { receiver = ROOT state = 702 }
+                give_resource_rights = { receiver = ROOT state = 721 }
+                give_resource_rights = { receiver = ROOT state = 729 }
+                give_resource_rights = { receiver = ROOT state = 795 }
+                give_resource_rights = { receiver = ROOT state = 796 }
+                give_resource_rights = { receiver = ROOT state = 891 }
+                give_resource_rights = { receiver = ROOT state = 892 }
+                give_resource_rights = { receiver = ROOT state = 896 }
+                give_resource_rights = { receiver = ROOT state = 897 }
+            }
+        }
+    }
+
 	soviet_cap_timer = {
 	    activation = {
             NOT = { country_exists = SOV }
@@ -606,6 +847,7 @@ operations = {
         }
 	}
 }
+
 political_actions = {
 
 	move_capital_to_dublin = {

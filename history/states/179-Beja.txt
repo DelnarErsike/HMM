@@ -17,7 +17,7 @@ state={
 			970 1
 		}
 		buildings = {
-			infrastructure = 3 #was: 5
+			infrastructure = 5 # HMM: increased from 3 to offset Portugal having no focus tree #was: 5
 			industrial_complex = 3
 			3790 = {
 				naval_base = 2

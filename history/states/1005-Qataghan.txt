@@ -4,6 +4,8 @@ state={
 	manpower = 1
 	state_category = wasteland
 
+	resources = {
+	}
 
 	provinces={
 		7519 10781 10826 12314 12653 

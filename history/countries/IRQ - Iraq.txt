@@ -400,3 +400,9 @@ set_popularities = {
 		retire_character = IRQ_ghazi_i
 	}
 }
+
+# HMM: starting stockpiles to compensate for deleted day 1 starting units
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 840
+}

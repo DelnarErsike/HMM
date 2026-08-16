@@ -17,6 +17,14 @@
  hmm_is_axis_european:0 "Is part of [GER.GetFlag][ITA.GetFlag] §OEuropean Axis§!"
  hmm_is_axis_geacps:0 "Is part of [JAP.GetFlag] §0Asian Axis§!"
 
+ autonomy_hmm_subordinated_country: "Subordinated Country"
+ COUNTRY_autonomy_hmm_subordinated_country: "$OVERLORDADJ$ $NONIDEOLOGY$"
+ COUNTRY_autonomy_hmm_subordinated_country_DEF: "$OVERLORDADJ$ $NONIDEOLOGYDEF$"
+ COUNTRY_autonomy_hmm_subordinated_country_ADJ: "$OVERLORDADJ$ $NONIDEOLOGYADJ$"
+ MAN_JAP_fascism_autonomy_hmm_subordinated_country: "$OVERLORDADJ$ Manchukuo"
+ MAN_JAP_fascism_autonomy_hmm_subordinated_country_DEF: "$OVERLORDADJ$ Manchukuo"
+ PHI_autonomy_hmm_subordinated_country_DEF: "the $OVERLORDADJ$ $NONIDEOLOGY$"
+
 ## Victory System Localisation
 
  MOD_countdown_to_victory_cat:0 "Victory!"
@@ -83,16 +91,26 @@
  auto_improved_med:0 "Improved Medium Tank Chassis"
 
  # Annex Decisions
- annex_South_Africa:0 "Annex South Africa"
- annex_Ethopia:0 "Annex Ethiopia"
- annex_Mexiko:0 "Annex Mexico"
- annex_CONGO:0 "Annex Congo"
- annex_Ireland:0 "Annex Ireland"
- annex_siam:0 "Annex Siam"
- annex_manchukuo:0 "Annex Manchukuo"
- annex_new_zealand:0 "Annex New Zealand"
- annex_philippines:0 "Annex Philippines"
- annex_iraq:0 "Annex Iraq"
+ annex_SAF:0 "Annex South Africa"
+ annex_ETH:0 "Annex Ethiopia"
+ annex_MEX:0 "Annex Mexico"
+ annex_COG:0 "Annex Congo"
+ annex_IRE:0 "Annex Ireland"
+ annex_SIA:0 "Annex Siam"
+ annex_MAN:0 "Annex Manchukuo"
+ annex_NZL:0 "Annex New Zealand"
+ annex_PHI:0 "Annex the Philippines"
+ annex_IRQ:0 "Annex Iraq"
+ # Subordinate Decisions (turn into full IC transfer puppet in which we can build)
+ hmm_subordinate_explanation:0 "Subordinating a country turns them into a special puppet that transfers all of its industry to its overlord and gives extremely generous terms to the overlord. They will continue to do focuses and will prioritize excavation technologies.\nHowever, they cannot properly repair their buildings or make good use of their manpower, though this will self-correct after they are annexed."
+ subordinate_MEX:0 "Subordinate Mexico"
+ subordinate_SIA:0 "Subordinate Siam"
+ subordinate_MAN:0 "Subordinate Manchukuo"
+ subordinate_NZL:0 "Subordinate New Zealand"
+ subordinate_PHI:0 "Subordinate the Philippines"
+ subordinate_IRQ:0 "Subordinate Iraq"
+ # Related decisions
+ requisition_POR_resources: "Requisition Portuguese Resources"
 
  # Moving Capital City
  move_capital_to_dublin:0 "Move Capital to Dublin"
