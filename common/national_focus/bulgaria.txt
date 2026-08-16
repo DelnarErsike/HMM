@@ -1451,7 +1451,7 @@ focus_tree = {
 						option = yes_w_fort_focuses_time_locked
 					}
 				}
-				date > 1937.12.31
+				deterrence_date_lock_passed = yes
 			}
 		}
 		
@@ -1633,7 +1633,7 @@ focus_tree = {
 						option = yes_w_fort_focuses_time_locked
 					}
 				}
-				date > 1937.12.31
+				deterrence_date_lock_passed = yes
 			}
 		}
 		
@@ -1721,7 +1721,7 @@ focus_tree = {
 						option = yes_w_fort_focuses_time_locked
 					}
 				}
-				date > 1937.12.31
+				deterrence_date_lock_passed = yes
 			}
 		}
 		
@@ -1825,7 +1825,7 @@ focus_tree = {
 						option = yes_w_fort_focuses_time_locked
 					}
 				}
-				date > 1937.12.31
+				deterrence_date_lock_passed = yes
 			}
 		}
 		
@@ -2254,7 +2254,7 @@ focus_tree = {
 						option = yes_w_fort_focuses_time_locked
 					}
 				}
-				date > 1937.12.31
+				deterrence_date_lock_passed = yes
 			}
 		}
 		
@@ -7018,7 +7018,7 @@ focus_tree = {
 						option = yes_w_fort_focuses_time_locked
 					}
 				}
-				date > 1937.12.31
+				deterrence_date_lock_passed = yes
 			}
 		}
 		

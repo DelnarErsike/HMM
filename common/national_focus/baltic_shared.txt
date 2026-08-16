@@ -467,7 +467,7 @@ shared_focus = {
 					option = yes_w_fort_focuses_time_locked
 				}
 			}
-			date > 1937.12.31
+			deterrence_date_lock_passed = yes
 		}
 	}
 
@@ -833,6 +833,15 @@ shared_focus = {
 	bypass = {
 
 	}
+	allow_branch = { # No trolling for non-Axis Baltics
+		axis = yes
+		NOT = {
+			has_game_rule = {
+				rule = baltics_status
+				option = abstracted
+			}
+		}
+	}
 
 	cancel_if_invalid = yes
 	continue_if_invalid = no
@@ -875,7 +884,6 @@ shared_focus = {
 	bypass = {
 
 	}
-	allow_branch = { always = no }
 
 	cancel_if_invalid = yes
 	continue_if_invalid = no
@@ -1623,6 +1631,16 @@ shared_focus = {
 			is_major = yes
 			NOT = { has_war_with = ROOT }
 		}
+		if = {
+			limit = {
+				is_ai = no
+				has_game_rule = {
+					rule = deterrence_enabled
+					option = yes_w_fort_focuses_time_locked
+				}
+			}
+			deterrence_date_lock_passed = yes
+		}
 	}
 
 	bypass = {
@@ -1785,7 +1803,7 @@ shared_focus = {
 					option = yes_w_fort_focuses_time_locked
 				}
 			}
-			date > 1937.12.31
+			deterrence_date_lock_passed = yes
 		}
 	}
 

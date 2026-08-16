@@ -267,6 +267,15 @@ can_grind_generals = {
 	}
 }
 
+deterrence_date_lock_passed = {
+	OR = {
+		date > 1937.12.31
+		is_in_faction = no
+		has_idea = deterrence
+		has_completed_goal = faction_goal_a_great_fortress
+	}
+}
+
 ai_no_units = { # These countries should not make units at all
 	OR = {
 		tag = LIT
