@@ -23,6 +23,37 @@ is_playable_country = {
 		tag = SOV
 		tag = PHI
 		tag = IRQ
+		AND = {
+			NOT = {
+				has_game_rule = {
+					rule = baltics_status
+					option = abstracted
+				}
+			}
+			OR = {
+				tag = LIT # In case they aren't nomnomed by Soviets
+				tag = LAT # In case they aren't nomnomed by Soviets
+				tag = EST # In case they aren't nomnomed by Soviets
+			}
+		}
+		AND = {
+			NOT = {
+				has_game_rule = {
+					rule = austria_status
+					option = abstracted
+				}
+			}
+			tag = AUS # In case they aren't nomnomed by Germany
+		}
+		AND = {
+			NOT = {
+				has_game_rule = {
+					rule = czechs_status
+					option = abstracted
+				}
+			}
+			tag = CZE # In case they aren't nomnomed by Germany
+		}
 	}
 }
 
@@ -42,6 +73,37 @@ is_annexable_playable_country = {
 		tag = MEX
 		# France/Raj have annex decision
 		tag = SAF
+		AND = {
+			NOT = {
+				has_game_rule = {
+					rule = baltics_status
+					option = abstracted
+				}
+			}
+			OR = {
+				tag = LIT # In case they aren't nomnomed by Soviets
+				tag = LAT # In case they aren't nomnomed by Soviets
+				tag = EST # In case they aren't nomnomed by Soviets
+			}
+		}
+		AND = {
+			NOT = {
+				has_game_rule = {
+					rule = austria_status
+					option = abstracted
+				}
+			}
+			tag = AUS # In case they aren't nomnomed by Germany
+		}
+		AND = {
+			NOT = {
+				has_game_rule = {
+					rule = czechs_status
+					option = abstracted
+				}
+			}
+			tag = CZE # In case they aren't nomnomed by Germany
+		}
 	}
 }
 
@@ -155,7 +217,7 @@ axis_european = {
 			}
 			tag = AUS # In case they aren't nomnomed by Germany
 			AND = {
-				original_tag = CZE # In case they aren't nomnomed by Germany
+				tag = CZE # In case they aren't nomnomed by Germany
 				is_ai = no
 			}
 			ai_rk = yes
@@ -234,110 +296,32 @@ ai_manpower = {
 	}
 }
 ai_annex = {
-	if = {
-		limit = {
+	OR = {
+		AND = {
 			has_game_rule = {
 				rule = baltics_status
 				option = abstracted
 			}
-		}
-		if = {
-			limit = {
-				has_game_rule = {
-					rule = austria_status
-					option = abstracted
-				}
-			}
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = czechs_status
-						option = abstracted
-					}
-				}
-				OR = {
-					tag = LIT
-					tag = LAT
-					tag = EST
-					tag = AUS
-					tag = CZE
-					tag = COG
-				}
-			}
-			else = {
-				OR = {
-					tag = LIT
-					tag = LAT
-					tag = EST
-					tag = AUS
-					tag = COG
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				has_game_rule = {
-					rule = czechs_status
-					option = abstracted
-				}
-			}
 			OR = {
 				tag = LIT
 				tag = LAT
 				tag = EST
-				tag = CZE
-				tag = COG
 			}
 		}
-		else = {
-			OR = {
-				tag = LIT
-				tag = LAT
-				tag = EST
-				tag = COG
-			}
-		}
-	}
-	else_if = {
-		limit = {
+		AND = {
 			has_game_rule = {
 				rule = austria_status
 				option = abstracted
 			}
+			tag = AUS
 		}
-		if = {
-			limit = {
-				has_game_rule = {
-					rule = czechs_status
-					option = abstracted
-				}
-			}
-			OR = {
-				tag = AUS
-				tag = CZE
-				tag = COG
-			}
-		}
-		else = {
-			OR = {
-				tag = AUS
-				tag = COG
-			}
-		}
-	}
-	else_if = {
-		limit = {
+		AND = {
 			has_game_rule = {
 				rule = czechs_status
 				option = abstracted
 			}
-		}
-		OR = {
 			tag = CZE
-			tag = COG
 		}
-	}
-	else = {
 		tag = COG
 	}
 }
