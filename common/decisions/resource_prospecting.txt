@@ -8680,7 +8680,10 @@ prospect_for_resources = {
 		}
 		available = {
 			has_tech = excavation4
+			OR = { # HMM: disabled for Sweden effectively being a black nation
+				ai_black = yes
 			num_of_civilian_factories_available_for_projects > 5
+			}
 			controls_state = 666
 			owns_state = 666
 		}
@@ -8694,7 +8697,10 @@ prospect_for_resources = {
 				}
 			}
 
+			OR = { # HMM: check disabled for Sweden effectively being a black nation
+				ai_black = yes
 			has_completed_focus = SWE_deep_mining_complexes
+			}
 		}
 
 		fire_only_once = yes
@@ -8703,11 +8709,11 @@ prospect_for_resources = {
 		days_remove = 60
 
 		modifier = {
-			civilian_factory_use = 5
+			#civilian_factory_use = 5 # HMM: disabled for Sweden effectively being a black nation
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 1000 # HMM: increased so Sweden is guaranteed to do it
 		}
 
 		remove_effect = {
