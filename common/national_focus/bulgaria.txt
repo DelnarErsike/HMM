@@ -1444,6 +1444,15 @@ focus_tree = {
 			48 = {
 				is_owned_by = BUL
 			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = deterrence_enabled
+						option = yes_w_fort_focuses_time_locked
+					}
+				}
+				date > 1937.12.31
+			}
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -1617,6 +1626,15 @@ focus_tree = {
 			211 = {
 				is_owned_by = BUL
 			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = deterrence_enabled
+						option = yes_w_fort_focuses_time_locked
+					}
+				}
+				date > 1937.12.31
+			}
 		}
 		
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -1695,6 +1713,15 @@ focus_tree = {
 					has_state_flag = BUL_historical_bulgarian_claim_flag
 				}
 				is_coastal = yes
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = deterrence_enabled
+						option = yes_w_fort_focuses_time_locked
+					}
+				}
+				date > 1937.12.31
 			}
 		}
 		
@@ -1790,6 +1817,15 @@ focus_tree = {
 					has_full_control_of_state = 341 #EDIRNE
 					has_full_control_of_state = 797 #ISTANBUL
 				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = deterrence_enabled
+						option = yes_w_fort_focuses_time_locked
+					}
+				}
+				date > 1937.12.31
 			}
 		}
 		
@@ -2210,6 +2246,15 @@ focus_tree = {
 			}
 			any_controlled_state = {
 				BUL_state_is_in_the_adriatic_sea = yes
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = deterrence_enabled
+						option = yes_w_fort_focuses_time_locked
+					}
+				}
+				date > 1937.12.31
 			}
 		}
 		
@@ -6966,6 +7011,15 @@ focus_tree = {
 
 		available = {
 			has_war = yes
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = deterrence_enabled
+						option = yes_w_fort_focuses_time_locked
+					}
+				}
+				date > 1937.12.31
+			}
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER}

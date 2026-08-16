@@ -459,6 +459,16 @@ shared_focus = {
 			is_major = yes
 			NOT = { has_war_with = ROOT }
 		}
+		if = {
+			limit = {
+				is_ai = no
+				has_game_rule = {
+					rule = deterrence_enabled
+					option = yes_w_fort_focuses_time_locked
+				}
+			}
+			date > 1937.12.31
+		}
 	}
 
 	bypass = {
@@ -1766,6 +1776,16 @@ shared_focus = {
 				original_tag = EST
 				controls_state = 13
 			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+				has_game_rule = {
+					rule = deterrence_enabled
+					option = yes_w_fort_focuses_time_locked
+				}
+			}
+			date > 1937.12.31
 		}
 	}
 

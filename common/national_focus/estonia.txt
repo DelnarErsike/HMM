@@ -2861,6 +2861,16 @@ focus_tree = {
 
 		available = {
 			owns_state = 13
+			if = {
+				limit = {
+					is_ai = no
+					has_game_rule = {
+						rule = deterrence_enabled
+						option = yes_w_fort_focuses_time_locked
+					}
+				}
+				date > 1937.12.31
+			}
 		}
 
 		bypass = {
@@ -2900,6 +2910,16 @@ focus_tree = {
 
 		available = {
 			owns_state = 811 
+			if = {
+				limit = {
+					is_ai = no
+					has_game_rule = {
+						rule = deterrence_enabled
+						option = yes_w_fort_focuses_time_locked
+					}
+				}
+				date > 1937.12.31
+			}
 		}
 
 		bypass = {
@@ -2942,6 +2962,16 @@ focus_tree = {
 		}
 
 		available = {
+			if = {
+				limit = {
+					is_ai = no
+					has_game_rule = {
+						rule = deterrence_enabled
+						option = yes_w_fort_focuses_time_locked
+					}
+				}
+				date > 1937.12.31
+			}
 		}
 
 		bypass = {

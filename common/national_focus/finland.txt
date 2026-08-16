@@ -10473,6 +10473,15 @@ focus_tree = {
 			145 = { #ÅLAND
 				is_demilitarized_zone = yes
 			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = deterrence_enabled
+						option = yes_w_fort_focuses_time_locked
+					}
+				}
+				date > 1937.12.31
+			}
 		}
 
 		continue_if_invalid = yes
@@ -11636,6 +11645,15 @@ focus_tree = {
 		cost = 10
 		available = {
 			has_full_control_of_state = 146 #KARJALA
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = deterrence_enabled
+						option = yes_w_fort_focuses_time_locked
+					}
+				}
+				date > 1937.12.31
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
@@ -11707,7 +11725,16 @@ focus_tree = {
 		relative_position_id = FIN_mannerheim_line
 		cost = 10
 		available = {
-
+			if = {
+				limit = {
+					is_ai = no
+					has_game_rule = {
+						rule = deterrence_enabled
+						option = yes_w_fort_focuses_time_locked
+					}
+				}
+				date > 1937.12.31
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -11794,6 +11821,15 @@ focus_tree = {
 		available = {
 			is_special_project_completed = sp:sp_air_radar
 			controls_state = 111 #UUSIMAA (Helsinki)
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = deterrence_enabled
+						option = yes_w_fort_focuses_time_locked
+					}
+				}
+				date > 1937.12.31
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL }
@@ -14542,6 +14578,15 @@ focus_tree = {
 		relative_position_id = FIN_suomen_merivoimat
 		cost = 5
 		available = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = deterrence_enabled
+						option = yes_w_fort_focuses_time_locked
+					}
+				}
+				date > 1937.12.31
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }

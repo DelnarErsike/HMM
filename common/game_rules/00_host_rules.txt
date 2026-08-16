@@ -798,6 +798,26 @@ strat_bombing = {
 		desc = "Strategic Bombers banned and German Eco Unnerfed"
 	}
 }
+deterrence_enabled = {
+	name = "Deterrence Is..."
+	group = "HMM Rules"
+	icon = "GFX_maximum_fort_level"
+	option = {
+		name = no
+		text = "RBanned"
+		desc = "The Build Stronger Fortifications short-term faction goal cannot be taken by anyone, and thus the Deterrence spirit is effectively banned from the game."
+	}
+	default = {
+		name = yes_w_fort_focuses_time_locked
+		text = "YAllowed w/ Time-Locked Focuses"
+		desc = "The Build Stronger Fortifications short-term faction goal can be completed as normal and will provide the Deterrence spirit to all faction members when completed. Certain focuses on minor nations are time-locked to prevent them from inadvertently removing their faction's ability to get Deterrence."
+	}
+	option = {
+		name = yes
+		text = "GAllowed"
+		desc = "The Build Stronger Fortifications short-term faction goal can be completed as normal and will provide the Deterrence spirit to all faction members when completed."
+	}
+}
 spanish_production = {
 	name = "Spain Simulator"
 	group = "HMM Rules"

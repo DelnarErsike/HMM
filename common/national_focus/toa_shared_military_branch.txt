@@ -4814,7 +4814,15 @@ shared_focus = {
 	cost = 5
 
 	available = {
-
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = deterrence_enabled
+					option = yes_w_fort_focuses_time_locked
+				}
+			}
+			date > 1937.12.31
+		}
 	}
 
 	bypass = {
