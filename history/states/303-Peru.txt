@@ -3,6 +3,8 @@ state = {
 	id = 303
 	name = "STATE_303" # Lima
 	manpower = 1
+	resources = {
+	}
 	
 	state_category = wasteland
 

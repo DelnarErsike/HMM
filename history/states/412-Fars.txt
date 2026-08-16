@@ -4,7 +4,8 @@ state = {
 	state_category = wasteland
 	manpower = 1
 
-	
+	resources = {
+	}
 
 	history = {
 
