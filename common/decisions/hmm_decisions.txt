@@ -61,6 +61,7 @@ operations = {
                 OR = { # Just in case
                     is_in_faction_with = ENG
                     is_in_faction_with = ROOT
+                    is_puppet_of = ROOT
                 }
             }
             ENG = {
@@ -139,7 +140,6 @@ operations = {
                 }
             }
         }
-
     }
     annex_Ethopia = {
         # icon = generic_operation
@@ -167,9 +167,7 @@ operations = {
 
             }
             add_threat = 2.6
-            
         }
-
     }
     annex_Mexiko = {
         # icon = generic_operation
@@ -268,7 +266,6 @@ operations = {
                 }
             }
         }
-
     }
 
     annex_Ireland = {
@@ -314,9 +311,7 @@ operations = {
                     add_compliance = 100
                 }
             }
-            
         }
-
     }
 
     annex_manchukuo = {
@@ -327,7 +322,10 @@ operations = {
         available = {
             MAN = {
                 is_ai = yes
-                is_in_faction_with = ROOT # Just in case
+                OR = { # Just in case
+                    is_subject_of = ROOT
+                    is_in_faction_with = ROOT
+                }
             }
         }
         fire_only_once = yes
@@ -367,7 +365,6 @@ operations = {
                     add_compliance = 100
                 }
             }
-            
         }
     }
 
@@ -381,6 +378,7 @@ operations = {
                 is_ai = yes
             }
             OR = {
+                SIA = { is_subject_of = ROOT }
                 is_in_faction_with = SIA
                 has_completed_focus = JAP_sea_pressure_siam
             }
@@ -422,7 +420,6 @@ operations = {
                     add_compliance = 100
                 }
             }
-            
         }
     }
 
@@ -439,7 +436,10 @@ operations = {
         available = {
             NZL = {
                 is_ai = yes
-                is_in_faction_with = ROOT # Just in case
+                OR = { # Just in case
+                    is_in_faction_with = ROOT
+                    is_puppet_of = ROOT
+                }
                 has_completed_focus = NZL_think_big
             }
             ENG = {
@@ -475,7 +475,6 @@ operations = {
                     add_core_of = AST
                 }
             }
-            
         }
     }
     annex_philippines = {
@@ -491,7 +490,10 @@ operations = {
         available = {
             PHI = {
                 is_ai = yes
-                is_in_faction_with = ROOT # Just in case
+                OR = { # Just in case
+                    is_in_faction_with = ROOT
+                    is_puppet_of = ROOT
+                }
             }
         }
         targets = {
@@ -523,7 +525,6 @@ operations = {
                     add_compliance = 100
                 }
             }
-            
         }
     }
     annex_iraq = {
@@ -606,6 +607,7 @@ operations = {
         }
 	}
 }
+
 political_actions = {
 
 	move_capital_to_dublin = {
