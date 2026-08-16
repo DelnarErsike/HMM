@@ -397,6 +397,36 @@ easier_arteries_of_trade_for_allies = {
 		desc = "To complete the Protect the Arteries of Trade faction goal, the Allies will need to establish dominance in just one of 16 specific sea zones."
 	}
 }
+jap_sov_war_allowed = {
+	name = "Can Japan and the Soviet Union Go To War?"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_ignite_civil_war"
+	default = {
+		name = banned
+		text = "GFully Banned"
+		desc = "Japan and the Soviet Union cannot go to war with each other under any circumstances, nor are they allowed to get into any border conflicts."
+	}
+	option = {
+		name = only_focuses_restricted
+		text = "4Only Through Focuses, Restricted"
+		desc = "Japan and the Soviet Union can only go to war with each other through completing national focuses. Japan can only complete their focuses after the US and UK have capitulated, and the Soviets can only complete their focuses after Germany and Italy have capitulated. Border conflicts between them are still disallowed."
+	}
+	option = {
+		name = only_focuses
+		text = "YOnly Through Focuses"
+		desc = "Japan and the Soviet Union can only go to war with each other through completing national focuses. Border conflicts between them are still disallowed."
+	}
+	option = {
+		name = only_focuses_with_border_conflicts
+		text = "OOnly Through Focuses, Border Conflicts Allowed"
+		desc = "Japan and the Soviet Union can only go to war with each other through completing national focuses or through border conflicts."
+	}
+	option = {
+		name = vanilla
+		text = "RUnmodified"
+		desc = "There are no special rules for wars between Japan and the Soviet Union, including the border conflict."
+	}
+}
 sov_boost = {
 	name = "Soviet Civ Boost"
 	group = "HMM Rules"

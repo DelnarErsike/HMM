@@ -14803,6 +14803,18 @@ country_event = {
 	}
 	option = {
 		name = SEA_border_incidents_events.2.b
+		trigger = {
+			OR = {
+				has_game_rule = {
+					rule = jap_sov_war_allowed
+					option = only_focuses_with_border_conflicts
+				}
+				has_game_rule = {
+					rule = jap_sov_war_allowed
+					option = vanilla
+				}
+			}
+		}
 		ai_chance = {
 			base = 25
 			modifier = {

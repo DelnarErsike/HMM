@@ -197,6 +197,24 @@ on_actions = {
 					days = 912
 				}
 			}
+
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = jap_sov_war_allowed
+							option = vanilla
+						}
+					}
+				}
+				JAP = {
+					diplomatic_relation = {
+						country = SOV
+						relation = non_aggression_pact
+						active = yes
+					}
+				}
+			}
 		}
 	}
 
@@ -253,14 +271,21 @@ on_actions = {
 			if = {
 				limit = {
 					date > 1941.8.31
-					NOT = { has_war_with = SOV }
 				}
-				declare_war_on = {
-					target = SOV
-					type = annex_everything
+				if = {
+					limit = {
+						SOV = {
+							exists = yes
+							NOT = { has_war_with = GER }
+						}
+					}
+					declare_war_on = {
+						target = SOV
+						type = annex_everything
+					}
 				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_game_rule = {
 						rule = strat_bombing
@@ -281,11 +306,50 @@ on_actions = {
 			if = {
 				limit = {
 					date > 1941.8.31
-					NOT = { has_war_with = USA }
 				}
-				declare_war_on = {
-					target = USA
-					type = annex_everything
+				if = {
+					limit = {
+						USA = {
+							exists = yes
+							NOT = { has_war_with = JAP }
+						}
+					}
+					declare_war_on = {
+						target = USA
+						type = annex_everything
+					}
+				}
+				else_if = {
+					limit = {
+						ENG = {
+							exists = yes
+							NOT = { has_war_with = JAP }
+						}
+					}
+					declare_war_on = {
+						target = ENG
+						type = annex_everything
+					}
+				}
+			}
+			if = {
+				limit = {
+					SOV = {
+						exists = yes
+						NOT = { has_non_aggression_pact_with = JAP }
+						NOT = { has_war_with = JAP }
+					}
+					NOT = {
+						has_game_rule = {
+							rule = jap_sov_war_allowed
+							option = vanilla
+						}
+					}
+				}
+				diplomatic_relation = {
+					country = SOV
+					relation = non_aggression_pact
+					active = yes
 				}
 			}
 		}
@@ -593,9 +657,9 @@ on_actions = {
 					initialize_victory_system = yes
 				}
 			}
-
 		}
 	}
+
 	on_war_relation_added = {
         effect = {
             if = {
@@ -655,6 +719,75 @@ on_actions = {
                 }
 				allow_axis_grind = yes # Backup in case of skill issues (grind is allowed on Axis once Barb starts)
             }
+			# Peace out Japan and Soviets if they'd need to do a focus haven't done it.
+			if = {
+				limit = {
+					OR = {
+						tag = JAP
+						is_in_faction_with = JAP
+						tag = SOV
+						is_in_faction_with = SOV
+					}
+					FROM = {
+						OR = {
+							tag = JAP
+							is_in_faction_with = JAP
+							tag = SOV
+							is_in_faction_with = SOV
+						}
+					}
+					NOT = {
+						has_game_rule = {
+							rule = jap_sov_war_allowed
+							option = vanilla
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							tag = JAP
+							is_in_faction_with = JAP
+						}
+						FROM = {
+							OR = {
+								tag = SOV
+								is_in_faction_with = SOV
+							}
+						}
+					}
+					if = {
+						limit = {
+							NOT = { has_global_flag = JAP_SOV_border_conflict_escalated_to_war }
+							JAP = {
+								NOT = { has_completed_focus = JAP_a_green_persimmon }
+								NOT = { has_completed_focus = JAP_the_persimmon_has_ripened }
+							}
+						}
+						white_peace = FROM
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							tag = SOV
+							is_in_faction_with = SOV
+						}
+						FROM = {
+							OR = {
+								tag = JAP
+								is_in_faction_with = JAP
+							}
+						}
+						NOT = { has_global_flag = JAP_SOV_border_conflict_escalated_to_war }
+						SOV = {
+							NOT = { has_completed_focus = SOV_end_the_khalkhin_gol_conflict }
+							NOT = { has_completed_focus = SOV_recover_the_kuril_islands }
+						}
+					}
+					white_peace = FROM
+				}
+			}
 			#VP System
 			if = {
 				limit = {
@@ -684,6 +817,7 @@ on_actions = {
             }
         }
     }
+
 	on_declare_war = {
 		effect = {
 			if = {
