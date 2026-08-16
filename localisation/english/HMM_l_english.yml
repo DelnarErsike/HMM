@@ -109,6 +109,8 @@
  subordinate_NZL:0 "Subordinate New Zealand"
  subordinate_PHI:0 "Subordinate the Philippines"
  subordinate_IRQ:0 "Subordinate Iraq"
+ # Related decisions
+ requisition_POR_resources: "Requisition Portuguese Resources"
 
  # Moving Capital City
  move_capital_to_dublin:0 "Move Capital to Dublin"

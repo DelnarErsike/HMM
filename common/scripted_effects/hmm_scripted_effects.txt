@@ -425,6 +425,27 @@ enable_spain_simulator_effects = {
 			give_resource_rights = { receiver = ITA state = 41 }
 			give_resource_rights = { receiver = ITA state = 290 }
 		}
+		POR = {
+			give_resource_rights = { receiver = ITA state = 112 }
+			give_resource_rights = { receiver = ITA state = 179 }
+			give_resource_rights = { receiver = ITA state = 180 }
+			give_resource_rights = { receiver = ITA state = 181 }
+			give_resource_rights = { receiver = ITA state = 296 }
+			give_resource_rights = { receiver = ITA state = 321 }
+			give_resource_rights = { receiver = ITA state = 540 }
+			give_resource_rights = { receiver = ITA state = 544 }
+			give_resource_rights = { receiver = ITA state = 697 }
+			give_resource_rights = { receiver = ITA state = 698 }
+			give_resource_rights = { receiver = ITA state = 702 }
+			give_resource_rights = { receiver = ITA state = 721 }
+			give_resource_rights = { receiver = ITA state = 729 }
+			give_resource_rights = { receiver = ITA state = 795 }
+			give_resource_rights = { receiver = ITA state = 796 }
+			give_resource_rights = { receiver = ITA state = 891 }
+			give_resource_rights = { receiver = ITA state = 892 }
+			give_resource_rights = { receiver = ITA state = 896 }
+			give_resource_rights = { receiver = ITA state = 897 }
+		}
 		290 = { # We want the AI to keep ignoring building in non-cores, so just manually add 5 infra in Spanish North Africa to compensate
 			add_building_construction = {
 				type = infrastructure

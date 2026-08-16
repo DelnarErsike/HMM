@@ -3,6 +3,10 @@ state = {
 	name = "STATE_540"
 	manpower = 1
 	state_category = wasteland
+	resources={ # HMM: added to compensate for having no focus tree to get this normally
+		steel = 8
+		rubber = 4
+	}
 
 	history = {
 
@@ -10,7 +14,7 @@ state = {
 		add_core_of = ANG
 
 		buildings = {
-			infrastructure = 1
+			infrastructure = 3 # HMM: increased from 1 to offset Portugal having no focus tree
 			8248 = {
 				naval_base = 1
 			}

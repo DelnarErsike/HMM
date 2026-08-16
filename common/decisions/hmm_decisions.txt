@@ -779,6 +779,51 @@ operations = {
         }
     }
 
+    requisition_POR_resources = {
+        # icon = generic_operation
+        allowed = {
+            original_tag = SPR
+        }
+        visible = {
+			original_tag = SPR
+		}
+        fire_only_once = yes
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        available = {
+            NOT = { has_global_flag = scw_over }
+            POR = { is_ai = yes }
+        }
+        targets = {
+            POR	
+        }
+        complete_effect = {
+            POR = {
+                give_resource_rights = { receiver = ROOT state = 112 }
+                give_resource_rights = { receiver = ROOT state = 179 }
+                give_resource_rights = { receiver = ROOT state = 180 }
+                give_resource_rights = { receiver = ROOT state = 181 }
+                give_resource_rights = { receiver = ROOT state = 296 }
+                give_resource_rights = { receiver = ROOT state = 321 }
+                give_resource_rights = { receiver = ROOT state = 540 }
+                give_resource_rights = { receiver = ROOT state = 544 }
+                give_resource_rights = { receiver = ROOT state = 697 }
+                give_resource_rights = { receiver = ROOT state = 698 }
+                give_resource_rights = { receiver = ROOT state = 702 }
+                give_resource_rights = { receiver = ROOT state = 721 }
+                give_resource_rights = { receiver = ROOT state = 729 }
+                give_resource_rights = { receiver = ROOT state = 795 }
+                give_resource_rights = { receiver = ROOT state = 796 }
+                give_resource_rights = { receiver = ROOT state = 891 }
+                give_resource_rights = { receiver = ROOT state = 892 }
+                give_resource_rights = { receiver = ROOT state = 896 }
+                give_resource_rights = { receiver = ROOT state = 897 }
+            }
+        }
+    }
+
 	soviet_cap_timer = {
 	    activation = {
             NOT = { country_exists = SOV }

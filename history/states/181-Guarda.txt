@@ -5,6 +5,10 @@ state = {
 	
 	state_category = wasteland
 	
+	resources = {
+		tungsten = 95 #was 150 # was: 300
+		coal = 1 #initial distribution
+	}
 
 	history = {
 
@@ -20,11 +24,11 @@ state = {
 		}
 
 		buildings = {
-			infrastructure = 2
+			infrastructure = 5 # HMM: increased from 2 to offset Portugal having no focus tree
 			industrial_complex = 2
 
 			# Cabril Dam
-			#11885 = { dam = 1 }
+			11885 = { dam = 1 } # HMM: added back because Portugal has no focus tree to unlock this normally
 			
 		}
 		
