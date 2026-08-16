@@ -18,12 +18,13 @@ state={
 			10497 1 
 		}
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2 # HMM: increased from 1 to offset lack of focus tree and spirits
 		}
 		if = {
 			limit = {
 				has_dlc = "Battle for the Bosporus"
 			}
+			add_core_of = TUR # HMM: added to offset lack of focus tree and spirits
 			add_core_of = KUR
 		}
 		if = {

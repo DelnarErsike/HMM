@@ -12,7 +12,7 @@ state={
 			11810 5 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 4 # HMM: increased from 2 to offset lack of focus tree and spirits
 
 		}
 		add_core_of = TUR

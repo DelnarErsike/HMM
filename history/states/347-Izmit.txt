@@ -5,7 +5,7 @@ state={
 	manpower = 1
 	resources={
 		chromium=19 # was: 26
-		steel = 9
+		steel = 13 # HMM: increased from 9 to offset lack of focus tree and spirits
 		coal = 5 #initial distribution
 	}
 	

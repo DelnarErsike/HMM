@@ -22,7 +22,7 @@ state={
 			11853 3
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 5 # HMM: increased from 2 to offset lack of focus tree and spirits
 			9932 = {
 				naval_base = 2
 			}
