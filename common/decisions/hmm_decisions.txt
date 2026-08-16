@@ -793,8 +793,8 @@ operations = {
             factor = 0
         }
         available = {
-            NOT = { has_global_flag = scw_over }
             POR = { is_ai = yes }
+            has_global_flag = scw_over
         }
         targets = {
             POR	
