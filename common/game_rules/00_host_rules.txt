@@ -693,6 +693,56 @@ usa_boost = {
 		desc = "The United States of America gets 12 extra civilian factories at startup."
 	}
 }
+axis_facility_handicaps = {
+	name = "Free Axis Special Facilities"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_merge_plant_materiel"
+	option = {
+		name = none
+		text = "GOff"
+		desc = "Axis countries get no free special project facilities spawned in for them."
+	}
+	option = {
+		name = bul_land
+		text = "8Bulgaria Land Facility"
+		desc = "Bulgaria gets a free land facility spawned in for it at startup."
+	}
+	option = {
+		name = spa_land
+		text = "9Spain Land Facility"
+		desc = "Spain gets a free land facility spawned in for it at startup."
+	}
+	default = {
+		name = bul_land_spa_land
+		text = "tBulgaria & Spain Land Facility"
+		desc = "Bulgaria and Spain get free land facilities spawned in for them at startup."
+	}
+}
+soviet_facility_handicaps = {
+	name = "Free Soviet Special Facilities"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_merge_plant_materiel"
+	option = {
+		name = none
+		text = "GOff"
+		desc = "The Soviets get no free special project facilities spawned in for them."
+	}
+	default = {
+		name = land
+		text = "8Land Facility"
+		desc = "The Soviets get a free land facility spawned in for them at startup."
+	}
+	option = {
+		name = naval
+		text = "9Naval Facility"
+		desc = "The Soviets get a free naval facility spawned in for them at startup."
+	}
+	option = {
+		name = land_naval
+		text = "tLand & Naval Facility"
+		desc = "The Soviets get a free land facility and a free naval facility spawned in for them at startup."
+	}
+}
 playable_iraq = {
 	name = "Status of Iraq"
 	group = "HMM Rules"

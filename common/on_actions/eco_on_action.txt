@@ -1610,6 +1610,142 @@ on_actions = {
 					}
 				}
 			}
+
+			# Free facilities
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = axis_facility_handicaps
+						option = bul_land_spa_land
+					}
+				}
+				BUL = {
+					random_owned_controlled_state = {
+						limit = {
+							can_construct_building = land_facility
+						}
+						prioritize = { 48 } # Sofia
+						construct_building_in_random_province = {
+							land_facility = 1
+						}
+					}
+				}
+				SPR = {
+					random_owned_controlled_state = {
+						limit = {
+							can_construct_building = land_facility
+						}
+						prioritize = { 41 } # Madrid
+						construct_building_in_random_province = {
+							land_facility = 1
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = axis_facility_handicaps
+						option = bul_land
+					}
+				}
+				BUL = {
+					random_owned_controlled_state = {
+						limit = {
+							can_construct_building = land_facility
+						}
+						prioritize = { 48 } # Sofia
+						construct_building_in_random_province = {
+							land_facility = 1
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = axis_facility_handicaps
+						option = spa_land
+					}
+				}
+				SPR = {
+					random_owned_controlled_state = {
+						limit = {
+							can_construct_building = land_facility
+						}
+						prioritize = { 41 } # Madrid
+						construct_building_in_random_province = {
+							land_facility = 1
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = soviet_facility_handicaps
+						option = land_naval
+					}
+				}
+				SOV = {
+					random_owned_controlled_state = {
+						limit = {
+							can_construct_building = land_facility
+						}
+						prioritize = { 572 } # Chelyabinsk (aka, Tankograd)
+						construct_building_in_random_province = {
+							land_facility = 1
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							can_construct_building = naval_facility
+						}
+						prioritize = { 408 } # Vladivostok
+						construct_building_in_random_province = {
+							naval_facility = 1
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = soviet_facility_handicaps
+						option = land
+					}
+				}
+				SOV = {
+					random_owned_controlled_state = {
+						limit = {
+							can_construct_building = land_facility
+						}
+						prioritize = { 572 } # Chelyabinsk (aka, Tankograd)
+						construct_building_in_random_province = {
+							land_facility = 1
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = soviet_facility_handicaps
+						option = naval
+					}
+				}
+				SOV = {
+					random_owned_controlled_state = {
+						limit = {
+							can_construct_building = naval_facility
+						}
+						prioritize = { 408 } # Vladivostok
+						construct_building_in_random_province = {
+							naval_facility = 1
+						}
+					}
+				}
+			}
 		}
 	}
 }
