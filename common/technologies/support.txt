@@ -2407,6 +2407,18 @@ technologies = {
 	sp_helicopter_med_evac_tech = {
 		allow_branch = {
 			 has_dlc = "Gotterdammerung"
+			NOT = {
+				has_game_rule = {
+					rule = max_field_hospital_tech
+					option = none
+				}
+			}
+			NOT = {
+				has_game_rule = {
+					rule = max_field_hospital_tech
+					option = hospital_1_no_heli
+				}
+			}
 		}
 
 		allow = {

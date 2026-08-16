@@ -351,6 +351,11 @@ max_field_hospital_tech = {
 		text = "RBanned"
 		desc = "Field hospital technologies cannot be unlocked at all."
 	}
+	option = {
+		name = hospital_1_no_heli
+		text = "01936"
+		desc = "Field hospitals can be unlocked, but no passive upgrades for them are available."
+	}
 	default = {
 		name = hospital_1
 		text = "O1938"
