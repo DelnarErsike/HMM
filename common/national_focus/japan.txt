@@ -14448,7 +14448,6 @@ focus_tree = {
 		bypass = {
 
 		}
-		allow_branch = { always = no }
 
 		will_lead_to_war_with = POR
 		will_lead_to_war_with = TML
