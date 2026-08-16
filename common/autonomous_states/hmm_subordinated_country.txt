@@ -1,0 +1,70 @@
+autonomy_state = {
+	id = autonomy_hmm_subordinated_country
+	
+    default = yes
+	is_puppet = yes
+	
+	use_overlord_color = yes
+	
+	min_freedom_level = 0.0
+	
+	manpower_influence = 1.0
+	
+	rule = {
+		desc = "RULE_DESC_IS_A_SUBJECT"
+		
+		can_not_declare_war = yes
+		can_decline_call_to_war = no
+		units_deployed_to_overlord = yes
+		can_be_spymaster = no
+		contributes_operatives = yes
+		can_create_collaboration_government = no
+	}
+	
+	modifier = {
+		autonomy_manpower_share = 1
+		autonomy_gain_global_factor = -1
+		extra_trade_to_overlord_factor = 10
+		overlord_trade_cost_factor = -0.99 # Cannot be -100% or else the game bugs out and we cannot trade at all
+        cic_to_overlord_factor = 1
+		mic_to_overlord_factor = 1
+		can_master_build_for_us = 1
+        license_subject_master_purchase_cost = -1
+		peace_score_ratio_transferred_to_overlord = 1
+		lend_lease_tension_with_overlord = -1
+		faction_influence_contribution_factor = -1
+	}
+	
+	ai_subject_wants_higher = {
+		factor = 0.0
+	}
+	
+	ai_overlord_wants_lower = {
+		factor = 0.0
+	}
+
+    ai_overlord_wants_garrison = {
+		always = yes
+	}
+	
+	allowed_levels_filter = {
+		autonomy_hmm_subordinated_country
+	}
+
+	allowed = {
+		is_ai = yes
+		OR = {
+			is_subject = no
+			has_autonomy_state = autonomy_hmm_subordinated_country
+		}
+        OVERLORD = { is_ai = no }
+	}
+
+    can_take_level = {
+        is_ai = no
+    }
+	
+	can_lose_level = {
+		always = no
+	}
+}

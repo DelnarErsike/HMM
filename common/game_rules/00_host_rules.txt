@@ -700,17 +700,22 @@ playable_iraq = {
 	default = {
 		name = annexed
 		text = "YAnnexed into UK"
-		desc = "Iraq is instantly annexed into the UK at the start of the game"
+		desc = "Iraq is instantly annexed into the UK at the start of the game."
+	}
+	option = {
+		name = subordinated
+		text = "OSubordinated to UK"
+		desc = "Iraq starts as a Subordinated Country of the UK (special puppet with all industry transferred and very generous subject terms)."
 	}
 	option = {
 		name = axis
 		text = "RAxis"
-		desc = "Iraq is playable and on the Axis"
+		desc = "Iraq is playable and on the Axis."
 	}
 	option = {
 		name = allies
 		text = "4Allies"
-		desc = "Iraq is playable and on the Allies"
+		desc = "Iraq is playable and on the Allies."
 	}
 }
 strat_bombing = {

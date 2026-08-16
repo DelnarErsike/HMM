@@ -1016,13 +1016,30 @@ on_actions = {
 		effect = {
 			if = {
 				limit ={
-					has_game_rule = {
-						rule = playable_iraq
-						option = allies
+					OR = {
+						has_game_rule = {
+							rule = playable_iraq
+							option = allies
+						}
+						has_game_rule = {
+							rule = playable_iraq
+							option = subordinated
+						}
 					}
 				}
 				SWE = { send_embargo = IRQ }
 				POR = { send_embargo = IRQ }
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = playable_iraq
+							option = subordinated
+						}
+					}
+					ENG = {
+						IRQ = { subordinate_this_country_to_PREV = yes }
+					}
+				}
 			}
 			else_if = {
 				limit = {

@@ -13903,31 +13903,7 @@ focus_tree = {
 
 			if = {
 				limit = { SIA = { is_ai = yes } }
-				SIA = {
-					transfer_units_fraction = {
-						target = JAP
-						size = 1
-						stockpile_ratio = 1
-						army_ratio = 1
-						navy_ratio = 1
-						air_ratio = 1
-						keep_unit_leaders_trigger = {
-							always = no
-						}
-					}
-				}
-				JAP = {
-					annex_country = {
-						target = SIA
-						transfer_troops = yes
-					}
-					every_controlled_state = {
-						limit = {
-							is_core_of = SIA
-						}
-						add_compliance = 100
-					}
-				}
+				SIA = { subordinate_this_country_to_ROOT = yes }
 			}
 			else = {
 			SIA = {

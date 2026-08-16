@@ -435,6 +435,150 @@ enable_spain_simulator_effects = {
 	}
 }
 
+subordinate_this_country_to_ROOT = {
+	# Need this to make sure the subordinated country retains its old government & government spread
+	effect_tooltip = {
+		ROOT = {
+			set_autonomy = {
+				target = PREV
+				autonomous_state = autonomy_hmm_subordinated_country
+				end_wars = no
+				end_civil_wars = no
+			}
+		}
+	}
+	hidden_effect = { # One big block so that temp variables will work for sure
+		set_temp_variable = { old_popularity_democratic = party_popularity_100@democratic }
+		set_temp_variable = { old_popularity_neutrality = party_popularity_100@neutrality }
+		set_temp_variable = { old_popularity_communism = party_popularity_100@communism }
+		set_temp_variable = { old_popularity_fascism = party_popularity_100@fascism }
+		if = {
+			limit = { has_government = democratic }
+			set_country_flag = old_government_was_democratic
+		}
+		else_if = {
+			limit = { has_government = neutrality }
+			set_country_flag = old_government_was_neutrality
+		}
+		else_if = {
+			limit = { has_government = communism }
+			set_country_flag = old_government_was_communism
+		}
+		else_if = {
+			limit = { has_government = fascism }
+			set_country_flag = old_government_was_fascism
+		}
+		ROOT = {
+			set_autonomy = {
+				target = PREV
+				autonomous_state = autonomy_hmm_subordinated_country
+				end_wars = no
+				end_civil_wars = no
+			}
+		}
+		if = {
+			limit = { has_country_flag = old_government_was_democratic }
+			set_politics = { ruling_party = democratic }
+			clr_country_flag = old_government_was_democratic
+		}
+		else_if = {
+			limit = { has_country_flag = old_government_was_neutrality }
+			set_politics = { ruling_party = neutrality }
+			clr_country_flag = old_government_was_neutrality
+		}
+		else_if = {
+			limit = { has_country_flag = old_government_was_communism }
+			set_politics = { ruling_party = communism }
+			clr_country_flag = old_government_was_communism
+		}
+		else_if = {
+			limit = { has_country_flag = old_government_was_fascism }
+			set_politics = { ruling_party = fascism }
+			clr_country_flag = old_government_was_fascism
+		}
+		set_popularities = {
+			democratic = old_popularity_democratic
+			neutrality = old_popularity_neutrality
+			communism = old_popularity_communism
+			fascism = old_popularity_fascism
+		}
+	}
+	custom_effect_tooltip = generic_skip_one_line_tt
+	custom_effect_tooltip = hmm_subordinate_explanation
+}
+
+subordinate_this_country_to_PREV = {
+	# Need this to make sure the subordinated country retains its old government & government spread
+	effect_tooltip = {
+		PREV = {
+			set_autonomy = {
+				target = PREV
+				autonomous_state = autonomy_hmm_subordinated_country
+				end_wars = no
+				end_civil_wars = no
+			}
+		}
+	}
+	hidden_effect = { # One big block so that temp variables will work for sure
+		set_temp_variable = { old_popularity_democratic = party_popularity_100@democratic }
+		set_temp_variable = { old_popularity_neutrality = party_popularity_100@neutrality }
+		set_temp_variable = { old_popularity_communism = party_popularity_100@communism }
+		set_temp_variable = { old_popularity_fascism = party_popularity_100@fascism }
+		if = {
+			limit = { has_government = democratic }
+			set_country_flag = old_government_was_democratic
+		}
+		else_if = {
+			limit = { has_government = neutrality }
+			set_country_flag = old_government_was_neutrality
+		}
+		else_if = {
+			limit = { has_government = communism }
+			set_country_flag = old_government_was_communism
+		}
+		else_if = {
+			limit = { has_government = fascism }
+			set_country_flag = old_government_was_fascism
+		}
+		PREV = {
+			set_autonomy = {
+				target = PREV
+				autonomous_state = autonomy_hmm_subordinated_country
+				end_wars = no
+				end_civil_wars = no
+			}
+		}
+		if = {
+			limit = { has_country_flag = old_government_was_democratic }
+			set_politics = { ruling_party = democratic }
+			clr_country_flag = old_government_was_democratic
+		}
+		else_if = {
+			limit = { has_country_flag = old_government_was_neutrality }
+			set_politics = { ruling_party = neutrality }
+			clr_country_flag = old_government_was_neutrality
+		}
+		else_if = {
+			limit = { has_country_flag = old_government_was_communism }
+			set_politics = { ruling_party = communism }
+			clr_country_flag = old_government_was_communism
+		}
+		else_if = {
+			limit = { has_country_flag = old_government_was_fascism }
+			set_politics = { ruling_party = fascism }
+			clr_country_flag = old_government_was_fascism
+		}
+		set_popularities = {
+			democratic = old_popularity_democratic
+			neutrality = old_popularity_neutrality
+			communism = old_popularity_communism
+			fascism = old_popularity_fascism
+		}
+	}
+	custom_effect_tooltip = generic_skip_one_line_tt
+	custom_effect_tooltip = hmm_subordinate_explanation
+}
+
 initialize_victory_system = {
 	# state = 613 #Nanjing
 	# state = 439 #Dehli
