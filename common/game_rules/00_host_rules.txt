@@ -705,17 +705,17 @@ axis_facility_handicaps = {
 	option = {
 		name = bul_land
 		text = "8Bulgaria Land Facility"
-		desc = "Bulgaria gets a free land facility spawned in for it at startup."
+		desc = "Bulgaria gets a free land warfare facility spawned in for it at startup."
 	}
 	option = {
 		name = spa_land
 		text = "9Spain Land Facility"
-		desc = "Spain gets a free land facility spawned in for it at startup."
+		desc = "Spain gets a free land warfare facility spawned in for it at startup."
 	}
 	default = {
 		name = bul_land_spa_land
 		text = "tBulgaria & Spain Land Facility"
-		desc = "Bulgaria and Spain get free land facilities spawned in for them at startup."
+		desc = "Bulgaria and Spain get free land warfare facilities spawned in for them at startup."
 	}
 }
 soviet_facility_handicaps = {
@@ -730,17 +730,17 @@ soviet_facility_handicaps = {
 	default = {
 		name = land
 		text = "8Land Facility"
-		desc = "The Soviets get a free land facility spawned in for them at startup."
+		desc = "The Soviets get a free land warfare facility spawned in for them at startup."
 	}
 	option = {
 		name = naval
 		text = "9Naval Facility"
-		desc = "The Soviets get a free naval facility spawned in for them at startup."
+		desc = "The Soviets get a free naval engineering facility spawned in for them at startup."
 	}
 	option = {
 		name = land_naval
 		text = "tLand & Naval Facility"
-		desc = "The Soviets get a free land facility and a free naval facility spawned in for them at startup."
+		desc = "The Soviets get a free land warfare facility and a free naval engineering facility spawned in for them at startup."
 	}
 }
 playable_iraq = {
