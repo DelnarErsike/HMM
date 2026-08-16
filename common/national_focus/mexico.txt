@@ -63,6 +63,32 @@ focus_tree = {
 		mutually_exclusive = { focus = MEX_focus_jefe_maximo }
 		x = -1
 		y = 1
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				NOT = {
+					OR = {
+						has_game_rule = {
+							rule = alt_hist_mex
+							option = only_caudillos
+						}
+						has_game_rule = {
+							rule = alt_hist_mex
+							option = allowed
+						}
+						has_game_rule = {
+							rule = alt_hist_mex
+							option = forced_caudillos
+						}
+						has_game_rule = {
+							rule = alt_hist_mex
+							option = forced_caudillos_secularism
+						}
+					}
+				}
+			}
+		}
 		relative_position_id = MEX_focus_plan_of_agua_prieta
 
 		cost = 5
@@ -116,6 +142,26 @@ focus_tree = {
 
 		bypass = {
 			
+		}
+		allow_branch = {
+			OR = {
+				has_game_rule = {
+					rule = alt_hist_mex
+					option = only_caudillos
+				}
+				has_game_rule = {
+					rule = alt_hist_mex
+					option = allowed
+				}
+				has_game_rule = {
+					rule = alt_hist_mex
+					option = forced_caudillos
+				}
+				has_game_rule = {
+					rule = alt_hist_mex
+					option = forced_caudillos_secularism
+				}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -2291,6 +2337,32 @@ focus_tree = {
 		prerequisite = { focus = MEX_focus_exile_calles }
 		x = -5
 		y = 1
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				NOT = {
+					OR = {
+						has_game_rule = {
+							rule = alt_hist_mex
+							option = only_caudillos
+						}
+						has_game_rule = {
+							rule = alt_hist_mex
+							option = allowed
+						}
+						has_game_rule = {
+							rule = alt_hist_mex
+							option = forced_caudillos
+						}
+						has_game_rule = {
+							rule = alt_hist_mex
+							option = forced_caudillos_secularism
+						}
+					}
+				}
+			}
+		}
 		relative_position_id = MEX_focus_exile_calles
 
 		cost = 10
@@ -2485,6 +2557,32 @@ focus_tree = {
 		prerequisite = { focus = MEX_focus_exile_calles focus = MEX_focus_jefe_maximo }
 		x = 1
 		y = 1
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				NOT = {
+					OR = {
+						has_game_rule = {
+							rule = alt_hist_mex
+							option = only_caudillos
+						}
+						has_game_rule = {
+							rule = alt_hist_mex
+							option = allowed
+						}
+						has_game_rule = {
+							rule = alt_hist_mex
+							option = forced_caudillos
+						}
+						has_game_rule = {
+							rule = alt_hist_mex
+							option = forced_caudillos_secularism
+						}
+					}
+				}
+			}
+		}
 		relative_position_id = MEX_focus_exile_calles
 
 		cost = 5
