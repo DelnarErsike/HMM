@@ -332,6 +332,11 @@ max_submarine_tech= {
 		desc = "Improved Submarine hulls, Advanced Submarine hulls, all snorkel technologies, and all AIP engine upgrade technologies are banned. Fleet submarines, nuclear submarines, and missile launching submarines are indirectly banned."
 	}
 	option = {
+		name = sub3_no_fleet
+		text = "O1939 w/o Fleet Submarines"
+		desc = "Fleet submarines, Advanced Submarine hulls, the Improved Snorkel technology, and the High-Speed Walter Engines technology are banned. Nuclear submarines, and missile launching submarines are indirectly banned."
+	}
+	option = {
 		name = sub3
 		text = "Y1939"
 		desc = "Advanced Submarine hulls, the Improved Snorkel technology, and the High-Speed Walter Engines technology are banned."

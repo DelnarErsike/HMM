@@ -169,6 +169,18 @@ sp_naval_fleet_submarine = {
 
 	allowed = {
 		#FREE PROJECT
+		NOT = {
+			has_game_rule = {
+				rule = max_submarine_tech
+				option = sub2
+			}
+		}
+		NOT = {
+			has_game_rule = {
+				rule = max_submarine_tech
+				option = sub3_no_fleet
+			}
+		}
 	}
 
 	complexity = sp_complexity.medium
