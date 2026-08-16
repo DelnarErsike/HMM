@@ -2,7 +2,7 @@
 set_oob = "EMPTY_OOB"
 set_cosmetic_tag = TUR_neutrality
 
-set_research_slots = 0
+set_research_slots = 3
 
 add_ideas = {
 	free_trade
