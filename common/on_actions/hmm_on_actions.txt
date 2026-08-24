@@ -215,6 +215,209 @@ on_actions = {
 					}
 				}
 			}
+
+			if = {
+				limit = {
+					OR = {
+						has_game_rule = {
+							rule = playable_iraq
+							option = allies
+						}
+						has_game_rule = {
+							rule = playable_iraq
+							option = subordinated
+						}
+					}
+				}
+				SWE = { send_embargo = IRQ }
+				POR = { send_embargo = IRQ }
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = playable_iraq
+							option = subordinated
+						}
+					}
+					ENG = {
+						IRQ = { subordinate_this_country_to_PREV = yes }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { # Set up this way for save compatibility (older versions of HMM used a different set of names for the options)
+						has_game_rule = {
+							rule = playable_iraq
+							option = axis
+						}
+					}
+				}
+				ENG = { 
+					annex_country = { target = IRQ transfer_troops = yes }
+					every_controlled_state = {
+						limit = {
+							is_core_of = IRQ
+						}
+						if = {
+							limit = {
+								has_dynamic_modifier = { modifier = IRQ_shia_resistance_modifier }
+							}
+							# Modifier should automatically invalidate, but let's manually remove them, just in case.
+							remove_dynamic_modifier = { modifier = IRQ_shia_resistance_modifier }
+						}
+						set_compliance = 100
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = battlefield_support_status
+							option = allowed
+						}
+					}
+					any_country = {
+						has_doctrine = new_battlefield_support
+					}
+				}
+				every_country = {
+					limit = {
+						has_doctrine = new_battlefield_support
+						if = {
+							limit = {
+								has_game_rule = {
+									rule = battlefield_support_status
+									option = axis
+								}
+							}
+							allies = yes
+						}
+						else_if = {
+							limit = {
+								has_game_rule = {
+									rule = battlefield_support_status
+									option = allies
+								}
+							}
+							axis = yes
+						}
+					}
+					set_grand_doctrine = new_strategic_destruction
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = pinpoint_strikes_status
+							option = allowed
+						}
+					}
+					any_country = {
+						has_doctrine = air_subdoctrine_dive_bombers
+					}
+				}
+				every_country = {
+					limit = {
+						has_doctrine = air_subdoctrine_dive_bombers
+						if = {
+							limit = {
+								has_game_rule = {
+									rule = pinpoint_strikes_status
+									option = axis
+								}
+							}
+							allies = yes
+						}
+						else_if = {
+							limit = {
+								has_game_rule = {
+									rule = pinpoint_strikes_status
+									option = allies
+								}
+							}
+							axis = yes
+						}
+					}
+					set_sub_doctrine = {
+						sub_doctrine = air_subdoctrine_flexible_fire_support
+						folder = air
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = ground_support_subdoctrines_status
+							option = allowed
+						}
+					}
+					any_country = {
+						OR = {
+							has_doctrine = air_subdoctrine_fighter_bombers
+							has_doctrine = air_subdoctrine_tactical_battlefield_support
+							has_doctrine = air_subdoctrine_flying_artillery
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						if = {
+							limit = {
+								has_game_rule = {
+									rule = ground_support_subdoctrines_status
+									option = axis
+								}
+							}
+							allies = yes
+						}
+						else_if = {
+							limit = {
+								has_game_rule = {
+									rule = ground_support_subdoctrines_status
+									option = allies
+								}
+							}
+							axis = yes
+						}
+						OR = {
+							has_doctrine = air_subdoctrine_fighter_bombers
+							has_doctrine = air_subdoctrine_tactical_battlefield_support
+							has_doctrine = air_subdoctrine_flying_artillery
+						}
+					}
+					if = {
+						limit = {
+							has_doctrine = air_subdoctrine_fighter_bombers
+						}
+						set_sub_doctrine = {
+							sub_doctrine = air_subdoctrine_dogfighting_mastery
+							folder = air
+						}
+					}
+					if = {
+						limit = {
+							has_doctrine = air_subdoctrine_tactical_battlefield_support
+						}
+						set_sub_doctrine = {
+							sub_doctrine = air_subdoctrine_operational_air_support
+							folder = air
+						}
+					}
+					if = {
+						limit = {
+							has_doctrine = air_subdoctrine_flying_artillery
+						}
+						set_sub_doctrine = {
+							sub_doctrine = air_subdoctrine_flexible_fire_support
+							folder = air
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -230,30 +433,62 @@ on_actions = {
 			}
 		}
 	}
-	
-	on_monthly = {
+
+	on_peace = {
 		effect = {
 			if = {
 				limit = {
 					is_playable_country = yes
-					NOT = {
-						OR = {
-							has_war = yes
-							has_idea = peace_training
-							AND = {
-								tag = SPR
-								any_country = {
-									has_volunteers_amount_from = {
-										tag = SPR
-										count > 0
-									} 
-								}	
-							}
+					has_war = no
+					NOT = { # I don't like this, it's way too expensive a way of checking if we have an volunteers sent to anyone, but there's no better alternative
+						any_country = {
+							has_volunteers_amount_from = {
+								tag = PREV
+								count > 0
+							} 
 						}
 					}
+					NOT = { has_idea = peace_training }
 				}
 				add_ideas = peace_training
 			}
+		}
+	}
+
+	# Peacetime training toggle for volunteers handled here in on actions because there is no performant way of checking if a country has sent any volunteers to anyone
+
+	on_send_volunteers = {
+		effect = {
+			if = {
+				limit = { has_idea = peace_training }
+				remove_ideas = peace_training
+			}
+		}
+	}
+
+	on_recall_volunteers = {
+		effect = {
+			if = {
+				limit = {
+					is_playable_country = yes
+					has_war = no
+					NOT = { # I don't like this, it's way too expensive a way of checking if we have an volunteers sent to anyone, but there's no better alternative
+						any_country = {
+							has_volunteers_amount_from = {
+								tag = PREV
+								count > 0
+							} 
+						}
+					}
+					NOT = { has_idea = peace_training }
+				}
+				add_ideas = peace_training
+			}
+		}
+	}
+	
+	on_monthly = {
+		effect = {
 			if = {
 				limit = {
 					can_grind_generals = no
@@ -292,6 +527,7 @@ on_actions = {
 						rule = strat_bombing
 						option = banned
 					}
+					NOT = { has_idea = ger_eco_nerf }
 					date > 1939.12.31
 					date < 1940.12.31
 				}
@@ -549,7 +785,339 @@ on_actions = {
 				}
 			}
 
-			hmm_capitulations_on_actions = yes
+			if = {
+				limit = {
+					original_tag = POL
+					has_war_with = GER
+				}
+				ENG = {
+					country_event = { id = britain.9 days = 1 }
+				}
+				SOV = {
+					transfer_state = 784
+					transfer_state = 96
+					transfer_state = 95
+					transfer_state = 94
+					transfer_state = 93
+					transfer_state = 91
+					transfer_state = 89
+					transfer_state = 97
+				}
+			}
+			else_if = {
+				limit = {
+					original_tag = FRA
+					has_war_with = GER
+				}
+				set_capital = {
+					state = 461
+				}
+				
+				set_global_flag = fall_of_france
+				every_country = {
+					limit = {
+						axis_european = yes
+						NOT = { has_war_with = ENG }
+						NOT = { original_tag = IRQ }
+						NOT = { has_idea = WAR_join }
+					}
+					add_timed_idea = {
+						idea = WAR_join
+						days = 90
+					}
+				}
+				
+				if = {
+					limit = {
+						has_completed_focus = FRA_the_blum_viollette_proposal
+					}
+					if = {
+						limit = {
+							459 = { is_controlled_by = GER }
+						}
+						set_state_controller = 459
+					}
+					if = {
+						limit = {
+							460 = { is_controlled_by = GER }
+						}
+						set_state_controller = 460
+					}
+					if = {
+						limit = {
+							513 = { is_controlled_by = GER }
+						}
+						set_state_controller = 513
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					original_tag = HOL
+					has_war_with = GER
+					NOT = { has_war_with = JAP }
+				}
+				add_stability = 1.0
+				add_equipment_to_stockpile = {
+					type = convoy_1
+					amount = 1000
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 20000
+					producer = HOL
+				}
+				transfer_state = 672
+				transfer_state = 334
+				transfer_state = 335
+				transfer_state = 667
+				transfer_state = 673
+				transfer_state = 668
+				transfer_state = 669
+				transfer_state = 309
+				transfer_state = 695
+			}
+			else_if = {
+				limit = { 
+					original_tag = YUG 
+					OR = {
+						has_war_with = ITA
+						has_war_with = BUL
+					}
+				} 
+				if = {
+					limit = { country_exists = BUL }
+					BUL = {
+						transfer_state = 106
+						transfer_state = 970
+						transfer_state = 803
+					}
+					if = {
+						limit = { country_exists = ITA }
+						transfer_navy = { target = ITA }
+						ITA = {
+							add_named_threat = { 
+								threat = 9
+								name = hmm_yug
+							}
+							transfer_state = 103
+							transfer_state = 102
+							transfer_state = 104
+							transfer_state = 105
+							transfer_state = 109
+							transfer_state = 107
+							transfer_state = 108
+							transfer_state = 802
+							transfer_state = 804
+							transfer_state = 853
+						}
+					}
+					else = {
+						transfer_navy = { target = BUL }
+						BUL = {
+							add_named_threat = { 
+								threat = 9
+								name = hmm_yug
+							}
+							transfer_state = 103
+							transfer_state = 102
+							transfer_state = 104
+							transfer_state = 105
+							transfer_state = 109
+							transfer_state = 107
+							transfer_state = 108
+							transfer_state = 802
+							transfer_state = 804
+							transfer_state = 853
+						}
+					}
+				}
+				else = {
+					transfer_navy = { target = ITA }
+					ITA = {
+						add_named_threat = { 
+							threat = 9
+							name = hmm_yug
+						}
+						transfer_state = 103
+						transfer_state = 102
+						transfer_state = 104
+						transfer_state = 105
+						transfer_state = 109
+						transfer_state = 107
+						transfer_state = 108
+						transfer_state = 802
+						transfer_state = 804
+						transfer_state = 853
+
+						transfer_state = 106
+						transfer_state = 970
+						transfer_state = 803
+						add_state_core = 106
+						add_state_core = 970
+						add_state_core = 803
+					}
+				}
+				if = {
+					limit = { country_exists = HUN }
+					HUN = {
+						transfer_state = 764
+						transfer_state = 45
+					}
+				}
+				else_if = {
+					limit = { country_exists = ITA }
+					ITA = {
+						transfer_state = 764
+						transfer_state = 45
+						add_state_core = 764
+						add_state_core = 45
+					}
+				}
+				else = {
+					BUL = {
+						transfer_state = 764
+						transfer_state = 45
+					}
+				}
+			} 
+			# Albania
+			else_if = {
+				limit = { 
+					original_tag = ALB
+					has_war_with = ITA
+				} 
+				transfer_navy = { target = ITA }
+				ITA = {
+					add_named_threat = { 
+						threat = -0.7 
+						name = hmm_alb
+					}
+					annex_country = {
+						target = ALB
+						transfer_troops = no
+					}
+				}
+			} 
+			# Greece
+			else_if = {
+				limit = { 
+					original_tag = GRE 
+					OR = {
+						has_war_with = ITA
+						has_war_with = BUL
+					}
+				}
+				
+				if = {
+					limit = { country_exists = BUL }
+					if = {
+						limit = { country_exists = ITA }
+						transfer_navy = { target = ITA }
+					}
+					else = {
+						transfer_navy = { target = BUL }
+					}
+					BUL = {
+						annex_country = {
+							target = GRE
+							transfer_troops = no
+						}
+						add_named_threat = { 
+							threat = 4.3
+							name = hmm_gre
+						}
+					}
+				}
+				else = {
+					transfer_navy = { target = ITA }
+					ITA = {
+						annex_country = {
+							target = GRE
+							transfer_troops = no
+						}
+						add_named_threat = { 
+							threat = 4.3
+							name = HMM_gre
+						}
+					}
+				}
+			}
+			# China
+			else_if = {
+				limit = { 
+					original_tag = CHI
+					has_war_with = JAP
+				} 
+				transfer_navy = { target = JAP }
+				JAP = {
+					add_named_threat = { 
+						threat = 21.7
+						name = hmm_chi
+					}
+					annex_country = {
+						target = CHI
+						transfer_troops = no
+					}
+				}
+			}
+			# Japan
+			else_if = {
+				limit = { 
+					original_tag = JAP
+					has_war_with = USA
+				} 
+				transfer_navy = { target = USA }
+				USA = {
+					country_event = { id = mtg_usa_hmm.1 days = 1 }
+					annex_country = {
+						target = JAP
+						transfer_troops = no
+					}
+				}
+			}
+			# Soviet Union
+			else_if = {
+				limit = { 
+					original_tag = SOV
+					has_war_with = GER
+				}
+				transfer_navy = { target = GER }
+				GER = {
+					annex_country = {
+						target = SOV
+						transfer_troops = no
+					}
+					annex_country = {
+						target = MON
+						transfer_troops = no
+					}
+					annex_country = {
+						target = TAN
+						transfer_troops = no
+					}
+					# Cut collab compliance, needs to be on a delay because collabs are applied after this on action
+					country_event = {
+						id = hmm.8
+						hours = 1
+					}
+				}
+			}
+			# Unchain AI members of Western Allies after they've capitulated
+			if = {
+				limit = {
+					has_idea = ai_war
+					OR = {
+						original_tag = BEL
+						original_tag = HOL
+						original_tag = POL
+						original_tag = NOR
+						original_tag = DEN
+						original_tag = LUX
+					}
+				}
+				remove_ideas = ai_war
+			}
 		}
 	}
 
@@ -559,22 +1127,26 @@ on_actions = {
 				limit = {
 					FROM = { tag = FRA }
 					FROM.FROM = { is_core_of = FRA }
-					OR ={  AND ={  FRA = { surrender_progress > 0.32 NOT = { controls_state = 16 } } }	FRA = { surrender_progress	> 0.5	}	 }
-					NOT = { FRA = { has_country_flag = france_tp} }
+					FRA = {
+						NOT = { has_country_flag = france_tp }
+						surrender_progress > 0.32
+						OR = {
+							NOT = { controls_state = 16 }
+							surrender_progress	> 0.5
+						}
+					}
 				}
-
-
-			FRA = { 
-				set_country_flag = france_tp
-				transfer_units_fraction = {
-					target = COG
-					size = 1
-					stockpile_ratio = 1
-					army_ratio = 0
-					navy_ratio = 0
-					air_ratio = 0
-					keep_unit_leaders_trigger = {
-						always = yes
+				FRA = { 
+					set_country_flag = france_tp
+					transfer_units_fraction = {
+						target = COG
+						size = 1
+						stockpile_ratio = 1
+						army_ratio = 0
+						navy_ratio = 0
+						air_ratio = 0
+						keep_unit_leaders_trigger = {
+							always = yes
 						}
 					}					
 				}
@@ -669,59 +1241,72 @@ on_actions = {
         effect = {
             if = {
                 limit = {
-                    tag = JAP
+                    OR = {
+						tag = JAP
+						is_in_faction_with = JAP
+					}
                     FROM = {
-                        is_in_faction_with = ENG
+                        OR = {
+							tag = ENG
+							is_in_faction_with = ENG
+						}
                     }
                 }
-                every_country = {
-                    limit = {
-                        is_in_faction_with = ENG
-                    }
-                    add_to_war = {
-                        targeted_alliance = FROM
-                        enemy = JAP
-                        hostility_reason = asked_to_join
-                    }
-                }
-                every_country = {
-                    limit = {
-                        is_in_faction_with = JAP
-                    }
-                    add_to_war = {
+				every_allied_country = {
+					limit = { NOT = { has_war_with = FROM } }
+					add_to_war = {
                         targeted_alliance = ROOT
                         enemy = FROM
                         hostility_reason = asked_to_join
                     }
-                }
+				}
+				ENG = {
+					every_allied_country = {
+						limit = { NOT = { has_war_with = ROOT } }
+						add_to_war = {
+							targeted_alliance = FROM
+							enemy = ROOT
+							hostility_reason = asked_to_join
+						}
+					}
+				}
             }
-			if = {
+			else_if = {
                 limit = {
-                    tag = GER
+                    OR = {
+						tag = GER
+						is_in_faction_with = GER
+					}
                     FROM = {
-                        is_in_faction_with = SOV
+                        OR = {
+							tag = SOV
+							is_in_faction_with = SOV
+						}
                     }
                 }
-                every_country = {
-                    limit = {
-                        is_in_faction_with = SOV
-                    }
-                    add_to_war = {
-                        targeted_alliance = FROM
-                        enemy = GER
-                        hostility_reason = asked_to_join
-                    }
-                }
-                every_country = {
-                    limit = {
-                        is_in_faction_with = GER
-                    }
+				every_allied_country = {
+					limit = { NOT = { has_war_with = FROM } }
                     add_to_war = {
                         targeted_alliance = ROOT
                         enemy = FROM
                         hostility_reason = asked_to_join
                     }
                 }
+				SOV = {
+					every_allied_country = {
+						limit = { NOT = { has_war_with = ROOT } }
+						add_to_war = {
+							targeted_alliance = FROM
+							enemy = ROOT
+							hostility_reason = asked_to_join
+						}
+					}
+				}
+				#VP System (only initialize once)
+				if = {
+					limit = { NOT = { has_global_flag = victory_system_active } }
+					initialize_victory_system = yes
+				}
 				allow_axis_grind = yes # Backup in case of skill issues (grind is allowed on Axis once Barb starts)
             }
 			# Peace out Japan and Soviets if they'd need to do a focus and haven't done it.
@@ -793,186 +1378,8 @@ on_actions = {
 					white_peace = FROM
 				}
 			}
-			#VP System
-			if = {
-				limit = {
-					FROM = {
-						original_tag = SOV
-					}
-				}
-				initialize_victory_system = yes
-			}
-			if = {
-                limit = {
-                    tag = GER
-                    FROM = {
-                       tag = SOV
-                    }
-                }
-                every_country = {
-                    limit = {
-                        is_in_faction_with = GER
-                    }
-                    add_to_war = {
-                        targeted_alliance = ROOT
-                        enemy = SOV
-                        hostility_reason = asked_to_join
-                    }
-                }
-            }
-        }
-    }
-
-	on_declare_war = {
-		effect = {
-			if = {
-				limit = {
-					axis = yes
-					FROM = {
-						allies = yes
-						NOT = { tag = SOV }
-						NOT = { is_in_faction_with = SOV }
-						NOT = { is_in_faction_with = ENG }
-					}
-				}
-				ENG = {
-					add_to_faction = FROM
-				}
-			}
 			
-			if = {
-                limit = {
-                    FROM = {
-                        tag = ALB
-                    }
-                }
-                ALB = {
-                    load_oob = "ALB_CHROM_SPAWN"
-                }
-            }
-            else_if = {
-                limit = {
-                    FROM = {
-                        tag = BEL
-                    }
-                }
-                BEL = {
-                    load_oob = "BEL_CHROM_SPAWN"
-                }
-            }
-            else_if = {
-                limit = {
-                    FROM = {
-                        tag = DEN
-                    }
-                }
-                DEN = {
-                    load_oob = "DEN_CHROM_SPAWN"
-                }
-            }
-            else_if = {
-                limit = {
-                    FROM = {
-                        tag = HOL
-                    }
-                }
-                HOL = {
-                    load_oob = "HOL_CHROM_SPAWN"
-                }
-            }
-            else_if = {
-                limit = {
-                    FROM = {
-                        tag = LUX
-                    }
-                }
-                LUX = {
-                    load_oob = "LUX_CHROM_SPAWN"
-                }
-            }
-            else_if = {
-                limit = {
-                    FROM = {
-                        tag = NOR
-                    }
-                }
-                NOR = {
-                    load_oob = "NOR_CHROM_SPAWN"
-                }
-            }
-			else_if = {
-                limit = {
-                    FROM = {
-                        tag = POL
-                    }
-                }
-                POL = {
-                   load_oob = "POL_CHROM_SPAWN"
-                }
-
-				if = {
-					limit = { axis = yes }
-					if = {
-						limit = {
-							has_game_rule = {
-								rule = Brasil_AC_rule
-								option = Brasil_AC
-							}
-						}
-						ENG = {
-							add_to_faction = BRA
-						}
-						BRA = {
-							add_political_power = -25
-						}
-					}
-					HOL = {
-						diplomatic_relation = {
-							country = GER
-							relation = embargo
-							active = yes
-						}
-					}
-					allow_allies_grind = yes
-				}
-            }
-			else_if = {
-                limit = {
-                    FROM = {
-                        tag = YUG
-                    }
-                }
-                YUG = {
-                    load_oob = "YUG_CHROM_SPAWN"
-                }
-            }
-			else_if = {
-                limit = {
-                    FROM = {
-                        tag = GRE
-                    }
-                }
-                GRE = {
-                    load_oob = "GRE_CHROM_SPAWN"
-                }
-            }
-			else_if = {
-                limit = {
-                    FROM = {
-                        tag = CHI
-                    }
-                }
-                CHI = {
-                    load_oob = "CHI_CHROM_SPAWN"
-                }
-            }
-			
-		}
-	}
-
-	# HMM: keep this in sync with can_grind_generals scripted trigger
-	on_war_relation_added = {
-		effect = {
+			# HMM: keep this in sync with can_grind_generals scripted trigger
 			if = {
 				limit = {
 					OR = {
@@ -1148,224 +1555,102 @@ on_actions = {
 					}
 				}
 			}
+        }
+    }
+
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					axis = yes
+					FROM = {
+						allies = yes
+						is_in_faction = no
+					}
+				}
+				if = {
+					limit = { FROM = { allies_western = yes } }
+					ENG = { add_to_faction = FROM }
+				}
+				else_if = {
+					limit = { FROM = { allies_comintern = yes } }
+					SOV = { add_to_faction = FROM }
+				}
+			}
+			
+			FROM = {
+				if = {
+					limit = { tag = ALB }
+					load_oob = "ALB_CHROM_SPAWN"
+				}
+				else_if = {
+					limit = { tag = BEL }
+					load_oob = "BEL_CHROM_SPAWN"
+				}
+				else_if = {
+					limit = { tag = DEN }
+					load_oob = "DEN_CHROM_SPAWN"
+				}
+				else_if = {
+					limit = { tag = HOL }
+					load_oob = "HOL_CHROM_SPAWN"
+				}
+				else_if = {
+					limit = { tag = LUX }
+					load_oob = "LUX_CHROM_SPAWN"
+				}
+				else_if = {
+					limit = { tag = NOR }
+					load_oob = "NOR_CHROM_SPAWN"
+				}
+				else_if = {
+					limit = { tag = YUG }
+					load_oob = "YUG_CHROM_SPAWN"
+				}
+				else_if = {
+					limit = { tag = GRE }
+					load_oob = "GRE_CHROM_SPAWN"
+				}
+				else_if = {
+					limit = { tag = CHI }
+					load_oob = "CHI_CHROM_SPAWN"
+				}
+				else_if = {
+					limit = { tag = POL }
+					load_oob = "POL_CHROM_SPAWN"
+
+					if = {
+						limit = { ROOT = { axis = yes } }
+						if = {
+							limit = {
+								has_game_rule = {
+									rule = Brasil_AC_rule
+									option = Brasil_AC
+								}
+							}
+							ENG = { add_to_faction = BRA }
+							BRA = { add_political_power = -25 }
+						}
+						HOL = {
+							diplomatic_relation = {
+								country = GER
+								relation = embargo
+								active = yes
+							}
+						}
+						allow_allies_grind = yes
+					}
+				}
+			}
 		}
 	}
 
-	on_startup = {
-		effect = {
-			if = {
-				limit ={
-					OR = {
-						has_game_rule = {
-							rule = playable_iraq
-							option = allies
-						}
-						has_game_rule = {
-							rule = playable_iraq
-							option = subordinated
-						}
-					}
-				}
-				SWE = { send_embargo = IRQ }
-				POR = { send_embargo = IRQ }
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = playable_iraq
-							option = subordinated
-						}
-					}
-					ENG = {
-						IRQ = { subordinate_this_country_to_PREV = yes }
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					NOT = { # Set up this way for save compatibility (older versions of HMM used a different set of names for the options)
-						has_game_rule = {
-							rule = playable_iraq
-							option = axis
-						}
-					}
-				}
-				ENG = { 
-					annex_country = { target = IRQ transfer_troops = yes }
-					every_controlled_state = {
-						limit = {
-							is_core_of = IRQ
-						}
-						if = {
-							limit = {
-								has_dynamic_modifier = { modifier = IRQ_shia_resistance_modifier }
-							}
-							# Modifier should automatically invalidate, but let's manually remove them, just in case.
-							remove_dynamic_modifier = { modifier = IRQ_shia_resistance_modifier }
-						}
-						set_compliance = 100
-					}
-				}
-			}
-		}
-	}
 	on_weekly = {
-			effect = {
-				add_daily_mastery = {
-					amount = 1
-					days = 7
-					name = Mastery
-				}
-			}
-	}
-	on_startup = {
 		effect = {
-			if = {
-				limit = {
-					NOT = {
-						has_game_rule = {
-							rule = battlefield_support_status
-							option = allowed
-						}
-					}
-					any_country = {
-						has_doctrine = new_battlefield_support
-					}
-				}
-				every_country = {
-					limit = {
-						has_doctrine = new_battlefield_support
-						if = {
-							limit = {
-								has_game_rule = {
-									rule = battlefield_support_status
-									option = axis
-								}
-							}
-							allies = yes
-						}
-						else_if = {
-							limit = {
-								has_game_rule = {
-									rule = battlefield_support_status
-									option = allies
-								}
-							}
-							axis = yes
-						}
-					}
-					set_grand_doctrine = new_strategic_destruction
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_game_rule = {
-							rule = pinpoint_strikes_status
-							option = allowed
-						}
-					}
-					any_country = {
-						has_doctrine = air_subdoctrine_dive_bombers
-					}
-				}
-				every_country = {
-					limit = {
-						has_doctrine = air_subdoctrine_dive_bombers
-						if = {
-							limit = {
-								has_game_rule = {
-									rule = pinpoint_strikes_status
-									option = axis
-								}
-							}
-							allies = yes
-						}
-						else_if = {
-							limit = {
-								has_game_rule = {
-									rule = pinpoint_strikes_status
-									option = allies
-								}
-							}
-							axis = yes
-						}
-					}
-					set_sub_doctrine = {
-						sub_doctrine = air_subdoctrine_flexible_fire_support
-						folder = air
-					}
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_game_rule = {
-							rule = ground_support_subdoctrines_status
-							option = allowed
-						}
-					}
-					any_country = {
-						OR = {
-							has_doctrine = air_subdoctrine_fighter_bombers
-							has_doctrine = air_subdoctrine_tactical_battlefield_support
-							has_doctrine = air_subdoctrine_flying_artillery
-						}
-					}
-				}
-				every_country = {
-					limit = {
-						if = {
-							limit = {
-								has_game_rule = {
-									rule = ground_support_subdoctrines_status
-									option = axis
-								}
-							}
-							allies = yes
-						}
-						else_if = {
-							limit = {
-								has_game_rule = {
-									rule = ground_support_subdoctrines_status
-									option = allies
-								}
-							}
-							axis = yes
-						}
-						OR = {
-							has_doctrine = air_subdoctrine_fighter_bombers
-							has_doctrine = air_subdoctrine_tactical_battlefield_support
-							has_doctrine = air_subdoctrine_flying_artillery
-						}
-					}
-					if = {
-						limit = {
-							has_doctrine = air_subdoctrine_fighter_bombers
-						}
-						set_sub_doctrine = {
-							sub_doctrine = air_subdoctrine_dogfighting_mastery
-							folder = air
-						}
-					}
-					if = {
-						limit = {
-							has_doctrine = air_subdoctrine_tactical_battlefield_support
-						}
-						set_sub_doctrine = {
-							sub_doctrine = air_subdoctrine_operational_air_support
-							folder = air
-						}
-					}
-					if = {
-						limit = {
-							has_doctrine = air_subdoctrine_flying_artillery
-						}
-						set_sub_doctrine = {
-							sub_doctrine = air_subdoctrine_flexible_fire_support
-							folder = air
-						}
-					}
-				}
+			add_daily_mastery = {
+				amount = 1
+				days = 7
+				name = Mastery
 			}
 		}
 	}

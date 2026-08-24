@@ -5,19 +5,8 @@ ideas = {
 				always = no
 			}
 			cancel = {
-				OR = {
-					has_war = yes
-					AND = {
-						tag = SPR
-						any_country = {
-							has_volunteers_amount_from = {
-								tag = SPR
-								count > 0
-							} 
-						}
-						
-					}
-				}
+				has_war = yes
+				# Volunteers section is handled by on actions to help with performance (the game doesn't have a high-performant way of checking if a country has sent any volunteers)
 			}
 			removal_cost = -1
 			picture = generic_infantry_bonus
