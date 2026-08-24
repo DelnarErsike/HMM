@@ -168,7 +168,7 @@ ideas = {
 				enemy_operative_capture_chance_factor = -2
 			}
 		}
-		ai_tradelaw ={
+		ai_tradelaw = {
 			removal_cost = -1
 			picture = generic_goods_red_bonus
 			modifier = {
