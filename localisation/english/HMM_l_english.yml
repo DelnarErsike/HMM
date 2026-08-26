@@ -8,6 +8,8 @@
  pre_grind:0 "Pre-Grind"
  pre_grind_desc:0 "This general has been assigned levels and traits to simulate the effects of grinding for experience on the AI. They should definitely not be gaining any more levels or traits."
 
+ hmm_is_playable_country:0 "Is considered playable country"
+ hmm_is_annexable_playable_country:0 "Is considered playable country with another country that can annex this one"
  hmm_is_allies:0 "Is part of [ENG.GetFlag][USA.GetFlag][SOV.GetFlag] §4Allies§!"
  hmm_is_allies_western:0 "Is part of [ENG.GetFlag][FRA.GetFlag][USA.GetFlag] §4Western Allies§!"
  hmm_is_allies_western_early_join:0 "Is part of [ENG.GetFlag][FRA.GetFlag] §4Early Western Allies§!"
