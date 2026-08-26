@@ -1,47 +1,53 @@
 is_playable_country = {
-	OR = {
-		tag = GER
-		tag = ITA
-		tag = HUN
-		tag = ROM
-		tag = SPR
-		tag = BUL
-		tag = JAP
-		tag = SIA
-		tag = MAN
-		tag = FIN
-		tag = ENG
-		tag = FRA
-		tag = CAN
-		tag = AST
-		tag = BRA
-		tag = MEX
-		tag = NZL
-		tag = USA
-		tag = RAJ
-		tag = SAF
-		tag = SOV
-		tag = PHI
-		tag = IRQ
+	custom_trigger_tooltip = {
+		tooltip = hmm_is_playable_country
+		OR = {
+			tag = GER
+			tag = ITA
+			tag = HUN
+			tag = ROM
+			tag = SPR
+			tag = BUL
+			tag = JAP
+			tag = SIA
+			tag = MAN
+			tag = FIN
+			tag = ENG
+			tag = FRA
+			tag = CAN
+			tag = AST
+			tag = BRA
+			tag = MEX
+			tag = NZL
+			tag = USA
+			tag = RAJ
+			tag = SAF
+			tag = SOV
+			tag = PHI
+			tag = IRQ
+		}
 	}
 }
 
 # Playable countries that are supposed to be annexed at some point or have an annex decision available
 is_annexable_playable_country = {
-	OR = {
-		# Annexed into Japan
-		tag = SIA
-		tag = MAN
-		# Annexed into Australia
-		tag = NZL
-		# Annexed into USA
-		tag = PHI
-		# Annexed into UK
-		tag = IRQ
-		# Brazil has annex decision
-		tag = MEX
-		# France/Raj have annex decision
-		tag = SAF
+	custom_trigger_tooltip = {
+		tooltip = hmm_is_annexable_playable_country
+		OR = {
+			# Annexed into Japan
+			tag = SIA
+			tag = MAN
+			# Annexed into Australia
+			tag = NZL
+			# Annexed into USA
+			tag = PHI
+			# Annexed into UK
+			tag = IRQ
+			# Brazil has annex decision
+			tag = MEX
+			# France/Raj have annex decision
+			tag = SAF
+		}
 	}
 }
 
@@ -155,7 +161,7 @@ axis_european = {
 			}
 			tag = AUS # In case they aren't nomnomed by Germany
 			AND = {
-				original_tag = CZE # In case they aren't nomnomed by Germany
+				tag = CZE # In case they aren't nomnomed by Germany
 				is_ai = no
 			}
 			ai_rk = yes
@@ -216,9 +222,7 @@ deterrence_date_lock_passed = {
 
 ai_no_units = { # These countries should not make units at all
 	OR = {
-		tag = LIT
-		tag = LAT
-		tag = EST
+		is_baltic_country = yes
 		tag = AUS
 		tag = CZE
 		ai_annex = yes
@@ -243,6 +247,7 @@ ai_manpower = {
 	}
 }
 ai_annex = {
+	# We need this giant if-else structure because if we just use ANDs, the game crashes on startup
 	if = {
 		limit = {
 			has_game_rule = {
@@ -265,9 +270,7 @@ ai_annex = {
 					}
 				}
 				OR = {
-					tag = LIT
-					tag = LAT
-					tag = EST
+					is_baltic_country = yes
 					tag = AUS
 					tag = CZE
 					tag = COG
@@ -275,9 +278,7 @@ ai_annex = {
 			}
 			else = {
 				OR = {
-					tag = LIT
-					tag = LAT
-					tag = EST
+					is_baltic_country = yes
 					tag = AUS
 					tag = COG
 				}
@@ -291,18 +292,14 @@ ai_annex = {
 				}
 			}
 			OR = {
-				tag = LIT
-				tag = LAT
-				tag = EST
+				is_baltic_country = yes
 				tag = CZE
 				tag = COG
 			}
 		}
 		else = {
 			OR = {
-				tag = LIT
-				tag = LAT
-				tag = EST
+				is_baltic_country = yes
 				tag = COG
 			}
 		}
