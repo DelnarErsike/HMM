@@ -25,7 +25,66 @@ is_playable_country = {
 			tag = SOV
 			tag = PHI
 			tag = IRQ
+			AND = {
+				is_baltic_country = yes
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
+			}
+			AND = {
+				tag = AUS
+				NOT = {
+					has_game_rule = {
+						rule = austria_status
+						option = abstracted
+					}
+				}
+			}
+			AND = {
+				tag = CZE
+				NOT = {
+					has_game_rule = {
+						rule = czechs_status
+						option = abstracted
+					}
+				}
+			}
 		}
+	}
+}
+
+ # Used for history files and decision allows, needs to be separate because nothing in those fields can key off of game rules without crashing the game
+is_potentially_playable_country = {
+	OR = {
+		tag = GER
+		tag = ITA
+		tag = HUN
+		tag = ROM
+		tag = SPR
+		tag = BUL
+		tag = JAP
+		tag = SIA
+		tag = MAN
+		tag = FIN
+		tag = ENG
+		tag = FRA
+		tag = CAN
+		tag = AST
+		tag = BRA
+		tag = MEX
+		tag = NZL
+		tag = USA
+		tag = RAJ
+		tag = SAF
+		tag = SOV
+		tag = PHI
+		tag = IRQ
+		is_baltic_country = yes
+		tag = AUS
+		tag = CZE
 	}
 }
 
@@ -47,6 +106,36 @@ is_annexable_playable_country = {
 			tag = MEX
 			# France/Raj have annex decision
 			tag = SAF
+			# Nonnomed into Soviets
+			AND = {
+				is_baltic_country = yes
+				NOT = {
+					has_game_rule = {
+						rule = baltics_status
+						option = abstracted
+					}
+				}
+			}
+			# Nonnomed into Germany
+			AND = {
+				tag = AUS
+				NOT = {
+					has_game_rule = {
+						rule = austria_status
+						option = abstracted
+					}
+				}
+			}
+			# Nonnomed into Germany
+			AND = {
+				tag = CZE
+				NOT = {
+					has_game_rule = {
+						rule = czechs_status
+						option = abstracted
+					}
+				}
+			}
 		}
 	}
 }
