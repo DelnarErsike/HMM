@@ -269,11 +269,19 @@ NDefines.NTrade.DISTANCE_TRADE_FACTOR = -0.01			-- vanilla: -0.02. Scaled down t
 NDefines.NTrade.RELATION_TRADE_FACTOR = 0				-- vanilla: 1. Disabled so that people don't generally have to track (or can mess with) trade opinion through opinion modifiers on focuses and events and the like.
 NDefines.NDiplomacy.TROOP_FEAR = 0 						-- vanilla: 1. Disabled so troop locations do not affect trade opinion.
 NDefines.NDiplomacy.FLEET_FEAR = 0 						-- vanilla: 1. Disabled so fleet missions do not affect trade opinion.
+
 -- Misc. strategic bombing and air define changes
 NDefines.NSupply.RAILWAY_FLOW_PENALTY_PER_DAMAGED = 4.9 -- Scaled down a tiny bit to avoid rounding issues and to still let supply flow on partially damaged railway levels.
-NDefines.NAir.AIR_WING_BOMB_DAMAGE_FACTOR = 0.5 --Vanilla 2
-NDefines.NAir.AA_INDUSTRY_AIR_DAMAGE_FACTOR = 0 --Vanilla -0.12, effects moved to technologies instead because otherwise this define would clash with and potentially override technology effects like Dispersed's factory bombing vulnerability reduction
-NDefines.NAir.STRATEGIC_BOMBING_RAILWAY_PRIORITY_SCALE = 0					-- The scale of extra priority assigned to railway for strategic bombing
+NDefines.NAir.AIR_WING_BOMB_DAMAGE_FACTOR = 2
+NDefines.NAir.AA_INDUSTRY_AIR_DAMAGE_FACTOR = -0.12 --Vanilla -0.12, effects moved to technologies instead because otherwise this define would clash with and potentially override technology effects like Dispersed's factory bombing vulnerability reduction
+
+NDefines.NAir.BOMBING_DAMAGE_EXPERIENCE_SCALE = 0.0002           -- How much the experinence gained by bombing is scaled
+
+NDefines.NAir.STRATEGIC_BOMBING_PROV_BUILD_PRIO_SCALE = 0.0					-- Scale of the selected priority for provincial buildings
+NDefines.NAir.STRATEGIC_BOMBING_STATE_BUILD_PRIO_SCALE = 0.0					-- Scale of the selected priority for state buildings
+NDefines.NAir.STRATEGIC_BOMBING_INFRA_PRIO_SCALE = 0.0						-- Scale of the selected priority for infrastructure
+NDefines.NAir.STRATEGIC_BOMBING_RAILWAY_PRIORITY_SCALE = 0.0					-- The scale of extra priority assigned to railway for strategic bombing
+NDefines.NAir.STRATEGIC_BOMBING_STATE_BUILDING_SCALE = 1.0					-- The scale of state building priority for strategic bombing
 
 -- General map graphic changes to help performance (in case of no map mod being used) and make zoom levels less annoying
 --NDefines_Graphics.NAirGfx.MAX_MISSILE_BOMBING_SCENARIOS = 0

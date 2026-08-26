@@ -660,8 +660,7 @@ technologies = {
 			tank_heavy_cannon
 			lc_light_anti_air_battery #Module for Land Cruiser
 		}
-		static_anti_air_damage_factor = 0.10
-		tech_air_damage_factor = -0.02
+
 		enable_building = {
 			building = anti_air_building
 			level = 5
@@ -742,7 +741,6 @@ technologies = {
 		category_self_propelled_anti_air = {
 			air_attack = 0.15
 		}
-		static_anti_air_damage_factor = 0.10
 		tech_air_damage_factor = -0.02
 
 		path = {
@@ -793,7 +791,6 @@ technologies = {
 			hard_attack = 0.1
 		}
 		static_anti_air_damage_factor = 0.1
-		tech_air_damage_factor = -0.02
 
 		enable_equipment_modules = {
 			ship_anti_air_3
@@ -866,7 +863,7 @@ technologies = {
 		enable_equipment_modules = {
 			tank_heavy_cannon_2
 		}
-		static_anti_air_damage_factor = 0.1
+
 		tech_air_damage_factor = -0.02
 
 		path = {
@@ -925,7 +922,7 @@ technologies = {
 		category_self_propelled_anti_air = {
 			air_attack = 0.05
 		}
-		static_anti_air_damage_factor = 0.1
+
 		tech_air_damage_factor = -0.02
 
 		path = {
@@ -976,7 +973,6 @@ technologies = {
 			hard_attack = 0.1
 		}
 		static_anti_air_damage_factor = 0.1
-		tech_air_damage_factor = -0.02
 
 		enable_equipment_modules = {
 			ship_anti_air_4
