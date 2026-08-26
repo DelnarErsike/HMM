@@ -13,24 +13,29 @@ sp_complexity = {
         }
     }
 
+	# HMM: Note with all of these, in vanilla, there's a decent chance at prototype outcomes that give -5/10/15 or +5/10/15 progress, so the actual ranges of iterations needed is a lot wider.
     small = {
-        min = 25
-        max = 25
-    }
-
-    medium = {
+    	# HMM: vanilla is 15-25, so usually 5 iterations needed (6 if unlucky, 4 if very lucky). Average of 20 would result in 5 iterations, so set it to 20 to lock that in.
         min = 20
         max = 20
     }
 
+    medium = {
+    	# HMM: vanilla is 15-20, so almost always 6 iterations needed (5 if very lucky). Average of 17.5 would result in 6 iterations, so set it to 18 to lock that in.
+        min = 18
+        max = 18
+    }
+
     large = {
-        min = 17
-        max = 17
+    	# HMM: vanilla is 10-15, so between 6 and 9 iterations needed (10 if very unlucky). Average of 12.5 would result in 8 iterations, so set it to 13 to lock that in.
+        min = 13
+        max = 13
     }
 
     insane = {
-        min = 13
-        max = 13
+    	# HMM: vanilla is 5-10, so between 11 and 19 iterations needed (10 if very lucky, 20 if very unlucky). Average of 7.5 would result in 14 iterations, so set it to 8 to lock that in.
+        min = 8
+        max = 8
     }
 }
 
@@ -47,8 +52,8 @@ sp_time = {
     prototype = {
         short = 45
         medium = 60
-        long = 90
-        very_long = 180
+        long = 100
+        very_long = 200
     }
 }
 
