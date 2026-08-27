@@ -19,6 +19,16 @@
  hmm_is_axis_european:0 "Is part of [GER.GetFlag][ITA.GetFlag] §OEuropean Axis§!"
  hmm_is_axis_geacps:0 "Is part of [JAP.GetFlag] §0Asian Axis§!"
 
+ modifier_state_repair_speed_industrial_complex_factor: "§Y$industrial_complex$§! repair speed"
+ modifier_state_repair_speed_industrial_complex_factor_desc: "Modifies the speed of §Y$industrial_complex$§! repairs in this state."
+ modifier_state_repair_speed_arms_factory_factor: "§Y$arms_factory$§! repair speed"
+ modifier_state_repair_speed_arms_factory_factor_desc: "Modifies the speed of §Y$arms_factory$§! repairs in this state."
+ modifier_state_repair_speed_dockyard_factor: "§Y$dockyard$§! repair speed"
+ modifier_state_repair_speed_dockyard_factor_desc: "Modifies the speed of §Y$dockyard$§! repairs in this state."
+ state_production_speed_industrial_complex_factor_tt: " $modifier_state_repair_speed_industrial_complex_factor$: $RIGHT|+=%1$"
+ state_production_speed_arms_factory_factor_tt: " $modifier_state_repair_speed_arms_factory_factor$: $RIGHT|+=%1$"
+ state_production_speed_dockyard_factor_tt: " $modifier_state_repair_speed_dockyard_factor$: $RIGHT|+=%1$"
+
  autonomy_hmm_subordinated_country: "Subordinated Country"
  COUNTRY_autonomy_hmm_subordinated_country: "$OVERLORDADJ$ $NONIDEOLOGY$"
  COUNTRY_autonomy_hmm_subordinated_country_DEF: "$OVERLORDADJ$ $NONIDEOLOGYDEF$"
