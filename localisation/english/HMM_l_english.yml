@@ -28,6 +28,10 @@
  state_production_speed_industrial_complex_factor_tt: " $modifier_state_repair_speed_industrial_complex_factor$: $RIGHT|+=%1$"
  state_production_speed_arms_factory_factor_tt: " $modifier_state_repair_speed_arms_factory_factor$: $RIGHT|+=%1$"
  state_production_speed_dockyard_factor_tt: " $modifier_state_repair_speed_dockyard_factor$: $RIGHT|+=%1$"
+ sp_air_generic_reward_always: "$sp_air_generic_reward_scientist_xp_1$"
+ sp_land_generic_reward_always: "$sp_land_generic_reward_scientist_xp_1$"
+ sp_naval_generic_reward_always: "$sp_naval_generic_reward_scientist_xp_1$"
+ sp_nuclear_generic_industry_tech_reward: "$sp_nuclear_generic_reward_scientist_xp_1$"
 
  autonomy_hmm_subordinated_country: "Subordinated Country"
  COUNTRY_autonomy_hmm_subordinated_country: "$OVERLORDADJ$ $NONIDEOLOGY$"
