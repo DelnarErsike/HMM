@@ -246,6 +246,23 @@ NDefines.NMilitary.GENERATE_AI_DIV_COMMAND_HISTORY_ENTRIES = false	--Should we g
 NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 0.2 --makes redeployement of fighters faster vanilla is 0.02
 NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0                              -- Down from 2 | Makes AC player much more responsive
 
+-- Bombing define changes
+NDefines.NSupply.RAILWAY_FLOW_PENALTY_PER_DAMAGED = 4.99        -- Vanilla = 5, Scaled down a tiny bit to avoid rounding issues and to still let supply flow on partially damaged railway levels.
+NDefines.NAir.AIR_WING_BOMB_DAMAGE_FACTOR = 2                   -- Vanilla = 2, pre-factor for how much damage is done per strategic bombing point
+NDefines.NAir.EFFICIENCY_REGION_CHANGE_DAILY_GAIN_STRATEGIC_BOMBER = 0.072 -- Vanilla = 0.072, hourly efficiency growth for strategic bombers (initial efficiency is 10% at most)
+NDefines.NAir.BOMBING_DAMAGE_EXPERIENCE_SCALE = 0.0002          -- Vanilla = 0.0002, amount of air XP gained per bombing damage dealt
+-- The way the next define works (from reverse-engineering 1.7.1) is that the game effective uses [static AA level]x([this define] + [anti-air bombing damage reduction from techs]) for the total amount of bombing damage reduction in a state with AA
+-- 3x -2% bonuses are available through technologies in vanilla, one for each AA passive (1939, 1941, 1942).
+-- In a state with no AA, this define does nothing, but the game will still use [anti-air bombing damage reduction from techs] to reduce bombing damage against factories
+NDefines.NAir.AA_INDUSTRY_AIR_DAMAGE_FACTOR = -0.12             -- Vanilla = -0.12
+-- These defines are very interesting, they allow you to mess with how effective strategic bombing targeting is. If you set any to zero, then the game ignores targeting for that building type.
+-- Importantly, ignoring targeting for a building type means it will always be potentially targeted regardless of what targeting is set.
+NDefines.NAir.STRATEGIC_BOMBING_PROV_BUILD_PRIO_SCALE = 1.5     -- Vanilla = 1.5, Scale of the selected priority for provincial buildings
+NDefines.NAir.STRATEGIC_BOMBING_STATE_BUILD_PRIO_SCALE = 1.5    -- Vanilla = 1.5, Scale of the selected priority for state buildings
+NDefines.NAir.STRATEGIC_BOMBING_INFRA_PRIO_SCALE = 0.7          -- Vanilla = 0.7, Scale of the selected priority for infrastructure
+NDefines.NAir.STRATEGIC_BOMBING_RAILWAY_PRIORITY_SCALE = 0.2    -- Vanilla = 0.2, The scale of extra priority assigned to railway for strategic bombing
+NDefines.NAir.STRATEGIC_BOMBING_STATE_BUILDING_SCALE = 1.0      -- Vanilla = 1.0, The scale of state building priority for strategic bombing
+
 --THANKS THRASHY
 NDefines.NNavy.INITIAL_ALLOWED_DOCKYARD_RATIO_FOR_REPAIRS = 1.0				-- initially countries will allocate this ratio of dockyards for repairs
 NDefines.NCountry.COUNTRY_SCORE_MULTIPLIER = 0				-- Weight of the country score.
@@ -269,19 +286,6 @@ NDefines.NTrade.DISTANCE_TRADE_FACTOR = -0.01			-- vanilla: -0.02. Scaled down t
 NDefines.NTrade.RELATION_TRADE_FACTOR = 0				-- vanilla: 1. Disabled so that people don't generally have to track (or can mess with) trade opinion through opinion modifiers on focuses and events and the like.
 NDefines.NDiplomacy.TROOP_FEAR = 0 						-- vanilla: 1. Disabled so troop locations do not affect trade opinion.
 NDefines.NDiplomacy.FLEET_FEAR = 0 						-- vanilla: 1. Disabled so fleet missions do not affect trade opinion.
-
--- Misc. strategic bombing and air define changes
-NDefines.NSupply.RAILWAY_FLOW_PENALTY_PER_DAMAGED = 4.9 -- Scaled down a tiny bit to avoid rounding issues and to still let supply flow on partially damaged railway levels.
-NDefines.NAir.AIR_WING_BOMB_DAMAGE_FACTOR = 2
-NDefines.NAir.AA_INDUSTRY_AIR_DAMAGE_FACTOR = -0.12 --Vanilla -0.12, effects moved to technologies instead because otherwise this define would clash with and potentially override technology effects like Dispersed's factory bombing vulnerability reduction
-
-NDefines.NAir.BOMBING_DAMAGE_EXPERIENCE_SCALE = 0.0002           -- How much the experinence gained by bombing is scaled
-
-NDefines.NAir.STRATEGIC_BOMBING_PROV_BUILD_PRIO_SCALE = 0.0					-- Scale of the selected priority for provincial buildings
-NDefines.NAir.STRATEGIC_BOMBING_STATE_BUILD_PRIO_SCALE = 0.0					-- Scale of the selected priority for state buildings
-NDefines.NAir.STRATEGIC_BOMBING_INFRA_PRIO_SCALE = 0.0						-- Scale of the selected priority for infrastructure
-NDefines.NAir.STRATEGIC_BOMBING_RAILWAY_PRIORITY_SCALE = 0.0					-- The scale of extra priority assigned to railway for strategic bombing
-NDefines.NAir.STRATEGIC_BOMBING_STATE_BUILDING_SCALE = 1.0					-- The scale of state building priority for strategic bombing
 
 -- General map graphic changes to help performance (in case of no map mod being used) and make zoom levels less annoying
 --NDefines_Graphics.NAirGfx.MAX_MISSILE_BOMBING_SCENARIOS = 0
