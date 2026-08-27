@@ -66,6 +66,11 @@ buildings = {
 			shares_slots = yes
 			state_max = 20
 		}
+		state_modifiers = {
+			# HMM: synced with change to NAir.AIR_WING_BOMB_DAMAGE_FACTOR to hit a specific, desired steady-state in test scenarios
+			# Unfortunately, this will cause some IC inflation due to faster repair speeds from building sabotage, but we want to prioritize bombing damage tuning more
+			state_repair_speed_arms_factory_factor = 0.10
+		}
 	}
 
 	industrial_complex = {
@@ -79,6 +84,11 @@ buildings = {
 		level_cap = {
 			shares_slots = yes
 			state_max = 20
+		}
+		state_modifiers = {
+			# HMM: synced with change to NAir.AIR_WING_BOMB_DAMAGE_FACTOR to hit a specific, desired steady-state in test scenarios
+			# Unfortunately, this will cause some IC inflation due to faster repair speeds from building sabotage, but we want to prioritize bombing damage tuning more
+			state_repair_speed_industrial_complex_factor = 0.10
 		}
 	}
 
@@ -239,6 +249,11 @@ buildings = {
 		level_cap = {
 			shares_slots = yes
 			state_max = 20
+		}
+		state_modifiers = {
+			# HMM: synced with change to NAir.AIR_WING_BOMB_DAMAGE_FACTOR to hit a specific, desired steady-state in test scenarios
+			# Unfortunately, this will cause some IC inflation due to faster repair speeds from building sabotage, but we want to prioritize bombing damage tuning more
+			state_repair_speed_dockyard_factor = 0.10
 		}
 	}
 
