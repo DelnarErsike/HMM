@@ -10,6 +10,18 @@ on_actions = {
 					limit = { NOT = { has_idea = Spies_no_capture } }
 					add_ideas = Spies_no_capture
 				}
+				if = { 
+					limit = {
+						NOT = {
+							has_game_rule = {
+								rule = strat_bombing
+								option = allowed
+							}
+						}
+						NOT = { has_idea = strat_bombing_banned }
+					}
+					add_ideas = strat_bombing_banned
+				}
 				if = {
 					limit = { is_playable_country = yes }
 					if = {
