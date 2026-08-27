@@ -354,6 +354,19 @@ sp_naval_nuclear_submarine = {
 	prototype_time = sp_time.prototype.long	
 	allowed = {
 		has_dlc = "Gotterdammerung"
+		# HMM: Need to mirror fleet submarine allowed block to prevent the game from crashing when you hover over this project's tooltip
+		NOT = {
+			has_game_rule = {
+				rule = max_submarine_tech
+				option = sub2
+			}
+		}
+		NOT = {
+			has_game_rule = {
+				rule = max_submarine_tech
+				option = sub3_no_fleet
+			}
+		}
 	}
 
 	special_project_parent = {
@@ -532,6 +545,19 @@ sp_naval_rocket_launching_submarine = {
 	prototype_time = sp_time.prototype.long
 	allowed = {
 		has_dlc = "Gotterdammerung"
+		# HMM: Need to mirror fleet submarine allowed block to prevent the game from crashing when you hover over this project's tooltip
+		NOT = {
+			has_game_rule = {
+				rule = max_submarine_tech
+				option = sub2
+			}
+		}
+		NOT = {
+			has_game_rule = {
+				rule = max_submarine_tech
+				option = sub3_no_fleet
+			}
+		}
 	}
 
 	special_project_parent = {
@@ -712,6 +738,19 @@ sp_naval_nuclear_missile_submarine = {
 	prototype_time = sp_time.prototype.very_long 
 	allowed = {
 		has_dlc = "Gotterdammerung"
+		# HMM: Need to mirror fleet submarine allowed block to prevent the game from crashing when you hover over this project's tooltip
+		NOT = {
+			has_game_rule = {
+				rule = max_submarine_tech
+				option = sub2
+			}
+		}
+		NOT = {
+			has_game_rule = {
+				rule = max_submarine_tech
+				option = sub3_no_fleet
+			}
+		}
 	}
 
 	special_project_parent = {
@@ -879,6 +918,19 @@ sp_naval_nuclear_torpedo = {
 		AND = {
 			has_dlc= "Gotterdammerung"
 			has_dlc = "Man the Guns"
+		}
+		# HMM: Need to mirror fleet submarine allowed block to prevent the game from crashing when you hover over this project's tooltip
+		NOT = {
+			has_game_rule = {
+				rule = max_submarine_tech
+				option = sub2
+			}
+		}
+		NOT = {
+			has_game_rule = {
+				rule = max_submarine_tech
+				option = sub3_no_fleet
+			}
 		}
 	}
 	
