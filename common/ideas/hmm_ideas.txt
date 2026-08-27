@@ -193,5 +193,14 @@ ideas = {
 				conversion_cost_mil_to_civ_factor = 100
 			}
 		}
+		strat_bombing_banned = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				industry_air_damage_factor = -10
+			}
+		}
 	}
 }
