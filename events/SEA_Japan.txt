@@ -1170,6 +1170,7 @@ country_event = {
 	# Who do they think they are?
 	option = { 
 		name = SEA_japan_foreign_policy.13.b
+		trigger = { always = no }
 		ai_chance = {
 			base = 20
 			modifier = {
@@ -14802,6 +14803,18 @@ country_event = {
 	}
 	option = {
 		name = SEA_border_incidents_events.2.b
+		trigger = {
+			OR = {
+				has_game_rule = {
+					rule = jap_sov_war_allowed
+					option = only_focuses_with_border_conflicts
+				}
+				has_game_rule = {
+					rule = jap_sov_war_allowed
+					option = vanilla
+				}
+			}
+		}
 		ai_chance = {
 			base = 25
 			modifier = {

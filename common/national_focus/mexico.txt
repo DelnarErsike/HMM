@@ -137,7 +137,7 @@ focus_tree = {
 		}
 
 		available = {
-			
+			NOT = { has_completed_focus = MEX_focus_agricultural_credit_bank }
 		}
 
 		bypass = {
@@ -267,11 +267,31 @@ focus_tree = {
 		}
 
 		available = {
-			
+			NOT = { has_completed_focus = MEX_focus_jefe_maximo }
 		}
 
 		bypass = {
 			
+		}
+		allow_branch = {
+			OR = {
+				has_game_rule = {
+					rule = alt_hist_mex
+					option = banned
+				}
+				has_game_rule = {
+					rule = alt_hist_mex
+					option = only_caudillos
+				}
+				has_game_rule = {
+					rule = alt_hist_mex
+					option = only_christian_democracy
+				}
+				has_game_rule = {
+					rule = alt_hist_mex
+					option = allowed
+				}
+			}
 		}
 
 		cancel_if_invalid = yes

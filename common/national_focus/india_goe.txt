@@ -7410,6 +7410,15 @@ focus_tree = {
         available = {
             992 = { is_fully_controlled_by = ROOT }
             NOT = { has_completed_focus = RAJ_look_to_the_past }
+            if = {
+				limit = {
+					has_game_rule = {
+						rule = deterrence_enabled
+						option = yes_w_fort_focuses_time_locked
+					}
+				}
+				deterrence_date_lock_passed = yes
+			}
         }
         
         bypass = {
@@ -18758,6 +18767,15 @@ focus = {
 
 	available = {
 		992 = { is_fully_controlled_by = ROOT }
+        if = {
+            limit = {
+                has_game_rule = {
+                    rule = deterrence_enabled
+                    option = yes_w_fort_focuses_time_locked
+                }
+            }
+            deterrence_date_lock_passed = yes
+        }
 	}
 
 	search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -21570,7 +21588,15 @@ focus = {
             432 = {
                 is_fully_controlled_by = ROOT
             }
-            date > 1937.12.31 # Prevents newbies on SAF from taking Deterrence
+            if = {
+				limit = {
+					has_game_rule = {
+						rule = deterrence_enabled
+						option = yes_w_fort_focuses_time_locked
+					}
+				}
+				deterrence_date_lock_passed = yes
+			}
         }
         
         bypass = {
@@ -21917,7 +21943,15 @@ focus = {
         }
 
         available = {
-            date > 1937.12.31 # Prevents newbies on SAF from taking Deterrence
+            if = {
+				limit = {
+					has_game_rule = {
+						rule = deterrence_enabled
+						option = yes_w_fort_focuses_time_locked
+					}
+				}
+				deterrence_date_lock_passed = yes
+			}
         }
         
         bypass = {

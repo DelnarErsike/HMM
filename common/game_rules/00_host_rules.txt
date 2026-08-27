@@ -332,6 +332,11 @@ max_submarine_tech= {
 		desc = "Improved Submarine hulls, Advanced Submarine hulls, all snorkel technologies, and all AIP engine upgrade technologies are banned. Fleet submarines, nuclear submarines, and missile launching submarines are indirectly banned."
 	}
 	option = {
+		name = sub3_no_fleet
+		text = "O1939 w/o Fleet Submarines"
+		desc = "Fleet submarines, Advanced Submarine hulls, the Improved Snorkel technology, and the High-Speed Walter Engines technology are banned. Nuclear submarines, and missile launching submarines are indirectly banned."
+	}
+	option = {
 		name = sub3
 		text = "Y1939"
 		desc = "Advanced Submarine hulls, the Improved Snorkel technology, and the High-Speed Walter Engines technology are banned."
@@ -350,6 +355,11 @@ max_field_hospital_tech = {
 		name = none
 		text = "RBanned"
 		desc = "Field hospital technologies cannot be unlocked at all."
+	}
+	option = {
+		name = hospital_1_no_heli
+		text = "01936"
+		desc = "Field hospitals can be unlocked, but no passive upgrades for them are available."
 	}
 	default = {
 		name = hospital_1
@@ -385,6 +395,36 @@ easier_arteries_of_trade_for_allies = {
 		name = yes
 		text = "GShould Be Trivial for the Allies"
 		desc = "To complete the Protect the Arteries of Trade faction goal, the Allies will need to establish dominance in just one of 16 specific sea zones."
+	}
+}
+jap_sov_war_allowed = {
+	name = "Can Japan and the Soviet Union Go To War?"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_ignite_civil_war"
+	default = {
+		name = banned
+		text = "GFully Banned"
+		desc = "Japan and the Soviet Union cannot go to war with each other under any circumstances, nor are they allowed to get into any border conflicts."
+	}
+	option = {
+		name = only_focuses_restricted
+		text = "4Only Through Focuses, Restricted"
+		desc = "Japan and the Soviet Union can only go to war with each other through completing national focuses. Japan can only complete their focuses after the US and UK have capitulated, and the Soviets can only complete their focuses after Germany and Italy have capitulated. Border conflicts between them are still disallowed."
+	}
+	option = {
+		name = only_focuses
+		text = "YOnly Through Focuses"
+		desc = "Japan and the Soviet Union can only go to war with each other through completing national focuses. Border conflicts between them are still disallowed."
+	}
+	option = {
+		name = only_focuses_with_border_conflicts
+		text = "OOnly Through Focuses, Border Conflicts Allowed"
+		desc = "Japan and the Soviet Union can only go to war with each other through completing national focuses or through border conflicts."
+	}
+	option = {
+		name = vanilla
+		text = "RUnmodified"
+		desc = "There are no special rules for wars between Japan and the Soviet Union, including the border conflict."
 	}
 }
 sov_boost = {
@@ -705,17 +745,17 @@ axis_facility_handicaps = {
 	option = {
 		name = bul_land
 		text = "8Bulgaria Land Facility"
-		desc = "Bulgaria gets a free land facility spawned in for it at startup."
+		desc = "Bulgaria gets a free land warfare facility spawned in for it at startup."
 	}
 	option = {
 		name = spa_land
 		text = "9Spain Land Facility"
-		desc = "Spain gets a free land facility spawned in for it at startup."
+		desc = "Spain gets a free land warfare facility spawned in for it at startup."
 	}
 	default = {
 		name = bul_land_spa_land
 		text = "tBulgaria & Spain Land Facility"
-		desc = "Bulgaria and Spain get free land facilities spawned in for them at startup."
+		desc = "Bulgaria and Spain get free land warfare facilities spawned in for them at startup."
 	}
 }
 soviet_facility_handicaps = {
@@ -730,17 +770,17 @@ soviet_facility_handicaps = {
 	default = {
 		name = land
 		text = "8Land Facility"
-		desc = "The Soviets get a free land facility spawned in for them at startup."
+		desc = "The Soviets get a free land warfare facility spawned in for them at startup."
 	}
 	option = {
 		name = naval
 		text = "9Naval Facility"
-		desc = "The Soviets get a free naval facility spawned in for them at startup."
+		desc = "The Soviets get a free naval engineering facility spawned in for them at startup."
 	}
 	option = {
 		name = land_naval
 		text = "tLand & Naval Facility"
-		desc = "The Soviets get a free land facility and a free naval facility spawned in for them at startup."
+		desc = "The Soviets get a free land warfare facility and a free naval engineering facility spawned in for them at startup."
 	}
 }
 playable_iraq = {
@@ -786,6 +826,26 @@ strat_bombing = {
 		name = banned_no_eco_nerf
 		text = "YBanned and German Eco Unnerfed"
 		desc = "Strategic Bombers banned and German Eco Unnerfed"
+	}
+}
+deterrence_enabled = {
+	name = "Deterrence Is..."
+	group = "HMM Rules"
+	icon = "GFX_maximum_fort_level"
+	option = {
+		name = no
+		text = "RBanned"
+		desc = "The Build Stronger Fortifications short-term faction goal cannot be taken by anyone, and thus the Deterrence spirit is effectively banned from the game."
+	}
+	default = {
+		name = yes_w_fort_focuses_time_locked
+		text = "YAllowed w/ Time-Locked Focuses"
+		desc = "The Build Stronger Fortifications short-term faction goal can be completed as normal and will provide the Deterrence spirit to all faction members when completed. Certain focuses on minor nations are time-locked to prevent them from inadvertently removing their faction's ability to get Deterrence."
+	}
+	option = {
+		name = yes
+		text = "GAllowed"
+		desc = "The Build Stronger Fortifications short-term faction goal can be completed as normal and will provide the Deterrence spirit to all faction members when completed."
 	}
 }
 spanish_production = {

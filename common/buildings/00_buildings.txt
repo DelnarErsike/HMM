@@ -30,6 +30,7 @@ buildings = {
 	#   disable_grow_animation = yes # Disables the grow animation for the building, default = no
 	#   missing_tech_loc = <bindable localization> # See script concept bindable localization
 	#   repair_speed_factor = 0.5 # Optional. Factor for how fast the building is repaired (default = 1.0)
+	# }
 
 	infrastructure = {
 		base_cost = 6000
@@ -65,6 +66,11 @@ buildings = {
 			shares_slots = yes
 			state_max = 20
 		}
+		state_modifiers = {
+			# HMM: synced with change to NAir.AIR_WING_BOMB_DAMAGE_FACTOR to hit a specific, desired steady-state in test scenarios
+			# Unfortunately, this will cause some IC inflation due to faster repair speeds from building sabotage, but we want to prioritize bombing damage tuning more
+			state_repair_speed_arms_factory_factor = 0.10
+		}
 	}
 
 	industrial_complex = {
@@ -79,6 +85,11 @@ buildings = {
 			shares_slots = yes
 			state_max = 20
 		}
+		state_modifiers = {
+			# HMM: synced with change to NAir.AIR_WING_BOMB_DAMAGE_FACTOR to hit a specific, desired steady-state in test scenarios
+			# Unfortunately, this will cause some IC inflation due to faster repair speeds from building sabotage, but we want to prioritize bombing damage tuning more
+			state_repair_speed_industrial_complex_factor = 0.10
+		}
 	}
 
 	air_base = {
@@ -87,7 +98,7 @@ buildings = {
 		icon_frame = 5
 		air_base = yes
 		value = 1
-		damage_factor = 0.5
+		damage_factor = 0 # HMM: reduced from 0.5, mainly to avoid feedback loops around strategic bombing and annoying situations where air bases could get accidentally overstacked
 		allied_build = yes
 		infrastructure_construction_effect = yes
 		level_cap = {
@@ -100,10 +111,9 @@ buildings = {
 		base_cost = 20000
 		disabled_in_dmz = yes
 		icon_frame = 15
-		value = 25
 		centered = yes
 		supply_node = yes
-		damage_factor = 0.01
+		damage_factor = 0 # HMM: reduced from 0.1, since even a tiny bit of damage is enough to turn off a supply hub entirely
 		allied_build = yes
 		always_shown = yes
 		infrastructure_construction_effect = yes
@@ -118,7 +128,6 @@ buildings = {
 		per_level_extra_cost = 130
 		disabled_in_dmz = yes
 		icon_frame = 16
-		value = 10
 		damage_factor = 0.01
 		infrastructure_construction_effect = yes
 		level_cap = {
@@ -242,6 +251,11 @@ buildings = {
 			shares_slots = yes
 			state_max = 20
 		}
+		state_modifiers = {
+			# HMM: synced with change to NAir.AIR_WING_BOMB_DAMAGE_FACTOR to hit a specific, desired steady-state in test scenarios
+			# Unfortunately, this will cause some IC inflation due to faster repair speeds from building sabotage, but we want to prioritize bombing damage tuning more
+			state_repair_speed_dockyard_factor = 0.10
+		}
 	}
 
 	
@@ -252,7 +266,7 @@ buildings = {
 		anti_air = yes
 		disabled_in_dmz = yes
 		air_defence = 1
-		damage_factor = 0.1
+		damage_factor = 0 # HMM: reduced from 0.1, since even that amount of damage would lead to feedback loops where bombing AA would cause more damage and get more AA bombed until the state has no more AA left
 		value = 1
 		infrastructure_construction_effect = yes
 		level_cap = {
@@ -264,7 +278,7 @@ buildings = {
 		show_on_map = 1
 		base_cost = 14500
 		icon_frame = 10
-		damage_factor = 0
+		damage_factor = 0 # HMM: removed ability to damage, since even a tiny bit of damage is enough to turn off a building entirely
 		#local_resources_oil = 1 # May use local_resources_ + any resource name
 		local_resources_rubber = 1 # May use local_resources_ + any resource name
 		refinery = yes

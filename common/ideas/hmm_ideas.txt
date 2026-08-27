@@ -5,19 +5,8 @@ ideas = {
 				always = no
 			}
 			cancel = {
-				OR = {
-					has_war = yes
-					AND = {
-						tag = SPR
-						any_country = {
-							has_volunteers_amount_from = {
-								tag = SPR
-								count > 0
-							} 
-						}
-						
-					}
-				}
+				has_war = yes
+				# Volunteers section is handled by on actions to help with performance (the game doesn't have a high-performant way of checking if a country has sent any volunteers)
 			}
 			removal_cost = -1
 			picture = generic_infantry_bonus
@@ -168,7 +157,7 @@ ideas = {
 				enemy_operative_capture_chance_factor = -2
 			}
 		}
-		ai_tradelaw ={
+		ai_tradelaw = {
 			removal_cost = -1
 			picture = generic_goods_red_bonus
 			modifier = {
@@ -202,6 +191,15 @@ ideas = {
 				industrial_capacity_dockyard = -10
 				conversion_cost_civ_to_mil_factor = 100
 				conversion_cost_mil_to_civ_factor = 100
+			}
+		}
+		strat_bombing_banned = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				industry_air_damage_factor = -10
 			}
 		}
 	}

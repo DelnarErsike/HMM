@@ -20970,6 +20970,16 @@ focus_tree = {
 			any_core_state = {
 				is_controlled_by = ROOT
 			}
+			if = {
+				limit = {
+					is_ai = no
+					has_game_rule = {
+						rule = deterrence_enabled
+						option = yes_w_fort_focuses_time_locked
+					}
+				}
+				deterrence_date_lock_passed = yes
+			}
 		}
 	
 		completion_reward = {

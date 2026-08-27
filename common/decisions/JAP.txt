@@ -2818,7 +2818,6 @@ operations = {
 	# First border incident
 	JAP_test_the_soviets = {
 		icon = border_war
-		visible = { always = no }
 		allowed = {
 			original_tag = JAP
 		}
@@ -2846,6 +2845,22 @@ operations = {
 			NOT = {
 				has_global_flag = JAP_kalkin_gol
 				has_completed_focus = JAP_okadas_military_purge_speech
+			}
+			original_tag = JAP
+			OR = {
+				has_game_rule = {
+					rule = jap_sov_war_allowed
+					option = only_focuses_with_border_conflicts
+				}
+				has_game_rule = {
+					rule = jap_sov_war_allowed
+					option = vanilla
+				}
+			}
+			OR = {
+				has_completed_focus = JAP_sea_purge_the_kodoha_faction
+				has_completed_focus = JAP_support_the_kodoha_faction
+				has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
 			}
 		}
 
@@ -3341,6 +3356,7 @@ operations = {
 		}
 
 		remove_effect = {
+			set_global_flag = JAP_SOV_border_conflict_escalated_to_war
 			cancel_border_war = {
 				dont_fire_events = yes
 				defender = 408

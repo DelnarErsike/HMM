@@ -8187,6 +8187,15 @@ initial_show_position = {
 					}
 				}
 			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = deterrence_enabled
+						option = yes_w_fort_focuses_time_locked
+					}
+				}
+				deterrence_date_lock_passed = yes
+			}
 		}
 
 		bypass = {
@@ -8315,6 +8324,15 @@ initial_show_position = {
 		cost = 5
 
 		available = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = deterrence_enabled
+						option = yes_w_fort_focuses_time_locked
+					}
+				}
+				deterrence_date_lock_passed = yes
+			}
 		}
 
 		bypass = {

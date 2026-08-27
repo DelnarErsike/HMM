@@ -137,6 +137,16 @@
 
 		available = {
 			CZE = { controls_state = 9 }
+			if = {
+				limit = {
+					is_ai = no
+					has_game_rule = {
+						rule = deterrence_enabled
+						option = yes_w_fort_focuses_time_locked
+					}
+				}
+				deterrence_date_lock_passed = yes
+			}
 		}
 
 		bypass = {
@@ -194,6 +204,16 @@
 			CZE = { 
 				controls_state = 69 
 				controls_state = 972 
+			}
+			if = {
+				limit = {
+					is_ai = no
+					has_game_rule = {
+						rule = deterrence_enabled
+						option = yes_w_fort_focuses_time_locked
+					}
+				}
+				deterrence_date_lock_passed = yes
 			}
 		}
 
@@ -387,6 +407,16 @@
 				controls_state = 69 
 				controls_state = 972 
 			}
+			if = {
+				limit = {
+					is_ai = no
+					has_game_rule = {
+						rule = deterrence_enabled
+						option = yes_w_fort_focuses_time_locked
+					}
+				}
+				deterrence_date_lock_passed = yes
+			}
 		}
 
 		bypass = {
@@ -568,6 +598,16 @@
 			CZE = { 
 				controls_state = 69 
 				controls_state = 972
+			}
+			if = {
+				limit = {
+					is_ai = no
+					has_game_rule = {
+						rule = deterrence_enabled
+						option = yes_w_fort_focuses_time_locked
+					}
+				}
+				deterrence_date_lock_passed = yes
 			}
 		}
 
@@ -763,6 +803,16 @@
 		available = {
 			CZE = { controls_state = 664 }
 			CZE = { controls_state = 73 }
+			if = {
+				limit = {
+					is_ai = no
+					has_game_rule = {
+						rule = deterrence_enabled
+						option = yes_w_fort_focuses_time_locked
+					}
+				}
+				deterrence_date_lock_passed = yes
+			}
 		}
 
 		bypass = {
@@ -821,6 +871,16 @@
 		available = {
 			CZE = { controls_state = 71 }
 			CZE = { controls_state = 72 }
+			if = {
+				limit = {
+					is_ai = no
+					has_game_rule = {
+						rule = deterrence_enabled
+						option = yes_w_fort_focuses_time_locked
+					}
+				}
+				deterrence_date_lock_passed = yes
+			}
 		}
 
 		bypass = {
@@ -876,6 +936,16 @@
 			CZE = { controls_state = 70 }
 			CZE = { controls_state = 75 }
 			CZE = { controls_state = 664 }
+			if = {
+				limit = {
+					is_ai = no
+					has_game_rule = {
+						rule = deterrence_enabled
+						option = yes_w_fort_focuses_time_locked
+					}
+				}
+				deterrence_date_lock_passed = yes
+			}
 		}
 
 		bypass = {
