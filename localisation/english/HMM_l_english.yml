@@ -19,6 +19,11 @@
  hmm_is_axis_european:0 "Is part of [GER.GetFlag][ITA.GetFlag] §OEuropean Axis§!"
  hmm_is_axis_geacps:0 "Is part of [JAP.GetFlag] §0Asian Axis§!"
 
+ sp_air_generic_reward_always: "$sp_air_generic_reward_scientist_xp_1$"
+ sp_land_generic_reward_always: "$sp_land_generic_reward_scientist_xp_1$"
+ sp_naval_generic_reward_always: "$sp_naval_generic_reward_scientist_xp_1$"
+ sp_nuclear_generic_industry_tech_reward: "$sp_nuclear_generic_reward_scientist_xp_1$"
+
  autonomy_hmm_subordinated_country: "Subordinated Country"
  COUNTRY_autonomy_hmm_subordinated_country: "$OVERLORDADJ$ $NONIDEOLOGY$"
  COUNTRY_autonomy_hmm_subordinated_country_DEF: "$OVERLORDADJ$ $NONIDEOLOGYDEF$"
