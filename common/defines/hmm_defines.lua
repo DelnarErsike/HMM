@@ -246,11 +246,10 @@ NDefines.NMilitary.GENERATE_AI_DIV_COMMAND_HISTORY_ENTRIES = false	--Should we g
 NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 0.2 --makes redeployement of fighters faster vanilla is 0.02
 NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0                              -- Down from 2 | Makes AC player much more responsive
 
--- Bombing define changes
+-- Bombing defines
 NDefines.NSupply.RAILWAY_FLOW_PENALTY_PER_DAMAGED = 4.99        -- Vanilla = 5, Scaled down a tiny bit to avoid rounding issues and to still let supply flow on partially damaged railway levels.
 NDefines.NAir.AIR_WING_BOMB_DAMAGE_FACTOR = 0.2                 -- Vanilla = 2, pre-factor for how much damage is done per strategic bombing point. Tuned to match a steady-state of around 10 mils (and 10 civs) per state undamaged in the test scenario, in sync with repair speed modifiers added in 00_buildings.txt (in this case, with a bonus of +10% repair speed per building level).
 NDefines.NAir.EFFICIENCY_REGION_CHANGE_DAILY_GAIN_STRATEGIC_BOMBER = 0.072 -- Vanilla = 0.072, hourly efficiency growth for strategic bombers (initial efficiency is 10% at most)
-NDefines.NAir.BOMBING_DAMAGE_EXPERIENCE_SCALE = 0.0002          -- Vanilla = 0.0002, amount of air XP gained per bombing damage dealt
 -- The way the next define works (from reverse-engineering 1.7.1) is that the game effective uses [static AA level]x([this define] + [anti-air bombing damage reduction from techs]) for the total amount of bombing damage reduction in a state with AA
 -- 3x -2% bonuses are available through technologies in vanilla, one for each AA passive (1939, 1941, 1942).
 -- In a state with no AA, this define does nothing, but the game will still use [anti-air bombing damage reduction from techs] to reduce bombing damage against factories
