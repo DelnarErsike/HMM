@@ -159,6 +159,7 @@ equipment_modules = {
 		multiply_stats = {
 			build_cost_ic = 0.2
 			armor_value = 0.3
+			max_strength = 0.1
 		}
 	}
 
@@ -174,6 +175,7 @@ equipment_modules = {
 		dismantle_cost_ic = 1
 		multiply_stats = {
 			armor_value = 0.3
+			max_strength = 0.05
 		}
 
 		build_cost_resources = {
@@ -364,15 +366,12 @@ equipment_modules = {
 		forbid_equipment_type_exact_match_for_category = {
 			tank_medium_main_armament = {
 				armor
-				amphibious 
 			}
 			tank_heavy_main_armament = {
 				armor
-				amphibious 
 			}
 			tank_super_heavy_main_armament = {
 				armor
-				amphibious 
 			}
 		}
 
@@ -475,11 +474,9 @@ equipment_modules = {
 		forbid_equipment_type_exact_match_for_category = {
 			tank_heavy_main_armament = {
 				armor
-				amphibious 
 			}
 			tank_super_heavy_main_armament = {
 				armor
-				amphibious 
 			}
 		}
 
@@ -571,7 +568,6 @@ equipment_modules = {
 		forbid_equipment_type_exact_match_for_category = {
 			tank_super_heavy_main_armament = {
 				armor
-				amphibious 
 			}
 		}
 		dismantle_cost_ic = 1
@@ -804,7 +800,7 @@ equipment_modules = {
 			soft_attack = 8
 			hard_attack = 5
 			ap_attack = 18
-			air_attack = 32
+			air_attack = 30
 			build_cost_ic = 3
 			reliability = -0.1
 		}
@@ -830,7 +826,7 @@ equipment_modules = {
 			soft_attack = 10
 			hard_attack = 5
 			ap_attack = 24
-			air_attack = 46
+			air_attack = 42
 			build_cost_ic = 4
 			reliability = -0.1
 		}
@@ -1025,12 +1021,13 @@ equipment_modules = {
 
 		add_stats = {
 			soft_attack = 25
-			hard_attack = 1
+			hard_attack = 4
 			ap_attack = 2
 			build_cost_ic = 4
 			maximum_speed = -0.1
 			reliability = -0.1
-			breakthrough = -2
+			breakthrough = 4
+			defense = 4
 		}
 		dismantle_cost_ic = 1
 		can_convert_from = {
@@ -1053,12 +1050,13 @@ equipment_modules = {
 		forbid_equipment_type_exact_match = armor
 		add_stats = {
 			soft_attack = 35
-			hard_attack = 1
+			hard_attack = 6
 			ap_attack = 2
 			build_cost_ic = 5
 			maximum_speed = -0.2
 			reliability = -0.1
-			breakthrough = -2
+			breakthrough = 8
+			defense = 8
 		}
 		dismantle_cost_ic = 1
 		can_convert_from = {
@@ -1421,6 +1419,9 @@ equipment_modules = {
 			breakthrough = 5
 		}
 
+		multiply_stats = {
+			hard_attack = 0.04
+		}
 	}
 
 	smoke_launchers = {
@@ -1431,7 +1432,7 @@ equipment_modules = {
 		add_stats = {
 			build_cost_ic = 0.5
 			defense = 2
-			breakthrough = 1
+			breakthrough = 2
 		}
 		multiply_stats = {
 
@@ -1445,8 +1446,8 @@ equipment_modules = {
 
 		add_stats = {
 			reliability = -0.1
-			breakthrough = 2
-			defense = 4
+			breakthrough = 3
+			defense = 5
 		}
 	}
 
@@ -1520,7 +1521,10 @@ equipment_modules = {
 			breakthrough = 4
 			defense = 4
 		}
-		
+		multiply_stats = {
+			soft_attack = 0.02
+			air_attack = 0.02
+		}
 	}
 
 	easy_maintenance = {
@@ -1529,11 +1533,11 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			reliability = 0.1
+			reliability = 0.075
 		}
 		dismantle_cost_ic = 1
 		multiply_stats = {
-			build_cost_ic = -0.075
+			build_cost_ic = -0.05
 		}
 	}
 
