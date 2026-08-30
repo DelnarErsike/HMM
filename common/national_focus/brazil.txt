@@ -54,7 +54,7 @@ focus_tree = {
 		allow_branch = {
 			NOT = {
 				has_game_rule = {
-					rule = alt_hist_bul
+					rule = alt_hist_bra
 					option = forced
 				}
 			}
@@ -4601,7 +4601,7 @@ focus_tree = {
 		allow_branch = {
 			NOT = {
 				has_game_rule = {
-					rule = alt_hist_bul
+					rule = alt_hist_bra
 					option = banned
 				}
 			}
