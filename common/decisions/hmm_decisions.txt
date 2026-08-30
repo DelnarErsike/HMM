@@ -195,7 +195,7 @@ operations = {
             else_if = {
                 limit = {
                     has_game_rule = {
-                        rule = who_gets_saf_annex
+                        rule = who_gets_mex_annex
                         option = usa
                     }
                 }
@@ -321,7 +321,7 @@ operations = {
             else_if = {
                 limit = {
                     has_game_rule = {
-                        rule = who_gets_saf_annex
+                        rule = who_gets_mex_annex
                         option = usa
                     }
                 }
