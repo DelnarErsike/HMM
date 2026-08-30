@@ -783,6 +783,31 @@ soviet_facility_handicaps = {
 		desc = "The Soviets get a free land warfare facility and a free naval engineering facility spawned in for them at startup."
 	}
 }
+mongol_licenses_to_soviets = {
+	name = "Mongolian Licenses for Soviets"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_merge_plant_materiel"
+	option = {
+		name = none
+		text = "RNone"
+		desc = "The Soviets do not get any licenses from Mongolia."
+	}
+	option = {
+		name = mech
+		text = "OMechanized"
+		desc = "The license decision for cheap mechanized gives Mongolian-licensed equipment for the Soviets instead of Swedish-licensed."
+	}
+	default = {
+		name = guns
+		text = "YInfantry Equipment"
+		desc = "The license decisions for infantry equipment 2 and 3 give Mongolian-licensed equipment for the Soviets instead of Swedish-licensed."
+	}
+	option = {
+		name = guns_and_mech
+		text = "GInfantry Equipment & Mechanized"
+		desc = "The license decisions for cheap mechanized and infantry equipment 2 and 3 give Mongolian-licensed equipment for the Soviets instead of Swedish-licensed."
+	}
+}
 playable_iraq = {
 	name = "Status of Iraq"
 	group = "HMM Rules"

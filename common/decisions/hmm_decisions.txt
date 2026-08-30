@@ -1246,6 +1246,22 @@ Technologies = {
         }
         visible = {
             is_ai = no
+            OR = {
+                NOT = { tag = SOV }
+                MON = { is_ai = no }
+                NOT = {
+                    has_game_rule = {
+                        rule = mongol_licenses_to_soviets
+                        option = mech
+                    }
+                }
+                NOT = {
+                    has_game_rule = {
+                        rule = mongol_licenses_to_soviets
+                        option = guns_and_mech
+                    }
+                }
+            }
         }
         available = {
             date > 1937.08.01
@@ -1261,6 +1277,71 @@ Technologies = {
         }
         complete_effect = {
             SWE = {
+                create_production_license = {
+                    target = ROOT
+                    equipment = {
+                        type = mechanized_equipment_1
+                        version = 1
+                    }
+                    cost_factor = 0
+                }
+            }
+        }
+    }
+    auto_mech_mon_sov = {
+        # icon = generic_operation
+        allowed = {
+            tag = SOV
+        }
+        fire_only_once = no
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        visible = {
+            is_ai = no
+            MON = { is_ai = yes }
+            OR = {
+                has_game_rule = {
+                    rule = mongol_licenses_to_soviets
+                    option = mech
+                }
+                has_game_rule = {
+                    rule = mongol_licenses_to_soviets
+                    option = guns_and_mech
+                }
+            }
+        }
+        available = {
+            date > 1937.08.01
+            NOT = {
+                has_license = {
+                    from = MON
+                    equipment = {
+                        type = mechanized_equipment_1
+                        version = 1
+                    }
+                }
+            }
+        }
+        complete_effect = {
+            MON = {
+                if = {
+                    limit = {
+                        NOT = { has_tech = mechanised_infantry }
+                    }
+                    set_technology = {
+                        mechanised_infantry = 1
+                    }
+                }
+                create_equipment_variant = {
+                    name = "Cheap Mechanised"
+                    type = mechanized_equipment_1
+                    parent_version = 0
+                    upgrades = {
+                        mech_cost_upgrade = 5
+                    }
+                }
                 create_production_license = {
                     target = ROOT
                     equipment = {
@@ -1456,9 +1537,84 @@ Technologies = {
         }
         visible = {
             is_ai = no
+            OR = {
+                NOT = { tag = SOV }
+                MON = { is_ai = no }
+                NOT = {
+                    has_game_rule = {
+                        rule = mongol_licenses_to_soviets
+                        option = guns
+                    }
+                }
+                NOT = {
+                    has_game_rule = {
+                        rule = mongol_licenses_to_soviets
+                        option = guns_and_mech
+                    }
+                }
+            }
         }
         complete_effect = {
             SWE = {
+                create_production_license = {
+                    target = ROOT
+                    equipment = {
+                        type = infantry_equipment_2
+                        version = 0
+                        
+                    }
+                    cost_factor = 0
+                }
+            }
+        }
+    }
+    hosttool_gun2_mon_sov = {
+        # icon = generic_operation
+        allowed = {
+            tag = SOV
+        }
+        fire_only_once = no
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        
+        available = {
+            date > 1938.02.1
+            NOT = {
+                has_license = {
+                    from = MON
+                    equipment = {
+                        type = infantry_equipment_2
+                        version = 0
+                    }
+                }
+            }
+        }
+        visible = {
+            is_ai = no
+            MON = { is_ai = yes }
+            OR = {
+                has_game_rule = {
+                    rule = mongol_licenses_to_soviets
+                    option = mech
+                }
+                has_game_rule = {
+                    rule = mongol_licenses_to_soviets
+                    option = guns_and_mech
+                }
+            }
+        }
+        complete_effect = {
+            MON = {
+                if = {
+                    limit = {
+                        NOT = { has_tech = improved_infantry_weapons }
+                    }
+                    set_technology = {
+                        improved_infantry_weapons = 1
+                    }
+                }
                 create_production_license = {
                     target = ROOT
                     equipment = {
@@ -1494,9 +1650,83 @@ Technologies = {
         }
         visible = {
             is_ai = no
+            OR = {
+                NOT = { tag = SOV }
+                MON = { is_ai = no }
+                NOT = {
+                    has_game_rule = {
+                        rule = mongol_licenses_to_soviets
+                        option = guns
+                    }
+                }
+                NOT = {
+                    has_game_rule = {
+                        rule = mongol_licenses_to_soviets
+                        option = guns_and_mech
+                    }
+                }
+            }
         }
         complete_effect = {
             SWE = {
+                create_production_license = {
+                    target = ROOT
+                    equipment = {
+                        type = infantry_equipment_3
+                        version = 0
+                        
+                    }
+                    cost_factor = 0
+                }
+            }
+        }
+    }
+    auto_gun3_mon_sov = {
+        # icon = generic_operation
+        allowed = {
+            tag = SOV
+        }
+        fire_only_once = no
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        available = {
+            date > 1939.12.01
+            NOT = {
+                has_license = {
+                    from = MON
+                    equipment = {
+                        type = infantry_equipment_3
+                        version = 0
+                    }
+                }
+            }
+        }
+        visible = {
+            is_ai = no
+            MON = { is_ai = yes }
+            OR = {
+                has_game_rule = {
+                    rule = mongol_licenses_to_soviets
+                    option = mech
+                }
+                has_game_rule = {
+                    rule = mongol_licenses_to_soviets
+                    option = guns_and_mech
+                }
+            }
+        }
+        complete_effect = {
+            MON = {
+                if = {
+                    limit = {
+                        NOT = { has_tech = advanced_infantry_weapons }
+                    }
+                    set_technology = {
+                        advanced_infantry_weapons = 1
+                    }
+                }
                 create_production_license = {
                     target = ROOT
                     equipment = {
