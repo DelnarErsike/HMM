@@ -1028,6 +1028,21 @@ who_gets_saf_annex = {
 		desc = "The United Kingdom will get the decision to annex South Africa if there is no player on it."
 	}
 }
+who_gets_mex_annex = {
+	name = "Who Gets the Annex Mexico Decision If It Is Not Player-Controlled?"
+	group = "HMM Rules"
+	icon = "GFX_volunteers"
+	default = {
+		name = bra
+		text = "GBrazil"
+		desc = "Brazil will get the decision to annex Mexico if there is no player on it."
+	}
+	option = {
+		name = usa
+		text = "2United States"
+		desc = "The United States will get the decision to annex Mexico if there is no player on it."
+	}
+}
 desperate_defense_conditions_status = {
 	name = "The Desperate Defense subdoctrine's conditions are..."
 	group = "HMM Rules"
