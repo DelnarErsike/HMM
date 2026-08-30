@@ -1,5 +1,5 @@
-BRA_historical_plan = {
-	name = "Brazilian Historical Plan"
+BRA_democratic_plan = {
+	name = "Brazilian Democratic Plan"
 	desc = ""
 
 	allowed = {
@@ -8,27 +8,36 @@ BRA_historical_plan = {
 	}
 	enable = {
 		OR = {
+			has_country_flag = BRA_AI_RANDOM_DEMOCRATIC
+			has_game_rule = {
+				rule = BRA_AI_BEHAVIOR
+				option = DEMOCRATIC
+			}	
 			AND = {
-				is_historical_focus_on = yes 
+				OR = {
+					AND = {
+						is_historical_focus_on = yes 
+						has_game_rule = {
+							rule = BRA_AI_BEHAVIOR
+							option = DEFAULT
+						}
+					}
+					has_country_flag = BRA_AI_RANDOM_HISTORICAL
+					has_game_rule = {
+						rule = BRA_ai_behavior
+						option = HISTORICAL
+					}
+				}	
 				has_game_rule = {
-					rule = BRA_AI_BEHAVIOR
-					option = DEFAULT
+					rule = alt_hist_bra
+					option = forced
 				}
 			}
-			has_country_flag = BRA_AI_RANDOM_HISTORICAL
-			has_game_rule = {
-				rule = BRA_ai_behavior
-				option = HISTORICAL
-			}
-			has_game_rule = {
-				rule = alt_hist_bra
-				option = banned
-			}
-		}	
+		}
 		NOT = {
 			has_game_rule = {
 				rule = alt_hist_bra
-				option = forced
+				option = banned
 			}
 		}
 	}
@@ -38,8 +47,8 @@ BRA_historical_plan = {
 
 	ai_national_focuses = {
 		# Timer start for Cangaco: 365 days until sabotage, each decision takes 30 days to complete, so 335 days of focus time (9x 35-day) allowed before deal with cangaceiro is to be finished
-		BRA_tribunal_de_seguranca_nacional # 35 days
-		BRA_ensure_continued_military_support # 35 days
+		BRA_end_the_state_of_emergency # 35 days
+		BRA_repeal_the_national_security_law # 35 days
 		BRA_coffee_crisis_aftermath # 35 days
 		BRA_radio_nacional # 70 days
 		BRA_companhia_siderurgica_nacional # 70 days
@@ -52,29 +61,27 @@ BRA_historical_plan = {
 		BRA_banco_do_brasil
 		BRA_federal_development
 		BRA_financial_stimulation # Unlock this so the AI starts dumping PP into development decisions
-		BRA_cohen_plan
-		BRA_estado_novo
-		BRA_the_polaca
-		BRA_establish_psad # This will can only be started once we have 26 factories, so assume it won't be done for a while
-		BRA_federal_employment_plan
-		BRA_reward_army_loyalty
-		BRA_support_the_landowners
 		BRA_desenvolvimentismo
 		BRA_stimulate_the_civilian_economy
+		# Easy civ spawn-ins done, let's detour into political tree for PP gain before continuing with state modifiers
+		BRA_continue_centralization
+		BRA_court_the_military
+		BRA_ban_the_communist_party
+		BRA_posts_for_generals
+		# Back to growing state modifiers
 		BRA_invest_in_road_infrastructure
 		BRA_invest_in_railways
 		BRA_national_petroleum_council
 		BRA_invest_in_ports
 		BRA_promote_resource_extraction
-
 		# All growing state modifiers done, all civ spawn-ins done, now pick up easy mil spawn-ins, then rubber, then harder mil spawn-ins, then docks, then resources
 		SMB_army
 		SMB_military_facilities
 		SMB_air_force
+		BRA_address_labor_disputes
 		BRA_establish_caloi
 		BRA_domestic_arms_industry
 		BRA_war_production
-		BRA_support_industrialists
 		# Easy mil spawn-ins done, now do rubber and harder state modifiers
 		BRA_promote_immigration_to_brazil # Decisions increase state construction speed
 		BRA_expand_fordlandia
@@ -82,7 +89,7 @@ BRA_historical_plan = {
 		SMB_construct_air_bases
 		SMB_domestic_designs
 		SMB_establish_aircraft_industry
-		BRA_secure_our_borders
+		BRA_the_international_crisis
 		BRA_cooperation_in_the_americas
 		BRA_defense_spending
 		# Harder mil spawn-ins done, now do easier dockyards
