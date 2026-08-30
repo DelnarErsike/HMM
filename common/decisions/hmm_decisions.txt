@@ -623,6 +623,13 @@ operations = {
                     is_in_faction_with = ROOT
                     is_puppet_of = ROOT
                 }
+                OR = {
+                    has_completed_focus = PHI_encourage_japanese_investment
+                    AND = {
+                        has_completed_focus = PHI_american_capital_injection
+                        has_country_flag = PHI_completed_investment_plan_1
+                    }
+                }
             }
         }
         targets = {
@@ -677,6 +684,13 @@ operations = {
                 OR = {
                     NOT = { is_subject_of = ROOT }
                     NOT = { has_autonomy_state = autonomy_hmm_subordinated_country }
+                }
+                OR = {
+                    has_completed_focus = PHI_encourage_japanese_investment
+                    AND = {
+                        has_completed_focus = PHI_american_capital_injection
+                        has_country_flag = PHI_completed_investment_plan_1
+                    }
                 }
             }
         }

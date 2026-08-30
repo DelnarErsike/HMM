@@ -42,6 +42,8 @@
  MAN_JAP_fascism_autonomy_hmm_subordinated_country_DEF: "$OVERLORDADJ$ Manchukuo"
  PHI_autonomy_hmm_subordinated_country_DEF: "the $OVERLORDADJ$ $NONIDEOLOGY$"
 
+ PHI_completed_investment_plan_1: "Infrastructure Development Plan Completed" # Needed to make Annex PHI decision tooltip work
+
 ## Victory System Localisation
 
  MOD_countdown_to_victory_cat:0 "Victory!"
