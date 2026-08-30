@@ -1,0 +1,117 @@
+BRA_historical_plan = {
+	name = "Brazilian Historical Plan"
+	desc = ""
+
+	allowed = {
+		original_tag = BRA
+		has_dlc = "Trial of Allegiance"
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes 
+				has_game_rule = {
+					rule = BRA_AI_BEHAVIOR
+					option = DEFAULT
+				}
+			}
+			has_country_flag = BRA_AI_RANDOM_HISTORICAL
+			has_game_rule = {
+				rule = BRA_ai_behavior
+				option = HISTORICAL
+			}
+		}	
+	}
+	abort = {
+		always = no
+	}
+
+	ai_national_focuses = {
+		# Timer start for Cangaco: 365 days until sabotage, each decision takes 30 days to complete, so 335 days of focus time (9x 35-day) allowed before deal with cangaceiro is to be finished
+		BRA_tribunal_de_seguranca_nacional # 35 days
+		BRA_ensure_continued_military_support # 35 days
+		BRA_coffee_crisis_aftermath # 35 days
+		BRA_radio_nacional # 70 days
+		BRA_companhia_siderurgica_nacional # 70 days
+		BRA_deal_with_the_cangaceiro # 35 days
+		# 8 x 35 = 280 days spent, we have 85 days on the sabotage timer. Should give us enough time to do all the decisions without sabotages
+
+		# Here, things get weird because we don't know what the player will prioritize/want between spawn-ins (better when annexed) and rushing the special state modifiers (better when subordinated).
+		# Let's assume that they want state modifiers, but prioritize civ spawn-ins along the way before state modifier stuff.
+		BRA_batalha_do_borracha
+		BRA_banco_do_brasil
+		BRA_federal_development
+		BRA_financial_stimulation # Unlock this so the AI starts dumping PP into development decisions
+		BRA_cohen_plan
+		BRA_estado_novo
+		BRA_the_polaca
+		BRA_establish_psad # This will can only be started once we have 26 factories, so assume it won't be done for a while
+		BRA_federal_employment_plan
+		BRA_reward_army_loyalty
+		BRA_support_the_landowners
+		BRA_desenvolvimentismo
+		BRA_stimulate_the_civilian_economy
+		BRA_invest_in_road_infrastructure
+		BRA_invest_in_railways
+		BRA_national_petroleum_council
+		BRA_invest_in_ports
+		BRA_promote_resource_extraction
+
+		# All growing state modifiers done, all civ spawn-ins done, now pick up easy mil spawn-ins, then rubber, then harder mil spawn-ins, then docks, then resources
+		SMB_army
+		SMB_military_facilities
+		SMB_air_force
+		BRA_establish_caloi
+		BRA_domestic_arms_industry
+		BRA_war_production
+		BRA_support_industrialists
+		# Easy mil spawn-ins done, now do rubber and harder state modifiers
+		BRA_promote_immigration_to_brazil # Decisions increase state construction speed
+		BRA_expand_fordlandia
+		# Rubber done, now do harder mil spawn-ins
+		SMB_construct_air_bases
+		SMB_domestic_designs
+		SMB_establish_aircraft_industry
+		BRA_secure_our_borders
+		BRA_cooperation_in_the_americas
+		BRA_defense_spending
+		# Harder mil spawn-ins done, now do easier dockyards
+		SMB_navy
+		SMB_construct_naval_bases
+		# Easier dockyards done, now do resources and misc. infrastructure stuff
+		BRA_reach_out_to_the_great_powers # Decisions increase resource extraction
+		BRA_establish_companhia_vale_do_rio_doce
+		BRA_centralize_development
+		# Only harder dockyards left over, let's just get those done, too
+		SMB_purchase_destroyers_and_subs
+		SMB_reescalate_the_naval_arms_race
+		SMB_expand_repair_yards
+		SMB_enlarge_naval_facilities
+		# Screw it, coastal fort and airbase spawn-ins
+		BRA_washington_accords
+		BRA_natal_naval_base
+		SMB_fortification_effort 
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

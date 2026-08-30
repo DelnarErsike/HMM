@@ -397,6 +397,79 @@ operations = {
         }
     }
 
+    annex_BRA = {
+        # icon = generic_operation
+        allowed = {
+            original_tag = USA
+        }
+        fire_only_once = yes
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        available = {
+            BRA = {
+                is_ai = yes
+                has_completed_focus = BRA_companhia_siderurgica_nacional
+            }
+        }
+        targets = {
+            BRA
+        }
+        complete_effect = {
+            BRA = {
+                transfer_units_fraction = {
+                    target = ROOT
+                    size = 1
+                    stockpile_ratio = 1
+                    army_ratio = 1
+                    navy_ratio = 1
+                    air_ratio = 1
+                    keep_unit_leaders_trigger = {
+                        always = no
+                    }
+                }
+            }
+            annex_country = {
+                target = BRA
+                transfer_troops = yes
+            }
+            every_controlled_state = {
+                limit = {
+                    is_core_of = BRA
+                }
+                add_core_of = ROOT
+            }
+        }
+    }
+
+    subordinate_BRA = {
+        # icon = generic_operation
+        allowed = {
+            original_tag = USA
+        }
+        fire_only_once = yes
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        available = {
+            BRA = {
+                is_ai = yes
+                OR = {
+                    NOT = { is_subject_of = ROOT }
+                    NOT = { has_autonomy_state = autonomy_hmm_subordinated_country }
+                }
+            }
+        }
+        targets = {
+            BRA
+        }
+        complete_effect = {
+            BRA = { subordinate_this_country_to_ROOT = yes }
+        }
+    }
+
     annex_COG = {
         # icon = generic_operation
         allowed = {

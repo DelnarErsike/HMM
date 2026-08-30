@@ -113,6 +113,7 @@
  annex_SAF:0 "Annex South Africa"
  annex_ETH:0 "Annex Ethiopia"
  annex_MEX:0 "Annex Mexico"
+ annex_BRA:0 "Annex Brazil"
  annex_COG:0 "Annex Congo"
  annex_IRE:0 "Annex Ireland"
  annex_SIA:0 "Annex Siam"
@@ -123,6 +124,7 @@
  # Subordinate Decisions (turn into full IC transfer puppet in which we can build)
  hmm_subordinate_explanation:0 "Subordinating a country turns them into a special puppet that transfers all of its industry to its overlord and gives extremely generous terms to the overlord. They will continue to do focuses and will prioritize excavation technologies.\nHowever, they cannot properly repair their buildings or make good use of their manpower, though this will self-correct after they are annexed."
  subordinate_MEX:0 "Subordinate Mexico"
+ subordinate_BRA:0 "Subordinate Brazil"
  subordinate_SIA:0 "Subordinate Siam"
  subordinate_MAN:0 "Subordinate Manchukuo"
  subordinate_NZL:0 "Subordinate New Zealand"
