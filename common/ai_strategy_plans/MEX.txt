@@ -22,6 +22,18 @@ mexico_historical = {
 				option = SECULAR_REPUBLIC
 			}
 		}
+        NOT = {
+			has_game_rule = {
+				rule = alt_hist_mex
+				option = forced_caudillos
+			}
+		}
+        NOT = {
+			has_game_rule = {
+				rule = alt_hist_mex
+				option = forced_caudillos_secularism
+			}
+		}
 	}
 	abort = {
 		OR = {
@@ -70,6 +82,150 @@ mexico_historical = {
         MEX_focus_army_expansion_programme
         # No more spawn-in focuses left, just do the democratic flip focus ASAP and otherwise don't care
         MEX_focus_institutional_revolution
+	}
+
+	
+	research = {
+		industry = 1000
+		air_equipment = -1000
+	}
+	
+    traits = {
+        air_warfare_theorist = -1000
+        dive_bomber = -1000
+        victory_through_airpower = -1000
+        close_air_support_proponent = -1000
+        assault_avaition = -1000
+        air_chief_reform_1 = -1000
+        air_chief_reform_2 = -1000
+        air_chief_reform_3 = -1000
+        air_chief_safety_1 = -1000
+        air_chief_safety_2 = -1000
+        air_chief_safety_3 = -1000
+        air_chief_night_operations_1 = -1000
+        air_chief_night_operations_2 = -1000
+        air_chief_night_operations_3 = -1000
+        air_chief_ground_support_1 = -1000
+        air_chief_ground_support_2 = -1000
+        air_chief_ground_support_3 = -1000
+        air_chief_all_weather_1 = -1000
+        air_chief_all_weather_2 = -1000
+        air_chief_all_weather_3 = -1000
+        air_air_combat_training_1 = -1000
+        air_air_combat_training_2 = -1000
+        air_air_combat_training_3 = -1000
+        air_naval_strike_1 = -1000
+        air_naval_strike_2 = -1000
+        air_naval_strike_3 = -1000
+        air_bomber_interception_1 = -1000
+        air_bomber_interception_2 = -1000
+        air_bomber_interception_3 = -1000
+        air_air_superiority_1 = -1000
+        air_air_superiority_2 = -1000
+        air_air_superiority_3 = -1000
+        air_close_air_support_1 = -1000
+        air_close_air_support_2 = -1000
+        air_close_air_support_3 = -1000
+        air_strategic_bombing_1 = -1000
+        air_strategic_bombing_2 = -1000
+        air_strategic_bombing_3 = -1000
+        air_tactical_bombing_1 = -1000
+        air_tactical_bombing_2 = -1000
+        air_tactical_bombing_3 = -1000
+        air_airborne_1 = -1000
+        air_airborne_2 = -1000
+        air_airborne_3 = -1000
+    }	
+
+	focus_factors = {
+		MEX_focus_purchase_belize = 0 # Don't attempt to take Belize from UK
+        MEX_focus_ejido_worker_militias = 0 # Ticking communist support might screw us over, don't pick this up
+	}
+}
+
+mexico_alt_historical = {
+	name = "Mexican Caudillo Republic"
+	desc = "The trend towards moderate secularism and the rule of law will be strengthened in Mexico, with the country aligning itself towards America."
+    # HMM: Annex build
+
+	allowed = {
+		original_tag = MEX
+		has_dlc = "Man the Guns"
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = MEX_ai_behavior
+					option = DEFAULT
+				}
+			}
+			has_country_flag = MEX_AI_SECULAR_REPUBLIC 
+			has_game_rule = {
+				rule = MEX_ai_behavior
+				option = SECULAR_REPUBLIC
+			}
+		}
+        OR = {
+			has_game_rule = {
+				rule = alt_hist_mex
+				option = forced_caudillos
+			}
+			has_game_rule = {
+				rule = alt_hist_mex
+				option = forced_caudillos_secularism
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_war_with = USA
+			has_government = fascism
+			has_government = communism
+		}
+	}
+
+	ai_national_focuses = {
+		MEX_focus_plan_of_agua_prieta
+		MEX_focus_ban_political_militias
+		MEX_focus_revolutionary_women
+		MEX_focus_soldaderas
+        # Annex unlocked, but let's keep going and doing our spawn-ins while avoiding civil war
+        # We're forced to go right side eco because we are forced to be caudillo-friendly, even if it's worse in terms of spawn-ins
+        MEX_focus_national_bank
+        MEX_focus_liberalize_the_banking_sector # Tensions lowered by 1, buys 150 days until rebellion
+        MEX_focus_strike_breaking
+        MEX_focus_urban_development
+        # 340 days left until rebellion at this point
+        MEX_focus_cientifico_camarilla
+        MEX_focus_oil_field_expansion
+        MEX_focus_royal_dutch_shell
+        MEX_focus_oil_revenue_reinvestment
+        MEX_focus_jefe_maximo
+        # 60 days left until rebellion, we need to do a 35-day focus to lower tensions
+        MEX_focus_end_land_reform # Tensions lowered by 1, 175 days to rebellion now
+        MEX_focus_northern_steel_plants
+        MEX_focus_privatization # Tensions lowered by 1, 185 days to rebellion now
+        MEX_focus_control_the_army
+        MEX_focus_repeal_the_calles_law
+        MEX_focus_caudillo_private_armies # Tensions lowered by 1, 195 days to rebellion now
+        MEX_focus_abolish_capital_punishment
+        MEX_focus_support_general_cedillo # No more civil war after this focus
+        MEX_focus_state_education
+        MEX_focus_xefo
+        MEX_focus_law_on_industrial_promotion
+        MEX_focus_nafinsa
+        MEX_focus_military_budget_review
+        MEX_focus_gulf_coast_naval_yards
+        MEX_focus_pacific_coast_naval_yards
+        MEX_focus_heroic_military_college
+        MEX_focus_weapons_modernization
+        MEX_focus_tank_workshops
+        MEX_focus_aviation_workshops
+        MEX_focus_military_aviation_specialists
+        MEX_focus_army_expansion_programme
+        # No more spawn-in focuses left
 	}
 
 	
