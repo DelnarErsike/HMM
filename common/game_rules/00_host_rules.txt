@@ -1014,7 +1014,7 @@ who_gets_saf_annex = {
 	}
 	option = {
 		name = ast
-		text = "GAustralia"
+		text = "6Australia"
 		desc = "Australia will get the decision to annex South Africa if there is no player on it."
 	}
 	default = {
@@ -1024,7 +1024,7 @@ who_gets_saf_annex = {
 	}
 	option = {
 		name = eng
-		text = "RUnited Kingdom"
+		text = "tUnited Kingdom"
 		desc = "The United Kingdom will get the decision to annex South Africa if there is no player on it."
 	}
 }
