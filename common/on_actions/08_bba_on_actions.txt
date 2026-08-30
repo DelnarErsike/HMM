@@ -117,6 +117,7 @@ on_actions = {
 							tag = AFG
 							tag = ECU
 						}
+						NOT = { has_idea = league_of_nations_member_idea }
 					}
 					add_ideas = league_of_nations_member_idea
 				}
@@ -373,6 +374,7 @@ on_actions = {
 				limit = {
 					original_tag = ETH
 					has_idea = ETH_chitet_law
+					NOT = { has_idea = ETH_chitet_law_peace_time }
 				}
 				swap_ideas = {
 					remove_idea = ETH_chitet_law
@@ -430,6 +432,8 @@ on_actions = {
 				limit = {
 					SWI_bba = yes
 					has_idea = SWI_old_switzerland_idea
+					NOT = { has_idea = SWI_swiss_neutrality }
+					NOT = { has_idea = SWI_citizen_militia_1 }
 				}
 				add_ideas = {
 					SWI_swiss_neutrality
@@ -458,6 +462,7 @@ on_actions = {
 				limit = {
 					original_tag = ETH
 					has_idea = ETH_chitet_law_peace_time
+					NOT = { has_idea = ETH_chitet_law }
 				}
 				swap_ideas = {
 					remove_idea = ETH_chitet_law_peace_time
