@@ -8706,18 +8706,27 @@ SOV_exiles_civil_war_start = {
 	}
 	# The Women's Fascist Movement
 	if = {
-		limit = { has_country_flag = SOV_fascist_womens_movement_flag }
+		limit = {
+			has_country_flag = SOV_fascist_womens_movement_flag
+			NOT = { has_idea = SOV_fascist_womens_movement_idea }
+		}
 		add_ideas = SOV_fascist_womens_movement_idea
 	}
 
 	# The True Tsars
 	if = {
-		limit = { has_country_flag = SOV_the_true_tsars_flag }
+		limit = {
+			has_country_flag = SOV_the_true_tsars_flag
+			NOT = { has_idea = SOV_the_true_tsars_idea }
+		}
 		add_ideas = SOV_the_true_tsars_idea
 	}
 
 	if = {
-		limit = { has_country_flag = SOV_dismissed_the_counter_revolution_flag }
+		limit = {
+			has_country_flag = SOV_dismissed_the_counter_revolution_flag
+			NOT = { has_idea = SOV_the_true_tsars_idea }
+		}
 
 		add_ideas = SOV_uncertain_counter_revolution_idea
 	}

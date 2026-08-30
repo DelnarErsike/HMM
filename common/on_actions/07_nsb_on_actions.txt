@@ -1123,11 +1123,17 @@ on_actions = {
 						}
 						root = {
 							random_list = {
-								50 = { 
+								50 = {
+									if = {
+										limit = { NOT = { has_trait = media_personality } }
 									add_unit_leader_trait = media_personality
+									}
 								}
 								50 = { 
+									if = {
+										limit = { NOT = { has_trait = politically_connected } }
 									add_unit_leader_trait = politically_connected
+									}
 								}
 							}
 						}
@@ -1140,7 +1146,10 @@ on_actions = {
 						root = {
 							random_list = {
 								50 = { 
+									if = {
+										limit = { NOT = { has_trait = armor_officer } }
 									add_unit_leader_trait = armor_officer
+									}
 								}
 								50 = {}
 							}
@@ -1153,7 +1162,10 @@ on_actions = {
 						root = {
 							random_list = {
 								50 = { 
+									if = {
+										limit = { NOT = { has_trait = infantry_officer } }
 									add_unit_leader_trait = infantry_officer
+									}
 								}
 								50 = {}
 							}
@@ -1167,9 +1179,24 @@ on_actions = {
 							random_list = {
 								75 = { 
 									random_list = {
-										33 = { add_unit_leader_trait = naval_invader }
-										33 = { add_unit_leader_trait = commando }
-										33 = { add_unit_leader_trait = trickster }
+										33 = {
+											if = {
+												limit = { NOT = { has_trait = naval_invader } }
+											add_unit_leader_trait = naval_invader
+											}
+										}
+										33 = {
+											if = {
+												limit = { NOT = { has_trait = commando } }
+											add_unit_leader_trait = commando
+											}
+										}
+										33 = {
+											if = {
+												limit = { NOT = { has_trait = trickster } }
+											add_unit_leader_trait = trickster
+											}
+										}
 									}
 								}
 								25 = {}
@@ -1183,7 +1210,10 @@ on_actions = {
 						root = {
 							random_list = {
 								50 = { 
+									if = {
+										limit = { NOT = { has_trait = engineer_officer } }
 									add_unit_leader_trait = engineer_officer
+									}
 								}
 								50 = {}
 							}
@@ -1197,8 +1227,18 @@ on_actions = {
 							random_list = {
 								50 = { 
 									random_list = {
-										50 = { add_unit_leader_trait = brilliant_strategist }
-										50 = { add_unit_leader_trait = inflexible_strategist }
+										50 = {
+											if = {
+												limit = { NOT = { has_trait = brilliant_strategist } }
+											add_unit_leader_trait = brilliant_strategist
+											}
+										}
+										50 = {
+											if = {
+												limit = { NOT = { has_trait = brilliant_strategist } }
+											add_unit_leader_trait = inflexible_strategist
+											}
+										}
 									}
 								}
 								50 = {}
@@ -1213,7 +1253,10 @@ on_actions = {
 					root = {
 						random_list = {
 							50 = { 
+								if = {
+									limit = { NOT = { has_trait = gunnery_expert } }
 								add_unit_leader_trait = gunnery_expert
+								}
 							}
 							50 = {}
 						}
@@ -1226,10 +1269,16 @@ on_actions = {
 					root = {
 						random_list = {
 							25 = { 
+								if = {
+									limit = { NOT = { has_trait = seawolf } }
 								add_unit_leader_trait = seawolf
+								}
 							}
 							25 = { 
+								if = {
+									limit = { NOT = { has_trait = blockade_runner } }
 								add_unit_leader_trait = blockade_runner
+								}
 							}
 							50 = {}
 						}
@@ -1242,7 +1291,10 @@ on_actions = {
 					root = {
 						random_list = {
 							50 = { 
+								if = {
+									limit = { NOT = { has_trait = aviation_enthusiast } }
 								add_unit_leader_trait = aviation_enthusiast 
+								}
 							}
 							50 = {}
 						}

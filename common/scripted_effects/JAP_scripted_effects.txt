@@ -840,7 +840,10 @@ JAP_trigger_democratic_civil_war = {
 					}
 					remove_ideas = MAN_kwantung_veto 
 				}
+				if = {
+					limit = { NOT = { has_idea = MAN_militarism } }
 				add_ideas = MAN_militarism 
+				}
 			}
 		}
 		IF = {
@@ -1619,7 +1622,10 @@ JAP_trigger_communist_civil_war = {
 					}
 					remove_ideas = MAN_kwantung_veto 
 				}
+				if = {
+					limit = { NOT = { has_idea = MAN_militarism } }
 				add_ideas = MAN_militarism 
+				}
 			}
 		}
 		IF = {
@@ -2500,6 +2506,7 @@ JAP_trigger_communist_civil_war = {
 	IF = {
 		limit = {
 			has_completed_focus = JAP_raise_support_within_the_proletarian_class
+			NOT = { has_idea = JAP_strong_unions_idea } }
 		}
 		add_ideas = JAP_strong_unions_idea
 	}
