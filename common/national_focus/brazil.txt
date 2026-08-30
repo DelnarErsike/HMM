@@ -807,6 +807,12 @@ focus_tree = {
 			}
 			hidden_effect = {
 				retire_country_leader = yes
+				if = { # HMM: extra check in case Brazil has annexed Mexico, because then Cardenas will be ahead in line for the moderatism ideology and become country leader
+					limit = {
+						NOT = { BRA_eurico_gaspar_dutra = { is_country_leader = yes } } # Set up this way to also catch if the character has been killed/retired 
+					}
+					retire_country_leader = yes
+				}
 			}
 		}
 	}
