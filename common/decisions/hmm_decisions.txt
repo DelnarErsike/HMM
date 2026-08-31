@@ -174,7 +174,36 @@ operations = {
     annex_MEX = {
         # icon = generic_operation
         allowed = {
-            tag = BRA
+            OR = {
+                original_tag = BRA
+                original_tag = USA
+            }
+        }
+        visible = {
+            if = {
+                limit = {
+                    has_game_rule = {
+                        rule = who_gets_mex_annex
+                        option = bra
+                    }
+                }
+                OR = {
+                    original_tag = BRA
+                    original_tag = USA
+                }
+            }
+            else_if = {
+                limit = {
+                    has_game_rule = {
+                        rule = who_gets_mex_annex
+                        option = usa
+                    }
+                }
+                original_tag = USA
+            }
+            else = {
+                always = no
+            }
         }
         fire_only_once = yes
         cost = 0
@@ -183,12 +212,59 @@ operations = {
         }
         available = {
             MEX = {
+                exists = yes
                 is_ai = yes
                 has_completed_focus = MEX_focus_soldaderas
             }
-            OR = {
-                has_government = neutrality
-                MEX = { NOT = { has_government = neutrality } }
+            if = {
+                limit = {
+                    has_game_rule = {
+                        rule = who_gets_mex_annex
+                        option = bra
+                    }
+                    original_tag = USA
+                }
+                OR = {
+                    NOT = { country_exists = BRA }
+                    BRA = { is_ai = yes }
+                    custom_trigger_tooltip = { # Here just to make tooltip clear
+                        tooltip = HMM_we_are_selected_for_MEX_annex
+                        always = no
+                    }
+                }
+            }
+            else = {
+                if = { # Prevents potential country leader shenanigens
+                    limit = { original_tag = BRA }
+                    OR = {
+                        has_government = neutrality
+                        MEX = { NOT = { has_government = neutrality } }
+                    }
+                }
+                custom_trigger_tooltip = {
+                    tooltip = HMM_we_are_selected_for_MEX_annex
+                    if = {
+                        limit = {
+                            has_game_rule = {
+                                rule = who_gets_mex_annex
+                                option = bra
+                            }
+                        }
+                        original_tag = BRA
+                    }
+                    else_if = {
+                        limit = {
+                            has_game_rule = {
+                                rule = who_gets_mex_annex
+                                option = usa
+                            }
+                        }
+                        original_tag = USA
+                    }
+                    else = {
+                        always = no
+                    }
+                }
             }
         }
         targets = {
@@ -197,7 +273,7 @@ operations = {
         complete_effect = {
             MEX = {
                 transfer_units_fraction = {
-                    target = BRA
+                    target = ROOT
                     size = 1
                     stockpile_ratio = 1
                     army_ratio = 1
@@ -208,17 +284,15 @@ operations = {
                     }
                 }
             }
-            BRA = {
-                annex_country = {
-                    target = MEX
-                    transfer_troops = yes
+            annex_country = {
+                target = MEX
+                transfer_troops = yes
+            }
+            every_controlled_state = {
+                limit = {
+                    is_core_of = MEX
                 }
-                every_controlled_state = {
-                    limit = {
-                        is_core_of = MEX
-                    }
-                    add_core_of = BRA
-                }
+                add_core_of = ROOT
             }
         }
     }
@@ -226,7 +300,36 @@ operations = {
     subordinate_MEX = {
         # icon = generic_operation
         allowed = {
-            tag = BRA
+            OR = {
+                original_tag = BRA
+                original_tag = USA
+            }
+        }
+        visible = {
+            if = {
+                limit = {
+                    has_game_rule = {
+                        rule = who_gets_mex_annex
+                        option = bra
+                    }
+                }
+                OR = {
+                    original_tag = BRA
+                    original_tag = USA
+                }
+            }
+            else_if = {
+                limit = {
+                    has_game_rule = {
+                        rule = who_gets_mex_annex
+                        option = usa
+                    }
+                }
+                original_tag = USA
+            }
+            else = {
+                always = no
+            }
         }
         fire_only_once = yes
         cost = 0
@@ -235,10 +338,54 @@ operations = {
         }
         available = {
             MEX = {
+                exists = yes
                 is_ai = yes
                 OR = {
                     NOT = { is_subject_of = ROOT }
                     NOT = { has_autonomy_state = autonomy_hmm_subordinated_country }
+                }
+            }
+            if = {
+                limit = {
+                    has_game_rule = {
+                        rule = who_gets_mex_annex
+                        option = bra
+                    }
+                    original_tag = USA
+                }
+                OR = {
+                    NOT = { country_exists = BRA }
+                    BRA = { is_ai = yes }
+                    custom_trigger_tooltip = { # Here just to make tooltip clear
+                        tooltip = HMM_we_are_selected_for_MEX_annex
+                        always = no
+                    }
+                }
+            }
+            else = {
+                custom_trigger_tooltip = {
+                    tooltip = HMM_we_are_selected_for_MEX_annex
+                    if = {
+                        limit = {
+                            has_game_rule = {
+                                rule = who_gets_mex_annex
+                                option = bra
+                            }
+                        }
+                        original_tag = BRA
+                    }
+                    else_if = {
+                        limit = {
+                            has_game_rule = {
+                                rule = who_gets_mex_annex
+                                option = usa
+                            }
+                        }
+                        original_tag = USA
+                    }
+                    else = {
+                        always = no
+                    }
                 }
             }
         }
@@ -247,6 +394,79 @@ operations = {
         }
         complete_effect = {
             MEX = { subordinate_this_country_to_ROOT = yes }
+        }
+    }
+
+    annex_BRA = {
+        # icon = generic_operation
+        allowed = {
+            original_tag = USA
+        }
+        fire_only_once = yes
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        available = {
+            BRA = {
+                is_ai = yes
+                has_completed_focus = BRA_companhia_siderurgica_nacional
+            }
+        }
+        targets = {
+            BRA
+        }
+        complete_effect = {
+            BRA = {
+                transfer_units_fraction = {
+                    target = ROOT
+                    size = 1
+                    stockpile_ratio = 1
+                    army_ratio = 1
+                    navy_ratio = 1
+                    air_ratio = 1
+                    keep_unit_leaders_trigger = {
+                        always = no
+                    }
+                }
+            }
+            annex_country = {
+                target = BRA
+                transfer_troops = yes
+            }
+            every_controlled_state = {
+                limit = {
+                    is_core_of = BRA
+                }
+                add_core_of = ROOT
+            }
+        }
+    }
+
+    subordinate_BRA = {
+        # icon = generic_operation
+        allowed = {
+            original_tag = USA
+        }
+        fire_only_once = yes
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        available = {
+            BRA = {
+                is_ai = yes
+                OR = {
+                    NOT = { is_subject_of = ROOT }
+                    NOT = { has_autonomy_state = autonomy_hmm_subordinated_country }
+                }
+            }
+        }
+        targets = {
+            BRA
+        }
+        complete_effect = {
+            BRA = { subordinate_this_country_to_ROOT = yes }
         }
     }
 
@@ -623,6 +843,13 @@ operations = {
                     is_in_faction_with = ROOT
                     is_puppet_of = ROOT
                 }
+                OR = {
+                    has_completed_focus = PHI_encourage_japanese_investment
+                    AND = {
+                        has_completed_focus = PHI_american_capital_injection
+                        has_country_flag = PHI_completed_investment_plan_1
+                    }
+                }
             }
         }
         targets = {
@@ -677,6 +904,13 @@ operations = {
                 OR = {
                     NOT = { is_subject_of = ROOT }
                     NOT = { has_autonomy_state = autonomy_hmm_subordinated_country }
+                }
+                OR = {
+                    has_completed_focus = PHI_encourage_japanese_investment
+                    AND = {
+                        has_completed_focus = PHI_american_capital_injection
+                        has_country_flag = PHI_completed_investment_plan_1
+                    }
                 }
             }
         }
@@ -1012,6 +1246,22 @@ Technologies = {
         }
         visible = {
             is_ai = no
+            OR = {
+                NOT = { tag = SOV }
+                MON = { is_ai = no }
+                NOT = {
+                    has_game_rule = {
+                        rule = mongol_licenses_to_soviets
+                        option = mech
+                    }
+                }
+                NOT = {
+                    has_game_rule = {
+                        rule = mongol_licenses_to_soviets
+                        option = guns_and_mech
+                    }
+                }
+            }
         }
         available = {
             date > 1937.08.01
@@ -1027,6 +1277,71 @@ Technologies = {
         }
         complete_effect = {
             SWE = {
+                create_production_license = {
+                    target = ROOT
+                    equipment = {
+                        type = mechanized_equipment_1
+                        version = 1
+                    }
+                    cost_factor = 0
+                }
+            }
+        }
+    }
+    auto_mech_mon_sov = {
+        # icon = generic_operation
+        allowed = {
+            tag = SOV
+        }
+        fire_only_once = no
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        visible = {
+            is_ai = no
+            MON = { is_ai = yes }
+            OR = {
+                has_game_rule = {
+                    rule = mongol_licenses_to_soviets
+                    option = mech
+                }
+                has_game_rule = {
+                    rule = mongol_licenses_to_soviets
+                    option = guns_and_mech
+                }
+            }
+        }
+        available = {
+            date > 1937.08.01
+            NOT = {
+                has_license = {
+                    from = MON
+                    equipment = {
+                        type = mechanized_equipment_1
+                        version = 1
+                    }
+                }
+            }
+        }
+        complete_effect = {
+            MON = {
+                if = {
+                    limit = {
+                        NOT = { has_tech = mechanised_infantry }
+                    }
+                    set_technology = {
+                        mechanised_infantry = 1
+                    }
+                }
+                create_equipment_variant = {
+                    name = "Cheap Mechanised"
+                    type = mechanized_equipment_1
+                    parent_version = 0
+                    upgrades = {
+                        mech_cost_upgrade = 5
+                    }
+                }
                 create_production_license = {
                     target = ROOT
                     equipment = {
@@ -1222,9 +1537,84 @@ Technologies = {
         }
         visible = {
             is_ai = no
+            OR = {
+                NOT = { tag = SOV }
+                MON = { is_ai = no }
+                NOT = {
+                    has_game_rule = {
+                        rule = mongol_licenses_to_soviets
+                        option = guns
+                    }
+                }
+                NOT = {
+                    has_game_rule = {
+                        rule = mongol_licenses_to_soviets
+                        option = guns_and_mech
+                    }
+                }
+            }
         }
         complete_effect = {
             SWE = {
+                create_production_license = {
+                    target = ROOT
+                    equipment = {
+                        type = infantry_equipment_2
+                        version = 0
+                        
+                    }
+                    cost_factor = 0
+                }
+            }
+        }
+    }
+    hosttool_gun2_mon_sov = {
+        # icon = generic_operation
+        allowed = {
+            tag = SOV
+        }
+        fire_only_once = no
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        
+        available = {
+            date > 1938.02.1
+            NOT = {
+                has_license = {
+                    from = MON
+                    equipment = {
+                        type = infantry_equipment_2
+                        version = 0
+                    }
+                }
+            }
+        }
+        visible = {
+            is_ai = no
+            MON = { is_ai = yes }
+            OR = {
+                has_game_rule = {
+                    rule = mongol_licenses_to_soviets
+                    option = mech
+                }
+                has_game_rule = {
+                    rule = mongol_licenses_to_soviets
+                    option = guns_and_mech
+                }
+            }
+        }
+        complete_effect = {
+            MON = {
+                if = {
+                    limit = {
+                        NOT = { has_tech = improved_infantry_weapons }
+                    }
+                    set_technology = {
+                        improved_infantry_weapons = 1
+                    }
+                }
                 create_production_license = {
                     target = ROOT
                     equipment = {
@@ -1260,9 +1650,83 @@ Technologies = {
         }
         visible = {
             is_ai = no
+            OR = {
+                NOT = { tag = SOV }
+                MON = { is_ai = no }
+                NOT = {
+                    has_game_rule = {
+                        rule = mongol_licenses_to_soviets
+                        option = guns
+                    }
+                }
+                NOT = {
+                    has_game_rule = {
+                        rule = mongol_licenses_to_soviets
+                        option = guns_and_mech
+                    }
+                }
+            }
         }
         complete_effect = {
             SWE = {
+                create_production_license = {
+                    target = ROOT
+                    equipment = {
+                        type = infantry_equipment_3
+                        version = 0
+                        
+                    }
+                    cost_factor = 0
+                }
+            }
+        }
+    }
+    auto_gun3_mon_sov = {
+        # icon = generic_operation
+        allowed = {
+            tag = SOV
+        }
+        fire_only_once = no
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        available = {
+            date > 1939.12.01
+            NOT = {
+                has_license = {
+                    from = MON
+                    equipment = {
+                        type = infantry_equipment_3
+                        version = 0
+                    }
+                }
+            }
+        }
+        visible = {
+            is_ai = no
+            MON = { is_ai = yes }
+            OR = {
+                has_game_rule = {
+                    rule = mongol_licenses_to_soviets
+                    option = mech
+                }
+                has_game_rule = {
+                    rule = mongol_licenses_to_soviets
+                    option = guns_and_mech
+                }
+            }
+        }
+        complete_effect = {
+            MON = {
+                if = {
+                    limit = {
+                        NOT = { has_tech = advanced_infantry_weapons }
+                    }
+                    set_technology = {
+                        advanced_infantry_weapons = 1
+                    }
+                }
                 create_production_license = {
                     target = ROOT
                     equipment = {

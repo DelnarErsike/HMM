@@ -42,6 +42,8 @@
  MAN_JAP_fascism_autonomy_hmm_subordinated_country_DEF: "$OVERLORDADJ$ Manchukuo"
  PHI_autonomy_hmm_subordinated_country_DEF: "the $OVERLORDADJ$ $NONIDEOLOGY$"
 
+ PHI_completed_investment_plan_1: "Infrastructure Development Plan Completed" # Needed to make Annex PHI decision tooltip work
+
 ## Victory System Localisation
 
  MOD_countdown_to_victory_cat:0 "Victory!"
@@ -92,10 +94,13 @@
  # Tech Decisions
  add_convoy:0 "Add Convoy"
  auto_mech:0 "Cheap Mechanized"
+ auto_mech_mon_sov:0 "Cheap Mechanized (In-Faction)"
  hosttool_aa2:0 "Anti-Air Equipment 2"
  hosttool_aa3:0 "Anti-Air Equipment 3"
  hosttool_gun2:0 "Infantry Equipment 2"
+ hosttool_gun2_mon_sov:0 "Infantry Equipment 2 (In-Faction)"
  auto_gun3:0 "Infantry Equipment 3"
+ auto_gun3_mon_sov:0 "Infantry Equipment 3 (In-Faction)"
  auto_AT1:0 "Anti-Tank Equipment 1"
  auto_AT2:0 "Anti-Tank Equipment 2"
  auto_AT3:0 "Anti-Tank Equipment 3"
@@ -111,6 +116,7 @@
  annex_SAF:0 "Annex South Africa"
  annex_ETH:0 "Annex Ethiopia"
  annex_MEX:0 "Annex Mexico"
+ annex_BRA:0 "Annex Brazil"
  annex_COG:0 "Annex Congo"
  annex_IRE:0 "Annex Ireland"
  annex_SIA:0 "Annex Siam"
@@ -121,6 +127,7 @@
  # Subordinate Decisions (turn into full IC transfer puppet in which we can build)
  hmm_subordinate_explanation:0 "Subordinating a country turns them into a special puppet that transfers all of its industry to its overlord and gives extremely generous terms to the overlord. They will continue to do focuses and will prioritize excavation technologies.\nHowever, they cannot properly repair their buildings or make good use of their manpower, though this will self-correct after they are annexed."
  subordinate_MEX:0 "Subordinate Mexico"
+ subordinate_BRA:0 "Subordinate Brazil"
  subordinate_SIA:0 "Subordinate Siam"
  subordinate_MAN:0 "Subordinate Manchukuo"
  subordinate_NZL:0 "Subordinate New Zealand"
@@ -168,6 +175,7 @@
  HMM_allies_only: "Allies Only"
  HMM_spa_only_volunteers_to_ger_ita_bul: "Spain can only send volunteers to Germany, Italy, or Bulgaria."
  HMM_we_are_selected_for_SAF_annex: "We have been selected by the game rules as the one who can annex South Africa."
+ HMM_we_are_selected_for_MEX_annex: "We have been selected by the game rules as the one who can annex Mexico."
  HMM_rule_can_lend_lease_no: "Can send lend-lease: §RNo§!"
  HMM_rule_can_lend_lease_yes: "Can send lend-lease: §GYes§!"
 

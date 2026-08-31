@@ -54,7 +54,7 @@ focus_tree = {
 		allow_branch = {
 			NOT = {
 				has_game_rule = {
-					rule = alt_hist_bul
+					rule = alt_hist_bra
 					option = forced
 				}
 			}
@@ -807,6 +807,12 @@ focus_tree = {
 			}
 			hidden_effect = {
 				retire_country_leader = yes
+				if = { # HMM: extra check in case Brazil has annexed Mexico, because then Cardenas will be ahead in line for the moderatism ideology and become country leader
+					limit = {
+						NOT = { BRA_eurico_gaspar_dutra = { is_country_leader = yes } } # Set up this way to also catch if the character has been killed/retired 
+					}
+					retire_country_leader = yes
+				}
 			}
 		}
 	}
@@ -1076,7 +1082,7 @@ focus_tree = {
 		}
 
 		offset = {
-			x = -11
+			x = -10
 			y = 0
 			trigger = {
 				OR = {
@@ -4595,7 +4601,7 @@ focus_tree = {
 		allow_branch = {
 			NOT = {
 				has_game_rule = {
-					rule = alt_hist_bul
+					rule = alt_hist_bra
 					option = banned
 				}
 			}
