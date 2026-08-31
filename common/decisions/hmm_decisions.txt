@@ -1091,11 +1091,11 @@ political_actions = {
 			tag = FRA
 		}
 		visible = {
-			tag = FRA
-			NOT = {
-				controls_state = 16
-			}
+			NOT = { controls_state = 16 }
 		}
+        available = {
+            113 = { is_owned_and_controlled_by = ROOT }
+        }
 		complete_effect = {
 			set_capital = {
 				state = 113
@@ -1108,11 +1108,11 @@ political_actions = {
 			tag = FRA
 		}
 		visible = {
-			tag = FRA
-			NOT = {
-				controls_state = 16
-			}
+			NOT = { controls_state = 16 }
 		}
+        available = {
+            461 = { is_owned_and_controlled_by = ROOT }
+        }
 		complete_effect = {
 			set_capital = {
 				state = 461
@@ -1126,11 +1126,11 @@ political_actions = {
 			tag = FRA
 		}
 		visible = {
-			tag = FRA
-			NOT = {
-				controls_state = 16
-			}
+			NOT = { controls_state = 16 }
 		}
+        available = {
+            539 = { is_owned_and_controlled_by = ROOT }
+        }
 		complete_effect = {
 			set_capital = {
 				state = 539
@@ -1144,9 +1144,11 @@ political_actions = {
 			tag = SOV
 		}
 		visible = {
-			tag = SOV
-			GER = { has_war_with = SOV }
+			has_war_with = GER
 		}
+        available = {
+            249 = { is_owned_and_controlled_by = ROOT }
+        }
 		complete_effect = {
 			set_capital = {
 				state = 249
@@ -1159,9 +1161,11 @@ political_actions = {
 			tag = SOV
 		}
 		visible = {
-			tag = SOV
-			GER = { has_war_with = SOV }
+            has_war_with = GER
 		}
+        available = {
+            217 = { is_owned_and_controlled_by = ROOT }
+        }
 		complete_effect = {
 			set_capital = {
 				state = 217
@@ -1174,9 +1178,11 @@ political_actions = {
 			tag = SOV
 		}
 		visible = {
-			tag = SOV
-			GER = { has_war_with = SOV }
+			has_war_with = GER
 		}
+        available = {
+            408 = { is_owned_and_controlled_by = ROOT }
+        }
 		complete_effect = {
 			set_capital = {
 				state = 408
