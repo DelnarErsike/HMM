@@ -1,6 +1,9 @@
 ﻿l_english:
  peace_training:0 "Peacetime Training"
  peace_training_desc:0 "Substitutes for various macro tricks that people would use outside of war."
+ simulate_volunteers: "Simulated Volunteer Rewards"
+ simulate_volunteers_desc: "Sending volunteers to a nation normally provides us with a steady stream of army experience and mastery. This spirit simulates that effect."
+ simulate_volunteers_instant_desc: "Daily £doctrine_mastery §HLand Doctrine§! mastery gain: §G+1§!"
  no_tradebacks:0 "No Tradebacks"
  no_tradebacks_desc:0 "This spirit simulates the fact that countries within factions will automatically buy each other's resources."
  no_grind:0 "No Grind"
@@ -143,9 +146,9 @@
  move_capital_to_Kazan:0 "Move Capital to Kazan"
  move_capital_to_Stalingrad:0 "Move Capital to Stalingrad"
  move_capital_to_Vladivostok:0 "Move Capital to Vladivostok"
- SOV_assist_republican_spain:0 "Assist Republican Spain"
+ axis_assist_nationalist_spain:0 "Simulate Volunteers to Nationalist Spain"
+ SOV_assist_republican_spain:0 "Simulate Volunteers to Republican Spain"
  continuous_recruitment_drive:0 "Continuous Recruitment Drive"
-
 
  # Spain and Finland Simulators
  GER_started_ll_mech:0 "Started Mech. Delivery"

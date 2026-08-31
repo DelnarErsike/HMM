@@ -25,6 +25,18 @@ ideas = {
 				navy_fuel_consumption_factor = -0.99
 			}
 		}
+		simulate_volunteers = {
+			allowed = {
+				always = no
+			}
+			cancel = {
+			}
+			removal_cost = -1
+			picture = SPA_la_division_azul
+			modifier = {
+				experience_gain_army = 1
+			}
+		}
 
 		WAR_join = {
 			allowed = {

@@ -1183,13 +1183,19 @@ political_actions = {
 			}
 		}
 	}
-	SOV_assist_republican_spain = {
+    axis_assist_nationalist_spain = {
 		icon = GFX_decision_SOV_secure_the_administration
 		fire_only_once = yes
 		cost = 0
-		visible = {
-			tag = SOV
+		allowed = {
+			OR = {
+                tag = GER
+                tag = ITA
+            }
 		}
+        visible = {
+            has_government = fascism
+        }
 		available = {
 			has_global_flag = spanish_civil_war
 			not = {
@@ -1197,9 +1203,33 @@ political_actions = {
 			}
 		}
 		complete_effect = {
-			SOV = {
-				army_experience = 300
+			add_timed_idea = {
+                idea = simulate_volunteers
+                days = 365
+            }
+		}
+	}
+	SOV_assist_republican_spain = {
+		icon = GFX_decision_SOV_secure_the_administration
+		fire_only_once = yes
+		cost = 0
+        allowed = {
+            tag = SOV
+        }
+        visible = {
+            has_government = communism
+        }
+		available = {
+			has_global_flag = spanish_civil_war
+			not = {
+				has_global_flag = scw_over
 			}
+		}
+		complete_effect = {
+            add_timed_idea = {
+                idea = simulate_volunteers
+                days = 365
+            }
 		}
 	}
 }

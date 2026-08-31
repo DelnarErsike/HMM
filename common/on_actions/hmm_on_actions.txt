@@ -1668,22 +1668,28 @@ on_actions = {
 		effect = {
 			# While 1-div training is something people wouldn't keep doing at war, field exercising freaky converts is, so this stays even at war
 			# Free mastery is now also for land and special forces only. Ships can't be LL'ed, so no easy mastery gain option there, and air production for things like strats and tacs is quite rare (and handled by peacetime training's bonus anyway)
+			set_temp_variable = { free_daily_mastery = 1 }
+			if = { # Simulate extra effect from fighting with volunteers
+				limit = { has_idea = simulate_volunteers }
+				set_temp_variable = { free_daily_mastery = 2 }
+			}
+			set_temp_variable = { free_daily_mastery_for_bank = free_daily_mastery }
+			multiply_temp_variable = { free_daily_mastery_for_bank = 0.25 } # Tuned based on NDoctrine.MASTERY_BANK_CONVERSION_RATE = 0.25
 			if = {
 				limit = {
 					has_subdoctrine_in_track = infantry
 					NOT = { has_completed_track = infantry }
 				}
 				add_daily_mastery = {
-					amount = 1
+					amount = var:free_daily_mastery
 					days = 7
 					name = peace_training
 					track = infantry 
 				}
 			}
 			else = {
-				# Tuned based on NDoctrine.MASTERY_BANK_CONVERSION_RATE = 0.25
 				add_daily_mastery = {
-					amount = 0.25
+					amount = var:free_daily_mastery_for_bank
 					days = 7
 					name = peace_training
 					track = infantry 
@@ -1695,16 +1701,15 @@ on_actions = {
 					NOT = { has_completed_track = combat_support }
 				}
 				add_daily_mastery = {
-					amount = 1
+					amount = var:free_daily_mastery
 					days = 7
 					name = peace_training
 					track = combat_support 
 				}
 			}
 			else = {
-				# Tuned based on NDoctrine.MASTERY_BANK_CONVERSION_RATE = 0.25
 				add_daily_mastery = {
-					amount = 0.25
+					amount = var:free_daily_mastery_for_bank
 					days = 7
 					name = peace_training
 					track = combat_support 
@@ -1716,16 +1721,15 @@ on_actions = {
 					NOT = { has_completed_track = armor }
 				}
 				add_daily_mastery = {
-					amount = 1
+					amount = var:free_daily_mastery
 					days = 7
 					name = peace_training
 					track = armor 
 				}
 			}
 			else = {
-				# Tuned based on NDoctrine.MASTERY_BANK_CONVERSION_RATE = 0.25
 				add_daily_mastery = {
-					amount = 0.25
+					amount = var:free_daily_mastery_for_bank
 					days = 7
 					name = peace_training
 					track = armor 
@@ -1737,16 +1741,15 @@ on_actions = {
 					NOT = { has_completed_track = operations }
 				}
 				add_daily_mastery = {
-					amount = 1
+					amount = var:free_daily_mastery
 					days = 7
 					name = peace_training
 					track = operations 
 				}
 			}
 			else = {
-				# Tuned based on NDoctrine.MASTERY_BANK_CONVERSION_RATE = 0.25
 				add_daily_mastery = {
-					amount = 0.25
+					amount = var:free_daily_mastery_for_bank
 					days = 7
 					name = peace_training
 					track = operations 
@@ -1758,16 +1761,15 @@ on_actions = {
 					NOT = { has_completed_track = special_forces_first }
 				}
 				add_daily_mastery = {
-					amount = 1
+					amount = var:free_daily_mastery
 					days = 7
 					name = peace_training
 					track = special_forces_first 
 				}
 			}
 			else = {
-				# Tuned based on NDoctrine.MASTERY_BANK_CONVERSION_RATE = 0.25
 				add_daily_mastery = {
-					amount = 0.25
+					amount = var:free_daily_mastery_for_bank
 					days = 7
 					name = peace_training
 					track = special_forces_first 
@@ -1779,16 +1781,15 @@ on_actions = {
 					NOT = { has_completed_track = special_forces_second }
 				}
 				add_daily_mastery = {
-					amount = 1
+					amount = var:free_daily_mastery
 					days = 7
 					name = peace_training
 					track = special_forces_second 
 				}
 			}
 			else = {
-				# Tuned based on NDoctrine.MASTERY_BANK_CONVERSION_RATE = 0.25
 				add_daily_mastery = {
-					amount = 0.25
+					amount = var:free_daily_mastery_for_bank
 					days = 7
 					name = peace_training
 					track = special_forces_second 
