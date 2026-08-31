@@ -1,3 +1,11 @@
+force_tactics_category = {
+	icon = GFX_decision_category_military_operation
+	visible = {
+		is_debug = yes
+		is_ai = no
+	}
+}
+
 Technologies = {
 	icon = generic_propaganda
 

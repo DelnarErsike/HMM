@@ -1,3 +1,167 @@
+force_tactics_category = {
+    force_offense_tactic_attack = {
+        allowed = {
+        }
+        visible = {
+            always = yes
+        }
+        available = {
+            not = { has_country_flag = force_offense_tactic_attack }
+        }
+        complete_effect = {
+            set_country_flag = force_offense_tactic_attack
+        }
+    }
+    force_offense_tactic_breakthrough = {
+        allowed = {
+        }
+        visible = {
+            always = yes
+        }
+        available = {
+            not = { has_country_flag = force_offense_tactic_breakthrough }
+        }
+        complete_effect = {
+            set_country_flag = force_offense_tactic_breakthrough
+        }
+    }
+    force_offense_tactic_well_planned_attack = {
+        allowed = {
+        }
+        visible = {
+            always = yes
+        }
+        available = {
+            not = { has_country_flag = force_offense_tactic_well_planned_attack }
+        }
+        complete_effect = {
+            set_country_flag = force_offense_tactic_well_planned_attack
+        }
+    }
+    force_offense_tactic_unexpected_thrust = {
+        allowed = {
+        }
+        visible = {
+            always = yes
+        }
+        available = {
+            not = { has_country_flag = force_offense_tactic_unexpected_thrust }
+        }
+        complete_effect = {
+            set_country_flag = force_offense_tactic_unexpected_thrust
+        }
+    }
+    clear_forced_offense_tactics = {
+        allowed = {
+        }
+        visible = {
+            always = yes
+        }
+        available = {
+            OR = {
+                has_country_flag = force_offense_tactic_attack
+                has_country_flag = force_offense_tactic_breakthrough
+                has_country_flag = force_offense_tactic_well_planned_attack
+                has_country_flag = force_offense_tactic_unexpected_thrust
+            }
+        }
+        complete_effect = {
+            clr_country_flag = force_offense_tactic_attack
+            clr_country_flag = force_offense_tactic_breakthrough
+            clr_country_flag = force_offense_tactic_well_planned_attack
+            clr_country_flag = force_offense_tactic_unexpected_thrust
+        }
+    }
+    force_defense_tactic_defend = {
+        allowed = {
+        }
+        visible = {
+            always = yes
+        }
+        available = {
+            not = { has_country_flag = force_defense_tactic_defend }
+        }
+        complete_effect = {
+            set_country_flag = force_defense_tactic_defend
+        }
+    }
+    force_defense_tactic_elastic_defense = {
+        allowed = {
+        }
+        visible = {
+            always = yes
+        }
+        available = {
+            not = { has_country_flag = force_defense_tactic_elastic_defense }
+        }
+        complete_effect = {
+            set_country_flag = force_defense_tactic_elastic_defense
+        }
+    }
+    force_defense_tactic_tactical_withdrawal = {
+        allowed = {
+        }
+        visible = {
+            always = yes
+        }
+        available = {
+            not = { has_country_flag = force_defense_tactic_tactical_withdrawal }
+        }
+        complete_effect = {
+            set_country_flag = force_defense_tactic_tactical_withdrawal
+        }
+    }
+    force_defense_tactic_guerilla_tactics = {
+        allowed = {
+        }
+        visible = {
+            always = yes
+        }
+        available = {
+            not = { has_country_flag = force_defense_tactic_guerilla_tactics }
+        }
+        complete_effect = {
+            set_country_flag = force_defense_tactic_guerilla_tactics
+        }
+    }
+    force_defense_tactic_backhand_blow = {
+        allowed = {
+        }
+        visible = {
+            always = yes
+        }
+        available = {
+            not = { has_country_flag = force_defense_tactic_backhand_blow }
+        }
+        complete_effect = {
+            set_country_flag = force_defense_tactic_backhand_blow
+        }
+    }
+    clear_forced_defense_tactics = {
+        allowed = {
+        }
+        visible = {
+            always = yes
+        }
+        available = {
+            OR = {
+                has_country_flag = force_defense_tactic_defend
+                has_country_flag = force_defense_tactic_elastic_defense
+                has_country_flag = force_defense_tactic_tactical_withdrawal
+                has_country_flag = force_defense_tactic_guerilla_tactics
+                has_country_flag = force_defense_tactic_backhand_blow
+            }
+        }
+        complete_effect = {
+            clr_country_flag = force_defense_tactic_defend
+            clr_country_flag = force_defense_tactic_elastic_defense
+            clr_country_flag = force_defense_tactic_tactical_withdrawal
+            clr_country_flag = force_defense_tactic_guerilla_tactics
+            clr_country_flag = force_defense_tactic_backhand_blow
+        }
+    }
+}
+
 operations = {
     annex_SAF = {
         # icon = generic_operation
