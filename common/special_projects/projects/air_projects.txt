@@ -747,6 +747,29 @@ sp_air_jet_engine = {
 		sp_tag_jet
 	}
 
+	allowed = {
+		OR = {
+			has_game_rule = {
+				rule = jet_engines
+				option = on
+			}
+			AND = {
+				has_game_rule = {
+					rule = jet_engines
+					option = allies
+				}
+				allies = yes
+			}
+			AND = {
+				has_game_rule = {
+					rule = jet_engines
+					option = axis
+				}
+				axis = yes
+			}
+		}
+	}
+
 	available = { 
 		FROM = {
 			if = {
@@ -1012,6 +1035,29 @@ sp_air_axial_jet_engine = {
 
 	special_project_parent = {
 		sp_air_jet_engine
+	}
+
+	allowed = {
+		OR = {
+			has_game_rule = {
+				rule = jet_engines
+				option = on
+			}
+			AND = {
+				has_game_rule = {
+					rule = jet_engines
+					option = allies
+				}
+				allies = yes
+			}
+			AND = {
+				has_game_rule = {
+					rule = jet_engines
+					option = axis
+				}
+				axis = yes
+			}
+		}
 	}
 
 	available = { 
