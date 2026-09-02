@@ -138,9 +138,25 @@ sp_land_military_engineering_vehicles = {
 		country_effects = {
 			if = {
 				limit = {
-					has_game_rule = {
-						rule = urban_assault_vechile
-						option = on
+					OR = {
+						has_game_rule = {
+							rule = urban_assault_vechile
+							option = on
+						}
+						AND = {
+							has_game_rule = {
+								rule = urban_assault_vechile
+								option = allies
+							}
+							allies = yes
+						}
+						AND = {
+							has_game_rule = {
+								rule = urban_assault_vechile
+								option = axis
+							}
+							axis = yes
+						}
 					}
 				}
 				hidden_effect = {
@@ -200,9 +216,25 @@ sp_land_land_cruiser = {
 
 	allowed = {
 		has_dlc = "Gotterdammerung"
-		has_game_rule = {
-			rule = super_heavy_tank
-			option = allowed
+		OR = {
+			has_game_rule = {
+				rule = land_cruiser
+				option = on
+			}
+			AND = {
+				has_game_rule = {
+					rule = land_cruiser
+					option = allies
+				}
+				allies = yes
+			}
+			AND = {
+				has_game_rule = {
+					rule = land_cruiser
+					option = axis
+				}
+				axis = yes
+			}
 		}
 	}
 
@@ -1119,7 +1151,26 @@ sp_land_super_heavy_railway_gun = {
 
 	project_tags = sp_tag_artillery
 	visible = {
-		has_game_rule = { rule = super_heavy_railway_gun option = on }
+		OR = {
+			has_game_rule = {
+				rule = super_heavy_railway_gun
+				option = on
+			}
+			AND = {
+				has_game_rule = {
+					rule = super_heavy_railway_gun
+					option = allies
+				}
+				allies = yes
+			}
+			AND = {
+				has_game_rule = {
+					rule = super_heavy_railway_gun
+					option = axis
+				}
+				axis = yes
+			}
+		}
 	}
 	allowed = {
 		has_dlc = "No Step Back"
@@ -1191,7 +1242,26 @@ sp_land_multi_charge_large_caliber_gun = {
 
 	project_tags = sp_tag_artillery
 	visible = {
-		has_game_rule = { rule = multi_charge_large_caliber_gun option = on }
+		OR = {
+			has_game_rule = {
+				rule = multi_charge_large_caliber_gun
+				option = on
+			}
+			AND = {
+				has_game_rule = {
+					rule = multi_charge_large_caliber_gun
+					option = allies
+				}
+				allies = yes
+			}
+			AND = {
+				has_game_rule = {
+					rule = multi_charge_large_caliber_gun
+					option = axis
+				}
+				axis = yes
+			}
+		}
 	}
 	allowed = {
 		has_dlc = "Gotterdammerung"

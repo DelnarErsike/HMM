@@ -22781,10 +22781,24 @@ focus = {
                 }
                 if = {
                     limit = {
-                        NOT = {
+                        OR = {
 							has_game_rule = {
 								rule = railway_gun
-								option = off
+								option = on
+							}
+							AND = {
+								has_game_rule = {
+									rule = railway_gun
+									option = allies
+								}
+								allies = yes
+							}
+							AND = {
+								has_game_rule = {
+									rule = railway_gun
+									option = axis
+								}
+								axis = yes
 							}
 						}
                     }

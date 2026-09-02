@@ -2106,10 +2106,24 @@ technologies = {
 	super_heavy_tank = { #Maus
 
 		allow_branch = {
-			NOT = {
+			OR = {
 				has_game_rule = {
 					rule = super_heavy_tank
-					option = banned
+					option = on
+				}
+				AND = {
+					has_game_rule = {
+						rule = super_heavy_tank
+						option = allies
+					}
+					allies = yes
+				}
+				AND = {
+					has_game_rule = {
+						rule = super_heavy_tank
+						option = axis
+					}
+					axis = yes
 				}
 			}
 		}
@@ -2146,9 +2160,25 @@ technologies = {
 			if = {
 				limit = {
 					has_dlc = "Gotterdammerung"
-					has_game_rule = {
-						rule = super_heavy_tank
-						option = allowed
+					OR = {
+						has_game_rule = {
+							rule = land_cruiser
+							option = on
+						}
+						AND = {
+							has_game_rule = {
+								rule = land_cruiser
+								option = allies
+							}
+							allies = yes
+						}
+						AND = {
+							has_game_rule = {
+								rule = land_cruiser
+								option = axis
+							}
+							axis = yes
+						}
 					}
 				}
 				custom_effect_tooltip = {

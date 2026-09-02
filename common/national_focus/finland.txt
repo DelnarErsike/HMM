@@ -11537,10 +11537,24 @@ focus_tree = {
 			#has_dlc = "No Step Back"
 			#has_completed_focus = FIN_national_armor_focus
 			#has_completed_focus = FIN_militarized_society
-			NOT = {
+			OR = {
 				has_game_rule = {
 					rule = super_heavy_tank
-					option = banned
+					option = on
+				}
+				AND = {
+					has_game_rule = {
+						rule = super_heavy_tank
+						option = allies
+					}
+					allies = yes
+				}
+				AND = {
+					has_game_rule = {
+						rule = super_heavy_tank
+						option = axis
+					}
+					axis = yes
 				}
 			}
 		}
@@ -13762,10 +13776,24 @@ focus_tree = {
 				if = {
 					limit = {
 						NOT = { has_tech = railway_gun }
-						NOT = {
+						OR = {
 							has_game_rule = {
 								rule = railway_gun
-								option = off
+								option = on
+							}
+							AND = {
+								has_game_rule = {
+									rule = railway_gun
+									option = allies
+								}
+								allies = yes
+							}
+							AND = {
+								has_game_rule = {
+									rule = railway_gun
+									option = axis
+								}
+								axis = yes
 							}
 						}
 					}

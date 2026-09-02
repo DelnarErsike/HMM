@@ -1273,10 +1273,24 @@ technologies = {
 
 	super_heavy_tank_chassis = { #Maus
 		allow_branch = {
-			NOT = {
+			OR = {
 				has_game_rule = {
 					rule = super_heavy_tank
-					option = banned
+					option = on
+				}
+				AND = {
+					has_game_rule = {
+						rule = super_heavy_tank
+						option = allies
+					}
+					allies = yes
+				}
+				AND = {
+					has_game_rule = {
+						rule = super_heavy_tank
+						option = axis
+					}
+					axis = yes
 				}
 			}
 		}
@@ -1379,9 +1393,25 @@ technologies = {
 			if = {
 				limit = {
 					has_dlc = "Gotterdammerung"
-					has_game_rule = {
-						rule = super_heavy_tank
-						option = allowed
+					OR = {
+						has_game_rule = {
+							rule = land_cruiser
+							option = on
+						}
+						AND = {
+							has_game_rule = {
+								rule = land_cruiser
+								option = allies
+							}
+							allies = yes
+						}
+						AND = {
+							has_game_rule = {
+								rule = land_cruiser
+								option = axis
+							}
+							axis = yes
+						}
 					}
 				}
 				custom_effect_tooltip = {
@@ -2025,9 +2055,25 @@ technologies = {
 
 	sp_armored_lc_naval_engine_conversion_tech = {
 		allow_branch = {
-			has_game_rule = {
-				rule = super_heavy_tank
-				option = allowed
+			OR = {
+				has_game_rule = {
+					rule = land_cruiser
+					option = on
+				}
+				AND = {
+					has_game_rule = {
+						rule = land_cruiser
+						option = allies
+					}
+					allies = yes
+				}
+				AND = {
+					has_game_rule = {
+						rule = land_cruiser
+						option = axis
+					}
+					axis = yes
+				}
 			}
 			 has_dlc = "Gotterdammerung"
 		}
@@ -2103,9 +2149,25 @@ technologies = {
 
 	sp_armored_lc_transmission_improvements_tech = {
 		allow_branch = {
-			has_game_rule = {
-				rule = super_heavy_tank
-				option = allowed
+			OR = {
+				has_game_rule = {
+					rule = land_cruiser
+					option = on
+				}
+				AND = {
+					has_game_rule = {
+						rule = land_cruiser
+						option = allies
+					}
+					allies = yes
+				}
+				AND = {
+					has_game_rule = {
+						rule = land_cruiser
+						option = axis
+					}
+					axis = yes
+				}
 			}
 			 has_dlc = "Gotterdammerung"
 		}
@@ -2201,9 +2263,25 @@ technologies = {
 
 	sp_armored_lc_specialized_field_manuals_tech = {
 		allow_branch = {
-			has_game_rule = {
-				rule = super_heavy_tank
-				option = allowed
+			OR = {
+				has_game_rule = {
+					rule = land_cruiser
+					option = on
+				}
+				AND = {
+					has_game_rule = {
+						rule = land_cruiser
+						option = allies
+					}
+					allies = yes
+				}
+				AND = {
+					has_game_rule = {
+						rule = land_cruiser
+						option = axis
+					}
+					axis = yes
+				}
 			}
 			 has_dlc = "Gotterdammerung"
 		}
@@ -2275,9 +2353,25 @@ technologies = {
 
 	sp_armored_lc_weapon_fire_control_tech = {
 		allow_branch = {
-			has_game_rule = {
-				rule = super_heavy_tank
-				option = allowed
+			OR = {
+				has_game_rule = {
+					rule = land_cruiser
+					option = on
+				}
+				AND = {
+					has_game_rule = {
+						rule = land_cruiser
+						option = allies
+					}
+					allies = yes
+				}
+				AND = {
+					has_game_rule = {
+						rule = land_cruiser
+						option = axis
+					}
+					axis = yes
+				}
 			}
 			 has_dlc = "Gotterdammerung"
 		}
@@ -2343,9 +2437,25 @@ technologies = {
 
 	sp_armored_lc_high_impact_obliterator_cannon_tech = {
 		allow_branch = {
-			has_game_rule = {
-				rule = super_heavy_tank
-				option = allowed
+			OR = {
+				has_game_rule = {
+					rule = land_cruiser
+					option = on
+				}
+				AND = {
+					has_game_rule = {
+						rule = land_cruiser
+						option = allies
+					}
+					allies = yes
+				}
+				AND = {
+					has_game_rule = {
+						rule = land_cruiser
+						option = axis
+					}
+					axis = yes
+				}
 			}
 			 has_dlc = "Gotterdammerung"
 		}

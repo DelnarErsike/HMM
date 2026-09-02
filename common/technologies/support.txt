@@ -229,10 +229,24 @@ technologies = {
 		on_research_complete = {
 			if = {
 				limit = {
-					NOT = {
+					OR = {
 						has_game_rule = {
 							rule = dozer_blade_status
-							option = banned
+							option = on
+						}
+						AND = {
+							has_game_rule = {
+								rule = dozer_blade_status
+								option = allies
+							}
+							allies = yes
+						}
+						AND = {
+							has_game_rule = {
+								rule = dozer_blade_status
+								option = axis
+							}
+							axis = yes
 						}
 					}
 				}
@@ -1979,10 +1993,24 @@ technologies = {
 			railway_gun_equipment_1
 		}
 		allow_branch = {
-			NOT = {
+			OR = {
 				has_game_rule = {
 					rule = railway_gun
-					option = off
+					option = on
+				}
+				AND = {
+					has_game_rule = {
+						rule = railway_gun
+						option = allies
+					}
+					allies = yes
+				}
+				AND = {
+					has_game_rule = {
+						rule = railway_gun
+						option = axis
+					}
+					axis = yes
 				}
 			}
 		}

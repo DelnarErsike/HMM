@@ -222,6 +222,16 @@ urban_assault_vechile= {
 		desc = "Assault engineer support companies are not unlocked after finishing the Military Engineering Vehicles special project."
 	}
 	option = {
+		name = axis
+		text = "OAxis Only"
+		desc = "Assault engineer support companies are unlocked as normal for Axis countries, but only them, after finishing the Military Engineering Vehicles special project."
+	}
+	option = {
+		name = allies
+		text = "CAllies Only"
+		desc = "Assault engineer support companies are unlocked as normal for Allied countries, but only them, after finishing the Military Engineering Vehicles special project."
+	}
+	option = {
 		name = on
 		text = "GAllowed"
 		desc = "Assault engineer support companies are unlocked as normal after finishing the Military Engineering Vehicles special project."
@@ -235,6 +245,16 @@ railway_gun= {
 		name = off
 		text = "RBanned"
 		desc = "Railway guns cannot be researched, and focuses, decisions, or events that would unlock them and/or spawn them in do not do that."
+	}
+	option = {
+		name = axis
+		text = "OAxis Only"
+		desc = "Railway guns can be researched and built by the Axis only, and focuses, decisions, and events that unlock and/or spawn in railway guns do not do that for the Allies."
+	}
+	option = {
+		name = allies
+		text = "CAllies Only"
+		desc = "Railway guns can be researched and built by the Allies only, and focuses, decisions, and events that unlock and/or spawn in railway guns do not do that for the Axis."
 	}
 	option = {
 		name = on
@@ -252,6 +272,16 @@ super_heavy_railway_gun= {
 		desc = "Super-heavy railway guns cannot be researched."
 	}
 	option = {
+		name = axis
+		text = "OAxis Only"
+		desc = "Super-heavy railway guns can only be researched and built by Axis countries, assuming they can also research ordinary railway guns."
+	}
+	option = {
+		name = allies
+		text = "CAllies Only"
+		desc = "Super-heavy railway guns can only be researched and built by Allied countries, assuming they can also research ordinary railway guns."
+	}
+	option = {
 		name = on
 		text = "GAllowed"
 		desc = "Super-heavy railway guns can be researched and built, assuming ordinary railway guns can also be researched."
@@ -265,6 +295,16 @@ multi_charge_large_caliber_gun= {
 		name = off
 		text = "RBanned"
 		desc = "Multi-charge large caliber guns cannot be researched."
+	}
+	option = {
+		name = axis
+		text = "OAxis Only"
+		desc = "Multi-charge large caliber guns can only be researched and built by Axis countries."
+	}
+	option = {
+		name = allies
+		text = "CAllies Only"
+		desc = "Multi-charge large caliber guns can only be researched and built by Allied countries."
 	}
 	option = {
 		name = on
@@ -282,6 +322,16 @@ dozer_blade_status = {
 		desc = "Dozer Blades cannot be unlocked."
 	}
 	option = {
+		name = axis
+		text = "OAxis Only"
+		desc = "Dozer Blades can be unlocked with 1939 Engineers tech, but only for Axis countries. They do not unlock for the Allies."
+	}
+	option = {
+		name = allies
+		text = "CAllies Only"
+		desc = "Dozer Blades can be unlocked with 1939 Engineers tech, but only for Allied countries. They do not unlock for the Axis."
+	}
+	option = {
 		name = allowed
 		text = "GAllowed"
 		desc = "Dozer Blades can be unlocked with 1939 Engineers tech as normal."
@@ -294,17 +344,47 @@ super_heavy_tank = {
 	default = {
 		name = banned
 		text = "RBanned"
-		desc = "Super heavy tanks cannot be researched, and by extension, land cruisers also cannot be researched."
+		desc = "Super heavy tanks cannot be researched or built."
 	}
 	option = {
-		name = only_super_heavy_tank
-		text = "YLand Cruiser Banned"
-		desc = "Super heavy tanks can be researched and built, but land cruisers cannot."
+		name = axis
+		text = "OAxis Only"
+		desc = "Only the Axis is allowed to research and build super-heavy tanks."
+	}
+	option = {
+		name = allies
+		text = "CAllies Only"
+		desc = "Only the Allies are allowed to research and build super-heavy tanks."
 	}
 	option = {
 		name = allowed
 		text = "GAllowed"
-		desc = "Both super heavy tanks and land cruisers can be researched and built."
+		desc = "Super heavy tanks can be researched and built as normal."
+	}
+}
+land_cruiser = {
+	name = "Status of Land Cruisers"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_ignite_civil_war"
+	default = {
+		name = banned
+		text = "RBanned"
+		desc = "Land cruisers also cannot be researched or built."
+	}
+	option = {
+		name = axis
+		text = "OAxis Only"
+		desc = "Only the Axis is allowed to research and build land cruisers, assuming they can also research super-heavy tanks."
+	}
+	option = {
+		name = allies
+		text = "CAllies Only"
+		desc = "Only the Allies are allowed to research and build land cruisers, assuming they can also research super-heavy tanks."
+	}
+	option = {
+		name = allowed
+		text = "GAllowed"
+		desc = "Land cruisers can be researched and built as normal, assuming super-heavy tanks can also be researched."
 	}
 }
 jet_engines = {
@@ -340,6 +420,16 @@ marine_commando_status = {
 		name = banned
 		text = "RBanned"
 		desc = "Marine Commandos cannot be unlocked."
+	}
+	option = {
+		name = axis
+		text = "OAxis Only"
+		desc = "Marine Commandos can only be unlocked by Axis countries."
+	}
+	option = {
+		name = allies
+		text = "CAllies Only"
+		desc = "Marine Commandos can only be unlocked by Allied countries."
 	}
 	option = {
 		name = allowed
