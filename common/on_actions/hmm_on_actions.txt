@@ -1397,6 +1397,67 @@ on_actions = {
 					white_peace = FROM
 				}
 			}
+			# Subordinated countries of puppets otherwise don't join wars
+			if = {
+				limit = {
+					is_subject = yes
+					has_subject = yes
+					any_subject_country = {
+						has_autonomy_state = autonomy_hmm_subordinated_country
+						PREV = {
+							any_enemy_country = {
+								NOT = { has_war_with = PREV.PREV }
+							}
+						}
+					}
+				}
+				every_enemy_country = {
+					PREV = {
+						every_subject_country = {
+							limit = {
+								has_autonomy_state = autonomy_hmm_subordinated_country
+								NOT = { has_war_with = PREV.PREV }
+							}
+							add_to_war = {
+								targeted_alliance = PREV
+								enemy = PREV.PREV
+								hostility_reason = asked_to_join
+							}
+						}
+					}
+				}
+			}
+			FROM = {
+				if = {
+					limit = {
+						is_subject = yes
+						has_subject = yes
+						any_subject_country = {
+							has_autonomy_state = autonomy_hmm_subordinated_country
+							PREV = {
+								any_enemy_country = {
+									NOT = { has_war_with = PREV.PREV }
+								}
+							}
+						}
+					}
+					every_enemy_country = {
+						PREV = {
+							every_subject_country = {
+								limit = {
+									has_autonomy_state = autonomy_hmm_subordinated_country
+									NOT = { has_war_with = PREV.PREV }
+								}
+								add_to_war = {
+									targeted_alliance = PREV
+									enemy = PREV.PREV
+									hostility_reason = asked_to_join
+								}
+							}
+						}
+					}
+				}
+			}
 			
 			# HMM: keep this in sync with can_grind_generals scripted trigger
 			if = {
