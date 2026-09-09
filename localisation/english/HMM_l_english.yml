@@ -127,7 +127,7 @@
  annex_PHI:0 "Annex the Philippines"
  annex_IRQ:0 "Annex Iraq"
  # Subordinate Decisions (turn into full IC transfer puppet in which we can build)
- hmm_subordinate_explanation:0 "Subordinating a country turns them into a special puppet that transfers all of its industry to its overlord and gives extremely generous terms to the overlord. They will continue to do focuses and will prioritize excavation technologies.\nHowever, they cannot properly repair their buildings or make good use of their manpower, though this will self-correct after they are annexed."
+ hmm_subordinate_explanation:0 "Subordinating a country turns them into a special puppet that transfers all of its industry to its overlord and gives extremely generous terms to the overlord. They will continue to do focuses and will prioritize excavation technologies.\nHowever, they cannot properly repair their buildings or make good use of their manpower, though this will self-correct after they are annexed. If their overlord is capitulated while not being a subject, they will also be forcibly annexed into their overlord immediately beforehand so that they, too, get capitulated."
  subordinate_SAF:0 "Subordinate South Africa"
  subordinate_MEX:0 "Subordinate Mexico"
  subordinate_BRA:0 "Subordinate Brazil"
