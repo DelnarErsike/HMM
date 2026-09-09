@@ -1,3 +1,167 @@
+force_tactics_category = {
+    force_offense_tactic_attack = {
+        allowed = {
+        }
+        visible = {
+            always = yes
+        }
+        available = {
+            not = { has_country_flag = force_offense_tactic_attack }
+        }
+        complete_effect = {
+            set_country_flag = force_offense_tactic_attack
+        }
+    }
+    force_offense_tactic_breakthrough = {
+        allowed = {
+        }
+        visible = {
+            always = yes
+        }
+        available = {
+            not = { has_country_flag = force_offense_tactic_breakthrough }
+        }
+        complete_effect = {
+            set_country_flag = force_offense_tactic_breakthrough
+        }
+    }
+    force_offense_tactic_well_planned_attack = {
+        allowed = {
+        }
+        visible = {
+            always = yes
+        }
+        available = {
+            not = { has_country_flag = force_offense_tactic_well_planned_attack }
+        }
+        complete_effect = {
+            set_country_flag = force_offense_tactic_well_planned_attack
+        }
+    }
+    force_offense_tactic_unexpected_thrust = {
+        allowed = {
+        }
+        visible = {
+            always = yes
+        }
+        available = {
+            not = { has_country_flag = force_offense_tactic_unexpected_thrust }
+        }
+        complete_effect = {
+            set_country_flag = force_offense_tactic_unexpected_thrust
+        }
+    }
+    clear_forced_offense_tactics = {
+        allowed = {
+        }
+        visible = {
+            always = yes
+        }
+        available = {
+            OR = {
+                has_country_flag = force_offense_tactic_attack
+                has_country_flag = force_offense_tactic_breakthrough
+                has_country_flag = force_offense_tactic_well_planned_attack
+                has_country_flag = force_offense_tactic_unexpected_thrust
+            }
+        }
+        complete_effect = {
+            clr_country_flag = force_offense_tactic_attack
+            clr_country_flag = force_offense_tactic_breakthrough
+            clr_country_flag = force_offense_tactic_well_planned_attack
+            clr_country_flag = force_offense_tactic_unexpected_thrust
+        }
+    }
+    force_defense_tactic_defend = {
+        allowed = {
+        }
+        visible = {
+            always = yes
+        }
+        available = {
+            not = { has_country_flag = force_defense_tactic_defend }
+        }
+        complete_effect = {
+            set_country_flag = force_defense_tactic_defend
+        }
+    }
+    force_defense_tactic_elastic_defense = {
+        allowed = {
+        }
+        visible = {
+            always = yes
+        }
+        available = {
+            not = { has_country_flag = force_defense_tactic_elastic_defense }
+        }
+        complete_effect = {
+            set_country_flag = force_defense_tactic_elastic_defense
+        }
+    }
+    force_defense_tactic_tactical_withdrawal = {
+        allowed = {
+        }
+        visible = {
+            always = yes
+        }
+        available = {
+            not = { has_country_flag = force_defense_tactic_tactical_withdrawal }
+        }
+        complete_effect = {
+            set_country_flag = force_defense_tactic_tactical_withdrawal
+        }
+    }
+    force_defense_tactic_guerilla_tactics = {
+        allowed = {
+        }
+        visible = {
+            always = yes
+        }
+        available = {
+            not = { has_country_flag = force_defense_tactic_guerilla_tactics }
+        }
+        complete_effect = {
+            set_country_flag = force_defense_tactic_guerilla_tactics
+        }
+    }
+    force_defense_tactic_backhand_blow = {
+        allowed = {
+        }
+        visible = {
+            always = yes
+        }
+        available = {
+            not = { has_country_flag = force_defense_tactic_backhand_blow }
+        }
+        complete_effect = {
+            set_country_flag = force_defense_tactic_backhand_blow
+        }
+    }
+    clear_forced_defense_tactics = {
+        allowed = {
+        }
+        visible = {
+            always = yes
+        }
+        available = {
+            OR = {
+                has_country_flag = force_defense_tactic_defend
+                has_country_flag = force_defense_tactic_elastic_defense
+                has_country_flag = force_defense_tactic_tactical_withdrawal
+                has_country_flag = force_defense_tactic_guerilla_tactics
+                has_country_flag = force_defense_tactic_backhand_blow
+            }
+        }
+        complete_effect = {
+            clr_country_flag = force_defense_tactic_defend
+            clr_country_flag = force_defense_tactic_elastic_defense
+            clr_country_flag = force_defense_tactic_tactical_withdrawal
+            clr_country_flag = force_defense_tactic_guerilla_tactics
+            clr_country_flag = force_defense_tactic_backhand_blow
+        }
+    }
+}
+
 operations = {
     annex_SAF = {
         # icon = generic_operation
@@ -139,6 +303,132 @@ operations = {
                     add_compliance = 100
                 }
             }
+        }
+    }
+
+    subordinate_SAF = {
+        # icon = generic_operation
+        allowed = {
+            OR = {
+                original_tag = FRA
+                original_tag = AST
+                original_tag = RAJ
+                original_tag = ENG
+            }
+        }
+        fire_only_once = yes
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        visible = {
+            if = {
+                limit = {
+                    has_game_rule = {
+                        rule = who_gets_saf_annex
+                        option = fra
+                    }
+                }
+                original_tag = FRA
+            }
+            else_if = {
+                limit = {
+                    has_game_rule = {
+                        rule = who_gets_saf_annex
+                        option = ast
+                    }
+                }
+                original_tag = AST
+            }
+            else_if = {
+                limit = {
+                    has_game_rule = {
+                        rule = who_gets_saf_annex
+                        option = raj
+                    }
+                }
+                original_tag = RAJ
+            }
+            else_if = {
+                limit = {
+                    has_game_rule = {
+                        rule = who_gets_saf_annex
+                        option = eng
+                    }
+                }
+                original_tag = ENG
+            }
+            else = {
+                always = no
+            }
+        }
+        available = {
+            SAF = {
+                is_ai = yes
+                OR = { # Just in case
+                    is_in_faction_with = ENG
+                    is_in_faction_with = ROOT
+                    is_puppet_of = ROOT
+                }
+                OR = {
+                    NOT = { is_subject_of = ROOT }
+                    NOT = { has_autonomy_state = autonomy_hmm_subordinated_country }
+                }
+            }
+            OR = {
+                is_in_faction_with = ENG
+                ENG = {
+                    has_completed_focus = uk_south_africa_focus
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = HMM_we_are_selected_for_SAF_annex
+                if = {
+                    limit = {
+                        has_game_rule = {
+                            rule = who_gets_saf_annex
+                            option = fra
+                        }
+                    }
+                    original_tag = FRA
+                }
+                else_if = {
+                    limit = {
+                        has_game_rule = {
+                            rule = who_gets_saf_annex
+                            option = ast
+                        }
+                    }
+                    original_tag = AST
+                }
+                else_if = {
+                    limit = {
+                        has_game_rule = {
+                            rule = who_gets_saf_annex
+                            option = raj
+                        }
+                    }
+                    original_tag = RAJ
+                }
+                else_if = {
+                    limit = {
+                        has_game_rule = {
+                            rule = who_gets_saf_annex
+                            option = eng
+                        }
+                    }
+                    original_tag = ENG
+                }
+                else = {
+                    always = no
+                }
+            }
+        }
+        targets = {
+            SAF
+        }
+        complete_effect = {
+            SAF = { subordinate_this_country_to_ROOT = yes }
         }
     }
 
@@ -817,6 +1107,12 @@ operations = {
                     NOT = { has_autonomy_state = autonomy_hmm_subordinated_country }
                 }
             }
+            OR = {
+                is_in_faction_with = ENG
+                ENG = {
+                    has_completed_focus = uk_new_zealand_focus
+                }
+            }
         }
         targets = {
             NZL
@@ -1091,11 +1387,11 @@ political_actions = {
 			tag = FRA
 		}
 		visible = {
-			tag = FRA
-			NOT = {
-				controls_state = 16
-			}
+			NOT = { controls_state = 16 }
 		}
+        available = {
+            113 = { is_owned_and_controlled_by = ROOT }
+        }
 		complete_effect = {
 			set_capital = {
 				state = 113
@@ -1108,11 +1404,11 @@ political_actions = {
 			tag = FRA
 		}
 		visible = {
-			tag = FRA
-			NOT = {
-				controls_state = 16
-			}
+			NOT = { controls_state = 16 }
 		}
+        available = {
+            461 = { is_owned_and_controlled_by = ROOT }
+        }
 		complete_effect = {
 			set_capital = {
 				state = 461
@@ -1126,11 +1422,11 @@ political_actions = {
 			tag = FRA
 		}
 		visible = {
-			tag = FRA
-			NOT = {
-				controls_state = 16
-			}
+			NOT = { controls_state = 16 }
 		}
+        available = {
+            539 = { is_owned_and_controlled_by = ROOT }
+        }
 		complete_effect = {
 			set_capital = {
 				state = 539
@@ -1144,9 +1440,11 @@ political_actions = {
 			tag = SOV
 		}
 		visible = {
-			tag = SOV
-			GER = { has_war_with = SOV }
+			has_war_with = GER
 		}
+        available = {
+            249 = { is_owned_and_controlled_by = ROOT }
+        }
 		complete_effect = {
 			set_capital = {
 				state = 249
@@ -1159,9 +1457,11 @@ political_actions = {
 			tag = SOV
 		}
 		visible = {
-			tag = SOV
-			GER = { has_war_with = SOV }
+            has_war_with = GER
 		}
+        available = {
+            217 = { is_owned_and_controlled_by = ROOT }
+        }
 		complete_effect = {
 			set_capital = {
 				state = 217
@@ -1174,9 +1474,11 @@ political_actions = {
 			tag = SOV
 		}
 		visible = {
-			tag = SOV
-			GER = { has_war_with = SOV }
+			has_war_with = GER
 		}
+        available = {
+            408 = { is_owned_and_controlled_by = ROOT }
+        }
 		complete_effect = {
 			set_capital = {
 				state = 408

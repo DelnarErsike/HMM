@@ -11709,6 +11709,53 @@ focus_tree = {
 
 		available = {
 			is_subject = no
+			# HMM: make sure we can only take this when we'd be able to declare war within the rules before the wargoal expires (70-day focus + 60 days for wargoal to expire)
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = danzig_or_war_date
+							option = unrestricted
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = danzig_or_war_date
+							option = historical
+						}
+					}
+					date > 1939.4.24
+				}
+				else_if = {
+					limit = {
+						has_game_rule = {
+							rule = danzig_or_war_date
+							option = june
+						}
+					}
+					date > 1939.1.22
+				}
+				else_if = {
+					limit = {
+						has_game_rule = {
+							rule = danzig_or_war_date
+							option = march
+						}
+					}
+					date > 1938.10.22
+				}
+				else_if = {
+					limit = {
+						has_game_rule = {
+							rule = danzig_or_war_date
+							option = january
+						}
+					}
+					date > 1938.8.24
+				}
+			}
 			# HMM: make sure Molotov-Ribbentrop is done before Danzig, but put the prerequisite here because it lets us keep the focus tree clean-looking
 			has_completed_focus = GER_molotov_ribbentrop_pact
 			# HMM: no need to deploy army

@@ -1526,16 +1526,16 @@ focus_tree = {
 		completion_reward = {
 			add_country_leader_trait = rearmer
 
-			effect_tooltip = {
-				ENG = {
-					activate_mission = AST_japanese_war_mission
-				}
-			}
-			custom_effect_tooltip = AST_eastern_focus_tt
+			#effect_tooltip = {
+			#	ENG = {
+			#		activate_mission = AST_japanese_war_mission
+			#	}
+			#}
+			#custom_effect_tooltip = AST_eastern_focus_tt
 
-			hidden_effect = {
-				ENG = { country_event = { id = AST_diplomatic_events.68 hours = 3 } }
-			}
+			#hidden_effect = {
+			#	ENG = { country_event = { id = AST_diplomatic_events.68 hours = 3 } }
+			#}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1742,8 +1742,8 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			AST_add_or_modify_AST_australian_military_forces_spirit = yes
-			#add_to_variable = { AST_australian_military_forces_spirit_army_non_core_attack_factor = -0.05 tooltip = army_non_core_attack_factor_tt }
-			#add_to_variable = { AST_australian_military_forces_spirit_army_non_core_defence_factor = -0.05 tooltip = army_non_core_defence_factor_tt }
+			add_to_variable = { AST_australian_military_forces_spirit_army_non_core_attack_factor = -0.05 tooltip = army_non_core_attack_factor_tt }
+			add_to_variable = { AST_australian_military_forces_spirit_army_non_core_defence_factor = -0.05 tooltip = army_non_core_defence_factor_tt }
 			add_to_variable = { AST_australian_military_forces_spirit_army_core_attack_factor = 0.10 tooltip = army_core_attack_factor_tt }
 			add_to_variable = { AST_australian_military_forces_spirit_army_core_defence_factor = 0.10 tooltip = army_core_defence_factor_tt }
 
@@ -3047,8 +3047,8 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			AST_add_or_modify_AST_australian_military_forces_spirit = yes
-			#add_to_variable = { AST_australian_military_forces_spirit_army_non_core_attack_factor = -0.05 tooltip = army_non_core_attack_factor_tt }
-			#add_to_variable = { AST_australian_military_forces_spirit_army_non_core_defence_factor = -0.05 tooltip = army_non_core_defence_factor_tt }
+			add_to_variable = { AST_australian_military_forces_spirit_army_non_core_attack_factor = -0.05 tooltip = army_non_core_attack_factor_tt }
+			add_to_variable = { AST_australian_military_forces_spirit_army_non_core_defence_factor = -0.05 tooltip = army_non_core_defence_factor_tt }
 			add_to_variable = { AST_australian_military_forces_spirit_army_core_attack_factor = 0.10 tooltip = army_core_attack_factor_tt }
 			add_to_variable = { AST_australian_military_forces_spirit_army_core_defence_factor = 0.10 tooltip = army_core_defence_factor_tt }
 
@@ -9326,7 +9326,7 @@ focus = {
 		completion_reward = {
 			custom_effect_tooltip = AST_australian_military_forces_spirit_tt
 			add_to_variable = { AST_australian_military_forces_spirit_coordination_bonus = 0.05 tooltip = coordination_bonus_tt }
-			#add_to_variable = { AST_australian_military_forces_spirit_army_org_regain = 0.05 tooltip = army_org_regain_tt }
+			add_to_variable = { AST_australian_military_forces_spirit_army_org_regain = 0.05 tooltip = army_org_regain_tt }
 		}
 
 		search_filters = {  }

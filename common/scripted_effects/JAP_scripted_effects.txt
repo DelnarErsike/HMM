@@ -2506,7 +2506,7 @@ JAP_trigger_communist_civil_war = {
 	IF = {
 		limit = {
 			has_completed_focus = JAP_raise_support_within_the_proletarian_class
-			NOT = { has_idea = JAP_strong_unions_idea } }
+			NOT = { has_idea = JAP_strong_unions_idea }
 		}
 		add_ideas = JAP_strong_unions_idea
 	}
