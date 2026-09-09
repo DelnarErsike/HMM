@@ -1418,6 +1418,30 @@ DIPLOMACY_REQUEST_LICENSED_PRODUCTION_ENABLE_TRIGGER = {
 DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 	if = {
 		limit = {
+			NOT = {
+				has_game_rule = {
+					rule = jap_sov_war_allowed
+					option = vanilla
+				}
+			}
+			OR = {
+				tag = SOV
+				tag = JAP
+			}
+			FROM = {
+				OR = {
+					tag = SOV
+					tag = JAP
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = HMM_banned_by_rules
+			always = no
+		}
+	}
+	if = {
+		limit = {
 			has_game_rule = {
 				rule = allow_wargoals
 				option = ALWAYS_FREE
