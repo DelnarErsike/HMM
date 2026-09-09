@@ -306,6 +306,132 @@ operations = {
         }
     }
 
+    subordinate_SAF = {
+        # icon = generic_operation
+        allowed = {
+            OR = {
+                original_tag = FRA
+                original_tag = AST
+                original_tag = RAJ
+                original_tag = ENG
+            }
+        }
+        fire_only_once = yes
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        visible = {
+            if = {
+                limit = {
+                    has_game_rule = {
+                        rule = who_gets_saf_annex
+                        option = fra
+                    }
+                }
+                original_tag = FRA
+            }
+            else_if = {
+                limit = {
+                    has_game_rule = {
+                        rule = who_gets_saf_annex
+                        option = ast
+                    }
+                }
+                original_tag = AST
+            }
+            else_if = {
+                limit = {
+                    has_game_rule = {
+                        rule = who_gets_saf_annex
+                        option = raj
+                    }
+                }
+                original_tag = RAJ
+            }
+            else_if = {
+                limit = {
+                    has_game_rule = {
+                        rule = who_gets_saf_annex
+                        option = eng
+                    }
+                }
+                original_tag = ENG
+            }
+            else = {
+                always = no
+            }
+        }
+        available = {
+            SAF = {
+                is_ai = yes
+                OR = { # Just in case
+                    is_in_faction_with = ENG
+                    is_in_faction_with = ROOT
+                    is_puppet_of = ROOT
+                }
+                OR = {
+                    NOT = { is_subject_of = ROOT }
+                    NOT = { has_autonomy_state = autonomy_hmm_subordinated_country }
+                }
+            }
+            OR = {
+                is_in_faction_with = ENG
+                ENG = {
+                    has_completed_focus = uk_south_africa_focus
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = HMM_we_are_selected_for_SAF_annex
+                if = {
+                    limit = {
+                        has_game_rule = {
+                            rule = who_gets_saf_annex
+                            option = fra
+                        }
+                    }
+                    original_tag = FRA
+                }
+                else_if = {
+                    limit = {
+                        has_game_rule = {
+                            rule = who_gets_saf_annex
+                            option = ast
+                        }
+                    }
+                    original_tag = AST
+                }
+                else_if = {
+                    limit = {
+                        has_game_rule = {
+                            rule = who_gets_saf_annex
+                            option = raj
+                        }
+                    }
+                    original_tag = RAJ
+                }
+                else_if = {
+                    limit = {
+                        has_game_rule = {
+                            rule = who_gets_saf_annex
+                            option = eng
+                        }
+                    }
+                    original_tag = ENG
+                }
+                else = {
+                    always = no
+                }
+            }
+        }
+        targets = {
+            SAF
+        }
+        complete_effect = {
+            SAF = { subordinate_this_country_to_ROOT = yes }
+        }
+    }
+
     annex_ETH = {
         # icon = generic_operation
         allowed = {
