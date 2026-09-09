@@ -25,7 +25,7 @@ tactic_basic_attack = {
 		factor = 4
 		modifier = {
 			factor = 1000
-			has_country_flag = force_offense_tactic_attack
+			owner = { has_country_flag = force_offense_tactic_attack }
 		}
 	}
 	picture = attack
@@ -48,7 +48,7 @@ tactic_basic_defend = {
 		factor = 4
 		modifier = {
 			factor = 1000
-			has_country_flag = force_defense_tactic_defend
+			owner = { has_country_flag = force_defense_tactic_defend }
 		}
 	}
 	picture = defend
@@ -290,7 +290,7 @@ tactic_tactical_withdrawal = { #counters encirclement
 		factor = 4
 		modifier = {
 			factor = 1000
-			has_country_flag = force_defense_tactic_tactical_withdrawal
+			owner = { has_country_flag = force_defense_tactic_tactical_withdrawal }
 		}
 	}
 	picture = withdraw
@@ -400,7 +400,7 @@ tactic_breakthrough = { #counters ambush
 		factor = 4
 		modifier = {
 			factor = 1000
-			has_country_flag = force_offense_tactic_breakthrough
+			owner = { has_country_flag = force_offense_tactic_breakthrough }
 		}
 	}
 	picture = breakthrough
@@ -486,7 +486,7 @@ tactic_elastic_defense = { #counters blitz
 		factor = 4
 		modifier = {
 			factor = 1000
-			has_country_flag = force_defense_tactic_elastic_defense
+			owner = { has_country_flag = force_defense_tactic_elastic_defense }
 		}
 	}
 	picture = elastic_defence
@@ -516,7 +516,7 @@ tactic_backhand_blow = { #counters breakthrough
 		factor = 4
 		modifier = {
 			factor = 1000
-			has_country_flag = force_defense_tactic_backhand_blow
+			owner = { has_country_flag = force_defense_tactic_backhand_blow }
 		}
 	}
 	picture = backhand_blow
@@ -759,7 +759,7 @@ tactic_guerrilla_tactics = { #People's army defender tactic. also for German vol
 		factor = 4
 		modifier = {
 			factor = 1000
-			has_country_flag = force_defense_tactic_guerilla_tactics
+			owner = { has_country_flag = force_defense_tactic_guerilla_tactics }
 		}
 	}
 	picture = tactic_guerrilla_tactics
@@ -865,7 +865,7 @@ tactic_planned_attack = { #GBP -> Armor attacker tactic
 		factor = 4
 		modifier = {
 			factor = 1000
-			has_country_flag = force_offense_tactic_well_planned_attack
+			owner = { has_country_flag = force_offense_tactic_well_planned_attack }
 		}
 	}
 	picture = tactic_planned_attack
@@ -905,7 +905,7 @@ tactic_unexpected_thrust = { #Mobile warfare attacker tactic
 		factor = 4
 		modifier = {
 			factor = 1000
-			has_country_flag = force_offense_tactic_unexpected_thrust
+			owner = { has_country_flag = force_offense_tactic_unexpected_thrust }
 		}
 	}
 	picture = tactic_unexpected_thrust
