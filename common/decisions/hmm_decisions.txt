@@ -1107,6 +1107,12 @@ operations = {
                     NOT = { has_autonomy_state = autonomy_hmm_subordinated_country }
                 }
             }
+            OR = {
+                is_in_faction_with = ENG
+                ENG = {
+                    has_completed_focus = uk_new_zealand_focus
+                }
+            }
         }
         targets = {
             NZL
