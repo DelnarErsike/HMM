@@ -512,6 +512,31 @@ easier_arteries_of_trade_for_allies = {
 		desc = "To complete the Protect the Arteries of Trade faction goal, the Allies will need to establish dominance in just one of 16 specific sea zones."
 	}
 }
+danzig_or_war_date = {
+	name = "When is the earliest that the Axis can declare war on Poland?"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_ignite_civil_war"
+	option = {
+		name = historical
+		text = "CSeptember 1939"
+	}
+	option = {
+		name = june
+		text = "GJune 1939"
+	}
+	default = {
+		name = march
+		text = "YMarch 1939"
+	}
+	option = {
+		name = january
+		text = "OJanuary 1939"
+	}
+	option = {
+		name = unrestricted
+		text = "RUnrestricted"
+	}
+}
 jap_sov_war_allowed = {
 	name = "Can Japan and the Soviet Union Go To War?"
 	group = "HMM Rules"
