@@ -25,7 +25,7 @@ NZL_historical = {
 		}
 	}
 	abort = {
-		is_subject = no
+		#is_subject = no # We should keep going regardless
 	}
 
 	ai_national_focuses = {

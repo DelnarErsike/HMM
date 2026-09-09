@@ -22,6 +22,10 @@ RAJ_GOE_historical = {
 				option = GOE_HISTORICAL
 			}
 			has_country_flag = britain_enforced_our_loyalty
+			has_game_rule = {
+				rule = alt_hist_raj
+				option = banned
+			}
 		}
 		NOT = {
 			has_game_rule = {

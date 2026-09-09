@@ -78,12 +78,19 @@ on_actions = {
 			}
 
 			SPR = {
-				add_ideas = no_faction
+				if = {
+					limit = { NOT = { has_idea = no_faction } }
+					add_ideas = no_faction
+				}
 			}
 			HOL = {
-				add_ideas = {
-					noresistance
-					ai_conscription_laws
+				if = {
+					limit = { NOT = { has_idea = noresistance } }
+					add_ideas = noresistance
+				}
+				if = {
+					limit = { NOT = { has_idea = ai_conscription_laws } }
+					add_ideas = ai_conscription_laws
 				}
 			}
 			if = {
@@ -797,6 +804,54 @@ on_actions = {
 				}
 			}
 
+			# Subordinated countries either swap overlords (if they are subordinated to a subject) or are forcibly annexed into the capitulating country so that they are also capitulated with their overlord
+			if = {
+				limit = {
+					any_subject_country = {
+						has_autonomy_state = autonomy_hmm_subordinated_country
+					}
+				}
+				if = {
+					limit = { is_subject = yes }
+					overlord = {
+						PREV = {
+							every_subject_country = {
+								limit = { has_autonomy_state = autonomy_hmm_subordinated_country }
+								subordinate_this_country_to_PREVPREV = yes
+							}
+						}
+					}
+				}
+				else = {
+					every_subject_country = {
+						limit = { has_autonomy_state = autonomy_hmm_subordinated_country }
+						transfer_units_fraction = {
+							target = ROOT
+							size = 1
+							stockpile_ratio = 1
+							army_ratio = 1
+							navy_ratio = 1
+							air_ratio = 1
+							keep_unit_leaders_trigger = {
+								always = no
+							}
+						}
+						ROOT = {
+							annex_country = {
+								target = PREV
+								transfer_troops = yes
+							}
+							every_controlled_state = {
+								limit = {
+									is_core_of = PREV
+								}
+								add_compliance = 100
+							}
+						}
+					}
+				}
+			}
+
 			if = {
 				limit = {
 					original_tag = POL
@@ -879,15 +934,13 @@ on_actions = {
 					amount = 20000
 					producer = HOL
 				}
-				transfer_state = 672
-				transfer_state = 334
-				transfer_state = 335
-				transfer_state = 667
-				transfer_state = 673
-				transfer_state = 668
-				transfer_state = 669
-				transfer_state = 309
-				transfer_state = 695
+				every_owned_state = {
+					limit = {
+						NOT = { is_on_continent = europe }
+						controller = { axis = yes }
+					}
+					set_state_controller_to = HOL
+				}
 			}
 			else_if = {
 				limit = { 
@@ -1388,6 +1441,67 @@ on_actions = {
 						}
 					}
 					white_peace = FROM
+				}
+			}
+			# Subordinated countries of puppets otherwise don't join wars
+			if = {
+				limit = {
+					is_subject = yes
+					has_subject = yes
+					any_subject_country = {
+						has_autonomy_state = autonomy_hmm_subordinated_country
+						PREV = {
+							any_enemy_country = {
+								NOT = { has_war_with = PREV.PREV }
+							}
+						}
+					}
+				}
+				every_enemy_country = {
+					PREV = {
+						every_subject_country = {
+							limit = {
+								has_autonomy_state = autonomy_hmm_subordinated_country
+								NOT = { has_war_with = PREV.PREV }
+							}
+							add_to_war = {
+								targeted_alliance = PREV
+								enemy = PREV.PREV
+								hostility_reason = asked_to_join
+							}
+						}
+					}
+				}
+			}
+			FROM = {
+				if = {
+					limit = {
+						is_subject = yes
+						has_subject = yes
+						any_subject_country = {
+							has_autonomy_state = autonomy_hmm_subordinated_country
+							PREV = {
+								any_enemy_country = {
+									NOT = { has_war_with = PREV.PREV }
+								}
+							}
+						}
+					}
+					every_enemy_country = {
+						PREV = {
+							every_subject_country = {
+								limit = {
+									has_autonomy_state = autonomy_hmm_subordinated_country
+									NOT = { has_war_with = PREV.PREV }
+								}
+								add_to_war = {
+									targeted_alliance = PREV
+									enemy = PREV.PREV
+									hostility_reason = asked_to_join
+								}
+							}
+						}
+					}
 				}
 			}
 			

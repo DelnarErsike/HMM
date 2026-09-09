@@ -20,6 +20,7 @@ PHI_historical_plan = {
 		PHI_commonwealth_of_the_philippines
 		PHI_align_with_the_usa
 		PHI_leverage_the_peso # It's actually better to go with Japan here, we end up with more stuff earlier and a lot of saved focus time if USA delays the annex
+		PHI_american_capital_injection # Just in case we had a human on PHI earlier and they chose peg peso to the dollar
 		PHI_quezon_city
 		PHI_encourage_japanese_investment
 		PHI_offshore_patrol

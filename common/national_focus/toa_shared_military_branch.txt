@@ -137,11 +137,19 @@ shared_focus = {
 		x = -11
 		y = 0
 		trigger = {
+			OR = {
+				AND = {
 			has_game_rule = {
 				rule = obsolete_focus_branches_visibility
 				option = HIDE
 			}
 			has_completed_focus = BRA_end_the_state_of_emergency
+				}
+				has_game_rule = {
+					rule = alt_hist_bra
+					option = forced
+				}
+			}
 		}	
 	}
 

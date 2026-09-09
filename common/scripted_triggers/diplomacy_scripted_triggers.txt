@@ -30,6 +30,57 @@
 #			}
 #		}
 
+DIPLOMACY_WAR_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			FROM = { tag = POL }
+			NOT = {
+				has_game_rule = {
+					rule = danzig_or_war_date
+					option = unrestricted
+				}
+			}
+			axis = yes
+		}
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = danzig_or_war_date
+					option = historical
+				}
+			}
+			date > 1939.8.31
+		}
+		else_if = {
+			limit = {
+				has_game_rule = {
+					rule = danzig_or_war_date
+					option = june
+				}
+			}
+			date > 1939.5.31
+		}
+		else_if = {
+			limit = {
+				has_game_rule = {
+					rule = danzig_or_war_date
+					option = march
+				}
+			}
+			date > 1939.2.28
+		}
+		else_if = {
+			limit = {
+				has_game_rule = {
+					rule = danzig_or_war_date
+					option = january
+				}
+			}
+			date > 1938.12.31
+		}
+	}
+}
+
 # This specifically overrides the rule check as to whether or not you can guarantee other ideologies
 DIPLOMACY_GUARANTEE_ENABLE_TRIGGER_OVERRIDES_GAME_TRIGGER = {
 	NOT = {
@@ -1416,6 +1467,30 @@ DIPLOMACY_REQUEST_LICENSED_PRODUCTION_ENABLE_TRIGGER = {
 	}
 }
 DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			NOT = {
+				has_game_rule = {
+					rule = jap_sov_war_allowed
+					option = vanilla
+				}
+			}
+			OR = {
+				tag = SOV
+				tag = JAP
+			}
+			FROM = {
+				OR = {
+					tag = SOV
+					tag = JAP
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = HMM_banned_by_rules
+			always = no
+		}
+	}
 	if = {
 		limit = {
 			has_game_rule = {

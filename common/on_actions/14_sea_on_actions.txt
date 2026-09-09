@@ -852,7 +852,10 @@ on_actions = {
 					PRC_increase_asian_democratic_union_modfier_strength = yes
 				}
 				FROM = {
+					if = {
+						limit = { NOT = { has_idea = PRC_asian_democratic_union_idea } }
 					add_ideas = PRC_asian_democratic_union_idea
+					}
 				}
 			}
 		}
@@ -920,7 +923,10 @@ on_actions = {
 					PRC_increase_asian_democratic_union_modfier_strength = yes
 				}
 				ROOT = {
+					if = {
+						limit = { NOT = { has_idea = PRC_asian_democratic_union_idea } }
 					add_ideas = PRC_asian_democratic_union_idea
+					}
 				}
 			}
 		}
@@ -960,7 +966,10 @@ on_actions = {
 				}
 
 				ROOT = {
+					if = {
+						limit = { NOT = { has_idea = idea_CHI_sympathetic_judges } }
 					add_ideas = idea_CHI_sympathetic_judges
+					}
 				}
 			}
 
@@ -1074,7 +1083,10 @@ on_actions = {
 					PRC_increase_asian_democratic_union_modfier_strength = yes
 				}
 				ROOT = {
+					if = {
+						limit = { NOT = { has_idea = PRC_asian_democratic_union_idea } }
 					add_ideas = PRC_asian_democratic_union_idea
+					}
 				}
 			}
 		}
@@ -3896,6 +3908,7 @@ on_actions = {
                 IF = {    # This prevents Japan from having a non-allowed eco modifier after being puppeted etc 
                     limit = {
                         has_idea = national_defense_state
+						NOT = { has_idea = partial_economic_mobilisation }
                     }
                     swap_ideas = {
                     	remove_idea = national_defense_state

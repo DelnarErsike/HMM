@@ -404,7 +404,10 @@ on_actions = {
 					}
 				}
 				ROOT = {
+					if = {
+						limit = { NOT = { has_idea = BEL_interpreters_ns } }
 					add_ideas = BEL_interpreters_ns
+					}
 				}
 			}
 		}
@@ -634,7 +637,10 @@ on_actions = {
 					}
 				}
 				FROM = {
+					if = {
+						limit = { NOT = { has_idea = BEL_interpreters_ns } }
 					add_ideas = BEL_interpreters_ns
+					}
 				}
 			}
 		}

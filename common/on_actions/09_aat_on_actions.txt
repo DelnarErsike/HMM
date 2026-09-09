@@ -262,7 +262,10 @@ on_actions = {
 						set_value = 0.8
 					}
 				}
-				else = { #Something weird happened and FIN doesn't have the Sisu NS -> Mid BoP and add Sisu NS
+				else_if = { #Something weird happened and FIN doesn't have the Sisu NS -> Mid BoP and add Sisu NS
+					limit = {
+						has_idea = FIN_sisu_3
+					}
 					set_power_balance = {
 						id = FIN_power_balance
 						left_side = FIN_bad_side

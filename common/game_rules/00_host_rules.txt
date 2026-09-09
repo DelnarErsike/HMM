@@ -222,6 +222,16 @@ urban_assault_vechile= {
 		desc = "Assault engineer support companies are not unlocked after finishing the Military Engineering Vehicles special project."
 	}
 	option = {
+		name = axis
+		text = "OAxis Only"
+		desc = "Assault engineer support companies are unlocked as normal for Axis countries, but only them, after finishing the Military Engineering Vehicles special project."
+	}
+	option = {
+		name = allies
+		text = "CAllies Only"
+		desc = "Assault engineer support companies are unlocked as normal for Allied countries, but only them, after finishing the Military Engineering Vehicles special project."
+	}
+	option = {
 		name = on
 		text = "GAllowed"
 		desc = "Assault engineer support companies are unlocked as normal after finishing the Military Engineering Vehicles special project."
@@ -235,6 +245,16 @@ railway_gun= {
 		name = off
 		text = "RBanned"
 		desc = "Railway guns cannot be researched, and focuses, decisions, or events that would unlock them and/or spawn them in do not do that."
+	}
+	option = {
+		name = axis
+		text = "OAxis Only"
+		desc = "Railway guns can be researched and built by the Axis only, and focuses, decisions, and events that unlock and/or spawn in railway guns do not do that for the Allies."
+	}
+	option = {
+		name = allies
+		text = "CAllies Only"
+		desc = "Railway guns can be researched and built by the Allies only, and focuses, decisions, and events that unlock and/or spawn in railway guns do not do that for the Axis."
 	}
 	option = {
 		name = on
@@ -252,6 +272,16 @@ super_heavy_railway_gun= {
 		desc = "Super-heavy railway guns cannot be researched."
 	}
 	option = {
+		name = axis
+		text = "OAxis Only"
+		desc = "Super-heavy railway guns can only be researched and built by Axis countries, assuming they can also research ordinary railway guns."
+	}
+	option = {
+		name = allies
+		text = "CAllies Only"
+		desc = "Super-heavy railway guns can only be researched and built by Allied countries, assuming they can also research ordinary railway guns."
+	}
+	option = {
 		name = on
 		text = "GAllowed"
 		desc = "Super-heavy railway guns can be researched and built, assuming ordinary railway guns can also be researched."
@@ -265,6 +295,16 @@ multi_charge_large_caliber_gun= {
 		name = off
 		text = "RBanned"
 		desc = "Multi-charge large caliber guns cannot be researched."
+	}
+	option = {
+		name = axis
+		text = "OAxis Only"
+		desc = "Multi-charge large caliber guns can only be researched and built by Axis countries."
+	}
+	option = {
+		name = allies
+		text = "CAllies Only"
+		desc = "Multi-charge large caliber guns can only be researched and built by Allied countries."
 	}
 	option = {
 		name = on
@@ -282,6 +322,16 @@ dozer_blade_status = {
 		desc = "Dozer Blades cannot be unlocked."
 	}
 	option = {
+		name = axis
+		text = "OAxis Only"
+		desc = "Dozer Blades can be unlocked with 1939 Engineers tech, but only for Axis countries. They do not unlock for the Allies."
+	}
+	option = {
+		name = allies
+		text = "CAllies Only"
+		desc = "Dozer Blades can be unlocked with 1939 Engineers tech, but only for Allied countries. They do not unlock for the Axis."
+	}
+	option = {
 		name = allowed
 		text = "GAllowed"
 		desc = "Dozer Blades can be unlocked with 1939 Engineers tech as normal."
@@ -294,17 +344,72 @@ super_heavy_tank = {
 	default = {
 		name = banned
 		text = "RBanned"
-		desc = "Super heavy tanks cannot be researched, and by extension, land cruisers also cannot be researched."
+		desc = "Super heavy tanks cannot be researched or built."
 	}
 	option = {
-		name = only_super_heavy_tank
-		text = "YLand Cruiser Banned"
-		desc = "Super heavy tanks can be researched and built, but land cruisers cannot."
+		name = axis
+		text = "OAxis Only"
+		desc = "Only the Axis is allowed to research and build super-heavy tanks."
+	}
+	option = {
+		name = allies
+		text = "CAllies Only"
+		desc = "Only the Allies are allowed to research and build super-heavy tanks."
 	}
 	option = {
 		name = allowed
 		text = "GAllowed"
-		desc = "Both super heavy tanks and land cruisers can be researched and built."
+		desc = "Super heavy tanks can be researched and built as normal."
+	}
+}
+land_cruiser = {
+	name = "Status of Land Cruisers"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_ignite_civil_war"
+	default = {
+		name = banned
+		text = "RBanned"
+		desc = "Land cruisers also cannot be researched or built."
+	}
+	option = {
+		name = axis
+		text = "OAxis Only"
+		desc = "Only the Axis is allowed to research and build land cruisers, assuming they can also research super-heavy tanks."
+	}
+	option = {
+		name = allies
+		text = "CAllies Only"
+		desc = "Only the Allies are allowed to research and build land cruisers, assuming they can also research super-heavy tanks."
+	}
+	option = {
+		name = allowed
+		text = "GAllowed"
+		desc = "Land cruisers can be researched and built as normal, assuming super-heavy tanks can also be researched."
+	}
+}
+jet_engines = {
+	name = "Status of Jet Engines"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_air"
+	option = {
+		name = banned
+		text = "RBanned"
+		desc = "Jet engines cannot be researched or built."
+	}
+	option = {
+		name = axis
+		text = "OAxis Only"
+		desc = "Jet engines can only be researched or built by Axis countries."
+	}
+	default = {
+		name = allies
+		text = "CAllies Only"
+		desc = "Jet engines can only be researched or built by Allied countries."
+	}
+	option = {
+		name = allowed
+		text = "GAllowed"
+		desc = "Jet engines can be researched and built as normal."
 	}
 }
 marine_commando_status = {
@@ -315,6 +420,16 @@ marine_commando_status = {
 		name = banned
 		text = "RBanned"
 		desc = "Marine Commandos cannot be unlocked."
+	}
+	option = {
+		name = axis
+		text = "OAxis Only"
+		desc = "Marine Commandos can only be unlocked by Axis countries."
+	}
+	option = {
+		name = allies
+		text = "CAllies Only"
+		desc = "Marine Commandos can only be unlocked by Allied countries."
 	}
 	option = {
 		name = allowed
@@ -395,6 +510,31 @@ easier_arteries_of_trade_for_allies = {
 		name = yes
 		text = "GShould Be Trivial for the Allies"
 		desc = "To complete the Protect the Arteries of Trade faction goal, the Allies will need to establish dominance in just one of 16 specific sea zones."
+	}
+}
+danzig_or_war_date = {
+	name = "When is the earliest that the Axis can declare war on Poland?"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_ignite_civil_war"
+	option = {
+		name = historical
+		text = "CSeptember 1939"
+	}
+	option = {
+		name = june
+		text = "GJune 1939"
+	}
+	default = {
+		name = march
+		text = "YMarch 1939"
+	}
+	option = {
+		name = january
+		text = "OJanuary 1939"
+	}
+	option = {
+		name = unrestricted
+		text = "RUnrestricted"
 	}
 }
 jap_sov_war_allowed = {
@@ -783,6 +923,31 @@ soviet_facility_handicaps = {
 		desc = "The Soviets get a free land warfare facility and a free naval engineering facility spawned in for them at startup."
 	}
 }
+mongol_licenses_to_soviets = {
+	name = "Mongolian Licenses for Soviets"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_merge_plant_materiel"
+	option = {
+		name = none
+		text = "RNone"
+		desc = "The Soviets do not get any licenses from Mongolia."
+	}
+	option = {
+		name = mech
+		text = "OMechanized"
+		desc = "The license decision for cheap mechanized gives Mongolian-licensed equipment for the Soviets instead of Swedish-licensed."
+	}
+	default = {
+		name = guns
+		text = "YInfantry Equipment"
+		desc = "The license decisions for infantry equipment 2 and 3 give Mongolian-licensed equipment for the Soviets instead of Swedish-licensed."
+	}
+	option = {
+		name = guns_and_mech
+		text = "GInfantry Equipment & Mechanized"
+		desc = "The license decisions for cheap mechanized and infantry equipment 2 and 3 give Mongolian-licensed equipment for the Soviets instead of Swedish-licensed."
+	}
+}
 playable_iraq = {
 	name = "Status of Iraq"
 	group = "HMM Rules"
@@ -1014,7 +1179,7 @@ who_gets_saf_annex = {
 	}
 	option = {
 		name = ast
-		text = "GAustralia"
+		text = "6Australia"
 		desc = "Australia will get the decision to annex South Africa if there is no player on it."
 	}
 	default = {
@@ -1024,8 +1189,23 @@ who_gets_saf_annex = {
 	}
 	option = {
 		name = eng
-		text = "RUnited Kingdom"
+		text = "tUnited Kingdom"
 		desc = "The United Kingdom will get the decision to annex South Africa if there is no player on it."
+	}
+}
+who_gets_mex_annex = {
+	name = "Who Gets the Annex Mexico Decision If It Is Not Player-Controlled?"
+	group = "HMM Rules"
+	icon = "GFX_volunteers"
+	default = {
+		name = bra
+		text = "GBrazil"
+		desc = "Brazil will get the decision to annex Mexico if there is no player on it."
+	}
+	option = {
+		name = usa
+		text = "2United States"
+		desc = "The United States will get the decision to annex Mexico if there is no player on it."
 	}
 }
 desperate_defense_conditions_status = {

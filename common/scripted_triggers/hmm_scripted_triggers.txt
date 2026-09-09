@@ -102,9 +102,11 @@ is_annexable_playable_country = {
 			tag = PHI
 			# Annexed into UK
 			tag = IRQ
-			# Brazil has annex decision
+			# Brazil/USA has annex decision
 			tag = MEX
-			# France/Raj have annex decision
+			# USA has annex decision
+			tag = BRA
+			# France/Raj/UK has annex decision
 			tag = SAF
 			# Nonnomed into Soviets
 			AND = {

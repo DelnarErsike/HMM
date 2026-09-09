@@ -260,9 +260,25 @@ marines_1 = {
 		    effect = {
 				if = {
 					limit = {
-						has_game_rule = {
-							rule = marine_commando_status
-							option = allowed
+						OR = {
+							has_game_rule = {
+								rule = marine_commando_status
+								option = allowed
+							}
+							AND = {
+								has_game_rule = {
+									rule = marine_commando_status
+									option = allies
+								}
+								allies = yes
+							}
+							AND = {
+								has_game_rule = {
+									rule = marine_commando_status
+									option = axis
+								}
+								axis = yes
+							}
 						}
 					}
 		    	unlock_subunit = marine_commando
@@ -287,9 +303,25 @@ marines_1 = {
 			effect = {
 				if = {
 					limit = {
-						has_game_rule = {
-							rule = marine_commando_status
-							option = allowed
+						OR = {
+							has_game_rule = {
+								rule = marine_commando_status
+								option = allowed
+							}
+							AND = {
+								has_game_rule = {
+									rule = marine_commando_status
+									option = allies
+								}
+								allies = yes
+							}
+							AND = {
+								has_game_rule = {
+									rule = marine_commando_status
+									option = axis
+								}
+								axis = yes
+							}
 						}
 					}
 				custom_effect_tooltip = SF_marine_demoliton_effect_TT
