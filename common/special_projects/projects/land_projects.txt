@@ -219,7 +219,7 @@ sp_land_land_cruiser = {
 		OR = {
 			has_game_rule = {
 				rule = land_cruiser
-				option = on
+				option = allowed
 			}
 			AND = {
 				has_game_rule = {

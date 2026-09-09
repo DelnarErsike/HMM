@@ -232,7 +232,7 @@ technologies = {
 					OR = {
 						has_game_rule = {
 							rule = dozer_blade_status
-							option = on
+							option = allowed
 						}
 						AND = {
 							has_game_rule = {

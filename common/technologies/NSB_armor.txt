@@ -1276,7 +1276,7 @@ technologies = {
 			OR = {
 				has_game_rule = {
 					rule = super_heavy_tank
-					option = on
+					option = allowed
 				}
 				AND = {
 					has_game_rule = {
@@ -1396,7 +1396,7 @@ technologies = {
 					OR = {
 						has_game_rule = {
 							rule = land_cruiser
-							option = on
+							option = allowed
 						}
 						AND = {
 							has_game_rule = {
@@ -2058,7 +2058,7 @@ technologies = {
 			OR = {
 				has_game_rule = {
 					rule = land_cruiser
-					option = on
+					option = allowed
 				}
 				AND = {
 					has_game_rule = {
@@ -2152,7 +2152,7 @@ technologies = {
 			OR = {
 				has_game_rule = {
 					rule = land_cruiser
-					option = on
+					option = allowed
 				}
 				AND = {
 					has_game_rule = {
@@ -2266,7 +2266,7 @@ technologies = {
 			OR = {
 				has_game_rule = {
 					rule = land_cruiser
-					option = on
+					option = allowed
 				}
 				AND = {
 					has_game_rule = {
@@ -2356,7 +2356,7 @@ technologies = {
 			OR = {
 				has_game_rule = {
 					rule = land_cruiser
-					option = on
+					option = allowed
 				}
 				AND = {
 					has_game_rule = {
@@ -2440,7 +2440,7 @@ technologies = {
 			OR = {
 				has_game_rule = {
 					rule = land_cruiser
-					option = on
+					option = allowed
 				}
 				AND = {
 					has_game_rule = {

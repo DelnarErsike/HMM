@@ -751,7 +751,7 @@ sp_air_jet_engine = {
 		OR = {
 			has_game_rule = {
 				rule = jet_engines
-				option = on
+				option = allowed
 			}
 			AND = {
 				has_game_rule = {
@@ -1041,7 +1041,7 @@ sp_air_axial_jet_engine = {
 		OR = {
 			has_game_rule = {
 				rule = jet_engines
-				option = on
+				option = allowed
 			}
 			AND = {
 				has_game_rule = {
