@@ -934,15 +934,13 @@ on_actions = {
 					amount = 20000
 					producer = HOL
 				}
-				transfer_state = 672
-				transfer_state = 334
-				transfer_state = 335
-				transfer_state = 667
-				transfer_state = 673
-				transfer_state = 668
-				transfer_state = 669
-				transfer_state = 309
-				transfer_state = 695
+				every_owned_state = {
+					limit = {
+						NOT = { is_on_continent = europe }
+						controller = { axis = yes }
+					}
+					set_state_controller_to = HOL
+				}
 			}
 			else_if = {
 				limit = { 
