@@ -359,6 +359,11 @@ technologies = {
 				factor = 5
 				date > "1937.1.1"
 			}
+
+			modifier = { # HMM: Subordinated countries should rush industry techs to maximize the building slots their overlord can get
+				factor = 1000
+				has_autonomy_state = autonomy_hmm_subordinated_country
+			}
 		}
 		
 		categories = {
@@ -400,6 +405,10 @@ technologies = {
 				date > "1937.1.1"
 			}
 			
+			modifier = { # HMM: Subordinated countries should rush industry techs to maximize the building slots their overlord can get
+				factor = 1000
+				has_autonomy_state = autonomy_hmm_subordinated_country
+			}
 		}
 		
 		categories = {
@@ -440,6 +449,11 @@ technologies = {
 				factor = 10
 				date > "1939.1.1"
 			}			
+
+			modifier = { # HMM: Subordinated countries should rush industry techs to maximize the building slots their overlord can get
+				factor = 1000
+				has_autonomy_state = autonomy_hmm_subordinated_country
+			}
 		}
 		
 		categories = {
@@ -479,6 +493,11 @@ technologies = {
 			modifier = {
 				factor = 10
 				date > "1941.1.1"
+			}
+
+			modifier = { # HMM: Subordinated countries should rush industry techs to maximize the building slots their overlord can get
+				factor = 1000
+				has_autonomy_state = autonomy_hmm_subordinated_country
 			}
 		}
 		
@@ -520,6 +539,11 @@ technologies = {
 				factor = 20
 				date > "1943.1.1"
 			}			
+
+			modifier = { # HMM: Subordinated countries should rush industry techs to maximize the building slots their overlord can get
+				factor = 1000
+				has_autonomy_state = autonomy_hmm_subordinated_country
+			}
 		}
 		
 		categories = {
@@ -596,6 +620,11 @@ technologies = {
 				factor = 5
 				date > "1937.1.1"
 			}
+
+			modifier = { # HMM: Subordinated countries should rush industry techs to maximize the building slots their overlord can get
+				factor = 1000
+				has_autonomy_state = autonomy_hmm_subordinated_country
+			}
 		}
 		
 		categories = {
@@ -638,6 +667,11 @@ technologies = {
 			modifier = {
 				factor = 10
 				date > "1937.1.1"
+			}
+
+			modifier = { # HMM: Subordinated countries should rush industry techs to maximize the building slots their overlord can get
+				factor = 1000
+				has_autonomy_state = autonomy_hmm_subordinated_country
 			}
 		}
 		
@@ -682,6 +716,11 @@ technologies = {
 				factor = 10
 				date > "1939.1.1"
 			}			
+
+			modifier = { # HMM: Subordinated countries should rush industry techs to maximize the building slots their overlord can get
+				factor = 1000
+				has_autonomy_state = autonomy_hmm_subordinated_country
+			}
 		}
 		
 		categories = {
@@ -725,6 +764,11 @@ technologies = {
 				factor = 10
 				date > "1941.1.1"
 			}
+
+			modifier = { # HMM: Subordinated countries should rush industry techs to maximize the building slots their overlord can get
+				factor = 1000
+				has_autonomy_state = autonomy_hmm_subordinated_country
+			}
 		}
 		
 		categories = {
@@ -764,6 +808,11 @@ technologies = {
 			modifier = {
 				factor = 10
 				date > "1943.1.1"
+			}
+
+			modifier = { # HMM: Subordinated countries should rush industry techs to maximize the building slots their overlord can get
+				factor = 1000
+				has_autonomy_state = autonomy_hmm_subordinated_country
 			}
 		}
 		
