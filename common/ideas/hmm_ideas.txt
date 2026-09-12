@@ -25,6 +25,19 @@ ideas = {
 				navy_fuel_consumption_factor = -0.99
 			}
 		}
+		simulate_training_air_lendlease = { # While this would be easier to do by modifying the relevant defines and factors, doing it this way makes it more visible and obvious about what we're doing, where, and why
+			allowed = {
+				always = no
+			}
+			cancel = {
+			}
+			removal_cost = -1
+			picture = GFX_idea_air_support_focus
+			modifier = {
+				air_training_xp_gain_factor = 10 # Simulates sending air early enough to get the XP needed on time
+				air_track_mastery_gain_factor = 10 # Simulates sending air early enough to get the mastery needed on time
+			}
+		}
 		simulate_volunteers = {
 			allowed = {
 				always = no

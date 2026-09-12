@@ -1,6 +1,8 @@
 ﻿l_english:
  peace_training:0 "Peacetime Training"
  peace_training_desc:0 "Substitutes for various macro tricks that people would use outside of war."
+ simulate_training_air_lendlease:0 "Air Training Simulation"
+ simulate_training_air_lendlease_desc:0 "Substitutes for players constantly keeping track of sending planes around for training and sending them back to the air controller when they're needed."
  simulate_volunteers: "Simulated Volunteer Rewards"
  simulate_volunteers_desc: "Sending volunteers to a nation normally provides us with a steady stream of army experience and mastery. This spirit simulates that effect."
  simulate_volunteers_instant_desc: "Daily £doctrine_mastery §HLand Doctrine§! mastery gain: §G+1§!"

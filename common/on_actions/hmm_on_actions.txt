@@ -23,9 +23,18 @@ on_actions = {
 					add_ideas = strat_bombing_banned
 				}
 				if = {
-					limit = { is_playable_country = yes }
+					limit = {
+						is_playable_country = yes
+						NOT = { has_idea = peace_training }
+					}
 					if = {
-						limit = { NOT = { has_idea = peace_training } }
+						limit = { has_idea = simulate_training_air_lendlease }
+						swap_ideas = {
+							remove_idea = simulate_training_air_lendlease
+							add_idea = peace_training
+						}
+					}
+					else = {
 						add_ideas = peace_training
 					}
 				}
@@ -469,7 +478,34 @@ on_actions = {
 					}
 					NOT = { has_idea = peace_training }
 				}
-				add_ideas = peace_training
+				if = {
+					limit = { has_idea = simulate_training_air_lendlease }
+					swap_ideas = {
+						remove_idea = simulate_training_air_lendlease
+						add_idea = peace_training
+					}
+				}
+				else = {
+					add_ideas = peace_training
+				}
+			}
+		}
+	}
+
+	on_war = {
+		effect = {
+			if = {
+				limit = { NOT = { has_idea = simulate_training_air_lendlease } }
+				if = {
+					limit = { has_idea = peace_training }
+					swap_ideas = {
+						remove_idea = peace_training
+						add_idea = simulate_training_air_lendlease
+					}
+				}
+				else = {
+					add_idea = simulate_training_air_lendlease
+				}
 			}
 		}
 	}
@@ -480,7 +516,20 @@ on_actions = {
 		effect = {
 			if = {
 				limit = { has_idea = peace_training }
-				remove_ideas = peace_training
+				if = {
+					limit = { NOT = { has_idea = simulate_training_air_lendlease } }
+					swap_ideas = {
+						remove_idea = peace_training
+						add_idea = simulate_training_air_lendlease
+					}
+				}
+				else = {
+					remove_ideas = peace_training
+				}
+			}
+			else_if = {
+				limit = { NOT = { has_idea = simulate_training_air_lendlease } }
+				add_idea = simulate_training_air_lendlease
 			}
 		}
 	}
@@ -501,7 +550,16 @@ on_actions = {
 					}
 					NOT = { has_idea = peace_training }
 				}
-				add_ideas = peace_training
+				if = {
+					limit = { has_idea = simulate_training_air_lendlease }
+					swap_ideas = {
+						remove_idea = simulate_training_air_lendlease
+						add_idea = peace_training
+					}
+				}
+				else = {
+					add_ideas = peace_training
+				}
 			}
 		}
 	}
