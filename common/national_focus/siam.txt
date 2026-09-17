@@ -71,17 +71,6 @@
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER }
 
-        offset = {
-            x = 3
-            y = 0
-            trigger = {
-                has_game_rule = {
-                    rule = obsolete_focus_branches_visibility
-                    option = HIDE
-                }
-                has_completed_focus = SIA_phibuns_premiership
-            }
-        }
 		completion_reward = {
 			SIA_increase_civilian_approval = yes
 			SIA_decrease_military_approval = yes
@@ -4915,7 +4904,7 @@
 	focus = {
 		id =  SIA_pan_thaiism
 		icon = GFX_focus_SIA_pan_thaiism
-		x = -10
+		x = -9
 		y = 1
 		relative_position_id = SIA_phibuns_premiership	
 		prerequisite = { focus = SIA_the_midnight_meeting focus = SIA_phibuns_premiership }

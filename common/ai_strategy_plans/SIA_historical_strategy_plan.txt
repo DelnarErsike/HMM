@@ -40,34 +40,40 @@ SIA_historical = {
 		SIA_royal_thai_navy
 		SIA_focus_on_commercial_civilian_ships # Note: increases civilian by 1
 		SIA_shuffle_pridi_to_the_minister_of_interior # Note: increases civilian by 1
-		SIA_civil_nationalism
-		SIA_dominate_public_symbols
 		SIA_for_the_preservation_of_siamese_independence # Note: decreases civilian by 1
+		SIA_civil_nationalism
+		SIA_the_army_of_siam
+		SIA_plan_for_a_short_war
+		SIA_prepare_northern_infrastructure_for_war
+		SIA_directorate_of_aeronautical_engineering
+		SIA_expand_don_mueang
+		SIA_dominate_public_symbols
 		SIA_diversity_foreign_reserves
 		SIA_contingency_funds # Note: decreases civilian by 1
 		SIA_prepare_for_the_next_blockade
 		SIA_royal_thai_ordnance_factory # Note: decreases civilian by 1
-		SIA_siam_electricity_company
-		SIA_domestic_tin_smelters
+		# These spawn-ins are OK, but we need fighter 2 research done for it, so save for last
+		SIA_preserve_american_procurement_channels
+		SIA_hawk_iii_production_line
 
-		# End of the obvious/easy spawn-in choices around August 1938
+		# End of the obvious/easy spawn-in choices around late 1938
 		
 		SIA_embed_technocrats_in_civilian_institutions
 		SIA_sell_privy_purse_lands
-		# And now we need to schedule 270 (35x8) days' worth of focuses while we wait for spirit to expire
-		SIA_fuel_oil_act							# 1x 35
-		SIA_rice_husk_steam_turbines				# 1x 35
-		SIA_kasetsart_university					# 1x 35
-		SIA_thammasat_university					# 2x 35 = 70
-		SIA_the_army_of_siam						# 1x 35
-		SIA_intermediate_war_preparation 			# 1x 35
-		SIA_prepare_northern_infrastructure_for_war	# 1x 35
+		# Do these ones as soon as they become available, otherwise work on less important spawn-ins and the like
 		SIA_phibuns_premiership
 		SIA_expand_domestic_arms_workshops
 		SIA_look_to_european_fascism
 		SIA_the_songsuradet_rebellion
 		SIA_sue_the_king_in_exile
-		
+		# These spawn-ins suck or are otherwise low-use, but it's better than nothing.
+		SIA_siam_electricity_company
+		SIA_domestic_tin_smelters
+		SIA_fuel_oil_act
+		SIA_rice_husk_steam_turbines
+		# Research slots, might as well
+		SIA_thammasat_university
+		SIA_kasetsart_university
 		# End of spawn-in focuses, don't bother with railroading after this
 	}
 
@@ -151,33 +157,38 @@ SIA_alt_historical = {
 		SIA_a_fledgling_tobacco_industry # Note: +1 civ with with Limited Exports, but it's extremely difficult to get the AI to switch to that reliably, so leave late
 		SIA_irrigation
 		SIA_farmers_into_the_city
+		SIA_the_army_of_siam
+		SIA_plan_for_a_short_war
+		SIA_prepare_northern_infrastructure_for_war
+		SIA_directorate_of_aeronautical_engineering
+		SIA_expand_don_mueang
 		SIA_railway_and_port_extensions # mainly for the slots
 
-		# End of the obvious choices around early-mid 1938, now come the ones that are more variable in importance
+		# End of the obvious choices around late 1938, now come the ones that are more variable in importance
 		# Decided to go with option that is safe, even if less optimal in some builds and/or if Japan waits to annex us
 		SIA_shuffle_pridi_to_the_minister_of_interior # Note: increases civilian by 1
 		SIA_civil_nationalism
 		SIA_dominate_public_symbols
 		
-		# Japan really should've annexed us by now, but let's keep going assuming they're waiting for a long time for whatever reason
 		SIA_chemical_imports
 		SIA_textile_mills
-		# End of straightforward spawn-ins
+		# These spawn-ins are OK, but we need fighter 2 research done for it, so save for last
+		SIA_preserve_american_procurement_channels
+		SIA_hawk_iii_production_line
+		# End of (easy) straightforward spawn-ins
 		SIA_embed_technocrats_in_civilian_institutions
 		SIA_sell_privy_purse_lands
-		# And now we need to schedule 270 (35x8) days' worth of focuses while we wait for spirit to expire
-		SIA_kasetsart_university					# 1x 35
-		SIA_thammasat_university					# 2x 35 = 70
-		SIA_the_army_of_siam						# 1x 35
-		SIA_intermediate_war_preparation 			# 1x 35
-		SIA_prepare_northern_infrastructure_for_war	# 1x 35
-		SIA_send_bureaucrats_abroad					# 1x 35
-		SIA_baht_stabilization_act					# 1x 35
+		# Do these ones as soon as they become available, otherwise work on less important spawn-ins and the like
 		SIA_phibuns_premiership
 		SIA_expand_domestic_arms_workshops
 		SIA_look_to_european_fascism
 		SIA_the_songsuradet_rebellion
 		SIA_sue_the_king_in_exile
+		# These are all lower-priority or bad, but might as well do them while we wait for the spirit to expire
+		SIA_kasetsart_university
+		SIA_thammasat_university
+		SIA_send_bureaucrats_abroad
+		SIA_baht_stabilization_act
 		
 		# End of spawn-in focuses, don't bother with railroading after this
 	}
