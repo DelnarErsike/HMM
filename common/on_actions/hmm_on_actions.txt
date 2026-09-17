@@ -1838,127 +1838,41 @@ on_actions = {
 				limit = { has_idea = simulate_volunteers }
 				set_temp_variable = { free_daily_mastery = 2 }
 			}
-			set_temp_variable = { free_daily_mastery_for_bank = free_daily_mastery }
-			multiply_temp_variable = { free_daily_mastery_for_bank = 0.25 } # Tuned based on NDoctrine.MASTERY_BANK_CONVERSION_RATE = 0.25
-			if = {
-				limit = {
-					has_subdoctrine_in_track = infantry
-					NOT = { has_completed_track = infantry }
-				}
-				add_daily_mastery = {
-					amount = var:free_daily_mastery
-					days = 7
-					name = peace_training
-					track = infantry 
-				}
+			add_daily_mastery = {
+				amount = var:free_daily_mastery
+				days = 7
+				name = peace_training
+				track = infantry 
 			}
-			else = {
-				add_daily_mastery = {
-					amount = var:free_daily_mastery_for_bank
-					days = 7
-					name = peace_training
-					track = infantry 
-				}
+			add_daily_mastery = {
+				amount = var:free_daily_mastery
+				days = 7
+				name = peace_training
+				track = combat_support 
 			}
-			if = {
-				limit = {
-					has_subdoctrine_in_track = combat_support
-					NOT = { has_completed_track = combat_support }
-				}
-				add_daily_mastery = {
-					amount = var:free_daily_mastery
-					days = 7
-					name = peace_training
-					track = combat_support 
-				}
+			add_daily_mastery = {
+				amount = var:free_daily_mastery
+				days = 7
+				name = peace_training
+				track = armor 
 			}
-			else = {
-				add_daily_mastery = {
-					amount = var:free_daily_mastery_for_bank
-					days = 7
-					name = peace_training
-					track = combat_support 
-				}
+			add_daily_mastery = {
+				amount = var:free_daily_mastery
+				days = 7
+				name = peace_training
+				track = operations 
 			}
-			if = {
-				limit = {
-					has_subdoctrine_in_track = armor
-					NOT = { has_completed_track = armor }
-				}
-				add_daily_mastery = {
-					amount = var:free_daily_mastery
-					days = 7
-					name = peace_training
-					track = armor 
-				}
+			add_daily_mastery = {
+				amount = var:free_daily_mastery
+				days = 7
+				name = peace_training
+				track = special_forces_first 
 			}
-			else = {
-				add_daily_mastery = {
-					amount = var:free_daily_mastery_for_bank
-					days = 7
-					name = peace_training
-					track = armor 
-				}
-			}
-			if = {
-				limit = {
-					has_subdoctrine_in_track = operations
-					NOT = { has_completed_track = operations }
-				}
-				add_daily_mastery = {
-					amount = var:free_daily_mastery
-					days = 7
-					name = peace_training
-					track = operations 
-				}
-			}
-			else = {
-				add_daily_mastery = {
-					amount = var:free_daily_mastery_for_bank
-					days = 7
-					name = peace_training
-					track = operations 
-				}
-			}
-			if = {
-				limit = {
-					has_subdoctrine_in_track = special_forces_first
-					NOT = { has_completed_track = special_forces_first }
-				}
-				add_daily_mastery = {
-					amount = var:free_daily_mastery
-					days = 7
-					name = peace_training
-					track = special_forces_first 
-				}
-			}
-			else = {
-				add_daily_mastery = {
-					amount = var:free_daily_mastery_for_bank
-					days = 7
-					name = peace_training
-					track = special_forces_first 
-				}
-			}
-			if = {
-				limit = {
-					has_subdoctrine_in_track = special_forces_second
-					NOT = { has_completed_track = special_forces_second }
-				}
-				add_daily_mastery = {
-					amount = var:free_daily_mastery
-					days = 7
-					name = peace_training
-					track = special_forces_second 
-				}
-			}
-			else = {
-				add_daily_mastery = {
-					amount = var:free_daily_mastery_for_bank
-					days = 7
-					name = peace_training
-					track = special_forces_second 
-				}
+			add_daily_mastery = {
+				amount = var:free_daily_mastery
+				days = 7
+				name = peace_training
+				track = special_forces_second 
 			}
 		}
 	}

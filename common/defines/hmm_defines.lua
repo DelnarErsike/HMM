@@ -19,7 +19,6 @@ NDefines.NDiplomacy.EMBARGO_NEIGHBOUR_AI_WEIGHT = -100
 -- Army XP and Mastery
 
 NDefines.NMilitary.TRAINING_MAX_DAILY_COUNTRY_EXP = 0 -- Replaced with peacetime training spirit
-NDefines.NDoctrines.MASTERY_BANK_CONVERSION_RATE = 1  -- The rate at which mastery gained when a track is finished or empty is "banked"
 NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 999                            -- WAS 500 || XP Cap
 NDefines.NMilitary.MAX_AIR_EXPERIENCE = 999			                    -- WAS 500 || XP Cap
 NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 999		                    -- WAS 500 || XP Cap
