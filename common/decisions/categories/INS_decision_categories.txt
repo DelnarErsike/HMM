@@ -83,15 +83,6 @@ INS_borneo_puppet_cat = {
 	allowed = {
 		original_tag = INS
 		has_dlc = "Thunder at Our Gates"
-		if = {
-			limit = {
-				has_game_rule = {
-					rule = allow_release_nations
-					option = FREE
-				}
-			}
-			has_war = no
-		}
 	}
 
 	visible = {
