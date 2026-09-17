@@ -128,7 +128,7 @@ buildings = {
 		per_level_extra_cost = 130
 		disabled_in_dmz = yes
 		icon_frame = 16
-		damage_factor = 0.01
+		damage_factor = 0.01 # HMM: added to actually allow railways to survive strategic bombardment
 		infrastructure_construction_effect = yes
 		level_cap = {
 			province_max = 1
@@ -158,7 +158,6 @@ buildings = {
 			group_by = special_project_facility
 		}
 		only_costal = yes
-
 	}
 
 	naval_base = {

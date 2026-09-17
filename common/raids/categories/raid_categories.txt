@@ -56,10 +56,15 @@ categories = {
 		faction_influence_score_on_success = 50
 		visible = {
 			always = no
+			has_dlc = "Thunder at Our Gates"
+			OR = {
+				original_tag = INS
+				original_tag = AST
+				original_tag = SIA
+			}
 		}
 		available = {
 			always = no
 		}
 	}
-
 }

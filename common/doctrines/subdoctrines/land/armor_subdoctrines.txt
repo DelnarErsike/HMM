@@ -219,8 +219,7 @@ armored_infantry_support = {
                 max_organisation = 5
             }
 			category_tank_destroyer_regimental_support = {			
-                max_organisation = 5
-				ap_attack = 0.1
+				max_organisation = 5
 			}
         }
 		
@@ -753,8 +752,5 @@ tank_destroyer_force = {
                 max_organisation = 5
 			}
         }
-
-
-
     }
 }

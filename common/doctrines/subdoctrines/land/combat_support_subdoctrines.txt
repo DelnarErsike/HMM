@@ -58,10 +58,10 @@ fire_concentration = {
 		
         artillery_groups = {
         #3
-		   category_artillery = {
-                soft_attack = 0.1			   
-                defense = 0.1	
-		   }
+           category_artillery = {
+                soft_attack = 0.1
+                defense = 0.1
+           }
         }
 		
         dedicated_air_support = {
@@ -78,9 +78,9 @@ fire_concentration = {
                 hard_attack = 0.1
             }
             category_regimental_support_artillery = {
-                defense = 0.1             
-                breakthrough = 0.1             
-           }            
+                defense = 0.1
+                breakthrough = 0.1
+            }
         }
     }
 }
@@ -118,11 +118,11 @@ anti_tank_frontline = {
                 ap_attack = 0.1
 			}
             anti_tank = {
-                ap_attack = 0.1				
-			}
-            anti_tank_battery = {
                 ap_attack = 0.1
             }
+            anti_tank_battery = {
+                ap_attack = 0.1			
+			}
         }
         emplacement_rotation = {
         #2
@@ -264,12 +264,12 @@ flying_batteries = {
             motorized_rocket_brigade = {
                 max_organisation = 10
                 soft_attack = 0.05
-                defense = 0.1
+                defense = 0.1                
             }
             mot_artillery_brigade = {
                 max_organisation = 10
                 soft_attack = 0.05
-                defense = 0.1
+                defense = 0.1                
             }
         }
     }
@@ -589,7 +589,7 @@ self_propelled_support = {
     category_self_propelled_artillery = {
         soft_attack = 0.05
     }
-    category_self_propelled_anti_air= {
+    category_self_propelled_anti_air = {
         air_attack = 0.05
     }
     category_tank_destroyers = {
@@ -603,7 +603,7 @@ self_propelled_support = {
             category_self_propelled_artillery = {
                 max_organisation = 10
             }
-            category_self_propelled_anti_air= {
+            category_self_propelled_anti_air = {
                 max_organisation = 10
             }
             category_tank_destroyers = {
@@ -648,7 +648,7 @@ self_propelled_support = {
         multirole_support_vehicles = {			
 			category_tank_destroyer_regimental_support = {
                 max_organisation = 5
-                hard_attack = 0.05			
+                hard_attack = 0.05				
 			}
 			category_self_propelled_anti_air_regimental_support = {
                 max_organisation = 5

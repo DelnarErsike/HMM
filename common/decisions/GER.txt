@@ -12089,9 +12089,6 @@ GER_reichskommissariats = {
 				1023 = {
 				    is_controlled_by_ROOT_or_subject = yes
 				}
-				1022 = {
-				    is_controlled_by_ROOT_or_subject = yes
-				}
 				1021 = {
 				    is_controlled_by_ROOT_or_subject = yes
 				}
@@ -12102,6 +12099,9 @@ GER_reichskommissariats = {
 				    is_controlled_by_ROOT_or_subject = yes
 				}
 				1070 = {
+				    is_controlled_by_ROOT_or_subject = yes
+				}
+				1071 = {
 				    is_controlled_by_ROOT_or_subject = yes
 				}
 				634 = {
@@ -12194,9 +12194,6 @@ GER_reichskommissariats = {
 				635 = {
 				    is_controlled_by_ROOT_or_subject = yes
 				}
-				1071 = {
-				    is_controlled_by_ROOT_or_subject = yes
-				}
 				1072 = {
 				    is_controlled_by_ROOT_or_subject = yes
 				}
@@ -12213,6 +12210,15 @@ GER_reichskommissariats = {
 				    is_controlled_by_ROOT_or_subject = yes
 				}
 				723 = {
+				    is_controlled_by_ROOT_or_subject = yes
+				}
+				1079 = {
+				    is_controlled_by_ROOT_or_subject = yes
+				}
+				1080 = {
+				    is_controlled_by_ROOT_or_subject = yes
+				}
+				1081 = {
 				    is_controlled_by_ROOT_or_subject = yes
 				}
 				872 = {
@@ -12245,8 +12251,44 @@ GER_reichskommissariats = {
 				521 = {
 				    is_controlled_by_ROOT_or_subject = yes
 				}
+				674 = {
+				    is_controlled_by_ROOT_or_subject = yes
+				}
 				873 = {
 				    is_controlled_by_ROOT_or_subject = yes
+				}
+				1047 = {
+				    is_controlled_by_ROOT_or_subject = yes
+				}
+				1048 = {
+				    is_controlled_by_ROOT_or_subject = yes
+				}
+				1049 = {
+				    is_controlled_by_ROOT_or_subject = yes
+				}
+				1050 = {
+				    is_controlled_by_ROOT_or_subject = yes
+				}
+				1051 = {
+				    is_controlled_by_ROOT_or_subject = yes
+				}
+				1052 = {
+				    is_controlled_by_ROOT_or_subject = yes
+				}
+				1053 = {
+				    is_controlled_by_ROOT_or_subject = yes
+				}
+				1054 = {
+				    is_controlled_by_ROOT_or_subject = yes
+				}
+				1055 = {
+				    is_controlled_by_ROOT_or_subject = yes
+				}
+				1056 = {
+				    is_controlled_by_ROOT_or_subject = yes
+				}
+				1057 = {
+					is_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -12263,6 +12305,7 @@ GER_reichskommissariats = {
 				state = 721
 				state = 667
 				state = 673
+				state = 674
 				state = 334
 				state = 333
 				state = 335
@@ -12298,11 +12341,35 @@ GER_reichskommissariats = {
 				state = 1023
 				state = 1024
 				state = 1021
-				state = 1070 
+				state = 1047
+				state = 1048
+				state = 1049
+				state = 1050
+				state = 1051
+				state = 1052
+				state = 1053
+				state = 1054
+				state = 1055
+				state = 1056
+				state = 1057
+				state = 1059
+				state = 1060
+				state = 1061
+				state = 1062
+				state = 1063
+				state = 1064
+				state = 1065
+				state = 1070
+				state = 1071
+				state = 1072
+				state = 1079
+				state = 1080
+				state = 1081
 				### IMPASSABLE, INCLUDED BUT NOT REQURED ###
-				state = 674
 				state = 1022
-				state = 1073 
+				state = 1073
+				state = 1074
+				state = 1075
 			}
 		}
 

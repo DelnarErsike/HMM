@@ -1,4 +1,5 @@
 NDefines.NMilitary.UNIT_EXP_LEVELS = { 0.1, 0.3 } -- Removed veterancy levels higher than Trained (they'd cause feedback loops where dealing more damage leads to more XP gain, allowing them to remain veterans forever)
+NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.15 -- Reintroduced to conform with open beta's changes to veterancy bonuses
 -- Nuke extra, unwarranted stats on exile divisions 
 NDefines.NCountry.GIE_DIVISION_ATTACK_BONUS_AGAINST_OCCUPIER = 0 -- Attack bonus factor against whoever occupies your core territory.
 NDefines.NCountry.GIE_DIVISION_DEFENSE_BONUS_AGAINST_OCCUPIER = 0 -- Attack bonus factor against whoever occupies your core territory.

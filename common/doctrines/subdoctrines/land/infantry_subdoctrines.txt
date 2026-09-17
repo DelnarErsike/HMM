@@ -301,7 +301,6 @@ assault_infantry = {
             anti_air_battery = {
                 air_attack = 0.05
             }
-
         }
 
         integrated_support_batteries = {
@@ -321,8 +320,8 @@ assault_infantry = {
                 max_organisation = 20
                 air_attack = 0.05
             }
-
         }
+
         breakthrough_fireteams = {
         #4
             light_tank_recon = {
@@ -350,6 +349,7 @@ assault_infantry = {
                 }
             }
         }
+
         assault_detachments = {
         #5
             category_support_artillery = {
@@ -379,7 +379,6 @@ assault_infantry = {
                     soft_attack = 0.1
                 }
             }
-
         }
     }
 }
@@ -460,7 +459,8 @@ mounted_infantry = {
 		
 		beasts_of_war = {
             category_cavalry = {
-                maximum_speed = 0.4  
+                maximum_speed = 0.4 
+                max_strength = 0.05 
             }
             recon = {
                 maximum_speed = 0.4
@@ -805,7 +805,7 @@ peoples_war = {
 		
         quick_decision_offensive_warfare = {
         #3
-            mastery = 50        
+            mastery = 50
             militia = {
                initiative = 0.015
                max_organisation = 10

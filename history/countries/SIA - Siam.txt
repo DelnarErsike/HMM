@@ -88,6 +88,10 @@ if = {
 	limit = {
 		has_dlc = "Thunder at Our Gates"
 	}
+	set_technology = {
+		elephantry = 1
+		popup = no
+	}
 	#add_ideas = idea_SIA_military_neutral
 	#add_ideas = idea_SIA_civilian_neutral
 	recruit_character = SIA_phraya_songsuradet
@@ -475,6 +479,7 @@ set_variable = { SIA_aep_min_export = -0.05 }
 
 set_variable = { SIA_contingency_funds_cg = 0.08 }
 
+# HMM: this section has been moved to a scripted trigger to help reduce save file sizes
 set_variable = { foreign_diplomatic_relationships_political_advisor_cost_factor = 0 }
 set_variable = { foreign_diplomatic_relationships_research_speed_factor = 0 }
 set_variable = { foreign_diplomatic_relationships_experience_gain_army = 0 }
