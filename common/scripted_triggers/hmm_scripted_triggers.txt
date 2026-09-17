@@ -488,6 +488,17 @@ malaya_states = {
 		state = 1021 #Singapore
 	}
 }
+borneo_states = {
+	OR = {
+		state = 333
+		state = 1059
+		state = 1024
+		state = 334
+		state = 1022
+		state = 1055
+		state = 1023
+	}
+}
 indochina_states = {
 	OR = {
 		state = 1069

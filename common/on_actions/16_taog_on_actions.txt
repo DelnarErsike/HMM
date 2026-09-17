@@ -2249,18 +2249,6 @@
 					value = FROM.FROM
 				}
 			}
-			if = {
-				limit = {
-					has_dlc = "Thunder at Our Gates"
-					FROM.FROM.FROM = { indochina_states = yes }
-					NOT = {
-						ROOT = {
-							original_tag = SIA
-						}
-					}
-				}
-				SIA = { SIA_refresh_indochina_controllers = yes }
-			}
 		}
 		effect = {
 			if = {
