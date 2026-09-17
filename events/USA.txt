@@ -251,11 +251,9 @@ country_event = {
 			country_event = usa.32
 		}
 		else = {
-				set_variable = {
-          				var = election_factor
-          				value = 0.8
-      				}
-			add_to_variable = { election_factor = -0.5 }
+			# Vanilla behavior: random number between -0.5 and 0.5
+			# Railroaded to 0.3 (average value of 0 apparently a problem for USA players?)
+			set_variable = { election_factor = 0.3 }
 			USA_election_senate = yes
 			USA_election_house = yes
 			custom_effect_tooltip = usa_congress_elections_tt_bad
@@ -277,11 +275,9 @@ country_event = {
 			}
 		}		
 		set_party_name = { ideology = democratic long_name = USA_republican_party name = USA_republican_party }
-				set_variable = {
-          				var = election_factor
-          				value = 0.8
-      				}		
-	    add_to_variable = { election_factor = -0.6 }
+		# Vanilla behavior: random number between -0.6 and 0.4
+		# Railroaded to 0.2 (average value of -0.1 apparently a problem for USA players?)
+		set_variable = { election_factor = 0.2 }
 		USA_election_senate = yes
 		USA_election_house = yes
 		USA_flip_support = yes
@@ -362,11 +358,9 @@ country_event = {
 			country_event = usa.32
 		}
 		else = {
-				set_variable = {
-          				var = election_factor
-          				value = 0.8
-      				}
-			add_to_variable = { election_factor = -0.5 }
+			# Vanilla behavior: random number between -0.5 and 0.5
+			# Railroaded to 0.3 (average value of 0 apparently a problem for USA players?)
+			set_variable = { election_factor = 0.3 }
 			USA_election_senate = yes
 			USA_election_house = yes
 			custom_effect_tooltip = usa_congress_elections_tt_bad
@@ -385,12 +379,9 @@ country_event = {
 		}	
 		set_party_name = { ideology = democratic long_name = USA_republican_party name = USA_republican_party }
 		remove_ideas = new_deal
-		add_ideas = wilkies_new_deal
-				set_variable = {
-          				var = election_factor
-          				value = 0.8
-      				}
-		add_to_variable = { election_factor = -0.6 }
+		# Vanilla behavior: random number between -0.6 and 0.4
+		# Railroaded to 0.2 (average value of -0.1 apparently a problem for USA players?)
+		set_variable = { election_factor = 0.2 }
 		add_political_power = 120
 		USA_election_senate = yes
 		USA_election_house = yes
@@ -457,11 +448,9 @@ country_event = {
 			country_event = usa.32
 		}
 		else = {
-				set_variable = {
-          				var = election_factor
-          				value = 0.8
-      				}
-	  		add_to_variable = { election_factor = -0.5 }
+			# Vanilla behavior: random number between -0.5 and 0.5
+			# Railroaded to 0.3 (average value of 0 apparently a problem for USA players?)
+			set_variable = { election_factor = 0.3 }
 			USA_election_senate = yes
 			USA_election_house = yes
 			custom_effect_tooltip = usa_congress_elections_tt_bad
@@ -474,12 +463,9 @@ country_event = {
 		set_party_name = { ideology = democratic long_name = USA_democratic_party name = USA_democratic_party }
 		add_ideas = new_deal
 		retire_country_leader = yes
-		add_political_power = 120
-				set_variable = {
-          				var = election_factor
-          				value = 0.8
-      				}
-		add_to_variable = { election_factor = -0.6 }
+		# Vanilla behavior: random number between -0.6 and 0.4
+		# Railroaded to 0.2 (average value of -0.1 apparently a problem for USA players?)
+		set_variable = { election_factor = 0.2 }
 		USA_election_senate = yes
 		USA_election_house = yes
 		USA_flip_support = yes
@@ -537,11 +523,9 @@ country_event = {
 			country_event = usa.32
 		}
 		else = {
-				set_variable = {
-          				var = election_factor
-          				value = 0.8
-      				}
-			add_to_variable = { election_factor = -0.5 }
+			# Vanilla behavior: random number between -0.5 and 0.5
+			# Railroaded to 0.3 (average value of 0 apparently a problem for USA players?)
+			set_variable = { election_factor = 0.3 }
 			USA_election_senate = yes
 			USA_election_house = yes
 			custom_effect_tooltip = usa_congress_elections_tt_bad
@@ -560,11 +544,9 @@ country_event = {
 		}		
 		remove_ideas = new_deal
 		set_party_name = { ideology = democratic long_name = USA_republican_party name = USA_republican_party }
-				set_variable = {
-          				var = election_factor
-          				value = 0.8
-      				}		
-	    add_to_variable = { election_factor = -0.6 }
+		# Vanilla behavior: random number between -0.6 and 0.4
+		# Railroaded to 0.2 (average value of -0.1 apparently a problem for USA players?)
+		set_variable = { election_factor = 0.2 }
 		USA_election_senate = yes
 		USA_election_house = yes
 		USA_flip_support = yes
@@ -629,11 +611,9 @@ country_event = {
 			country_event = usa.32
 		}
 		else = {
-				set_variable = {
-          				var = election_factor
-          				value = 0.8
-      				}		
-	  		add_to_variable = { election_factor = -0.5 }
+			# Vanilla behavior: random number between -0.5 and 0.5
+			# Railroaded to 0.3 (average value of 0 apparently a problem for USA players?)
+			set_variable = { election_factor = 0.3 }
 			USA_election_senate = yes
 			USA_election_house = yes
 			custom_effect_tooltip = usa_congress_elections_tt_bad
@@ -645,11 +625,9 @@ country_event = {
 		name = usa.10.b
 		add_ideas = new_deal
 		set_party_name = { ideology = democratic long_name = USA_democratic_party name = USA_democratic_party }
-				set_variable = {
-          				var = election_factor
-          				value = 0.8
-      				}		
-	  	add_to_variable = { election_factor = -0.6 }
+		# Vanilla behavior: random number between -0.6 and 0.4
+		# Railroaded to 0.2 (average value of -0.1 apparently a problem for USA players?)
+		set_variable = { election_factor = 0.2 }
 		USA_election_senate = yes
 		USA_election_house = yes
 		USA_flip_support = yes
@@ -716,11 +694,9 @@ country_event = {
 			country_event = usa.32
 		}
 		else = {
-				set_variable = {
-          				var = election_factor
-          				value = 0.8
-      				}			
-	  		add_to_variable = { election_factor = -0.5 }
+			# Vanilla behavior: random number between -0.5 and 0.5
+			# Railroaded to 0.3 (average value of 0 apparently a problem for USA players?)
+			set_variable = { election_factor = 0.3 }
 			USA_election_senate = yes
 			USA_election_house = yes
 			custom_effect_tooltip = usa_congress_elections_tt_bad
@@ -749,11 +725,9 @@ country_event = {
 		}
 		remove_ideas = new_deal
 		set_party_name = { ideology = democratic long_name = USA_republican_party name = USA_republican_party }
-				set_variable = {
-          				var = election_factor
-          				value = 0.8
-      				}		
-		add_to_variable = { election_factor = -0.6 }
+		# Vanilla behavior: random number between -0.6 and 0.4
+		# Railroaded to 0.2 (average value of -0.1 apparently a problem for USA players?)
+		set_variable = { election_factor = 0.2 }
 		USA_election_senate = yes
 		USA_election_house = yes
 		USA_flip_support = yes
@@ -1268,28 +1242,17 @@ country_event = {
 					}
 				}
 			}
-			random_list = {
-				50 = {
-				set_variable = {
-          				var = election_factor
-          				value = 0.8
-      				}					
-	  				add_to_variable = { election_factor = -0.6 }
-					USA_election_senate = yes
-					USA_election_house = yes
-					country_event = usa.30
-				}
-				50 = {
-				set_variable = {
-          				var = election_factor
-          				value = 0.8
-      				}					
-					add_to_variable = { election_factor = -0.3 }
-					USA_election_senate = yes
-					USA_election_house = yes
-					country_event = usa.30
-				}
-			}
+			# Vanilla behavior is:
+			#	50% chance of random number between -0.6 and 0.4
+			#	50% chance of random number between -0.3 and 0.7
+			# Cosmo shadow-buffed this though and USA players got used to buffed version, so current railroading based on shadow-buffed behavior:
+			#   50% chance of 0.2
+			#   50% chance of 0.5
+			# Averages to 0.35
+			set_variable = { election_factor = 0.35 }
+			USA_election_senate = yes
+			USA_election_house = yes
+			country_event = usa.30
 		}
 		else = {
 			country_event = usa.32
