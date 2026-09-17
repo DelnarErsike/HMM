@@ -8039,6 +8039,16 @@
 		icon = GFX_focus_generic_air_bases
 		x = 7
 		y = 0
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = Siam_AC_rule
+					option = Siam_no_AC
+				}
+			}
+		}
 		relative_position_id = SIA_thai_french_liaison
 		prerequisite = { focus = SIA_directorate_of_aeronautical_engineering }
 		cost = 10
@@ -8103,6 +8113,14 @@
 			factor = 10
 		}
 		available = {
+		}
+		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = Siam_AC_rule
+					option = Siam_no_AC
+				}
+			}
 		}
 
 		completion_reward = {
@@ -8250,6 +8268,14 @@
 			factor = 10
 		}
 		available = {
+		}
+		allow_branch = {
+			NOT = {
+				has_game_rule = {
+					rule = Siam_AC_rule
+					option = Siam_no_AC
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_AIR_XP }
 
@@ -8467,14 +8493,14 @@
 
 		completion_reward = {
 			air_experience = 25
-			if = {
-				limit = { has_dlc = "La Resistance" }
-				custom_effect_tooltip = SIA_destroy_the_indochinese_ports_tt
-			}
-			if = {
-				limit = { has_dlc = "Gotterdammerung" }
-				custom_effect_tooltip = SIA_destroy_the_indochinese_ports_raid_tt
-			}
+			#if = {
+			#	limit = { has_dlc = "La Resistance" }
+			#	custom_effect_tooltip = SIA_destroy_the_indochinese_ports_tt
+			#}
+			#if = {
+			#	limit = { has_dlc = "Gotterdammerung" }
+			#	custom_effect_tooltip = SIA_destroy_the_indochinese_ports_raid_tt
+			#}
 			if = {
 				limit = { has_dlc = "By Blood Alone" }
 				set_technology = {
@@ -8599,6 +8625,44 @@
 		}
 
 		completion_reward = {
+			if = { # HMM: added this to help with clarity
+				limit = {
+					NOT = { has_completed_focus = SIA_conserve_air_crews }
+					NOT = { has_completed_focus = SIA_increase_air_crews }
+				}
+				effect_tooltip = {
+					if = {
+						limit = { has_dlc = "By Blood Alone" }
+						swap_ideas = {
+							remove_idea = idea_SIA_conserve_air_crews
+							add_idea = idea_SIA_specialized_airframe_construction_conserve
+						}
+					}
+					else = {
+						swap_ideas = {
+							remove_idea = idea_SIA_conserve_air_crews
+							add_idea = idea_SIA_specialized_airframe_construction_legacy_conserve
+						}
+					}
+				}
+				custom_effect_tooltip = generic_or_tt
+				effect_tooltip = {
+					if = {
+						limit = { has_dlc = "By Blood Alone" }
+						swap_ideas = {
+							remove_idea = idea_SIA_increase_air_crews
+							add_idea = idea_SIA_specialized_airframe_construction_increase
+						}
+					}
+					else = {
+						swap_ideas = {
+							remove_idea = idea_SIA_increase_air_crews
+							add_idea = idea_SIA_specialized_airframe_construction_legacy_increase
+						}
+					}
+				}
+			}
+			else = {
 			if = {
 				limit = {
 					has_completed_focus = SIA_conserve_air_crews
@@ -8637,6 +8701,7 @@
 					}
 				}
 			}
+			}
 		}
 	}
 
@@ -8670,6 +8735,26 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
+			if = { # HMM: added this to help with clarity
+				limit = {
+					NOT = { has_completed_focus = SIA_conserve_air_crews }
+					NOT = { has_completed_focus = SIA_increase_air_crews }
+				}
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = idea_SIA_conserve_air_crews
+						add_idea = idea_SIA_license_equipment_conserve
+					}
+				}
+				custom_effect_tooltip = generic_or_tt
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = idea_SIA_increase_air_crews
+						add_idea = idea_SIA_license_equipment_increase
+					}
+				}
+			}
+			else = {
 			if = {
 				limit = {
 					has_completed_focus = SIA_conserve_air_crews
@@ -8689,6 +8774,7 @@
 					remove_idea = idea_SIA_increase_air_crews
 					add_idea = idea_SIA_license_equipment_increase
 				}
+			}
 			}
 		}
 	}

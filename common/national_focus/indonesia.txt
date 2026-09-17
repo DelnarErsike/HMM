@@ -3442,9 +3442,6 @@ focus_tree = {
 		search_filters = {  }
 		completion_reward = {
 			custom_effect_tooltip = INS_retake_lost_british_states_tt
-			hidden_effect = {
-				INS_refresh_malaya_controllers = yes
-			}
 		}
 	}
 
@@ -3865,8 +3862,6 @@ focus_tree = {
 
 		search_filters = {  }
 		completion_reward = {
-
-			hidden_effect = { INS_refresh_borneo_controllers = yes }
 			custom_effect_tooltip = INS_expanding_the_union_tt
 		}
 	}

@@ -5261,11 +5261,9 @@ INS_limited_wars_cat = {
 	    	clear_array = limited_war_target_allies
 
 	    	#Save all states that is included in the limited war
-	    	for_each_scope_loop = {
-	    		array = malaya_states
-	    		if = {
-	    			limit = { is_controlled_by = FROM }
-	
+			FROM = {
+				every_controlled_state = {
+					limit = { malaya_states = yes }
 	    			add_to_array = { array = ROOT.limited_war_states value = THIS }
 	    		}
 	    	}
@@ -5350,14 +5348,10 @@ INS_limited_wars_cat = {
     			}
     		}
 
-    		is_in_array = {
-    			array = ROOT.borneo_controllers
-    			value = FROM
-    		}
-
-			any_of_scopes = {
-				array = ROOT.borneo_states
-				is_controlled_by = FROM
+			FROM = {
+				any_controlled_state = {
+					borneo_states = yes
+				}
 			}
 	    }
 	    visible = {
@@ -5378,13 +5372,9 @@ INS_limited_wars_cat = {
 	    }
 
 	    highlight_states = {
-	        highlight_states_trigger = {
-		    	is_in_array = {
-		    		array = ROOT.borneo_states
-		    		value = THIS
-		    	}
+			highlight_states_trigger = {
+		    	borneo_states = yes
 		    	is_controlled_by = FROM
-
 	        }
 	    }
 
@@ -5416,11 +5406,9 @@ INS_limited_wars_cat = {
 	    	clear_array = limited_war_target_allies
 
 	    	#Save all states that is included in the limited war
-	    	for_each_scope_loop = {
-	    		array = borneo_states
-	    		if = {
-	    			limit = { is_controlled_by = FROM }
-	
+			FROM = {
+				every_controlled_state = {
+					limit = { borneo_states = yes }
 	    			add_to_array = { array = ROOT.limited_war_states value = THIS }
 	    		}
 	    	}
@@ -5503,10 +5491,25 @@ INS_borneo_puppet_cat = {
 
 		visible = {
 			has_country_flag = INS_can_release_borneo_puppets
+			NOT = {
+				has_game_rule = {
+					rule = allow_release_nations
+					option = BLOCKED
+				}
+			}
 		}
 		available = {
 			NOT = { country_exists = SAR }
 			owns_state = 333
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = allow_release_nations
+						option = FREE
+					}
+				}
+				has_war = no
+			}
 		}
 
 		fire_only_once = yes
@@ -5531,10 +5534,25 @@ INS_borneo_puppet_cat = {
 
 		visible = {
 			has_country_flag = INS_can_release_borneo_puppets
+			NOT = {
+				has_game_rule = {
+					rule = allow_release_nations
+					option = BLOCKED
+				}
+			}
 		}
 		available = {
 			NOT = { country_exists = BRN }
 			owns_state = 1059
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = allow_release_nations
+						option = FREE
+					}
+				}
+				has_war = no
+			}
 		}
 
 		fire_only_once = yes
@@ -5554,10 +5572,25 @@ INS_borneo_puppet_cat = {
 
 		visible = {
 			has_country_flag = INS_can_release_borneo_puppets
+			NOT = {
+				has_game_rule = {
+					rule = allow_release_nations
+					option = BLOCKED
+				}
+			}
 		}
 		available = {
 			NOT = { country_exists = SAB }
 			owns_state = 1024
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = allow_release_nations
+						option = FREE
+					}
+				}
+				has_war = no
+			}
 		}
 
 		fire_only_once = yes

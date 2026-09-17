@@ -1813,23 +1813,6 @@
 
 		# HMM: moved the specific on-day events to a queued action at startup because it's completely unnecessary and stupid to keep checking every day
 		
-		effect = { #Launch Battle of Brisbane event
-			IF = {
-				limit = {
-					has_dlc = "Thunder at Our Gates"
-					date > 1942.10.27
-					ROOT = {
-						original_tag = AST
-						has_war = yes
-						is_in_faction_with = USA
-					}
-					NOT = { has_country_flag = AST_brisbane_event_trigger }
-				}
-				country_event = { id = AST_political_events.10 days = 30 }
-				set_country_flag = AST_brisbane_event_trigger
-			}
-		}
-		
 		effect = {
 			IF = {
 				limit = {
@@ -1868,6 +1851,16 @@
 						country_event = {
 							id = AST_political_events.6 #Launch event The 1938 Sesquicentenary 
 							days = 756 # 26 Jan 1938
+						}
+						country_event = {
+							id = AST_political_events.6 #Launch Battle of Brisbane event
+							days = 2523 # 28 Nov 1942
+						}
+					}
+					else = {
+						country_event = {
+							id = AST_political_events.6 #Launch Battle of Brisbane event
+							days = 1202 # 28 Nov 1942
 						}
 					}
 					if = { # HMM: Only the first election season needs to be queued, since each one will queue up the next one in 3 years' time
@@ -1930,6 +1923,17 @@
 						has_country_flag = AST_1939_start
 					}
 					country_event = { id = AST_diplomatic_events.77 hours = 3 }
+				}
+				IF = { #Launch Battle of Brisbane event
+					limit = {
+						has_dlc = "Thunder at Our Gates"
+						date > 1942.10.27
+						ROOT = {
+							is_in_faction_with = USA
+							NOT = { has_country_flag = AST_brisbane_event_trigger }
+						}
+					}
+					ROOT = { country_event = { id = AST_political_events.10 days = 30 } }
 				}
 			}
 		}
@@ -2019,7 +2023,6 @@
 								value = -0.01 
 							}
 							AST_votes_change_effect = yes
-						#}
 				   	}
 
 					if = { #Sets ALP as ruling party

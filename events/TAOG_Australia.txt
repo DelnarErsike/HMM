@@ -3447,6 +3447,20 @@ country_event = { #Battle of Brisbane
 
 	is_triggered_only = yes
 
+	# HMM: added triggers and immediate effect because this can be triggered by startup event now (helps with performance)
+	trigger = {
+		original_tag = AST
+		has_dlc = "Thunder at Our Gates"
+		date > 1942.11.26
+		has_war = yes
+		is_in_faction_with = USA
+		NOT = { has_country_flag = AST_brisbane_event_trigger }
+	}
+
+	immediate = {
+		set_country_flag = AST_brisbane_event_trigger
+	}
+	
 	option = { 
 		name = AST_political_events.10.a
 

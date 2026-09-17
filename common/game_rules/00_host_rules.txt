@@ -180,6 +180,21 @@ Philippines_AC_rule = {
 		desc = "The Philippines cannot do their more powerful air focuses"
 	}
 }
+Siam_AC_rule = {
+	name = "Can Siam do its more powerful air focuses?"
+	group = "HMM Rules"
+	icon = "GFX_decision_generic_air"
+	option = {
+		name = Siam_AC
+		text = "GYes"
+		desc = "Siam can do its more powerful air focuses"
+	} 
+	default = {
+		name = Siam_no_AC
+		text = "RNo"
+		desc = "Siam cannot do its more powerful air focuses"
+	}
+}
 Germany_Cancel_Mefo= {
 	name = "Can Germany cancel MEFO Bills prematurely?"
 	group = "HMM Rules"
