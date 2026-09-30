@@ -6,6 +6,7 @@
  simulate_volunteers: "Simulated Volunteer Rewards"
  simulate_volunteers_desc: "Sending volunteers to a nation normally provides us with a steady stream of army experience and mastery. This spirit simulates that effect."
  simulate_volunteers_instant_desc: "Daily £doctrine_mastery §HLand Doctrine§! mastery gain: §G+1§!"
+ simulated_training_from_stockpiled_air_in_faction: "Simulated Training from Stockpiled Aircraft in Faction"
  no_tradebacks:0 "No Tradebacks"
  no_tradebacks_desc:0 "This spirit simulates the fact that countries within factions will automatically buy each other's resources."
  no_grind:0 "No Grind"
