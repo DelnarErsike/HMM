@@ -516,15 +516,15 @@ active_decryption_modifier = {
 }
 
 # modifiers applied to allied divisions entering the intel network
-intel_network_state_level_bonus = {
-	amphibious_invasion_defence = 0
-	planning_speed = 0
+intel_network_state_level_bonus = { # HMM: these cannot be zero, otherwise we get stability issues
+	amphibious_invasion_defence = 0.001
+	planning_speed = 0.001
 }
 
 # modifiers applied to enemy divisions in an intel network
-intel_network_state_level_penalty = {
-	max_planning_factor = 0
-	max_dig_in = 0
+intel_network_state_level_penalty = { # HMM: these cannot be zero, otherwise we get stability issues
+	max_planning_factor = 0.001
+	max_dig_in = 0.001
 }
 
 # modifiers enabled by the creation of the intelligence agency
