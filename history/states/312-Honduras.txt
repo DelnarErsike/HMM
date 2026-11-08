@@ -2,11 +2,12 @@ state=
 {
 	id=312
 	name="STATE_312"
-	manpower=1
+	manpower=859761
 	resources={
+		chromium=1 # was: 1
 	}
 	
-	state_category = wasteland
+	state_category = town
 	history=
 	{
 		owner = WST
@@ -24,6 +25,10 @@ state=
 		}
 		add_core_of = WST
 		add_core_of = HON
+		victory_points = {
+			12865 3 
+		}
+
 	}
 	provinces={
 		2031 8017 12865

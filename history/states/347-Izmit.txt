@@ -2,14 +2,14 @@
 state={
 	id=347
 	name="STATE_347"
-	manpower = 1
+	manpower = 807660
 	resources={
 		chromium=19 # was: 26
 		steel = 13 # HMM: increased from 9 to offset lack of focus tree and spirits
 		coal = 5 #initial distribution
 	}
 	
-	state_category = wasteland
+	state_category = rural
 
 	history={
 		owner = TUR

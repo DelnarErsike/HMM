@@ -2,12 +2,18 @@
 state={
 	id=1001
 	name="STATE_1001"
-	manpower = 1
+	manpower = 390139
 	
-	state_category = wasteland
+	state_category = rural
 
 	history={
 		owner = WST
+		victory_points = {
+			4943 5
+		}
+		victory_points = {
+			5098 3
+		}
 		buildings = {
 			infrastructure = 2
 		}

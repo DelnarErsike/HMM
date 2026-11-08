@@ -6,7 +6,7 @@ state = {
 	state_category = large_town
 
 	resources = {
-		#oil = 1
+		#oil = 1 # HMM: shifted to spawn-in depending in game rule for Axis fuel spirit
 		aluminium = 20
 		coal = 2 # initial distribution
 	}

@@ -2,8 +2,8 @@
 state={
 	id=847
 	name="STATE_847"
-	manpower = 1
-	state_category = wasteland
+	manpower = 178429
+	state_category = pastoral
 	resources={
 	}
 	history={

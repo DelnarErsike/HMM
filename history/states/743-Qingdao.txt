@@ -30,8 +30,8 @@ state = {
 
 			10000 = {
 				naval_base = 5
-				#coastal_bunker = 1
-				#bunker = 1
+				coastal_bunker = 1
+				bunker = 1
 			}
 
 		}

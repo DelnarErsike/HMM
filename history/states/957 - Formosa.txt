@@ -1,11 +1,13 @@
 state = {
 	id = 957
 	name = "STATE_957"
-	manpower = 1
+	manpower = 500000
 	
-	state_category = wasteland
+	state_category = pastoral
 	
 	resources = {
+		tungsten = 5
+		steel = 2
 	}
 
 	history = {
@@ -19,6 +21,11 @@ state = {
 		buildings = {
 			infrastructure = 1
 		}
+
+		victory_points = {
+			12922 1 
+		}
+		
 	}
 
 	provinces = {

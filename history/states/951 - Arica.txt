@@ -1,11 +1,12 @@
 state = {
 	id = 951
 	name = "STATE_951"
-	manpower = 1
+	manpower = 340000
 	
-	state_category = wasteland
+	state_category = rural
 
 	resources = {
+		tungsten = 14 # In replacement of Nitrate
 	}
 
 	history = {
@@ -20,6 +21,15 @@ state = {
 			arms_factory = 1
 			air_base = 1
 		}
+		
+		victory_points = {
+			5131 2
+		}
+
+		victory_points = {
+			8217 1
+		}
+
 	}
 
 	provinces = {

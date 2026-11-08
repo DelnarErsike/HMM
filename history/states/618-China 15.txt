@@ -4,7 +4,7 @@ state={
 	name="STATE_618" # Dzungaria
 	manpower = 670800
 
-	resources={
+	resources={ # HMM: compensation for no Sinkiang focus tree
 		oil= 43 
 	}
 

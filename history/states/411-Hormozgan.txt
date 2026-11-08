@@ -2,16 +2,25 @@
 state={
 	id=411
 	name="STATE_411" # Isfahan
-	manpower = 1
+	manpower = 663954
 	resources={
+		oil=12 # was: 14
+		chromium=7
+		steel=2
 	}
-	state_category = wasteland
+	state_category = town
 	
 
 	history={
 		owner = WST
 		buildings = {
 			infrastructure = 2
+		}
+		victory_points = {
+			2026 1 
+		}
+		victory_points = {
+			4928 1 
 		}
 		add_core_of = WST
 		add_core_of = PER

@@ -2,7 +2,7 @@
 state={
 	id=414
 	name="STATE_414"
-	manpower = 1
+	manpower = 243007
 	
 	state_category = wasteland
 
@@ -10,6 +10,9 @@ state={
 		owner = WST
 		buildings = {
 			infrastructure = 1
+		}
+		victory_points = {
+			10913 1 
 		}
 		add_core_of = WST
 		add_core_of = PER

@@ -1,9 +1,9 @@
 state = {
 	id = 952
 	name = "STATE_952"
-	manpower = 1
+	manpower = 283605
 	
-	state_category = wasteland
+	state_category = town
 
 	history = {
 
@@ -19,6 +19,11 @@ state = {
 				naval_base = 2
 			}
 		}
+
+		victory_points = {
+			5228 2
+		}
+
 	}
 
 	provinces = {
