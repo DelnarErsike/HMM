@@ -1582,7 +1582,7 @@ characters = {
 				base = 2
 				modifier = {
 					factor = 15
-					has_active_mission = JAP_army_faction_demands_military_factories
+					has_active_mission = JAP_army_faction_demands_political_appointment
 				}
 			}
 		}
@@ -2447,7 +2447,7 @@ characters = {
 				base = 5
 				modifier = {
 					factor = 15
-					has_active_mission = JAP_army_faction_demands_military_factories
+					has_active_mission = JAP_army_faction_demands_political_appointment
 				}
 			}
 		}
@@ -2539,7 +2539,7 @@ characters = {
 				base = 2
 				modifier = {
 					factor = 15
-					has_active_mission = JAP_army_faction_demands_military_factories
+					has_active_mission = JAP_army_faction_demands_political_appointment
 				}
 			}
 		}
@@ -2574,7 +2574,7 @@ characters = {
 				base = 5
 				modifier = {
 					factor = 15
-					has_active_mission = JAP_army_faction_demands_military_factories
+					has_active_mission = JAP_army_faction_demands_political_appointment
 				}
 			}
 		}
@@ -4160,6 +4160,10 @@ characters = {
 			}
 			ai_will_do = {
 				base = 1
+				modifier = {
+					factor = 15
+					has_active_mission = JAP_zaibatsu_faction_demands_political_appointment
+				}
 			}
 		}
 
@@ -4677,6 +4681,10 @@ characters = {
 			}
 			ai_will_do = {
 				base = 1
+				modifier = {
+					factor = 15
+					has_active_mission = JAP_zaibatsu_faction_demands_political_appointment
+				}
 			}
 
 			on_add = {
@@ -4725,6 +4733,10 @@ characters = {
 			}
 			ai_will_do = {
 				base = 1
+				modifier = {
+					factor = 15
+					has_active_mission = JAP_zaibatsu_faction_demands_political_appointment
+				}
 			}
 		}
 
@@ -4808,6 +4820,10 @@ characters = {
 			}
 			ai_will_do = {
 				base = 0.5
+				modifier = {
+					factor = 15
+					has_active_mission = JAP_zaibatsu_faction_demands_political_appointment
+				}
 			}
 		}
 
@@ -4848,6 +4864,10 @@ characters = {
 			}
 			ai_will_do = {
 				base = 1
+				modifier = {
+					factor = 15
+					has_active_mission = JAP_zaibatsu_faction_demands_political_appointment
+				}
 			}
 
 			on_add = {

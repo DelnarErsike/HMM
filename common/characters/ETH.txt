@@ -1133,7 +1133,7 @@ characters = {
 				NOT = { has_completed_focus = ETH_boarding_the_train }
 			}
 			traits  = {
-				minister_of_the_interior_abate 
+				ETH_minister_of_the_interior_abate 
 			}
 			on_add = {
 				owner = {

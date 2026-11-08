@@ -1873,12 +1873,12 @@ focus_tree = {
 				AND = {
 					NOT = { country_exists = SPR }
 					41 = {
-					OR = {
-							is_controlled_by = ROOT
 						controller = {
-							is_subject_of = ROOT
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
 						}
-					}
 					}
 				}
 			}
@@ -1939,9 +1939,11 @@ focus_tree = {
 				every_state = {
 					limit = {
 						OR = {
-							is_controlled_by = ROOT
 							controller = {
-								is_subject_of = ROOT
+								OR = {
+									tag = ROOT
+									is_subject_of = ROOT
+								}
 							}
 						}
 						NOT = {
@@ -2011,12 +2013,12 @@ focus_tree = {
 				AND = {
 					NOT = { country_exists = POL }
 					10 = {
-					OR = {
-							is_controlled_by = ROOT
 						controller = {
-							is_subject_of = ROOT
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
 						}
-					}
 					}
 				}
 			}
@@ -2076,9 +2078,9 @@ focus_tree = {
 
 				every_state = {
 					limit = {
-						OR = {
-							is_controlled_by = ROOT
-							controller = {
+						controller = {
+							OR = {
+								tag = ROOT
 								is_subject_of = ROOT
 							}
 						}
@@ -2165,13 +2167,13 @@ focus_tree = {
 				}
 				AND = {
 					NOT = { country_exists = MEX }
-					227 = {
-					OR = {
-							is_controlled_by = ROOT
+					277 = {
 						controller = {
-							is_subject_of = ROOT
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
 						}
-					}
 					}
 				}
 			}
@@ -2232,9 +2234,9 @@ focus_tree = {
 
 					every_state = {
 						limit = {
-							OR = {
-								is_controlled_by = ROOT
-								controller = {
+							controller = {
+								OR = {
+									tag = ROOT
 									is_subject_of = ROOT
 								}
 							}
@@ -2400,172 +2402,172 @@ focus_tree = {
 				tooltip = wuw_HUN_the_kingdom_of_ukraine_required_states_tt
 				AND = {
 					93 = {
-					OR = {
-							is_controlled_by = ROOT
 						controller = {
-							is_subject_of = ROOT
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
 						}
-					}
 					}
 					199 = {
-					OR = {
-							is_controlled_by = ROOT
 						controller = {
-							is_subject_of = ROOT
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
 						}
-					}
 					}
 					201 = {
-					OR = {
-							is_controlled_by = ROOT
 						controller = {
-							is_subject_of = ROOT
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
 						}
-					}
 					}
 					202 = {
-					OR = {
-							is_controlled_by = ROOT
 						controller = {
-							is_subject_of = ROOT
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
 						}
-					}
 					}
 					198 = {
-					OR = {
-							is_controlled_by = ROOT
 						controller = {
-							is_subject_of = ROOT
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
 						}
-					}
 					}
 					834 = {
-					OR = {
-							is_controlled_by = ROOT
 						controller = {
-							is_subject_of = ROOT
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
 						}
-					}
 					}
 					192 = {
-					OR = {
-							is_controlled_by = ROOT
 						controller = {
-							is_subject_of = ROOT
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
 						}
-					}
 					}
 					203 = {
-					OR = {
-							is_controlled_by = ROOT
 						controller = {
-							is_subject_of = ROOT
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
 						}
-					}
 					}
 					197 = {
-					OR = {
-							is_controlled_by = ROOT
 						controller = {
-							is_subject_of = ROOT
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
 						}
-					}
 					}
 					193 = {
-					OR = {
-							is_controlled_by = ROOT
 						controller = {
-							is_subject_of = ROOT
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
 						}
-					}
 					}
 					225 = {
-					OR = {
-							is_controlled_by = ROOT
 						controller = {
-							is_subject_of = ROOT
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
 						}
-					}
 					}
 					259 = {
-					OR = {
-							is_controlled_by = ROOT
 						controller = {
-							is_subject_of = ROOT
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
 						}
-					}
 					}
 					226 = {
-					OR = {
-							is_controlled_by = ROOT
 						controller = {
-							is_subject_of = ROOT
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
 						}
-					}
 					}
 					196 = {
-					OR = {
-							is_controlled_by = ROOT
 						controller = {
-							is_subject_of = ROOT
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
 						}
-					}
 					}
 					200 = {
-					OR = {
-							is_controlled_by = ROOT
 						controller = {
-							is_subject_of = ROOT
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
 						}
-					}
 					}
 					227 = {
-					OR = {
-							is_controlled_by = ROOT
 						controller = {
-							is_subject_of = ROOT
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
 						}
-					}
 					}
 					221 = {
-					OR = {
-							is_controlled_by = ROOT
 						controller = {
-							is_subject_of = ROOT
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
 						}
-					}
 					}
 					228 = {
-					OR = {
-							is_controlled_by = ROOT
 						controller = {
-							is_subject_of = ROOT
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
 						}
-					}
 					}
 					137 = {
-					OR = {
-							is_controlled_by = ROOT
 						controller = {
-							is_subject_of = ROOT
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
 						}
-					}
 					}
 					218 = {
-					OR = {
-							is_controlled_by = ROOT
 						controller = {
-							is_subject_of = ROOT
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
 						}
-					}
 					}
 					234 = {
-					OR = {
-							is_controlled_by = ROOT
 						controller = {
-							is_subject_of = ROOT
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
 						}
-					}
 					}
 				}
 			}
@@ -2596,9 +2598,9 @@ focus_tree = {
 			hidden_effect = {
 				every_state = {
 					limit = {
-						OR = {
-							is_controlled_by = ROOT
-							controller = {
+						controller = {
+							OR = {
+								tag = ROOT
 								is_subject_of = ROOT
 							}
 						}
@@ -2707,20 +2709,20 @@ focus_tree = {
 				tooltip = wuw_HUN_the_kingdom_of_georgia_required_states_tt
 				AND = {
 					231 = {
-					OR = {
-							is_controlled_by = ROOT
 						controller = {
-							is_subject_of = ROOT
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
 						}
-					}
 					}
 					826 = {
-					OR = {
-							is_controlled_by = ROOT
 						controller = {
-							is_subject_of = ROOT
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
 						}
-					}
 					}
 				}
 			}
@@ -2741,9 +2743,9 @@ focus_tree = {
 
 			every_state = {
 				limit = {
-					OR = {
-						is_controlled_by = ROOT
-						controller = {
+					controller = {
+						OR = {
+							tag = ROOT
 							is_subject_of = ROOT
 						}
 					}
@@ -2964,9 +2966,6 @@ focus_tree = {
 
 			every_state = {
 				limit = {
-					NOT = {
-						is_owned_by = ROOT
-					}
 					owner = {
 						is_subject_of = ROOT
 					}
@@ -3346,24 +3345,23 @@ focus_tree = {
 
 				custom_effect_tooltip = generic_skip_one_line_tt
 
-				CRO = {
-				every_core_state = {
+				every_state = {
 					limit = {
-						OR = {
-							is_controlled_by = ROOT
-							controller = {
+						controller = {
+							OR = {
+								tag = ROOT
 								is_subject_of = ROOT
 							}
 						}
 						NOT = {
 							is_core_of = ROOT
 						}
+						is_core_of = CRO
 						NOT = {
 							is_owned_and_controlled_by = CRO
 						}
 					}
 					transfer_state_to = CRO
-				}
 				}
 
 				CRO = {
@@ -3422,9 +3420,9 @@ focus_tree = {
 				CRO = {
 					every_core_state = {
 						limit = {
-							OR = {
-								is_controlled_by = ROOT
-								controller = {
+							controller = {
+								OR = {
+									tag = ROOT
 									is_subject_of = ROOT
 								}
 							}
@@ -3687,27 +3685,38 @@ focus_tree = {
 					limit = {
 						LBV = {
 							exists = no
-							160 = {
-								OR = {
-										is_owned_and_controlled_by = ROOT
+							AND = {
+								160 = {
 									controller = {
-										is_subject_of = ROOT
+										OR = {
+											AND = {
+												tag = ROOT
+												owns_state = PREV
+											}
+											is_subject_of = ROOT
+										}
 									}
 								}
-							}
-							850 = {
-								OR = {
-										is_owned_and_controlled_by = ROOT
+								850 = {
 									controller = {
-										is_subject_of = ROOT
+										OR = {
+											AND = {
+												tag = ROOT
+												owns_state = PREV
+											}
+											is_subject_of = ROOT
+										}
 									}
 								}
-							}
-							159 = {
-								OR = {
-										is_owned_and_controlled_by = ROOT
+								159 = {
 									controller = {
-										is_subject_of = ROOT
+										OR = {
+											AND = {
+												tag = ROOT
+												owns_state = PREV
+											}
+											is_subject_of = ROOT
+										}
 									}
 								}
 							}
@@ -3718,9 +3727,9 @@ focus_tree = {
 					LBV = {
 						every_core_state = {
 							limit = {
-								OR = {
-									is_controlled_by = ROOT
-									controller = {
+								controller = {
+									OR = {
+										tag = ROOT
 										is_subject_of = ROOT
 									}
 								}
@@ -6904,8 +6913,9 @@ focus_tree = {
 							is_claimed_by = ROOT
 							is_core_of = ROOT
 							is_owned_by = ROOT
+							
 							owner = {
-									is_subject_of = ROOT
+								is_subject_of = ROOT
 							}
 						}
 					}
@@ -7444,8 +7454,10 @@ focus_tree = {
 					has_war_with = HUN
 				}
 			}
-			any_other_country = {
-				is_major = yes
+
+			any_collection_element = {
+				collection = game:all_majors
+				NOT = { tag = ROOT }
 				is_faction_leader = yes
 				OR = {
 					AND = {
@@ -7458,10 +7470,12 @@ focus_tree = {
 					has_government = democratic
 				}
 			}
+
 			NOT = {
-				any_other_country = {
-					is_in_faction_with = ENG
-					has_war_with = HUN
+				HUN = {
+					any_enemy_country = {
+						is_in_faction_with = ENG
+					}
 				}
 			}
 		}
@@ -10208,6 +10222,14 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				has_war = yes	#if you manage to win WW2, whatever
+				GER = {
+					has_subject = SLO
+				}
+			}
 		}
 
 		available = {
@@ -12038,9 +12060,10 @@ focus_tree = {
 			IF = {
 				limit = { SOV = { has_government = communism }}
 				NOT = {
-					any_other_country = {
-						is_in_faction_with = SOV
-						has_war_with = HUN
+					HUN = {
+						any_enemy_country = {
+							is_in_faction_with = SOV
+						}
 					}
 				}
 			}
@@ -13107,7 +13130,13 @@ focus_tree = {
 			is_subject = no
 			has_government = democratic
 			has_war_support > 0.85
-			any_other_country = {
+
+			any_collection_element = {
+				collection = game:all_majors
+				NOT = { tag = ROOT }
+				capital_scope = {
+					is_on_continent = europe
+				}
 				NOT = {
 					has_government = democratic
 				}
@@ -13116,10 +13145,6 @@ focus_tree = {
 						is_in_faction_with = ROOT
 						is_subject_of = ROOT
 					}
-				}
-				is_major = yes
-				capital_scope = {
-					is_on_continent = europe
 				}
 			}
 			custom_trigger_tooltip = {
@@ -16636,8 +16661,8 @@ focus_tree = {
 			NOT = {
 				has_idea = HUN_revaluing_the_pengo
 			}
-			any_country = {
-				is_major = yes
+			any_collection_element = {
+				collection = game:all_majors
 				has_opinion = {
 					target = ROOT
 					value > 59

@@ -2888,7 +2888,9 @@ SOV_propaganda_campaigns = {
 			SOV_propaganda_poster_slot_available = yes
 
 			any_country_of = {
-				target = { ENG FRA GER ITA USA JAP }
+				exists = yes
+				target = {ENG FRA GER ITA USA JAP}
+
 				has_government = democratic
 			}
 		}
@@ -3137,7 +3139,8 @@ SOV_propaganda_campaigns = {
 			SOV_propaganda_poster_slot_available = yes
 
 			any_country_of = {
-				target = { ENG FRA GER ITA USA JAP }
+				exists = yes
+				target = {ENG FRA GER ITA USA JAP}
 				has_government = fascism
 			}
 		}
@@ -5411,11 +5414,11 @@ SOV_diplomacy_baltic_decision_category = {
 				add = 0.01
 				has_stability > 0.4
 				NOT = { #Join if it will not lead to a new war against a major
-					any_country = {
-						is_major = yes
+					any_collection_element = {
+						collection = game:all_majors
 						has_war_with = FROM
-						NOT = { has_war_with = ROOT }
-					}
+						NOT = { has_war_with = ROOT } 
+		    		}
 				}
 			}
 			modifier = {
@@ -5652,11 +5655,11 @@ SOV_diplomacy_nordic_decision_category = {
 				add = 0.01
 				has_stability > 0.4
 				NOT = { #Join if it will not lead to a new war against a major
-					any_country = {
-						is_major = yes
+					any_collection_element = {
+						collection = game:all_majors
 						has_war_with = FROM
-						NOT = { has_war_with = ROOT }
-					}
+						NOT = { has_war_with = ROOT } 
+		    		}
 				}
 			}
 			modifier = {
@@ -5945,11 +5948,11 @@ SOV_diplomacy_balkan_decision_category = {
 				add = 0.01
 				has_stability > 0.4
 				NOT = { #Join if it will not lead to a new war against a major
-					any_country = {
-						is_major = yes
+					any_collection_element = {
+						collection = game:all_majors
 						has_war_with = FROM
-						NOT = { has_war_with = ROOT }
-					}
+						NOT = { has_war_with = ROOT } 
+		    		}
 				}
 			}
 			modifier = {
@@ -6265,11 +6268,11 @@ SOV_diplomacy_middle_east_decision_category = {
 				add = 0.01
 				has_stability > 0.4
 				NOT = { #Join if it will not lead to a new war against a major
-					any_country = {
-						is_major = yes
+					any_collection_element = {
+						collection = game:all_majors
 						has_war_with = FROM
-						NOT = { has_war_with = ROOT }
-					}
+						NOT = { has_war_with = ROOT } 
+		    		}
 				}
 			}
 			modifier = {
@@ -10966,8 +10969,16 @@ SOV_industry_relocation = {
 				}
 			}
 			modifier = {
+				add = 1000 # move everything while the front is still far away
+				any_enemy_country = { is_major = yes }
+			}
+			modifier = {
 				factor = 0
 				SOV_save_pp_for_manpower_trouble = yes
+			}
+			modifier = {
+				factor = 0 # keep a train reserve, each move borrows 80 for 60 days
+				NOT = { has_equipment = { train_equipment > 199 } }
 			}
 		}
 
@@ -10976,7 +10987,6 @@ SOV_industry_relocation = {
 		target_trigger = {
 			FROM = {
 				is_core_of = ROOT
-				is_fully_controlled_by = ROOT
 				is_on_continent = europe
 				OR = {
 					has_state_category = town
@@ -10986,7 +10996,6 @@ SOV_industry_relocation = {
 					has_state_category = megalopolis
 					has_state_category = metropolis
 				}
-				infrastructure > 2
 			}
 		}
 
@@ -11023,7 +11032,7 @@ SOV_industry_relocation = {
 
 		cancel_if_not_visible = no
 
-		cost = 25
+		cost = 10
 
 		days_remove = SOV_industrial_relocation_days
 
@@ -11045,7 +11054,7 @@ SOV_industry_relocation = {
 					#Attempt to relocate 50%-50% of mils-civs
 					set_temp_variable = { SOV_half_the_factories_to_relocate = SOV.SOV_industrial_relocation_max_factories }
 					divide_temp_variable = { SOV_half_the_factories_to_relocate = 2 }
-					while_loop_effect = { #NOTE: Due to the seed not changing during the execution of this effect, the same state will always be chosen, UNLESS it runs out of slots -> That's the reason for this
+					while_loop_effect = {
 						limit = {
 							check_variable = { SOV_factories_counter = SOV.SOV_industrial_relocation_max_factories compare = less_than }
 						}
@@ -11899,10 +11908,10 @@ SOV_great_patriotic_war = {
 
 		ai_hint_pp_cost = 15
 		custom_cost_trigger = {
-			command_power > 49
+			command_power > 24
 			has_political_power > 14
 		}
-		custom_cost_text = decision_cost_CP_50_pp_15
+		custom_cost_text = decision_cost_CP_25_pp_15
 
 		days_remove = 90
 
@@ -11912,7 +11921,7 @@ SOV_great_patriotic_war = {
 
 		complete_effect = {
 			hidden_effect = {
-				add_command_power = -50
+				add_command_power = -25
 				add_political_power = -15
 			}
 		}
@@ -11947,10 +11956,10 @@ SOV_great_patriotic_war = {
 
 		ai_hint_pp_cost = 50
 		custom_cost_trigger = {
-			command_power > 49
+			command_power > 24
 			has_political_power > 49
 		}
-		custom_cost_text = decision_cost_CP_50_pp_50
+		custom_cost_text = decision_cost_CP_25_pp_50
 
 		fire_only_once = yes
 		visible = {
@@ -11970,7 +11979,7 @@ SOV_great_patriotic_war = {
 
 		complete_effect = {
 			hidden_effect = {
-				add_command_power = -50
+				add_command_power = -25
 				add_political_power = -50
 			}
 			set_country_flag = SOV_order_227_flag
@@ -12360,14 +12369,17 @@ SOV_great_patriotic_war = {
 				NOT = { state = 5 }
 				NOT = { state = 85 }
 			}
-			any_other_country = {
-				is_major = yes
-				NOT = { is_in_faction_with = ROOT }
+			any_collection_element = {
+				collection = game:all_majors
+				NOT = {
+					tag = ROOT
+					is_in_faction_with = ROOT
+				}
 				has_war_with = GER
 				any_controlled_state = {
 					is_core_of = GER
 				}
-			}
+		    }
 			has_completed_focus = SOV_lessons_of_war
 			has_country_flag = SOV_great_patriotic_war_flag
 		}
@@ -12377,11 +12389,14 @@ SOV_great_patriotic_war = {
 			any_controlled_state = {
 				is_core_of = GER
 			}
-			any_other_country = {
-				is_major = yes
-				NOT = { is_in_faction_with = ROOT }
+			any_collection_element = {
+				collection = game:all_majors
+				NOT = {
+					tag = ROOT
+					is_in_faction_with = ROOT
+				}
 				has_war_with = GER
-			}
+		    }
 		}
 
 		fire_only_once = yes

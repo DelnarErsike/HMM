@@ -909,13 +909,13 @@ COG_industrial_investment_decisions = {
 	
 		available = {
 			has_completed_focus = CONGO_secure_international_funding
-			any_other_country = {
-				is_major = yes
+			any_collection_element = {
+				collection = game:all_majors
 				has_opinion = {
 					target = ROOT
 					value > 50
 				} 
-			}
+		    }
 		}
 
 		days_remove = 70
@@ -981,13 +981,13 @@ COG_industrial_investment_decisions = {
 	
 		available = {
 			has_completed_focus = CONGO_secure_international_funding
-			any_other_country = {
-				is_major = yes
+			any_collection_element = {
+				collection = game:all_majors
 				has_opinion = {
 					target = ROOT
 					value > 50
 				} 
-			}
+		    }
 		}
 
 		days_remove = 70
@@ -1257,13 +1257,13 @@ economy_decisions = {
 			FROM = {
 				is_major = yes
 				NOT = {
-					OR = {
-						original_tag = COG
-						original_tag = BEL
-						has_idea = COG_congolese_uranium_trade_ns
-					}
+					original_tag = COG
+					original_tag = BEL
+					has_idea = COG_congolese_uranium_trade_ns
 				}
 			}
+
+			
 		}
 
 		available = {
@@ -1468,30 +1468,32 @@ war_measures = {
 		}
 	
 		available = {
-			any_enemy_country = {
+			any_country_with_original_tag = {
+				exists = yes
+				original_tag_to_check = COG 
 				is_subject_of = BEL
-				original_tag = COG
+				has_war_with = ROOT 
 			}
 			295 = {
-				OR = {
-					is_controlled_by = ROOT
-					CONTROLLER = {
+				controller = {
+					OR = {
+						tag = ROOT
 						is_subject_of = ROOT
 					}
 				}
 			}
 			718 = {
-				OR = {
-					is_controlled_by = ROOT
-					CONTROLLER = {
+				controller = {
+					OR = {
+						tag = ROOT
 						is_subject_of = ROOT
 					}
 				}
 			}
 			889 = {
-				OR = {
-					is_controlled_by = ROOT
-					CONTROLLER = {
+				controller = {
+					OR = {
+						tag = ROOT
 						is_subject_of = ROOT
 					}
 				}
@@ -1501,8 +1503,10 @@ war_measures = {
 		visible = { 
 			always = no
 			has_global_flag = CONGO_independence_war_ongoing
-			any_enemy_country = {
-				original_tag = COG
+			any_country_with_original_tag = {
+				exists = yes
+				original_tag_to_check = COG 
+				has_war_with = ROOT 
 			}
 			NOT = {
 				is_subject_of = BEL

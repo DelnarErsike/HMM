@@ -2208,12 +2208,10 @@ focus_tree = {
 						has_war_with = ROOT
 					}
 				}
-			}
-			any_country = {
-				is_in_faction_with = ROOT
-				any_state = {
-					is_controlled_by = PREV
-					is_core_of = POL
+				any_core_state = {
+					controller = {
+						is_in_faction_with = ROOT
+					}
 				}
 			}
 		}

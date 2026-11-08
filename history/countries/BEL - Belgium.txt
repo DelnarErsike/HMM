@@ -279,9 +279,29 @@ IF = {
 	}
 }
 
-
+if = {
+	limit = {
+		has_dlc = "Gotterdammerung"
+	}
+	add_ideas = {
+		BEL_scars_of_ww1_ns_fake
+		BEL_corruption_ns_fake
+	}
+}
 
 1939.1.1 = {
+
+	if = {
+		limit = {
+			has_dlc = "Gotterdammerung"
+		}
+		remove_ideas = {
+			BEL_scars_of_ww1_ns_fake
+			BEL_corruption_ns_fake
+		}
+		add_ideas = BEL_corruption_ns_fake_2
+	}
+
 	add_ideas = {
 		limited_conscription
 	}

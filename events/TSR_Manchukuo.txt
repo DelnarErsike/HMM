@@ -640,8 +640,9 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				any_enemy_country = {
-					is_major = yes
+				any_collection_element = {
+					collection = game:all_majors
+					has_war_with = ROOT
 				}
 			}
 		}
@@ -701,8 +702,9 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				any_enemy_country = {
-					is_major = yes
+				any_collection_element = {
+					collection = game:all_majors
+					has_war_with = ROOT
 				}
 			}
 		}

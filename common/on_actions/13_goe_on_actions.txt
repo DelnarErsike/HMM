@@ -158,19 +158,18 @@ on_actions = {
 
 			if = {
 				limit = {
-					is_subject = no
-					country_exists = PAK
-					has_completed_focus = RAJ_the_pakistan_movement
 					NOT = {
 						has_completed_focus = RAJ_hedgemony_of_the_subcontinent
 					}
+					is_subject = no
+					country_exists = PAK
 				}
 
                 set_variable = { pak_factories =  PAK.num_of_factories }
                 multiply_variable = { pak_factories = 2.5 }
                 round_variable = pak_factories
                                 
-                set_variable = { pak_researched_techs = PAK.researched_techs }
+                set_variable = { pak_researched_techs = PAK.num_researched_technologies }
                 multiply_variable = { pak_researched_techs = 1.3 }
                 round_variable = pak_researched_techs
                                    

@@ -294,6 +294,12 @@ opinion_modifiers = {
 		value = 0 #-150
 		trade = yes
 	}
+
+	BEL_eu_industrial_investment = {
+		value = 0 #30
+		months = 36
+		decay = 1
+	}
 }	
 
 

@@ -2255,130 +2255,171 @@ HUN_territorial_revision_category = {
 			custom_trigger_tooltip = {
 				tooltip = wuw_HUN_the_kingdom_of_ukraine_required_states_tt
 				AND = {
-						93 = {
+					93 = {
+						controller = {
 							OR = {
-							is_controlled_by = ROOT
-							controller = { is_subject_of = ROOT }
+								tag = ROOT
+								is_subject_of = ROOT
 							}
 						}
-						199 = {
+					}
+					199 = {
+						controller = {
 							OR = {
-							is_controlled_by = ROOT
-							controller = { is_subject_of = ROOT }
+								tag = ROOT
+								is_subject_of = ROOT
 							}
 						}
-						201 = {
+					}
+					201 = {
+						controller = {
 							OR = {
-							is_controlled_by = ROOT
-							controller = { is_subject_of = ROOT }
+								tag = ROOT
+								is_subject_of = ROOT
 							}
 						}
-						202 = {
+					}
+					202 = {
+						controller = {
 							OR = {
-							is_controlled_by = ROOT
-							controller = { is_subject_of = ROOT }
+								tag = ROOT
+								is_subject_of = ROOT
 							}
 						}
-						198 = {
+					}
+					198 = {
+						controller = {
 							OR = {
-							is_controlled_by = ROOT
-							controller = { is_subject_of = ROOT }
+								tag = ROOT
+								is_subject_of = ROOT
 							}
 						}
-						834 = {
+					}
+					834 = {
+						controller = {
 							OR = {
-							is_controlled_by = ROOT
-							controller = { is_subject_of = ROOT }
+								tag = ROOT
+								is_subject_of = ROOT
 							}
 						}
-						192 = {
+					}
+					192 = {
+						controller = {
 							OR = {
-							is_controlled_by = ROOT
-							controller = { is_subject_of = ROOT }
+								tag = ROOT
+								is_subject_of = ROOT
 							}
 						}
-						203 = {
+					}
+					203 = {
+						controller = {
 							OR = {
-							is_controlled_by = ROOT
-							controller = { is_subject_of = ROOT }
+								tag = ROOT
+								is_subject_of = ROOT
 							}
 						}
-						197 = {
+					}
+					197 = {
+						controller = {
 							OR = {
-							is_controlled_by = ROOT
-							controller = { is_subject_of = ROOT }
+								tag = ROOT
+								is_subject_of = ROOT
 							}
 						}
-						193 = {
+					}
+					193 = {
+						controller = {
 							OR = {
-							is_controlled_by = ROOT
-							controller = { is_subject_of = ROOT }
+								tag = ROOT
+								is_subject_of = ROOT
 							}
 						}
-						225 = {
+					}
+					225 = {
+						controller = {
 							OR = {
-							is_controlled_by = ROOT
-							controller = { is_subject_of = ROOT }
+								tag = ROOT
+								is_subject_of = ROOT
 							}
 						}
-						259 = {
+					}
+					259 = {
+						controller = {
 							OR = {
-							is_controlled_by = ROOT
-							controller = { is_subject_of = ROOT }
+								tag = ROOT
+								is_subject_of = ROOT
 							}
 						}
-						226 = {
+					}
+					226 = {
+						controller = {
 							OR = {
-							is_controlled_by = ROOT
-							controller = { is_subject_of = ROOT }
+								tag = ROOT
+								is_subject_of = ROOT
 							}
 						}
-						196 = {
+					}
+					196 = {
+						controller = {
 							OR = {
-							is_controlled_by = ROOT
-							controller = { is_subject_of = ROOT }
+								tag = ROOT
+								is_subject_of = ROOT
 							}
 						}
-						200 = {
+					}
+					200 = {
+						controller = {
 							OR = {
-							is_controlled_by = ROOT
-							controller = { is_subject_of = ROOT }
+								tag = ROOT
+								is_subject_of = ROOT
 							}
 						}
-						227 = {
+					}
+					227 = {
+						controller = {
 							OR = {
-							is_controlled_by = ROOT
-							controller = { is_subject_of = ROOT }
+								tag = ROOT
+								is_subject_of = ROOT
 							}
 						}
-						221 = {
+					}
+					221 = {
+						controller = {
 							OR = {
-							is_controlled_by = ROOT
-							controller = { is_subject_of = ROOT }
+								tag = ROOT
+								is_subject_of = ROOT
 							}
 						}
-						228 = {
+					}
+					228 = {
+						controller = {
 							OR = {
-							is_controlled_by = ROOT
-							controller = { is_subject_of = ROOT }
+								tag = ROOT
+								is_subject_of = ROOT
 							}
 						}
-						137 = {
+					}
+					137 = {
+						controller = {
 							OR = {
-							is_controlled_by = ROOT
-							controller = { is_subject_of = ROOT }
+								tag = ROOT
+								is_subject_of = ROOT
 							}
 						}
-						218 = {
+					}
+					218 = {
+						controller = {
 							OR = {
-							is_controlled_by = ROOT
-							controller = { is_subject_of = ROOT }
+								tag = ROOT
+								is_subject_of = ROOT
 							}
 						}
-						234 = {
+					}
+					234 = {
+						controller = {
 							OR = {
-							is_controlled_by = ROOT
-							controller = { is_subject_of = ROOT }
+								tag = ROOT
+								is_subject_of = ROOT
 							}
 						}
 					}
@@ -3032,13 +3073,14 @@ HUN_the_empire_category = {
 
 		available = {
 			has_completed_focus = wuw_HUN_demand_austrian_restoration
-			OR = {
-				controls_state = 975
-				any_subject_country = {
-					controls_state = 975
+			975 = {
+				controller = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
 				}
 			}
-			
 		}
 
 		days_remove = 35 
@@ -3291,12 +3333,15 @@ HUN_the_empire_category = {
 			is_subject = no
 			AND = {
 				NOT = { country_exists = POL }
-					10 = {
+
+				10 = {
+					controller = {
 						OR = {
-						is_controlled_by = ROOT
-						controller = { is_subject_of = ROOT }
+							tag = ROOT
+							is_subject_of = ROOT
 						}
 					}
+				}
 			}	
 		}
 	
@@ -3376,12 +3421,15 @@ HUN_the_empire_category = {
 			is_subject = no
 			AND = {
 				NOT = { country_exists = SPR }
-					41 = {
+
+				41 = {
+					controller = {
 						OR = {
-						is_controlled_by = ROOT
-						controller = { is_subject_of = ROOT }
+							tag = ROOT
+							is_subject_of = ROOT
 						}
 					}
+				}
 			}	
 		}
 	
@@ -3546,12 +3594,14 @@ HUN_the_empire_category = {
 			OR = {
 				AND = {
 					NOT = { country_exists = MEX }
-						277 = {
+					277 = {
+						controller = {
 							OR = {
-							is_controlled_by = ROOT
-							controller = { is_subject_of = ROOT }
+								tag = ROOT
+								is_subject_of = ROOT
 							}
 						}
+					}
 				}
 				MEX = {
 					is_subject_of = ROOT
@@ -3636,12 +3686,23 @@ HUN_the_empire_category = {
 			OR = {
 				AND = {
 					NOT = { country_exists = CRO }
+					OR = {
 						109 = {
-							OR = {
 							is_controlled_by = ROOT
-							controller = { is_subject_of = ROOT }
+						}
+						any_country = {
+							is_subject_of = ROOT
+							controls_state = 109
+						}
+					}
+					109 = {
+						controller = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
 							}
 						}
+					}
 				}
 				CRO = {
 					is_subject_of = ROOT
@@ -3783,18 +3844,22 @@ HUN_the_empire_category = {
 				AND = {
 					NOT = { country_exists = LBV }
 					AND = {
-							160 = {
+						160 = {
+							controller = {
 								OR = {
-								is_controlled_by = ROOT
-								controller = { is_subject_of = ROOT }
+									tag = ROOT
+									is_subject_of = ROOT
 								}
 							}
-							159 = {
+						}
+						159 = {
+							controller = {
 								OR = {
-								is_controlled_by = ROOT
-								controller = { is_subject_of = ROOT }
+									tag = ROOT
+									is_subject_of = ROOT
 								}
 							}
+						}
 					}
 				}
 				LBV = {

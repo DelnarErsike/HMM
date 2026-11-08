@@ -1727,6 +1727,9 @@ INS_malay_unification_cat = {
 							1060 = { add_core_of = INS }
 							336 = { add_core_of = INS }
 							1063 = { add_core_of = INS }
+							1061 = { add_core_of = INS }
+							1062 = { add_core_of = INS }
+							1064 = { add_core_of = INS }
 							if = {
 								limit = {
 									334 = {
@@ -1734,6 +1737,9 @@ INS_malay_unification_cat = {
 									}
 								}
 								333 = { add_core_of = INS }
+								1023 = { add_core_of = INS }
+								1024 = { add_core_of = INS }
+								1059 = { add_core_of = INS }
 							}
 						}
 					}
@@ -1757,6 +1763,9 @@ INS_malay_unification_cat = {
 								1060 = { add_core_of = INS }
 								336 = { add_core_of = INS }
 								1063 = { add_core_of = INS }
+								1061 = { add_core_of = INS }
+								1062 = { add_core_of = INS }
+								1064 = { add_core_of = INS }
 								if = {
 									limit = {
 										334 = {
@@ -1764,6 +1773,9 @@ INS_malay_unification_cat = {
 										}
 									}
 									333 = { add_core_of = INS }
+									1023 = { add_core_of = INS }
+									1024 = { add_core_of = INS }
+									1059 = { add_core_of = INS }
 								}
 							}
 						}

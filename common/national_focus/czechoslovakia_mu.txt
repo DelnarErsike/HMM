@@ -1610,8 +1610,7 @@ focus_tree = {
 		y = 0
 
 		available = {
-			any_other_country = {
-				is_subject_of = ROOT
+			any_subject_country = {
 				OR = {
 					has_autonomy_state = autonomy_dominion
 					has_autonomy_state = autonomy_puppet
@@ -4381,8 +4380,9 @@ focus_tree = {
 
 		available = {
 			is_subject_of = GER
-			any_other_country = {
-				is_major = yes
+			any_collection_element = {
+				collection = game:all_majors
+				NOT = { tag = ROOT }
 				has_war_with = GER
 				has_government = democratic
 				NOT = {
@@ -9525,7 +9525,7 @@ focus_tree = {
 			
 			hidden_effect = {
 				create_corps_commander = {
-					traits = { JAP_communist_sympathizer politically_connected }
+					traits = { communist_sympathizer politically_connected }
 					attack_skill = 2
 					defense_skill = 2
 					planning_skill = 2
@@ -10629,6 +10629,7 @@ focus_tree = {
 		available = {
 			is_subject = no
 			any_country_with_original_tag = {
+				exists = yes
 				original_tag_to_check = SOV
 				has_civil_war = yes
 				NOT = {
@@ -10640,6 +10641,7 @@ focus_tree = {
 
 		bypass = {
 			any_country_with_original_tag = {
+				exists = yes
 				original_tag_to_check = SOV
 				has_war_with = ROOT
 			}
@@ -12296,11 +12298,17 @@ focus_tree = {
 		available = {
 			91 = {
 				is_controlled_by = ROOT
-				compliance > 30
+				OR = {
+					compliance > 30
+					is_core_of = ROOT
+				}
 			}
 			89 = {
 				is_controlled_by = ROOT
-				compliance > 30
+				OR = {
+					compliance > 30
+					is_core_of = ROOT
+				}
 			}
 		}
 

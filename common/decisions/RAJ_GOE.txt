@@ -3,7 +3,7 @@ RAJ_GOE_independence_movement = {
 	#TODO_VD add violence
 	RAJ_GOE_urge_non_violence = { 
 
-		icon = GFX_decision_SWI_swiss_democratic_tradition_campaign
+		icon = GFX_decision_generic_political_address
 		
 		state_target = any_controlled_state
 		
@@ -12,7 +12,7 @@ RAJ_GOE_independence_movement = {
 				has_completed_focus = RAJ_mahatma
 			}
 			NOT = { has_completed_focus = RAJ_forward_bloc }
-
+			is_subject = yes
 		}
 		
 		available = {
@@ -46,13 +46,9 @@ RAJ_GOE_independence_movement = {
 			FROM = {
 				add_resistance = -60
 			}
-			ROOT = {
-				add_autonomy_ratio = { 
-					value = -0.05 
-					#localization = LOC_KEY
-				}
-				custom_effect_tooltip = idea_RAJ_independence_movement_tt
-				#add_to_variable = { RAJ_autonomy_gain_independence_movement = -0.05 tooltip = autonomy_gain_tt }
+			add_autonomy_ratio = {
+				value = -0.05
+				#localization = LOC_KEY
 			}
 		}
 	}
@@ -1004,6 +1000,46 @@ political_actions = {
 				swap_ideas = {
 					add_idea = idea_RAJ_azad_hind_radio_communism
 					remove_idea = idea_RAJ_azad_hind_radio_unaligned 
+				}
+			}
+		}
+	}
+
+	RAJ_GOE_ayer_broadcast_to_the_indian_army = {
+		icon = GFX_decision_hol_radio_oranje
+		allowed = {
+			original_tag = RAJ
+			has_dlc = "Graveyard of Empires"
+		}
+
+		visible = {
+			has_completed_focus = RAJ_azad_hind_dlc_radio
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = RAJ_GOE_ayer_in_cabinet_tt
+				has_country_flag = RAJ_GOE_ayer_in_cabinet
+			}
+			has_war = yes
+		}
+
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 120
+
+		ai_will_do = {
+			base = 1
+		}
+
+		complete_effect = {
+			add_manpower = 25000
+			if = {
+				limit = {
+					has_war_with = ENG
+				}
+				ENG = {
+					add_war_support = -0.03
 				}
 			}
 		}
@@ -4585,6 +4621,7 @@ RAJ_peasant_uprisings_cat = {
 		available = {
 			NOT = {
 				any_country_with_original_tag = {
+					exists = yes
 					original_tag_to_check = NEP
 					has_government = communism
 				}
@@ -4607,13 +4644,13 @@ RAJ_peasant_uprisings_cat = {
 				original_tag_to_check = NEP
 				exists = yes
 				NOT = {
-					NEP = {
-						has_government = communism
-					}
+					has_government = communism
 				}
 			}
+
 			NOT = {
 				any_country_with_original_tag = {
+					exists = yes
 					original_tag_to_check = NEP
 					OR = {
 						has_government = communism
@@ -4643,6 +4680,7 @@ RAJ_peasant_uprisings_cat = {
 		available = {
 			NOT = {
 				any_country_with_original_tag = {
+					exists = yes
 					original_tag_to_check = TIB
 					has_government = communism
 				}
@@ -4665,13 +4703,13 @@ RAJ_peasant_uprisings_cat = {
 				original_tag_to_check = TIB
 				exists = yes
 				NOT = {
-					TIB = {
-						has_government = communism
-					}
+					has_government = communism
 				}
 			}
+
 			NOT = {
 				any_country_with_original_tag = {
+					exists = yes
 					original_tag_to_check = TIB
 					OR = {
 						has_government = communism
@@ -4701,7 +4739,8 @@ RAJ_peasant_uprisings_cat = {
 		available = {
 			NOT = {
 				any_country_with_original_tag = {
-					original_tag_to_check = TIB
+					exists = yes
+					original_tag_to_check = BRM
 					has_government = communism
 				}
 			}
@@ -4723,13 +4762,13 @@ RAJ_peasant_uprisings_cat = {
 				original_tag_to_check = BRM
 				exists = yes
 				NOT = {
-					BRM = {
-						has_government = communism
-					}
+					has_government = communism
 				}
 			}
+
 			NOT = {
 				any_country_with_original_tag = {
+					exists = yes
 					original_tag_to_check = BRM
 					OR = {
 						has_government = communism
@@ -4759,6 +4798,7 @@ RAJ_peasant_uprisings_cat = {
 		available = {
 			NOT = {
 				any_country_with_original_tag = {
+					exists = yes
 					original_tag_to_check = TIB
 					has_government = communism
 				}
@@ -4781,13 +4821,13 @@ RAJ_peasant_uprisings_cat = {
 				original_tag_to_check = AFG
 				exists = yes
 				NOT = {
-					AFG = {
-						has_government = communism
-					}
+					has_government = communism
 				}
 			}
+
 			NOT = {
 				any_country_with_original_tag = {
+					exists = yes
 					original_tag_to_check = AFG
 					OR = {
 						has_government = communism
@@ -4817,6 +4857,7 @@ RAJ_peasant_uprisings_cat = {
 		available = {
 			NOT = {
 				any_country_with_original_tag = {
+					exists = yes
 					original_tag_to_check = PER
 					has_government = communism
 				}
@@ -4839,13 +4880,13 @@ RAJ_peasant_uprisings_cat = {
 				original_tag_to_check = PER
 				exists = yes
 				NOT = {
-					PER = {
-						has_government = communism
-					}
+					has_government = communism
 				}
 			}
+
 			NOT = {
 				any_country_with_original_tag = {
+					exists = yes
 					original_tag_to_check = PER
 					OR = {
 						has_government = communism
@@ -4875,6 +4916,7 @@ RAJ_peasant_uprisings_cat = {
 		available = {
 			NOT = {
 				any_country_with_original_tag = {
+					exists = yes
 					original_tag_to_check = SIA
 					has_government = communism
 				}
@@ -4897,13 +4939,13 @@ RAJ_peasant_uprisings_cat = {
 				original_tag_to_check = SIA
 				exists = yes
 				NOT = {
-					SIA = {
-						has_government = communism
-					}
+					has_government = communism
 				}
 			}
+
 			NOT = {
 				any_country_with_original_tag = {
+					exists = yes
 					original_tag_to_check = SIA
 					OR = {
 						has_government = communism
@@ -4933,7 +4975,8 @@ RAJ_peasant_uprisings_cat = {
 		available = {
 			NOT = {
 				any_country_with_original_tag = {
-					original_tag_to_check = INS
+					exists = yes
+					original_tag_to_check = INS 
 					has_government = communism
 				}
 			}
@@ -4955,13 +4998,13 @@ RAJ_peasant_uprisings_cat = {
 				original_tag_to_check = INS
 				exists = yes
 				NOT = {
-					INS = {
-						has_government = communism
-					}
+					has_government = communism
 				}
 			}
+
 			NOT = {
 				any_country_with_original_tag = {
+					exists = yes
 					original_tag_to_check = INS
 					OR = {
 						has_government = communism
