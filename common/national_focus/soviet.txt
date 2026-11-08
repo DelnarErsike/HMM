@@ -14644,6 +14644,12 @@ ai_will_do = {
 					give_resource_rights = { receiver = ROOT state = 413 }
 					give_military_access = ROOT
 				}
+				every_enemy_country = {
+					visible_when_empty = yes
+					PER = {
+						send_embargo = PREV
+					}
+				}
 			}
 		}
 	}

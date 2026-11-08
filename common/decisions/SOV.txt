@@ -6404,6 +6404,12 @@ SOV_diplomacy_middle_east_decision_category = {
 					give_resource_rights = { receiver = ROOT state = 413 }
 					give_military_access = ROOT
 				}
+				every_enemy_country = {
+					visible_when_empty = yes
+					PER = {
+						send_embargo = PREV
+					}
+				}
 			}
 			else = { #SOV + ENG invading together, SOV perspective
 				if = { #SOV triggers the actual effects
@@ -6424,6 +6430,13 @@ SOV_diplomacy_middle_east_decision_category = {
 						give_military_access = SOV
 						give_military_access = ENG
 					}
+					ENG = {
+						every_enemy_country = {
+							PER = {
+								send_embargo = PREV
+							}
+						}
+					}
 				}
 				else = { #ENG only sees a fake
 					effect_tooltip = {
@@ -6442,6 +6455,13 @@ SOV_diplomacy_middle_east_decision_category = {
 							give_resource_rights = { receiver = ENG state = 413 }
 							give_military_access = SOV
 							give_military_access = ENG
+						}
+						ENG = {
+							every_enemy_country = {
+								PER = {
+									send_embargo = PREV
+								}
+							}
 						}
 					}
 
