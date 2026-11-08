@@ -11,7 +11,7 @@ state={
 	state_category = city
 
 	history={
-		owner = WST
+		owner = PER
 		buildings = {
 			infrastructure = 2
 			arms_factory = 1
@@ -27,7 +27,6 @@ state={
                 }
 			}
 		}
-		add_core_of = WST
 		victory_points = {
 			10837 10 # Tehran 
 		}

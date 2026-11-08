@@ -12,11 +12,10 @@ state={
 		7448 7584 10896 12248 12877 
 	}
 	history={
-		owner = WST
+		owner = AFG
 		buildings = {
 			infrastructure = 1 
 		}
-		add_core_of = WST
 		add_core_of = AFG
 		add_core_of = TMS
 		victory_points = {
