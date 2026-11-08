@@ -472,6 +472,7 @@ ai_black = {
 		tag = TUR
 		tag = POR
 		tag = SWE
+		tag = SWI
 	}
 }
 # Better to have these statically set than saved dynamically in an array

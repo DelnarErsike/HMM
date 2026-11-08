@@ -9,11 +9,7 @@ focus_tree = {
 		# NEUTRALS
 		modifier = {
 			add = 100
-			tag = WST
-		}
-		modifier = {
-			add = 100
-			tag = SWE
+			ai_black = yes
 		}
 		modifier = {
 			add = 100
