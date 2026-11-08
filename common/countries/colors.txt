@@ -246,8 +246,8 @@ URG = {
 	color_ui = rgb { 222 247 198 }
 }
 VEN = {
-	color = rgb { 171 190 152 }
-	color_ui = rgb { 222 247 198 }
+	color = rgb { 0 0 0 }
+	color_ui = rgb { 0 0 0 }
 }
 YUN = {
 	color = rgb { 114 148 80 }
@@ -275,8 +275,8 @@ PAR = {
 	color_ui = rgb { 74 147 255 }
 }
 CUB = {
-	color = rgb { 140 65 166 }
-	color_ui = rgb { 140 65 166 }
+	color = rgb { 0 0 0 }
+	color_ui = rgb { 0 0 0 }
 }
 DOM = {
 	color = rgb { 152 130 191 }
