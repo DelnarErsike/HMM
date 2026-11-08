@@ -1,0 +1,3 @@
+﻿l_english:
+ SOV_preparations_for_operation_countenance_tt: "We will have §Y[?SOV.SOV_operation_countenance_preparation_days] days§! to prepare before the beginning of $SOV_operation_countenance$ against [PER.GetNameDef]. \n$SOV_preparations_for_operation_countenance_mission_tt$\n"
+ SOV_preparations_for_operation_countenance_mission_tt: "Once §Y$SOV_operation_countenance$§! mission is active, [PER.GetNameDef] will capitulate shortly afterwards, resulting in us gaining access to their northern states and restoring our resource rights to their oil."

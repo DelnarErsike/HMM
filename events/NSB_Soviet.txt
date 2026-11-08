@@ -3721,6 +3721,7 @@ country_event = {
 			
 	option = { # Become a puppet
 		name = NSB_soviet_foreign_politics_events.210.a
+		trigger = { is_ai = no }
 
 		ai_chance = {
 			base = 1

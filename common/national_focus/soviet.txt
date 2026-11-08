@@ -14582,11 +14582,11 @@ ai_will_do = {
 	focus = {
 		id = SOV_preemptive_invasion_of_iran
 		icon = GFX_focus_generic_attack_iran
-		prerequisite = { focus = SOV_support_afghan_ideology }
-		x = 0
-		y = 1
-		relative_position_id = SOV_support_afghan_ideology
-		cost = 5
+		prerequisite = { focus = SOV_the_comintern }
+		x = 4
+		y = 0
+		relative_position_id = SOV_baltic_security
+		cost = 15 # HMM: integrate the time required for the Middle Eastern Diplomacy & Support Afghan Ideology focuses
 
 		ai_will_do = {
 			factor = 1
@@ -14609,7 +14609,6 @@ ai_will_do = {
 			is_subject = no
 			any_enemy_country = { is_major = yes }
 		}
-		allow_branch = { always = no }
 		
 		search_filters = {}
 
@@ -14620,17 +14619,33 @@ ai_will_do = {
 			}
 
 			effect_tooltip = {
+				if = {
+					limit = { PER = { is_ai = no } }
 				custom_effect_tooltip = if_they_accept_tt
 				ROOT = {
 					puppet = PER
 				}
 
 				custom_effect_tooltip = if_they_refuse_tt
+				}
 				effect_tooltip = {
 					activate_mission = SOV_preparations_for_operation_countenance
 					custom_effect_tooltip = SOV_preparations_for_operation_countenance_tt
 				}
 				custom_effect_tooltip = SOV_preemptive_invasion_of_iran_tt
+				add_command_power = 50
+				add_war_support = 0.1
+				transfer_state = 419 #Tibriz (AZB)
+				transfer_state = 420 #Gilan (AZB)
+				transfer_state = 416 #Khorasan
+				transfer_state = 1000 #East Azerbaijan
+				transfer_state = 1004 #North Khorasan
+				PER = {
+					give_resource_rights = { receiver = ROOT state = 411 }
+					give_resource_rights = { receiver = ROOT state = 412 }
+					give_resource_rights = { receiver = ROOT state = 413 }
+					give_military_access = ROOT
+				}
 			}
 		}
 	}

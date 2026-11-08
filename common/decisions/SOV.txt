@@ -6391,9 +6391,18 @@ SOV_diplomacy_middle_east_decision_category = {
 				limit = {
 					NOT = { has_global_flag = SOV_agreed_anglo_soviet_invasion_of_iran_flag }
 				}
-				declare_war_on = {
-					target = PER
-					type = puppet_wargoal_focus
+				add_command_power = 50
+				add_war_support = 0.1
+				transfer_state = 419 #Tibriz (AZB)
+				transfer_state = 420 #Gilan (AZB)
+				transfer_state = 416 #Khorasan
+				transfer_state = 1000 #East Azerbaijan
+				transfer_state = 1004 #North Khorasan
+				PER = {
+					give_resource_rights = { receiver = ROOT state = 411 }
+					give_resource_rights = { receiver = ROOT state = 412 }
+					give_resource_rights = { receiver = ROOT state = 413 }
+					give_military_access = ROOT
 				}
 			}
 			else = { #SOV + ENG invading together, SOV perspective
@@ -6401,53 +6410,45 @@ SOV_diplomacy_middle_east_decision_category = {
 					limit = {
 						original_tag = SOV
 					}
-					declare_war_on = {
-						target = PER
-						type = puppet_wargoal_focus
-					}
-					ENG = {
-						add_to_war = { targeted_alliance = SOV enemy = PER hostility_reason = asked_to_join single_target_only = yes}
+					add_command_power = 50
+					add_war_support = 0.1
+					transfer_state = 419 #Tibriz (AZB)
+					transfer_state = 420 #Gilan (AZB)
+					transfer_state = 416 #Khorasan
+					transfer_state = 1000 #East Azerbaijan
+					transfer_state = 1004 #North Khorasan
+					PER = {
+						give_resource_rights = { receiver = SOV state = 411 }
+						give_resource_rights = { receiver = SOV state = 412 }
+						give_resource_rights = { receiver = ENG state = 413 }
+						give_military_access = SOV
+						give_military_access = ENG
 					}
 				}
 				else = { #ENG only sees a fake
 					effect_tooltip = {
 						SOV = {
-							declare_war_on = {
-								target = PER
-								type = puppet_wargoal_focus
-							}
+							add_command_power = 50
+							add_war_support = 0.1
+							transfer_state = 419 #Tibriz (AZB)
+							transfer_state = 420 #Gilan (AZB)
+							transfer_state = 416 #Khorasan
+							transfer_state = 1000 #East Azerbaijan
+							transfer_state = 1004 #North Khorasan
 						}
-						add_to_war = { targeted_alliance = SOV enemy = PER hostility_reason = asked_to_join single_target_only = yes}
+						PER = {
+							give_resource_rights = { receiver = SOV state = 411 }
+							give_resource_rights = { receiver = SOV state = 412 }
+							give_resource_rights = { receiver = ENG state = 413 }
+							give_military_access = SOV
+							give_military_access = ENG
+						}
 					}
 
 					hidden_effect = { news_event = { id = nsb_news.104 days = 4 random_days = 2 } } #Only ENG sends the news event.
 				}
 			}
-
-			activate_mission = SOV_operation_countenance
-			if = { #Activate mission for ENG if joint operation
-				limit = {
-					has_global_flag = SOV_agreed_anglo_soviet_invasion_of_iran_flag
-					tag = SOU
-				}
-				ENG = {
-					activate_mission = SOV_operation_countenance
-				}
-			}
-			if = { #Activate mission for ENG if joint operation
-				limit = {
-					has_global_flag = SOV_agreed_anglo_soviet_invasion_of_iran_flag
-					tag = ENG
-				}
-				SOU = {
-					activate_mission = SOV_operation_countenance
-				}
-			}
 			custom_effect_tooltip = SOV_preparations_for_operation_countenance_mission_tt
-
-			hidden_effect = { #Add all AI strategies
-				SOV_anglo_soviet_invasion_add_ai_strategies_effect = yes
-			}
 		}
 	}
 
@@ -6529,6 +6530,8 @@ SOV_diplomacy_middle_east_decision_category = {
 						transfer_state = 419 #Tibriz (AZB)
 						transfer_state = 420 #Gilan (AZB)
 						transfer_state = 416 #Khorasan
+						transfer_state = 1000 #East Azerbaijan
+						transfer_state = 1004 #North Khorasan
 					}
 					give_resource_rights = { receiver = FROM state = 411 }
 					give_resource_rights = { receiver = FROM state = 412 }
@@ -6545,6 +6548,8 @@ SOV_diplomacy_middle_east_decision_category = {
 						transfer_state = 419 #Tibriz (AZB)
 						transfer_state = 420 #Gilan (AZB)
 						transfer_state = 416 #Khorasan
+						transfer_state = 1000 #East Azerbaijan
+						transfer_state = 1004 #North Khorasan
 					}
 					FROM = {
 						give_resource_rights = { receiver = SOV state = 411 }
