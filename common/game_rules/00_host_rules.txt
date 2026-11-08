@@ -1126,6 +1126,46 @@ finland_simulator = {
 		desc = "Axis does not get free infantry equipment simulating lend-lease from Finland or free command power simulating the ability to expeditionary units to Finland."
 	}
 }
+minors_lend_lease_status = {
+	name = "When can minors send equipment through Lend-Lease?"
+	group = "HMM Rules"
+	icon = "GFX_lend_lease"
+	option = {
+		name = banned
+		text = "tBanned"
+		desc = "Minors cannot send any equipment through Lend-Lease. Receiving Lend-Lease is unaffected."
+	}
+	option = {
+		name = only_to_overlords
+		text = "0Only to Overlords"
+		desc = "Minors can only send Lend-Lease to their overlords; if they are independent, they cannot send to anyone. Receiving Lend-Lease is unaffected."
+	}
+	option = {
+		name = only_to_overlords_or_same_continent_minors
+		text = "9Only to Overlords and Same-Continent Minors"
+		desc = "Minors can only send Lend-Lease to other minors on the same continent as them or to their overlord (if they are not independent). Receiving Lend-Lease is unaffected."
+	}
+	option = {
+		name = only_to_overlords_or_minors
+		text = "8Only to Overlords and Other Minors"
+		desc = "Minors can only send Lend-Lease to other minors or to their overlord (if they are not independent). Receiving Lend-Lease is unaffected."
+	}
+	default = {
+		name = only_to_overlords_or_same_continent_minors_or_raj_sov
+		text = "YOnly to Overlords, Same-Continent Minors, and Raj to Soviets"
+		desc = "Minors can only send Lend-Lease to other minors on the same continent as them or to their overlord (if they are not independent). Receiving Lend-Lease is unaffected, and Raj sending Lend Lease to the Soviet Union is exempted."
+	}
+	option = {
+		name = only_to_overlords_or_minors_or_raj_sov
+		text = "7Only to Overlords, Other Minors, and Raj to Soviets"
+		desc = "Minors can only send Lend-Lease to other minors or to their overlord (if they are not independent). Receiving Lend-Lease is unaffected, and Raj sending Lend Lease to the Soviet Union is exempted."
+	}
+	option = {
+		name = unrestricted
+		text = "GUnrestricted"
+		desc = "Minors are not subjected to any special requirements for sending equipment through Lend-Lease."
+	}
+}
 long_range_patrol_company_status = {
 	name = "Status of Long Range Patrol Company"
 	group = "HMM Rules"

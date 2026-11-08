@@ -1252,6 +1252,94 @@ DIPLOMACY_OFFER_DOCKING_RIGHTS_ENABLE_TRIGGER = {
 DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
 	if = {
 		limit = {
+			is_major = no
+			NOT = {
+				has_game_rule = {
+					rule = minors_lend_lease_status
+					option = unrestricted
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = minors_lend_lease_status
+					option = banned
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = HMM_banned_by_rules
+				always = no
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { is_puppet_of = FROM }
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = minors_lend_lease_status
+						option = only_to_overlords
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = HMM_banned_by_rules
+					always = no
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { is_major = yes }
+				}
+				if = {
+					limit = {
+						NOT = {
+							AND = {
+								tag = RAJ
+								FROM = { tag = SOV }
+								OR = {
+									has_game_rule = {
+										rule = minors_lend_lease_status
+										option = only_to_overlords_or_same_continent_minors_or_raj_sov
+									}
+									has_game_rule = {
+										rule = minors_lend_lease_status
+										option = only_to_overlords_or_minors_or_raj_sov
+									}
+								}
+							}
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = HMM_banned_by_rules
+						always = no
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { is_on_same_continent_as = FROM }
+					OR = {
+						has_game_rule = {
+							rule = minors_lend_lease_status
+							option = only_to_overlords_or_same_continent_minors_or_raj_sov
+						}
+						has_game_rule = {
+							rule = minors_lend_lease_status
+							option = only_to_overlords_or_same_continent_minors
+						}
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = HMM_banned_by_rules
+					always = no
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
 			tag = FIN
 			NOT = {
 				has_game_rule = {
